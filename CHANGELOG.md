@@ -1,6 +1,7 @@
 Changelog
 ---------
 
+* Added `groups.info` - [@dblock](https://github.com/dblock).
 * Added `groups.history#inclusive`, fixed `#count` which is an integer - [@dblock](https://github.com/dblock).
 * Added `files.delete` - [@dblock](https://github.com/dblock).
 * Added `chat.postMessage#as_user`, fixed example types - [@dblock](https://github.com/dblock).

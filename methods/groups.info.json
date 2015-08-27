@@ -1,0 +1,13 @@
+{
+  "desc": "This method returns information about a private group.",
+  "args": {
+    "channel": {
+      "type": "group",
+      "required": true,
+      "desc": "Group to get info on."
+    }
+  },
+  "errors": {
+    "channel_not_found": "Value passed for `channel` was invalid."
+  }
+}
