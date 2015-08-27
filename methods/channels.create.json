@@ -3,7 +3,7 @@
   "args": {
     "name": {
       "required": true,
-      "desc": "Name of channel to create",
+      "desc": "Name of channel to create.",
       "example": "mychannel"
     }
   },

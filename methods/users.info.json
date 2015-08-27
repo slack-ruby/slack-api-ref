@@ -4,11 +4,11 @@
     "user": {
       "type": "user",
       "required": true,
-      "desc": "User to get info on"
+      "desc": "User to get info on."
     }
   },
   "errors": {
     "user_not_found": "Value passed for `user` was invalid.",
-    "user_not_visible": "The requested user is not visible to the calling user"
+    "user_not_visible": "The requested user is not visible to the calling user."
   }
 }

@@ -5,7 +5,7 @@
     "presence": {
       "required": true,
       "example": "away",
-      "desc": "Either `active` or `away`"
+      "desc": "Either `active` or `away`."
     }
   },
   "errors": {

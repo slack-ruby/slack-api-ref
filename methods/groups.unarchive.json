@@ -4,7 +4,7 @@
     "channel": {
       "type": "group",
       "required": true,
-      "desc": "Group to unarchive"
+      "desc": "Group to unarchive."
     }
   },
   "errors": {

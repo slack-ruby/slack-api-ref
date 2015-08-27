@@ -4,7 +4,7 @@
     "channel": {
       "type": "group",
       "required": true,
-      "desc": "Private group to archive"
+      "desc": "Private group to archive."
     }
   },
   "errors": {

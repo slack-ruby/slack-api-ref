@@ -4,18 +4,18 @@
     "channel": {
       "type": "channel",
       "required": true,
-      "desc": "Private group to set the topic of"
+      "desc": "Private group to set the topic of."
     },
     "topic": {
       "required": true,
       "example": "My Topic",
-      "desc": "The new topic"
+      "desc": "The new topic."
     }
   },
   "errors": {
     "channel_not_found": "Value passed for `channel` was invalid.",
     "not_in_channel": "Authenticated user is not in the private group.",
-    "is_archived": "Private group has been archived",
+    "is_archived": "Private group has been archived.",
     "too_long": "Topic was longer than 250 characters."
   }
 }

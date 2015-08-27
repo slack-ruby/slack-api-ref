@@ -3,7 +3,7 @@
   "args": {
     "name": {
       "required": true,
-      "desc": "Name of channel to join"
+      "desc": "Name of channel to join."
     }
   },
   "errors": {

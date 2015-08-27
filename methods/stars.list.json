@@ -10,6 +10,6 @@
   "has_paging": true,
   "default_count": 100,
   "errors": {
-    "user_not_found": "Value passed for `user` was invalid"
+    "user_not_found": "Value passed for `user` was invalid."
   }
 }

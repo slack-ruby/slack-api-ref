@@ -4,12 +4,12 @@
     "channel": {
       "type": "channel",
       "required": true,
-      "desc": "Channel to set the purpose of"
+      "desc": "Channel to set the purpose of."
     },
     "purpose": {
       "required": true,
       "example": "My Purpose",
-      "desc": "The new purpose"
+      "desc": "The new purpose."
     }
   },
   "errors": {

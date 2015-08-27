@@ -4,12 +4,12 @@
     "error": {
       "required": false,
       "example": "my_error",
-      "desc": "Error response to return"
+      "desc": "Error response to return."
     },
     "foo": {
       "required": false,
       "example": "bar",
-      "desc": "example property to return"
+      "desc": "Example property to return."
     }
   },
   "errors": {}

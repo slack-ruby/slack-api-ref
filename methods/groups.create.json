@@ -3,7 +3,7 @@
   "args": {
     "name": {
       "required": true,
-      "desc": "Name of group to create"
+      "desc": "Name of group to create."
     }
   },
   "errors": {

@@ -39,7 +39,7 @@
     "icon_url": {
       "required": false,
       "example": "http://lorempixel.com/48/48",
-      "desc": "URL to an image to use as the icon for this message"
+      "desc": "URL to an image to use as the icon for this message."
     },
     "icon_emoji": {
       "required": false,
@@ -51,7 +51,7 @@
     "channel_not_found": "Value passed for `channel` was invalid.",
     "is_archived": "Channel has been archived.",
     "msg_too_long": "Message text is too long",
-    "no_text": "No message text provided",
-    "rate_limited": "Application has posted too many messages, [read the Rate Limit documentation](/docs/rate-limits) for more information"
+    "no_text": "No message text provided.",
+    "rate_limited": "Application has posted too many messages, [read the Rate Limit documentation](/docs/rate-limits) for more information."
   }
 }

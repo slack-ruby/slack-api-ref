@@ -33,7 +33,7 @@
   },
   "errors": {
     "channel_not_found": "Value passed for `channel` was invalid.",
-    "invalid_ts_latest": "Value passed for `latest` was invalid",
-    "invalid_ts_oldest": "Value passed for `oldest` was invalid"
+    "invalid_ts_latest": "Value passed for `latest` was invalid.",
+    "invalid_ts_oldest": "Value passed for `oldest` was invalid."
   }
 }
