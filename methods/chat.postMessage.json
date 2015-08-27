@@ -1,0 +1,60 @@
+{
+	"desc": "Sends a message to a channel.",
+
+	"args": {
+		"channel": {
+			"type"		: "channel",
+			"required"	: true,
+			"desc"		: "Channel to send message to. Can be a public channel, private group or IM channel. Can be an encoded ID, or a name."
+		},
+		"text": {
+			"required"	: true,
+			"example"	: "Hello world",
+			"desc"		: "Text of the message to send. See below for an explanation of formatting."
+		},
+		"username": {
+			"required"	: false,
+			"example"	: "My Bot",
+			"desc"		: "Name of bot."
+		},
+		"parse": {
+			"example"	: "full",
+			"desc"		: "Change how messages are treated. See below."
+		},
+		"link_names": {
+			"example"	: "1",
+			"desc"		: "Find and link channel names and usernames."
+		},
+		"attachments": {
+			"example"	: "[{\"pretext\": \"pre-hello\", \"text\": \"text-world\"}]",
+			"desc"		: "Structured message attachments."
+		},
+		"unfurl_links": {
+			"example"	: "true",
+			"desc"		: "Pass true to enable unfurling of primarily text-based content."
+		},
+		"unfurl_media": {
+			"example"	: "false",
+			"desc"		: "Pass false to disable unfurling of media content."
+		},
+		"icon_url": {
+			"required"	: false,
+			"example"	: "http://lorempixel.com/48/48",
+			"desc"		: "URL to an image to use as the icon for this message"
+		},
+		"icon_emoji": {
+			"required"	: false,
+			"example"	: ":chart_with_upwards_trend:",
+			"desc"		: "emoji to use as the icon for this message. Overrides `icon_url`."
+		}
+	},
+
+	"errors": {
+
+		"channel_not_found"	: "Value passed for `channel` was invalid.",
+		"is_archived"		: "Channel has been archived.",
+		"msg_too_long"		: "Message text is too long",
+		"no_text"		: "No message text provided",
+		"rate_limited"      : "Application has posted too many messages, [read the Rate Limit documentation](/docs/rate-limits) for more information"
+	}
+}

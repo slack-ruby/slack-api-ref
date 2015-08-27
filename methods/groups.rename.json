@@ -1,0 +1,22 @@
+{
+	"desc": "Renames a private group.",
+
+	"args": {
+		"channel": {
+			"type"		: "channel",
+			"required"	: true,
+			"desc"		: "Group to rename"
+		},
+
+		"name": {
+			"required"	: true,
+			"desc"		: "New name for group."
+		}
+	},
+
+	"errors": {
+		"channel_not_found"	: "Value passed for `channel` was invalid.",
+		"invalid_name"		: "New name is invalid",
+		"name_taken"		: "New channel name is taken"
+	}
+}
