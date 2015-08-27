@@ -1,0 +1,33 @@
+{
+  "desc": "This method returns a list of all items (file, file comment, channel message, group message, or direct message) reacted to by a user.",
+  "args": {
+    "user": {
+      "example": "U1234567890",
+      "required": false,
+      "desc": "Show reactions made by this user. Defaults to the authed user."
+    },
+    "full": {
+      "example": true,
+      "required": false,
+      "desc": "If true always return the complete reaction list."
+    },
+    "count": {
+      "example": 100,
+      "required": false,
+      "default": 100,
+      "desc": "Number of items to return per page."
+    },
+    "page": {
+      "example": 2,
+      "required": false,
+      "default": 1,
+      "desc": "Page number of results to return."
+    }
+  },
+  "errors": {
+    "user_not_found": "Value passed for user was invalid",
+    "not_authed": "No authentication token provided.",
+    "invalid_auth": "Invalid authentication token.",
+    "account_inactive": "Authentication token is for a deleted user or team."
+  }
+}
