@@ -1,6 +1,7 @@
 Changelog
 ---------
 
+* Added `im.history#inclusive`, fixed `#count` which is an integer - [@dblock](https://github.com/dblock).
 * Added `groups.info` - [@dblock](https://github.com/dblock).
 * Added `groups.history#inclusive`, fixed `#count` which is an integer - [@dblock](https://github.com/dblock).
 * Added `files.delete` - [@dblock](https://github.com/dblock).
