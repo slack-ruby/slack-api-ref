@@ -1,3 +1,5 @@
 {
-  "desc": "Lists direct message channels for the calling user."
+  "desc": "Lists direct message channels for the calling user.",
+  "args": {},
+  "errors": {}
 }
