@@ -24,15 +24,15 @@
 
     "inclusive": {
       "required"  : false,
-      "default" : "0",
-      "example" : "1",
+      "default" : 0,
+      "example" : 1,
       "desc"    : "Include messages with latest or oldest timestamp in results."
     },
 
 		"count": {
 			"required"	: false,
-			"default"	: "100",
-			"example"	: "100",
+			"default"	: 100,
+			"example"	: 100,
 			"desc"		: "Number of messages to return, between 1 and 1000."
 		}
 	},
