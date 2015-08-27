@@ -16,12 +16,16 @@
       "example": "My Bot",
       "desc": "Name of bot."
     },
+    "as_user": {
+      "required": false,
+      "desc": "Pass true to post the message as the authed user, instead of as a bot."
+    },
     "parse": {
       "example": "full",
       "desc": "Change how messages are treated. See below."
     },
     "link_names": {
-      "example": "1",
+      "example": 1,
       "desc": "Find and link channel names and usernames."
     },
     "attachments": {
@@ -29,11 +33,11 @@
       "desc": "Structured message attachments."
     },
     "unfurl_links": {
-      "example": "true",
+      "example": true,
       "desc": "Pass true to enable unfurling of primarily text-based content."
     },
     "unfurl_media": {
-      "example": "false",
+      "example": false,
       "desc": "Pass false to disable unfurling of media content."
     },
     "icon_url": {
