@@ -1,6 +1,7 @@
 Changelog
 ---------
 
+* Pretty-json all JSON files - [@dblock](https://github.com/dblock).
 * Fix `channels.history#inclusive` and `#count` are integers  - [@dblock](https://github.com/dblock).
 * Added `channels.history#inclusive - [@dblock](https://github.com/dblock).
 * Fix: wrong description in methods/groups.close.json - [@shonenada](https://github.com/shonenada).

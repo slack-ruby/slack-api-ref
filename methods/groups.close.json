@@ -1,15 +1,13 @@
 {
-	"desc": "Closes a private group.",
-
-	"args": {
-		"channel": {
-			"type"		: "group",
-			"required"	: true,
-			"desc"		: "Group to close."
-		}
-	},
-
-	"errors": {
-		"channel_not_found"	: "Value passed for `channel` was invalid."
-	}
+  "desc": "Closes a private group.",
+  "args": {
+    "channel": {
+      "type": "group",
+      "required": true,
+      "desc": "Group to close."
+    }
+  },
+  "errors": {
+    "channel_not_found": "Value passed for `channel` was invalid."
+  }
 }
