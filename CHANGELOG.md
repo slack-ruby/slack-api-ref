@@ -1,6 +1,7 @@
 Changelog
 ---------
 
+* Added `files.delete` - [@dblock](https://github.com/dblock).
 * Added `chat.postMessage#as_user`, fixed example types - [@dblock](https://github.com/dblock).
 * Fixed descriptions to consistently end with a period - [@dblock](https://github.com/dblock).
 * Pretty-json all JSON files - [@dblock](https://github.com/dblock).
