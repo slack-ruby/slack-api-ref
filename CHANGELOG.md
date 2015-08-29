@@ -3,10 +3,7 @@ Changelog
 
 * Your contribution here.
 
-* Added `reactions.add` - [@jakedahn](https://jake.ai)
-* Added `reactions.list` - [@jakedahn](https://jake.ai)
-* Added `reactions.get` - [@jakedahn](https://jake.ai)
-* Added `reactions.remove` - [@jakedahn](https://jake.ai)
+* Added `reactions.add`, `list`, `get` and `remove` - [@jakedahn](https://github.com/jakedahn).
 * Added `users.list#presence` - [@dblock](https://github.com/dblock).
 * Documented `user_disabled` error in `im.open` - [@dblock](https://github.com/dblock).
 * Added `im.history#inclusive`, fixed `#count` which is an integer - [@dblock](https://github.com/dblock).
