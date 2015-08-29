@@ -1,19 +1,36 @@
 {
-  "desc": "Renames a private group.",
-  "args": {
-    "channel": {
-      "type": "channel",
-      "required": true,
-      "desc": "Group to rename."
+  "desc": "This method renames a private group.",
+  "args": [
+    {
+      "token": {
+        "required": true,
+        "example": "xxxx-xxxxxxxxx-xxxx",
+        "desc": "Authentication token (Requires scope: post)"
+      }
     },
-    "name": {
-      "required": true,
-      "desc": "New name for group."
+    {
+      "channel": {
+        "required": true,
+        "example": "C1234567890",
+        "desc": "Group to rename"
+      }
+    },
+    {
+      "name": {
+        "required": true,
+        "example": " ",
+        "desc": "New name for group."
+      }
     }
-  },
+  ],
   "errors": {
-    "channel_not_found": "Value passed for `channel` was invalid.",
-    "invalid_name": "New name is invalid.",
-    "name_taken": "New channel name is taken."
+    "channel_not_found": "Value passed for channel was invalid.",
+    "invalid_name": "New name is invalid",
+    "name_taken": "New channel name is taken",
+    "not_authed": "No authentication token provided.",
+    "invalid_auth": "Invalid authentication token.",
+    "account_inactive": "Authentication token is for a deleted user or team.",
+    "user_is_bot": "This method cannot be called by a bot user.",
+    "user_is_restricted": "This method cannot be called by a restricted user or single channel guest."
   }
 }

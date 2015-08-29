@@ -1,18 +1,18 @@
 {
-  "desc": "This method closes a private group.",
+  "desc": "This method lists the items pinned to a channel.",
   "args": [
     {
       "token": {
         "required": true,
         "example": "xxxx-xxxxxxxxx-xxxx",
-        "desc": "Authentication token (Requires scope: post)"
+        "desc": "Authentication token (Requires scope: read)"
       }
     },
     {
       "channel": {
         "required": true,
-        "example": "G1234567890",
-        "desc": "Group to open."
+        "example": "C1234567890",
+        "desc": "Channel to get pinned items for."
       }
     }
   ],
@@ -20,6 +20,7 @@
     "channel_not_found": "Value passed for channel was invalid.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Invalid authentication token.",
-    "account_inactive": "Authentication token is for a deleted user or team."
+    "account_inactive": "Authentication token is for a deleted user or team.",
+    "user_is_bot": "This method cannot be called by a bot user."
   }
 }

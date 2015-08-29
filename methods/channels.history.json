@@ -1,39 +1,55 @@
 {
-  "desc": "Fetches history of messages and events from a channel.",
-  "args": {
-    "channel": {
-      "type": "channel",
-      "required": true,
-      "desc": "Channel to fetch history for."
+  "desc": "This method returns a portion of messages/events from the specified channel.\nTo read the entire history for a channel, call the method with no latest or\noldest arguments, and then continue paging using the instructions below.",
+  "args": [
+    {
+      "token": {
+        "required": true,
+        "example": "xxxx-xxxxxxxxx-xxxx",
+        "desc": "Authentication token (Requires scope: read)"
+      }
     },
-    "latest": {
-      "type": "timestamp",
-      "required": false,
-      "default": "now",
-      "desc": "Latest message timestamp to include in results."
+    {
+      "channel": {
+        "required": true,
+        "example": "C1234567890",
+        "desc": "Channel to fetch history for."
+      }
     },
-    "oldest": {
-      "type": "timestamp",
-      "required": false,
-      "default": "0",
-      "desc": "Oldest message timestamp to include in results."
+    {
+      "latest": {
+        "required": false,
+        "example": "1234567890.123456",
+        "desc": "End of time range of messages to include in results."
+      }
     },
-    "inclusive": {
-      "required": false,
-      "default": 0,
-      "example": 1,
-      "desc": "Include messages with latest or oldest timestamp in results."
+    {
+      "oldest": {
+        "required": false,
+        "example": "1234567890.123456",
+        "desc": "Start of time range of messages to include in results."
+      }
     },
-    "count": {
-      "required": false,
-      "default": 100,
-      "example": 100,
-      "desc": "Number of messages to return, between 1 and 1000."
+    {
+      "inclusive": {
+        "required": false,
+        "example": "1",
+        "desc": "Include messages with latest or oldest timestamp in results."
+      }
+    },
+    {
+      "count": {
+        "required": false,
+        "example": "100",
+        "desc": "Number of messages to return, between 1 and 1000."
+      }
     }
-  },
+  ],
   "errors": {
-    "channel_not_found": "Value passed for `channel` was invalid.",
-    "invalid_ts_latest": "Value passed for `latest` was invalid.",
-    "invalid_ts_oldest": "Value passed for `oldest` was invalid."
+    "channel_not_found": "Value passed for channel was invalid.",
+    "invalid_ts_latest": "Value passed for latest was invalid",
+    "invalid_ts_oldest": "Value passed for oldest was invalid",
+    "not_authed": "No authentication token provided.",
+    "invalid_auth": "Invalid authentication token.",
+    "account_inactive": "Authentication token is for a deleted user or team."
   }
 }

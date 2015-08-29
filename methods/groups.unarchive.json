@@ -1,14 +1,28 @@
 {
-  "desc": "Unarchives a private group.",
-  "args": {
-    "channel": {
-      "type": "group",
-      "required": true,
-      "desc": "Group to unarchive."
+  "desc": "This method unarchives a private group.",
+  "args": [
+    {
+      "token": {
+        "required": true,
+        "example": "xxxx-xxxxxxxxx-xxxx",
+        "desc": "Authentication token (Requires scope: post)"
+      }
+    },
+    {
+      "channel": {
+        "required": true,
+        "example": "G1234567890",
+        "desc": "Group to unarchive"
+      }
     }
-  },
+  ],
   "errors": {
-    "channel_not_found": "Value passed for `channel` was invalid.",
-    "not_archived": "Group is not archived."
+    "channel_not_found": "Value passed for channel was invalid.",
+    "not_archived": "Group is not archived.",
+    "not_authed": "No authentication token provided.",
+    "invalid_auth": "Invalid authentication token.",
+    "account_inactive": "Authentication token is for a deleted user or team.",
+    "user_is_bot": "This method cannot be called by a bot user.",
+    "user_is_restricted": "This method cannot be called by a restricted user or single channel guest."
   }
 }

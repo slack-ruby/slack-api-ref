@@ -1,16 +1,41 @@
 {
-  "desc": "Gets information about a team file.",
-  "args": {
-    "file": {
-      "type": "file",
-      "required": true,
-      "desc": "File to fetch info for."
+  "desc": "This method returns information about a file in your team.",
+  "args": [
+    {
+      "token": {
+        "required": true,
+        "example": "xxxx-xxxxxxxxx-xxxx",
+        "desc": "Authentication token (Requires scope: read)"
+      }
+    },
+    {
+      "file": {
+        "required": true,
+        "example": "F1234567890",
+        "desc": "File to fetch info for"
+      }
+    },
+    {
+      "count": {
+        "required": false,
+        "example": "100",
+        "desc": "Number of items to return per page."
+      }
+    },
+    {
+      "page": {
+        "required": false,
+        "example": "2",
+        "desc": "Page number of results to return."
+      }
     }
-  },
-  "has_paging": true,
-  "default_count": 100,
+  ],
   "errors": {
-    "file_not_found": "Value passed for `file` was invalid.",
-    "file_deleted": "The requested file has been deleted."
+    "file_not_found": "Value passed for file was invalid",
+    "file_deleted": "The requested file has been deleted",
+    "not_authed": "No authentication token provided.",
+    "invalid_auth": "Invalid authentication token.",
+    "account_inactive": "Authentication token is for a deleted user or team.",
+    "user_is_bot": "This method cannot be called by a bot user."
   }
 }

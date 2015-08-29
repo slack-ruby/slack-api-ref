@@ -1,22 +1,38 @@
 {
-  "desc": "Invites a user to a private group.",
-  "args": {
-    "channel": {
-      "type": "group",
-      "required": true,
-      "desc": "Private group to invite user to."
+  "desc": "This method is used to invite a user to a private group. The calling user must be a member of the group.",
+  "args": [
+    {
+      "token": {
+        "required": true,
+        "example": "xxxx-xxxxxxxxx-xxxx",
+        "desc": "Authentication token (Requires scope: post)"
+      }
     },
-    "user": {
-      "type": "user",
-      "required": true,
-      "desc": "User to invite."
+    {
+      "channel": {
+        "required": true,
+        "example": "G1234567890",
+        "desc": "Private group to invite user to."
+      }
+    },
+    {
+      "user": {
+        "required": true,
+        "example": "U1234567890",
+        "desc": "User to invite."
+      }
     }
-  },
+  ],
   "errors": {
-    "channel_not_found": "Value passed for `channel` was invalid.",
-    "user_not_found": "Value passed for `user` was invalid.",
+    "channel_not_found": "Value passed for channel was invalid.",
+    "user_not_found": "Value passed for user was invalid.",
     "cant_invite_self": "Authenticated user cannot invite themselves to a group.",
     "is_archived": "Group has been archived.",
-    "cant_invite": "User cannot be invited to this group."
+    "cant_invite": "User cannot be invited to this group.",
+    "not_authed": "No authentication token provided.",
+    "invalid_auth": "Invalid authentication token.",
+    "account_inactive": "Authentication token is for a deleted user or team.",
+    "user_is_bot": "This method cannot be called by a bot user.",
+    "user_is_ultra_restricted": "This method cannot be called by a single channel guest."
   }
 }
