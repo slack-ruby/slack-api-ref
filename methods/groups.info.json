@@ -1,10 +1,10 @@
 {
-  "desc": "Opens a private group.",
+  "desc": "This method returns information about a private group.",
   "args": {
     "channel": {
       "type": "group",
       "required": true,
-      "desc": "Group to open."
+      "desc": "Group to get info on."
     }
   },
   "errors": {

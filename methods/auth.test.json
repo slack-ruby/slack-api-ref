@@ -1,9 +1,5 @@
 {
-	"desc": "Checks authentication & identity.",
-
-	"args": {
-	},
-
-	"errors": {
-	}
+  "desc": "Checks authentication & identity.",
+  "args": {},
+  "errors": {}
 }
