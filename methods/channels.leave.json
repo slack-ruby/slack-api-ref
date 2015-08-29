@@ -1,15 +1,29 @@
 {
-  "desc": "Leaves a channel.",
-  "args": {
-    "channel": {
-      "type": "channel",
-      "required": true,
-      "desc": "Channel to leave."
+  "desc": "This method is used to leave a channel.",
+  "args": [
+    {
+      "token": {
+        "required": true,
+        "example": "xxxx-xxxxxxxxx-xxxx",
+        "desc": "Authentication token (Requires scope: post)"
+      }
+    },
+    {
+      "channel": {
+        "required": true,
+        "example": "C1234567890",
+        "desc": "Channel to leave"
+      }
     }
-  },
+  ],
   "errors": {
-    "channel_not_found": "Value passed for `channel` was invalid.",
+    "channel_not_found": "Value passed for channel was invalid.",
     "is_archived": "Channel has been archived.",
-    "cant_leave_general": "Authenticated user cannot leave the general channel."
+    "cant_leave_general": "Authenticated user cannot leave the general channel",
+    "not_authed": "No authentication token provided.",
+    "invalid_auth": "Invalid authentication token.",
+    "account_inactive": "Authentication token is for a deleted user or team.",
+    "user_is_bot": "This method cannot be called by a bot user.",
+    "user_is_restricted": "This method cannot be called by a restricted user or single channel guest."
   }
 }

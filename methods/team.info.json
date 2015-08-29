@@ -1,11 +1,11 @@
 {
-  "desc": "This method checks authentication and tells you who you are.",
+  "desc": "This method provides information about your team.",
   "args": [
     {
       "token": {
         "required": true,
         "example": "xxxx-xxxxxxxxx-xxxx",
-        "desc": "Authentication token (Requires scope: identify)"
+        "desc": "Authentication token (Requires scope: read)"
       }
     }
   ],

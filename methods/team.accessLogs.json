@@ -1,18 +1,11 @@
 {
-  "desc": "This method lists the items starred by a user.",
+  "desc": "This method is used to get the access logs for users on a team.",
   "args": [
     {
       "token": {
         "required": true,
         "example": "xxxx-xxxxxxxxx-xxxx",
-        "desc": "Authentication token (Requires scope: read)"
-      }
-    },
-    {
-      "user": {
-        "required": false,
-        "example": "U1234567890",
-        "desc": "Show stars by this user. Defaults to the authed user."
+        "desc": "Authentication token (Requires scope: admin)"
       }
     },
     {
@@ -31,7 +24,7 @@
     }
   ],
   "errors": {
-    "user_not_found": "Value passed for user was invalid",
+    "paid_only": "This is only available to paid teams.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Invalid authentication token.",
     "account_inactive": "Authentication token is for a deleted user or team.",

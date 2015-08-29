@@ -1,34 +1,62 @@
 {
-  "desc": "Lists & filters team files.",
-  "args": {
-    "user": {
-      "type": "user",
-      "required": false,
-      "desc": "Filter files created by a single user."
+  "desc": "This method returns a list of files within the team. It can be filtered and sliced in various ways.",
+  "args": [
+    {
+      "token": {
+        "required": true,
+        "example": "xxxx-xxxxxxxxx-xxxx",
+        "desc": "Authentication token (Requires scope: read)"
+      }
     },
-    "ts_from": {
-      "required": false,
-      "example": "123456789",
-      "default": "0",
-      "desc": "Filter files created after this timestamp (inclusive)."
+    {
+      "user": {
+        "required": false,
+        "example": "U1234567890",
+        "desc": "Filter files created by a single user."
+      }
     },
-    "ts_to": {
-      "required": false,
-      "example": "123456789",
-      "default": "now",
-      "desc": "Filter files created before this timestamp (inclusive)."
+    {
+      "ts_from": {
+        "required": false,
+        "example": "123456789",
+        "desc": "Filter files created after this timestamp (inclusive)."
+      }
     },
-    "types": {
-      "required": false,
-      "default": "all",
-      "example": "images",
-      "desc": "Filter files by type:\n\n* `all` - All files\n* `posts` - Posts\n* `snippets` - Snippets\n* `images` - Image files\n* `gdocs` - Google docs\n* `zips` - Zip files\n* `pdfs` - PDF files\n\nYou can pass multiple values in the types argument, like `types=posts,snippets`.The default value is `all`, which does not filter the list."
+    {
+      "ts_to": {
+        "required": false,
+        "example": "123456789",
+        "desc": "Filter files created before this timestamp (inclusive)."
+      }
+    },
+    {
+      "types": {
+        "required": false,
+        "example": "images",
+        "desc": "Filter files by type:\n\nall - All files\nposts - Posts\nsnippets - Snippets\nimages - Image files\ngdocs - Google docs\nzips - Zip files\npdfs - PDF files\n\n\nYou can pass multiple values in the types argument, like types=posts,snippets.The default value is all, which does not filter the list.\n"
+      }
+    },
+    {
+      "count": {
+        "required": false,
+        "example": "100",
+        "desc": "Number of items to return per page."
+      }
+    },
+    {
+      "page": {
+        "required": false,
+        "example": "2",
+        "desc": "Page number of results to return."
+      }
     }
-  },
-  "has_paging": true,
-  "default_count": 100,
+  ],
   "errors": {
-    "user_not_found": "Value passed for `user` was invalid.",
-    "unknown_type": "Value passed for `types` was invalid."
+    "user_not_found": "Value passed for user was invalid",
+    "unknown_type": "Value passed for types was invalid",
+    "not_authed": "No authentication token provided.",
+    "invalid_auth": "Invalid authentication token.",
+    "account_inactive": "Authentication token is for a deleted user or team.",
+    "user_is_bot": "This method cannot be called by a bot user."
   }
 }
