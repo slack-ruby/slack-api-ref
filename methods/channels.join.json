@@ -1,11 +1,6 @@
 {
   "desc": "This method is used to join a channel. If the channel does not exist, it is\ncreated.",
   "args": {
-    "token": {
-      "required": true,
-      "example": "xxxx-xxxxxxxxx-xxxx",
-      "desc": "Authentication token (Requires scope: post)."
-    },
     "name": {
       "required": true,
       "example": " ",

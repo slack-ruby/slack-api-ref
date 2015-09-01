@@ -1,11 +1,6 @@
 {
   "desc": "This method is used to change the purpose of a channel. The calling user must be a member of the channel.",
   "args": {
-    "token": {
-      "required": true,
-      "example": "xxxx-xxxxxxxxx-xxxx",
-      "desc": "Authentication token (Requires scope: post)."
-    },
     "channel": {
       "required": true,
       "example": "C1234567890",

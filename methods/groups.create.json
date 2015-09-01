@@ -1,11 +1,6 @@
 {
   "desc": "This method creates a private group.",
   "args": {
-    "token": {
-      "required": true,
-      "example": "xxxx-xxxxxxxxx-xxxx",
-      "desc": "Authentication token (Requires scope: post)."
-    },
     "name": {
       "required": true,
       "example": " ",

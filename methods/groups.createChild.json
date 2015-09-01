@@ -1,11 +1,6 @@
 {
   "desc": "This method takes an existing private group and performs the following steps:",
   "args": {
-    "token": {
-      "required": true,
-      "example": "xxxx-xxxxxxxxx-xxxx",
-      "desc": "Authentication token (Requires scope: post)."
-    },
     "channel": {
       "required": true,
       "example": "G1234567890",

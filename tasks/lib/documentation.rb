@@ -38,6 +38,9 @@ class SlackApiDocumentationSpider < Spidey::AbstractSpider
 
       rows = args_wrapper.search('tr')
 
+      # ignore token, always required
+      next if name == 'token'
+
       args[name] = {
         'required' => required,
         'example' => example,

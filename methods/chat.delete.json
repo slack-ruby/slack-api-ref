@@ -1,11 +1,6 @@
 {
   "desc": "This method deletes a message from a channel.",
   "args": {
-    "token": {
-      "required": true,
-      "example": "xxxx-xxxxxxxxx-xxxx",
-      "desc": "Authentication token (Requires scope: post)."
-    },
     "ts": {
       "required": true,
       "example": "1405894322.002768",

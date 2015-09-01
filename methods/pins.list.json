@@ -1,11 +1,6 @@
 {
   "desc": "This method lists the items pinned to a channel.",
   "args": {
-    "token": {
-      "required": true,
-      "example": "xxxx-xxxxxxxxx-xxxx",
-      "desc": "Authentication token (Requires scope: read)."
-    },
     "channel": {
       "required": true,
       "example": "C1234567890",

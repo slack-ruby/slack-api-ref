@@ -1,11 +1,6 @@
 {
   "desc": "This method lists the items starred by a user.",
   "args": {
-    "token": {
-      "required": true,
-      "example": "xxxx-xxxxxxxxx-xxxx",
-      "desc": "Authentication token (Requires scope: read)."
-    },
     "user": {
       "required": false,
       "example": "U1234567890",

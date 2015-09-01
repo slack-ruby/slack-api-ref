@@ -1,11 +1,6 @@
 {
   "desc": "This method posts a message to a public channel, private group, or IM channel.",
   "args": {
-    "token": {
-      "required": true,
-      "example": "xxxx-xxxxxxxxx-xxxx",
-      "desc": "Authentication token (Requires scope: post)."
-    },
     "channel": {
       "required": true,
       "example": "C1234567890",

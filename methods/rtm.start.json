@@ -1,11 +1,6 @@
 {
   "desc": "This method starts a Real Time Messaging API session. Refer to the\nRTM API documentation for full details on how to use the RTM API.",
   "args": {
-    "token": {
-      "required": true,
-      "example": "xxxx-xxxxxxxxx-xxxx",
-      "desc": "Authentication token (Requires scope: client)."
-    },
     "simple_latest": {
       "required": false,
       "example": " ",

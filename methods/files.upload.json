@@ -1,11 +1,6 @@
 {
   "desc": "This method allows you to create or upload an existing file.",
   "args": {
-    "token": {
-      "required": true,
-      "example": "xxxx-xxxxxxxxx-xxxx",
-      "desc": "Authentication token (Requires scope: post)."
-    },
     "file": {
       "required": false,
       "example": "...",

@@ -1,11 +1,6 @@
 {
   "desc": "This method lets you find out information about a user's presence.\nConsult the presence documentation for more details.",
   "args": {
-    "token": {
-      "required": true,
-      "example": "xxxx-xxxxxxxxx-xxxx",
-      "desc": "Authentication token (Requires scope: read)."
-    },
     "user": {
       "required": true,
       "example": "U1234567890",

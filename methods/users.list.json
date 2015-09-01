@@ -1,11 +1,6 @@
 {
   "desc": "This method returns a list of all users in the team. This includes deleted/deactivated users.",
   "args": {
-    "token": {
-      "required": true,
-      "example": "xxxx-xxxxxxxxx-xxxx",
-      "desc": "Authentication token (Requires scope: read)."
-    },
     "presence": {
       "required": false,
       "example": "1",

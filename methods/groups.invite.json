@@ -1,11 +1,6 @@
 {
   "desc": "This method is used to invite a user to a private group. The calling user must be a member of the group.",
   "args": {
-    "token": {
-      "required": true,
-      "example": "xxxx-xxxxxxxxx-xxxx",
-      "desc": "Authentication token (Requires scope: post)."
-    },
     "channel": {
       "required": true,
       "example": "G1234567890",

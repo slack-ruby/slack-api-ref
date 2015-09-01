@@ -1,11 +1,6 @@
 {
   "desc": "This method returns a list of all channels in the team. This includes channels the caller is in, channels\nthey are not currently in, and archived channels. The number of (non-deactivated) members in each channel\nis also returned.",
   "args": {
-    "token": {
-      "required": true,
-      "example": "xxxx-xxxxxxxxx-xxxx",
-      "desc": "Authentication token (Requires scope: read)."
-    },
     "exclude_archived": {
       "required": false,
       "example": "1",

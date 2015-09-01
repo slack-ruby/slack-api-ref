@@ -1,11 +1,6 @@
 {
   "desc": "This method allows to to search both messages and files in a single call.",
   "args": {
-    "token": {
-      "required": true,
-      "example": "xxxx-xxxxxxxxx-xxxx",
-      "desc": "Authentication token (Requires scope: read)."
-    },
     "query": {
       "required": true,
       "example": "pickleface",

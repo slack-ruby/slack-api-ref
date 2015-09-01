@@ -1,11 +1,6 @@
 {
   "desc": "This method returns information about a team member.",
   "args": {
-    "token": {
-      "required": true,
-      "example": "xxxx-xxxxxxxxx-xxxx",
-      "desc": "Authentication token (Requires scope: read)."
-    },
     "user": {
       "required": true,
       "example": "U1234567890",

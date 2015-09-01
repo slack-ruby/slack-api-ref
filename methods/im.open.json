@@ -1,11 +1,6 @@
 {
   "desc": "This method opens a direct message channel with another member of your Slack team.",
   "args": {
-    "token": {
-      "required": true,
-      "example": "xxxx-xxxxxxxxx-xxxx",
-      "desc": "Authentication token (Requires scope: post)."
-    },
     "user": {
       "required": true,
       "example": "U1234567890",

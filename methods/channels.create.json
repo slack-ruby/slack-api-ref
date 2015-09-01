@@ -1,11 +1,6 @@
 {
   "desc": "This method is used to create a channel.",
   "args": {
-    "token": {
-      "required": true,
-      "example": "xxxx-xxxxxxxxx-xxxx",
-      "desc": "Authentication token (Requires scope: read)."
-    },
     "name": {
       "required": true,
       "example": "mychannel",

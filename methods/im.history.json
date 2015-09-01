@@ -1,11 +1,6 @@
 {
   "desc": "This method returns a portion of messages/events from the specified direct message channel.\nTo read the entire history for a direct message channel, call the method with no latest or\noldest arguments, and then continue paging using the instructions below.",
   "args": {
-    "token": {
-      "required": true,
-      "example": "xxxx-xxxxxxxxx-xxxx",
-      "desc": "Authentication token (Requires scope: read)."
-    },
     "channel": {
       "required": true,
       "example": "D1234567890",

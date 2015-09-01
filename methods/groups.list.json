@@ -1,11 +1,6 @@
 {
   "desc": "This method returns a list of groups in the team that the caller is in and archived groups that the caller was in.\nThe list of (non-deactivated) members in each group is also returned.",
   "args": {
-    "token": {
-      "required": true,
-      "example": "xxxx-xxxxxxxxx-xxxx",
-      "desc": "Authentication token (Requires scope: read)."
-    },
     "exclude_archived": {
       "required": false,
       "example": "1",

@@ -1,11 +1,6 @@
 {
   "desc": "This method returns information about a file in your team.",
   "args": {
-    "token": {
-      "required": true,
-      "example": "xxxx-xxxxxxxxx-xxxx",
-      "desc": "Authentication token (Requires scope: read)."
-    },
     "file": {
       "required": true,
       "example": "F1234567890",

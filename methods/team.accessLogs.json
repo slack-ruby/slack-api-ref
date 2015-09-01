@@ -1,11 +1,6 @@
 {
   "desc": "This method is used to get the access logs for users on a team.",
   "args": {
-    "token": {
-      "required": true,
-      "example": "xxxx-xxxxxxxxx-xxxx",
-      "desc": "Authentication token (Requires scope: admin)."
-    },
     "count": {
       "required": false,
       "example": "100",

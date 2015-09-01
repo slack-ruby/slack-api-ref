@@ -1,11 +1,6 @@
 {
   "desc": "This method deletes a file from your team.",
   "args": {
-    "token": {
-      "required": true,
-      "example": "xxxx-xxxxxxxxx-xxxx",
-      "desc": "Authentication token (Requires scope: post)."
-    },
     "file": {
       "required": true,
       "example": "F1234567890",

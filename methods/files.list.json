@@ -1,11 +1,6 @@
 {
   "desc": "This method returns a list of files within the team. It can be filtered and sliced in various ways.",
   "args": {
-    "token": {
-      "required": true,
-      "example": "xxxx-xxxxxxxxx-xxxx",
-      "desc": "Authentication token (Requires scope: read)."
-    },
     "user": {
       "required": false,
       "example": "U1234567890",

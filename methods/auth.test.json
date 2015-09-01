@@ -1,11 +1,6 @@
 {
   "desc": "This method checks authentication and tells you who you are.",
   "args": {
-    "token": {
-      "required": true,
-      "example": "xxxx-xxxxxxxxx-xxxx",
-      "desc": "Authentication token (Requires scope: identify)."
-    }
   },
   "errors": {
     "not_authed": "No authentication token provided.",

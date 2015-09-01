@@ -1,11 +1,6 @@
 {
   "desc": "This method returns files matching a search query.",
   "args": {
-    "token": {
-      "required": true,
-      "example": "xxxx-xxxxxxxxx-xxxx",
-      "desc": "Authentication token (Requires scope: read)."
-    },
     "query": {
       "required": true,
       "example": "pickleface",

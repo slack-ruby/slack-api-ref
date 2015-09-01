@@ -1,11 +1,6 @@
 {
   "desc": "This method returns a list of all items (file, file comment, channel message, group message, or direct message) reacted to by a user.",
   "args": {
-    "token": {
-      "required": true,
-      "example": "xxxx-xxxxxxxxx-xxxx",
-      "desc": "Authentication token (Requires scope: read)."
-    },
     "user": {
       "required": false,
       "example": "U1234567890",

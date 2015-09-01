@@ -1,11 +1,6 @@
 {
   "desc": "This method closes a direct message channel.",
   "args": {
-    "token": {
-      "required": true,
-      "example": "xxxx-xxxxxxxxx-xxxx",
-      "desc": "Authentication token (Requires scope: post)."
-    },
     "channel": {
       "required": true,
       "example": "D1234567890",

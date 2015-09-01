@@ -1,11 +1,6 @@
 {
   "desc": "This method removes a reaction (emoji) from an item (file, file comment, channel message, group message, or direct message).\nOne of file, file_comment, or the combination of channel and timestamp must be specified.",
   "args": {
-    "token": {
-      "required": true,
-      "example": "xxxx-xxxxxxxxx-xxxx",
-      "desc": "Authentication token (Requires scope: post)."
-    },
     "name": {
       "required": true,
       "example": "thumbsup",
