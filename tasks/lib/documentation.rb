@@ -42,7 +42,6 @@ class SlackApiDocumentationSpider < Spidey::AbstractSpider
         name => {
           'required' => required,
           'example' => example,
-          'required' => required,
           'desc' => desc
         }
       }

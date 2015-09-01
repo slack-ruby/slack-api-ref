@@ -8,10 +8,10 @@ namespace :parse do
       FileUtils.rm_rf(dir)
       FileUtils.mkdir(dir)
       FileUtils.cd(dir) do
-        spider = SlackApiDocumentationSpider.new verbose: true
+        spider = SlackApiDocumentationSpider.new(verbose: true, request_interval: 0)
         spider.crawl
-        spider.results.each do |h|
-          File.open(h[:file_name], 'w+') { |f| f.write(h[:json]) }
+        spider.results.each do |result|
+          File.open(result[:file_name], 'w+') { |f| f.write(result[:json]) }
         end
       end
     end
