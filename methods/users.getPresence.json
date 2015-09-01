@@ -1,11 +1,24 @@
 {
-  "desc": "Gets user presence information.",
-  "args": {
-    "user": {
-      "required": true,
-      "type": "user",
-      "desc": "User to get presence info on. Defaults to the authed user."
+  "desc": "This method lets you find out information about a user's presence.\nConsult the presence documentation for more details.",
+  "args": [
+    {
+      "token": {
+        "required": true,
+        "example": "xxxx-xxxxxxxxx-xxxx",
+        "desc": "Authentication token (Requires scope: read)."
+      }
+    },
+    {
+      "user": {
+        "required": true,
+        "example": "U1234567890",
+        "desc": "User to get presence info on. Defaults to the authed user."
+      }
     }
-  },
-  "errors": {}
+  ],
+  "errors": {
+    "not_authed": "No authentication token provided.",
+    "invalid_auth": "Invalid authentication token.",
+    "account_inactive": "Authentication token is for a deleted user or team."
+  }
 }

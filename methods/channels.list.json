@@ -1,10 +1,24 @@
 {
-  "desc": "Lists all channels in a Slack team.",
-  "args": {
-    "exclude_archived": {
-      "example": 1,
-      "default": 0,
-      "desc": "Don't return archived channels."
+  "desc": "This method returns a list of all channels in the team. This includes channels the caller is in, channels\nthey are not currently in, and archived channels. The number of (non-deactivated) members in each channel\nis also returned.",
+  "args": [
+    {
+      "token": {
+        "required": true,
+        "example": "xxxx-xxxxxxxxx-xxxx",
+        "desc": "Authentication token (Requires scope: read)."
+      }
+    },
+    {
+      "exclude_archived": {
+        "required": false,
+        "example": "1",
+        "desc": "Don't return archived channels."
+      }
     }
+  ],
+  "errors": {
+    "not_authed": "No authentication token provided.",
+    "invalid_auth": "Invalid authentication token.",
+    "account_inactive": "Authentication token is for a deleted user or team."
   }
 }

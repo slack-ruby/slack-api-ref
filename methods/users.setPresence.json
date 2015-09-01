@@ -1,13 +1,25 @@
 {
-  "desc": "Manually sets user presence.",
-  "args": {
-    "presence": {
-      "required": true,
-      "example": "away",
-      "desc": "Either `auto` or `away`."
+  "desc": "This method lets you set the calling user's manual presence.\nConsult the presence documentation for more details.",
+  "args": [
+    {
+      "token": {
+        "required": true,
+        "example": "xxxx-xxxxxxxxx-xxxx",
+        "desc": "Authentication token (Requires scope: post)."
+      }
+    },
+    {
+      "presence": {
+        "required": true,
+        "example": "away",
+        "desc": "Either auto or away."
+      }
     }
-  },
+  ],
   "errors": {
-    "invalid_presence": "Value passed for `presence` was invalid."
+    "invalid_presence": "Value passed for presence was invalid.",
+    "not_authed": "No authentication token provided.",
+    "invalid_auth": "Invalid authentication token.",
+    "account_inactive": "Authentication token is for a deleted user or team."
   }
 }

@@ -1,29 +1,60 @@
 {
-  "desc": "Searches for files matching a query.",
-  "args": {
-    "query": {
-      "required": true,
-      "example": "pickleface",
-      "desc": "Search query. May contains booleans, etc."
+  "desc": "This method returns files matching a search query.",
+  "args": [
+    {
+      "token": {
+        "required": true,
+        "example": "xxxx-xxxxxxxxx-xxxx",
+        "desc": "Authentication token (Requires scope: read)."
+      }
     },
-    "sort": {
-      "required": false,
-      "default": "score",
-      "example": "timestamp",
-      "desc": "Return matches sorted by either `score` or `timestamp`."
+    {
+      "query": {
+        "required": true,
+        "example": "pickleface",
+        "desc": "Search query. May contain booleans, etc."
+      }
     },
-    "sort_dir": {
-      "required": false,
-      "default": "desc",
-      "example": "asc",
-      "desc": "Change sort direction to ascending (`asc`) or descending (`desc`)."
+    {
+      "sort": {
+        "required": false,
+        "example": "timestamp",
+        "desc": "Return matches sorted by either score or timestamp."
+      }
     },
-    "highlight": {
-      "required": false,
-      "example": 1,
-      "desc": "Pass a value of `1` to enable query highlight markers (see below)."
+    {
+      "sort_dir": {
+        "required": false,
+        "example": "asc",
+        "desc": "Change sort direction to ascending (asc) or descending (desc)."
+      }
+    },
+    {
+      "highlight": {
+        "required": false,
+        "example": "1",
+        "desc": "Pass a value of 1 to enable query highlight markers (see below)."
+      }
+    },
+    {
+      "count": {
+        "required": false,
+        "example": "100",
+        "desc": "Number of items to return per page."
+      }
+    },
+    {
+      "page": {
+        "required": false,
+        "example": "2",
+        "desc": "Page number of results to return."
+      }
     }
-  },
-  "has_paging": true,
-  "errors": {}
+  ],
+  "errors": {
+    "not_authed": "No authentication token provided.",
+    "invalid_auth": "Invalid authentication token.",
+    "account_inactive": "Authentication token is for a deleted user or team.",
+    "user_is_bot": "This method cannot be called by a bot user."
+  }
 }

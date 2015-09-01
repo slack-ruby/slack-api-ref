@@ -1,14 +1,29 @@
 {
-  "desc": "Creates a private group.",
-  "args": {
-    "name": {
-      "required": true,
-      "desc": "Name of group to create."
+  "desc": "This method creates a private group.",
+  "args": [
+    {
+      "token": {
+        "required": true,
+        "example": "xxxx-xxxxxxxxx-xxxx",
+        "desc": "Authentication token (Requires scope: post)."
+      }
+    },
+    {
+      "name": {
+        "required": true,
+        "example": " ",
+        "desc": "Name of group to create."
+      }
     }
-  },
+  ],
   "errors": {
     "no_channel": "No group name was passed.",
     "restricted_action": "A team preference prevents the authenticated user from creating groups.",
-    "name_taken": "A group cannot be created with the given name."
+    "name_taken": "A group cannot be created with the given name.",
+    "not_authed": "No authentication token provided.",
+    "invalid_auth": "Invalid authentication token.",
+    "account_inactive": "Authentication token is for a deleted user or team.",
+    "user_is_bot": "This method cannot be called by a bot user.",
+    "user_is_ultra_restricted": "This method cannot be called by a single channel guest."
   }
 }

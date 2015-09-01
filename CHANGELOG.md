@@ -2,7 +2,7 @@ Changelog
 ---------
 
 * Your contribution here.
-
+* Replaced manually edited docs with a rake task `parse:api:methods` that parses API at https://api.slack.com - [@rusikf](https://github.com/rusikf).
 * Added `reactions.add`, `list`, `get` and `remove` - [@jakedahn](https://github.com/jakedahn).
 * Added `users.list#presence` - [@dblock](https://github.com/dblock).
 * Documented `user_disabled` error in `im.open` - [@dblock](https://github.com/dblock).

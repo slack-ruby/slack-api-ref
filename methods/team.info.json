@@ -1,5 +1,5 @@
 {
-  "desc": "This method returns a list of all im channels that the user has.",
+  "desc": "This method provides information about your team.",
   "args": [
     {
       "token": {
