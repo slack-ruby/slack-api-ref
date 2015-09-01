@@ -1,15 +1,29 @@
 {
-  "desc": "Clones and archives a private group.",
-  "args": {
-    "channel": {
-      "type": "group",
-      "required": true,
-      "desc": "Group to clone and archive."
+  "desc": "This method takes an existing private group and performs the following steps:",
+  "args": [
+    {
+      "token": {
+        "required": true,
+        "example": "xxxx-xxxxxxxxx-xxxx",
+        "desc": "Authentication token (Requires scope: post)."
+      }
+    },
+    {
+      "channel": {
+        "required": true,
+        "example": "G1234567890",
+        "desc": "Group to clone and archive."
+      }
     }
-  },
+  ],
   "errors": {
-    "channel_not_found": "Value passed for `channel` was invalid.",
+    "channel_not_found": "Value passed for channel was invalid.",
     "already_archived": "An archived group cannot be cloned.",
-    "restricted_action": "A team preference prevents the authenticated user from creating groups."
+    "restricted_action": "A team preference prevents the authenticated user from creating groups.",
+    "not_authed": "No authentication token provided.",
+    "invalid_auth": "Invalid authentication token.",
+    "account_inactive": "Authentication token is for a deleted user or team.",
+    "user_is_bot": "This method cannot be called by a bot user.",
+    "user_is_ultra_restricted": "This method cannot be called by a single channel guest."
   }
 }

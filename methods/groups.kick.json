@@ -1,22 +1,38 @@
 {
-  "desc": "Removes a user from a private group.",
-  "args": {
-    "channel": {
-      "type": "group",
-      "required": true,
-      "desc": "Group to remove user from."
+  "desc": "This method allows a user to remove another member from a private group.",
+  "args": [
+    {
+      "token": {
+        "required": true,
+        "example": "xxxx-xxxxxxxxx-xxxx",
+        "desc": "Authentication token (Requires scope: post)."
+      }
     },
-    "user": {
-      "type": "user",
-      "required": true,
-      "desc": "User to remove from group."
+    {
+      "channel": {
+        "required": true,
+        "example": "G1234567890",
+        "desc": "Group to remove user from."
+      }
+    },
+    {
+      "user": {
+        "required": true,
+        "example": "U1234567890",
+        "desc": "User to remove from group."
+      }
     }
-  },
+  ],
   "errors": {
-    "channel_not_found": "Value passed for `channel` was invalid.",
-    "user_not_found": "Value passed for `user` was invalid.",
+    "channel_not_found": "Value passed for channel was invalid.",
+    "user_not_found": "Value passed for user was invalid.",
     "cant_kick_self": "You can't remove yourself from a group.",
     "not_in_group": "User or caller were are not in the group.",
-    "restricted_action": "A team preference prevents the authenticated user from kicking."
+    "restricted_action": "A team preference prevents the authenticated user from kicking.",
+    "not_authed": "No authentication token provided.",
+    "invalid_auth": "Invalid authentication token.",
+    "account_inactive": "Authentication token is for a deleted user or team.",
+    "user_is_bot": "This method cannot be called by a bot user.",
+    "user_is_restricted": "This method cannot be called by a restricted user or single channel guest."
   }
 }

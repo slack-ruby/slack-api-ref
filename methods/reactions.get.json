@@ -1,0 +1,57 @@
+{
+  "desc": "This method returns a list of all reactions for a single item (file, file comment, channel message, group message, or direct message).",
+  "args": [
+    {
+      "token": {
+        "required": true,
+        "example": "xxxx-xxxxxxxxx-xxxx",
+        "desc": "Authentication token (Requires scope: read)."
+      }
+    },
+    {
+      "file": {
+        "required": false,
+        "example": "F1234567890",
+        "desc": "File to get reactions for."
+      }
+    },
+    {
+      "file_comment": {
+        "required": false,
+        "example": "Fc1234567890",
+        "desc": "File comment to get reactions for."
+      }
+    },
+    {
+      "channel": {
+        "required": false,
+        "example": "C1234567890",
+        "desc": "Channel where the message to get reactions for was posted."
+      }
+    },
+    {
+      "timestamp": {
+        "required": false,
+        "example": "1234567890.123456",
+        "desc": "Timestamp of the message to get reactions for."
+      }
+    },
+    {
+      "full": {
+        "required": false,
+        "example": " ",
+        "desc": "If true always return the complete reaction list."
+      }
+    }
+  ],
+  "errors": {
+    "bad_timestamp": "Value passed for timestamp was invalid.",
+    "file_not_found": "File specified by file does not exist.",
+    "file_comment_not_found": "File comment specified by file_comment does not exist.",
+    "message_not_found": "Message specified by channel and timestamp does not exist.",
+    "no_item_specified": "file, file_comment, or combination of channel and timestamp was not specified.",
+    "not_authed": "No authentication token provided.",
+    "invalid_auth": "Invalid authentication token.",
+    "account_inactive": "Authentication token is for a deleted user or team."
+  }
+}

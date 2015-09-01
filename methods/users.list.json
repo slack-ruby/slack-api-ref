@@ -1,11 +1,24 @@
 {
-  "desc": "Lists all users in a Slack team.",
-  "args": {
-    "presence": {
-      "required": false,
-      "example": 1,
-      "desc": "Whether to include presence data in the output."
+  "desc": "This method returns a list of all users in the team. This includes deleted/deactivated users.",
+  "args": [
+    {
+      "token": {
+        "required": true,
+        "example": "xxxx-xxxxxxxxx-xxxx",
+        "desc": "Authentication token (Requires scope: read)."
+      }
+    },
+    {
+      "presence": {
+        "required": false,
+        "example": "1",
+        "desc": "Whether to include presence data in the output."
+      }
     }
-  },
-  "errors": {}
+  ],
+  "errors": {
+    "not_authed": "No authentication token provided.",
+    "invalid_auth": "Invalid authentication token.",
+    "account_inactive": "Authentication token is for a deleted user or team."
+  }
 }

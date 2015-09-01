@@ -1,15 +1,29 @@
 {
-  "desc": "Creates a channel.",
-  "args": {
-    "name": {
-      "required": true,
-      "desc": "Name of channel to create.",
-      "example": "mychannel"
+  "desc": "This method is used to create a channel.",
+  "args": [
+    {
+      "token": {
+        "required": true,
+        "example": "xxxx-xxxxxxxxx-xxxx",
+        "desc": "Authentication token (Requires scope: read)."
+      }
+    },
+    {
+      "name": {
+        "required": true,
+        "example": "mychannel",
+        "desc": "Name of channel to create."
+      }
     }
-  },
+  ],
   "errors": {
     "name_taken": "A channel cannot be created with the given name.",
     "restricted_action": "A team preference prevents the authenticated user from creating channels.",
-    "no_channel": "Value passed for `name` was empty."
+    "no_channel": "Value passed for name was empty.",
+    "not_authed": "No authentication token provided.",
+    "invalid_auth": "Invalid authentication token.",
+    "account_inactive": "Authentication token is for a deleted user or team.",
+    "user_is_bot": "This method cannot be called by a bot user.",
+    "user_is_restricted": "This method cannot be called by a restricted user or single channel guest."
   }
 }

@@ -1,5 +1,5 @@
 {
-  "desc": "This method returns information about a file in your team.",
+  "desc": "This method returns a list of all items (file, file comment, channel message, group message, or direct message) reacted to by a user.",
   "args": [
     {
       "token": {
@@ -9,10 +9,17 @@
       }
     },
     {
-      "file": {
-        "required": true,
-        "example": "F1234567890",
-        "desc": "File to fetch info for."
+      "user": {
+        "required": false,
+        "example": "U1234567890",
+        "desc": "Show reactions made by this user. Defaults to the authed user."
+      }
+    },
+    {
+      "full": {
+        "required": false,
+        "example": " ",
+        "desc": "If true always return the complete reaction list."
       }
     },
     {
@@ -31,11 +38,9 @@
     }
   ],
   "errors": {
-    "file_not_found": "Value passed for file was invalid.",
-    "file_deleted": "The requested file has been deleted.",
+    "user_not_found": "Value passed for user was invalid.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Invalid authentication token.",
-    "account_inactive": "Authentication token is for a deleted user or team.",
-    "user_is_bot": "This method cannot be called by a bot user."
+    "account_inactive": "Authentication token is for a deleted user or team."
   }
 }

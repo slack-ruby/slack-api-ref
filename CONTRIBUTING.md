@@ -72,6 +72,12 @@ git commit --amend
 git push origin my-feature-branch -f
 ```
 
+#### Re-generate docs
+
+```
+rake parse:api:methods
+```
+
 #### Be Patient
 
 It's likely that your change will not be merged and that the nitpicky maintainers will ask you to do more, or fix seemingly benign problems. Hang on there!

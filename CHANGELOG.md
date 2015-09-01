@@ -1,6 +1,6 @@
 Changelog
 ---------
-
+* Add rake task `parse:api:methods` for parsing API - [@rusikf](https://github.com/rusikf)
 * Added `users.list#presence` - [@dblock](https://github.com/dblock).
 * Documented `user_disabled` error in `im.open` - [@dblock](https://github.com/dblock).
 * Added `im.history#inclusive`, fixed `#count` which is an integer - [@dblock](https://github.com/dblock).
