@@ -10,16 +10,6 @@
       "required": false,
       "example": " ",
       "desc": "If true always return the complete reaction list."
-    },
-    "count": {
-      "required": false,
-      "example": "100",
-      "desc": "Number of items to return per page."
-    },
-    "page": {
-      "required": false,
-      "example": "2",
-      "desc": "Page number of results to return."
     }
   },
   "errors": {
@@ -27,5 +17,7 @@
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Invalid authentication token.",
     "account_inactive": "Authentication token is for a deleted user or team."
-  }
+  },
+  "has_paging": true,
+  "default_count": 100
 }

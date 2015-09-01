@@ -12,14 +12,15 @@ class SlackApiDocumentationSpider < Spidey::AbstractSpider
   def process_method(page, default_data = {})
     desc = page.search("section[data-tab='docs'] p")[0].text
 
-    args = parse_args(page)
+    args, fields = parse_args(page)
     errors = parse_errors(page)
 
     json_hash = {
       'desc' => desc,
       'args' => args,
       'errors' => errors
-    }
+    }.merge(fields)
+
     record(file_name: default_data[:filename], json: JSON.pretty_generate(json_hash))
   end
 
@@ -29,6 +30,7 @@ class SlackApiDocumentationSpider < Spidey::AbstractSpider
     args_wrapper = api_page.search("h2:contains('Arguments') + p + table")
     rows = args_wrapper.search('tr')
     args = {}
+    fields = {}
     rows.each do |row|
       next if row.search('th').any?
       name = row.search('td:nth-child(1)').text
@@ -38,16 +40,21 @@ class SlackApiDocumentationSpider < Spidey::AbstractSpider
 
       rows = args_wrapper.search('tr')
 
-      # ignore token, always required
-      next if name == 'token'
-
-      args[name] = {
-        'required' => required,
-        'example' => example,
-        'desc' => desc
-      }
+      case name
+      when 'token' then
+        # ignore token, always required
+      when 'count', 'page' then
+        fields['has_paging'] = true
+        fields['default_count'] = 100
+      else
+        args[name] = {
+          'required' => required,
+          'example' => example,
+          'desc' => desc
+        }
+      end
     end
-    args
+    [args, fields]
   end
 
   def parse_errors(api_page)

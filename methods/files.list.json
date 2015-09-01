@@ -20,16 +20,6 @@
       "required": false,
       "example": "images",
       "desc": "Filter files by type:\n\nall - All files\nposts - Posts\nsnippets - Snippets\nimages - Image files\ngdocs - Google docs\nzips - Zip files\npdfs - PDF files\n\n\nYou can pass multiple values in the types argument, like types=posts,snippets.The default value is all, which does not filter the list.\n."
-    },
-    "count": {
-      "required": false,
-      "example": "100",
-      "desc": "Number of items to return per page."
-    },
-    "page": {
-      "required": false,
-      "example": "2",
-      "desc": "Page number of results to return."
     }
   },
   "errors": {
@@ -39,5 +29,7 @@
     "invalid_auth": "Invalid authentication token.",
     "account_inactive": "Authentication token is for a deleted user or team.",
     "user_is_bot": "This method cannot be called by a bot user."
-  }
+  },
+  "has_paging": true,
+  "default_count": 100
 }

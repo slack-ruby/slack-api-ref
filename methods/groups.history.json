@@ -20,13 +20,10 @@
       "required": false,
       "example": "1",
       "desc": "Include messages with latest or oldest timestamp in results."
-    },
-    "count": {
-      "required": false,
-      "example": "100",
-      "desc": "Number of messages to return, between 1 and 1000."
     }
   },
   "errors": {
-  }
+  },
+  "has_paging": true,
+  "default_count": 100
 }

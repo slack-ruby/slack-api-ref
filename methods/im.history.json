@@ -20,11 +20,6 @@
       "required": false,
       "example": "1",
       "desc": "Include messages with latest or oldest timestamp in results."
-    },
-    "count": {
-      "required": false,
-      "example": "100",
-      "desc": "Number of messages to return, between 1 and 1000."
     }
   },
   "errors": {
@@ -34,5 +29,7 @@
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Invalid authentication token.",
     "account_inactive": "Authentication token is for a deleted user or team."
-  }
+  },
+  "has_paging": true,
+  "default_count": 100
 }
