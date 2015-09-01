@@ -1,42 +1,32 @@
 {
   "desc": "This method un-pins an item (file, file comment, channel message, or group message) from a channel.\nThe channel argument is required and one of file, file_comment, or timestamp must also be specified.",
-  "args": [
-    {
-      "token": {
-        "required": true,
-        "example": "xxxx-xxxxxxxxx-xxxx",
-        "desc": "Authentication token (Requires scope: post)."
-      }
+  "args": {
+    "token": {
+      "required": true,
+      "example": "xxxx-xxxxxxxxx-xxxx",
+      "desc": "Authentication token (Requires scope: post)."
     },
-    {
-      "channel": {
-        "required": true,
-        "example": "C1234567890",
-        "desc": "Channel where the item is pinned to."
-      }
+    "channel": {
+      "required": true,
+      "example": "C1234567890",
+      "desc": "Channel where the item is pinned to."
     },
-    {
-      "file": {
-        "required": false,
-        "example": "F1234567890",
-        "desc": "File to un-pin."
-      }
+    "file": {
+      "required": false,
+      "example": "F1234567890",
+      "desc": "File to un-pin."
     },
-    {
-      "file_comment": {
-        "required": false,
-        "example": "Fc1234567890",
-        "desc": "File comment to un-pin."
-      }
+    "file_comment": {
+      "required": false,
+      "example": "Fc1234567890",
+      "desc": "File comment to un-pin."
     },
-    {
-      "timestamp": {
-        "required": false,
-        "example": "1234567890.123456",
-        "desc": "Timestamp of the message to un-pin."
-      }
+    "timestamp": {
+      "required": false,
+      "example": "1234567890.123456",
+      "desc": "Timestamp of the message to un-pin."
     }
-  ],
+  },
   "errors": {
     "bad_timestamp": "Value passed for timestamp was invalid.",
     "file_not_found": "File specified by file does not exist.",

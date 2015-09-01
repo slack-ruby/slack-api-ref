@@ -1,14 +1,12 @@
 {
   "desc": "This method returns a list of all im channels that the user has.",
-  "args": [
-    {
-      "token": {
-        "required": true,
-        "example": "xxxx-xxxxxxxxx-xxxx",
-        "desc": "Authentication token (Requires scope: read)."
-      }
+  "args": {
+    "token": {
+      "required": true,
+      "example": "xxxx-xxxxxxxxx-xxxx",
+      "desc": "Authentication token (Requires scope: read)."
     }
-  ],
+  },
   "errors": {
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Invalid authentication token.",

@@ -1,14 +1,12 @@
 {
   "desc": "This method lets the slack messaging server know that the authenticated user\nis currently active. Consult the presence documentation for\nmore details.",
-  "args": [
-    {
-      "token": {
-        "required": true,
-        "example": "xxxx-xxxxxxxxx-xxxx",
-        "desc": "Authentication token (Requires scope: post)."
-      }
+  "args": {
+    "token": {
+      "required": true,
+      "example": "xxxx-xxxxxxxxx-xxxx",
+      "desc": "Authentication token (Requires scope: post)."
     }
-  ],
+  },
   "errors": {
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Invalid authentication token.",

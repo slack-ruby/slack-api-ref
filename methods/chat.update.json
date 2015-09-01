@@ -1,35 +1,27 @@
 {
   "desc": "This method updates a message in a channel.",
-  "args": [
-    {
-      "token": {
-        "required": true,
-        "example": "xxxx-xxxxxxxxx-xxxx",
-        "desc": "Authentication token (Requires scope: post)."
-      }
+  "args": {
+    "token": {
+      "required": true,
+      "example": "xxxx-xxxxxxxxx-xxxx",
+      "desc": "Authentication token (Requires scope: post)."
     },
-    {
-      "ts": {
-        "required": true,
-        "example": "1405894322.002768",
-        "desc": "Timestamp of the message to be updated."
-      }
+    "ts": {
+      "required": true,
+      "example": "1405894322.002768",
+      "desc": "Timestamp of the message to be updated."
     },
-    {
-      "channel": {
-        "required": true,
-        "example": "C1234567890",
-        "desc": "Channel containing the message to be updated."
-      }
+    "channel": {
+      "required": true,
+      "example": "C1234567890",
+      "desc": "Channel containing the message to be updated."
     },
-    {
-      "text": {
-        "required": true,
-        "example": "Hello world",
-        "desc": "New text for the message, using the default formatting rules."
-      }
+    "text": {
+      "required": true,
+      "example": "Hello world",
+      "desc": "New text for the message, using the default formatting rules."
     }
-  ],
+  },
   "errors": {
     "message_not_found": "No message exists with the requested timestamp.",
     "cant_update_message": "Authenticated user does not have permission to update this message.",

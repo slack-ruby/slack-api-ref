@@ -1,21 +1,17 @@
 {
   "desc": "This method creates a private group.",
-  "args": [
-    {
-      "token": {
-        "required": true,
-        "example": "xxxx-xxxxxxxxx-xxxx",
-        "desc": "Authentication token (Requires scope: post)."
-      }
+  "args": {
+    "token": {
+      "required": true,
+      "example": "xxxx-xxxxxxxxx-xxxx",
+      "desc": "Authentication token (Requires scope: post)."
     },
-    {
-      "name": {
-        "required": true,
-        "example": " ",
-        "desc": "Name of group to create."
-      }
+    "name": {
+      "required": true,
+      "example": " ",
+      "desc": "Name of group to create."
     }
-  ],
+  },
   "errors": {
     "no_channel": "No group name was passed.",
     "restricted_action": "A team preference prevents the authenticated user from creating groups.",

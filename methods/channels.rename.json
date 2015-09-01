@@ -1,28 +1,22 @@
 {
   "desc": "This method renames a team channel.",
-  "args": [
-    {
-      "token": {
-        "required": true,
-        "example": "xxxx-xxxxxxxxx-xxxx",
-        "desc": "Authentication token (Requires scope: post)."
-      }
+  "args": {
+    "token": {
+      "required": true,
+      "example": "xxxx-xxxxxxxxx-xxxx",
+      "desc": "Authentication token (Requires scope: post)."
     },
-    {
-      "channel": {
-        "required": true,
-        "example": "C1234567890",
-        "desc": "Channel to rename."
-      }
+    "channel": {
+      "required": true,
+      "example": "C1234567890",
+      "desc": "Channel to rename."
     },
-    {
-      "name": {
-        "required": true,
-        "example": " ",
-        "desc": "New name for channel."
-      }
+    "name": {
+      "required": true,
+      "example": " ",
+      "desc": "New name for channel."
     }
-  ],
+  },
   "errors": {
     "channel_not_found": "Value passed for channel was invalid.",
     "not_in_channel": "Caller is not a member of the channel.",

@@ -1,63 +1,47 @@
 {
   "desc": "This method allows you to create or upload an existing file.",
-  "args": [
-    {
-      "token": {
-        "required": true,
-        "example": "xxxx-xxxxxxxxx-xxxx",
-        "desc": "Authentication token (Requires scope: post)."
-      }
+  "args": {
+    "token": {
+      "required": true,
+      "example": "xxxx-xxxxxxxxx-xxxx",
+      "desc": "Authentication token (Requires scope: post)."
     },
-    {
-      "file": {
-        "required": false,
-        "example": "...",
-        "desc": "File contents via multipart/form-data."
-      }
+    "file": {
+      "required": false,
+      "example": "...",
+      "desc": "File contents via multipart/form-data."
     },
-    {
-      "content": {
-        "required": false,
-        "example": "...",
-        "desc": "File contents via a POST var."
-      }
+    "content": {
+      "required": false,
+      "example": "...",
+      "desc": "File contents via a POST var."
     },
-    {
-      "filetype": {
-        "required": false,
-        "example": "php",
-        "desc": "Slack-internal file type identifier."
-      }
+    "filetype": {
+      "required": false,
+      "example": "php",
+      "desc": "Slack-internal file type identifier."
     },
-    {
-      "filename": {
-        "required": false,
-        "example": "foo.txt",
-        "desc": "Filename of file."
-      }
+    "filename": {
+      "required": false,
+      "example": "foo.txt",
+      "desc": "Filename of file."
     },
-    {
-      "title": {
-        "required": false,
-        "example": "My File",
-        "desc": "Title of file."
-      }
+    "title": {
+      "required": false,
+      "example": "My File",
+      "desc": "Title of file."
     },
-    {
-      "initial_comment": {
-        "required": false,
-        "example": "Best!",
-        "desc": "Initial comment to add to file."
-      }
+    "initial_comment": {
+      "required": false,
+      "example": "Best!",
+      "desc": "Initial comment to add to file."
     },
-    {
-      "channels": {
-        "required": false,
-        "example": "C1234567890",
-        "desc": "Comma separated list of channels to share the file into."
-      }
+    "channels": {
+      "required": false,
+      "example": "C1234567890",
+      "desc": "Comma separated list of channels to share the file into."
     }
-  ],
+  },
   "errors": {
     "posting_to_general_channel_denied": "An admin has restricted posting to the #general channel.",
     "not_authed": "No authentication token provided.",

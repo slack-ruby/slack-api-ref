@@ -1,21 +1,17 @@
 {
   "desc": "This method is used to create a channel.",
-  "args": [
-    {
-      "token": {
-        "required": true,
-        "example": "xxxx-xxxxxxxxx-xxxx",
-        "desc": "Authentication token (Requires scope: read)."
-      }
+  "args": {
+    "token": {
+      "required": true,
+      "example": "xxxx-xxxxxxxxx-xxxx",
+      "desc": "Authentication token (Requires scope: read)."
     },
-    {
-      "name": {
-        "required": true,
-        "example": "mychannel",
-        "desc": "Name of channel to create."
-      }
+    "name": {
+      "required": true,
+      "example": "mychannel",
+      "desc": "Name of channel to create."
     }
-  ],
+  },
   "errors": {
     "name_taken": "A channel cannot be created with the given name.",
     "restricted_action": "A team preference prevents the authenticated user from creating channels.",

@@ -1,21 +1,17 @@
 {
   "desc": "This method closes a private group.",
-  "args": [
-    {
-      "token": {
-        "required": true,
-        "example": "xxxx-xxxxxxxxx-xxxx",
-        "desc": "Authentication token (Requires scope: post)."
-      }
+  "args": {
+    "token": {
+      "required": true,
+      "example": "xxxx-xxxxxxxxx-xxxx",
+      "desc": "Authentication token (Requires scope: post)."
     },
-    {
-      "channel": {
-        "required": true,
-        "example": "G1234567890",
-        "desc": "Group to open."
-      }
+    "channel": {
+      "required": true,
+      "example": "G1234567890",
+      "desc": "Group to open."
     }
-  ],
+  },
   "errors": {
     "channel_not_found": "Value passed for channel was invalid.",
     "not_authed": "No authentication token provided.",

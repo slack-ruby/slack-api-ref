@@ -1,14 +1,12 @@
 {
   "desc": "This method lists the custom emoji for a team.",
-  "args": [
-    {
-      "token": {
-        "required": true,
-        "example": "xxxx-xxxxxxxxx-xxxx",
-        "desc": "Authentication token (Requires scope: read)."
-      }
+  "args": {
+    "token": {
+      "required": true,
+      "example": "xxxx-xxxxxxxxx-xxxx",
+      "desc": "Authentication token (Requires scope: read)."
     }
-  ],
+  },
   "errors": {
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Invalid authentication token.",

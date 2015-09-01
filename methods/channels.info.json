@@ -1,21 +1,17 @@
 {
   "desc": "This method returns information about a team channel.",
-  "args": [
-    {
-      "token": {
-        "required": true,
-        "example": "xxxx-xxxxxxxxx-xxxx",
-        "desc": "Authentication token (Requires scope: read)."
-      }
+  "args": {
+    "token": {
+      "required": true,
+      "example": "xxxx-xxxxxxxxx-xxxx",
+      "desc": "Authentication token (Requires scope: read)."
     },
-    {
-      "channel": {
-        "required": true,
-        "example": "C1234567890",
-        "desc": "Channel to get info on."
-      }
+    "channel": {
+      "required": true,
+      "example": "C1234567890",
+      "desc": "Channel to get info on."
     }
-  ],
+  },
   "errors": {
     "channel_not_found": "Value passed for channel was invalid.",
     "not_authed": "No authentication token provided.",

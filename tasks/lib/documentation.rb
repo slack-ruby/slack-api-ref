@@ -28,7 +28,7 @@ class SlackApiDocumentationSpider < Spidey::AbstractSpider
   def parse_args(api_page)
     args_wrapper = api_page.search("h2:contains('Arguments') + p + table")
     rows = args_wrapper.search('tr')
-    args = []
+    args = {}
     rows.each do |row|
       next if row.search('th').any?
       name = row.search('td:nth-child(1)').text
@@ -38,15 +38,11 @@ class SlackApiDocumentationSpider < Spidey::AbstractSpider
 
       rows = args_wrapper.search('tr')
 
-      arg = {
-        name => {
-          'required' => required,
-          'example' => example,
-          'desc' => desc
-        }
+      args[name] = {
+        'required' => required,
+        'example' => example,
+        'desc' => desc
       }
-
-      args << arg
     end
     args
   end

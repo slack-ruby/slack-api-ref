@@ -1,28 +1,22 @@
 {
   "desc": "This method renames a private group.",
-  "args": [
-    {
-      "token": {
-        "required": true,
-        "example": "xxxx-xxxxxxxxx-xxxx",
-        "desc": "Authentication token (Requires scope: post)."
-      }
+  "args": {
+    "token": {
+      "required": true,
+      "example": "xxxx-xxxxxxxxx-xxxx",
+      "desc": "Authentication token (Requires scope: post)."
     },
-    {
-      "channel": {
-        "required": true,
-        "example": "C1234567890",
-        "desc": "Group to rename."
-      }
+    "channel": {
+      "required": true,
+      "example": "C1234567890",
+      "desc": "Group to rename."
     },
-    {
-      "name": {
-        "required": true,
-        "example": " ",
-        "desc": "New name for group."
-      }
+    "name": {
+      "required": true,
+      "example": " ",
+      "desc": "New name for group."
     }
-  ],
+  },
   "errors": {
     "channel_not_found": "Value passed for channel was invalid.",
     "invalid_name": "New name is invalid.",

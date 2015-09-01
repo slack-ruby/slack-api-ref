@@ -1,21 +1,17 @@
 {
   "desc": "This method opens a direct message channel with another member of your Slack team.",
-  "args": [
-    {
-      "token": {
-        "required": true,
-        "example": "xxxx-xxxxxxxxx-xxxx",
-        "desc": "Authentication token (Requires scope: post)."
-      }
+  "args": {
+    "token": {
+      "required": true,
+      "example": "xxxx-xxxxxxxxx-xxxx",
+      "desc": "Authentication token (Requires scope: post)."
     },
-    {
-      "user": {
-        "required": true,
-        "example": "U1234567890",
-        "desc": "User to open a direct message channel with."
-      }
+    "user": {
+      "required": true,
+      "example": "U1234567890",
+      "desc": "User to open a direct message channel with."
     }
-  ],
+  },
   "errors": {
     "user_not_found": "Value passed for user was invalid.",
     "user_not_visible": "The calling user is restricted from seeing the requested user.",

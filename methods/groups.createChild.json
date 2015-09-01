@@ -1,21 +1,17 @@
 {
   "desc": "This method takes an existing private group and performs the following steps:",
-  "args": [
-    {
-      "token": {
-        "required": true,
-        "example": "xxxx-xxxxxxxxx-xxxx",
-        "desc": "Authentication token (Requires scope: post)."
-      }
+  "args": {
+    "token": {
+      "required": true,
+      "example": "xxxx-xxxxxxxxx-xxxx",
+      "desc": "Authentication token (Requires scope: post)."
     },
-    {
-      "channel": {
-        "required": true,
-        "example": "G1234567890",
-        "desc": "Group to clone and archive."
-      }
+    "channel": {
+      "required": true,
+      "example": "G1234567890",
+      "desc": "Group to clone and archive."
     }
-  ],
+  },
   "errors": {
     "channel_not_found": "Value passed for channel was invalid.",
     "already_archived": "An archived group cannot be cloned.",

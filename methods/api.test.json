@@ -1,21 +1,17 @@
 {
   "desc": "This method helps you test your calling code.",
-  "args": [
-    {
-      "error": {
-        "required": false,
-        "example": "my_error",
-        "desc": "Error response to return."
-      }
+  "args": {
+    "error": {
+      "required": false,
+      "example": "my_error",
+      "desc": "Error response to return."
     },
-    {
-      "foo": {
-        "required": false,
-        "example": "bar",
-        "desc": "example property to return."
-      }
+    "foo": {
+      "required": false,
+      "example": "bar",
+      "desc": "example property to return."
     }
-  ],
+  },
   "errors": {
   }
 }

@@ -1,21 +1,17 @@
 {
   "desc": "This method returns a list of all users in the team. This includes deleted/deactivated users.",
-  "args": [
-    {
-      "token": {
-        "required": true,
-        "example": "xxxx-xxxxxxxxx-xxxx",
-        "desc": "Authentication token (Requires scope: read)."
-      }
+  "args": {
+    "token": {
+      "required": true,
+      "example": "xxxx-xxxxxxxxx-xxxx",
+      "desc": "Authentication token (Requires scope: read)."
     },
-    {
-      "presence": {
-        "required": false,
-        "example": "1",
-        "desc": "Whether to include presence data in the output."
-      }
+    "presence": {
+      "required": false,
+      "example": "1",
+      "desc": "Whether to include presence data in the output."
     }
-  ],
+  },
   "errors": {
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Invalid authentication token.",

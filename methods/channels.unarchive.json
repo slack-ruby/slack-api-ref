@@ -1,21 +1,17 @@
 {
   "desc": "This method unarchives a channel. The calling user is added to the channel.",
-  "args": [
-    {
-      "token": {
-        "required": true,
-        "example": "xxxx-xxxxxxxxx-xxxx",
-        "desc": "Authentication token (Requires scope: post)."
-      }
+  "args": {
+    "token": {
+      "required": true,
+      "example": "xxxx-xxxxxxxxx-xxxx",
+      "desc": "Authentication token (Requires scope: post)."
     },
-    {
-      "channel": {
-        "required": true,
-        "example": "C1234567890",
-        "desc": "Channel to unarchive."
-      }
+    "channel": {
+      "required": true,
+      "example": "C1234567890",
+      "desc": "Channel to unarchive."
     }
-  ],
+  },
   "errors": {
     "channel_not_found": "Value passed for channel was invalid.",
     "not_archived": "Channel is not archived.",

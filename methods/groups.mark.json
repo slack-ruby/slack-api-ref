@@ -1,28 +1,22 @@
 {
   "desc": "This method moves the read cursor in a private group.",
-  "args": [
-    {
-      "token": {
-        "required": true,
-        "example": "xxxx-xxxxxxxxx-xxxx",
-        "desc": "Authentication token (Requires scope: post)."
-      }
+  "args": {
+    "token": {
+      "required": true,
+      "example": "xxxx-xxxxxxxxx-xxxx",
+      "desc": "Authentication token (Requires scope: post)."
     },
-    {
-      "channel": {
-        "required": true,
-        "example": "G1234567890",
-        "desc": "Group to set reading cursor in."
-      }
+    "channel": {
+      "required": true,
+      "example": "G1234567890",
+      "desc": "Group to set reading cursor in."
     },
-    {
-      "ts": {
-        "required": true,
-        "example": "1234567890.123456",
-        "desc": "Timestamp of the most recently seen message."
-      }
+    "ts": {
+      "required": true,
+      "example": "1234567890.123456",
+      "desc": "Timestamp of the most recently seen message."
     }
-  ],
+  },
   "errors": {
     "channel_not_found": "Value passed for channel was invalid.",
     "invalid_timestamp": "Value passed for timestamp was invalid.",

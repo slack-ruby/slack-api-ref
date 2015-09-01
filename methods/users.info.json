@@ -1,21 +1,17 @@
 {
   "desc": "This method returns information about a team member.",
-  "args": [
-    {
-      "token": {
-        "required": true,
-        "example": "xxxx-xxxxxxxxx-xxxx",
-        "desc": "Authentication token (Requires scope: read)."
-      }
+  "args": {
+    "token": {
+      "required": true,
+      "example": "xxxx-xxxxxxxxx-xxxx",
+      "desc": "Authentication token (Requires scope: read)."
     },
-    {
-      "user": {
-        "required": true,
-        "example": "U1234567890",
-        "desc": "User to get info on."
-      }
+    "user": {
+      "required": true,
+      "example": "U1234567890",
+      "desc": "User to get info on."
     }
-  ],
+  },
   "errors": {
     "user_not_found": "Value passed for user was invalid.",
     "user_not_visible": "The requested user is not visible to the calling user.",

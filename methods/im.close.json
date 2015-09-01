@@ -1,21 +1,17 @@
 {
   "desc": "This method closes a direct message channel.",
-  "args": [
-    {
-      "token": {
-        "required": true,
-        "example": "xxxx-xxxxxxxxx-xxxx",
-        "desc": "Authentication token (Requires scope: post)."
-      }
+  "args": {
+    "token": {
+      "required": true,
+      "example": "xxxx-xxxxxxxxx-xxxx",
+      "desc": "Authentication token (Requires scope: post)."
     },
-    {
-      "channel": {
-        "required": true,
-        "example": "D1234567890",
-        "desc": "Direct message channel to close."
-      }
+    "channel": {
+      "required": true,
+      "example": "D1234567890",
+      "desc": "Direct message channel to close."
     }
-  ],
+  },
   "errors": {
     "channel_not_found": "Value passed for channel was invalid.",
     "user_does_not_own_channel": "Calling user does not own this DM channel.",

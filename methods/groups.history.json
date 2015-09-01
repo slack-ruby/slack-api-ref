@@ -1,49 +1,37 @@
 {
   "desc": "This method returns a portion of messages/events from the specified private group.\nTo read the entire history for a group, call the method with no latest or\noldest arguments, and then continue paging using the instructions below.",
-  "args": [
-    {
-      "token": {
-        "required": true,
-        "example": "xxxx-xxxxxxxxx-xxxx",
-        "desc": "Authentication token (Requires scope: read)."
-      }
+  "args": {
+    "token": {
+      "required": true,
+      "example": "xxxx-xxxxxxxxx-xxxx",
+      "desc": "Authentication token (Requires scope: read)."
     },
-    {
-      "channel": {
-        "required": true,
-        "example": "G1234567890",
-        "desc": "Group to fetch history for."
-      }
+    "channel": {
+      "required": true,
+      "example": "G1234567890",
+      "desc": "Group to fetch history for."
     },
-    {
-      "latest": {
-        "required": false,
-        "example": "1234567890.123456",
-        "desc": "End of time range of messages to include in results."
-      }
+    "latest": {
+      "required": false,
+      "example": "1234567890.123456",
+      "desc": "End of time range of messages to include in results."
     },
-    {
-      "oldest": {
-        "required": false,
-        "example": "1234567890.123456",
-        "desc": "Start of time range of messages to include in results."
-      }
+    "oldest": {
+      "required": false,
+      "example": "1234567890.123456",
+      "desc": "Start of time range of messages to include in results."
     },
-    {
-      "inclusive": {
-        "required": false,
-        "example": "1",
-        "desc": "Include messages with latest or oldest timestamp in results."
-      }
+    "inclusive": {
+      "required": false,
+      "example": "1",
+      "desc": "Include messages with latest or oldest timestamp in results."
     },
-    {
-      "count": {
-        "required": false,
-        "example": "100",
-        "desc": "Number of messages to return, between 1 and 1000."
-      }
+    "count": {
+      "required": false,
+      "example": "100",
+      "desc": "Number of messages to return, between 1 and 1000."
     }
-  ],
+  },
   "errors": {
   }
 }

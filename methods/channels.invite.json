@@ -1,28 +1,22 @@
 {
   "desc": "This method is used to invite a user to a channel. The calling user must be a member of the channel.",
-  "args": [
-    {
-      "token": {
-        "required": true,
-        "example": "xxxx-xxxxxxxxx-xxxx",
-        "desc": "Authentication token (Requires scope: post)."
-      }
+  "args": {
+    "token": {
+      "required": true,
+      "example": "xxxx-xxxxxxxxx-xxxx",
+      "desc": "Authentication token (Requires scope: post)."
     },
-    {
-      "channel": {
-        "required": true,
-        "example": "C1234567890",
-        "desc": "Channel to invite user to."
-      }
+    "channel": {
+      "required": true,
+      "example": "C1234567890",
+      "desc": "Channel to invite user to."
     },
-    {
-      "user": {
-        "required": true,
-        "example": "U1234567890",
-        "desc": "User to invite to channel."
-      }
+    "user": {
+      "required": true,
+      "example": "U1234567890",
+      "desc": "User to invite to channel."
     }
-  ],
+  },
   "errors": {
     "channel_not_found": "Value passed for channel was invalid.",
     "user_not_found": "Value passed for user was invalid.",

@@ -1,21 +1,17 @@
 {
   "desc": "This method is used to leave a private group.",
-  "args": [
-    {
-      "token": {
-        "required": true,
-        "example": "xxxx-xxxxxxxxx-xxxx",
-        "desc": "Authentication token (Requires scope: post)."
-      }
+  "args": {
+    "token": {
+      "required": true,
+      "example": "xxxx-xxxxxxxxx-xxxx",
+      "desc": "Authentication token (Requires scope: post)."
     },
-    {
-      "channel": {
-        "required": true,
-        "example": "G1234567890",
-        "desc": "Group to leave."
-      }
+    "channel": {
+      "required": true,
+      "example": "G1234567890",
+      "desc": "Group to leave."
     }
-  ],
+  },
   "errors": {
     "channel_not_found": "Value passed for channel was invalid.",
     "is_archived": "Group has been archived.",

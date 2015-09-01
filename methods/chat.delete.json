@@ -1,28 +1,22 @@
 {
   "desc": "This method deletes a message from a channel.",
-  "args": [
-    {
-      "token": {
-        "required": true,
-        "example": "xxxx-xxxxxxxxx-xxxx",
-        "desc": "Authentication token (Requires scope: post)."
-      }
+  "args": {
+    "token": {
+      "required": true,
+      "example": "xxxx-xxxxxxxxx-xxxx",
+      "desc": "Authentication token (Requires scope: post)."
     },
-    {
-      "ts": {
-        "required": true,
-        "example": "1405894322.002768",
-        "desc": "Timestamp of the message to be deleted."
-      }
+    "ts": {
+      "required": true,
+      "example": "1405894322.002768",
+      "desc": "Timestamp of the message to be deleted."
     },
-    {
-      "channel": {
-        "required": true,
-        "example": "C1234567890",
-        "desc": "Channel containing the message to be deleted."
-      }
+    "channel": {
+      "required": true,
+      "example": "C1234567890",
+      "desc": "Channel containing the message to be deleted."
     }
-  ],
+  },
   "errors": {
     "message_not_found": "No message exists with the requested timestamp.",
     "channel_not_found": "Value passed for channel was invalid.",

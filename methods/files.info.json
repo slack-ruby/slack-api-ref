@@ -1,35 +1,27 @@
 {
   "desc": "This method returns information about a file in your team.",
-  "args": [
-    {
-      "token": {
-        "required": true,
-        "example": "xxxx-xxxxxxxxx-xxxx",
-        "desc": "Authentication token (Requires scope: read)."
-      }
+  "args": {
+    "token": {
+      "required": true,
+      "example": "xxxx-xxxxxxxxx-xxxx",
+      "desc": "Authentication token (Requires scope: read)."
     },
-    {
-      "file": {
-        "required": true,
-        "example": "F1234567890",
-        "desc": "File to fetch info for."
-      }
+    "file": {
+      "required": true,
+      "example": "F1234567890",
+      "desc": "File to fetch info for."
     },
-    {
-      "count": {
-        "required": false,
-        "example": "100",
-        "desc": "Number of items to return per page."
-      }
+    "count": {
+      "required": false,
+      "example": "100",
+      "desc": "Number of items to return per page."
     },
-    {
-      "page": {
-        "required": false,
-        "example": "2",
-        "desc": "Page number of results to return."
-      }
+    "page": {
+      "required": false,
+      "example": "2",
+      "desc": "Page number of results to return."
     }
-  ],
+  },
   "errors": {
     "file_not_found": "Value passed for file was invalid.",
     "file_deleted": "The requested file has been deleted.",

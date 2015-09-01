@@ -1,91 +1,67 @@
 {
   "desc": "This method posts a message to a public channel, private group, or IM channel.",
-  "args": [
-    {
-      "token": {
-        "required": true,
-        "example": "xxxx-xxxxxxxxx-xxxx",
-        "desc": "Authentication token (Requires scope: post)."
-      }
+  "args": {
+    "token": {
+      "required": true,
+      "example": "xxxx-xxxxxxxxx-xxxx",
+      "desc": "Authentication token (Requires scope: post)."
     },
-    {
-      "channel": {
-        "required": true,
-        "example": "C1234567890",
-        "desc": "Channel, private group, or IM channel to send message to. Can be an encoded ID, or a name. See below for more details."
-      }
+    "channel": {
+      "required": true,
+      "example": "C1234567890",
+      "desc": "Channel, private group, or IM channel to send message to. Can be an encoded ID, or a name. See below for more details."
     },
-    {
-      "text": {
-        "required": true,
-        "example": "Hello world",
-        "desc": "Text of the message to send. See below for an explanation of formatting."
-      }
+    "text": {
+      "required": true,
+      "example": "Hello world",
+      "desc": "Text of the message to send. See below for an explanation of formatting."
     },
-    {
-      "username": {
-        "required": false,
-        "example": "My Bot",
-        "desc": "Name of bot."
-      }
+    "username": {
+      "required": false,
+      "example": "My Bot",
+      "desc": "Name of bot."
     },
-    {
-      "as_user": {
-        "required": false,
-        "example": "true",
-        "desc": "Pass true to post the message as the authed user, instead of as a bot."
-      }
+    "as_user": {
+      "required": false,
+      "example": "true",
+      "desc": "Pass true to post the message as the authed user, instead of as a bot."
     },
-    {
-      "parse": {
-        "required": false,
-        "example": "full",
-        "desc": "Change how messages are treated. See below."
-      }
+    "parse": {
+      "required": false,
+      "example": "full",
+      "desc": "Change how messages are treated. See below."
     },
-    {
-      "link_names": {
-        "required": false,
-        "example": "1",
-        "desc": "Find and link channel names and usernames."
-      }
+    "link_names": {
+      "required": false,
+      "example": "1",
+      "desc": "Find and link channel names and usernames."
     },
-    {
-      "attachments": {
-        "required": false,
-        "example": "[{\"pretext\": \"pre-hello\", \"text\": \"text-world\"}]",
-        "desc": "Structured message attachments."
-      }
+    "attachments": {
+      "required": false,
+      "example": "[{\"pretext\": \"pre-hello\", \"text\": \"text-world\"}]",
+      "desc": "Structured message attachments."
     },
-    {
-      "unfurl_links": {
-        "required": false,
-        "example": "true",
-        "desc": "Pass true to enable unfurling of primarily text-based content."
-      }
+    "unfurl_links": {
+      "required": false,
+      "example": "true",
+      "desc": "Pass true to enable unfurling of primarily text-based content."
     },
-    {
-      "unfurl_media": {
-        "required": false,
-        "example": "false",
-        "desc": "Pass false to disable unfurling of media content."
-      }
+    "unfurl_media": {
+      "required": false,
+      "example": "false",
+      "desc": "Pass false to disable unfurling of media content."
     },
-    {
-      "icon_url": {
-        "required": false,
-        "example": "http://lorempixel.com/48/48",
-        "desc": "URL to an image to use as the icon for this message."
-      }
+    "icon_url": {
+      "required": false,
+      "example": "http://lorempixel.com/48/48",
+      "desc": "URL to an image to use as the icon for this message."
     },
-    {
-      "icon_emoji": {
-        "required": false,
-        "example": ":chart_with_upwards_trend:",
-        "desc": "emoji to use as the icon for this message. Overrides icon_url."
-      }
+    "icon_emoji": {
+      "required": false,
+      "example": ":chart_with_upwards_trend:",
+      "desc": "emoji to use as the icon for this message. Overrides icon_url."
     }
-  ],
+  },
   "errors": {
     "channel_not_found": "Value passed for channel was invalid.",
     "not_in_channel": "Cannot post user messages to a channel they are not in.",
