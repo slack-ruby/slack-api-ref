@@ -4,7 +4,8 @@
     "channel": {
       "required": true,
       "example": "C1234567890",
-      "desc": "Private group to set the purpose of."
+      "desc": "Private group to set the purpose of.",
+      "type": "channel"
     },
     "purpose": {
       "required": true,

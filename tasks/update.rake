@@ -1,14 +1,14 @@
-require_relative 'lib/documentation'
+require_relative 'lib/slack_api/documentation_spider'
 
-namespace :parse do
-  namespace :api do
-    desc 'Parse api methods'
-    task :methods do
+namespace :api do
+  namespace :methods do
+    desc 'Update api methods'
+    task :update do
       dir = 'methods'
       FileUtils.rm_rf(dir)
       FileUtils.mkdir(dir)
       FileUtils.cd(dir) do
-        spider = SlackApiDocumentationSpider.new(verbose: true, request_interval: 0)
+        spider = SlackApi::DocumentationSpider.new(verbose: true, request_interval: 0)
         spider.crawl
         spider.results.each do |result|
           File.open(result[:file_name], 'w+') { |f| f.write(result[:json]) }

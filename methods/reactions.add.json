@@ -9,7 +9,8 @@
     "file": {
       "required": false,
       "example": "F1234567890",
-      "desc": "File to add reaction to."
+      "desc": "File to add reaction to.",
+      "type": "file"
     },
     "file_comment": {
       "required": false,
@@ -19,7 +20,8 @@
     "channel": {
       "required": false,
       "example": "C1234567890",
-      "desc": "Channel where the message to add reaction to was posted."
+      "desc": "Channel where the message to add reaction to was posted.",
+      "type": "channel"
     },
     "timestamp": {
       "required": false,

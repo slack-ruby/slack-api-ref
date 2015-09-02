@@ -4,7 +4,8 @@
     "user": {
       "required": false,
       "example": "U1234567890",
-      "desc": "Filter files created by a single user."
+      "desc": "Filter files created by a single user.",
+      "type": "user"
     },
     "ts_from": {
       "required": false,

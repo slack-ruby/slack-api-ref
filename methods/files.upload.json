@@ -4,7 +4,8 @@
     "file": {
       "required": false,
       "example": "...",
-      "desc": "File contents via multipart/form-data."
+      "desc": "File contents via multipart/form-data.",
+      "type": "file"
     },
     "content": {
       "required": false,

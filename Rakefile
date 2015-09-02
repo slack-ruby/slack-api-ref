@@ -6,5 +6,5 @@ require 'fileutils'
 
 Bundler.setup :default, :development
 
-load 'tasks/parse_methods.rake'
+load 'tasks/update.rake'
 

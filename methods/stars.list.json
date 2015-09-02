@@ -4,7 +4,8 @@
     "user": {
       "required": false,
       "example": "U1234567890",
-      "desc": "Show stars by this user. Defaults to the authed user."
+      "desc": "Show stars by this user. Defaults to the authed user.",
+      "type": "user"
     }
   },
   "errors": {

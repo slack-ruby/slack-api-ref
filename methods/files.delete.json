@@ -4,7 +4,8 @@
     "file": {
       "required": true,
       "example": "F1234567890",
-      "desc": "ID of file to delete."
+      "desc": "ID of file to delete.",
+      "type": "file"
     }
   },
   "errors": {

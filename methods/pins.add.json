@@ -4,12 +4,14 @@
     "channel": {
       "required": true,
       "example": "C1234567890",
-      "desc": "Channel to pin the item in."
+      "desc": "Channel to pin the item in.",
+      "type": "channel"
     },
     "file": {
       "required": false,
       "example": "F1234567890",
-      "desc": "File to pin."
+      "desc": "File to pin.",
+      "type": "file"
     },
     "file_comment": {
       "required": false,

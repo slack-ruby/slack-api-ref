@@ -4,7 +4,8 @@
     "file": {
       "required": true,
       "example": "F1234567890",
-      "desc": "File to fetch info for."
+      "desc": "File to fetch info for.",
+      "type": "file"
     }
   },
   "errors": {

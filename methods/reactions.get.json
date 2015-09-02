@@ -4,7 +4,8 @@
     "file": {
       "required": false,
       "example": "F1234567890",
-      "desc": "File to get reactions for."
+      "desc": "File to get reactions for.",
+      "type": "file"
     },
     "file_comment": {
       "required": false,
@@ -14,7 +15,8 @@
     "channel": {
       "required": false,
       "example": "C1234567890",
-      "desc": "Channel where the message to get reactions for was posted."
+      "desc": "Channel where the message to get reactions for was posted.",
+      "type": "channel"
     },
     "timestamp": {
       "required": false,

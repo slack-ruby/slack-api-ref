@@ -4,12 +4,14 @@
     "channel": {
       "required": true,
       "example": "D1234567890",
-      "desc": "Direct message channel to set reading cursor in."
+      "desc": "Direct message channel to set reading cursor in.",
+      "type": "channel"
     },
     "ts": {
       "required": true,
       "example": "1234567890.123456",
-      "desc": "Timestamp of the most recently seen message."
+      "desc": "Timestamp of the most recently seen message.",
+      "type": "timestamp"
     }
   },
   "errors": {

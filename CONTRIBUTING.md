@@ -72,10 +72,10 @@ git commit --amend
 git push origin my-feature-branch -f
 ```
 
-#### Re-generate docs
+#### Re-generate Docs
 
 ```
-rake parse:api:methods
+rake api:methods:update
 ```
 
 #### Be Patient

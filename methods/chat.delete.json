@@ -4,12 +4,14 @@
     "ts": {
       "required": true,
       "example": "1405894322.002768",
-      "desc": "Timestamp of the message to be deleted."
+      "desc": "Timestamp of the message to be deleted.",
+      "type": "timestamp"
     },
     "channel": {
       "required": true,
       "example": "C1234567890",
-      "desc": "Channel containing the message to be deleted."
+      "desc": "Channel containing the message to be deleted.",
+      "type": "channel"
     }
   },
   "errors": {

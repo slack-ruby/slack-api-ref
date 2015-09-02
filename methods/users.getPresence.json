@@ -4,7 +4,8 @@
     "user": {
       "required": true,
       "example": "U1234567890",
-      "desc": "User to get presence info on. Defaults to the authed user."
+      "desc": "User to get presence info on. Defaults to the authed user.",
+      "type": "user"
     }
   },
   "errors": {
