@@ -5,7 +5,7 @@
       "required": true,
       "example": "G1234567890",
       "desc": "Private group to archive.",
-      "type": "channel"
+      "type": "group"
     }
   },
   "errors": {

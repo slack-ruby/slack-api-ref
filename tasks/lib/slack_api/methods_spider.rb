@@ -5,15 +5,17 @@ module SlackApi
     def process_list(page, _default_data = {})
       page.search('.card a[href^="/methods"]').each do |a|
         href = a.attr('href')
-        file_name = href.split('/').last + '.json'
-        handle resolve_url(href, page), :process_method, filename: file_name
+        method_name = href.split('/').last
+        method_group = method_name.split('.').first
+        file_name = method_name + '.json'
+        handle resolve_url(href, page), :process_method, filename: file_name, method_group: method_group
       end
     end
 
     def process_method(page, default_data = {})
       desc = page.search("section[data-tab='docs'] p")[0].text
 
-      args, fields = parse_args(page)
+      args, fields = parse_args(page, default_data)
       errors = parse_errors(page)
 
       json_hash = {
@@ -27,16 +29,7 @@ module SlackApi
 
     private
 
-    TYPE_MAPPING = {
-      'channel' => 'channel',
-      'user' => 'user',
-      'latest' => 'timestamp',
-      'oldest' => 'timestamp',
-      'ts' => 'timestamp',
-      'file' => 'file'
-    }
-
-    def parse_args(api_page)
+    def parse_args(api_page, default_data = {})
       args_wrapper = api_page.search("h2:contains('Arguments') + p + table")
       rows = args_wrapper.search('tr')
       args = {}
@@ -61,11 +54,27 @@ module SlackApi
           h['required'] = required
           h['example'] = example if example
           h['desc'] = desc if desc
-          h['type'] = TYPE_MAPPING[name] if TYPE_MAPPING.key?(name)
+          type = guess_type(name, default_data)
+          h['type'] = type if type
           args[name] = h
         end
       end
       [args, fields]
+    end
+
+    def guess_type(name, default_data = {})
+      case name
+      when 'user' then 'user'
+      when 'latest', 'oldest', 'ts' then 'timestamp'
+      when 'file' then 'file'
+      when 'user' then 'user'
+      when 'channel' then
+        case default_data[:method_group]
+        when 'im' then 'im'
+        when 'groups' then 'group'
+        else 'channel'
+        end
+      end
     end
 
     def parse_errors(api_page)

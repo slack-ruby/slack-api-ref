@@ -5,7 +5,7 @@
       "required": true,
       "example": "C1234567890",
       "desc": "Group to rename.",
-      "type": "channel"
+      "type": "group"
     },
     "name": {
       "required": true,
