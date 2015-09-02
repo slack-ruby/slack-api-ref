@@ -1,5 +1,5 @@
 module SlackApi
-  class DocumentationSpider < Spidey::AbstractSpider
+  class MethodsSpider < Spidey::AbstractSpider
     handle 'https://api.slack.com/methods', :process_list
 
     def process_list(page, _default_data = {})
