@@ -40,6 +40,7 @@
   },
   "errors": {
     "posting_to_general_channel_denied": "An admin has restricted posting to the #general channel.",
+    "invalid_channel": "One or more channels supplied are invalid.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Invalid authentication token.",
     "account_inactive": "Authentication token is for a deleted user or team.",
