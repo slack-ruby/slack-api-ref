@@ -1,10 +1,10 @@
 {
-  "desc": "This method returns a portion of messages/events from the specified channel.\nTo read the entire history for a channel, call the method with no latest or\noldest arguments, and then continue paging using the instructions below.",
+  "desc": "This method returns a portion of messages/events from the specified multiparty direct message channel.\nTo read the entire history for a multiparty direct message, call the method with no latest or\noldest arguments, and then continue paging using the instructions below.",
   "args": {
     "channel": {
       "required": true,
-      "example": "C1234567890",
-      "desc": "Channel to fetch history for.",
+      "example": " ",
+      "desc": "Multiparty direct message to fetch history for.",
       "type": "channel"
     },
     "latest": {
@@ -31,12 +31,6 @@
     }
   },
   "errors": {
-    "channel_not_found": "Value passed for channel was invalid.",
-    "invalid_ts_latest": "Value passed for latest was invalid.",
-    "invalid_ts_oldest": "Value passed for oldest was invalid.",
-    "not_authed": "No authentication token provided.",
-    "invalid_auth": "Invalid authentication token.",
-    "account_inactive": "Authentication token is for a deleted user or team."
   },
   "has_paging": true,
   "default_count": 100

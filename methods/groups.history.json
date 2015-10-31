@@ -23,6 +23,11 @@
       "required": false,
       "example": "1",
       "desc": "Include messages with latest or oldest timestamp in results."
+    },
+    "unreads": {
+      "required": false,
+      "example": "1",
+      "desc": "Include unread_count_display in the output?."
     }
   },
   "errors": {

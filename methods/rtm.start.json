@@ -10,6 +10,11 @@
       "required": false,
       "example": " ",
       "desc": "Skip unread counts for each channel (improves performance)."
+    },
+    "mpim_aware": {
+      "required": false,
+      "example": " ",
+      "desc": "Returns MPIMs to the client in the API response."
     }
   },
   "errors": {

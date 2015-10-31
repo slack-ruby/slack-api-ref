@@ -2,6 +2,8 @@ Changelog
 ---------
 
 * Your contribution here.
+* Added `channels`, `group` and `im.history#unreads` - [@dblock](https://github.com/dblock).
+* Added `rtm.start#mpim_aware`, `mpim.close`, `history`, `list`, `mark`, `open` - [@dblock](https://github.com/dblock).
 * Replaced manually edited docs with a rake task `api:methods:update` that parses API at https://api.slack.com - [@rusikf](https://github.com/rusikf).
 * Added `reactions.add`, `list`, `get` and `remove` - [@jakedahn](https://github.com/jakedahn).
 * Added `users.list#presence` - [@dblock](https://github.com/dblock).
