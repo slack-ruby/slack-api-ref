@@ -1,0 +1,30 @@
+{
+  "group": "usergroups",
+  "name": "usergroups.list",
+  "desc": "This method returns a list of all user groups in the team. This can optionally include disabled user groups.",
+  "args": {
+    "include_disabled": {
+      "required": false,
+      "example": "1",
+      "desc": "Include disabled user groups."
+    },
+    "include_count": {
+      "required": false,
+      "example": "1",
+      "desc": "Include the number of users in each user group."
+    },
+    "include_users": {
+      "required": false,
+      "example": "1",
+      "desc": "Include the list of users for each user group."
+    }
+  },
+  "errors": {
+    "not_authed": "No authentication token provided.",
+    "invalid_auth": "Invalid authentication token.",
+    "account_inactive": "Authentication token is for a deleted user or team.",
+    "user_is_bot": "This method cannot be called by a bot user.",
+    "user_is_restricted": "This method cannot be called by a restricted user or single channel guest.",
+    "user_is_ultra_restricted": "This method cannot be called by a single channel guest."
+  }
+}

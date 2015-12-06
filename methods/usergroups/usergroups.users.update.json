@@ -1,0 +1,30 @@
+{
+  "group": "usergroups",
+  "name": "usergroups.users.update",
+  "desc": "This method updates the list of users that belong to a user group. This method replaces all users in a user group with the list of users provided in the users parameter.",
+  "args": {
+    "usergroup": {
+      "required": true,
+      "example": "S0604QSJC",
+      "desc": "The encoded ID of the user group to update."
+    },
+    "users": {
+      "required": true,
+      "example": "U060R4BJ4,U060RNRCZ",
+      "desc": "A comma separated string of encoded user IDs that represent the entire list of users for the user group."
+    },
+    "include_count": {
+      "required": false,
+      "example": "1",
+      "desc": "Include the number of users in the user group."
+    }
+  },
+  "errors": {
+    "not_authed": "No authentication token provided.",
+    "invalid_auth": "Invalid authentication token.",
+    "account_inactive": "Authentication token is for a deleted user or team.",
+    "user_is_bot": "This method cannot be called by a bot user.",
+    "user_is_restricted": "This method cannot be called by a restricted user or single channel guest.",
+    "user_is_ultra_restricted": "This method cannot be called by a single channel guest."
+  }
+}

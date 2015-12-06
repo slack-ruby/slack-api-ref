@@ -3,12 +3,21 @@ module SlackApi
     handle 'https://api.slack.com/methods', :process_list
 
     def process_list(page, _default_data = {})
+      page.search('h2').each do |group|
+        id = group.attr('id')
+        next_p = group.next_sibling.next_sibling
+        desc = next_p.text if next_p.name == 'p'
+        file_name = 'groups/' + id + '.json'
+        json_hash = { name: id }
+        json_hash[:desc] = desc if desc
+        record(file_name: 'groups/' + id + '.json', json: JSON.pretty_generate(json_hash))
+      end
       page.search('.card a[href^="/methods"]').each do |a|
         href = a.attr('href')
         method_name = href.split('/').last
         method_group = method_name.split('.').first
-        file_name = method_name + '.json'
-        handle resolve_url(href, page), :process_method, filename: file_name, method_group: method_group
+        file_name = 'methods/' + method_group + '/' + method_name + '.json'
+        handle resolve_url(href, page), :process_method, filename: file_name, method_name: method_name, method_group: method_group
       end
     end
 
@@ -19,6 +28,8 @@ module SlackApi
       errors = parse_errors(page)
 
       json_hash = {
+        'group' => default_data[:method_group],
+        'name' => default_data[:method_name],
         'desc' => desc,
         'args' => args,
         'errors' => errors

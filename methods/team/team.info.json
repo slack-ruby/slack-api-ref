@@ -1,0 +1,12 @@
+{
+  "group": "team",
+  "name": "team.info",
+  "desc": "This method provides information about your team.",
+  "args": {
+  },
+  "errors": {
+    "not_authed": "No authentication token provided.",
+    "invalid_auth": "Invalid authentication token.",
+    "account_inactive": "Authentication token is for a deleted user or team."
+  }
+}

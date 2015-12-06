@@ -1,0 +1,19 @@
+{
+  "group": "groups",
+  "name": "groups.info",
+  "desc": "This method returns information about a private group.",
+  "args": {
+    "channel": {
+      "required": true,
+      "example": "C1234567890",
+      "desc": "Group to get info on.",
+      "type": "group"
+    }
+  },
+  "errors": {
+    "channel_not_found": "Value passed for channel was invalid.",
+    "not_authed": "No authentication token provided.",
+    "invalid_auth": "Invalid authentication token.",
+    "account_inactive": "Authentication token is for a deleted user or team."
+  }
+}

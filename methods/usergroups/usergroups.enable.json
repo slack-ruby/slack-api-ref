@@ -1,0 +1,25 @@
+{
+  "group": "usergroups",
+  "name": "usergroups.enable",
+  "desc": "This method enables a user group which was previously disabled.",
+  "args": {
+    "usergroup": {
+      "required": true,
+      "example": "S0604QSJC",
+      "desc": "The encoded ID of the user group to enable."
+    },
+    "include_count": {
+      "required": false,
+      "example": "1",
+      "desc": "Include the number of users in the user group."
+    }
+  },
+  "errors": {
+    "not_authed": "No authentication token provided.",
+    "invalid_auth": "Invalid authentication token.",
+    "account_inactive": "Authentication token is for a deleted user or team.",
+    "user_is_bot": "This method cannot be called by a bot user.",
+    "user_is_restricted": "This method cannot be called by a restricted user or single channel guest.",
+    "user_is_ultra_restricted": "This method cannot be called by a single channel guest."
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "name": "chat",
+  "desc": "Post chat messages to Slack."
+}

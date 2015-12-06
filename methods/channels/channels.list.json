@@ -1,0 +1,17 @@
+{
+  "group": "channels",
+  "name": "channels.list",
+  "desc": "This method returns a list of all channels in the team. This includes channels the caller is in, channels\nthey are not currently in, and archived channels. The number of (non-deactivated) members in each channel\nis also returned.",
+  "args": {
+    "exclude_archived": {
+      "required": false,
+      "example": "1",
+      "desc": "Don't return archived channels."
+    }
+  },
+  "errors": {
+    "not_authed": "No authentication token provided.",
+    "invalid_auth": "Invalid authentication token.",
+    "account_inactive": "Authentication token is for a deleted user or team."
+  }
+}

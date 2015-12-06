@@ -1,0 +1,40 @@
+{
+  "group": "usergroups",
+  "name": "usergroups.create",
+  "desc": "This method is used to create a user group.",
+  "args": {
+    "name": {
+      "required": true,
+      "example": "My Test Team",
+      "desc": "A name for the user group. Must be unique among user groups."
+    },
+    "handle": {
+      "required": false,
+      "example": " ",
+      "desc": "A mention handle. Must be unique among channels, users and user groups."
+    },
+    "description": {
+      "required": false,
+      "example": " ",
+      "desc": "A short description of the user group."
+    },
+    "channels": {
+      "required": false,
+      "example": " ",
+      "desc": "A comma separated string of encoded channel IDs for which the user group uses as a default."
+    },
+    "include_count": {
+      "required": false,
+      "example": "1",
+      "desc": "Include the number of users in each user group."
+    }
+  },
+  "errors": {
+    "not_authed": "No authentication token provided.",
+    "invalid_auth": "Invalid authentication token.",
+    "account_inactive": "Authentication token is for a deleted user or team.",
+    "user_is_bot": "This method cannot be called by a bot user.",
+    "user_is_restricted": "This method cannot be called by a restricted user or single channel guest.",
+    "user_is_ultra_restricted": "This method cannot be called by a single channel guest."
+  }
+}

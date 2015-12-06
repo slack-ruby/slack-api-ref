@@ -1,0 +1,22 @@
+{
+  "group": "channels",
+  "name": "channels.unarchive",
+  "desc": "This method unarchives a channel. The calling user is added to the channel.",
+  "args": {
+    "channel": {
+      "required": true,
+      "example": "C1234567890",
+      "desc": "Channel to unarchive.",
+      "type": "channel"
+    }
+  },
+  "errors": {
+    "channel_not_found": "Value passed for channel was invalid.",
+    "not_archived": "Channel is not archived.",
+    "not_authed": "No authentication token provided.",
+    "invalid_auth": "Invalid authentication token.",
+    "account_inactive": "Authentication token is for a deleted user or team.",
+    "user_is_bot": "This method cannot be called by a bot user.",
+    "user_is_restricted": "This method cannot be called by a restricted user or single channel guest."
+  }
+}

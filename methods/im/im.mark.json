@@ -1,0 +1,27 @@
+{
+  "group": "im",
+  "name": "im.mark",
+  "desc": "This method moves the read cursor in a direct message channel.",
+  "args": {
+    "channel": {
+      "required": true,
+      "example": "D1234567890",
+      "desc": "Direct message channel to set reading cursor in.",
+      "type": "im"
+    },
+    "ts": {
+      "required": true,
+      "example": "1234567890.123456",
+      "desc": "Timestamp of the most recently seen message.",
+      "type": "timestamp"
+    }
+  },
+  "errors": {
+    "channel_not_found": "Value passed for channel was invalid.",
+    "invalid_timestamp": "Value passed for timestamp was invalid.",
+    "not_in_channel": "Caller is not a member of the channel.",
+    "not_authed": "No authentication token provided.",
+    "invalid_auth": "Invalid authentication token.",
+    "account_inactive": "Authentication token is for a deleted user or team."
+  }
+}

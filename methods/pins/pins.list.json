@@ -1,0 +1,20 @@
+{
+  "group": "pins",
+  "name": "pins.list",
+  "desc": "This method lists the items pinned to a channel.",
+  "args": {
+    "channel": {
+      "required": true,
+      "example": "C1234567890",
+      "desc": "Channel to get pinned items for.",
+      "type": "channel"
+    }
+  },
+  "errors": {
+    "channel_not_found": "Value passed for channel was invalid.",
+    "not_authed": "No authentication token provided.",
+    "invalid_auth": "Invalid authentication token.",
+    "account_inactive": "Authentication token is for a deleted user or team.",
+    "user_is_bot": "This method cannot be called by a bot user."
+  }
+}

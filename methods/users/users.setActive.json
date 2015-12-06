@@ -1,0 +1,13 @@
+{
+  "group": "users",
+  "name": "users.setActive",
+  "desc": "This method lets the slack messaging server know that the authenticated user\nis currently active. Consult the presence documentation for\nmore details.",
+  "args": {
+  },
+  "errors": {
+    "not_authed": "No authentication token provided.",
+    "invalid_auth": "Invalid authentication token.",
+    "account_inactive": "Authentication token is for a deleted user or team.",
+    "user_is_bot": "This method cannot be called by a bot user."
+  }
+}

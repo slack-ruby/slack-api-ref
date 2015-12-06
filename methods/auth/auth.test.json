@@ -1,0 +1,12 @@
+{
+  "group": "auth",
+  "name": "auth.test",
+  "desc": "This method checks authentication and tells you who you are.",
+  "args": {
+  },
+  "errors": {
+    "not_authed": "No authentication token provided.",
+    "invalid_auth": "Invalid authentication token.",
+    "account_inactive": "Authentication token is for a deleted user or team."
+  }
+}

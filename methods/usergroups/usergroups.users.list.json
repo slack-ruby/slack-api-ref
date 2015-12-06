@@ -1,0 +1,25 @@
+{
+  "group": "usergroups",
+  "name": "usergroups.users.list",
+  "desc": "This method returns a list of all users within a user group.",
+  "args": {
+    "usergroup": {
+      "required": true,
+      "example": "S0604QSJC",
+      "desc": "The encoded ID of the user group to update."
+    },
+    "include_disabled": {
+      "required": false,
+      "example": "1",
+      "desc": "Allow results that involve disabled user groups."
+    }
+  },
+  "errors": {
+    "not_authed": "No authentication token provided.",
+    "invalid_auth": "Invalid authentication token.",
+    "account_inactive": "Authentication token is for a deleted user or team.",
+    "user_is_bot": "This method cannot be called by a bot user.",
+    "user_is_restricted": "This method cannot be called by a restricted user or single channel guest.",
+    "user_is_ultra_restricted": "This method cannot be called by a single channel guest."
+  }
+}
