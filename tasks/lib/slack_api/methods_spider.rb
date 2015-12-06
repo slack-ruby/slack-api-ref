@@ -50,7 +50,7 @@ module SlackApi
         name = row.search('td:nth-child(1)').text
         example = row.search('td:nth-child(2)').text
         required = row.search('td:nth-child(3)').text == 'Required' ? true : false
-        desc = row.search('td:nth-child(4)').text.tap { |t| t.slice!("\n") }.tap { |t| (t[-1] != '.') ? t << '.' : t }
+        desc = row.search('td:nth-child(4)').text.tap { |t| t.slice!("\n") }.tap { |t| (t[-1] != '.') ? t << '.' : t }.gsub("’", "'")
 
         rows = args_wrapper.search('tr')
 
