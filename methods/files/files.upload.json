@@ -4,7 +4,7 @@
   "desc": "This method allows you to create or upload an existing file.",
   "args": {
     "file": {
-      "required": false,
+      "required": true,
       "example": "...",
       "desc": "File contents via multipart/form-data.",
       "type": "file"
@@ -20,7 +20,7 @@
       "desc": "Slack-internal file type identifier."
     },
     "filename": {
-      "required": false,
+      "required": true,
       "example": "foo.txt",
       "desc": "Filename of file."
     },
@@ -37,7 +37,7 @@
     "channels": {
       "required": false,
       "example": "C1234567890",
-      "desc": "Comma separated list of channels to share the file into."
+      "desc": "Comma-separated list of channel names or IDs where the file will be shared."
     }
   },
   "errors": {
@@ -45,7 +45,6 @@
     "invalid_channel": "One or more channels supplied are invalid.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Invalid authentication token.",
-    "account_inactive": "Authentication token is for a deleted user or team.",
-    "user_is_bot": "This method cannot be called by a bot user."
+    "account_inactive": "Authentication token is for a deleted user or team."
   }
 }

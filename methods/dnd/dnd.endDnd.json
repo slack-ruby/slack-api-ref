@@ -1,0 +1,14 @@
+{
+  "group": "dnd",
+  "name": "dnd.endDnd",
+  "desc": "Ends the user's currently scheduled Do Not Disturb session immediately.",
+  "args": {
+  },
+  "errors": {
+    "unknown_error": "There was a mysterious problem ending the user's Do Not Disturb session.",
+    "not_authed": "No authentication token provided.",
+    "invalid_auth": "Invalid authentication token.",
+    "account_inactive": "Authentication token is for a deleted user or team.",
+    "user_is_bot": "This method cannot be called by a bot user."
+  }
+}

@@ -1,12 +1,12 @@
 {
   "group": "groups",
   "name": "groups.list",
-  "desc": "This method returns a list of groups in the team that the caller is in and archived groups that the caller was in.\nThe list of (non-deactivated) members in each group is also returned.",
+  "desc": "This method returns a list of private channels in the team that the caller is in and archived groups that the caller was in.\nThe list of (non-deactivated) members in each private channel is also returned.",
   "args": {
     "exclude_archived": {
       "required": false,
       "example": "1",
-      "desc": "Don't return archived groups."
+      "desc": "Don't return archived private channels."
     }
   },
   "errors": {

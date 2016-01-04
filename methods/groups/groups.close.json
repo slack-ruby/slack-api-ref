@@ -1,12 +1,12 @@
 {
   "group": "groups",
   "name": "groups.close",
-  "desc": "This method closes a private group.",
+  "desc": "This method closes a private channel.",
   "args": {
     "channel": {
       "required": true,
       "example": "G1234567890",
-      "desc": "Group to close.",
+      "desc": "Private channel to close.",
       "type": "group"
     }
   },

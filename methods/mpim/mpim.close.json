@@ -14,7 +14,6 @@
     "channel_not_found": "Value passed for channel was invalid.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Invalid authentication token.",
-    "account_inactive": "Authentication token is for a deleted user or team.",
-    "user_is_bot": "This method cannot be called by a bot user."
+    "account_inactive": "Authentication token is for a deleted user or team."
   }
 }

@@ -11,7 +11,7 @@
     "app_id": {
       "required": false,
       "example": " ",
-      "desc": "Filter logs to this API application. Defaults to all logs."
+      "desc": "Filter logs to this Slack app. Defaults to all logs."
     },
     "user": {
       "required": false,

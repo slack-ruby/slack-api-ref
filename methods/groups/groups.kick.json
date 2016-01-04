@@ -1,18 +1,18 @@
 {
   "group": "groups",
   "name": "groups.kick",
-  "desc": "This method allows a user to remove another member from a private group.",
+  "desc": "This method allows a user to remove another member from a private channel.",
   "args": {
     "channel": {
       "required": true,
       "example": "G1234567890",
-      "desc": "Group to remove user from.",
+      "desc": "Private channel to remove user from.",
       "type": "group"
     },
     "user": {
       "required": true,
       "example": "U1234567890",
-      "desc": "User to remove from group.",
+      "desc": "User to remove from private channel.",
       "type": "user"
     }
   },

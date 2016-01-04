@@ -1,12 +1,12 @@
 {
   "group": "groups",
   "name": "groups.open",
-  "desc": "This method opens a private group.",
+  "desc": "This method opens a private channel.",
   "args": {
     "channel": {
       "required": true,
       "example": "G1234567890",
-      "desc": "Group to open.",
+      "desc": "Private channel to open.",
       "type": "group"
     }
   },

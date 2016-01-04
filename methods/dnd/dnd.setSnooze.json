@@ -1,0 +1,20 @@
+{
+  "group": "dnd",
+  "name": "dnd.setSnooze",
+  "desc": "Adjusts the snooze duration for a user's Do Not Disturb settings. If a snooze session is not already active for the user, invoking this method will begin one for the specified duration.",
+  "args": {
+    "num_minutes": {
+      "required": true,
+      "example": "60",
+      "desc": "Number of minutes, from now, to snooze until."
+    }
+  },
+  "errors": {
+    "missing_duration": "No value provided for num_minutes.",
+    "snooze_failed": "There was a problem setting the user's Do Not Disturb status.",
+    "not_authed": "No authentication token provided.",
+    "invalid_auth": "Invalid authentication token.",
+    "account_inactive": "Authentication token is for a deleted user or team.",
+    "user_is_bot": "This method cannot be called by a bot user."
+  }
+}

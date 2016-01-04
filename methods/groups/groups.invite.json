@@ -1,12 +1,12 @@
 {
   "group": "groups",
   "name": "groups.invite",
-  "desc": "This method is used to invite a user to a private group. The calling user must be a member of the group.",
+  "desc": "This method is used to invite a user to a private channel. The calling user must be a member of the private channel.",
   "args": {
     "channel": {
       "required": true,
       "example": "G1234567890",
-      "desc": "Private group to invite user to.",
+      "desc": "Private channel to invite user to.",
       "type": "group"
     },
     "user": {

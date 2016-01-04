@@ -1,0 +1,18 @@
+{
+  "group": "dnd",
+  "name": "dnd.teamInfo",
+  "desc": "Provides information about the current Do Not Disturb settings for users of a Slack team.",
+  "args": {
+    "users": {
+      "required": false,
+      "example": "U1234,U4567",
+      "desc": "Comma-separated list of users to fetch Do Not Disturb status for."
+    }
+  },
+  "errors": {
+    "not_authed": "No authentication token provided.",
+    "invalid_auth": "Invalid authentication token.",
+    "account_inactive": "Authentication token is for a deleted user or team.",
+    "user_is_bot": "This method cannot be called by a bot user."
+  }
+}

@@ -1,12 +1,12 @@
 {
   "group": "groups",
   "name": "groups.createChild",
-  "desc": "This method takes an existing private group and performs the following steps:",
+  "desc": "This method takes an existing private channel and performs the following steps:",
   "args": {
     "channel": {
       "required": true,
       "example": "G1234567890",
-      "desc": "Group to clone and archive.",
+      "desc": "Private channel to clone and archive.",
       "type": "group"
     }
   },

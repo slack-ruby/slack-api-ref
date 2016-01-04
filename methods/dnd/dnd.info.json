@@ -1,0 +1,19 @@
+{
+  "group": "dnd",
+  "name": "dnd.info",
+  "desc": "Provides information about a user's current Do Not Disturb settings.",
+  "args": {
+    "user": {
+      "required": false,
+      "example": "U1234",
+      "desc": "User to fetch status for (defaults to current user).",
+      "type": "user"
+    }
+  },
+  "errors": {
+    "not_authed": "No authentication token provided.",
+    "invalid_auth": "Invalid authentication token.",
+    "account_inactive": "Authentication token is for a deleted user or team.",
+    "user_is_bot": "This method cannot be called by a bot user."
+  }
+}
