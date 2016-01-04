@@ -24,6 +24,6 @@ This project is not affiliated with the [company that makes Slack](https://slack
 
 ### Copyright & License
 
-Copyright (c) 2015, Daniel Doubrovkine and [Contributors](CHANGELOG.md).
+Copyright (c) 2015-2016, Daniel Doubrovkine and [Contributors](CHANGELOG.md).
 
 This project is licensed under the [MIT License](LICENSE.md).
