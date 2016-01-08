@@ -1,0 +1,34 @@
+{
+  "group": "files",
+  "name": "files.comments.edit",
+  "desc": "Edit an existing comment on a file. Only the user who created a comment may make edits. Teams may configure a limited time window during which file comment edits are allowed.",
+  "args": {
+    "file": {
+      "required": true,
+      "example": "F1234567890",
+      "desc": "File containing the comment to edit.",
+      "type": "file"
+    },
+    "id": {
+      "required": true,
+      "example": "Fc1234567890",
+      "desc": "The comment to edit."
+    },
+    "comment": {
+      "required": true,
+      "example": "Everyone should take a moment to read this file, seriously.",
+      "desc": "Text of the comment to edit."
+    }
+  },
+  "errors": {
+    "file_not_found": "The requested file could not be found.",
+    "file_deleted": "The requested file was previously deleted.",
+    "no_comment": "The comment field was empty.",
+    "edit_window_closed": "The timeframe for editing the comment has expired.",
+    "cant_edit": "The requested file could not be found.",
+    "not_authed": "No authentication token provided.",
+    "invalid_auth": "Invalid authentication token.",
+    "account_inactive": "Authentication token is for a deleted user or team.",
+    "user_is_bot": "This method cannot be called by a bot user."
+  }
+}

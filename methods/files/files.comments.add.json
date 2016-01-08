@@ -1,0 +1,27 @@
+{
+  "group": "files",
+  "name": "files.comments.add",
+  "desc": "Add a comment to an existing file.",
+  "args": {
+    "file": {
+      "required": true,
+      "example": "F1234567890",
+      "desc": "File to add a comment to.",
+      "type": "file"
+    },
+    "comment": {
+      "required": true,
+      "example": "Everyone should take a moment to read this file.",
+      "desc": "Text of the comment to add."
+    }
+  },
+  "errors": {
+    "file_not_found": "The requested file could not be found.",
+    "file_deleted": "The requested file was previously deleted.",
+    "no_comment": "The comment field was empty.",
+    "not_authed": "No authentication token provided.",
+    "invalid_auth": "Invalid authentication token.",
+    "account_inactive": "Authentication token is for a deleted user or team.",
+    "user_is_bot": "This method cannot be called by a bot user."
+  }
+}
