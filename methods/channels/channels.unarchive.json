@@ -17,6 +17,8 @@
     "invalid_auth": "Invalid authentication token.",
     "account_inactive": "Authentication token is for a deleted user or team.",
     "user_is_bot": "This method cannot be called by a bot user.",
-    "user_is_restricted": "This method cannot be called by a restricted user or single channel guest."
+    "user_is_restricted": "This method cannot be called by a restricted user or single channel guest.",
+    "invalid_array_arg": "The method was passed an HTTP-style array argument, which is never valid with the Slack API.",
+    "request_timeout": "The method was called via a POST request, but the POST data was either missing or truncated."
   }
 }

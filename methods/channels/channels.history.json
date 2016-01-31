@@ -1,7 +1,7 @@
 {
   "group": "channels",
   "name": "channels.history",
-  "desc": "This method returns a portion of messages/events from the specified channel.\nTo read the entire history for a channel, call the method with no latest or\noldest arguments, and then continue paging using the instructions below.",
+  "desc": "This method returns a portion of message events from the specified channel.",
   "args": {
     "channel": {
       "required": true,
@@ -38,7 +38,9 @@
     "invalid_ts_oldest": "Value passed for oldest was invalid.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Invalid authentication token.",
-    "account_inactive": "Authentication token is for a deleted user or team."
+    "account_inactive": "Authentication token is for a deleted user or team.",
+    "invalid_array_arg": "The method was passed an HTTP-style array argument, which is never valid with the Slack API.",
+    "request_timeout": "The method was called via a POST request, but the POST data was either missing or truncated."
   },
   "has_paging": true,
   "default_count": 100

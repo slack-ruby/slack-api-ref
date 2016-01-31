@@ -15,6 +15,8 @@
     "user_does_not_own_channel": "Calling user does not own this DM channel.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Invalid authentication token.",
-    "account_inactive": "Authentication token is for a deleted user or team."
+    "account_inactive": "Authentication token is for a deleted user or team.",
+    "invalid_array_arg": "The method was passed an HTTP-style array argument, which is never valid with the Slack API.",
+    "request_timeout": "The method was called via a POST request, but the POST data was either missing or truncated."
   }
 }

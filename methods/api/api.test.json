@@ -15,5 +15,7 @@
     }
   },
   "errors": {
+    "invalid_array_arg": "The method was passed an HTTP-style array argument, which is never valid with the Slack API.",
+    "request_timeout": "The method was called via a POST request, but the POST data was either missing or truncated."
   }
 }
