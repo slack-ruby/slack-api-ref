@@ -1,0 +1,10 @@
+{
+  "name": "group_open",
+  "desc": "You opened a group channel.",
+  "long_desc": "The group_open event is sent to all connections for a user when a private group is opened by that user.",
+  "example": {
+    "type": "group_open",
+    "user": "U024BE7LH",
+    "channel": "G024BE91L"
+  }
+}

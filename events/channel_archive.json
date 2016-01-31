@@ -1,0 +1,10 @@
+{
+  "name": "channel_archive",
+  "desc": "A team channel was archived.",
+  "long_desc": "The channel_archive event is sent to all connections for a team when a team channel is archived. Clients can use this to update their local list of channels.",
+  "example": {
+    "type": "channel_archive",
+    "channel": "C024BE91L",
+    "user": "U024BE7LH"
+  }
+}

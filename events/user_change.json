@@ -1,0 +1,10 @@
+{
+  "name": "user_change",
+  "desc": "A team member's data has changed.",
+  "long_desc": "The user_change event is sent to all connections for a team when a team member updates their profile or data. Clients can use this to update their local cache of team members.",
+  "example": {
+    "type": "user_change",
+    "user": {
+    }
+  }
+}

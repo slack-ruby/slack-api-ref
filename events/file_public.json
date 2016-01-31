@@ -1,0 +1,10 @@
+{
+  "name": "file_public",
+  "desc": "A file was made public.",
+  "long_desc": "The file_public event is sent when a file is made public. It is sent to all connected clients for all users that have permission to see the file. The file property is a file object containing information about the file.",
+  "example": {
+    "type": "file_public",
+    "file": {
+    }
+  }
+}

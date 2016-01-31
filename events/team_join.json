@@ -1,0 +1,10 @@
+{
+  "name": "team_join",
+  "desc": "A new team member has joined.",
+  "long_desc": "The team_join event is sent to all connections for a team when a new team member joins the team. Clients can use this to update their local cache of team members.",
+  "example": {
+    "type": "team_join",
+    "user": {
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "im_marked",
+  "desc": "A direct message read marker was updated.",
+  "long_desc": "The im_marked event is sent to all open connections for a user when that user moves the read cursor in a direct message channel by calling the im.mark API method.",
+  "example": {
+    "type": "im_marked",
+    "channel": "D024BE91L",
+    "ts": "1401383885.000061"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "reconnect_url",
+  "desc": "Experimental.",
+  "long_desc": "The reconnect_url event is currently unsupported and experimental.",
+  "example": {
+    "type": "reconnect_url"
+  }
+}

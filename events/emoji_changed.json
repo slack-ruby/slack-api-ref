@@ -1,0 +1,9 @@
+{
+  "name": "emoji_changed",
+  "desc": "A team custom emoji has been added or changed.",
+  "long_desc": "The emoji_changed event is sent to all connections for a team when that team's custom emoji is updated. When they receive this event, clients should update their local cache of emoji by calling the emoji.list method again.",
+  "example": {
+    "type": "emoji_changed",
+    "event_ts": "1361482916.000004"
+  }
+}

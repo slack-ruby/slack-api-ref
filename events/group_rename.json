@@ -1,0 +1,13 @@
+{
+  "name": "group_rename",
+  "desc": "A private group was renamed.",
+  "long_desc": "The group_rename event is sent to all connections for members of a private group when that group is renamed. Clients can use this to update their local list of private groups.",
+  "example": {
+    "type": "group_rename",
+    "channel": {
+      "id": "G02ELGNBH",
+      "name": "new_name",
+      "created": 1360782804
+    }
+  }
+}

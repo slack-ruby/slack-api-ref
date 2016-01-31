@@ -1,0 +1,10 @@
+{
+  "name": "group_marked",
+  "desc": "A private group read marker was updated.",
+  "long_desc": "The group_marked event is sent to all open connections for a user when that user moves the read cursor in a private group by calling the groups.mark API method.",
+  "example": {
+    "type": "group_marked",
+    "channel": "G024BE91L",
+    "ts": "1401383885.000061"
+  }
+}
