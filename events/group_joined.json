@@ -1,7 +1,7 @@
 {
   "name": "group_joined",
   "desc": "You joined a private group.",
-  "long_desc": "The group_joined event is sent to all connections for a user when that user joins a private group. In addition to this message, all existing members of the group will receive a group_join message event.",
+  "long_desc": "The group_joined event is sent to all connections for a user when that user joins a private channel. In addition to this message, all existing members of the private channel will receive a group_join message event.",
   "example": {
     "type": "group_joined",
     "channel": {

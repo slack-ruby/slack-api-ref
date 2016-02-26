@@ -1,7 +1,7 @@
 {
   "name": "group_close",
   "desc": "You closed a group channel.",
-  "long_desc": "The group_close event is sent to all connections for a user when a private group is closed by that user.",
+  "long_desc": "The group_close event is sent to all connections for a user when a private channel is closed by that user.",
   "example": {
     "type": "group_close",
     "user": "U024BE7LH",

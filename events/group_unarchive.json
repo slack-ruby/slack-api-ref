@@ -1,7 +1,7 @@
 {
   "name": "group_unarchive",
   "desc": "A private group was unarchived.",
-  "long_desc": "The group_unarchive event is sent to all connections for members of a private group when that group is unarchived. Clients can use this to update their local list of private groups.",
+  "long_desc": "The group_unarchive event is sent to all connections for members of a private channel when that private channel is unarchived. Clients can use this to update their local list of private channels.",
   "example": {
     "type": "group_unarchive",
     "channel": "G024BE91L"

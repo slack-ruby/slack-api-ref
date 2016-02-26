@@ -14,20 +14,10 @@
       "example": "Hello world",
       "desc": "Text of the message to send. See below for an explanation of formatting."
     },
-    "username": {
-      "required": false,
-      "example": "My Bot",
-      "desc": "Name of bot."
-    },
-    "as_user": {
-      "required": false,
-      "example": "true",
-      "desc": "Pass true to post the message as the authed user, instead of as a bot."
-    },
     "parse": {
       "required": false,
       "example": "full",
-      "desc": "Change how messages are treated. See below."
+      "desc": "Change how messages are treated. Defaults to none. See below."
     },
     "link_names": {
       "required": false,
@@ -49,15 +39,25 @@
       "example": "false",
       "desc": "Pass false to disable unfurling of media content."
     },
+    "username": {
+      "required": false,
+      "example": "My Bot",
+      "desc": "Set your bot's user name. Must be used in conjunction with as_user set to false, otherwise ignored. See authorship below."
+    },
+    "as_user": {
+      "required": false,
+      "example": "true",
+      "desc": "Pass true to post the message as the authed user, instead of as a bot. Defaults to false. See authorship below."
+    },
     "icon_url": {
       "required": false,
       "example": "http://lorempixel.com/48/48",
-      "desc": "URL to an image to use as the icon for this message."
+      "desc": "URL to an image to use as the icon for this message. Must be used in conjunction with as_user set to false, otherwise ignored. See authorship below."
     },
     "icon_emoji": {
       "required": false,
       "example": ":chart_with_upwards_trend:",
-      "desc": "emoji to use as the icon for this message. Overrides icon_url."
+      "desc": "emoji to use as the icon for this message. Overrides icon_url. Must be used in conjunction with as_user set to false, otherwise ignored. See authorship below."
     }
   },
   "errors": {
@@ -70,7 +70,11 @@
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Invalid authentication token.",
     "account_inactive": "Authentication token is for a deleted user or team.",
-    "invalid_array_arg": "The method was passed an HTTP-style array argument, which is never valid with the Slack API.",
+    "invalid_array_arg": "The method was passed a PHP-style array argument (e.g. with a name like foo[7]). These are never valid with the Slack API.",
+    "invalid_charset": "The method was called via a POST request, but the charset specified in the Content-Type header was invalid. Valid charset names are: utf-8 iso-8859-1.",
+    "invalid_form_data": "The method was called via a POST request with Content-Type application/x-www-form-urlencoded or multipart/form-data, but the form data was either missing or syntactically invalid.",
+    "invalid_post_type": "The method was called via a POST request, but the specified Content-Type was invalid. Valid types are: application/json application/x-www-form-urlencoded multipart/form-data text/plain.",
+    "missing_post_type": "The method was called via a POST request and included a data payload, but the request did not include a Content-Type header.",
     "request_timeout": "The method was called via a POST request, but the POST data was either missing or truncated."
   }
 }

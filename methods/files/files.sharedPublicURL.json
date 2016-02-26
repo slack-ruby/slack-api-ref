@@ -1,28 +1,23 @@
 {
-  "group": "groups",
-  "name": "groups.setTopic",
-  "desc": "This method is used to change the topic of a private channel. The calling user must be a member of the private channel.",
+  "group": "files",
+  "name": "files.sharedPublicURL",
+  "desc": "This method enables public/external sharing for a file.",
   "args": {
-    "channel": {
+    "file": {
       "required": true,
-      "example": "C1234567890",
-      "desc": "Private channel to set the topic of.",
-      "type": "group"
-    },
-    "topic": {
-      "required": true,
-      "example": "My Topic",
-      "desc": "The new topic."
+      "example": "F1234567890",
+      "desc": "File to share.",
+      "type": "file"
     }
   },
   "errors": {
-    "channel_not_found": "Value passed for channel was invalid.",
-    "is_archived": "Private group has been archived.",
-    "too_long": "Topic was longer than 250 characters.",
-    "user_is_restricted": "This method cannot be called by a restricted user or single channel guest.",
+    "file_not_found": "Value passed for file was invalid.",
+    "not_allowed": "Public sharing has been disabled for this team.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Invalid authentication token.",
     "account_inactive": "Authentication token is for a deleted user or team.",
+    "user_is_bot": "This method cannot be called by a bot user.",
+    "user_is_restricted": "This method cannot be called by a restricted user or single channel guest.",
     "invalid_array_arg": "The method was passed a PHP-style array argument (e.g. with a name like foo[7]). These are never valid with the Slack API.",
     "invalid_charset": "The method was called via a POST request, but the charset specified in the Content-Type header was invalid. Valid charset names are: utf-8 iso-8859-1.",
     "invalid_form_data": "The method was called via a POST request with Content-Type application/x-www-form-urlencoded or multipart/form-data, but the form data was either missing or syntactically invalid.",
