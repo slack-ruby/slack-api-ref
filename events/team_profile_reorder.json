@@ -1,7 +1,7 @@
 {
   "name": "team_profile_reorder",
   "desc": "Team profile fields have been reordered.",
-  "long_desc": "The team_profile_reorder event is sent to all connections for a team when a team admin reorders the field definitions in the team profile. The payload includes only the id and the ordering for each field definition that is reordered. Where appropriate, clients should update to reflect new changes immediately.",
+  "long_desc": "The team_profile_reorder event is sent to all connections for a team when a Team Admin reorders the field definitions in the team profile. The payload includes only the id and the ordering for each field definition that is reordered. Where appropriate, clients should update to reflect new changes immediately.",
   "example": {
     "type": "team_profile_reorder",
     "profile": {

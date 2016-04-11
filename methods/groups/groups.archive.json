@@ -13,8 +13,8 @@
   "errors": {
     "channel_not_found": "Value passed for channel was invalid.",
     "already_archived": "Group has already been archived.",
-    "group_contains_others": "Restricted accounts cannot archive groups containing others.",
-    "last_ra_channel": "You cannot archive the last channel for a restricted account.",
+    "group_contains_others": "Multi-channel guests cannot archive groups containing others.",
+    "last_ra_channel": "You cannot archive the last channel for a multi-channel guest.",
     "restricted_action": "A team preference prevents the authenticated user from archiving.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Invalid authentication token.",

@@ -1,37 +1,37 @@
 {
   "group": "usergroups",
   "name": "usergroups.update",
-  "desc": "This method updates the properties of an existing user group.",
+  "desc": "This method updates the properties of an existing User Group.",
   "args": {
     "usergroup": {
       "required": true,
       "example": "S0604QSJC",
-      "desc": "The encoded ID of the user group to update."
+      "desc": "The encoded ID of the User Group to update."
     },
     "name": {
       "required": false,
       "example": "My Test Team",
-      "desc": "A name for the user group. Must be unique among user groups."
+      "desc": "A name for the User Group. Must be unique among User Groups."
     },
     "handle": {
       "required": false,
       "example": " ",
-      "desc": "A mention handle. Must be unique among channels, users and user groups."
+      "desc": "A mention handle. Must be unique among channels, users and User Groups."
     },
     "description": {
       "required": false,
       "example": " ",
-      "desc": "A short description of the user group."
+      "desc": "A short description of the User Group."
     },
     "channels": {
       "required": false,
       "example": " ",
-      "desc": "A comma separated string of encoded channel IDs for which the user group uses as a default."
+      "desc": "A comma separated string of encoded channel IDs for which the User Group uses as a default."
     },
     "include_count": {
       "required": false,
       "example": "1",
-      "desc": "Include the number of users in the user group."
+      "desc": "Include the number of users in the User Group."
     }
   },
   "errors": {
@@ -40,7 +40,6 @@
     "account_inactive": "Authentication token is for a deleted user or team.",
     "user_is_bot": "This method cannot be called by a bot user.",
     "user_is_restricted": "This method cannot be called by a restricted user or single channel guest.",
-    "user_is_ultra_restricted": "This method cannot be called by a single channel guest.",
     "invalid_array_arg": "The method was passed a PHP-style array argument (e.g. with a name like foo[7]). These are never valid with the Slack API.",
     "invalid_charset": "The method was called via a POST request, but the charset specified in the Content-Type header was invalid. Valid charset names are: utf-8 iso-8859-1.",
     "invalid_form_data": "The method was called via a POST request with Content-Type application/x-www-form-urlencoded or multipart/form-data, but the form data was either missing or syntactically invalid.",

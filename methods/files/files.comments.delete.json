@@ -1,7 +1,7 @@
 {
   "group": "files",
   "name": "files.comments.delete",
-  "desc": "Delete an existing comment on a file. Only the original author of the comment or a team administrator may delete a file comment.",
+  "desc": "Delete an existing comment on a file. Only the original author of the comment or a Team Administrator may delete a file comment.",
   "args": {
     "file": {
       "required": true,
