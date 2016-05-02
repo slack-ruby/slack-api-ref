@@ -1,34 +1,20 @@
 {
-  "group": "channels",
-  "name": "channels.kick",
-  "desc": "This method allows a user to remove another member from a team channel.",
+  "group": "reminders",
+  "name": "reminders.delete",
+  "desc": "This method deletes a reminder.",
   "args": {
-    "channel": {
+    "reminder": {
       "required": true,
-      "example": "C1234567890",
-      "desc": "Channel to remove user from.",
-      "type": "channel"
-    },
-    "user": {
-      "required": true,
-      "example": "U1234567890",
-      "desc": "User to remove from channel.",
-      "type": "user"
+      "example": "Rm12345678",
+      "desc": "The ID of the reminder."
     }
   },
   "errors": {
-    "channel_not_found": "Value passed for channel was invalid.",
-    "user_not_found": "Value passed for user was invalid.",
-    "cant_kick_self": "Authenticated user can't kick themselves from a channel.",
-    "not_in_channel": "User was not in the channel.",
-    "cant_kick_from_general": "User cannot be removed from #general.",
-    "cant_kick_from_last_channel": "User cannot be removed from the last channel they're in.",
-    "restricted_action": "A team preference prevents the authenticated user from kicking.",
+    "not_found": "That reminder can't be found.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Invalid authentication token.",
     "account_inactive": "Authentication token is for a deleted user or team.",
     "user_is_bot": "This method cannot be called by a bot user.",
-    "user_is_restricted": "This method cannot be called by a restricted user or single channel guest.",
     "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of common decency. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
     "invalid_array_arg": "The method was passed a PHP-style array argument (e.g. with a name like foo[7]). These are never valid with the Slack API.",
     "invalid_charset": "The method was called via a POST request, but the charset specified in the Content-Type header was invalid. Valid charset names are: utf-8 iso-8859-1.",

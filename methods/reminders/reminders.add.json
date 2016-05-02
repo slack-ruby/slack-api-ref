@@ -1,34 +1,36 @@
 {
-  "group": "channels",
-  "name": "channels.kick",
-  "desc": "This method allows a user to remove another member from a team channel.",
+  "group": "reminders",
+  "name": "reminders.add",
+  "desc": "This method creates a reminder.",
   "args": {
-    "channel": {
+    "text": {
       "required": true,
-      "example": "C1234567890",
-      "desc": "Channel to remove user from.",
-      "type": "channel"
+      "example": "eat a banana",
+      "desc": "The content of the reminder."
+    },
+    "time": {
+      "required": true,
+      "example": "1602288000",
+      "desc": "When this reminder should happen: the Unix timestamp (up to five years from now), the number of seconds until the reminder (if within 24 hours), or a natural language description (Ex. \"in 15 minutes,\" or \"every Thursday\")."
     },
     "user": {
-      "required": true,
-      "example": "U1234567890",
-      "desc": "User to remove from channel.",
+      "required": false,
+      "example": "U18888888",
+      "desc": "The user who will receive the reminder. If no user is specified, the reminder will go to user who created it.",
       "type": "user"
     }
   },
   "errors": {
-    "channel_not_found": "Value passed for channel was invalid.",
-    "user_not_found": "Value passed for user was invalid.",
-    "cant_kick_self": "Authenticated user can't kick themselves from a channel.",
-    "not_in_channel": "User was not in the channel.",
-    "cant_kick_from_general": "User cannot be removed from #general.",
-    "cant_kick_from_last_channel": "User cannot be removed from the last channel they're in.",
-    "restricted_action": "A team preference prevents the authenticated user from kicking.",
+    "cannot_parse": "The phrasing of the timing for this reminder is unclear. You must include a complete time description. Some examples that work: 1458678068, 20, in 5 minutes, tomorrow, at 3:30pm, on Tuesday, or next week.",
+    "user_not_found": "That user can't be found.",
+    "cannot_add_bot": "Reminders can't be sent to bots.",
+    "cannot_add_slackbot": "Reminders can't be sent to Slackbot.",
+    "cannot_add_others": "Guests can't set reminders for other team members.",
+    "cannot_add_others_recurring": "Recurring reminders can't be set for other team members.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Invalid authentication token.",
     "account_inactive": "Authentication token is for a deleted user or team.",
     "user_is_bot": "This method cannot be called by a bot user.",
-    "user_is_restricted": "This method cannot be called by a restricted user or single channel guest.",
     "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of common decency. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
     "invalid_array_arg": "The method was passed a PHP-style array argument (e.g. with a name like foo[7]). These are never valid with the Slack API.",
     "invalid_charset": "The method was called via a POST request, but the charset specified in the Content-Type header was invalid. Valid charset names are: utf-8 iso-8859-1.",
