@@ -1,7 +1,7 @@
 {
   "group": "chat",
   "name": "chat.postMessage",
-  "desc": "This method posts a message to a public channel, private group, or IM channel.",
+  "desc": "This method posts a message to a public channel, private channel, or direct message/IM channel.",
   "args": {
     "channel": {
       "required": true,
@@ -12,7 +12,7 @@
     "text": {
       "required": true,
       "example": "Hello world",
-      "desc": "Text of the message to send. See below for an explanation of formatting."
+      "desc": "Text of the message to send. See below for an explanation of formatting. This field is usually required, unless you're providing only attachments instead."
     },
     "parse": {
       "required": false,
