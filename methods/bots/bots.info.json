@@ -1,12 +1,16 @@
 {
-  "group": "stars",
-  "name": "stars.list",
-  "desc": "This method lists the items starred by the authed user.",
+  "group": "bots",
+  "name": "bots.info",
+  "desc": "This method returns information about a bot user.",
   "args": {
+    "bot": {
+      "required": false,
+      "example": "B12345678",
+      "desc": "Bot user to get info on."
+    }
   },
   "errors": {
-    "user_not_found": "Value passed for user was invalid.",
-    "user_not_visible": "The requested user is not visible to the calling user.",
+    "bot_not_found": "Value passed for bot was invalid.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Invalid authentication token.",
     "account_inactive": "Authentication token is for a deleted user or team.",
@@ -18,7 +22,5 @@
     "invalid_post_type": "The method was called via a POST request, but the specified Content-Type was invalid. Valid types are: application/json application/x-www-form-urlencoded multipart/form-data text/plain.",
     "missing_post_type": "The method was called via a POST request and included a data payload, but the request did not include a Content-Type header.",
     "request_timeout": "The method was called via a POST request, but the POST data was either missing or truncated."
-  },
-  "has_paging": true,
-  "default_count": 100
+  }
 }

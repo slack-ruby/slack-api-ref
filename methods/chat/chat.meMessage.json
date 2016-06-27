@@ -1,16 +1,30 @@
 {
-  "group": "stars",
-  "name": "stars.list",
-  "desc": "This method lists the items starred by the authed user.",
+  "group": "chat",
+  "name": "chat.meMessage",
+  "desc": "This method sends a me message to a channel from the calling user.",
   "args": {
+    "channel": {
+      "required": true,
+      "example": "C1234567890",
+      "desc": "Channel to send message to. Can be a public channel, private group or IM channel. Can be an encoded ID, or a name.",
+      "type": "channel"
+    },
+    "text": {
+      "required": true,
+      "example": "Hello world",
+      "desc": "Text of the message to send."
+    }
   },
   "errors": {
-    "user_not_found": "Value passed for user was invalid.",
-    "user_not_visible": "The requested user is not visible to the calling user.",
+    "channel_not_found": "Value passed for channel was invalid.",
+    "not_in_channel": "Cannot post user messages to a channel they are not in.",
+    "is_archived": "Channel has been archived.",
+    "msg_too_long": "Message text is too long.",
+    "no_text": "No message text provided.",
+    "rate_limited": "Application has posted too many messages, read the Rate Limit documentation for more information.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Invalid authentication token.",
     "account_inactive": "Authentication token is for a deleted user or team.",
-    "user_is_bot": "This method cannot be called by a bot user.",
     "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of common decency. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
     "invalid_array_arg": "The method was passed a PHP-style array argument (e.g. with a name like foo[7]). These are never valid with the Slack API.",
     "invalid_charset": "The method was called via a POST request, but the charset specified in the Content-Type header was invalid. Valid charset names are: utf-8 iso-8859-1.",
@@ -18,7 +32,5 @@
     "invalid_post_type": "The method was called via a POST request, but the specified Content-Type was invalid. Valid types are: application/json application/x-www-form-urlencoded multipart/form-data text/plain.",
     "missing_post_type": "The method was called via a POST request and included a data payload, but the request did not include a Content-Type header.",
     "request_timeout": "The method was called via a POST request, but the POST data was either missing or truncated."
-  },
-  "has_paging": true,
-  "default_count": 100
+  }
 }

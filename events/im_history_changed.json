@@ -1,5 +1,5 @@
 {
   "name": "im_history_changed",
   "desc": "Bulk updates were made to a DM channel's history.",
-  "long_desc": "A im_history_changed event is sent to all clients in a DM channel when bulk changes have occured to that DM channel's history. When clients receive this message they should reload chat history for the channel if they have any cached messages before latest."
+  "long_desc": "A im_history_changed event is sent to all clients in a DM channel When bulk changes have occurred to that DM channel's history. When clients receive this message they should reload chat history for the channel if they have any cached messages before latest."
 }

@@ -1,12 +1,34 @@
 {
-  "group": "stars",
-  "name": "stars.list",
-  "desc": "This method lists the items starred by the authed user.",
+  "group": "users",
+  "name": "users.profile.set",
+  "desc": "This method is used to set the profile information for a user.",
   "args": {
+    "user": {
+      "required": false,
+      "example": "U1234567890",
+      "desc": "ID of user to change. This argument may only be specified by team admins.",
+      "type": "user"
+    },
+    "profile": {
+      "required": false,
+      "example": "{ first_name: \"John\", ... }",
+      "desc": "Collection of key:value pairs presented as a URL-encoded JSON hash."
+    },
+    "name": {
+      "required": false,
+      "example": "first_name",
+      "desc": "Name of a single key to set. Usable only if profile is not passed."
+    },
+    "value": {
+      "required": false,
+      "example": "John",
+      "desc": "Value to set a single key to. Usable only if profile is not passed."
+    }
   },
   "errors": {
-    "user_not_found": "Value passed for user was invalid.",
-    "user_not_visible": "The requested user is not visible to the calling user.",
+    "reserved_name": "First or last name are reserved.",
+    "invalid_profile": "Profile object passed in is not valid JSON (make sure it is URL encoded!).",
+    "profile_set_failed": "Failed to set user profile.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Invalid authentication token.",
     "account_inactive": "Authentication token is for a deleted user or team.",
@@ -18,7 +40,5 @@
     "invalid_post_type": "The method was called via a POST request, but the specified Content-Type was invalid. Valid types are: application/json application/x-www-form-urlencoded multipart/form-data text/plain.",
     "missing_post_type": "The method was called via a POST request and included a data payload, but the request did not include a Content-Type header.",
     "request_timeout": "The method was called via a POST request, but the POST data was either missing or truncated."
-  },
-  "has_paging": true,
-  "default_count": 100
+  }
 }

@@ -5,7 +5,7 @@
   "args": {
     "test": {
       "required": false,
-      "example": "1",
+      "example": "true",
       "desc": "Setting this parameter to 1 triggers a testing mode where the specified token will not actually be revoked."
     }
   },
