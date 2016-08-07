@@ -2,6 +2,7 @@
   "name": "subteam_created",
   "desc": "A User Group has been added to the team.",
   "long_desc": "The subteam_created event is sent to all connections for a team when a new User Group is created. Clients can use this to update their local list of User Groups and group members.",
+  "required_scope": "usergroups:read",
   "example": {
     "type": "subteam_created",
     "subteam": {

@@ -47,6 +47,7 @@
     "channel_not_found": "Value passed for channel was invalid.",
     "edit_window_closed": "The message cannot be edited due to the team message edit settings.",
     "msg_too_long": "Message text is too long.",
+    "too_many_attachments": "Too many attachments were provided with this message. A maximum of 100 attachments are allowed on a message.",
     "no_text": "No message text provided.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Invalid authentication token.",

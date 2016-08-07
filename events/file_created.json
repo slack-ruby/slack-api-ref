@@ -2,6 +2,7 @@
   "name": "file_created",
   "desc": "A file was created.",
   "long_desc": "The file_created event is sent to all connected clients for a user when that user uploads a file to Slack. The file property is a file object containing information about the uploaded file. When a file is shared with other members of the team (which can happen at upload time) a file_shared event will also be sent.",
+  "required_scope": "files:read",
   "example": {
     "type": "file_created",
     "file": {

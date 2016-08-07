@@ -1,5 +1,12 @@
 {
   "name": "im_history_changed",
-  "desc": "Bulk updates were made to a DM channel's history.",
-  "long_desc": "A im_history_changed event is sent to all clients in a DM channel When bulk changes have occurred to that DM channel's history. When clients receive this message they should reload chat history for the channel if they have any cached messages before latest."
+  "desc": "Bulk updates were made to a DM's history.",
+  "long_desc": "A im_history_changed event is sent to all clients in a DM channel When bulk changes have occurred to that DM channel's history. When clients receive this message they should reload chat history for the channel if they have any cached messages before latest. These bulk changes may be the result of data importation or bulk action taken by an administrator.",
+  "required_scope": "im:history",
+  "example": {
+    "type": "im_history_changed",
+    "latest": "1358877455.000010",
+    "ts": "1361482916.000003",
+    "event_ts": "1361482916.000004"
+  }
 }

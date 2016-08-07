@@ -8,6 +8,11 @@
       "example": "U1234567890",
       "desc": "User to open a direct message channel with.",
       "type": "user"
+    },
+    "return_im": {
+      "required": false,
+      "example": " ",
+      "desc": "Boolean, indicates you want the full IM channel definition in the response."
     }
   },
   "errors": {

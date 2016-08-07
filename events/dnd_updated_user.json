@@ -2,6 +2,7 @@
   "name": "dnd_updated_user",
   "desc": "Do not Disturb settings changed for a team member.",
   "long_desc": "The dnd_updated_user event is sent to all connections for a team when a user's Do Not Disturb settings have changed.",
+  "required_scope": "dnd:read",
   "example": {
     "type": "dnd_updated_user",
     "user": "U1234",

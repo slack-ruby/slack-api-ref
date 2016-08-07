@@ -2,6 +2,7 @@
   "name": "file_change",
   "desc": "A file was changed.",
   "long_desc": "The file_change event is sent when any property of a file is changed. It is sent to all connected clients for all users that have permission to see the file. The file property is a file object containing information about the file.",
+  "required_scope": "files:read",
   "example": {
     "type": "file_change",
     "file": {

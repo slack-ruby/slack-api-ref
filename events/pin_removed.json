@@ -2,6 +2,7 @@
   "name": "pin_removed",
   "desc": "A pin was removed from a channel.",
   "long_desc": "When an item is un-pinned from a channel, the pin_removed event is sent to all members of that channel. The has_pins property indicates that there are other pinned items in that channel.",
+  "required_scope": "pins:read",
   "example": {
     "type": "pin_removed",
     "user": "U024BE7LH",

@@ -1,7 +1,8 @@
 {
   "name": "group_close",
-  "desc": "You closed a group channel.",
-  "long_desc": "The group_close event is sent to all connections for a user when a private channel is closed by that user.",
+  "desc": "You closed a private channel.",
+  "long_desc": "The group_close event is sent to all connections for a user when a private channel is closed by that user. This event is not available to bot user subscriptions in the Events API.",
+  "required_scope": "groups:read",
   "example": {
     "type": "group_close",
     "user": "U024BE7LH",

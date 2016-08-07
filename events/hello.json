@@ -1,8 +1,0 @@
-{
-  "name": "hello",
-  "desc": "The client has successfully connected to the server.",
-  "long_desc": "The hello event is sent when a connection is opened to the message server. This allows a client to confirm the connection has been correctly opened.",
-  "example": {
-    "type": "hello"
-  }
-}

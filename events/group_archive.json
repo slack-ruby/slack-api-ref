@@ -1,7 +1,8 @@
 {
   "name": "group_archive",
-  "desc": "A private group was archived.",
+  "desc": "A private channel was archived.",
   "long_desc": "The group_archive event is sent to all connections for members of a private channel when that private channel is archived. Clients can use this to update their local list of private channels.",
+  "required_scope": "groups:read",
   "example": {
     "type": "group_archive",
     "channel": "G024BE91L"

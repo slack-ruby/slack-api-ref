@@ -1,7 +1,8 @@
 {
   "name": "subteam_updated",
   "desc": "An existing User Group has been updated or its members changed.",
-  "long_desc": "The subteam_updated event is sent to all connections for a team when an existing User Group is updated. This event is triggered for changes to the User Group information (name, description, or handle) as well as the members of the group. Clients can use this to update their local list of groups and group members.",
+  "long_desc": "The subteam_updated event is sent to all connections for a team when an existing User Group is updated. This event is triggered for changes to the User Group information (name, description, or handle) as well as the members of the group. Clients can use this to update their local list of groups and group members. This event type may also arise when a subteam has been disabled.",
+  "required_scope": "usergroups:read",
   "example": {
     "type": "subteam_updated",
     "subteam": {

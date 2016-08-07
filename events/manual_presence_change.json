@@ -1,9 +1,0 @@
-{
-  "name": "manual_presence_change",
-  "desc": "You manually updated your presence.",
-  "long_desc": "The manual_presence_change event is sent to all connections for a user when that user manually updates their presence. Clients can use this to update their local state.",
-  "example": {
-    "type": "manual_presence_change",
-    "presence": "away"
-  }
-}

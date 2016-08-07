@@ -1,9 +1,0 @@
-{
-  "name": "team_plan_change",
-  "desc": "The team billing plan has changed.",
-  "long_desc": "The team_plan_change event is sent to all connections for a team when a the current billing plan is changed. Currently possible values are: empty string, std, and plus.",
-  "example": {
-    "type": "team_plan_change",
-    "plan": "std"
-  }
-}

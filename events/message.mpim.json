@@ -1,0 +1,13 @@
+{
+  "name": "message.mpim",
+  "desc": "A message was posted in a multiparty direct message channel.",
+  "long_desc": "The semantics for this message event type are similar to the core message event sent through the RTM API.",
+  "required_scope": "mpim:history",
+  "example": {
+    "type": "message",
+    "channel": "G024BE91L",
+    "user": "U2147483697",
+    "text": "Hello world",
+    "ts": "1355517523.000005"
+  }
+}

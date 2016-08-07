@@ -1,7 +1,8 @@
 {
   "name": "channel_unarchive",
-  "desc": "A team channel was unarchived.",
+  "desc": "A channel was unarchived.",
   "long_desc": "The channel_unarchive event is sent to all connections for a team when a team channel is unarchived. Clients can use this to update their local list of channels.",
+  "required_scope": "channels:read",
   "example": {
     "type": "channel_unarchive",
     "channel": "C024BE91L",

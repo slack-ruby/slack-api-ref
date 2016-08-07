@@ -1,9 +1,0 @@
-{
-  "name": "file_private",
-  "desc": "A file was made private.",
-  "long_desc": "The file_private event is sent to all connected clients for a team when a file is made private. Unlike most file events, the file property contains a file ID and not a full file object.",
-  "example": {
-    "type": "file_private",
-    "file": "F2147483862"
-  }
-}
