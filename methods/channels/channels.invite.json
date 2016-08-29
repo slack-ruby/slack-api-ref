@@ -24,6 +24,7 @@
     "already_in_channel": "Invited user is already in the channel.",
     "is_archived": "Channel has been archived.",
     "cant_invite": "User cannot be invited to this channel.",
+    "too_many_users": "Too many users sent in the users arg (max 30).",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Invalid authentication token.",
     "account_inactive": "Authentication token is for a deleted user or team.",
