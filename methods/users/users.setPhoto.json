@@ -1,36 +1,33 @@
 {
   "group": "users",
-  "name": "users.profile.set",
-  "desc": "This method is used to set the profile information for a user.",
+  "name": "users.setPhoto",
+  "desc": "This method allows the user to set their profile image. The caller can pass image data via image.",
   "args": {
-    "user": {
-      "required": false,
-      "example": "U1234567890",
-      "desc": "ID of user to change. This argument may only be specified by team admins on paid teams.",
-      "type": "user"
+    "image": {
+      "required": true,
+      "example": "...",
+      "desc": "File contents via multipart/form-data."
     },
-    "profile": {
+    "crop_x": {
       "required": false,
-      "example": "{ first_name: \"John\", ... }",
-      "desc": "Collection of key:value pairs presented as a URL-encoded JSON hash."
+      "example": "10",
+      "desc": "X coordinate of top-left corner of crop box."
     },
-    "name": {
+    "crop_y": {
       "required": false,
-      "example": "first_name",
-      "desc": "Name of a single key to set. Usable only if profile is not passed."
+      "example": "15",
+      "desc": "Y coordinate of top-left corner of crop box."
     },
-    "value": {
+    "crop_w": {
       "required": false,
-      "example": "John",
-      "desc": "Value to set a single key to. Usable only if profile is not passed."
+      "example": "100",
+      "desc": "Width/height of crop box (always square)."
     }
   },
   "errors": {
-    "reserved_name": "First or last name are reserved.",
-    "invalid_profile": "Profile object passed in is not valid JSON (make sure it is URL encoded!).",
-    "profile_set_failed": "Failed to set user profile.",
-    "not_admin": "Only admins can update the profile of another user.",
-    "cannot_update_admin_user": "Only a primary owner can update the profile of an admin.",
+    "bad_image": "The uploaded image could not be processed - try passing a JPEG, GIF or PNG.",
+    "too_large": "The uploaded image had excessive dimensions.",
+    "too_many_frames": "An animated GIF with too many frames was uploaded.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Invalid authentication token.",
     "account_inactive": "Authentication token is for a deleted user or team.",
