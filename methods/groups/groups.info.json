@@ -5,7 +5,7 @@
   "args": {
     "channel": {
       "required": true,
-      "example": "C1234567890",
+      "example": "G1234567890",
       "desc": "Private channel to get info on.",
       "type": "group"
     }

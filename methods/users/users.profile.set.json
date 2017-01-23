@@ -30,6 +30,7 @@
     "invalid_profile": "Profile object passed in is not valid JSON (make sure it is URL encoded!).",
     "profile_set_failed": "Failed to set user profile.",
     "not_admin": "Only admins can update the profile of another user.",
+    "not_app_admin": "Only team owners and selected members can update the profile of a bot user.",
     "cannot_update_admin_user": "Only a primary owner can update the profile of an admin.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Invalid authentication token.",

@@ -1,6 +1,6 @@
 {
   "name": "url_verification",
   "desc": "Verifies ownership of an Events API Request URL.",
-  "long_desc": "Compatibility:  Events API  This Events API-only event type has no \"inner event\". Instead, the complete payload you'll receive is similar to this JSON: This event does not require a specific OAuth scope or subscription. You'll automatically receive it whenever configuring an Events API Request URL. Once you receive the event, respond in plaintext with the challenge attribute value. In this example, that might be: Alternatively, you can respond with application/x-www-form-urlencoded: Or even JSON: Please verify that the token value found in the payload matches your application's configured Slack token. Learn more about URL verification.",
+  "long_desc": "My Slack API Getting started Slack apps Messages Integrations APIs Authentication Keep in touch Helpful resources Compatibility:  Events API  This Events API-only event type has no \"inner event\". Instead, the complete payload you'll receive is similar to this JSON: This event does not require a specific OAuth scope or subscription. You'll automatically receive it whenever configuring an Events API Request URL. Once you receive the event, respond in plaintext with the challenge attribute value. In this example, that might be: Alternatively, you can respond with application/x-www-form-urlencoded: Or even JSON: Please verify that the token value found in the payload matches your application's configured Slack token. Learn more about URL verification.",
   "required_scope": " "
 }
