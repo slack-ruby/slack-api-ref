@@ -2,7 +2,7 @@
   "name": "file_unshared",
   "desc": "A file was unshared.",
   "long_desc": "The file_unshared event is sent when a file is unshared. It is sent to all connected clients for all users that had permission to see the file. The file property is a file object containing information about the unshared file.",
-  "required_scope": "files:read",
+  "required_scope": "RTM",
   "example": {
     "type": "file_unshared",
     "file": {

@@ -1,0 +1,10 @@
+{
+  "name": "team_plan_change",
+  "desc": "The team billing plan has changed.",
+  "long_desc": "My Slack API Getting started Slack apps Messages Integrations APIs Authentication Keep in touch Helpful resources Compatibility: RTM   The team_plan_change event is sent to all connections for a team when a the current billing plan is changed. Currently possible values are: empty string, std, and plus.",
+  "required_scope": "RTM",
+  "example": {
+    "type": "team_plan_change",
+    "plan": "std"
+  }
+}

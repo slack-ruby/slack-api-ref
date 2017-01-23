@@ -2,7 +2,7 @@
   "name": "email_domain_changed",
   "desc": "The team email domain has changed.",
   "long_desc": "The email_domain_changed event is sent to all connections for a team when the email domain settings for a team change. Most clients can ignore this event.",
-  "required_scope": "team:read",
+  "required_scope": "RTM",
   "example": {
     "type": "email_domain_changed",
     "email_domain": "example.com",

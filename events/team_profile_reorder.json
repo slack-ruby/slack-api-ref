@@ -1,0 +1,17 @@
+{
+  "name": "team_profile_reorder",
+  "desc": "Team profile fields have been reordered.",
+  "long_desc": "My Slack API Getting started Slack apps Messages Integrations APIs Authentication Keep in touch Helpful resources Compatibility: RTM   The team_profile_reorder event is sent to all connections for a team when a Team Admin reorders the field definitions in the team profile. The payload includes only the id and the ordering for each field definition that is reordered. Where appropriate, clients should update to reflect new changes immediately.",
+  "required_scope": "RTM",
+  "example": {
+    "type": "team_profile_reorder",
+    "profile": {
+      "fields": [
+        {
+          "id": "Xf06054AAA",
+          "ordering": 0
+        }
+      ]
+    }
+  }
+}

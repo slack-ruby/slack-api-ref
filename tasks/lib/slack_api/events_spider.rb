@@ -1,12 +1,13 @@
 module SlackApi
   class EventsSpider < Spidey::AbstractSpider
-    handle 'https://api.slack.com/events/api', :process_list
+    handle 'https://api.slack.com/events', :process_list
 
     def process_list(page, _default_data = {})
       page.search('.card tr').each do |event|
         tds = event.search('td')
-        next unless tds.count == 3
+        next unless tds.count >= 3
         name, desc, required_scope = tds.map(&:text).map(&:strip)
+        next unless required_scope == "RTM"
         href = event.search('a[href^="/events"]').first
         handle resolve_url(href[:href], page), :process_event, name: name, desc: desc, required_scope: required_scope
       end

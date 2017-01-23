@@ -1,0 +1,9 @@
+{
+  "name": "accounts_changed",
+  "desc": "The list of accounts a user is signed into has changed.",
+  "long_desc": "My Slack API Getting started Slack apps Messages Integrations APIs Authentication Keep in touch Helpful resources Compatibility: RTM   The accounts_changed event is used by our web client to maintain a list of logged-in accounts. Other clients should ignore this event.",
+  "required_scope": "RTM",
+  "example": {
+    "type": "accounts_changed"
+  }
+}

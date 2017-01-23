@@ -1,0 +1,11 @@
+{
+  "name": "presence_change",
+  "desc": "A team member's presence changed.",
+  "long_desc": "My Slack API Getting started Slack apps Messages Integrations APIs Authentication Keep in touch Helpful resources Compatibility: RTM   The presence_change event is sent to all connections for a team when a user changes status. Clients can use this to update their local list of users. If a user updates their presence manually, the manual_presence_change event will also be sent to all connected clients for that user.",
+  "required_scope": "RTM",
+  "example": {
+    "type": "presence_change",
+    "user": "U024BE7LH",
+    "presence": "away"
+  }
+}

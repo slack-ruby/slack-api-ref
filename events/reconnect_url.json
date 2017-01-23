@@ -1,0 +1,9 @@
+{
+  "name": "reconnect_url",
+  "desc": "Experimental.",
+  "long_desc": "My Slack API Getting started Slack apps Messages Integrations APIs Authentication Keep in touch Helpful resources Compatibility: RTM   The reconnect_url event is currently unsupported and experimental.",
+  "required_scope": "RTM",
+  "example": {
+    "type": "reconnect_url"
+  }
+}

@@ -2,7 +2,7 @@
   "name": "file_deleted",
   "desc": "A file was deleted.",
   "long_desc": "The file_deleted event is sent to all connected clients for a team when a file is deleted. Unlike most file events, the file property contains a file ID and not a full file object.",
-  "required_scope": "files:read",
+  "required_scope": "RTM",
   "example": {
     "type": "file_deleted",
     "file_id": "F2147483862",

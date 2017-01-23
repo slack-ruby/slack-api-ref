@@ -2,7 +2,7 @@
   "name": "channel_archive",
   "desc": "A channel was archived.",
   "long_desc": "The channel_archive event is sent to all connections for a team when a team channel is archived. Clients can use this to update their local list of channels.",
-  "required_scope": "channels:read",
+  "required_scope": "RTM",
   "example": {
     "type": "channel_archive",
     "channel": "C024BE91L",

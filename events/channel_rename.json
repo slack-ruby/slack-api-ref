@@ -2,7 +2,7 @@
   "name": "channel_rename",
   "desc": "A channel was renamed.",
   "long_desc": "The channel_renamed event is sent to all connections for a team when a team channel is renamed. Clients can use this to update their local list of channels.",
-  "required_scope": "channels:read",
+  "required_scope": "RTM",
   "example": {
     "type": "channel_rename",
     "channel": {

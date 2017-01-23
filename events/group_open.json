@@ -2,7 +2,7 @@
   "name": "group_open",
   "desc": "You opened a private channel.",
   "long_desc": "The group_open event is sent to all connections for a user when a private group is opened by that user. This event is not available to bot user subscriptions in the Events API.",
-  "required_scope": "groups:read",
+  "required_scope": "RTM",
   "example": {
     "type": "group_open",
     "user": "U024BE7LH",

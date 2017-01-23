@@ -1,0 +1,9 @@
+{
+  "name": "goodbye",
+  "desc": "The server intends to close the connection soon..",
+  "long_desc": "My Slack API Getting started Slack apps Messages Integrations APIs Authentication Keep in touch Helpful resources Compatibility: RTM   The goodbye event may be sent by a server that expects it will close the connection after an unspecified amount of time. A well formed client should reconnect to avoid data loss.",
+  "required_scope": "RTM",
+  "example": {
+    "type": "goodbye"
+  }
+}
