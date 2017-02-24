@@ -1,6 +1,6 @@
 {
   "name": "star_added",
   "desc": "A team member has starred an item.",
-  "long_desc": "When an item is starred, the star_added event is sent to all connected clients for users who can see the content being starred. See the stars.list method for details of the structure of the item property.",
+  "long_desc": "When an item is starred, the star_added event is sent to all connected clients for the authenticated user who starred the item. See the stars.list method for details of the structure of the item property.",
   "required_scope": "stars:read"
 }

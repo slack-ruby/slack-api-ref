@@ -1,24 +1,23 @@
 {
-  "group": "im",
-  "name": "im.open",
-  "desc": "This method opens a direct message channel with another member of your Slack team.",
+  "group": "channels",
+  "name": "channels.replies",
+  "desc": "This method returns an entire thread (a message plus all the messages in reply to it).",
   "args": {
-    "user": {
+    "channel": {
       "required": true,
-      "example": "U1234567890",
-      "desc": "User to open a direct message channel with.",
-      "type": "user"
+      "example": "C1234567890",
+      "desc": "Channel to fetch thread from.",
+      "type": "channel"
     },
-    "return_im": {
-      "required": false,
-      "example": "true",
-      "desc": "Boolean, indicates you want the full IM channel definition in the response."
+    "thread_ts": {
+      "required": true,
+      "example": "1234567890.123456",
+      "desc": "Unique identifier of a thread's parent message."
     }
   },
   "errors": {
-    "user_not_found": "Value passed for user was invalid.",
-    "user_not_visible": "The calling user is restricted from seeing the requested user.",
-    "user_disabled": "The user has been disabled.",
+    "channel_not_found": "Value for channel was missing or invalid.",
+    "thread_not_found": "Value for thread_ts was missing or invalid.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Invalid authentication token.",
     "account_inactive": "Authentication token is for a deleted user or team.",

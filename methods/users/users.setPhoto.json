@@ -1,27 +1,37 @@
 {
-  "group": "im",
-  "name": "im.open",
-  "desc": "This method opens a direct message channel with another member of your Slack team.",
+  "group": "users",
+  "name": "users.setPhoto",
+  "desc": "This method allows the user to set their profile image. The caller can pass image data via image.",
   "args": {
-    "user": {
+    "image": {
       "required": true,
-      "example": "U1234567890",
-      "desc": "User to open a direct message channel with.",
-      "type": "user"
+      "example": "...",
+      "desc": "File contents via multipart/form-data."
     },
-    "return_im": {
+    "crop_x": {
       "required": false,
-      "example": "true",
-      "desc": "Boolean, indicates you want the full IM channel definition in the response."
+      "example": "10",
+      "desc": "X coordinate of top-left corner of crop box."
+    },
+    "crop_y": {
+      "required": false,
+      "example": "15",
+      "desc": "Y coordinate of top-left corner of crop box."
+    },
+    "crop_w": {
+      "required": false,
+      "example": "100",
+      "desc": "Width/height of crop box (always square)."
     }
   },
   "errors": {
-    "user_not_found": "Value passed for user was invalid.",
-    "user_not_visible": "The calling user is restricted from seeing the requested user.",
-    "user_disabled": "The user has been disabled.",
+    "bad_image": "The uploaded image could not be processed - try passing a JPEG, GIF or PNG.",
+    "too_large": "The uploaded image had excessive dimensions.",
+    "too_many_frames": "An animated GIF with too many frames was uploaded.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Invalid authentication token.",
     "account_inactive": "Authentication token is for a deleted user or team.",
+    "user_is_bot": "This method cannot be called by a bot user.",
     "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of common decency. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
     "invalid_array_arg": "The method was passed a PHP-style array argument (e.g. with a name like foo[7]). These are never valid with the Slack API.",
     "invalid_charset": "The method was called via a POST request, but the charset specified in the Content-Type header was invalid. Valid charset names are: utf-8 iso-8859-1.",

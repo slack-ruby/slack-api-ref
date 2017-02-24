@@ -21,7 +21,7 @@
     },
     "link_names": {
       "required": false,
-      "example": "1",
+      "example": "true",
       "desc": "Find and link channel names and usernames."
     },
     "attachments": {
@@ -57,7 +57,17 @@
     "icon_emoji": {
       "required": false,
       "example": ":chart_with_upwards_trend:",
-      "desc": "emoji to use as the icon for this message. Overrides icon_url. Must be used in conjunction with as_user set to false, otherwise ignored. See authorship below."
+      "desc": "Emoji to use as the icon for this message. Overrides icon_url. Must be used in conjunction with as_user set to false, otherwise ignored. See authorship below."
+    },
+    "thread_ts": {
+      "required": false,
+      "example": "1234567890.123456",
+      "desc": "Provide another message's ts value to make this message a reply. Avoid using a reply's ts value; use its parent instead."
+    },
+    "reply_broadcast": {
+      "required": false,
+      "example": "true",
+      "desc": "Used in conjunction with thread_ts and indicates whether reply should be made visible to everyone in the channel or conversation. Defaults to false."
     }
   },
   "errors": {
@@ -75,7 +85,7 @@
     "invalid_array_arg": "The method was passed a PHP-style array argument (e.g. with a name like foo[7]). These are never valid with the Slack API.",
     "invalid_charset": "The method was called via a POST request, but the charset specified in the Content-Type header was invalid. Valid charset names are: utf-8 iso-8859-1.",
     "invalid_form_data": "The method was called via a POST request with Content-Type application/x-www-form-urlencoded or multipart/form-data, but the form data was either missing or syntactically invalid.",
-    "invalid_post_type": "The method was called via a POST request, but the specified Content-Type was invalid. Valid types are: application/json application/x-www-form-urlencoded multipart/form-data text/plain.",
+    "invalid_post_type": "The method was called via a POST request, but the specified Content-Type was invalid. Valid types are: application/x-www-form-urlencoded multipart/form-data text/plain.",
     "missing_post_type": "The method was called via a POST request and included a data payload, but the request did not include a Content-Type header.",
     "request_timeout": "The method was called via a POST request, but the POST data was either missing or truncated."
   }
