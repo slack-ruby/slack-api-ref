@@ -5,6 +5,7 @@
   "required_scope": "RTM",
   "example": {
     "type": "group_joined",
-    "channel": "G02ELGNBH"
+    "channel": {
+    }
   }
 }
