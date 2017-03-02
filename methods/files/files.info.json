@@ -10,6 +10,9 @@
       "type": "file"
     }
   },
+  "response": {
+    "sample": ""
+  },
   "errors": {
     "file_not_found": "Value passed for file was invalid.",
     "file_deleted": "The requested file has been deleted.",

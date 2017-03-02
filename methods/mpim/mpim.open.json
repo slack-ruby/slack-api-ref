@@ -9,6 +9,9 @@
       "desc": "Comma separated lists of users.  The ordering of the users is preserved whenever a MPIM group is returned."
     }
   },
+  "response": {
+    "sample": ""
+  },
   "errors": {
     "users_list_not_supplied": "Missing users in request.",
     "not_enough_users": "Needs at least 2 users to open.",

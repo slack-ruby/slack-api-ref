@@ -19,6 +19,9 @@
       "desc": "Returns MPIMs to the client in the API response."
     }
   },
+  "response": {
+    "sample": ""
+  },
   "errors": {
     "migration_in_progress": "Team is being migrated between servers. See the team_migration_started event documentation for details.",
     "not_authed": "No authentication token provided.",

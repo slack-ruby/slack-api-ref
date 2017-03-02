@@ -15,6 +15,9 @@
       "desc": "The new topic."
     }
   },
+  "response": {
+    "sample": "{\n    \"ok\": true,\n    \"topic\": \"This is the new topic!\"\n}\n"
+  },
   "errors": {
     "channel_not_found": "Value passed for channel was invalid.",
     "is_archived": "Private group has been archived.",

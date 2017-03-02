@@ -25,6 +25,9 @@
       "desc": "Value to set a single key to. Usable only if profile is not passed."
     }
   },
+  "response": {
+    "sample": ""
+  },
   "errors": {
     "reserved_name": "First or last name are reserved.",
     "invalid_profile": "Profile object passed in is not valid JSON (make sure it is URL encoded!).",

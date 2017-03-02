@@ -13,7 +13,15 @@
       "required": true,
       "example": " ",
       "desc": "New name for channel."
+    },
+    "validate": {
+      "required": false,
+      "example": "true",
+      "desc": "Whether to return errors on invalid channel name instead of modifying it to meet the specified criteria."
     }
+  },
+  "response": {
+    "sample": "{\n    \"ok\": true,\n    \"channel\": {\n        \"id\": \"C024BE91L\",\n        \"is_channel\": true,\n        \"name\": \"new_name\",\n        \"created\": 1360782804\n    }\n}\n"
   },
   "errors": {
     "channel_not_found": "Value passed for channel was invalid.",

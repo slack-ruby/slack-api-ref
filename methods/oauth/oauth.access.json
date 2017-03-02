@@ -24,6 +24,9 @@
       "desc": "This must match the originally submitted URI (if one was sent)."
     }
   },
+  "response": {
+    "sample": "{\n    \"access_token\": \"xoxp-23984754863-2348975623103\",\n    \"scope\": \"read\"\n}\n"
+  },
   "errors": {
     "invalid_client_id": "Value passed for client_id was invalid.",
     "bad_client_secret": "Value passed for client_secret was invalid.",

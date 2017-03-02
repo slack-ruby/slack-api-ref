@@ -4,6 +4,9 @@
   "desc": "This method returns a list of all im channels that the user has.",
   "args": {
   },
+  "response": {
+    "sample": ""
+  },
   "errors": {
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Invalid authentication token.",

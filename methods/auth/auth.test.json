@@ -4,6 +4,9 @@
   "desc": "This method checks authentication and tells you who you are.",
   "args": {
   },
+  "response": {
+    "sample": "{\n    \"ok\": true,\n    \"url\": \"https:\\/\\/myteam.slack.com\\/\",\n    \"team\": \"My Team\",\n    \"user\": \"cal\",\n    \"team_id\": \"T12345\",\n    \"user_id\": \"U12345\"\n}\n"
+  },
   "errors": {
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Invalid authentication token.",

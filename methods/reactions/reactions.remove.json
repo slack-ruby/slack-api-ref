@@ -31,6 +31,9 @@
       "desc": "Timestamp of the message to remove reaction from."
     }
   },
+  "response": {
+    "sample": "{\n    \"ok\": true\n}\n"
+  },
   "errors": {
     "bad_timestamp": "Value passed for timestamp was invalid.",
     "file_not_found": "File specified by file does not exist.",

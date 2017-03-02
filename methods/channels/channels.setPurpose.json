@@ -15,6 +15,9 @@
       "desc": "The new purpose."
     }
   },
+  "response": {
+    "sample": "{\n    \"ok\": true,\n    \"purpose\": \"This is the new purpose!\"\n}\n"
+  },
   "errors": {
     "channel_not_found": "Value passed for channel was invalid.",
     "not_in_channel": "Authenticated user is not in the channel.",

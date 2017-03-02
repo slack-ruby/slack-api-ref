@@ -4,6 +4,9 @@
   "desc": "This method allows the user to delete their profile image. It will clear whatever image is currently set.",
   "args": {
   },
+  "response": {
+    "sample": "{\n    \"ok\": true\n}\n"
+  },
   "errors": {
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Invalid authentication token.",

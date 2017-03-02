@@ -7,12 +7,25 @@
       "required": true,
       "example": "mychannel",
       "desc": "Name of channel to create."
+    },
+    "validate": {
+      "required": false,
+      "example": "true",
+      "desc": "Whether to return errors on invalid channel name instead of modifying it to meet the specified criteria."
     }
+  },
+  "response": {
+    "sample": ""
   },
   "errors": {
     "name_taken": "A channel cannot be created with the given name.",
     "restricted_action": "A team preference prevents the authenticated user from creating channels.",
     "no_channel": "Value passed for name was empty.",
+    "invalid_name_required": "Value passed for name was empty.",
+    "invalid_name_single_punctuation": "Value passed for name was a single hyphen or underscore.",
+    "invalid_name_maxlength": "Value passed for name exceeded max length.",
+    "invalid_name_specials": "Value passed for name contained unallowed special characters or upper case characters.",
+    "invalid_name": "Value passed for name was invalid.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Invalid authentication token.",
     "account_inactive": "Authentication token is for a deleted user or team.",

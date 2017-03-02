@@ -16,6 +16,9 @@
       "type": "timestamp"
     }
   },
+  "response": {
+    "sample": "{\n    \"ok\": true\n}\n"
+  },
   "errors": {
     "channel_not_found": "Value passed for channel was invalid.",
     "invalid_timestamp": "Value passed for timestamp was invalid.",

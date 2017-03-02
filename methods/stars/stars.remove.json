@@ -26,6 +26,9 @@
       "desc": "Timestamp of the message to remove star from."
     }
   },
+  "response": {
+    "sample": "{\n    \"ok\": true\n}\n"
+  },
   "errors": {
     "bad_timestamp": "Value passed for timestamp was invalid.",
     "message_not_found": "Message specified by channel and timestamp does not exist.",

@@ -9,6 +9,9 @@
       "desc": "Setting this parameter to 1 triggers a testing mode where the specified token will not actually be revoked."
     }
   },
+  "response": {
+    "sample": ""
+  },
   "errors": {
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Invalid authentication token.",

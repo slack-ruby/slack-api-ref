@@ -15,6 +15,9 @@
       "desc": "Boolean, indicates you want the full IM channel definition in the response."
     }
   },
+  "response": {
+    "sample": "{\n    \"ok\": true,\n    \"channel\": {\n        \"id\": \"D024BFF1M\"\n    }\n}\n"
+  },
   "errors": {
     "user_not_found": "Value passed for user was invalid.",
     "user_not_visible": "The calling user is restricted from seeing the requested user.",

@@ -16,6 +16,9 @@
       "type": "user"
     }
   },
+  "response": {
+    "sample": "{\n    \"ok\": true\n}\n"
+  },
   "errors": {
     "channel_not_found": "Value passed for channel was invalid.",
     "user_not_found": "Value passed for user was invalid.",

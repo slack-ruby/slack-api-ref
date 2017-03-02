@@ -4,6 +4,9 @@
   "desc": "This method lets the slack messaging server know that the authenticated user\nis currently active. Consult the presence documentation for\nmore details.",
   "args": {
   },
+  "response": {
+    "sample": "{\n    \"ok\": true\n}\n"
+  },
   "errors": {
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Invalid authentication token.",

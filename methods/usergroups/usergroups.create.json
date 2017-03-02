@@ -29,6 +29,9 @@
       "desc": "Include the number of users in each User Group."
     }
   },
+  "response": {
+    "sample": ""
+  },
   "errors": {
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Invalid authentication token.",
