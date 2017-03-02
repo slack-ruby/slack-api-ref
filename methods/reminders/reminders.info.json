@@ -9,6 +9,9 @@
       "desc": "The ID of the reminder."
     }
   },
+  "response": {
+    "sample": ""
+  },
   "errors": {
     "not_found": "That reminder can't be found.",
     "not_authed": "No authentication token provided.",

@@ -4,6 +4,9 @@
   "desc": "Ends the current user's snooze mode immediately.",
   "args": {
   },
+  "response": {
+    "sample": "{\n    \"ok\": true,\n    \"dnd_enabled\": true,\n    \"next_dnd_start_ts\": 1450418400,\n    \"next_dnd_end_ts\": 1450454400,\n    \"snooze_enabled\": false\n}\n"
+  },
   "errors": {
     "snooze_not_active": "Snooze is not active for this user and cannot be ended.",
     "snooze_end_failed": "There was a problem setting the user's Do Not Disturb status.",

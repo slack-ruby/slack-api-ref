@@ -9,6 +9,9 @@
       "desc": "Either auto or away."
     }
   },
+  "response": {
+    "sample": "{\n    \"ok\": true\n}\n"
+  },
   "errors": {
     "invalid_presence": "Value passed for presence was invalid.",
     "not_authed": "No authentication token provided.",

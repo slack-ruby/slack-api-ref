@@ -4,6 +4,9 @@
   "desc": "After your Slack app is awarded an identity token through Sign in with Slack, use this method to retrieve a user's identity.",
   "args": {
   },
+  "response": {
+    "sample": ""
+  },
   "errors": {
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Invalid authentication token.",

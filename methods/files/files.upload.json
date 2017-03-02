@@ -40,6 +40,9 @@
       "desc": "Comma-separated list of channel names or IDs where the file will be shared."
     }
   },
+  "response": {
+    "sample": ""
+  },
   "errors": {
     "posting_to_general_channel_denied": "An admin has restricted posting to the #general channel.",
     "invalid_channel": "One or more channels supplied are invalid.",

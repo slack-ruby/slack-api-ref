@@ -70,6 +70,9 @@
       "desc": "Used in conjunction with thread_ts and indicates whether reply should be made visible to everyone in the channel or conversation. Defaults to false."
     }
   },
+  "response": {
+    "sample": "{\n    \"ok\": true,\n    \"ts\": \"1405895017.000506\",\n    \"channel\": \"C024BE91L\",\n    \"message\": {\n        ...\n    }\n}\n"
+  },
   "errors": {
     "channel_not_found": "Value passed for channel was invalid.",
     "not_in_channel": "Cannot post user messages to a channel they are not in.",

@@ -9,6 +9,9 @@
       "desc": "Number of minutes, from now, to snooze until."
     }
   },
+  "response": {
+    "sample": "{\n    \"ok\": true,\n    \"snooze_enabled\": true,\n    \"snooze_endtime\": 1450373897,\n    \"snooze_remaining\": 60,\n}\n"
+  },
   "errors": {
     "missing_duration": "No value provided for num_minutes.",
     "snooze_failed": "There was a problem setting the user's Do Not Disturb status.",

@@ -15,6 +15,9 @@
       "desc": "If true always return the complete reaction list."
     }
   },
+  "response": {
+    "sample": ""
+  },
   "errors": {
     "user_not_found": "Value passed for user was invalid.",
     "not_authed": "No authentication token provided.",

@@ -21,6 +21,9 @@
       "desc": "Pass true to delete the message as the authed user. Bot users in this context are considered authed users."
     }
   },
+  "response": {
+    "sample": "{\n    \"ok\": true,\n    \"channel\": \"C024BE91L\",\n    \"ts\": \"1401383885.000061\"\n}\n"
+  },
   "errors": {
     "message_not_found": "No message exists with the requested timestamp.",
     "channel_not_found": "Value passed for channel was invalid.",

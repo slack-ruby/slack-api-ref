@@ -25,6 +25,9 @@
       "desc": "Filter logs with this change type. Defaults to all logs."
     }
   },
+  "response": {
+    "sample": ""
+  },
   "errors": {
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Invalid authentication token.",

@@ -26,12 +26,14 @@ module SlackApi
 
       args, fields = parse_args(page, default_data)
       errors = parse_errors(page)
+      response = parse_response(page)
 
       json_hash = {
         'group' => default_data[:method_group],
         'name' => default_data[:method_name],
         'desc' => desc,
         'args' => args,
+        'response' => response,
         'errors' => errors
       }.merge(fields)
 
@@ -86,6 +88,13 @@ module SlackApi
         else 'channel'
         end
       end
+    end
+
+    def parse_response(api_page)
+      response_wrapper = api_page.search("h2:contains('Response') + pre")
+      return nil unless response_wrapper
+      response = { "sample" => response_wrapper.text }
+      response
     end
 
     def parse_errors(api_page)

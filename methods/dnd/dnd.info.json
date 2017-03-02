@@ -10,6 +10,9 @@
       "type": "user"
     }
   },
+  "response": {
+    "sample": "{\n    \"ok\": true,\n    \"dnd_enabled\": true,\n    \"next_dnd_start_ts\": 1450416600,\n    \"next_dnd_end_ts\": 1450452600,\n    \"snooze_enabled\": true,\n    \"snooze_endtime\": 1450416600,\n    \"snooze_remaining\": 1196\n}\n"
+  },
   "errors": {
     "user_not_found": "Value passed for user was invalid.",
     "not_authed": "No authentication token provided.",

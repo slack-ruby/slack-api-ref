@@ -14,6 +14,9 @@
       "desc": "example property to return."
     }
   },
+  "response": {
+    "sample": ""
+  },
   "errors": {
     "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of common decency. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
     "invalid_array_arg": "The method was passed a PHP-style array argument (e.g. with a name like foo[7]). These are never valid with the Slack API.",

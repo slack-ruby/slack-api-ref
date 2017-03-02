@@ -24,6 +24,9 @@
       "desc": "Pass a value of true to enable query highlight markers (see below)."
     }
   },
+  "response": {
+    "sample": ""
+  },
   "errors": {
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Invalid authentication token.",

@@ -24,6 +24,9 @@
       "desc": "Width/height of crop box (always square)."
     }
   },
+  "response": {
+    "sample": "{\n    \"ok\": true\n}\n"
+  },
   "errors": {
     "bad_image": "The uploaded image could not be processed - try passing a JPEG, GIF or PNG.",
     "too_large": "The uploaded image had excessive dimensions.",

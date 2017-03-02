@@ -4,6 +4,9 @@
   "desc": "This method lists all reminders created by or for a given user.",
   "args": {
   },
+  "response": {
+    "sample": ""
+  },
   "errors": {
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Invalid authentication token.",

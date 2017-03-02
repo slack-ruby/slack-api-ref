@@ -15,6 +15,9 @@
       "desc": "Include labels for each ID in custom profile fields."
     }
   },
+  "response": {
+    "sample": ""
+  },
   "errors": {
     "user_not_found": "Value passed for user was invalid.",
     "not_authed": "No authentication token provided.",

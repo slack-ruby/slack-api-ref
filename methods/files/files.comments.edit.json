@@ -20,6 +20,9 @@
       "desc": "Text of the comment to edit."
     }
   },
+  "response": {
+    "sample": ""
+  },
   "errors": {
     "file_not_found": "The requested file could not be found.",
     "file_deleted": "The requested file was previously deleted.",

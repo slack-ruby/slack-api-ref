@@ -4,6 +4,9 @@
   "desc": "This method lists the items starred by the authed user.",
   "args": {
   },
+  "response": {
+    "sample": ""
+  },
   "errors": {
     "user_not_found": "Value passed for user was invalid.",
     "user_not_visible": "The requested user is not visible to the calling user.",

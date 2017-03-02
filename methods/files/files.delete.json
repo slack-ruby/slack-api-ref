@@ -10,6 +10,9 @@
       "type": "file"
     }
   },
+  "response": {
+    "sample": "{\n    \"ok\": true\n}\n"
+  },
   "errors": {
     "file_not_found": "The file does not exist, or is not visible to the calling user.",
     "file_deleted": "The file has already been deleted.",

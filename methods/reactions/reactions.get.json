@@ -31,6 +31,9 @@
       "desc": "If true always return the complete reaction list."
     }
   },
+  "response": {
+    "sample": ""
+  },
   "errors": {
     "bad_timestamp": "Value passed for timestamp was invalid.",
     "file_not_found": "File specified by file does not exist.",

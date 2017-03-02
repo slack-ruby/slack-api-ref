@@ -10,6 +10,9 @@
       "type": "group"
     }
   },
+  "response": {
+    "sample": "{\n    \"ok\": true\n}\n"
+  },
   "errors": {
     "channel_not_found": "Value passed for channel was invalid.",
     "not_archived": "Group is not archived.",
