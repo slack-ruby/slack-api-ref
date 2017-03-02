@@ -11,7 +11,8 @@ This is a maintained, machine-readable version of the Slack API Docs, generated 
 
 ### It needs an update!
 
-Run `rake api:update`, make a pull request. See [CONTRIBUTING](CONTRIBUTING.md) for details.
+Usually our bot will take care of that within 24 hours.  
+If you need to trigger an update right now, run `rake api:update`. To check if all specifications have a valid format, run `rake api:validate`. If all looks good, please create a pull request. See [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ### Usage
 
