@@ -1,0 +1,11 @@
+{
+  "type": "object",
+  "properties": {
+    "name": {"type": "string"},
+    "desc": {"type": "string"},
+    "long_desc": {"type": "string"},
+    "required_scope": {"type": "string"},
+    "example": {"type": "object"}
+  },
+  "required": ["name", "desc", "long_desc", "required_scope"]
+}

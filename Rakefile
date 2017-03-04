@@ -1,4 +1,5 @@
 require 'json'
+require 'json-schema'
 require 'spidey'
 require 'rubygems'
 require 'bundler'

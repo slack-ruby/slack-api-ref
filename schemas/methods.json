@@ -1,0 +1,12 @@
+{
+  "type": "object",
+  "properties": {
+    "group": {"type": "string"},
+    "name": {"type": "string"},
+    "desc": {"type": "string"},
+    "args": {"type": "object"},
+    "response": {"type": "object"},
+    "errors": {"type": "object"}
+  },
+  "required": ["group", "name", "desc", "args", "response", "errors"]
+}
