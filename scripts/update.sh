@@ -20,11 +20,8 @@ git config --global user.email "buildbot@slack-api-ref.com"
 git add -A
 if ! git diff --quiet --staged
   then
-		echo "API changes:"
-		git diff --staged
 		git commit -m "Automatic update at `date`"
-		git remote -v
-		git push -qf https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git master
+		git push -qf "https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git" master
  else
    echo "Nothing has changed!  I hope that's what you expected." >&2
 fi
