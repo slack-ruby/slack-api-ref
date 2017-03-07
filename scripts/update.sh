@@ -17,11 +17,11 @@ fi
 
 git config --global user.name "Slack API Ref Buildbot"
 git config --global user.email "buildbot@slack-api-ref.com"
-git add -A
+git add .
 if ! git diff --quiet --staged
   then
-		git commit -m "Automatic update at `date`"
-		git push -qf "https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git" master
+		git commit -m "Updated from Slack docs, `date +%Y/%m/%d`."
+		git push "https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git" HEAD:master
  else
-   echo "Nothing has changed!  I hope that's what you expected." >&2
+   echo "Nothing has changed! I hope that's what you expected." >&2
 fi
