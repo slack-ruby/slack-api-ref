@@ -5,7 +5,7 @@
   "args": {
   },
   "response": {
-    "sample": ""
+    "sample": "{\n    \"ok\": true,\n    \"reminders\": [\n        {\n            \"id\": \"Rm12345678\",\n            \"creator\": \"U18888888\",\n            \"user\": \"U18888888\",\n            \"text\": \"eat a banana\",\n            \"recurring\": false,\n            \"time\": 1458678068,\n            \"complete_ts\": 0\n        },\n        {\n            \"id\": \"Rm23456789\",\n            \"creator\": \"U18888888\",\n            \"user\": \"U18888888\",\n            \"text\": \"drink water\",\n            \"recurring\": true\n        }\n    ]\n}\n"
   },
   "errors": {
     "not_authed": "No authentication token provided.",

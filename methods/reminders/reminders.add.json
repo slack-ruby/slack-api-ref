@@ -21,7 +21,7 @@
     }
   },
   "response": {
-    "sample": ""
+    "sample": "{\n    \"ok\": true,\n    \"reminder\": {\n        \"id\": \"Rm12345678\",\n        \"creator\": \"U18888888\",\n        \"user\": \"U18888888\",\n        \"text\": \"eat a banana\",\n        \"recurring\": false,\n        \"time\": 1602288000,\n        \"complete_ts\": 0\n    }\n}\n"
   },
   "errors": {
     "cannot_parse": "The phrasing of the timing for this reminder is unclear. You must include a complete time description. Some examples that work: 1458678068, 20, in 5 minutes, tomorrow, at 3:30pm, on Tuesday, or next week.",

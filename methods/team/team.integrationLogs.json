@@ -26,7 +26,7 @@
     }
   },
   "response": {
-    "sample": ""
+    "sample": "{\n    \"ok\": true,\n    \"logs\": [\n        {\n            \"service_id\": \"1234567890\",\n            \"service_type\": \"Google Calendar\",\n            \"user_id\": \"U1234ABCD\",\n            \"user_name\": \"Johnny\",\n            \"channel\": \"C1234567890\",\n            \"date\": \"1392163200\",\n            \"change_type\": \"enabled\",\n            \"scope\": \"incoming-webhook\"\n        },\n        {\n            \"app_id\": \"2345678901\",\n            \"app_type\": \"Johnny App\"\n            \"user_id\": \"U2345BCDE\",\n            \"user_name\": \"Billy\",\n            \"date\": \"1392163201\",\n            \"change_type\": \"added\"\n            \"scope\": \"chat:write:user,channels:read\"\n        },\n        {\n            \"service_id\": \"3456789012\",\n            \"service_type\": \"Airbrake\",\n            \"user_id\": \"U3456CDEF\",\n            \"user_name\": \"Joey\",\n            \"channel\": \"C1234567890\",\n            \"date\": \"1392163202\",\n            \"change_type\": \"disabled\",\n            \"reason\": \"user\",\n            \"scope\": \"incoming-webhook\"\n        }\n    ],\n    \"paging\": {\n            \"count\": 3,\n            \"total\": 3,\n            \"page\": 1,\n            \"pages\": 1\n    }\n}\n"
   },
   "errors": {
     "not_authed": "No authentication token provided.",

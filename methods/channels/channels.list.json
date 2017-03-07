@@ -10,7 +10,7 @@
     }
   },
   "response": {
-    "sample": ""
+    "sample": "{\n    \"ok\": true,\n    \"channels\": [\n        {\n            \"id\": \"C024BE91L\",\n            \"name\": \"fun\",\n            \"created\": 1360782804,\n            \"creator\": \"U024BE7LH\",\n            \"is_archived\": false,\n            \"is_member\": false,\n            \"num_members\": 6,\n            \"topic\": {\n                \"value\": \"Fun times\",\n                \"creator\": \"U024BE7LV\",\n                \"last_set\": 1369677212\n            },\n            \"purpose\": {\n                \"value\": \"This channel is for fun\",\n                \"creator\": \"U024BE7LH\",\n                \"last_set\": 1360782804\n            }\n        },\n        ....\n    ]\n}\n"
   },
   "errors": {
     "not_authed": "No authentication token provided.",

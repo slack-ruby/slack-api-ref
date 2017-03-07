@@ -32,7 +32,7 @@
     }
   },
   "response": {
-    "sample": ""
+    "sample": "{\n    \"type\": \"message\",\n    \"channel\": \"C2147483705\",\n    \"message\": {\n        ...\n        \"reactions\": [\n            {\n                \"name\": \"astonished\",\n                \"count\": 3,\n                \"users\": [ \"U1\", \"U2\", \"U3\" ]\n            },\n            {\n                \"name\": \"clock1\"\n                \"count\": 2,\n                \"users\": [ \"U1\", \"U2\", \"U3\" ]\n            }\n        ]\n    },\n},\n"
   },
   "errors": {
     "bad_timestamp": "Value passed for timestamp was invalid.",

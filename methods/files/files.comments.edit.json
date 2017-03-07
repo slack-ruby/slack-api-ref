@@ -21,7 +21,7 @@
     }
   },
   "response": {
-    "sample": ""
+    "sample": "{\n    \"ok\": true,\n    \"comment\": {\n        \"id\": \"Fc1234567890\",\n        \"created\": 1356032811,\n        \"timestamp\": 1356032811,\n        \"user\": \"U1234567890\",\n        \"comment\": \"Everyone should take a moment to read this file, seriously.\"\n    }\n}\n"
   },
   "errors": {
     "file_not_found": "The requested file could not be found.",

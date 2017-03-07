@@ -11,7 +11,7 @@
     }
   },
   "response": {
-    "sample": "{\n    \"ok\": true\n}\n"
+    "sample": "{\n    \"ok\": true\n}\n{\n    \"ok\": true,\n    \"no_op\": true,\n    \"already_open\": true\n}\n"
   },
   "errors": {
     "channel_not_found": "Value passed for channel was invalid.",

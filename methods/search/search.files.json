@@ -25,7 +25,7 @@
     }
   },
   "response": {
-    "sample": ""
+    "sample": "{\n    \"ok\": true,\n    \"query\": \"test\",\n    \"files\": {\n        \"total\": 829,\n        \"paging\": {\n            \"count\": 20,\n            \"total\": 829,\n            \"page\": 1,\n            \"pages\": 42\n        },\n        \"matches\": [\n            {...},\n            {...},\n            {...}\n        ]\n    }\n}\nstart: \"\\xEE\\x80\\x80\"; # U+E000 (private-use)\nend  : \"\\xEE\\x80\\x81\"; # U+E001 (private-use)\n"
   },
   "errors": {
     "not_authed": "No authentication token provided.",

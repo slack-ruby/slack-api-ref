@@ -16,7 +16,7 @@
     }
   },
   "response": {
-    "sample": "{\n    \"ok\": true,\n    \"channel\": {\n        \"id\": \"D024BFF1M\"\n    }\n}\n"
+    "sample": "{\n    \"ok\": true,\n    \"channel\": {\n        \"id\": \"D024BFF1M\"\n    }\n}\n{\n    \"ok\": true,\n    \"no_op\": true,\n    \"already_open\": true,\n    \"channel\": {\n        \"id\": \"D024BFF1M\"\n    }\n}\n{\n    \"ok\": true,\n    \"channel\": {\n        \"id\":\"D024BE91L\",\n        \"is_im\":true,\n        \"user\":\"U024BE7LH\",\n        \"created\":1434412652,\n        \"last_read\":\"1442525627.000002\",\n        \"latest\":{\n            \"type\":\"message\",\n            \"user\":\"U024BE7LH\",\n            \"text\":\"hello\",\n            \"ts\":\"1442525627.000002\"\n        },\n        \"unread_count\":0,\n        \"unread_count_display\":0,\n        \"is_open\":true\n    }\n}\n"
   },
   "errors": {
     "user_not_found": "Value passed for user was invalid.",

@@ -17,7 +17,7 @@
     }
   },
   "response": {
-    "sample": ""
+    "sample": "{\n    \"ok\": true,\n    \"group\": {\n        …\n    },\n}\n{\n    \"ok\": true,\n    \"already_in_group\": true,\n    \"group\": {\n        …\n    },\n}\n"
   },
   "errors": {
     "channel_not_found": "Value passed for channel was invalid.",
