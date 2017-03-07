@@ -22,7 +22,7 @@
     "restricted_action": "A team preference prevents the authenticated user from creating channels.",
     "no_channel": "Value passed for name was empty.",
     "invalid_name_required": "Value passed for name was empty.",
-    "invalid_name_single_punctuation": "Value passed for name was a single hyphen or underscore.",
+    "invalid_name_punctuation": "Value passed for name contained only punctuation.",
     "invalid_name_maxlength": "Value passed for name exceeded max length.",
     "invalid_name_specials": "Value passed for name contained unallowed special characters or upper case characters.",
     "invalid_name": "Value passed for name was invalid.",

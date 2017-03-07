@@ -25,8 +25,12 @@
   },
   "errors": {
     "channel_not_found": "Value passed for channel was invalid.",
-    "invalid_name": "New name is invalid.",
+    "invalid_name": "Value passed for name was invalid.",
     "name_taken": "New channel name is taken.",
+    "invalid_name_required": "Value passed for name was empty.",
+    "invalid_name_punctuation": "Value passed for name contained only punctuation.",
+    "invalid_name_maxlength": "Value passed for name exceeded max length.",
+    "invalid_name_specials": "Value passed for name contained unallowed special characters or upper case characters.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Invalid authentication token.",
     "account_inactive": "Authentication token is for a deleted user or team.",
