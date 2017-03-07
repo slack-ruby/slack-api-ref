@@ -1,5 +1,0 @@
-*.gem
-*.rbc
-build/
-/.bundle/
-/vendor/bundle
