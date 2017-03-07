@@ -11,7 +11,9 @@
     }
   },
   "response": {
-    "sample": "{\n    \"ok\": true,\n    \"items\": [\n        {\n            \"type\": \"message\",\n            \"channel\": \"C2147483705\",\n            \"message\": {...},\n            \"created\": 1456335673,\n            \"created_by\": \"U07BVMD97\"\n        },\n        {\n            \"type\": \"file\",\n            \"file\": { ... },\n            \"created\": 1456335673,\n            \"created_by\": \"U07BVMD97\"\n        },\n        {\n            \"type\": \"file_comment\",\n            \"file\": { ... },\n            \"comment\": { ... },\n            \"created\": 1456335673,\n            \"created_by\": \"U07BVMD97\"\n        }\n    ]\n}\n"
+    "examples": [
+      "{\n    \"ok\": true,\n    \"items\": [\n        {\n            \"type\": \"message\",\n            \"channel\": \"C2147483705\",\n            \"message\": {...},\n            \"created\": 1456335673,\n            \"created_by\": \"U07BVMD97\"\n        },\n        {\n            \"type\": \"file\",\n            \"file\": { ... },\n            \"created\": 1456335673,\n            \"created_by\": \"U07BVMD97\"\n        },\n        {\n            \"type\": \"file_comment\",\n            \"file\": { ... },\n            \"comment\": { ... },\n            \"created\": 1456335673,\n            \"created_by\": \"U07BVMD97\"\n        }\n    ]\n}"
+    ]
   },
   "errors": {
     "channel_not_found": "Value passed for channel was invalid.",

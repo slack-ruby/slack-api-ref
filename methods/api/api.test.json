@@ -15,7 +15,10 @@
     }
   },
   "response": {
-    "sample": "{\n    \"ok\": true,\n    \"args\": {\n        \"foo\": \"bar\"\n    }\n}\n{\n    \"ok\": false,\n    \"error\": \"my_error\",\n    \"args\": {\n        \"error\": \"my_error\"\n    }\n}\n"
+    "examples": [
+      "{\n    \"ok\": true,\n    \"args\": {\n        \"foo\": \"bar\"\n    }\n}",
+      "{\n    \"ok\": false,\n    \"error\": \"my_error\",\n    \"args\": {\n        \"error\": \"my_error\"\n    }\n}"
+    ]
   },
   "errors": {
     "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of common decency. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",

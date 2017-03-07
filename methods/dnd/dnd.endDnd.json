@@ -5,7 +5,9 @@
   "args": {
   },
   "response": {
-    "sample": "{\n    \"ok\": true\n}\n"
+    "examples": [
+      "{\n    \"ok\": true\n}"
+    ]
   },
   "errors": {
     "unknown_error": "There was a mysterious problem ending the user's Do Not Disturb session.",

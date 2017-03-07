@@ -5,7 +5,9 @@
   "args": {
   },
   "response": {
-    "sample": "{\n    \"ok\": true\n}\n"
+    "examples": [
+      "{\n    \"ok\": true\n}"
+    ]
   },
   "errors": {
     "not_authed": "No authentication token provided.",

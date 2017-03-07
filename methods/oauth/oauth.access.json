@@ -25,7 +25,9 @@
     }
   },
   "response": {
-    "sample": "{\n    \"access_token\": \"xoxp-23984754863-2348975623103\",\n    \"scope\": \"read\"\n}\n"
+    "examples": [
+      "{\n    \"access_token\": \"xoxp-23984754863-2348975623103\",\n    \"scope\": \"read\"\n}"
+    ]
   },
   "errors": {
     "invalid_client_id": "Value passed for client_id was invalid.",

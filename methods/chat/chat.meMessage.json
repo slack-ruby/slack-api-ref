@@ -16,7 +16,9 @@
     }
   },
   "response": {
-    "sample": "{\n    \"ok\": true,\n    \"channel\": \"C024BE7LR\",\n    \"ts\": \"1417671948.000006\"\n}\n"
+    "examples": [
+      "{\n    \"ok\": true,\n    \"channel\": \"C024BE7LR\",\n    \"ts\": \"1417671948.000006\"\n}"
+    ]
   },
   "errors": {
     "channel_not_found": "Value passed for channel was invalid.",

@@ -16,7 +16,9 @@
     }
   },
   "response": {
-    "sample": "{\n    \"ok\": true,\n    \"topic\": \"This is the new topic!\"\n}\n"
+    "examples": [
+      "{\n    \"ok\": true,\n    \"topic\": \"This is the new topic!\"\n}"
+    ]
   },
   "errors": {
     "channel_not_found": "Value passed for channel was invalid.",

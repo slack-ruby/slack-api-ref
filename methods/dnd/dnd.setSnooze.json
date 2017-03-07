@@ -10,7 +10,9 @@
     }
   },
   "response": {
-    "sample": "{\n    \"ok\": true,\n    \"snooze_enabled\": true,\n    \"snooze_endtime\": 1450373897,\n    \"snooze_remaining\": 60,\n}\n"
+    "examples": [
+      "{\n    \"ok\": true,\n    \"snooze_enabled\": true,\n    \"snooze_endtime\": 1450373897,\n    \"snooze_remaining\": 60,\n}"
+    ]
   },
   "errors": {
     "missing_duration": "No value provided for num_minutes.",

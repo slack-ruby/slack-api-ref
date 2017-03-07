@@ -10,7 +10,9 @@
     }
   },
   "response": {
-    "sample": "{\n    \"ok\": true\n}\n"
+    "examples": [
+      "{\n    \"ok\": true\n}"
+    ]
   },
   "errors": {
     "invalid_presence": "Value passed for presence was invalid.",

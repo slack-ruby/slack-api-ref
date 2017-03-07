@@ -11,7 +11,9 @@
     }
   },
   "response": {
-    "sample": "{\n    \"ok\": true,\n    \"channel\": {\n        \"id\": \"C024BE91L\",\n        \"name\": \"fun\",\n\n        \"created\": 1360782804,\n        \"creator\": \"U024BE7LH\",\n\n        \"is_archived\": false,\n        \"is_general\": false,\n        \"is_member\": true,\n        \"is_starred\": true,\n\n        \"members\": [ ... ],\n\n        \"topic\": { ... },\n        \"purpose\": { ... },\n\n        \"last_read\": \"1401383885.000061\",\n        \"latest\": { ... },\n        \"unread_count\": 0,\n        \"unread_count_display\": 0\n    }\n}\n"
+    "examples": [
+      "{\n    \"ok\": true,\n    \"channel\": {\n        \"id\": \"C024BE91L\",\n        \"name\": \"fun\",\n\n        \"created\": 1360782804,\n        \"creator\": \"U024BE7LH\",\n\n        \"is_archived\": false,\n        \"is_general\": false,\n        \"is_member\": true,\n        \"is_starred\": true,\n\n        \"members\": [ ... ],\n\n        \"topic\": { ... },\n        \"purpose\": { ... },\n\n        \"last_read\": \"1401383885.000061\",\n        \"latest\": { ... },\n        \"unread_count\": 0,\n        \"unread_count_display\": 0\n    }\n}"
+    ]
   },
   "errors": {
     "channel_not_found": "Value passed for channel was invalid.",
