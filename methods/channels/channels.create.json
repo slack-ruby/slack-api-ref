@@ -15,7 +15,9 @@
     }
   },
   "response": {
-    "sample": ""
+    "examples": [
+      "{\n    \"ok\": true,\n    \"channel\": {\n        \"id\": \"C024BE91L\",\n        \"name\": \"fun\",\n        \"created\": 1360782804,\n        \"creator\": \"U024BE7LH\",\n        \"is_archived\": false,\n        \"is_member\": true,\n        \"is_general\": false,\n        \"last_read\": \"0000000000.000000\",\n        \"latest\": null,\n        \"unread_count\": 0,\n        \"unread_count_display\": 0,\n        \"members\": [ … ],\n        \"topic\": { … },\n        \"purpose\": { … }\n    }\n}"
+    ]
   },
   "errors": {
     "name_taken": "A channel cannot be created with the given name.",

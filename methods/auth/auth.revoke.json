@@ -10,7 +10,9 @@
     }
   },
   "response": {
-    "sample": ""
+    "examples": [
+      "{\n    \"ok\": true,\n    \"revoked\": true\n}"
+    ]
   },
   "errors": {
     "not_authed": "No authentication token provided.",

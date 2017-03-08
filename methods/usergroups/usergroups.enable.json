@@ -15,7 +15,9 @@
     }
   },
   "response": {
-    "sample": "{\n    \"ok\": true,\n    \"usergroup\": {\n        \"id\": \"S0615G0KT\",\n        \"team_id\": \"T060RNRCH\",\n        \"is_usergroup\": true,\n        \"name\": \"Marketing Team\",\n        \"description\": \"Marketing gurus, PR experts and product advocates.\",\n        \"handle\": \"marketing-team\",\n        \"is_external\": false,\n        \"date_create\": 1446746793,\n        \"date_update\": 1446747767,\n        \"date_delete\": 0,\n        \"auto_type\": null,\n        \"created_by\": \"U060RNRCZ\",\n        \"updated_by\": \"U060RNRCZ\",\n        \"deleted_by\": null,\n        \"prefs\": {\n            \"channels\": [\n\n            ],\n            \"groups\": [\n\n            ]\n        },\n        \"user_count\": \"0\"\n    }\n}\n"
+    "examples": [
+      "{\n    \"ok\": true,\n    \"usergroup\": {\n        \"id\": \"S0615G0KT\",\n        \"team_id\": \"T060RNRCH\",\n        \"is_usergroup\": true,\n        \"name\": \"Marketing Team\",\n        \"description\": \"Marketing gurus, PR experts and product advocates.\",\n        \"handle\": \"marketing-team\",\n        \"is_external\": false,\n        \"date_create\": 1446746793,\n        \"date_update\": 1446747767,\n        \"date_delete\": 0,\n        \"auto_type\": null,\n        \"created_by\": \"U060RNRCZ\",\n        \"updated_by\": \"U060RNRCZ\",\n        \"deleted_by\": null,\n        \"prefs\": {\n            \"channels\": [\n\n            ],\n            \"groups\": [\n\n            ]\n        },\n        \"user_count\": \"0\"\n    }\n}"
+    ]
   },
   "errors": {
     "not_authed": "No authentication token provided.",

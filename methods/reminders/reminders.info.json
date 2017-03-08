@@ -10,7 +10,9 @@
     }
   },
   "response": {
-    "sample": ""
+    "examples": [
+      "{\n    \"ok\": true,\n    \"reminder\": {\n        \"id\": \"Rm12345678\",\n        \"creator\": \"U18888888\",\n        \"user\": \"U18888888\",\n        \"text\": \"eat a banana\",\n        \"recurring\": false,\n        \"time\": 1458678068,\n        \"complete_ts\": 1458678200\n    }\n}"
+    ]
   },
   "errors": {
     "not_found": "That reminder can't be found.",

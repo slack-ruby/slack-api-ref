@@ -11,7 +11,9 @@
     }
   },
   "response": {
-    "sample": ""
+    "examples": [
+      "{\n    \"ok\": true,\n    \"user\": {\n        \"id\": \"U023BECGF\",\n        \"name\": \"bobby\",\n        \"deleted\": false,\n        \"color\": \"9f69e7\",\n        \"profile\": {\n            \"first_name\": \"Bobby\",\n            \"last_name\": \"Tables\",\n            \"real_name\": \"Bobby Tables\",\n            \"email\": \"bobby@slack.com\",\n            \"skype\": \"my-skype-name\",\n            \"phone\": \"+1 (123) 456 7890\",\n            \"image_24\": \"https:\\/\\/...\",\n            \"image_32\": \"https:\\/\\/...\",\n            \"image_48\": \"https:\\/\\/...\",\n            \"image_72\": \"https:\\/\\/...\",\n            \"image_192\": \"https:\\/\\/...\"\n        },\n        \"is_admin\": true,\n        \"is_owner\": true,\n        \"has_2fa\": true\n    }\n}"
+    ]
   },
   "errors": {
     "user_not_found": "Value passed for user was invalid.",

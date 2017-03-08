@@ -10,7 +10,9 @@
     }
   },
   "response": {
-    "sample": "{\n    \"ok\": true\n}\n"
+    "examples": [
+      "{\n    \"ok\": true\n}"
+    ]
   },
   "errors": {
     "not_found": "That reminder can't be found.",

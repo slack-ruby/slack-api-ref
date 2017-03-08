@@ -41,7 +41,11 @@
     }
   },
   "response": {
-    "sample": ""
+    "examples": [
+      "{\n    \"ok\": true,\n    \"file\": {...}\n}",
+      "curl -F file=@dramacat.gif -F channels=C024BE91L,#general -F token=xxxx-xxxxxxxxx-xxxx https://slack.com/api/files.upload",
+      "curl -F content=\"Hello\" -F token=xxxx-xxxxxxxxx-xxxx https://slack.com/api/files.upload"
+    ]
   },
   "errors": {
     "posting_to_general_channel_denied": "An admin has restricted posting to the #general channel.",

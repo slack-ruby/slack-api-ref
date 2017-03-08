@@ -20,7 +20,9 @@
     }
   },
   "response": {
-    "sample": ""
+    "examples": [
+      "{\n    \"ok\": true,\n    \"url\": \"wss:\\/\\/ms9.slack-msgs.com\\/websocket\\/7I5yBpcvk\",\n\n    \"self\": {\n        \"id\": \"U023BECGF\",\n        \"name\": \"bobby\",\n        \"prefs\": {\n            …\n        },\n        \"created\": 1402463766,\n        \"manual_presence\": \"active\"\n    },\n    \"team\": {\n        \"id\": \"T024BE7LD\",\n        \"name\": \"Example Team\",\n        \"email_domain\": \"\",\n        \"domain\": \"example\",\n        \"icon\": {\n            …\n        },\n        \"msg_edit_window_mins\": -1,\n        \"over_storage_limit\": false\n        \"prefs\": {\n            …\n        },\n        \"plan\": \"std\"\n    },\n    \"users\": [ … ],\n\n    \"channels\": [ … ],\n    \"groups\": [ … ],\n    \"mpims\": [ … ],\n    \"ims\": [ … ],\n\n    \"bots\": [ … ],\n}"
+    ]
   },
   "errors": {
     "migration_in_progress": "Team is being migrated between servers. See the team_migration_started event documentation for details.",

@@ -15,7 +15,10 @@
     }
   },
   "response": {
-    "sample": ""
+    "examples": [
+      "{\n    \"ok\": true,\n    \"channel\": {\n        \"id\": \"C024BE91L\",\n        \"name\": \"fun\",\n        \"created\": 1360782804,\n        \"creator\": \"U024BE7LH\",\n        \"is_archived\": false,\n        \"is_member\": true,\n        \"is_general\": false,\n        \"last_read\": \"1401383885.000061\",\n        \"latest\": { … },\n        \"unread_count\": 0,\n        \"unread_count_display\": 0,\n        \"members\": [ … ],\n        \"topic\": {\n            \"value\": \"Fun times\",\n            \"creator\": \"U024BE7LV\",\n            \"last_set\": 1369677212\n        },\n        \"purpose\": {\n            \"value\": \"This channel is for fun\",\n            \"creator\": \"U024BE7LH\",\n            \"last_set\": 1360782804\n        }\n    }\n}",
+      "{\n    \"ok\": true,\n    \"already_in_channel\": true,\n    \"channel\": {\n        \"id\": \"C024BE91L\",\n        \"name\": \"fun\",\n        \"created\": 1360782804,\n        \"creator\": \"U024BE7LH\",\n        \"is_archived\": false,\n        \"is_general\": false\n    }\n}"
+    ]
   },
   "errors": {
     "channel_not_found": "Value passed for channel was invalid.",

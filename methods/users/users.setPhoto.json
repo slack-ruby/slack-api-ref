@@ -25,7 +25,9 @@
     }
   },
   "response": {
-    "sample": "{\n    \"ok\": true\n}\n"
+    "examples": [
+      "{\n    \"ok\": true\n}"
+    ]
   },
   "errors": {
     "bad_image": "The uploaded image could not be processed - try passing a JPEG, GIF or PNG.",

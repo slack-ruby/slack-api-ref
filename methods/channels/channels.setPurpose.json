@@ -16,7 +16,9 @@
     }
   },
   "response": {
-    "sample": "{\n    \"ok\": true,\n    \"purpose\": \"This is the new purpose!\"\n}\n"
+    "examples": [
+      "{\n    \"ok\": true,\n    \"purpose\": \"This is the new purpose!\"\n}"
+    ]
   },
   "errors": {
     "channel_not_found": "Value passed for channel was invalid.",

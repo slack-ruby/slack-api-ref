@@ -91,10 +91,13 @@ module SlackApi
     end
 
     def parse_response(api_page)
-      response_wrapper = api_page.search("h2:contains('Response') + pre")
-      return nil unless response_wrapper
-      response = { "sample" => response_wrapper.text }
-      response
+      responses = api_page.search("h2:contains('Response') ~ pre")
+      return nil unless responses
+      examples = []
+      responses.each do |response|
+        examples.push(response.text.strip)
+      end
+      { "examples" => examples }
     end
 
     def parse_errors(api_page)

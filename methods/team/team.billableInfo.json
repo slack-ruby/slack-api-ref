@@ -11,7 +11,9 @@
     }
   },
   "response": {
-    "sample": ""
+    "examples": [
+      "{\n    \"ok\": true,\n    \"billable_info\": {\n        \"U0632EWRW\": {\n            \"billing_active\": false\n        },\n        \"U02UCPE1R\": {\n            \"billing_active\": true\n        },\n        \"U02UEBSD2\": {\n            \"billing_active\": true\n        }\n    }\n}"
+    ]
   },
   "errors": {
     "user_not_found": "Unable to find the requested user.",

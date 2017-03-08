@@ -5,7 +5,9 @@
   "args": {
   },
   "response": {
-    "sample": ""
+    "examples": [
+      "{\n    \"ok\": true,\n    \"ims\": [\n        {\n           \"id\": \"D024BFF1M\",\n           \"is_im\": true,\n           \"user\": \"USLACKBOT\",\n           \"created\": 1372105335,\n           \"is_user_deleted\": false\n        },\n        {\n           \"id\": \"D024BE7RE\",\n           \"is_im\": true,\n           \"user\": \"U024BE7LH\",\n           \"created\": 1356250715,\n           \"is_user_deleted\": false\n        },\n        …\n    ]\n}"
+    ]
   },
   "errors": {
     "not_authed": "No authentication token provided.",

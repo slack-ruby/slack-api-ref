@@ -11,7 +11,10 @@
     }
   },
   "response": {
-    "sample": ""
+    "examples": [
+      "{\n    \"ok\": true,\n    \"presence\": \"active\"\n}",
+      "{\n    \"ok\": true,\n    \"presence\": \"active\",\n    \"online\": true,\n    \"auto_away\": false,\n    \"manual_away\": false,\n    \"connection_count\": 1,\n    \"last_activity\": 1419027078\n}"
+    ]
   },
   "errors": {
     "not_authed": "No authentication token provided.",

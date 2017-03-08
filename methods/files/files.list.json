@@ -32,7 +32,9 @@
     }
   },
   "response": {
-    "sample": "{\n    \"ok\": true,\n    \"files\": [\n        {...},\n        {...},\n        {...},\n        ...\n    ],\n    \"paging\": {\n        \"count\": 100,\n        \"total\": 295,\n        \"page\": 1,\n        \"pages\": 3\n    }\n}\n"
+    "examples": [
+      "{\n    \"ok\": true,\n    \"files\": [\n        {...},\n        {...},\n        {...},\n        ...\n    ],\n    \"paging\": {\n        \"count\": 100,\n        \"total\": 295,\n        \"page\": 1,\n        \"pages\": 3\n    }\n}"
+    ]
   },
   "errors": {
     "user_not_found": "Value passed for user was invalid.",

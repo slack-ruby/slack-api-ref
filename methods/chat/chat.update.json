@@ -42,7 +42,9 @@
     }
   },
   "response": {
-    "sample": ""
+    "examples": [
+
+    ]
   },
   "errors": {
     "message_not_found": "No message exists with the requested timestamp.",

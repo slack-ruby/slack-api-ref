@@ -27,7 +27,9 @@
     }
   },
   "response": {
-    "sample": "{\n    \"ok\": true\n}\n"
+    "examples": [
+      "{\n    \"ok\": true\n}"
+    ]
   },
   "errors": {
     "bad_timestamp": "Value passed for timestamp was invalid.",

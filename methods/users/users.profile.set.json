@@ -26,7 +26,9 @@
     }
   },
   "response": {
-    "sample": ""
+    "examples": [
+      "{\n    \"ok\": true,\n    \"profile\": {\n        \"first_name\": \"John\",\n        \"last_name\": \"Smith\",\n        \"email\": \"john@smith.com\",\n        \"skype\": \"johnsmith\",\n        \"image_24\": \"https://s3.amazonaws.com/slack-files/avatars/2015-11-16/123456_24.jpg\",\n        \"image_32\": \"https://s3.amazonaws.com/slack-files/avatars/2015-11-16/123456_32.jpg\",\n        \"image_48\": \"https://s3.amazonaws.com/slack-files/avatars/2015-11-16/123456_48.jpg\",\n        \"image_72\": \"https://s3.amazonaws.com/slack-files/avatars/2015-11-16/123456_72.jpg\",\n        \"image_192\": \"https://s3.amazonaws.com/slack-files/avatars/2015-11-16/123456_192.jpg\",\n        \"image_512\": \"https://s3.amazonaws.com/slack-files/avatars/2015-11-16/123456_512.jpg\",\n        \"image_1024\": \"https://s3.amazonaws.com/slack-files/avatars/2015-11-16/123456_1024.jpg\",\n        \"image_original\": \"https://s3.amazonaws.com/slack-files/avatars/2015-11-16/123456_original.jpg\",\n        \"fields\": {\n            \"Xf06054AAA\": {\n                \"value\": \"San Francisco\",\n                \"alt\": \"Giants, yo!\",\n                \"label\": \"Favorite Baseball Team\"\n            },\n            \"Xf06054BBB\": {\n                \"value\": \"Barista\",\n                \"alt\": \"I make the coffee & the tea!\",\n                \"label\": \"Position\"\n            }\n        }\n    }\n}"
+    ]
   },
   "errors": {
     "reserved_name": "First or last name are reserved.",

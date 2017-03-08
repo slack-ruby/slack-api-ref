@@ -11,7 +11,9 @@
     }
   },
   "response": {
-    "sample": "{\n    \"ok\": true\n}\n"
+    "examples": [
+      "{\n    \"ok\": true\n}"
+    ]
   },
   "errors": {
     "file_not_found": "The file does not exist, or is not visible to the calling user.",

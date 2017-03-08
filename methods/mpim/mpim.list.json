@@ -5,7 +5,9 @@
   "args": {
   },
   "response": {
-    "sample": ""
+    "examples": [
+      "{\n    \"ok\": true,\n    \"groups\": [\n        {\n            \"id\": \"G024BE91L\",\n            \"name\": \"dm-messaging-user-1\",\n            \"created\": 1360782804,\n            \"creator\": \"U024BE7LH\",\n            \"is_archived\": false,\n            \"is_mpim\": true\n            \"members\": [\n                \"U024BE7LH\",\n                \"U1234567890\",\n                \"U2345678901\",\n                \"U3456789012\"\n            ],\n            \"topic\": {\n                \"value\": \"Group messaging.\",\n                \"creator\": \"U024BE7LH\",\n                \"last_set\": 1360782804\n            },\n            \"purpose\": {\n                \"value\": \"Group messaging with: @user @user_a @user_b @user_c\",\n                \"creator\": \"U024BE7LH\",\n                \"last_set\": 1360782804\n            }\n        },\n        ....\n    ]\n}"
+    ]
   },
   "errors": {
     "not_authed": "No authentication token provided.",

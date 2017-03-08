@@ -22,7 +22,9 @@
     }
   },
   "response": {
-    "sample": "{\n    \"ok\": true,\n    \"channel\": \"C024BE91L\",\n    \"ts\": \"1401383885.000061\"\n}\n"
+    "examples": [
+      "{\n    \"ok\": true,\n    \"channel\": \"C024BE91L\",\n    \"ts\": \"1401383885.000061\"\n}"
+    ]
   },
   "errors": {
     "message_not_found": "No message exists with the requested timestamp.",
