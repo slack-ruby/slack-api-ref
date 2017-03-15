@@ -1,38 +1,41 @@
 {
-  "group": "channels",
-  "name": "channels.create",
-  "desc": "This method is used to create a channel.",
+  "group": "chat",
+  "name": "chat.unfurl",
+  "desc": "This method attaches Slack app unfurl behavior to a specified and relevant message. A user token is required as this method does not support bot user tokens.",
   "args": {
-    "name": {
+    "channel": {
       "required": true,
-      "example": "mychannel",
-      "desc": "Name of channel to create."
+      "example": "C1234567890",
+      "desc": "Channel ID of the message.",
+      "type": "channel"
     },
-    "validate": {
+    "ts": {
+      "required": true,
+      "example": " ",
+      "desc": "Timestamp of the message to add unfurl behavior to.",
+      "type": "timestamp"
+    },
+    "unfurls": {
+      "required": true,
+      "example": " ",
+      "desc": "JSON mapping a set of URLs from the message to their unfurl attachments."
+    },
+    "user_auth_required": {
       "required": false,
       "example": "true",
-      "desc": "Whether to return errors on invalid channel name instead of modifying it to meet the specified criteria."
+      "desc": "Set to true or 1 to indicate the user must install your Slack app to trigger unfurls for this domain."
     }
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true,\n    \"channel\": {\n        \"id\": \"C024BE91L\",\n        \"name\": \"fun\",\n        \"created\": 1360782804,\n        \"creator\": \"U024BE7LH\",\n        \"is_archived\": false,\n        \"is_member\": true,\n        \"is_general\": false,\n        \"last_read\": \"0000000000.000000\",\n        \"latest\": null,\n        \"unread_count\": 0,\n        \"unread_count_display\": 0,\n        \"members\": [ ... ],\n        \"topic\": { ... },\n        \"purpose\": { ... }\n    }\n}"
+      "{\n    \"ok\": true\n}"
     ]
   },
   "errors": {
-    "name_taken": "A channel cannot be created with the given name.",
-    "restricted_action": "A team preference prevents the authenticated user from creating channels.",
-    "no_channel": "Value passed for name was empty.",
-    "invalid_name_required": "Value passed for name was empty.",
-    "invalid_name_punctuation": "Value passed for name contained only punctuation.",
-    "invalid_name_maxlength": "Value passed for name exceeded max length.",
-    "invalid_name_specials": "Value passed for name contained unallowed special characters or upper case characters.",
-    "invalid_name": "Value passed for name was invalid.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Invalid authentication token.",
     "account_inactive": "Authentication token is for a deleted user or team.",
     "user_is_bot": "This method cannot be called by a bot user.",
-    "user_is_restricted": "This method cannot be called by a restricted user or single channel guest.",
     "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of common decency. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
     "invalid_array_arg": "The method was passed a PHP-style array argument (e.g. with a name like foo[7]). These are never valid with the Slack API.",
     "invalid_charset": "The method was called via a POST request, but the charset specified in the Content-Type header was invalid. Valid charset names are: utf-8 iso-8859-1.",
