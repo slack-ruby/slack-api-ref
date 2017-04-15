@@ -1,7 +1,7 @@
 {
   "name": "team_profile_change",
   "desc": "Team profile fields have been updated.",
-  "long_desc": "My Slack API Start here App features Messages APIs Slack App Directory Authentication Keep in touch Community Compatibility: RTM   The team_profile_change event is sent to all connections for a team when a Team Admin updates the field definitions in the team profile. Only the modified field definitions are included in the payload. Where appropriate, clients should update to reflect new changes immediately.",
+  "long_desc": "My Slack API Start here App features Messages APIs Slack App Directory Authentication Keep in touch Community Team profile fields have been updated  \t\t\t\tCompatibility:\t\t\t\t\t\t\t\t\tRTM \t\t\t\t\t\t\t\t\t\t\t The team_profile_change event is sent to all connections for a team when a Team Admin updates the field definitions in the team profile. Only the modified field definitions are included in the payload. Where appropriate, clients should update to reflect new changes immediately.",
   "required_scope": "RTM",
   "example": {
     "type": "team_profile_change",

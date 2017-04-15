@@ -1,7 +1,7 @@
 {
   "name": "file_change",
   "desc": "A file was changed.",
-  "long_desc": "The file_change event is sent when any property of a file is changed. It is sent to all connected clients for all users that have permission to see the file. The file property is a file object containing information about the file.",
+  "long_desc": "My Slack API Start here App features Messages APIs Slack App Directory Authentication Keep in touch Community A file was changed  \t\t\t\tCompatibility:\t\t\t\t\t\t\t\t\tRTM \t\t\t\t\t\t\t\t\t\t\t\t\tEvents API \t\t\t\t\t\t\t  \t\t\t\t\tScopes:\t\t\t\t\tfiles:read \t\t\t\t The file_change event is sent when any property of a file is changed. It is sent to all connected clients for all users that have permission to see the file. The file property is a file object containing information about the file.",
   "required_scope": "RTM",
   "example": {
     "type": "file_change",

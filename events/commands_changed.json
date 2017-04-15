@@ -1,7 +1,7 @@
 {
   "name": "commands_changed",
   "desc": "A team slash command has been added or changed.",
-  "long_desc": "My Slack API Start here App features Messages APIs Slack App Directory Authentication Keep in touch Community Compatibility: RTM   The commands_changed event is sent to all connections for a team when a slash command for that team is added, removed or changed. This functionality is only used by our web client. The other APIs required to support slash command metadata are currently unstable. Until they are released other clients should ignore this event.",
+  "long_desc": "My Slack API Start here App features Messages APIs Slack App Directory Authentication Keep in touch Community A team slash command has been added or changed  \t\t\t\tCompatibility:\t\t\t\t\t\t\t\t\tRTM \t\t\t\t\t\t\t\t\t\t\t The commands_changed event is sent to all connections for a team when a slash command for that team is added, removed or changed. This functionality is only used by our web client. The other APIs required to support slash command metadata are currently unstable. Until they are released other clients should ignore this event.",
   "required_scope": "RTM",
   "example": {
     "type": "commands_changed",

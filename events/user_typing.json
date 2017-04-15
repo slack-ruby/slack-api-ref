@@ -1,7 +1,7 @@
 {
   "name": "user_typing",
   "desc": "A channel member is typing a message.",
-  "long_desc": "My Slack API Start here App features Messages APIs Slack App Directory Authentication Keep in touch Community Compatibility: RTM   The user_typing event is sent to all members of a channel when a user is typing a message in that channel.",
+  "long_desc": "My Slack API Start here App features Messages APIs Slack App Directory Authentication Keep in touch Community A channel member is typing a message  \t\t\t\tCompatibility:\t\t\t\t\t\t\t\t\tRTM \t\t\t\t\t\t\t\t\t\t\t The user_typing event is sent to all members of a channel when a user is typing a message in that channel.",
   "required_scope": "RTM",
   "example": {
     "type": "user_typing",

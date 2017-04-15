@@ -1,7 +1,7 @@
 {
   "name": "subteam_updated",
   "desc": "An existing User Group has been updated or its members changed.",
-  "long_desc": "The subteam_updated event is sent to all connections for a team when an existing User Group is updated. This event is triggered for changes to the User Group information (name, description, or handle) as well as the members of the group. Clients can use this to update their local list of groups and group members. The users field is truncated at 500, however the user_count field will still show the actual count. This event type may also arise when a subteam has been disabled.",
+  "long_desc": "My Slack API Start here App features Messages APIs Slack App Directory Authentication Keep in touch Community An existing User Group has been updated or its members changed  \t\t\t\tCompatibility:\t\t\t\t\t\t\t\t\tRTM \t\t\t\t\t\t\t\t\t\t\t\t\tEvents API \t\t\t\t\t\t\t  \t\t\t\t\tScopes:\t\t\t\t\tusergroups:read \t\t\t\t The subteam_updated event is sent to all connections for a team when an existing User Group is updated. This event is triggered for changes to the User Group information (name, description, or handle) as well as the members of the group. Clients can use this to update their local list of groups and group members. The users field is truncated at 500, however the user_count field will still show the actual count. This event type may also arise when a subteam has been disabled.",
   "required_scope": "RTM",
   "example": {
     "type": "subteam_updated",

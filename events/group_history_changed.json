@@ -1,7 +1,7 @@
 {
   "name": "group_history_changed",
   "desc": "Bulk updates were made to a private channel's history.",
-  "long_desc": "A group_history_changed event is sent to all clients in a private channel when bulk changes have occurred to that group's history. When clients receive this message they should reload chat history for the private channel if they have any cached messages before latest.",
+  "long_desc": "My Slack API Start here App features Messages APIs Slack App Directory Authentication Keep in touch Community Bulk updates were made to a private channel's history  \t\t\t\tCompatibility:\t\t\t\t\t\t\t\t\tRTM \t\t\t\t\t\t\t\t\t\t\t\t\tEvents API \t\t\t\t\t\t\t  \t\t\t\t\tScopes:\t\t\t\t\tgroups:history \t\t\t\t A group_history_changed event is sent to all clients in a private channel when bulk changes have occurred to that group's history. When clients receive this message they should reload chat history for the private channel if they have any cached messages before latest.",
   "required_scope": "RTM",
   "example": {
     "type": "group_history_changed",

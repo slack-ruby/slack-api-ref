@@ -1,6 +1,6 @@
 {
   "name": "reaction_added",
   "desc": "A team member has added an emoji reaction to an item.",
-  "long_desc": "When a reaction is added to an item the reaction_added event is sent to all connected clients for users who can see the content that was reacted to. The user field indicates the ID of the user who performed this event. The item_user field represents the ID of the user that created the original item that has been reacted to. Embedded item nodes are more lightweight than the structures you'll find in reactions.list. Here are some examples: Message: File: File Comment:",
+  "long_desc": "My Slack API Start here App features Messages APIs Slack App Directory Authentication Keep in touch Community A team member has added an emoji reaction to an item  \t\t\t\tCompatibility:\t\t\t\t\t\t\t\t\tRTM \t\t\t\t\t\t\t\t\t\t\t\t\tEvents API \t\t\t\t\t\t\t  \t\t\t\t\tScopes:\t\t\t\t\treactions:read \t\t\t\t When a reaction is added to an item the reaction_added event is sent to all connected clients for users who can see the content that was reacted to. The user field indicates the ID of the user who performed this event. The item_user field represents the ID of the user that created the original item that has been reacted to. Embedded item nodes are more lightweight than the structures you'll find in reactions.list. Here are some examples: Message: File: File Comment:",
   "required_scope": "RTM"
 }

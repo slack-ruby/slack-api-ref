@@ -1,7 +1,7 @@
 {
   "name": "channel_created",
   "desc": "A channel was created.",
-  "long_desc": "The channel_created event is sent to all connections for a team when a new team channel is created. Clients can use this to update their local cache of non-joined channels.",
+  "long_desc": "My Slack API Start here App features Messages APIs Slack App Directory Authentication Keep in touch Community A channel was created  \t\t\t\tCompatibility:\t\t\t\t\t\t\t\t\tRTM \t\t\t\t\t\t\t\t\t\t\t\t\tEvents API \t\t\t\t\t\t\t  \t\t\t\t\tScopes:\t\t\t\t\tchannels:read \t\t\t\t The channel_created event is sent to all connections for a team when a new team channel is created. Clients can use this to update their local cache of non-joined channels.",
   "required_scope": "RTM",
   "example": {
     "type": "channel_created",

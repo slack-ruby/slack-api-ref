@@ -1,6 +1,6 @@
 {
   "name": "star_added",
   "desc": "A team member has starred an item.",
-  "long_desc": "When an item is starred, the star_added event is sent to all connected clients for the authenticated user who starred the item. See the stars.list method for details of the structure of the item property.",
+  "long_desc": "My Slack API Start here App features Messages APIs Slack App Directory Authentication Keep in touch Community A team member has starred an item  \t\t\t\tCompatibility:\t\t\t\t\t\t\t\t\tRTM \t\t\t\t\t\t\t\t\t\t\t\t\tEvents API \t\t\t\t\t\t\t  \t\t\t\t\tScopes:\t\t\t\t\tstars:read \t\t\t\t When an item is starred, the star_added event is sent to all connected clients for the authenticated user who starred the item. See the stars.list method for details of the structure of the item property.",
   "required_scope": "RTM"
 }

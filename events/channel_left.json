@@ -1,7 +1,7 @@
 {
   "name": "channel_left",
   "desc": "You left a channel.",
-  "long_desc": "My Slack API Start here App features Messages APIs Slack App Directory Authentication Keep in touch Community Compatibility: RTM   The channel_left event is sent to all connections for a user when that user leaves a channel. Clients should respond to this message by closing the channel - this means that when a channel is left from client A, it will automatically be closed in client B. In addition to this message, all existing members of the channel will receive a channel_leave message event.",
+  "long_desc": "My Slack API Start here App features Messages APIs Slack App Directory Authentication Keep in touch Community You left a channel  \t\t\t\tCompatibility:\t\t\t\t\t\t\t\t\tRTM \t\t\t\t\t\t\t\t\t\t\t The channel_left event is sent to all connections for a user when that user leaves a channel. Clients should respond to this message by closing the channel - this means that when a channel is left from client A, it will automatically be closed in client B. In addition to this message, all existing members of the channel will receive a channel_leave message event.",
   "required_scope": "RTM",
   "example": {
     "type": "channel_left",
