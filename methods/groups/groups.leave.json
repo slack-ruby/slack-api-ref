@@ -18,8 +18,6 @@
   "errors": {
     "channel_not_found": "Value passed for channel was invalid.",
     "is_archived": "Group has been archived.",
-    "cant_leave_last_channel": "Authenticated user cannot leave the last channel they are in.",
-    "last_member": "Authenticated user is the last member of a group and cannot leave it.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Invalid authentication token.",
     "account_inactive": "Authentication token is for a deleted user or team.",

@@ -29,6 +29,7 @@
     "already_in_channel": "Invited user is already in the channel.",
     "is_archived": "Channel has been archived.",
     "cant_invite": "User cannot be invited to this channel.",
+    "ura_max_channels": "URA is already in the maximum number of channels.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Invalid authentication token.",
     "account_inactive": "Authentication token is for a deleted user or team.",

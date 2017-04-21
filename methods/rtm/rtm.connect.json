@@ -1,30 +1,18 @@
 {
-  "group": "channels",
-  "name": "channels.archive",
-  "desc": "This method archives a channel.",
+  "group": "rtm",
+  "name": "rtm.connect",
+  "desc": "This method begins a Real Time Messaging API session and reserves your application a specific URL with which to connect via websocket.",
   "args": {
-    "channel": {
-      "required": true,
-      "example": "C1234567890",
-      "desc": "Channel to archive.",
-      "type": "channel"
-    }
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true\n}"
+      "{\n    \"ok\": true,\n    \"url\": \"wss:\\/\\/ms9.slack-msgs.com\\/websocket\\/2I5yBpcvk\",\n    \"team\": {\n        \"id\": \"T654321\",\n        \"name\": \"Librarian Society of Soledad\",\n        \"domain\": \"libsocos\",\n        \"enterprise_id\": \"E234567\",\n        \"enterprise_name\": \"Intercontinental Librarian Society\"\n    },\n    \"self\": {\n        \"id\": \"W123456\",\n        \"name\": \"brautigan\"\n    }\n}"
     ]
   },
   "errors": {
-    "channel_not_found": "Value passed for channel was invalid.",
-    "already_archived": "Channel has already been archived.",
-    "cant_archive_general": "You cannot archive the general channel.",
-    "restricted_action": "A team preference prevents the authenticated user from archiving.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Invalid authentication token.",
     "account_inactive": "Authentication token is for a deleted user or team.",
-    "user_is_bot": "This method cannot be called by a bot user.",
-    "user_is_restricted": "This method cannot be called by a restricted user or single channel guest.",
     "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of common decency. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
     "invalid_array_arg": "The method was passed a PHP-style array argument (e.g. with a name like foo[7]). These are never valid with the Slack API.",
     "invalid_charset": "The method was called via a POST request, but the charset specified in the Content-Type header was invalid. Valid charset names are: utf-8 iso-8859-1.",

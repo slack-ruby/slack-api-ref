@@ -1,7 +1,7 @@
 {
   "group": "rtm",
   "name": "rtm.start",
-  "desc": "This method starts a Real Time Messaging API session. Refer to the\nRTM API documentation for full details on how to use the RTM API.",
+  "desc": "This method begins a Real Time Messaging API session and reserves your application a specific URL with which to connect via websocket.",
   "args": {
     "simple_latest": {
       "required": false,
@@ -17,11 +17,16 @@
       "required": false,
       "example": "true",
       "desc": "Returns MPIMs to the client in the API response."
+    },
+    "no_latest": {
+      "required": false,
+      "example": "1",
+      "desc": "Exclude latest timestamps for channels, groups, mpims, and ims."
     }
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true,\n    \"url\": \"wss:\\/\\/ms9.slack-msgs.com\\/websocket\\/7I5yBpcvk\",\n\n    \"self\": {\n        \"id\": \"U023BECGF\",\n        \"name\": \"bobby\",\n        \"prefs\": {\n            …\n        },\n        \"created\": 1402463766,\n        \"manual_presence\": \"active\"\n    },\n    \"team\": {\n        \"id\": \"T024BE7LD\",\n        \"name\": \"Example Team\",\n        \"email_domain\": \"\",\n        \"domain\": \"example\",\n        \"icon\": {\n            …\n        },\n        \"msg_edit_window_mins\": -1,\n        \"over_storage_limit\": false\n        \"prefs\": {\n            …\n        },\n        \"plan\": \"std\"\n    },\n    \"users\": [ … ],\n\n    \"channels\": [ … ],\n    \"groups\": [ … ],\n    \"mpims\": [ … ],\n    \"ims\": [ … ],\n\n    \"bots\": [ … ],\n}"
+      "{\n    \"ok\": true,\n    \"url\": \"wss:\\/\\/ms9.slack-msgs.com\\/websocket\\/7I5yBpcvk\",\n\n    \"self\": {\n        \"id\": \"U023BECGF\",\n        \"name\": \"bobby\",\n        \"prefs\": {\n            ...\n        },\n        \"created\": 1402463766,\n        \"manual_presence\": \"active\"\n    },\n    \"team\": {\n        \"id\": \"T024BE7LD\",\n        \"name\": \"Example Team\",\n        \"email_domain\": \"\",\n        \"domain\": \"example\",\n        \"icon\": {\n            ...\n        },\n        \"msg_edit_window_mins\": -1,\n        \"over_storage_limit\": false\n        \"prefs\": {\n            ...\n        },\n        \"plan\": \"std\"\n    },\n    \"users\": [ ... ],\n\n    \"channels\": [ ... ],\n    \"groups\": [ ... ],\n    \"mpims\": [ ... ],\n    \"ims\": [ ... ],\n\n    \"bots\": [ ... ],\n}"
     ]
   },
   "errors": {
