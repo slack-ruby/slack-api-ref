@@ -21,7 +21,7 @@
     "no_latest": {
       "required": false,
       "example": "1",
-      "desc": "Exclude latest timestamps for channels, groups, mpims, and ims."
+      "desc": "Exclude latest timestamps for channels, groups, mpims, and ims. Automatically sets no_unreads to 1."
     }
   },
   "response": {
