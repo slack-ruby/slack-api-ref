@@ -20,7 +20,7 @@
       "desc": "A file type identifier."
     },
     "filename": {
-      "required": true,
+      "required": false,
       "example": "foo.txt",
       "desc": "Filename of file."
     },

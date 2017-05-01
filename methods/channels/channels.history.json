@@ -1,7 +1,7 @@
 {
   "group": "channels",
   "name": "channels.history",
-  "desc": "This method returns a portion of message events from the specified channel.",
+  "desc": "This method returns a portion of message events from the specified public channel.",
   "args": {
     "channel": {
       "required": true,
