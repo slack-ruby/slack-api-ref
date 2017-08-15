@@ -1,11 +1,6 @@
 {
   "name": "presence_change",
   "desc": "A team member's presence changed.",
-  "long_desc": "My Slack API Start here App features Messages APIs Slack App Directory Authentication Keep in touch Community A team member's presence changed  \t\t\t\tCompatibility:\t\t\t\t\t\t\t\t\tRTM \t\t\t\t\t\t\t\t\t\t\t The presence_change event is sent to all connections for a team when a user changes status. Clients can use this to update their local list of users. If a user updates their presence manually, the manual_presence_change event will also be sent to all connected clients for that user.",
-  "required_scope": "RTM",
-  "example": {
-    "type": "presence_change",
-    "user": "U024BE7LH",
-    "presence": "away"
-  }
+  "long_desc": "My Slack API Start here App features Messages APIs Slack App Directory Authentication Keep in touch Community A team member's presence changed  \t\t\t\tCompatibility:\t\t\t\t\t\t\t\t\tRTM \t\t\t\t\t\t\t\t\t\t\t Single-user presence change event: Multiple-user batch presence change event: The presence_change event is typically sent to all connections for a team when a user changes presence status. Clients can use this to update their local list of users. If a user updates their presence manually, the manual_presence_change event will also be sent to all connected clients for that user. There are two forms of this event. When only one user's presence is being communicated, you'll receive a user field with a single user ID present within. On very large teams, presence events cannot always be sent atomically -- they must be batched for scalable delivery. By passing the batch_presence_aware=true parameter to rtm.start or rtm.connect, you instruct the Slack message server to begin batching your presence messages and sending a users attribute instead, containing an array of users changing to the same status. Sometimes you'll get a single event for a single user but if you use batch_presence_aware=true, that single user event will be single item in the users array. In case you missed that: if you send batch_presence_aware=true then the shape of presence_change events changes. Instead of a string-based user field, you'll get users, an array. If you're writing a library that supports presence_change events, you should be prepared to handle both kinds of presence events.",
+  "required_scope": "RTM"
 }

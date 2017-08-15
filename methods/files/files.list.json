@@ -1,14 +1,8 @@
 {
   "group": "files",
   "name": "files.list",
-  "desc": "This method returns a list of files within the team. It can be filtered and sliced in various ways.",
+  "desc": "Lists & filters team files.",
   "args": {
-    "user": {
-      "required": false,
-      "example": "U1234567890",
-      "desc": "Filter files created by a single user.",
-      "type": "user"
-    },
     "channel": {
       "required": false,
       "example": "C1234567890",
@@ -29,6 +23,12 @@
       "required": false,
       "example": "images",
       "desc": "Filter files by type:\n\nall - All files\nspaces - Posts\nsnippets - Snippets\nimages - Image files\ngdocs - Google docs\nzips - Zip files\npdfs - PDF files\n\n\nYou can pass multiple values in the types argument, like types=spaces,snippets.The default value is all, which does not filter the list.\n."
+    },
+    "user": {
+      "required": false,
+      "example": "W1234567890",
+      "desc": "Filter files created by a single user.",
+      "type": "user"
     }
   },
   "response": {
@@ -43,7 +43,7 @@
     "invalid_auth": "Invalid authentication token.",
     "account_inactive": "Authentication token is for a deleted user or team.",
     "user_is_bot": "This method cannot be called by a bot user.",
-    "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of common decency. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
+    "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
     "invalid_array_arg": "The method was passed a PHP-style array argument (e.g. with a name like foo[7]). These are never valid with the Slack API.",
     "invalid_charset": "The method was called via a POST request, but the charset specified in the Content-Type header was invalid. Valid charset names are: utf-8 iso-8859-1.",
     "invalid_form_data": "The method was called via a POST request with Content-Type application/x-www-form-urlencoded or multipart/form-data, but the form data was either missing or syntactically invalid.",

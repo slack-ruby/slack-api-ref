@@ -1,14 +1,8 @@
 {
   "group": "chat",
   "name": "chat.update",
-  "desc": "This method updates a message in a channel. Though related to chat.postMessage, some parameters of chat.update are handled differently.",
+  "desc": "Updates a message.",
   "args": {
-    "ts": {
-      "required": true,
-      "example": "1405894322.002768",
-      "desc": "Timestamp of the message to be updated.",
-      "type": "timestamp"
-    },
     "channel": {
       "required": true,
       "example": "C1234567890",
@@ -20,30 +14,36 @@
       "example": "Hello world",
       "desc": "New text for the message, using the default formatting rules."
     },
+    "ts": {
+      "required": true,
+      "example": "1405894322.002768",
+      "desc": "Timestamp of the message to be updated.",
+      "type": "timestamp"
+    },
+    "as_user": {
+      "required": false,
+      "example": "true",
+      "desc": "Pass true to update the message as the authed user. Bot users in this context are considered authed users."
+    },
     "attachments": {
       "required": false,
       "example": "[{\"pretext\": \"pre-hello\", \"text\": \"text-world\"}]",
-      "desc": "Structured message attachments."
-    },
-    "parse": {
-      "required": false,
-      "example": "none",
-      "desc": "Change how messages are treated. Defaults to client, unlike chat.postMessage. See below."
+      "desc": "A JSON-based array of structured attachments, presented as a URL-encoded string."
     },
     "link_names": {
       "required": false,
       "example": "true",
       "desc": "Find and link channel names and usernames. Defaults to none. This parameter should be used in conjunction with parse. To set link_names to 1, specify a parse mode of full."
     },
-    "as_user": {
+    "parse": {
       "required": false,
-      "example": "true",
-      "desc": "Pass true to update the message as the authed user. Bot users in this context are considered authed users."
+      "example": "none",
+      "desc": "Change how messages are treated. Defaults to client, unlike chat.postMessage. See below."
     }
   },
   "response": {
     "examples": [
-
+      "{\n        \"ok\": true,\n        \"channel\": \"C024BE91L\",\n        \"ts\": \"1401383885.000061\",\n        \"text\": \"Updated Text\"\n    }"
     ]
   },
   "errors": {
@@ -57,7 +57,7 @@
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Invalid authentication token.",
     "account_inactive": "Authentication token is for a deleted user or team.",
-    "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of common decency. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
+    "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
     "invalid_array_arg": "The method was passed a PHP-style array argument (e.g. with a name like foo[7]). These are never valid with the Slack API.",
     "invalid_charset": "The method was called via a POST request, but the charset specified in the Content-Type header was invalid. Valid charset names are: utf-8 iso-8859-1.",
     "invalid_form_data": "The method was called via a POST request with Content-Type application/x-www-form-urlencoded or multipart/form-data, but the form data was either missing or syntactically invalid.",

@@ -1,8 +1,14 @@
 {
   "group": "reactions",
   "name": "reactions.get",
-  "desc": "This method returns a list of all reactions for a single item (file, file comment, channel message, group message, or direct message).",
+  "desc": "Gets reactions for an item.",
   "args": {
+    "channel": {
+      "required": false,
+      "example": "C1234567890",
+      "desc": "Channel where the message to get reactions for was posted.",
+      "type": "channel"
+    },
     "file": {
       "required": false,
       "example": "F1234567890",
@@ -14,21 +20,15 @@
       "example": "Fc1234567890",
       "desc": "File comment to get reactions for."
     },
-    "channel": {
+    "full": {
       "required": false,
-      "example": "C1234567890",
-      "desc": "Channel where the message to get reactions for was posted.",
-      "type": "channel"
+      "example": "true",
+      "desc": "If true always return the complete reaction list."
     },
     "timestamp": {
       "required": false,
       "example": "1234567890.123456",
       "desc": "Timestamp of the message to get reactions for."
-    },
-    "full": {
-      "required": false,
-      "example": "true",
-      "desc": "If true always return the complete reaction list."
     }
   },
   "response": {
@@ -45,7 +45,7 @@
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Invalid authentication token.",
     "account_inactive": "Authentication token is for a deleted user or team.",
-    "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of common decency. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
+    "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
     "invalid_array_arg": "The method was passed a PHP-style array argument (e.g. with a name like foo[7]). These are never valid with the Slack API.",
     "invalid_charset": "The method was called via a POST request, but the charset specified in the Content-Type header was invalid. Valid charset names are: utf-8 iso-8859-1.",
     "invalid_form_data": "The method was called via a POST request with Content-Type application/x-www-form-urlencoded or multipart/form-data, but the form data was either missing or syntactically invalid.",

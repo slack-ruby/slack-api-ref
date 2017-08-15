@@ -12,7 +12,7 @@ module SlackApi
         json_hash[:desc] = desc if desc
         record(file_name: 'groups/' + id + '.json', json: JSON.pretty_generate(json_hash))
       end
-      page.search('.card a[href^="/methods"]').each do |a|
+      page.search('table a[href^="/methods"]').each do |a|
         href = a.attr('href')
         method_name = href.split('/').last
         method_group = method_name.split('.').first

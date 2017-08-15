@@ -1,17 +1,12 @@
 {
   "group": "rtm",
   "name": "rtm.start",
-  "desc": "This method begins a Real Time Messaging API session and reserves your application a specific URL with which to connect via websocket.",
+  "desc": "Starts a Real Time Messaging session.",
   "args": {
-    "simple_latest": {
+    "batch_presence_aware": {
       "required": false,
-      "example": "true",
-      "desc": "Return timestamp only for latest message object of each channel (improves performance)."
-    },
-    "no_unreads": {
-      "required": false,
-      "example": "true",
-      "desc": "Skip unread counts for each channel (improves performance)."
+      "example": "1",
+      "desc": "Group presence change notices as presence_change_batch events when possible. See batching."
     },
     "mpim_aware": {
       "required": false,
@@ -22,6 +17,21 @@
       "required": false,
       "example": "1",
       "desc": "Exclude latest timestamps for channels, groups, mpims, and ims. Automatically sets no_unreads to 1."
+    },
+    "no_unreads": {
+      "required": false,
+      "example": "true",
+      "desc": "Skip unread counts for each channel (improves performance)."
+    },
+    "presence_sub": {
+      "required": false,
+      "example": "true",
+      "desc": "Only deliver presence events when requested by subscription. See presence subscriptions."
+    },
+    "simple_latest": {
+      "required": false,
+      "example": "true",
+      "desc": "Return timestamp only for latest message object of each channel (improves performance)."
     }
   },
   "response": {
@@ -34,7 +44,7 @@
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Invalid authentication token.",
     "account_inactive": "Authentication token is for a deleted user or team.",
-    "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of common decency. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
+    "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
     "invalid_array_arg": "The method was passed a PHP-style array argument (e.g. with a name like foo[7]). These are never valid with the Slack API.",
     "invalid_charset": "The method was called via a POST request, but the charset specified in the Content-Type header was invalid. Valid charset names are: utf-8 iso-8859-1.",
     "invalid_form_data": "The method was called via a POST request with Content-Type application/x-www-form-urlencoded or multipart/form-data, but the form data was either missing or syntactically invalid.",

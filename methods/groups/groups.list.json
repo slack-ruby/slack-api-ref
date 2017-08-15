@@ -1,12 +1,17 @@
 {
   "group": "groups",
   "name": "groups.list",
-  "desc": "This method returns a list of private channels in the team that the caller is in and archived groups that the caller was in.\nThe list of (non-deactivated) members in each private channel is also returned.",
+  "desc": "Lists private channels that the calling user has access to.",
   "args": {
     "exclude_archived": {
       "required": false,
       "example": "true",
       "desc": "Don't return archived private channels."
+    },
+    "exclude_members": {
+      "required": false,
+      "example": "true",
+      "desc": "Exlude the members from each group."
     }
   },
   "response": {
@@ -18,7 +23,7 @@
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Invalid authentication token.",
     "account_inactive": "Authentication token is for a deleted user or team.",
-    "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of common decency. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
+    "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
     "invalid_array_arg": "The method was passed a PHP-style array argument (e.g. with a name like foo[7]). These are never valid with the Slack API.",
     "invalid_charset": "The method was called via a POST request, but the charset specified in the Content-Type header was invalid. Valid charset names are: utf-8 iso-8859-1.",
     "invalid_form_data": "The method was called via a POST request with Content-Type application/x-www-form-urlencoded or multipart/form-data, but the form data was either missing or syntactically invalid.",

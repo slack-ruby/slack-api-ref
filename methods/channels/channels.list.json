@@ -1,7 +1,7 @@
 {
   "group": "channels",
   "name": "channels.list",
-  "desc": "This method returns a list of all channels in the team. This includes channels the caller is in, channels they are not currently in, and archived channels but does not include private channels. The number of (non-deactivated) members in each channel is also returned.",
+  "desc": "Lists all channels in a Slack team.",
   "args": {
     "exclude_archived": {
       "required": false,
@@ -20,10 +20,12 @@
     ]
   },
   "errors": {
+    "invalid_cursor": "Value passed for cursor was not valid or is no longer valid.",
+    "pagination_not_available": "Pagination currently does not work for teams on an enterprise.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Invalid authentication token.",
     "account_inactive": "Authentication token is for a deleted user or team.",
-    "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of common decency. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
+    "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
     "invalid_array_arg": "The method was passed a PHP-style array argument (e.g. with a name like foo[7]). These are never valid with the Slack API.",
     "invalid_charset": "The method was called via a POST request, but the charset specified in the Content-Type header was invalid. Valid charset names are: utf-8 iso-8859-1.",
     "invalid_form_data": "The method was called via a POST request with Content-Type application/x-www-form-urlencoded or multipart/form-data, but the form data was either missing or syntactically invalid.",

@@ -1,43 +1,43 @@
 {
   "group": "files",
   "name": "files.upload",
-  "desc": "This method allows you to create or upload an existing file.",
+  "desc": "Uploads or creates a file.",
   "args": {
-    "file": {
+    "channels": {
       "required": false,
-      "example": "...",
-      "desc": "File contents via multipart/form-data. If omitting this parameter, you must submit content.",
-      "type": "file"
+      "example": "C1234567890,C2345678901,C3456789012",
+      "desc": "Comma-separated list of channel names or IDs where the file will be shared."
     },
     "content": {
       "required": false,
       "example": "...",
       "desc": "File contents via a POST variable. If omitting this parameter, you must provide a file."
     },
-    "filetype": {
+    "file": {
       "required": false,
-      "example": "php",
-      "desc": "A file type identifier."
+      "example": "...",
+      "desc": "File contents via multipart/form-data. If omitting this parameter, you must submit content.",
+      "type": "file"
     },
     "filename": {
       "required": false,
       "example": "foo.txt",
       "desc": "Filename of file."
     },
-    "title": {
+    "filetype": {
       "required": false,
-      "example": "My File",
-      "desc": "Title of file."
+      "example": "php",
+      "desc": "A file type identifier."
     },
     "initial_comment": {
       "required": false,
       "example": "Best!",
       "desc": "Initial comment to add to file."
     },
-    "channels": {
+    "title": {
       "required": false,
-      "example": "C1234567890,C2345678901,C3456789012",
-      "desc": "Comma-separated list of channel names or IDs where the file will be shared."
+      "example": "My File",
+      "desc": "Title of file."
     }
   },
   "response": {
@@ -53,7 +53,7 @@
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Invalid authentication token.",
     "account_inactive": "Authentication token is for a deleted user or team.",
-    "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of common decency. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
+    "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
     "invalid_array_arg": "The method was passed a PHP-style array argument (e.g. with a name like foo[7]). These are never valid with the Slack API.",
     "invalid_charset": "The method was called via a POST request, but the charset specified in the Content-Type header was invalid. Valid charset names are: utf-8 iso-8859-1.",
     "invalid_form_data": "The method was called via a POST request with Content-Type application/x-www-form-urlencoded or multipart/form-data, but the form data was either missing or syntactically invalid.",
