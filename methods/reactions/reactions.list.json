@@ -1,18 +1,18 @@
 {
   "group": "reactions",
   "name": "reactions.list",
-  "desc": "This method returns a list of all items (file, file comment, channel message, group message, or direct message) reacted to by a user.",
+  "desc": "Lists reactions made by a user.",
   "args": {
-    "user": {
-      "required": false,
-      "example": "U1234567890",
-      "desc": "Show reactions made by this user. Defaults to the authed user.",
-      "type": "user"
-    },
     "full": {
       "required": false,
       "example": "true",
       "desc": "If true always return the complete reaction list."
+    },
+    "user": {
+      "required": false,
+      "example": "W1234567890",
+      "desc": "Show reactions made by this user. Defaults to the authed user.",
+      "type": "user"
     }
   },
   "response": {
@@ -25,7 +25,7 @@
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Invalid authentication token.",
     "account_inactive": "Authentication token is for a deleted user or team.",
-    "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of common decency. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
+    "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
     "invalid_array_arg": "The method was passed a PHP-style array argument (e.g. with a name like foo[7]). These are never valid with the Slack API.",
     "invalid_charset": "The method was called via a POST request, but the charset specified in the Content-Type header was invalid. Valid charset names are: utf-8 iso-8859-1.",
     "invalid_form_data": "The method was called via a POST request with Content-Type application/x-www-form-urlencoded or multipart/form-data, but the form data was either missing or syntactically invalid.",

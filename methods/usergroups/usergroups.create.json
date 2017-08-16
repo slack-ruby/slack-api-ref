@@ -1,27 +1,27 @@
 {
   "group": "usergroups",
   "name": "usergroups.create",
-  "desc": "This method is used to create a User Group.",
+  "desc": "Create a User Group",
   "args": {
     "name": {
       "required": true,
       "example": "My Test Team",
       "desc": "A name for the User Group. Must be unique among User Groups."
     },
-    "handle": {
+    "channels": {
       "required": false,
-      "example": "marketing",
-      "desc": "A mention handle. Must be unique among channels, users and User Groups."
+      "example": "C1234567890,C2345678901,C3456789012",
+      "desc": "A comma separated string of encoded channel IDs for which the User Group uses as a default."
     },
     "description": {
       "required": false,
       "example": " ",
       "desc": "A short description of the User Group."
     },
-    "channels": {
+    "handle": {
       "required": false,
-      "example": "C1234567890,C2345678901,C3456789012",
-      "desc": "A comma separated string of encoded channel IDs for which the User Group uses as a default."
+      "example": "marketing",
+      "desc": "A mention handle. Must be unique among channels, users and User Groups."
     },
     "include_count": {
       "required": false,
@@ -40,7 +40,7 @@
     "account_inactive": "Authentication token is for a deleted user or team.",
     "user_is_bot": "This method cannot be called by a bot user.",
     "user_is_restricted": "This method cannot be called by a restricted user or single channel guest.",
-    "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of common decency. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
+    "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
     "invalid_array_arg": "The method was passed a PHP-style array argument (e.g. with a name like foo[7]). These are never valid with the Slack API.",
     "invalid_charset": "The method was called via a POST request, but the charset specified in the Content-Type header was invalid. Valid charset names are: utf-8 iso-8859-1.",
     "invalid_form_data": "The method was called via a POST request with Content-Type application/x-www-form-urlencoded or multipart/form-data, but the form data was either missing or syntactically invalid.",

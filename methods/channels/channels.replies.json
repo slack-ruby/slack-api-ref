@@ -1,7 +1,7 @@
 {
   "group": "channels",
   "name": "channels.replies",
-  "desc": "This method returns an entire thread (a message plus all the messages in reply to it).",
+  "desc": "Retrieve a thread of messages posted to a channel",
   "args": {
     "channel": {
       "required": true,
@@ -17,7 +17,7 @@
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true,\n    \"messages\": [\n        {\n            \"type\": \"message\",\n            \"ts\": \"1358546515.000008\",\n            \"user\": \"U2147483896\",\n            \"text\": \"Hello\"\n        },\n        {\n            \"type\": \"message\",\n            \"ts\": \"1358546515.000007\",\n            \"user\": \"U2147483896\",\n            \"text\": \"World\",\n            \"is_starred\": true,\n        },\n        {\n            \"type\": \"something_else\",\n            \"ts\": \"1358546515.000007\",\n            \"wibblr\": true\n        }\n    ],\n    \"thread_info\": [\n        \"complete\": true,\n        \"count\": 3,\n    ]\n}"
+      "{\n    \"ok\": true,\n    \"messages\": [\n        {\n            \"type\": \"message\",\n            \"ts\": \"1358546515.000008\",\n            \"user\": \"U2147483896\",\n            \"text\": \"Hello\"\n        },\n        {\n            \"type\": \"message\",\n            \"ts\": \"1358546515.000007\",\n            \"user\": \"U2147483896\",\n            \"text\": \"World\",\n            \"is_starred\": true,\n        },\n        {\n            \"type\": \"something_else\",\n            \"ts\": \"1358546515.000007\",\n            \"wibblr\": true\n        }\n    ]\n}"
     ]
   },
   "errors": {
@@ -26,7 +26,7 @@
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Invalid authentication token.",
     "account_inactive": "Authentication token is for a deleted user or team.",
-    "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of common decency. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
+    "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
     "invalid_array_arg": "The method was passed a PHP-style array argument (e.g. with a name like foo[7]). These are never valid with the Slack API.",
     "invalid_charset": "The method was called via a POST request, but the charset specified in the Content-Type header was invalid. Valid charset names are: utf-8 iso-8859-1.",
     "invalid_form_data": "The method was called via a POST request with Content-Type application/x-www-form-urlencoded or multipart/form-data, but the form data was either missing or syntactically invalid.",

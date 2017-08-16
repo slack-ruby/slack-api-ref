@@ -1,23 +1,23 @@
 {
   "group": "users",
   "name": "users.profile.set",
-  "desc": "Use this method to set a user's profile information, including name, email, current status, and other attributes.",
+  "desc": "Set the profile information for a user.",
   "args": {
-    "user": {
+    "name": {
       "required": false,
-      "example": "U1234567890",
-      "desc": "ID of user to change. This argument may only be specified by team admins on paid teams.",
-      "type": "user"
+      "example": "first_name",
+      "desc": "Name of a single key to set. Usable only if profile is not passed."
     },
     "profile": {
       "required": false,
       "example": "{ first_name: \"John\", ... }",
       "desc": "Collection of key:value pairs presented as a URL-encoded JSON hash."
     },
-    "name": {
+    "user": {
       "required": false,
-      "example": "first_name",
-      "desc": "Name of a single key to set. Usable only if profile is not passed."
+      "example": "W1234567890",
+      "desc": "ID of user to change. This argument may only be specified by team admins on paid teams.",
+      "type": "user"
     },
     "value": {
       "required": false,
@@ -41,7 +41,7 @@
     "invalid_auth": "Invalid authentication token.",
     "account_inactive": "Authentication token is for a deleted user or team.",
     "user_is_bot": "This method cannot be called by a bot user.",
-    "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of common decency. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
+    "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
     "invalid_array_arg": "The method was passed a PHP-style array argument (e.g. with a name like foo[7]). These are never valid with the Slack API.",
     "invalid_charset": "The method was called via a POST request, but the charset specified in the Content-Type header was invalid. Valid charset names are: utf-8 iso-8859-1.",
     "invalid_form_data": "The method was called via a POST request with Content-Type application/x-www-form-urlencoded or multipart/form-data, but the form data was either missing or syntactically invalid.",

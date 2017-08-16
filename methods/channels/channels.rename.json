@@ -1,7 +1,7 @@
 {
   "group": "channels",
   "name": "channels.rename",
-  "desc": "This method renames a team channel.",
+  "desc": "Renames a channel.",
   "args": {
     "channel": {
       "required": true,
@@ -22,7 +22,7 @@
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true,\n    \"channel\": {\n        \"id\": \"C024BE91L\",\n        \"is_channel\": true,\n        \"name\": \"new_name\",\n        \"created\": 1360782804\n    }\n}"
+      "{\n    \"ok\": true,\n    \"channel\": {\n        \"id\": \"C024BE91L\",\n        \"name\": \"fun\",\n\n        \"created\": 1360782804,\n        \"creator\": \"U024BE7LH\",\n\n        \"is_archived\": false,\n        \"is_general\": false,\n        \"is_member\": true,\n        \"is_starred\": true,\n\n        \"topic\": { ... },\n        \"purpose\": { ... },\n\n        \"last_read\": \"1401383885.000061\",\n        \"unread_count\": 0,\n        \"unread_count_display\": 0\n    }\n}"
     ]
   },
   "errors": {
@@ -40,7 +40,7 @@
     "account_inactive": "Authentication token is for a deleted user or team.",
     "user_is_bot": "This method cannot be called by a bot user.",
     "user_is_restricted": "This method cannot be called by a restricted user or single channel guest.",
-    "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of common decency. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
+    "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
     "invalid_array_arg": "The method was passed a PHP-style array argument (e.g. with a name like foo[7]). These are never valid with the Slack API.",
     "invalid_charset": "The method was called via a POST request, but the charset specified in the Content-Type header was invalid. Valid charset names are: utf-8 iso-8859-1.",
     "invalid_form_data": "The method was called via a POST request with Content-Type application/x-www-form-urlencoded or multipart/form-data, but the form data was either missing or syntactically invalid.",

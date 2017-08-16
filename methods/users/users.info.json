@@ -1,18 +1,18 @@
 {
   "group": "users",
   "name": "users.info",
-  "desc": "This method returns information about a team member.",
+  "desc": "Gets information about a user.",
   "args": {
     "user": {
       "required": true,
-      "example": "U1234567890",
+      "example": "W1234567890",
       "desc": "User to get info on.",
       "type": "user"
     }
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true,\n    \"user\": {\n        \"id\": \"U023BECGF\",\n        \"name\": \"bobby\",\n        \"deleted\": false,\n        \"color\": \"9f69e7\",\n        \"profile\": {\n            \"avatar_hash\": \"ge3b51ca72de\",\n            \"current_status\": \":mountain_railway: riding a train\",\n            \"first_name\": \"Bobby\",\n            \"last_name\": \"Tables\",\n            \"real_name\": \"Bobby Tables\",\n            \"email\": \"bobby@slack.com\",\n            \"skype\": \"my-skype-name\",\n            \"phone\": \"+1 (123) 456 7890\",\n            \"image_24\": \"https:\\/\\/...\",\n            \"image_32\": \"https:\\/\\/...\",\n            \"image_48\": \"https:\\/\\/...\",\n            \"image_72\": \"https:\\/\\/...\",\n            \"image_192\": \"https:\\/\\/...\"\n        },\n        \"is_admin\": true,\n        \"is_owner\": true,\n        \"updated\": 1490054400,\n        \"has_2fa\": true\n    }\n}"
+      "{\n    \"ok\": true,\n    \"user\": {\n        \"id\": \"U023BECGF\",\n        \"name\": \"bobby\",\n        \"deleted\": false,\n        \"color\": \"9f69e7\",\n        \"profile\": {\n            \"avatar_hash\": \"ge3b51ca72de\",\n            \"current_status\": \":mountain_railway: riding a train\",\n            \"first_name\": \"Bobby\",\n            \"last_name\": \"Tables\",\n            \"real_name\": \"Bobby Tables\",\n            \"tz\": \"America\\/Los_Angeles\",\n            \"tz_label\": \"Pacific Daylight Time\",\n            \"tz_offset\": -25200,\n            \"email\": \"bobby@slack.com\",\n            \"skype\": \"my-skype-name\",\n            \"phone\": \"+1 (123) 456 7890\",\n            \"image_24\": \"https:\\/\\/...\",\n            \"image_32\": \"https:\\/\\/...\",\n            \"image_48\": \"https:\\/\\/...\",\n            \"image_72\": \"https:\\/\\/...\",\n            \"image_192\": \"https:\\/\\/...\"\n        },\n        \"is_admin\": true,\n        \"is_owner\": true,\n        \"updated\": 1490054400,\n        \"has_2fa\": true\n    }\n}"
     ]
   },
   "errors": {
@@ -21,7 +21,7 @@
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Invalid authentication token.",
     "account_inactive": "Authentication token is for a deleted user or team.",
-    "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of common decency. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
+    "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
     "invalid_array_arg": "The method was passed a PHP-style array argument (e.g. with a name like foo[7]). These are never valid with the Slack API.",
     "invalid_charset": "The method was called via a POST request, but the charset specified in the Content-Type header was invalid. Valid charset names are: utf-8 iso-8859-1.",
     "invalid_form_data": "The method was called via a POST request with Content-Type application/x-www-form-urlencoded or multipart/form-data, but the form data was either missing or syntactically invalid.",

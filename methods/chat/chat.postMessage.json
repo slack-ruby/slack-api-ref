@@ -1,7 +1,7 @@
 {
   "group": "chat",
   "name": "chat.postMessage",
-  "desc": "This method posts a message to a public channel, private channel, or direct message/IM channel.",
+  "desc": "Sends a message to a channel.",
   "args": {
     "channel": {
       "required": true,
@@ -14,20 +14,45 @@
       "example": "Hello world",
       "desc": "Text of the message to send. See below for an explanation of formatting. This field is usually required, unless you're providing only attachments instead."
     },
-    "parse": {
+    "as_user": {
       "required": false,
-      "example": "full",
-      "desc": "Change how messages are treated. Defaults to none. See below."
+      "example": "true",
+      "desc": "Pass true to post the message as the authed user, instead of as a bot. Defaults to false. See authorship below."
+    },
+    "attachments": {
+      "required": false,
+      "example": "[{\"pretext\": \"pre-hello\", \"text\": \"text-world\"}]",
+      "desc": "A JSON-based array of structured attachments, presented as a URL-encoded string."
+    },
+    "icon_emoji": {
+      "required": false,
+      "example": ":chart_with_upwards_trend:",
+      "desc": "Emoji to use as the icon for this message. Overrides icon_url. Must be used in conjunction with as_user set to false, otherwise ignored. See authorship below."
+    },
+    "icon_url": {
+      "required": false,
+      "example": "http://lorempixel.com/48/48",
+      "desc": "URL to an image to use as the icon for this message. Must be used in conjunction with as_user set to false, otherwise ignored. See authorship below."
     },
     "link_names": {
       "required": false,
       "example": "true",
       "desc": "Find and link channel names and usernames."
     },
-    "attachments": {
+    "parse": {
       "required": false,
-      "example": "[{\"pretext\": \"pre-hello\", \"text\": \"text-world\"}]",
-      "desc": "Structured message attachments."
+      "example": "full",
+      "desc": "Change how messages are treated. Defaults to none. See below."
+    },
+    "reply_broadcast": {
+      "required": false,
+      "example": "true",
+      "desc": "Used in conjunction with thread_ts and indicates whether reply should be made visible to everyone in the channel or conversation. Defaults to false."
+    },
+    "thread_ts": {
+      "required": false,
+      "example": "1234567890.123456",
+      "desc": "Provide another message's ts value to make this message a reply. Avoid using a reply's ts value; use its parent instead."
     },
     "unfurl_links": {
       "required": false,
@@ -43,31 +68,6 @@
       "required": false,
       "example": "My Bot",
       "desc": "Set your bot's user name. Must be used in conjunction with as_user set to false, otherwise ignored. See authorship below."
-    },
-    "as_user": {
-      "required": false,
-      "example": "true",
-      "desc": "Pass true to post the message as the authed user, instead of as a bot. Defaults to false. See authorship below."
-    },
-    "icon_url": {
-      "required": false,
-      "example": "http://lorempixel.com/48/48",
-      "desc": "URL to an image to use as the icon for this message. Must be used in conjunction with as_user set to false, otherwise ignored. See authorship below."
-    },
-    "icon_emoji": {
-      "required": false,
-      "example": ":chart_with_upwards_trend:",
-      "desc": "Emoji to use as the icon for this message. Overrides icon_url. Must be used in conjunction with as_user set to false, otherwise ignored. See authorship below."
-    },
-    "thread_ts": {
-      "required": false,
-      "example": "1234567890.123456",
-      "desc": "Provide another message's ts value to make this message a reply. Avoid using a reply's ts value; use its parent instead."
-    },
-    "reply_broadcast": {
-      "required": false,
-      "example": "true",
-      "desc": "Used in conjunction with thread_ts and indicates whether reply should be made visible to everyone in the channel or conversation. Defaults to false."
     }
   },
   "response": {
@@ -86,7 +86,7 @@
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Invalid authentication token.",
     "account_inactive": "Authentication token is for a deleted user or team.",
-    "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of common decency. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
+    "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
     "invalid_array_arg": "The method was passed a PHP-style array argument (e.g. with a name like foo[7]). These are never valid with the Slack API.",
     "invalid_charset": "The method was called via a POST request, but the charset specified in the Content-Type header was invalid. Valid charset names are: utf-8 iso-8859-1.",
     "invalid_form_data": "The method was called via a POST request with Content-Type application/x-www-form-urlencoded or multipart/form-data, but the form data was either missing or syntactically invalid.",

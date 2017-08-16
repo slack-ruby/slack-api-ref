@@ -1,8 +1,14 @@
 {
   "group": "stars",
   "name": "stars.remove",
-  "desc": "This method removes a star from an item (message, file, file comment, channel, private group, or DM) on behalf of the authenticated user.\nOne of file, file_comment, channel, or the combination of channel and timestamp must be specified.",
+  "desc": "Removes a star from an item.",
   "args": {
+    "channel": {
+      "required": false,
+      "example": "C1234567890",
+      "desc": "Channel to remove star from, or channel where the message to remove star from was posted (used with timestamp).",
+      "type": "channel"
+    },
     "file": {
       "required": false,
       "example": "F1234567890",
@@ -13,12 +19,6 @@
       "required": false,
       "example": "Fc1234567890",
       "desc": "File comment to remove star from."
-    },
-    "channel": {
-      "required": false,
-      "example": "C1234567890",
-      "desc": "Channel to remove star from, or channel where the message to remove star from was posted (used with timestamp).",
-      "type": "channel"
     },
     "timestamp": {
       "required": false,
@@ -42,7 +42,7 @@
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Invalid authentication token.",
     "account_inactive": "Authentication token is for a deleted user or team.",
-    "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of common decency. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
+    "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
     "invalid_array_arg": "The method was passed a PHP-style array argument (e.g. with a name like foo[7]). These are never valid with the Slack API.",
     "invalid_charset": "The method was called via a POST request, but the charset specified in the Content-Type header was invalid. Valid charset names are: utf-8 iso-8859-1.",
     "invalid_form_data": "The method was called via a POST request with Content-Type application/x-www-form-urlencoded or multipart/form-data, but the form data was either missing or syntactically invalid.",

@@ -1,8 +1,13 @@
 {
   "group": "files",
   "name": "files.comments.edit",
-  "desc": "Edit an existing comment on a file. Only the user who created a comment may make edits. Teams may configure a limited time window during which file comment edits are allowed.",
+  "desc": "Edit an existing file comment.",
   "args": {
+    "comment": {
+      "required": true,
+      "example": "Everyone should take a moment to read this file, seriously.",
+      "desc": "Text of the comment to edit."
+    },
     "file": {
       "required": true,
       "example": "F1234567890",
@@ -13,11 +18,6 @@
       "required": true,
       "example": "Fc1234567890",
       "desc": "The comment to edit."
-    },
-    "comment": {
-      "required": true,
-      "example": "Everyone should take a moment to read this file, seriously.",
-      "desc": "Text of the comment to edit."
     }
   },
   "response": {
@@ -34,7 +34,7 @@
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Invalid authentication token.",
     "account_inactive": "Authentication token is for a deleted user or team.",
-    "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of common decency. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
+    "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
     "invalid_array_arg": "The method was passed a PHP-style array argument (e.g. with a name like foo[7]). These are never valid with the Slack API.",
     "invalid_charset": "The method was called via a POST request, but the charset specified in the Content-Type header was invalid. Valid charset names are: utf-8 iso-8859-1.",
     "invalid_form_data": "The method was called via a POST request with Content-Type application/x-www-form-urlencoded or multipart/form-data, but the form data was either missing or syntactically invalid.",

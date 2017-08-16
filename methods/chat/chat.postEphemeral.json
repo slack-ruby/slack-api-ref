@@ -1,0 +1,68 @@
+{
+  "group": "chat",
+  "name": "chat.postEphemeral",
+  "desc": "Sends an ephemeral message to a user in a channel.",
+  "args": {
+    "channel": {
+      "required": true,
+      "example": "C1234567890",
+      "desc": "Channel, private group, or IM channel to send message to. Can be an encoded ID, or a name.",
+      "type": "channel"
+    },
+    "text": {
+      "required": true,
+      "example": "Hello world",
+      "desc": "Text of the message to send. See below for an explanation of formatting. This field is usually required, unless you're providing only attachments instead."
+    },
+    "user": {
+      "required": true,
+      "example": "U0BPQUNTA",
+      "desc": "id of the user who will receive the ephemeral message. The user should be in the channel specified by the channel argument.",
+      "type": "user"
+    },
+    "as_user": {
+      "required": false,
+      "example": "true",
+      "desc": "Pass true to post the message as the authed bot. Defaults to false."
+    },
+    "attachments": {
+      "required": false,
+      "example": "[{\"pretext\": \"pre-hello\", \"text\": \"text-world\"}]",
+      "desc": "A JSON-based array of structured attachments, presented as a URL-encoded string."
+    },
+    "link_names": {
+      "required": false,
+      "example": "true",
+      "desc": "Find and link channel names and usernames."
+    },
+    "parse": {
+      "required": false,
+      "example": "full",
+      "desc": "Change how messages are treated. Defaults to none. See below."
+    }
+  },
+  "response": {
+    "examples": [
+      "{\n    \"ok\": true,\n    \"message_ts\": \"1502210682.580145\"\n}"
+    ]
+  },
+  "errors": {
+    "channel_not_found": "Value passed for channel was invalid.",
+    "is_archived": "Channel has been archived.",
+    "msg_too_long": "Message text is too long.",
+    "no_text": "No message text provided.",
+    "too_many_attachments": "Too many attachments were provided with this message. A maximum of 100 attachments are allowed on a message.",
+    "user_not_in_channel": "Intended recipient is not in the specified channel.",
+    "not_authed": "No authentication token provided.",
+    "invalid_auth": "Invalid authentication token.",
+    "account_inactive": "Authentication token is for a deleted user or team.",
+    "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
+    "invalid_array_arg": "The method was passed a PHP-style array argument (e.g. with a name like foo[7]). These are never valid with the Slack API.",
+    "invalid_charset": "The method was called via a POST request, but the charset specified in the Content-Type header was invalid. Valid charset names are: utf-8 iso-8859-1.",
+    "invalid_form_data": "The method was called via a POST request with Content-Type application/x-www-form-urlencoded or multipart/form-data, but the form data was either missing or syntactically invalid.",
+    "invalid_post_type": "The method was called via a POST request, but the specified Content-Type was invalid. Valid types are: application/x-www-form-urlencoded multipart/form-data text/plain.",
+    "missing_post_type": "The method was called via a POST request and included a data payload, but the request did not include a Content-Type header.",
+    "team_added_to_org": "The team associated with your request is currently undergoing migration to an Enterprise Organization. Web API and other platform operations will be intermittently unavailable until the transition is complete.",
+    "request_timeout": "The method was called via a POST request, but the POST data was either missing or truncated."
+  }
+}
