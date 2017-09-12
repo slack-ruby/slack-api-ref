@@ -42,7 +42,7 @@
   "errors": {
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Invalid authentication token.",
-    "account_inactive": "Authentication token is for a deleted user or team.",
+    "account_inactive": "Authentication token is for a deleted user or workspace.",
     "user_is_bot": "This method cannot be called by a bot user.",
     "user_is_restricted": "This method cannot be called by a restricted user or single channel guest.",
     "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
@@ -51,7 +51,7 @@
     "invalid_form_data": "The method was called via a POST request with Content-Type application/x-www-form-urlencoded or multipart/form-data, but the form data was either missing or syntactically invalid.",
     "invalid_post_type": "The method was called via a POST request, but the specified Content-Type was invalid. Valid types are: application/x-www-form-urlencoded multipart/form-data text/plain.",
     "missing_post_type": "The method was called via a POST request and included a data payload, but the request did not include a Content-Type header.",
-    "team_added_to_org": "The team associated with your request is currently undergoing migration to an Enterprise Organization. Web API and other platform operations will be intermittently unavailable until the transition is complete.",
+    "team_added_to_org": "The workspace associated with your request is currently undergoing migration to an Enterprise Organization. Web API and other platform operations will be intermittently unavailable until the transition is complete.",
     "request_timeout": "The method was called via a POST request, but the POST data was either missing or truncated."
   }
 }
