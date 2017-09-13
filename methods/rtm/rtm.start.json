@@ -8,6 +8,11 @@
       "example": "1",
       "desc": "Group presence change notices as presence_change_batch events when possible. See batching."
     },
+    "include_locale": {
+      "required": false,
+      "example": "true",
+      "desc": "Set this to true to receive the locale for users and channels. Defaults to false."
+    },
     "mpim_aware": {
       "required": false,
       "example": "true",

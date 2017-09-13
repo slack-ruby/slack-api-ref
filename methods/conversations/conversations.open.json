@@ -1,36 +1,41 @@
 {
-  "group": "im",
-  "name": "im.open",
-  "desc": "Opens a direct message channel.",
+  "group": "conversations",
+  "name": "conversations.open",
+  "desc": "Opens or resumes a direct message or multi-person direct message.",
   "args": {
-    "user": {
-      "required": true,
-      "example": "W1234567890",
-      "desc": "User to open a direct message channel with.",
-      "type": "user"
-    },
-    "include_locale": {
+    "channel": {
       "required": false,
-      "example": "true",
-      "desc": "Set this to true to receive the locale for this im. Defaults to false."
+      "example": "G1234567890",
+      "desc": "Resume a conversation by supplying an im or mpim's ID. Or provide the users field instead.",
+      "type": "channel"
     },
     "return_im": {
       "required": false,
       "example": "true",
       "desc": "Boolean, indicates you want the full IM channel definition in the response."
+    },
+    "users": {
+      "required": false,
+      "example": "W1234567890,U2345678901,U3456789012",
+      "desc": "Comma separated lists of users. If only one user is included, this creates a 1:1 DM.  The ordering of the users is preserved whenever a multi-person direct message is returned. Supply a channel when not supplying users."
     }
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true,\n    \"channel\": {\n        \"id\": \"D024BFF1M\"\n    }\n}",
-      "{\n    \"ok\": true,\n    \"no_op\": true,\n    \"already_open\": true,\n    \"channel\": {\n        \"id\": \"D024BFF1M\"\n    }\n}",
-      "{\n    \"ok\": true,\n    \"channel\": {\n        \"id\":\"D024BE91L\",\n        \"is_im\":true,\n        \"user\":\"U024BE7LH\",\n        \"created\":1434412652,\n        \"last_read\":\"1442525627.000002\",\n        \"latest\":{\n            \"type\":\"message\",\n            \"user\":\"U024BE7LH\",\n            \"text\":\"hello\",\n            \"ts\":\"1442525627.000002\"\n        },\n        \"unread_count\":0,\n        \"unread_count_display\":0,\n        \"is_open\":true\n    }\n}"
+      "{\n    \"ok\": true,\n    \"channel\": {\n        \"id\": \"D069C7QFK\",\n    }\n}",
+      "{\n    \"ok\": true,\n    \"no_op\": true,\n    \"already_open\": true,\n    \"channel\": {\n        \"id\": \"D069C7QFK\",\n        \"created\": 1460147748,\n        \"is_im\": true,\n        \"is_org_shared\": false,\n        \"user\": \"U069C7QF3\",\n        \"last_read\": \"0000000000.000000\",\n        \"latest\": null,\n        \"unread_count\": 0,\n        \"unread_count_display\": 0,\n        \"is_open\": true,\n        \"priority\": 0\n    }\n}"
     ]
   },
   "errors": {
-    "user_not_found": "Value passed for user was invalid.",
+    "channel_not_found": "Value passed for channel was invalid.",
+    "user_not_found": "Value(s) passed for users was invalid.",
     "user_not_visible": "The calling user is restricted from seeing the requested user.",
-    "user_disabled": "The user has been disabled.",
+    "user_disabled": "A specified user has been disabled.",
+    "users_list_not_supplied": "Missing users in request.",
+    "not_enough_users": "Needs at least 2 users to open.",
+    "too_many_users": "Needs at most 8 users to open.",
+    "method_not_supported_for_channel_type": "This type of conversation cannot be used with this method.",
+    "missing_scope": "The calling token is not granted the necessary scopes to complete this operation.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Invalid authentication token.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",

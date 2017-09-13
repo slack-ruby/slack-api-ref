@@ -1,23 +1,33 @@
 {
-  "group": "groups",
-  "name": "groups.close",
-  "desc": "Closes a private channel.",
+  "group": "conversations",
+  "name": "conversations.setPurpose",
+  "desc": "Sets the purpose for a conversation.",
   "args": {
     "channel": {
       "required": true,
-      "example": "G1234567890",
-      "desc": "Private channel to close.",
-      "type": "group"
+      "example": "C1234567890",
+      "desc": "Conversation to set the purpose of.",
+      "type": "channel"
+    },
+    "purpose": {
+      "required": true,
+      "example": "My More Special Purpose",
+      "desc": "A new, specialer purpose."
     }
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true\n}",
-      "{\n    \"ok\": true,\n    \"no_op\": true,\n    \"already_closed\": true\n}"
+      "{\n    \"ok\": true,\n    \"purpose\": \"I didn't set this purpose on purpose!\"\n}"
     ]
   },
   "errors": {
     "channel_not_found": "Value passed for channel was invalid.",
+    "not_in_channel": "Authenticated user is not in the channel.",
+    "is_archived": "Channel has been archived.",
+    "too_long": "Purpose was longer than 250 characters.",
+    "user_is_restricted": "This method cannot be called by a restricted user or single channel guest.",
+    "method_not_supported_for_channel_type": "This type of conversation cannot be used with this method.",
+    "missing_scope": "The calling token is not granted the necessary scopes to complete this operation.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Invalid authentication token.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",

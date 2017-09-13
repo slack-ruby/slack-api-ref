@@ -1,36 +1,28 @@
 {
-  "group": "channels",
-  "name": "channels.list",
-  "desc": "Lists all channels in a Slack team.",
+  "group": "conversations",
+  "name": "conversations.info",
+  "desc": "Retrieve information about a conversation.",
   "args": {
-    "cursor": {
-      "required": false,
-      "example": "dXNlcjpVMDYxTkZUVDI=",
-      "desc": "Paginate through collections of data by setting the cursor parameter to a next_cursor attribute returned by a previous request's response_metadata. Default value fetches the first \"page\" of the collection. See pagination for more detail."
+    "channel": {
+      "required": true,
+      "example": "C1234567890",
+      "desc": "Conversation ID to learn more about.",
+      "type": "channel"
     },
-    "exclude_archived": {
+    "include_locale": {
       "required": false,
       "example": "true",
-      "desc": "Exclude archived channels from the list."
-    },
-    "exclude_members": {
-      "required": false,
-      "example": "true",
-      "desc": "Exclude the members collection from each channel."
-    },
-    "limit": {
-      "required": false,
-      "example": "20",
-      "desc": "The maximum number of items to return. Fewer than the requested number of items may be returned, even if the end of the users list hasn't been reached."
+      "desc": "Set this to true to receive the locale for this conversation. Defaults to false."
     }
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true,\n    \"channels\": [\n        {\n            \"id\": \"C024BE91L\",\n            \"name\": \"fun\",\n            \"created\": 1360782804,\n            \"creator\": \"U024BE7LH\",\n            \"is_archived\": false,\n            \"is_member\": false,\n            \"num_members\": 6,\n            \"topic\": {\n                \"value\": \"Fun times\",\n                \"creator\": \"U024BE7LV\",\n                \"last_set\": 1369677212\n            },\n            \"purpose\": {\n                \"value\": \"This channel is for fun\",\n                \"creator\": \"U024BE7LH\",\n                \"last_set\": 1360782804\n            }\n        },\n        ....\n    ]\n}"
+      "{\n    \"ok\": true,\n    \"channel\": {\n        \"id\": \"C012AB3CD\",\n        \"name\": \"general\",\n        \"is_channel\": true,\n        \"is_group\": false,\n        \"is_im\": false,\n        \"created\": 1449252889,\n        \"creator\": \"W012A3BCD\",\n        \"is_archived\": false,\n        \"is_general\": true,\n        \"unlinked\": 0,\n        \"name_normalized\": \"general\",\n        \"is_read_only\": false,\n        \"is_shared\": false,\n        \"is_ext_shared\": false,\n        \"is_org_shared\": false,\n        \"pending_shared\": [],\n        \"is_pending_ext_shared\": false,\n        \"is_member\": true,\n        \"is_private\": false,\n        \"is_mpim\": false,\n        \"last_read\": \"1502126650.228446\",\n        \"topic\": {\n            \"value\": \"For public discussion of generalities\",\n            \"creator\": \"W012A3BCD\",\n            \"last_set\": 1449709364\n        },\n        \"purpose\": {\n            \"value\": \"This part of the workspace is for fun. Make fun here.\",\n            \"creator\": \"W012A3BCD\",\n            \"last_set\": 1449709364\n        },\n        \"previous_names\": [ \"specifics\", \"abstractions\", \"etc\" ],\n        \"num_members\": 23,\n        \"locale\": \"en-US\"\n    }\n}"
     ]
   },
   "errors": {
-    "invalid_cursor": "Value passed for cursor was not valid or is no longer valid.",
+    "missing_scope": "The calling token is not granted the necessary scopes to complete this operation.",
+    "channel_not_found": "Value passed for channel was invalid.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Invalid authentication token.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",

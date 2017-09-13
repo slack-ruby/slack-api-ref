@@ -1,0 +1,59 @@
+{
+  "group": "conversations",
+  "name": "conversations.history",
+  "desc": "Fetches a conversation's history of messages and events.",
+  "args": {
+    "channel": {
+      "required": true,
+      "example": "C1234567890",
+      "desc": "Conversation ID to fetch history for.",
+      "type": "channel"
+    },
+    "cursor": {
+      "required": false,
+      "example": "dXNlcjpVMDYxTkZUVDI=",
+      "desc": "Paginate through collections of data by setting the cursor parameter to a next_cursor attribute returned by a previous request's response_metadata. Default value fetches the first \"page\" of the collection. See pagination for more detail."
+    },
+    "latest": {
+      "required": false,
+      "example": "1234567890.123456",
+      "desc": "End of time range of messages to include in results.",
+      "type": "timestamp"
+    },
+    "limit": {
+      "required": false,
+      "example": "20",
+      "desc": "The maximum number of items to return. Fewer than the requested number of items may be returned, even if the end of the users list hasn't been reached."
+    },
+    "oldest": {
+      "required": false,
+      "example": "1234567890.123456",
+      "desc": "Start of time range of messages to include in results.",
+      "type": "timestamp"
+    }
+  },
+  "response": {
+    "examples": [
+      "{\n    \"ok\": true,\n    \"messages\": [\n        {\n            \"type\": \"message\",\n            \"user\": \"U012AB3CDE\",\n            \"text\": \"I find you punny and would like to smell your nose letter\",\n            \"ts\": \"1502126499.221215\"\n        },\n        {\n            \"type\": \"message\",\n            \"user\": \"U061F7AUR\",\n            \"text\": \"Isn't this whether dreadful? <https://badpuns.example.com/puns/123>\",\n            \"attachments\": [\n                {\n                    \"service_name\": \"Leg end nary a laugh, Ink.\",\n                    \"title\": \"Leg end nary a laugh, Ink.\",\n                    \"title_link\": \"https://badpuns.example.com/puns/123\",\n                    \"text\": \"This is likely a pun about the weather.\",\n                    \"fallback\": \"We're withholding a pun from you\",\n                    \"thumb_url\": \"https://badpuns.example.com/puns/123.png\",\n                    \"from_url\": \"https://badpuns.example.com/puns/123\",\n                    \"thumb_width\": 1920,\n                    \"thumb_height\": 700,\n                    \"service_icon\": \"https://badpuns.example.com/puns.png\",\n                    \"id\": 1\n                }\n            ],\n            \"ts\": \"1502126439.218404\"\n        }\n    ],\n    \"has_more\": true,\n    \"unread_count_display\": 0,\n    \"pin_count\": 0,\n    \"response_metadata\": {\n        \"next_cursor\": \"bmV4dF90czoxNTAyMTI2Mzk0MjE2NzEw\"\n    }\n}"
+    ]
+  },
+  "errors": {
+    "channel_not_found": "Value passed for channel was invalid.",
+    "missing_scope": "The calling token is not granted the necessary scopes to complete this operation.",
+    "invalid_cursor": "Value passed for cursor was not valid or is no longer valid.",
+    "pagination_not_available": "Pagination does not currently function on Enterprise Grid workspaces.",
+    "invalid_ts_latest": "Value passed for latest was invalid.",
+    "invalid_ts_oldest": "Value passed for oldest was invalid.",
+    "not_authed": "No authentication token provided.",
+    "invalid_auth": "Invalid authentication token.",
+    "account_inactive": "Authentication token is for a deleted user or workspace.",
+    "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
+    "invalid_array_arg": "The method was passed a PHP-style array argument (e.g. with a name like foo[7]). These are never valid with the Slack API.",
+    "invalid_charset": "The method was called via a POST request, but the charset specified in the Content-Type header was invalid. Valid charset names are: utf-8 iso-8859-1.",
+    "invalid_form_data": "The method was called via a POST request with Content-Type application/x-www-form-urlencoded or multipart/form-data, but the form data was either missing or syntactically invalid.",
+    "invalid_post_type": "The method was called via a POST request, but the specified Content-Type was invalid. Valid types are: application/x-www-form-urlencoded multipart/form-data text/plain.",
+    "missing_post_type": "The method was called via a POST request and included a data payload, but the request did not include a Content-Type header.",
+    "team_added_to_org": "The workspace associated with your request is currently undergoing migration to an Enterprise Organization. Web API and other platform operations will be intermittently unavailable until the transition is complete.",
+    "request_timeout": "The method was called via a POST request, but the POST data was either missing or truncated."
+  }
+}

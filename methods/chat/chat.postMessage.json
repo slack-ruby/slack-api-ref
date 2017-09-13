@@ -72,7 +72,7 @@
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true,\n    \"ts\": \"1405895017.000506\",\n    \"channel\": \"C024BE91L\",\n    \"message\": {\n        ...\n    }\n}"
+      "{\n    \"ok\": true,\n    \"ts\": \"1405895017.000506\",\n    \"channel\": \"C024BE91L\",\n    \"message\": {\n        // The message you wrote, as we interpreted it\n    }\n}"
     ]
   },
   "errors": {

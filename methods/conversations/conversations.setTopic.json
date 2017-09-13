@@ -1,36 +1,33 @@
 {
-  "group": "channels",
-  "name": "channels.list",
-  "desc": "Lists all channels in a Slack team.",
+  "group": "conversations",
+  "name": "conversations.setTopic",
+  "desc": "Sets the topic for a conversation.",
   "args": {
-    "cursor": {
-      "required": false,
-      "example": "dXNlcjpVMDYxTkZUVDI=",
-      "desc": "Paginate through collections of data by setting the cursor parameter to a next_cursor attribute returned by a previous request's response_metadata. Default value fetches the first \"page\" of the collection. See pagination for more detail."
+    "channel": {
+      "required": true,
+      "example": "C1234567890",
+      "desc": "Conversation to set the topic of.",
+      "type": "channel"
     },
-    "exclude_archived": {
-      "required": false,
-      "example": "true",
-      "desc": "Exclude archived channels from the list."
-    },
-    "exclude_members": {
-      "required": false,
-      "example": "true",
-      "desc": "Exclude the members collection from each channel."
-    },
-    "limit": {
-      "required": false,
-      "example": "20",
-      "desc": "The maximum number of items to return. Fewer than the requested number of items may be returned, even if the end of the users list hasn't been reached."
+    "topic": {
+      "required": true,
+      "example": "Apply topically for best effects",
+      "desc": "The new topic string. Does not support formatting or linkification."
     }
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true,\n    \"channels\": [\n        {\n            \"id\": \"C024BE91L\",\n            \"name\": \"fun\",\n            \"created\": 1360782804,\n            \"creator\": \"U024BE7LH\",\n            \"is_archived\": false,\n            \"is_member\": false,\n            \"num_members\": 6,\n            \"topic\": {\n                \"value\": \"Fun times\",\n                \"creator\": \"U024BE7LV\",\n                \"last_set\": 1369677212\n            },\n            \"purpose\": {\n                \"value\": \"This channel is for fun\",\n                \"creator\": \"U024BE7LH\",\n                \"last_set\": 1360782804\n            }\n        },\n        ....\n    ]\n}"
+      "{\n    \"ok\": true,\n    \"topic\": \"Apply topically for best effects\"\n}"
     ]
   },
   "errors": {
-    "invalid_cursor": "Value passed for cursor was not valid or is no longer valid.",
+    "channel_not_found": "Value passed for channel was invalid.",
+    "not_in_channel": "Authenticated user is not in the channel.",
+    "is_archived": "Channel has been archived.",
+    "too_long": "Topic was longer than 250 characters.",
+    "user_is_restricted": "This method cannot be called by a restricted user or single channel guest.",
+    "method_not_supported_for_channel_type": "This type of conversation cannot be used with this method.",
+    "missing_scope": "The calling token is not granted the necessary scopes to complete this operation.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Invalid authentication token.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",

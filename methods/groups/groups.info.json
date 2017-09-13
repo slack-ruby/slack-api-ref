@@ -8,6 +8,11 @@
       "example": "G1234567890",
       "desc": "Private channel to get info on.",
       "type": "group"
+    },
+    "include_locale": {
+      "required": false,
+      "example": "true",
+      "desc": "Set this to true to receive the locale for this group. Defaults to false."
     }
   },
   "response": {
