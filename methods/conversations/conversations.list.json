@@ -16,7 +16,7 @@
     "limit": {
       "required": false,
       "example": "20",
-      "desc": "The maximum number of items to return. Fewer than the requested number of items may be returned, even if the end of the list hasn't been reached."
+      "desc": "The maximum number of items to return. Fewer than the requested number of items may be returned, even if the end of the list hasn't been reached. Must be an integer no larger than 1000."
     },
     "types": {
       "required": false,
@@ -34,6 +34,7 @@
     "missing_scope": "The calling token is not granted the necessary scopes to complete this operation.",
     "invalid_types": "Value passed for type could not be used based on the method's capabilities or the permission scopes granted to the used token.",
     "invalid_cursor": "Value passed for cursor was not valid or is no longer valid.",
+    "invalid_limit": "Value passed for limit is not understood.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Invalid authentication token.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",
