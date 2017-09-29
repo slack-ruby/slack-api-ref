@@ -1,0 +1,43 @@
+{
+  "group": "dialog",
+  "name": "dialog.open",
+  "desc": "Open a dialog with a user",
+  "args": {
+    "dialog": {
+      "required": true,
+      "example": " ",
+      "desc": "The dialog definition. This must be a JSON-encoded string."
+    },
+    "trigger_id": {
+      "required": true,
+      "example": "12345.98765.abcd2358fdea",
+      "desc": "Exchange a trigger to post to the user."
+    }
+  },
+  "response": {
+    "examples": [
+      "{\n    \"ok\": true\n}",
+      "{\n    \"ok\": false,\n    \"error\": \"validation_errors\",\n    \"response_metadata\": {\n        \"messages\": [\n            \"The field `title` is required\",\n            \"The field `callback_id` is required\",\n            \"The field `elements` is required\",\n            \"The field `title` cannot be longer than 24 characters\",\n            \"The field `submit_button` cannot be longer than 24 characters\",\n            \"The field `submit_button` can only be one word\",\n            \"The field `callback_id` cannot be longer than 255 characters\",\n            \"The field `elements` must be a list\",\n            \"The field `elements` has to include at least one element\",\n            \"The field `elements` cannot include more than five elements\",\n            \"Element 0 must be an object\",\n            \"Element 1 is missing required field `type`\",\n            \"Element 2 has an invalid `type`\",\n            \"Element 3 is missing required field `name`\",\n            \"Element 4 is missing required field `label`\",\n            \"Element 5 has a repeated name\",\n            \"Element 6 field `name` cannot be longer than 300 characters\",\n            \"Element 7 field `hint` cannot be longer than 150 characters\",\n            \"Element 8 field `label` cannot be longer than 24 characters\",\n            \"Element 9 has an invalid `subtype`\",\n            \"Element 10 field `min_length` must be between 0 and 150 (inclusive)\",\n            \"Element 11 field `max_length` must be between 1 and 150 (inclusive)\",\n            \"Element 12 field `value` cannot be longer than 150 characters\",\n            \"Element 13 field `placeholder` cannot be longer than 150 characters\",\n            \"Element 14 field `min_length` must be between 0 and 500 (inclusive)\",\n            \"Element 14 field `max_length` must be between 1 and 500 (inclusive)\",\n            \"Element 15 field `value` cannot be longer than 500 characters\",\n            \"Element 16 field `placeholder` cannot be longer than 150 characters\",\n            \"Element 17 field `placeholder` cannot be longer than 150 characters\",\n            \"Element 18 field `options` must be a list\",\n            \"Element 19 field `options` must have at least one option\",\n            \"Element 20 field `options` must have fewer than 100 options\",\n            \"Element 21 `options` item is missing required field `label`\",\n            \"Element 22 `options` item is missing required field `value`\",\n            \"Element 23 `options` item `label` field cannot exceed 75 characters\",\n            \"Element 24 `options` item `value` field cannot exceed 75 characters\"\n        ]\n    }\n}"
+    ]
+  },
+  "errors": {
+    "validation_errors": "The provided dialog could not be validated.",
+    "missing_trigger": "No trigger_id argument was presented.",
+    "missing_dialog": "No dialog argument was presented.",
+    "invalid_trigger": "The provided trigger_id is invalid or cannot be used by this token.",
+    "app_missing_action_url": "The app associated with the used token doesn't have a Action URL configured in its interactive components settings.",
+    "cannot_create_dialog": "Something exceptional occurred and the dialog could not be created.",
+    "failed_sending_dialog": "Something exceptional occurred and the dialog could not be sent.",
+    "not_authed": "No authentication token provided.",
+    "invalid_auth": "Invalid authentication token.",
+    "account_inactive": "Authentication token is for a deleted user or workspace.",
+    "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
+    "invalid_array_arg": "The method was passed a PHP-style array argument (e.g. with a name like foo[7]). These are never valid with the Slack API.",
+    "invalid_charset": "The method was called via a POST request, but the charset specified in the Content-Type header was invalid. Valid charset names are: utf-8 iso-8859-1.",
+    "invalid_form_data": "The method was called via a POST request with Content-Type application/x-www-form-urlencoded or multipart/form-data, but the form data was either missing or syntactically invalid.",
+    "invalid_post_type": "The method was called via a POST request, but the specified Content-Type was invalid. Valid types are: application/x-www-form-urlencoded multipart/form-data text/plain.",
+    "missing_post_type": "The method was called via a POST request and included a data payload, but the request did not include a Content-Type header.",
+    "team_added_to_org": "The workspace associated with your request is currently undergoing migration to an Enterprise Organization. Web API and other platform operations will be intermittently unavailable until the transition is complete.",
+    "request_timeout": "The method was called via a POST request, but the POST data was either missing or truncated."
+  }
+}
