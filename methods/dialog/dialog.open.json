@@ -24,6 +24,8 @@
     "validation_errors": "The provided dialog could not be validated.",
     "missing_trigger": "No trigger_id argument was presented.",
     "missing_dialog": "No dialog argument was presented.",
+    "trigger_exchanged": "The provided trigger_id has already been exchanged.",
+    "trigger_expired": "The provided trigger_id was presented after the 3 second limit.",
     "invalid_trigger": "The provided trigger_id is invalid or cannot be used by this token.",
     "app_missing_action_url": "The app associated with the used token doesn't have a Action URL configured in its interactive components settings.",
     "cannot_create_dialog": "Something exceptional occurred and the dialog could not be created.",

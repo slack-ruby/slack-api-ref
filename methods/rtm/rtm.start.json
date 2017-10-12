@@ -40,7 +40,7 @@
     ]
   },
   "errors": {
-    "migration_in_progress": "Team is being migrated between servers. See the team_migration_started event documentation for details.",
+    "migration_in_progress": "Workspace is being migrated between servers. See the team_migration_started event documentation for details.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Invalid authentication token.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",
