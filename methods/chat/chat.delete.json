@@ -18,7 +18,7 @@
     "as_user": {
       "required": false,
       "example": "true",
-      "desc": "Pass true to delete the message as the authed user. Bot users in this context are considered authed users."
+      "desc": "Pass true to delete the message as the authed user with chat:write:user scope. Bot users in this context are considered authed users. If unused or false, the message will be deleted with chat:write:bot scope."
     }
   },
   "response": {
