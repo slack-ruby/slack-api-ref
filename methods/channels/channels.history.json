@@ -34,7 +34,6 @@
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true,\n    \"latest\": \"1358547726.000003\",\n    \"messages\": [\n        {\n            \"type\": \"message\",\n            \"ts\": \"1358546515.000008\",\n            \"user\": \"U2147483896\",\n            \"text\": \"Hello\"\n        },\n        {\n            \"type\": \"message\",\n            \"ts\": \"1358546515.000007\",\n            \"user\": \"U2147483896\",\n            \"text\": \"World\",\n            \"is_starred\": true,\n            \"reactions\": [\n                {\n                    \"name\": \"space_invader\",\n                    \"count\": 3,\n                    \"users\": [ \"U1\", \"U2\", \"U3\" ]\n                },\n                {\n                    \"name\": \"sweet_potato\",\n                    \"count\": 5,\n                    \"users\": [ \"U1\", \"U2\", \"U3\", \"U4\", \"U5\" ]\n                }\n            ]\n                    },\n        {\n            \"type\": \"something_else\",\n            \"ts\": \"1358546515.000007\",\n            \"wibblr\": true\n        }\n    ],\n    \"has_more\": false\n}",
       "GET /api/channels.history?token=TOKEN_WITH_CHANNELS_HISTORY_SCOPE&channel=C2EB2QT8A&latest=1476909142.000007&inclusive=true&count=1"
     ]
   },

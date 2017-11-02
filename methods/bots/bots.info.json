@@ -11,7 +11,7 @@
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true,\n    \"bot\": {\n        \"id\": \"B12345678\",\n        \"app_id\": \"A4H1JB4AZ\",\n        \"deleted\": false,\n        \"name\": \"My Bot\",\n        \"icons\": {\n            \"image_36\": \"https://...\",\n            \"image_48\": \"https://...\",\n            \"image_72\": \"https://...\"\n        }\n    }\n}"
+
     ]
   },
   "errors": {

@@ -12,7 +12,7 @@
     "text": {
       "required": true,
       "example": "Hello world",
-      "desc": "New text for the message, using the default formatting rules."
+      "desc": "New text for the message, using the default formatting rules. It's not required when presenting attachments."
     },
     "ts": {
       "required": true,
@@ -28,7 +28,7 @@
     "attachments": {
       "required": false,
       "example": "[{\"pretext\": \"pre-hello\", \"text\": \"text-world\"}]",
-      "desc": "A JSON-based array of structured attachments, presented as a URL-encoded string."
+      "desc": "A JSON-based array of structured attachments, presented as a URL-encoded string. This field is required when not presenting text."
     },
     "link_names": {
       "required": false,
@@ -43,7 +43,7 @@
   },
   "response": {
     "examples": [
-      "{\n        \"ok\": true,\n        \"channel\": \"C024BE91L\",\n        \"ts\": \"1401383885.000061\",\n        \"text\": \"Updated Text\"\n    }"
+
     ]
   },
   "errors": {

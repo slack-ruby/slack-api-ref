@@ -43,7 +43,7 @@
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true,\n    \"message_ts\": \"1502210682.580145\"\n}"
+
     ]
   },
   "errors": {

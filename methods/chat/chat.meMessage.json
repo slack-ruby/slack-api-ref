@@ -17,7 +17,7 @@
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true,\n    \"channel\": \"C024BE7LR\",\n    \"ts\": \"1417671948.000006\"\n}"
+
     ]
   },
   "errors": {

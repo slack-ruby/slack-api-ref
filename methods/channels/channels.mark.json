@@ -18,7 +18,7 @@
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true\n}"
+
     ]
   },
   "errors": {

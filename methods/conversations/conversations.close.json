@@ -12,8 +12,7 @@
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true\n}",
-      "{\n    \"ok\": true,\n    \"no_op\": true,\n    \"already_closed\": true\n}"
+
     ]
   },
   "errors": {

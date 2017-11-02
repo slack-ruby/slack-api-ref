@@ -17,7 +17,7 @@
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true,\n    \"user\": {\n        \"id\": \"W012A3CDE\",\n        \"team_id\": \"T012AB3C4\",\n        \"name\": \"spengler\",\n        \"deleted\": false,\n        \"color\": \"9f69e7\",\n        \"real_name\": \"episod\",\n        \"tz\": \"America/Los_Angeles\",\n        \"tz_label\": \"Pacific Daylight Time\",\n        \"tz_offset\": -25200,\n        \"profile\": {\n            \"avatar_hash\": \"ge3b51ca72de\",\n            \"status_text\": \"Print is dead\",\n            \"status_emoji\": \":books:\",\n            \"real_name\": \"Egon Spengler\",\n            \"display_name\": \"spengler\",\n            \"real_name_normalized\": \"Egon Spengler\",\n            \"display_name_normalized\": \"spengler\",\n            \"email\": \"spengler@ghostbusters.example.com\",\n            \"image_24\": \"https://.../avatar/e3b51ca72dee4ef87916ae2b9240df50.jpg\",\n            \"image_32\": \"https://.../avatar/e3b51ca72dee4ef87916ae2b9240df50.jpg\",\n            \"image_48\": \"https://.../avatar/e3b51ca72dee4ef87916ae2b9240df50.jpg\",\n            \"image_72\": \"https://.../avatar/e3b51ca72dee4ef87916ae2b9240df50.jpg\",\n            \"image_192\": \"https://.../avatar/e3b51ca72dee4ef87916ae2b9240df50.jpg\",\n            \"image_512\": \"https://.../avatar/e3b51ca72dee4ef87916ae2b9240df50.jpg\",\n            \"team\": \"T012AB3C4\"\n        },\n        \"is_admin\": true,\n        \"is_owner\": false,\n        \"is_primary_owner\": false,\n        \"is_restricted\": false,\n        \"is_ultra_restricted\": false,\n        \"is_bot\": false,\n        \"updated\": 1502138686,\n        \"is_app_user\": false,\n        \"has_2fa\": false\n    }\n}"
+
     ]
   },
   "errors": {

@@ -17,7 +17,7 @@
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true,\n    \"items\": [\n        {\n            \"type\": \"message\",\n            \"channel\": \"C2147483705\",\n            \"message\": {\n                ...\n                \"reactions\": [\n                    {\n                        \"name\": \"astonished\",\n                        \"count\": 3,\n                        \"users\": [ \"U1\", \"U2\", \"U3\" ]\n                    },\n                    {\n                        \"name\": \"clock1\"\n                        \"count\": 2,\n                        \"users\": [ \"U1\", \"U2\", \"U3\" ]\n                    }\n                ]\n            },\n        },\n        {\n            \"type\": \"file\",\n            \"file\": { ... },\n            \"reactions\": [\n                {\n                    \"name\": \"thumbsup\",\n                    \"count\": 1,\n                    \"users\": [ \"U1\" ]\n                }\n            ]\n        }\n        {\n            \"type\": \"file_comment\",\n            \"file\": { ... },\n            \"comment\": { ... },\n            \"reactions\": [\n                {\n                    \"name\": \"facepalm\",\n                    \"count\": 1034,\n                    \"users\": [ \"U1\", \"U2\", \"U3\", \"U4\", \"U5\" ]\n                }\n            ]\n        }\n    ],\n    \"paging\": {\n        \"count\": 100,\n        \"total\": 4,\n        \"page\": 1,\n        \"pages\": 1\n    }\n}"
+
     ]
   },
   "errors": {

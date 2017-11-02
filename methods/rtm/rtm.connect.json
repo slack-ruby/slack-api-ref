@@ -11,7 +11,7 @@
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true,\n    \"url\": \"wss:\\/\\/ms9.slack-msgs.com\\/websocket\\/2I5yBpcvk\",\n    \"team\": {\n        \"id\": \"T654321\",\n        \"name\": \"Librarian Society of Soledad\",\n        \"domain\": \"libsocos\",\n        \"enterprise_id\": \"E234567\",\n        \"enterprise_name\": \"Intercontinental Librarian Society\"\n    },\n    \"self\": {\n        \"id\": \"W123456\",\n        \"name\": \"brautigan\"\n    }\n}"
+
     ]
   },
   "errors": {

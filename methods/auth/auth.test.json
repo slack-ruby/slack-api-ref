@@ -6,7 +6,7 @@
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true,\n    \"url\": \"https:\\/\\/myteam.slack.com\\/\",\n    \"team\": \"My Team\",\n    \"user\": \"cal\",\n    \"team_id\": \"T12345\",\n    \"user_id\": \"U12345\"\n}"
+
     ]
   },
   "errors": {

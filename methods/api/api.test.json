@@ -16,8 +16,7 @@
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true,\n    \"args\": {\n        \"foo\": \"bar\"\n    }\n}",
-      "{\n    \"ok\": false,\n    \"error\": \"my_error\",\n    \"args\": {\n        \"error\": \"my_error\"\n    }\n}"
+
     ]
   },
   "errors": {

@@ -5,7 +5,7 @@
   "args": {
     "users": {
       "required": false,
-      "example": "U1234,U4567",
+      "example": "U1234,W4567",
       "desc": "Comma-separated list of users to fetch Do Not Disturb status for."
     }
   },

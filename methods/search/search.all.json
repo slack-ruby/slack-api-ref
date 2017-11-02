@@ -26,8 +26,7 @@
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true,\n    \"query\": \"Best Pickles\",\n    \"messages\": {...},\n    \"files\": {...}\n}",
-      "{\n    \"matches\": [],\n    \"paging\": {\n        \"count\": 100,  - number of records per page\n        \"total\": 15,   - total records matching query\n        \"page\": 1,     - page of records returned\n        \"pages\": 1     - total pages matching query\n    }\n}"
+      "{\n    \"matches\": [],\n    \"paging\": {\n        \"count\": 100,\n        \"total\": 15,\n        \"page\": 1,\n        \"pages\": 1\n    }\n}"
     ]
   },
   "errors": {

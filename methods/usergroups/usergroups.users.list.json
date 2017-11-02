@@ -16,7 +16,7 @@
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true,\n    \"users\": [\n        \"U060R4BJ4\"\n    ]\n}"
+
     ]
   },
   "errors": {
