@@ -2,12 +2,16 @@ require_relative 'lib/slack_api/methods_spider'
 require_relative 'lib/slack_api/events_spider'
 require_relative 'lib/slack_api/spec_validator'
 
+def delete_files_except_undocumented(*dirs)
+  files = Dir["{#{dirs.join(',')}}/*"].grep_v(%r(/undocumented\b))
+  FileUtils.rm_rf files
+end
+
 namespace :api do
   namespace :events do
     desc 'Handle API events.'
     task :update do
-      FileUtils.rm_rf('events')
-      FileUtils.mkdir('events')
+      delete_files_except_undocumented 'events'
       spider = SlackApi::EventsSpider.new(verbose: true, request_interval: 0)
       spider.crawl
       spider.results.each do |result|
@@ -25,10 +29,7 @@ namespace :api do
   namespace :methods do
     desc 'Handle API methods.'
     task :update do
-      ['groups', 'methods'].each do |dir|
-        FileUtils.rm_rf(dir)
-        FileUtils.mkdir(dir)
-      end
+      delete_files_except_undocumented 'groups', 'methods'
       spider = SlackApi::MethodsSpider.new(verbose: true, request_interval: 0)
       spider.crawl
       spider.results.each do |result|
