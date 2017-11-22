@@ -12,7 +12,8 @@
   },
   "response": {
     "examples": [
-
+      "{\n    \"ok\": true\n}",
+      "{\n    \"ok\": false,\n    \"error\": \"channel_not_found\"\n}"
     ]
   },
   "errors": {

@@ -17,7 +17,8 @@
   },
   "response": {
     "examples": [
-
+      "{\n    \"ok\": true,\n    \"profile\": {\n        \"avatar_hash\": \"ge3b51ca72de\",\n        \"status_text\": \"Print is dead\",\n        \"status_emoji\": \":books:\",\n        \"real_name\": \"Egon Spengler\",\n        \"display_name\": \"spengler\",\n        \"real_name_normalized\": \"Egon Spengler\",\n        \"display_name_normalized\": \"spengler\",\n        \"email\": \"spengler@ghostbusters.example.com\",\n        \"image_24\": \"https:\\/\\/...\\/avatar\\/e3b51ca72dee4ef87916ae2b9240df50.jpg\",\n        \"image_32\": \"https:\\/\\/...\\/avatar\\/e3b51ca72dee4ef87916ae2b9240df50.jpg\",\n        \"image_48\": \"https:\\/\\/...\\/avatar\\/e3b51ca72dee4ef87916ae2b9240df50.jpg\",\n        \"image_72\": \"https:\\/\\/...\\/avatar\\/e3b51ca72dee4ef87916ae2b9240df50.jpg\",\n        \"image_192\": \"https:\\/\\/...\\/avatar\\/e3b51ca72dee4ef87916ae2b9240df50.jpg\",\n        \"image_512\": \"https:\\/\\/...\\/avatar\\/e3b51ca72dee4ef87916ae2b9240df50.jpg\",\n        \"team\": \"T012AB3C4\"\n    }\n}",
+      "{\n    \"ok\": false,\n    \"error\": \"user_not_found\"\n}"
     ]
   },
   "errors": {

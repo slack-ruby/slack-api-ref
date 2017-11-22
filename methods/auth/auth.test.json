@@ -6,7 +6,10 @@
   },
   "response": {
     "examples": [
-
+      "{\n    \"ok\": true,\n    \"url\": \"https:\\/\\/subarachnoid.slack.com\\/\",\n    \"team\": \"Subarachnoid Workspace\",\n    \"user\": \"grace\",\n    \"team_id\": \"T12345678\",\n    \"user_id\": \"W12345678\"\n}",
+      "{\n    \"ok\": false,\n    \"error\": \"invalid_auth\"\n}",
+      "{\n    \"ok\": true,\n    \"url\": \"https:\\/\\/subarachnoid.slack.com\\/\",\n    \"team\": \"Subarachnoid Workspace\",\n    \"user\": \"bot\",\n    \"team_id\": \"T0G9PQBBK\",\n    \"user_id\": \"W23456789\"\n}",
+      "{\n    \"ok\": false,\n    \"error\": \"not_authed\"\n}"
     ]
   },
   "errors": {

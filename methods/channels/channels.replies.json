@@ -17,7 +17,8 @@
   },
   "response": {
     "examples": [
-
+      "{\n    \"has_more\": false,\n    \"messages\": [\n        {\n            \"last_read\": \"1509484885.000082\",\n            \"replies\": [\n                {\n                    \"ts\": \"1509484424.000601\",\n                    \"user\": \"U2U85N1RZ\"\n                },\n                {\n                    \"ts\": \"1509484885.000082\",\n                    \"user\": \"U2U85N1RZ\"\n                }\n            ],\n            \"reply_count\": 2,\n            \"subscribed\": true,\n            \"text\": \"This is a channel message\",\n            \"thread_ts\": \"1485913694.000025\",\n            \"ts\": \"1485913694.000025\",\n            \"type\": \"message\",\n            \"unread_count\": 0,\n            \"user\": \"U2X9P5FEL\"\n        },\n        {\n            \"parent_user_id\": \"U2X9P5FEL\",\n            \"text\": \"This is a thread reply\",\n            \"thread_ts\": \"1485913694.000025\",\n            \"ts\": \"1509484424.000601\",\n            \"type\": \"message\",\n            \"user\": \"U2U85N1RZ\"\n        },\n        {\n            \"parent_user_id\": \"U2X9P5FEL\",\n            \"text\": \"This is another thread reply\",\n            \"thread_ts\": \"1485913694.000025\",\n            \"ts\": \"1509484885.000082\",\n            \"type\": \"message\",\n            \"user\": \"U2U85N1RZ\"\n        }\n    ],\n    \"ok\": true\n}",
+      "{\n    \"error\": \"thread_not_found\",\n    \"ok\": false\n}"
     ]
   },
   "errors": {

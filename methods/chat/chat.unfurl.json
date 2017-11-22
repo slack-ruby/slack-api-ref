@@ -38,7 +38,8 @@
   },
   "response": {
     "examples": [
-
+      "{\n    \"ok\": true\n}",
+      "{\n    \"ok\": false,\n    \"error\": \"cannot_unfurl_url\"\n}"
     ]
   },
   "errors": {

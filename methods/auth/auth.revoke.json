@@ -11,7 +11,8 @@
   },
   "response": {
     "examples": [
-
+      "{\n    \"ok\": true,\n    \"revoked\": true\n}",
+      "{\n    \"ok\": false,\n    \"error\": \"invalid_auth\"\n}"
     ]
   },
   "errors": {

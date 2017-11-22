@@ -6,7 +6,8 @@
   },
   "response": {
     "examples": [
-
+      "{\n    \"ok\": true,\n    \"info\": {\n        \"team\": {\n            \"scopes\": [],\n            \"resources\": {\n                \"ids\": []\n            }\n        },\n        \"channel\": {\n            \"scopes\": [\n                \"channels:read\"\n            ],\n            \"resources\": {\n                \"ids\": [\n                    \"C061FA5PB\"\n                ],\n                \"wildcard\": false,\n                \"excluded_ids\": []\n            }\n        },\n        \"group\": {\n            \"scopes\": [],\n            \"resources\": {\n                \"ids\": []\n            }\n        },\n        \"mpim\": {\n            \"scopes\": [],\n            \"resources\": {\n                \"ids\": []\n            }\n        },\n        \"im\": {\n            \"scopes\": [],\n            \"resources\": {\n                \"ids\": []\n            }\n        },\n        \"app_home\": {\n            \"scopes\": [\n                \"chat:write:user\",\n                \"im:history\",\n                \"im:read\"\n            ],\n            \"resources\": {\n                \"ids\": [\n                    \"D0C0NU1Q8\",\n                    \"D0BH95DLH\"\n                ]\n            }\n        }\n    }\n}",
+      "{\n    \"ok\": false,\n    \"error\": \"invalid_auth\"\n}"
     ]
   },
   "errors": {

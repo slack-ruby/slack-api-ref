@@ -22,7 +22,9 @@
   },
   "response": {
     "examples": [
-
+      "{\n    \"ok\": true,\n    \"channel\": {\n        \"id\": \"D069C7QFK\"\n    }\n}",
+      "{\n    \"ok\": true,\n    \"no_op\": true,\n    \"already_open\": true,\n    \"channel\": {\n        \"id\": \"D069C7QFK\",\n        \"created\": 1460147748,\n        \"is_im\": true,\n        \"is_org_shared\": false,\n        \"user\": \"U069C7QF3\",\n        \"last_read\": \"0000000000.000000\",\n        \"latest\": null,\n        \"unread_count\": 0,\n        \"unread_count_display\": 0,\n        \"is_open\": true,\n        \"priority\": 0\n    }\n}",
+      "{\n    \"ok\": false,\n    \"error\": \"channel_not_found\"\n}"
     ]
   },
   "errors": {

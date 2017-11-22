@@ -33,7 +33,8 @@
   },
   "response": {
     "examples": [
-
+      "{\n    \"ok\": true\n}",
+      "{\n    \"error\": \"already_reacted\",\n    \"ok\": false\n}"
     ]
   },
   "errors": {

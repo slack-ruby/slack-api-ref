@@ -43,7 +43,8 @@
   },
   "response": {
     "examples": [
-
+      "{\n    \"ok\": true,\n    \"message_ts\": \"1502210682.580145\"\n}",
+      "{\n    \"ok\": false,\n    \"error\": \"user_not_in_channel\"\n}"
     ]
   },
   "errors": {

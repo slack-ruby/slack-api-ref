@@ -22,7 +22,8 @@
   },
   "response": {
     "examples": [
-
+      "{\n    \"ok\": true\n}",
+      "{\n    \"ok\": false,\n    \"error\": \"invalid_auth\"\n}"
     ]
   },
   "errors": {

@@ -12,7 +12,9 @@
   },
   "response": {
     "examples": [
-
+      "{\n    \"ok\": true\n}",
+      "{\n    \"ok\": true,\n    \"not_in_channel\": true\n}",
+      "{\n    \"ok\": false,\n    \"error\": \"cant_leave_general\"\n}"
     ]
   },
   "errors": {
