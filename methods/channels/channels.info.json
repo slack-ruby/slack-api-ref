@@ -17,7 +17,8 @@
   },
   "response": {
     "examples": [
-
+      "{\n    \"ok\": true,\n    \"channel\": {\n        \"id\": \"C1H9RESGL\",\n        \"name\": \"busting\",\n        \"is_channel\": true,\n        \"created\": 1466025154,\n        \"creator\": \"U0G9QF9C6\",\n        \"is_archived\": false,\n        \"is_general\": false,\n        \"name_normalized\": \"busting\",\n        \"is_shared\": false,\n        \"is_org_shared\": false,\n        \"is_member\": true,\n        \"is_private\": false,\n        \"is_mpim\": false,\n        \"last_read\": \"1503435939.000101\",\n        \"latest\": {\n            \"text\": \"Containment unit is 98% full\",\n            \"username\": \"ecto1138\",\n            \"bot_id\": \"B19LU7CSY\",\n            \"attachments\": [\n                {\n                    \"text\": \"Don't get too attached\",\n                    \"id\": 1,\n                    \"fallback\": \"This is an attachment fallback\"\n                }\n            ],\n            \"type\": \"message\",\n            \"subtype\": \"bot_message\",\n            \"ts\": \"1503435956.000247\"\n        },\n        \"unread_count\": 1,\n        \"unread_count_display\": 1,\n        \"members\": [\n            \"U0G9QF9C6\",\n            \"U1QNSQB9U\"\n        ],\n        \"topic\": {\n            \"value\": \"Spiritual containment strategies\",\n            \"creator\": \"U0G9QF9C6\",\n            \"last_set\": 1503435128\n        },\n        \"purpose\": {\n            \"value\": \"Discuss busting ghosts\",\n            \"creator\": \"U0G9QF9C6\",\n            \"last_set\": 1503435128\n        },\n        \"previous_names\": [\n            \"dusting\"\n        ]\n    }\n}",
+      "{\n    \"ok\": false,\n    \"error\": \"channel_not_found\"\n}"
     ]
   },
   "errors": {

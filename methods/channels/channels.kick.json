@@ -18,7 +18,8 @@
   },
   "response": {
     "examples": [
-
+      "{\n    \"ok\": true\n}",
+      "{\n    \"error\": \"not_in_channel\",\n    \"ok\": false\n}"
     ]
   },
   "errors": {

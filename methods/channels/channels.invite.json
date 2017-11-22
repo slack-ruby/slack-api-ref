@@ -18,7 +18,8 @@
   },
   "response": {
     "examples": [
-
+      "{\n    \"ok\": true,\n    \"channel\": {\n        \"id\": \"C1H9RESGL\",\n        \"name\": \"busting\",\n        \"is_channel\": true,\n        \"created\": 1466025154,\n        \"creator\": \"U0G9QF9C6\",\n        \"is_archived\": false,\n        \"is_general\": false,\n        \"name_normalized\": \"busting\",\n        \"is_shared\": false,\n        \"is_org_shared\": false,\n        \"is_member\": true,\n        \"is_private\": false,\n        \"is_mpim\": false,\n        \"last_read\": \"1503435963.000307\",\n        \"latest\": {\n            \"user\": \"U1QNSQB9U\",\n            \"text\": \"<@U1QNSQB9U|protobot> has left the channel\",\n            \"type\": \"message\",\n            \"subtype\": \"channel_leave\",\n            \"ts\": \"1503435963.000307\"\n        },\n        \"unread_count\": 0,\n        \"unread_count_display\": 0,\n        \"members\": [\n            \"U0G9QF9C6\",\n            \"U1QNSQB9U\"\n        ],\n        \"topic\": {\n            \"value\": \"My Topic\",\n            \"creator\": \"U0G9QF9C6\",\n            \"last_set\": 1503435128\n        },\n        \"purpose\": {\n            \"value\": \"My Purpose\",\n            \"creator\": \"U0G9QF9C6\",\n            \"last_set\": 1503435128\n        },\n        \"previous_names\": []\n    }\n}",
+      "{\n    \"ok\": false,\n    \"error\": \"cant_invite\"\n}"
     ]
   },
   "errors": {

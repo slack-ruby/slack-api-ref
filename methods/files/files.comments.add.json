@@ -17,7 +17,8 @@
   },
   "response": {
     "examples": [
-
+      "{\n    \"ok\": true,\n    \"comment\": {\n        \"id\": \"Fc1234567890\",\n        \"created\": 1356032811,\n        \"timestamp\": 1356032811,\n        \"user\": \"U1234567890\",\n        \"comment\": \"Everyone should take a moment to read this file.\",\n        \"channel\": \"C1234467890\"\n    }\n}",
+      "{\n    \"ok\": false,\n    \"error\": \"file_not_found\"\n}"
     ]
   },
   "errors": {

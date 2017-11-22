@@ -12,7 +12,9 @@
   },
   "response": {
     "examples": [
-
+      "{\n    \"ok\": true\n}",
+      "{\n    \"ok\": true,\n    \"no_op\": true,\n    \"already_closed\": true\n}",
+      "{\n    \"ok\": false,\n    \"error\": \"channel_not_found\"\n}"
     ]
   },
   "errors": {

@@ -11,7 +11,8 @@
   },
   "response": {
     "examples": [
-
+      "{\n    \"ok\": true,\n    \"self\": {\n        \"id\": \"U4X318ZMZ\",\n        \"name\": \"robotoverlord\"\n    },\n    \"team\": {\n        \"domain\": \"slackdemo\",\n        \"id\": \"T2U81E2FP\",\n        \"name\": \"SlackDemo\"\n    },\n    \"url\": \"wss:\\/\\/...\"\n}",
+      "{\n    \"ok\": false,\n    \"error\": \"invalid_auth\"\n}"
     ]
   },
   "errors": {

@@ -23,7 +23,8 @@
   },
   "response": {
     "examples": [
-
+      "{\n    \"ok\": true,\n    \"channel\": \"C024BE91L\",\n    \"ts\": \"1401383885.000061\"\n}",
+      "{\n    \"error\": \"message_not_found\",\n    \"ok\": false\n}"
     ]
   },
   "errors": {

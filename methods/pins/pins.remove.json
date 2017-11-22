@@ -28,7 +28,8 @@
   },
   "response": {
     "examples": [
-
+      "{\n    \"ok\": true\n}",
+      "{\n    \"error\": \"no_pin\",\n    \"ok\": false\n}"
     ]
   },
   "errors": {

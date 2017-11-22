@@ -17,7 +17,8 @@
   },
   "response": {
     "examples": [
-
+      "{\n    \"topic\": \"To picture topicality\",\n    \"ok\": true\n}",
+      "{\n    \"ok\": false,\n    \"error\": \"invalid_auth\"\n}"
     ]
   },
   "errors": {

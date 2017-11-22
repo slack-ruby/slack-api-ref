@@ -42,9 +42,7 @@
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true,\n    \"file\": {...}\n}",
-      "curl -F file=@dramacat.gif -F channels=C024BE91L,#general -F token=xxxx-xxxxxxxxx-xxxx https://slack.com/api/files.upload",
-      "curl -F content=\"Hello\" -F token=xxxx-xxxxxxxxx-xxxx https://slack.com/api/files.upload"
+      "{\n    \"ok\": true,\n    \"file\": {...}\n}"
     ]
   },
   "errors": {

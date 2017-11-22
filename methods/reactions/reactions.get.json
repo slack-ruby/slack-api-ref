@@ -33,7 +33,8 @@
   },
   "response": {
     "examples": [
-
+      "{\n    \"file\": {\n        \"channels\": [\n            \"C2U7V2YA2\"\n        ],\n        \"comments_count\": 1,\n        \"created\": 1507850315,\n        \"groups\": [],\n        \"id\": \"F7H0D7ZA4\",\n        \"ims\": [],\n        \"name\": \"computer.gif\",\n        \"reactions\": [\n            {\n                \"count\": 1,\n                \"name\": \"stuck_out_tongue_winking_eye\",\n                \"users\": [\n                    \"U2U85N1RV\"\n                ]\n            }\n        ],\n        \"timestamp\": 1507850315,\n        \"title\": \"computer.gif\",\n        \"user\": \"U2U85N1RV\"\n    },\n    \"ok\": true,\n    \"type\": \"file\"\n}",
+      "{\n    \"ok\": false,\n    \"error\": \"invalid_auth\"\n}"
     ]
   },
   "errors": {
