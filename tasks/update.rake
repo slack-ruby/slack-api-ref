@@ -2,16 +2,11 @@ require_relative 'lib/slack_api/methods_spider'
 require_relative 'lib/slack_api/events_spider'
 require_relative 'lib/slack_api/spec_validator'
 
-def delete_files_except_undocumented(*dirs)
-  files = Dir["{#{dirs.join(',')}}/*"].grep_v(%r(/undocumented\b))
-  FileUtils.rm_rf files
-end
-
 namespace :api do
   namespace :events do
     desc 'Handle API events.'
     task :update do
-      delete_files_except_undocumented 'events'
+      Rake::Task['api:clean_files'].invoke('events')
       spider = SlackApi::EventsSpider.new(verbose: true, request_interval: 0)
       spider.crawl
       spider.results.each do |result|
@@ -29,7 +24,7 @@ namespace :api do
   namespace :methods do
     desc 'Handle API methods.'
     task :update do
-      delete_files_except_undocumented 'groups', 'methods'
+      Rake::Task['api:clean_files'].invoke(%w(groups methods))
       spider = SlackApi::MethodsSpider.new(verbose: true, request_interval: 0)
       spider.crawl
       spider.results.each do |result|
@@ -54,5 +49,10 @@ namespace :api do
   task :validate do
     Rake::Task['api:methods:validate'].invoke
     Rake::Task['api:events:validate'].invoke
+  end
+  desc 'Delete all generated files except undocumented ones.'
+  task :clean_files, :dirs do |t, args|
+    files = Dir["./{#{Array(args[:dirs]).join(',')}}/*"].grep_v(%r(/undocumented\b))
+    FileUtils.rm_rf files
   end
 end
