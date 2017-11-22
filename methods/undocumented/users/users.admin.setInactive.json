@@ -1,0 +1,21 @@
+{
+  "group": "users",
+  "name": "users.admin.setInactive",
+  "desc": "Disable a user",
+  "args": {
+    "user": {
+      "required": true,
+      "example": "W1234567890",
+      "desc": "User to disable",
+      "type": "user"
+    }
+  },
+  "response": {
+    "examples": [
+      "{\n    \"ok\": true\n}"
+    ]
+  },
+  "errors": {
+    "paid_only": "This is only available to paid teams."
+  }
+}

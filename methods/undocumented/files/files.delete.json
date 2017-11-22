@@ -1,0 +1,19 @@
+{
+  "group": "files",
+  "name": "files.delete",
+  "desc": "Delete a file",
+  "args": {
+    "file": {
+      "required": true,
+      "example": "F2147483862",
+      "desc": "ID of the file to be deleted"
+    }
+  },
+  "response": {
+    "examples": [
+      "{\n    \"ok\": true\n}"
+    ]
+  },
+  "errors": {
+  }
+}

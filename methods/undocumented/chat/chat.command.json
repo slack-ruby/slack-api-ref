@@ -1,0 +1,31 @@
+{
+  "group": "chat",
+  "name": "chat.command",
+  "desc": "Execute a slash command in a public channel",
+  "args": {
+    "channel": {
+      "required": true,
+      "example": "C1234567890",
+      "desc": "Channel to execute the command in.",
+      "type": "channel"
+    },
+    "command": {
+      "required": true,
+      "example": "/who",
+      "desc": "Slash command to be executed. Leading backslash is required."
+    },
+    "text": {
+      "required": false,
+      "example": "Hello world",
+      "desc": "Additional parameters provided to the slash command."
+    }
+  },
+  "response": {
+    "examples": [
+      "{\n    \"ok\": true\n    \"response\": \"Users here: ...\"\n}"
+    ]
+  },
+  "errors": {
+    "missing_scope": "The calling token is not granted the necessary scopes to complete this operation."
+  }
+}

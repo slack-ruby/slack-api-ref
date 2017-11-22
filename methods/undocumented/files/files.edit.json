@@ -1,0 +1,29 @@
+{
+  "group": "files",
+  "name": "files.edit",
+  "desc": "Change the properties of a file",
+  "args": {
+    "file": {
+      "required": true,
+      "example": "F2147483862",
+      "desc": "ID of the file to be edited"
+    },
+    "title": {
+      "required": true,
+      "example": "Brand new title",
+      "desc": "New title of the file"
+    },
+    "filetype": {
+      "required": false,
+      "example": "text",
+      "desc": "New filetype of the file. See https://api.slack.com/types/file#file_types for a list of all supported types."
+    }
+  },
+  "response": {
+    "examples": [
+      "{\n  \"id\": \"F12345678\",\n  \"created\": 1458346483,\n  \"timestamp\": 1458346483,\n  \"name\": \"BBB.gif\",\n  \"title\": \"test\",\n  \"mimetype\": \"image/gif\",\n  \"filetype\": \"gif\",\n  \"pretty_type\": \"GIF\",\n  \"user\": \"U12345678\",\n  \"editable\": false,\n  \"size\": 845468,\n  \"mode\": \"hosted\",\n  \"is_external\": false,\n  \"external_type\": \"\",\n  \"is_public\": true,\n  \"public_url_shared\": false,\n  \"display_as_bot\": false,\n  \"username\": \"\",\n  \"url_private\": \"https://files.slack.com/files-pri/TXXX/BBB.gif\",\n  \"url_private_download\": \"https://files.slack.com/files-pri/TXXX/download/BBB.gif\",\n  \"thumb_64\": \"https://files.slack.com/files-tmb/TXXX-YYY/ZZZ_64.png\",\n  \"thumb_80\": \"https://files.slack.com/files-tmb/TXXX-YYY/ZZZ_80.png\",\n  \"thumb_360\": \"https://files.slack.com/files-tmb/TXXX-YYY/ZZZ_360.png\",\n  \"thumb_360_w\": 360,\n  \"thumb_360_h\": 86,\n  \"thumb_480\": \"https://files.slack.com/files-tmb/TXXX-YYY/ZZZ_480.png\",\n  \"thumb_480_w\": 480,\n  \"thumb_480_h\": 115,\n  \"thumb_160\": \"https://files.slack.com/files-tmb/TXXX-YYY/ZZZ_160.png\",\n  \"thumb_360_gif\": \"https://files.slack.com/files-tmb/TXXX-YYY/ZZZ_360.gif\",\n  \"thumb_480_gif\": \"https://files.slack.com/files-tmb/TXXX-YYY/ZZZ_480.gif\",\n  \"image_exif_rotation\": 1,\n  \"original_w\": 500,\n  \"original_h\": 120,\n  \"permalink\": \"https://myslack.slack.com/files/erik.kalkoken/F0TTA9FKQ/ZZZ.gif\",\n  \"permalink_public\": \"https://slack-files.com/TXXX-AAA\",\n  \"channels\": [\n    \"C12345678\"\n  ],\n  \"groups\": [\n  ],\n  \"ims\": [\n  ],\n  \"comments_count\": 0\n}"
+    ]
+  },
+  "errors": {
+  }
+}

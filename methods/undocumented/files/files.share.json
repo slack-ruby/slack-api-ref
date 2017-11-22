@@ -1,0 +1,25 @@
+{
+  "group": "files",
+  "name": "files.share",
+  "desc": "Share an existing file in a channel",
+  "args": {
+    "file": {
+      "required": true,
+      "example": "F2147483862",
+      "desc": "ID of the file to be shared"
+    },
+    "channel": {
+      "required": true,
+      "example": "C1234567890",
+      "desc": "Channel to share the file in. Works with both public (channel ID) and private channels (group ID).",
+      "type": "channel"
+    }
+  },
+  "response": {
+    "examples": [
+      "{\n    \"ok\": true\n}"
+    ]
+  },
+  "errors": {
+  }
+}

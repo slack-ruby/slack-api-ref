@@ -11,6 +11,11 @@ This is a maintained, machine-readable version of the Slack API Docs, generated 
 * [methods](methods): Web API methods, organized in groups.
 * [events](events): RealTime API events.
 
+[Known undocumented methods and groups](https://github.com/ErikKalkoken/slackApiDoc) have been added manually.
+
+* [methods](methods/undocumented): Undocumented methods.
+* [groups](groups/undocumented): Undocumented groups.
+
 ### It needs an update!
 
 Usually our [cron](CRON.md) will take care of that within 24 hours.  
@@ -25,7 +30,7 @@ The reference is used by the following client projects to generate API client co
 
 ### Slack
 
-This project is not affiliated with the [company that makes Slack](https://slack.com). We began by forking JSON schema files from [slackhq/slack-api-docs](https://github.com/slackhq/slack-api-docs), then updating the schema from the documentation at [api.slack.com](https://api.slack.com) to, finally, relying on a scraper.
+This project is not affiliated with the [company that makes Slack](https://slack.com). We began by forking JSON schema files from [slackhq/slack-api-docs](https://github.com/slackhq/slack-api-docs), then updating the schema from the documentation at [api.slack.com](https://api.slack.com) to, finally, relying on a scraper. Undocumented methods have been added in November 2017 and are maintained manually.
 
 ### Copyright & License
 
