@@ -45,6 +45,7 @@ namespace :api do
   task :update do
     Rake::Task['api:methods:update'].invoke
     Rake::Task['api:events:update'].invoke
+    Rake::Task['api:delete_undocumented'].invoke
   end
   task :validate do
     Rake::Task['api:methods:validate'].invoke
@@ -54,5 +55,13 @@ namespace :api do
   task :clean_files, :dirs do |t, args|
     files = Dir["./{#{Array(args[:dirs]).join(',')}}/*"].grep_v(%r(/undocumented\b))
     FileUtils.rm_rf files
+  end
+  desc 'Delete any undocumented methods that have since been documented.'
+  task :delete_undocumented do
+    Dir.glob("**/undocumented/**/*.json").each do |file|
+      parent_file = file.gsub 'undocumented/', ''
+      next unless File.exists?(parent_file)
+      FileUtils.rm file
+    end
   end
 end
