@@ -18,7 +18,7 @@ This is a maintained, machine-readable version of the Slack API Docs, generated 
 
 ### It needs an update!
 
-Usually our [cron](CRON.md) will take care of that within 24 hours.  
+Usually our [cron](CRON.md) will take care of that within 24 hours.
 
 If you need to trigger an update right now, run `rake api:update`. To check if all specifications have a valid format, run `rake api:validate`. If all looks good, please create a pull request. See [CONTRIBUTING](CONTRIBUTING.md) for details.
 
@@ -34,6 +34,6 @@ This project is not affiliated with the [company that makes Slack](https://slack
 
 ### Copyright & License
 
-Copyright (c) 2015-2016, Daniel Doubrovkine and [Contributors](CHANGELOG.md).
+Copyright (c) 2015-2017, Daniel Doubrovkine and [Contributors](CHANGELOG.md).
 
 This project is licensed under the [MIT License](LICENSE.md).
