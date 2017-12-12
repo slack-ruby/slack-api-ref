@@ -46,6 +46,7 @@
     "cannot_unfurl_url": "The URL cannot be unfurled, perhaps due to administrative blacklists on the domain.",
     "cannot_find_service": "A record of your app being allowed to unfurl for this workspace could not be found.",
     "missing_unfurls": "The request is missing the unfurls parameter.",
+    "cannot_prompt": "The current user has already interacted with and dismissed a prompt for this application.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Invalid authentication token.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",
