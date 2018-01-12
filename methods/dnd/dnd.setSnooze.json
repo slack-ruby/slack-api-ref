@@ -3,11 +3,6 @@
   "name": "dnd.setSnooze",
   "desc": "Turns on Do Not Disturb mode for the current user, or changes its duration.",
   "args": {
-    "num_minutes": {
-      "required": true,
-      "example": "60",
-      "desc": "Number of minutes, from now, to snooze until."
-    }
   },
   "response": {
     "examples": [
@@ -18,7 +13,7 @@
     "missing_duration": "No value provided for num_minutes.",
     "snooze_failed": "There was a problem setting the user's Do Not Disturb status.",
     "not_authed": "No authentication token provided.",
-    "invalid_auth": "Invalid authentication token.",
+    "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",
     "no_permission": "The workspace token used in this request does not have the permissions necessary to complete the request.",
     "user_is_bot": "This method cannot be called by a bot user.",

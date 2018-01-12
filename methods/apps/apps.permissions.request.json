@@ -3,16 +3,6 @@
   "name": "apps.permissions.request",
   "desc": "Allows an app to request additional scopes",
   "args": {
-    "scopes": {
-      "required": true,
-      "example": " ",
-      "desc": "A comma separated list of scopes to request for."
-    },
-    "trigger_id": {
-      "required": true,
-      "example": " ",
-      "desc": "Token used to trigger the permissions API."
-    }
   },
   "response": {
     "examples": [
@@ -26,7 +16,7 @@
     "invalid_scope": "Scopes are invalid.",
     "invalid_user": "There isn't a valid user to request permissions.",
     "not_authed": "No authentication token provided.",
-    "invalid_auth": "Invalid authentication token.",
+    "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",
     "no_permission": "The workspace token used in this request does not have the permissions necessary to complete the request.",
     "user_is_bot": "This method cannot be called by a bot user.",

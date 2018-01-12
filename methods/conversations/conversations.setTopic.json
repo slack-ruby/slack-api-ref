@@ -3,17 +3,6 @@
   "name": "conversations.setTopic",
   "desc": "Sets the topic for a conversation.",
   "args": {
-    "channel": {
-      "required": true,
-      "example": "C1234567890",
-      "desc": "Conversation to set the topic of.",
-      "type": "channel"
-    },
-    "topic": {
-      "required": true,
-      "example": "Apply topically for best effects",
-      "desc": "The new topic string. Does not support formatting or linkification."
-    }
   },
   "response": {
     "examples": [
@@ -29,7 +18,7 @@
     "method_not_supported_for_channel_type": "This type of conversation cannot be used with this method.",
     "missing_scope": "The calling token is not granted the necessary scopes to complete this operation.",
     "not_authed": "No authentication token provided.",
-    "invalid_auth": "Invalid authentication token.",
+    "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",
     "no_permission": "The workspace token used in this request does not have the permissions necessary to complete the request.",
     "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",

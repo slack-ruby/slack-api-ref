@@ -3,22 +3,6 @@
   "name": "reminders.add",
   "desc": "Creates a reminder.",
   "args": {
-    "text": {
-      "required": true,
-      "example": "eat a banana",
-      "desc": "The content of the reminder."
-    },
-    "time": {
-      "required": true,
-      "example": "1602288000",
-      "desc": "When this reminder should happen: the Unix timestamp (up to five years from now), the number of seconds until the reminder (if within 24 hours), or a natural language description (Ex. \"in 15 minutes,\" or \"every Thursday\")."
-    },
-    "user": {
-      "required": false,
-      "example": "U18888888",
-      "desc": "The user who will receive the reminder. If no user is specified, the reminder will go to user who created it.",
-      "type": "user"
-    }
   },
   "response": {
     "examples": [
@@ -33,7 +17,7 @@
     "cannot_add_others": "Guests can't set reminders for other team members.",
     "cannot_add_others_recurring": "Recurring reminders can't be set for other team members.",
     "not_authed": "No authentication token provided.",
-    "invalid_auth": "Invalid authentication token.",
+    "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",
     "no_permission": "The workspace token used in this request does not have the permissions necessary to complete the request.",
     "user_is_bot": "This method cannot be called by a bot user.",

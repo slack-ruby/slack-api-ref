@@ -3,31 +3,6 @@
   "name": "usergroups.create",
   "desc": "Create a User Group",
   "args": {
-    "name": {
-      "required": true,
-      "example": "My Test Team",
-      "desc": "A name for the User Group. Must be unique among User Groups."
-    },
-    "channels": {
-      "required": false,
-      "example": "C1234567890,C2345678901,C3456789012",
-      "desc": "A comma separated string of encoded channel IDs for which the User Group uses as a default."
-    },
-    "description": {
-      "required": false,
-      "example": " ",
-      "desc": "A short description of the User Group."
-    },
-    "handle": {
-      "required": false,
-      "example": "marketing",
-      "desc": "A mention handle. Must be unique among channels, users and User Groups."
-    },
-    "include_count": {
-      "required": false,
-      "example": "true",
-      "desc": "Include the number of users in each User Group."
-    }
   },
   "response": {
     "examples": [
@@ -36,7 +11,7 @@
   },
   "errors": {
     "not_authed": "No authentication token provided.",
-    "invalid_auth": "Invalid authentication token.",
+    "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",
     "no_permission": "The workspace token used in this request does not have the permissions necessary to complete the request.",
     "user_is_bot": "This method cannot be called by a bot user.",

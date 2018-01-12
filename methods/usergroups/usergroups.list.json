@@ -3,21 +3,6 @@
   "name": "usergroups.list",
   "desc": "List all User Groups for a team",
   "args": {
-    "include_count": {
-      "required": false,
-      "example": "true",
-      "desc": "Include the number of users in each User Group."
-    },
-    "include_disabled": {
-      "required": false,
-      "example": "true",
-      "desc": "Include disabled User Groups."
-    },
-    "include_users": {
-      "required": false,
-      "example": "true",
-      "desc": "Include the list of users for each User Group."
-    }
   },
   "response": {
     "examples": [
@@ -27,7 +12,7 @@
   },
   "errors": {
     "not_authed": "No authentication token provided.",
-    "invalid_auth": "Invalid authentication token.",
+    "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",
     "no_permission": "The workspace token used in this request does not have the permissions necessary to complete the request.",
     "user_is_bot": "This method cannot be called by a bot user.",

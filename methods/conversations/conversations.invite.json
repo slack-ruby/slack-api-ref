@@ -3,17 +3,6 @@
   "name": "conversations.invite",
   "desc": "Invites users to a channel.",
   "args": {
-    "channel": {
-      "required": true,
-      "example": "C1234567890",
-      "desc": "The ID of the public or private channel to invite user(s) to.",
-      "type": "channel"
-    },
-    "users": {
-      "required": true,
-      "example": "W1234567890,U2345678901,U3456789012",
-      "desc": "A comma separated list of user IDs. Up to 30 users may be listed."
-    }
   },
   "response": {
     "examples": [
@@ -33,7 +22,7 @@
     "missing_scope": "The calling token is not granted the necessary scopes to complete this operation.",
     "ura_max_channels": "URA is already in the maximum number of channels.",
     "not_authed": "No authentication token provided.",
-    "invalid_auth": "Invalid authentication token.",
+    "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",
     "no_permission": "The workspace token used in this request does not have the permissions necessary to complete the request.",
     "user_is_bot": "This method cannot be called by a bot user.",

@@ -3,34 +3,6 @@
   "name": "channels.history",
   "desc": "Fetches history of messages and events from a channel.",
   "args": {
-    "channel": {
-      "required": true,
-      "example": "C1234567890",
-      "desc": "Channel to fetch history for.",
-      "type": "channel"
-    },
-    "inclusive": {
-      "required": false,
-      "example": "true",
-      "desc": "Include messages with latest or oldest timestamp in results."
-    },
-    "latest": {
-      "required": false,
-      "example": "1234567890.123456",
-      "desc": "End of time range of messages to include in results.",
-      "type": "timestamp"
-    },
-    "oldest": {
-      "required": false,
-      "example": "1234567890.123456",
-      "desc": "Start of time range of messages to include in results.",
-      "type": "timestamp"
-    },
-    "unreads": {
-      "required": false,
-      "example": "true",
-      "desc": "Include unread_count_display in the output?."
-    }
   },
   "response": {
     "examples": [
@@ -43,7 +15,7 @@
     "invalid_ts_latest": "Value passed for latest was invalid.",
     "invalid_ts_oldest": "Value passed for oldest was invalid.",
     "not_authed": "No authentication token provided.",
-    "invalid_auth": "Invalid authentication token.",
+    "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",
     "no_permission": "The workspace token used in this request does not have the permissions necessary to complete the request.",
     "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
@@ -55,7 +27,5 @@
     "team_added_to_org": "The workspace associated with your request is currently undergoing migration to an Enterprise Organization. Web API and other platform operations will be intermittently unavailable until the transition is complete.",
     "request_timeout": "The method was called via a POST request, but the POST data was either missing or truncated.",
     "fatal_error": "The server could not complete your operation(s) without encountering a catastrophic error. It's possible some aspect of the operation succeeded before the error was raised."
-  },
-  "has_paging": true,
-  "default_count": 100
+  }
 }

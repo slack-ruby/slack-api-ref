@@ -3,22 +3,6 @@
   "name": "im.open",
   "desc": "Opens a direct message channel.",
   "args": {
-    "user": {
-      "required": true,
-      "example": "W1234567890",
-      "desc": "User to open a direct message channel with.",
-      "type": "user"
-    },
-    "include_locale": {
-      "required": false,
-      "example": "true",
-      "desc": "Set this to true to receive the locale for this im. Defaults to false."
-    },
-    "return_im": {
-      "required": false,
-      "example": "true",
-      "desc": "Boolean, indicates you want the full IM channel definition in the response."
-    }
   },
   "response": {
     "examples": [
@@ -31,7 +15,7 @@
     "user_not_visible": "The calling user is restricted from seeing the requested user.",
     "user_disabled": "The user has been disabled.",
     "not_authed": "No authentication token provided.",
-    "invalid_auth": "Invalid authentication token.",
+    "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",
     "no_permission": "The workspace token used in this request does not have the permissions necessary to complete the request.",
     "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",

@@ -3,16 +3,6 @@
   "name": "migration.exchange",
   "desc": "For Enterprise Grid workspaces, map local user IDs to global user IDs",
   "args": {
-    "users": {
-      "required": true,
-      "example": "W1234567890,U2345678901,U3456789012",
-      "desc": "A comma-separated list of user ids, up to 400 per request."
-    },
-    "to_old": {
-      "required": false,
-      "example": "true",
-      "desc": "Specify true to convert W global user IDs to workspace-specific U IDs. Defaults to false."
-    }
   },
   "response": {
     "examples": [
@@ -24,7 +14,7 @@
     "not_enterprise_team": "The workspace associated with the token is not part of an Enterprise organization. User IDs have not changed and there is nothing to map.",
     "too_many_users": "Too many user IDs provided in users. Up to 400 user IDs are allowed per request.",
     "not_authed": "No authentication token provided.",
-    "invalid_auth": "Invalid authentication token.",
+    "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",
     "no_permission": "The workspace token used in this request does not have the permissions necessary to complete the request.",
     "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",

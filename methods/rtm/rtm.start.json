@@ -3,36 +3,6 @@
   "name": "rtm.start",
   "desc": "Starts a Real Time Messaging session.",
   "args": {
-    "batch_presence_aware": {
-      "required": false,
-      "example": "1",
-      "desc": "Only deliver presence events when requested by subscription. See presence subscriptions."
-    },
-    "include_locale": {
-      "required": false,
-      "example": "true",
-      "desc": "Set this to true to receive the locale for users and channels. Defaults to false."
-    },
-    "mpim_aware": {
-      "required": false,
-      "example": "true",
-      "desc": "Returns MPIMs to the client in the API response."
-    },
-    "no_latest": {
-      "required": false,
-      "example": "1",
-      "desc": "Exclude latest timestamps for channels, groups, mpims, and ims. Automatically sets no_unreads to 1."
-    },
-    "no_unreads": {
-      "required": false,
-      "example": "true",
-      "desc": "Skip unread counts for each channel (improves performance)."
-    },
-    "simple_latest": {
-      "required": false,
-      "example": "true",
-      "desc": "Return timestamp only for latest message object of each channel (improves performance)."
-    }
   },
   "response": {
     "examples": [
@@ -42,7 +12,7 @@
   "errors": {
     "migration_in_progress": "Workspace is being migrated between servers. See the team_migration_started event documentation for details.",
     "not_authed": "No authentication token provided.",
-    "invalid_auth": "Invalid authentication token.",
+    "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",
     "no_permission": "The workspace token used in this request does not have the permissions necessary to complete the request.",
     "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",

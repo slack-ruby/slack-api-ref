@@ -3,22 +3,6 @@
   "name": "conversations.open",
   "desc": "Opens or resumes a direct message or multi-person direct message.",
   "args": {
-    "channel": {
-      "required": false,
-      "example": "G1234567890",
-      "desc": "Resume a conversation by supplying an im or mpim's ID. Or provide the users field instead.",
-      "type": "channel"
-    },
-    "return_im": {
-      "required": false,
-      "example": "true",
-      "desc": "Boolean, indicates you want the full IM channel definition in the response."
-    },
-    "users": {
-      "required": false,
-      "example": "W1234567890,U2345678901,U3456789012",
-      "desc": "Comma separated lists of users. If only one user is included, this creates a 1:1 DM.  The ordering of the users is preserved whenever a multi-person direct message is returned. Supply a channel when not supplying users."
-    }
   },
   "response": {
     "examples": [
@@ -38,7 +22,7 @@
     "method_not_supported_for_channel_type": "This type of conversation cannot be used with this method.",
     "missing_scope": "The calling token is not granted the necessary scopes to complete this operation.",
     "not_authed": "No authentication token provided.",
-    "invalid_auth": "Invalid authentication token.",
+    "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",
     "no_permission": "The workspace token used in this request does not have the permissions necessary to complete the request.",
     "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",

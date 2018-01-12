@@ -3,72 +3,6 @@
   "name": "chat.postMessage",
   "desc": "Sends a message to a channel.",
   "args": {
-    "channel": {
-      "required": true,
-      "example": "C1234567890",
-      "desc": "Channel, private group, or IM channel to send message to. Can be an encoded ID, or a name. See below for more details.",
-      "type": "channel"
-    },
-    "text": {
-      "required": true,
-      "example": "Hello world",
-      "desc": "Text of the message to send. See below for an explanation of formatting. This field is usually required, unless you're providing only attachments instead."
-    },
-    "as_user": {
-      "required": false,
-      "example": "true",
-      "desc": "Pass true to post the message as the authed user, instead of as a bot. Defaults to false. See authorship below."
-    },
-    "attachments": {
-      "required": false,
-      "example": "[{\"pretext\": \"pre-hello\", \"text\": \"text-world\"}]",
-      "desc": "A JSON-based array of structured attachments, presented as a URL-encoded string."
-    },
-    "icon_emoji": {
-      "required": false,
-      "example": ":chart_with_upwards_trend:",
-      "desc": "Emoji to use as the icon for this message. Overrides icon_url. Must be used in conjunction with as_user set to false, otherwise ignored. See authorship below."
-    },
-    "icon_url": {
-      "required": false,
-      "example": "http://lorempixel.com/48/48",
-      "desc": "URL to an image to use as the icon for this message. Must be used in conjunction with as_user set to false, otherwise ignored. See authorship below."
-    },
-    "link_names": {
-      "required": false,
-      "example": "true",
-      "desc": "Find and link channel names and usernames."
-    },
-    "parse": {
-      "required": false,
-      "example": "full",
-      "desc": "Change how messages are treated. Defaults to none. See below."
-    },
-    "reply_broadcast": {
-      "required": false,
-      "example": "true",
-      "desc": "Used in conjunction with thread_ts and indicates whether reply should be made visible to everyone in the channel or conversation. Defaults to false."
-    },
-    "thread_ts": {
-      "required": false,
-      "example": "1234567890.123456",
-      "desc": "Provide another message's ts value to make this message a reply. Avoid using a reply's ts value; use its parent instead."
-    },
-    "unfurl_links": {
-      "required": false,
-      "example": "true",
-      "desc": "Pass true to enable unfurling of primarily text-based content."
-    },
-    "unfurl_media": {
-      "required": false,
-      "example": "false",
-      "desc": "Pass false to disable unfurling of media content."
-    },
-    "username": {
-      "required": false,
-      "example": "My Bot",
-      "desc": "Set your bot's user name. Must be used in conjunction with as_user set to false, otherwise ignored. See authorship below."
-    }
   },
   "response": {
     "examples": [
@@ -85,7 +19,7 @@
     "too_many_attachments": "Too many attachments were provided with this message. A maximum of 100 attachments are allowed on a message.",
     "rate_limited": "Application has posted too many messages, read the Rate Limit documentation for more information.",
     "not_authed": "No authentication token provided.",
-    "invalid_auth": "Invalid authentication token.",
+    "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",
     "no_permission": "The workspace token used in this request does not have the permissions necessary to complete the request.",
     "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",

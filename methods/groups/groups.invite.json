@@ -3,18 +3,6 @@
   "name": "groups.invite",
   "desc": "Invites a user to a private channel.",
   "args": {
-    "channel": {
-      "required": true,
-      "example": "G1234567890",
-      "desc": "Private channel to invite user to.",
-      "type": "group"
-    },
-    "user": {
-      "required": true,
-      "example": "W1234567890",
-      "desc": "User to invite.",
-      "type": "user"
-    }
   },
   "response": {
     "examples": [
@@ -30,7 +18,7 @@
     "cant_invite": "User cannot be invited to this group.",
     "ura_max_channels": "URA is already in the maximum number of channels.",
     "not_authed": "No authentication token provided.",
-    "invalid_auth": "Invalid authentication token.",
+    "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",
     "no_permission": "The workspace token used in this request does not have the permissions necessary to complete the request.",
     "user_is_bot": "This method cannot be called by a bot user.",

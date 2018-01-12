@@ -3,42 +3,6 @@
   "name": "files.upload",
   "desc": "Uploads or creates a file.",
   "args": {
-    "channels": {
-      "required": false,
-      "example": "C1234567890,C2345678901,C3456789012",
-      "desc": "Comma-separated list of channel names or IDs where the file will be shared."
-    },
-    "content": {
-      "required": false,
-      "example": "...",
-      "desc": "File contents via a POST variable. If omitting this parameter, you must provide a file."
-    },
-    "file": {
-      "required": false,
-      "example": "...",
-      "desc": "File contents via multipart/form-data. If omitting this parameter, you must submit content.",
-      "type": "file"
-    },
-    "filename": {
-      "required": false,
-      "example": "foo.txt",
-      "desc": "Filename of file."
-    },
-    "filetype": {
-      "required": false,
-      "example": "php",
-      "desc": "A file type identifier."
-    },
-    "initial_comment": {
-      "required": false,
-      "example": "Best!",
-      "desc": "Initial comment to add to file."
-    },
-    "title": {
-      "required": false,
-      "example": "My File",
-      "desc": "Title of file."
-    }
   },
   "response": {
     "examples": [
@@ -49,7 +13,7 @@
     "posting_to_general_channel_denied": "An admin has restricted posting to the #general channel.",
     "invalid_channel": "One or more channels supplied are invalid.",
     "not_authed": "No authentication token provided.",
-    "invalid_auth": "Invalid authentication token.",
+    "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",
     "no_permission": "The workspace token used in this request does not have the permissions necessary to complete the request.",
     "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",

@@ -3,16 +3,6 @@
   "name": "channels.create",
   "desc": "Creates a channel.",
   "args": {
-    "name": {
-      "required": true,
-      "example": "mychannel",
-      "desc": "Name of channel to create."
-    },
-    "validate": {
-      "required": false,
-      "example": "true",
-      "desc": "Whether to return errors on invalid channel name instead of modifying it to meet the specified criteria."
-    }
   },
   "response": {
     "examples": [
@@ -30,7 +20,7 @@
     "invalid_name_specials": "Value passed for name contained unallowed special characters or upper case characters.",
     "invalid_name": "Value passed for name was invalid.",
     "not_authed": "No authentication token provided.",
-    "invalid_auth": "Invalid authentication token.",
+    "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",
     "no_permission": "The workspace token used in this request does not have the permissions necessary to complete the request.",
     "user_is_bot": "This method cannot be called by a bot user.",

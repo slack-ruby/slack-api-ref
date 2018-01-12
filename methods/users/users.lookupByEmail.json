@@ -3,22 +3,17 @@
   "name": "users.lookupByEmail",
   "desc": "Find a user with an email address.",
   "args": {
-    "email": {
-      "required": true,
-      "example": "spengler@ghostbusters.example.com",
-      "desc": "An email address belonging to a user in the workspace."
-    }
   },
   "response": {
     "examples": [
       "{\n    \"ok\": true,\n    \"user\": {\n        \"id\": \"W012A3CDE\",\n        \"team_id\": \"T012AB3C4\",\n        \"name\": \"spengler\",\n        \"deleted\": false,\n        \"color\": \"9f69e7\",\n        \"real_name\": \"episod\",\n        \"tz\": \"America\\/Los_Angeles\",\n        \"tz_label\": \"Pacific Daylight Time\",\n        \"tz_offset\": -25200,\n        \"profile\": {\n            \"avatar_hash\": \"ge3b51ca72de\",\n            \"status_text\": \"Print is dead\",\n            \"status_emoji\": \":books:\",\n            \"real_name\": \"Egon Spengler\",\n            \"display_name\": \"spengler\",\n            \"real_name_normalized\": \"Egon Spengler\",\n            \"display_name_normalized\": \"spengler\",\n            \"email\": \"spengler@ghostbusters.example.com\",\n            \"image_24\": \"https:\\/\\/...\\/avatar\\/e3b51ca72dee4ef87916ae2b9240df50.jpg\",\n            \"image_32\": \"https:\\/\\/...\\/avatar\\/e3b51ca72dee4ef87916ae2b9240df50.jpg\",\n            \"image_48\": \"https:\\/\\/...\\/avatar\\/e3b51ca72dee4ef87916ae2b9240df50.jpg\",\n            \"image_72\": \"https:\\/\\/...\\/avatar\\/e3b51ca72dee4ef87916ae2b9240df50.jpg\",\n            \"image_192\": \"https:\\/\\/...\\/avatar\\/e3b51ca72dee4ef87916ae2b9240df50.jpg\",\n            \"image_512\": \"https:\\/\\/...\\/avatar\\/e3b51ca72dee4ef87916ae2b9240df50.jpg\",\n            \"team\": \"T012AB3C4\"\n        },\n        \"is_admin\": true,\n        \"is_owner\": false,\n        \"is_primary_owner\": false,\n        \"is_restricted\": false,\n        \"is_ultra_restricted\": false,\n        \"is_bot\": false,\n        \"updated\": 1502138686,\n        \"is_app_user\": false,\n        \"has_2fa\": false\n    }\n}",
-      "{\n    \"ok\": false,\n    \"error\": \"user_not_found\"\n}"
+      "{\n    \"ok\": false,\n    \"error\": \"users_not_found\"\n}"
     ]
   },
   "errors": {
     "users_not_found": "Value passed for user was invalid.",
     "not_authed": "No authentication token provided.",
-    "invalid_auth": "Invalid authentication token.",
+    "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",
     "no_permission": "The workspace token used in this request does not have the permissions necessary to complete the request.",
     "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",

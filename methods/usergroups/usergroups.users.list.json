@@ -3,16 +3,6 @@
   "name": "usergroups.users.list",
   "desc": "List all users in a User Group",
   "args": {
-    "usergroup": {
-      "required": true,
-      "example": "S0604QSJC",
-      "desc": "The encoded ID of the User Group to update."
-    },
-    "include_disabled": {
-      "required": false,
-      "example": "true",
-      "desc": "Allow results that involve disabled User Groups."
-    }
   },
   "response": {
     "examples": [
@@ -22,7 +12,7 @@
   },
   "errors": {
     "not_authed": "No authentication token provided.",
-    "invalid_auth": "Invalid authentication token.",
+    "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",
     "no_permission": "The workspace token used in this request does not have the permissions necessary to complete the request.",
     "user_is_bot": "This method cannot be called by a bot user.",

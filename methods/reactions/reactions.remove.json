@@ -3,33 +3,6 @@
   "name": "reactions.remove",
   "desc": "Removes a reaction from an item.",
   "args": {
-    "name": {
-      "required": true,
-      "example": "thumbsup",
-      "desc": "Reaction (emoji) name."
-    },
-    "channel": {
-      "required": false,
-      "example": "C1234567890",
-      "desc": "Channel where the message to remove reaction from was posted.",
-      "type": "channel"
-    },
-    "file": {
-      "required": false,
-      "example": "F1234567890",
-      "desc": "File to remove reaction from.",
-      "type": "file"
-    },
-    "file_comment": {
-      "required": false,
-      "example": "Fc1234567890",
-      "desc": "File comment to remove reaction from."
-    },
-    "timestamp": {
-      "required": false,
-      "example": "1234567890.123456",
-      "desc": "Timestamp of the message to remove reaction from."
-    }
   },
   "response": {
     "examples": [
@@ -46,7 +19,7 @@
     "invalid_name": "Value passed for name was invalid.",
     "no_reaction": "The specified item does not have the user/reaction combination.",
     "not_authed": "No authentication token provided.",
-    "invalid_auth": "Invalid authentication token.",
+    "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",
     "no_permission": "The workspace token used in this request does not have the permissions necessary to complete the request.",
     "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",

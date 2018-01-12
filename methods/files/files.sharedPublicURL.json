@@ -3,12 +3,6 @@
   "name": "files.sharedPublicURL",
   "desc": "Enables a file for public/external sharing.",
   "args": {
-    "file": {
-      "required": true,
-      "example": "F1234567890",
-      "desc": "File to share.",
-      "type": "file"
-    }
   },
   "response": {
     "examples": [
@@ -19,7 +13,7 @@
     "file_not_found": "Value passed for file was invalid.",
     "not_allowed": "Public sharing has been disabled for this team.",
     "not_authed": "No authentication token provided.",
-    "invalid_auth": "Invalid authentication token.",
+    "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",
     "no_permission": "The workspace token used in this request does not have the permissions necessary to complete the request.",
     "user_is_bot": "This method cannot be called by a bot user.",

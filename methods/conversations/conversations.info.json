@@ -3,17 +3,6 @@
   "name": "conversations.info",
   "desc": "Retrieve information about a conversation.",
   "args": {
-    "channel": {
-      "required": true,
-      "example": "C1234567890",
-      "desc": "Conversation ID to learn more about.",
-      "type": "channel"
-    },
-    "include_locale": {
-      "required": false,
-      "example": "true",
-      "desc": "Set this to true to receive the locale for this conversation. Defaults to false."
-    }
   },
   "response": {
     "examples": [
@@ -26,7 +15,7 @@
     "missing_scope": "The calling token is not granted the necessary scopes to complete this operation.",
     "channel_not_found": "Value passed for channel was invalid.",
     "not_authed": "No authentication token provided.",
-    "invalid_auth": "Invalid authentication token.",
+    "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",
     "no_permission": "The workspace token used in this request does not have the permissions necessary to complete the request.",
     "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",

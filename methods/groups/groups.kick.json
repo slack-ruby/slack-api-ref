@@ -3,18 +3,6 @@
   "name": "groups.kick",
   "desc": "Removes a user from a private channel.",
   "args": {
-    "channel": {
-      "required": true,
-      "example": "G1234567890",
-      "desc": "Private channel to remove user from.",
-      "type": "group"
-    },
-    "user": {
-      "required": true,
-      "example": "W1234567890",
-      "desc": "User to remove from private channel.",
-      "type": "user"
-    }
   },
   "response": {
     "examples": [
@@ -28,7 +16,7 @@
     "not_in_group": "User or caller were are not in the group.",
     "restricted_action": "A team preference prevents the authenticated user from kicking.",
     "not_authed": "No authentication token provided.",
-    "invalid_auth": "Invalid authentication token.",
+    "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",
     "no_permission": "The workspace token used in this request does not have the permissions necessary to complete the request.",
     "user_is_bot": "This method cannot be called by a bot user.",

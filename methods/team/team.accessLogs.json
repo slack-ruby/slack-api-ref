@@ -3,11 +3,6 @@
   "name": "team.accessLogs",
   "desc": "Gets the access logs for the current team.",
   "args": {
-    "before": {
-      "required": false,
-      "example": "1457989166",
-      "desc": "End of time range of logs to include in results (inclusive)."
-    }
   },
   "response": {
     "examples": [
@@ -18,7 +13,7 @@
     "paid_only": "This is only available to paid teams.",
     "over_pagination_limit": "It is not possible to request more than 1000 items per page or more than 100 pages.",
     "not_authed": "No authentication token provided.",
-    "invalid_auth": "Invalid authentication token.",
+    "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",
     "no_permission": "The workspace token used in this request does not have the permissions necessary to complete the request.",
     "user_is_bot": "This method cannot be called by a bot user.",
@@ -31,7 +26,5 @@
     "team_added_to_org": "The workspace associated with your request is currently undergoing migration to an Enterprise Organization. Web API and other platform operations will be intermittently unavailable until the transition is complete.",
     "request_timeout": "The method was called via a POST request, but the POST data was either missing or truncated.",
     "fatal_error": "The server could not complete your operation(s) without encountering a catastrophic error. It's possible some aspect of the operation succeeded before the error was raised."
-  },
-  "has_paging": true,
-  "default_count": 100
+  }
 }

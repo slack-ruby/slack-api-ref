@@ -3,17 +3,6 @@
   "name": "im.replies",
   "desc": "Retrieve a thread of messages posted to a direct message conversation",
   "args": {
-    "channel": {
-      "required": true,
-      "example": "C1234567890",
-      "desc": "Direct message channel to fetch thread from.",
-      "type": "im"
-    },
-    "thread_ts": {
-      "required": true,
-      "example": "1234567890.123456",
-      "desc": "Unique identifier of a thread's parent message."
-    }
   },
   "response": {
     "examples": [
@@ -25,7 +14,7 @@
     "channel_not_found": "Value for channel was missing or invalid.",
     "thread_not_found": "Value for thread_ts was missing or invalid.",
     "not_authed": "No authentication token provided.",
-    "invalid_auth": "Invalid authentication token.",
+    "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",
     "no_permission": "The workspace token used in this request does not have the permissions necessary to complete the request.",
     "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",

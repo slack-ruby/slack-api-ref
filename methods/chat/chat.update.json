@@ -3,43 +3,6 @@
   "name": "chat.update",
   "desc": "Updates a message.",
   "args": {
-    "channel": {
-      "required": true,
-      "example": "C1234567890",
-      "desc": "Channel containing the message to be updated.",
-      "type": "channel"
-    },
-    "text": {
-      "required": true,
-      "example": "Hello world",
-      "desc": "New text for the message, using the default formatting rules. It's not required when presenting attachments."
-    },
-    "ts": {
-      "required": true,
-      "example": "1405894322.002768",
-      "desc": "Timestamp of the message to be updated.",
-      "type": "timestamp"
-    },
-    "as_user": {
-      "required": false,
-      "example": "true",
-      "desc": "Pass true to update the message as the authed user. Bot users in this context are considered authed users."
-    },
-    "attachments": {
-      "required": false,
-      "example": "[{\"pretext\": \"pre-hello\", \"text\": \"text-world\"}]",
-      "desc": "A JSON-based array of structured attachments, presented as a URL-encoded string. This field is required when not presenting text."
-    },
-    "link_names": {
-      "required": false,
-      "example": "true",
-      "desc": "Find and link channel names and usernames. Defaults to none. This parameter should be used in conjunction with parse. To set link_names to 1, specify a parse mode of full."
-    },
-    "parse": {
-      "required": false,
-      "example": "none",
-      "desc": "Change how messages are treated. Defaults to client, unlike chat.postMessage. See below."
-    }
   },
   "response": {
     "examples": [
@@ -56,7 +19,7 @@
     "too_many_attachments": "Too many attachments were provided with this message. A maximum of 100 attachments are allowed on a message.",
     "no_text": "No message text provided.",
     "not_authed": "No authentication token provided.",
-    "invalid_auth": "Invalid authentication token.",
+    "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",
     "no_permission": "The workspace token used in this request does not have the permissions necessary to complete the request.",
     "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",

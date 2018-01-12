@@ -3,17 +3,6 @@
   "name": "files.comments.delete",
   "desc": "Deletes an existing comment on a file.",
   "args": {
-    "file": {
-      "required": true,
-      "example": "F1234567890",
-      "desc": "File to delete a comment from.",
-      "type": "file"
-    },
-    "id": {
-      "required": true,
-      "example": "Fc1234567890",
-      "desc": "The comment to delete."
-    }
   },
   "response": {
     "examples": [
@@ -26,7 +15,7 @@
     "file_deleted": "The requested file was previously deleted.",
     "cant_delete": "The requested comment could not be deleted.",
     "not_authed": "No authentication token provided.",
-    "invalid_auth": "Invalid authentication token.",
+    "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",
     "no_permission": "The workspace token used in this request does not have the permissions necessary to complete the request.",
     "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",

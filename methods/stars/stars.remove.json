@@ -3,28 +3,6 @@
   "name": "stars.remove",
   "desc": "Removes a star from an item.",
   "args": {
-    "channel": {
-      "required": false,
-      "example": "C1234567890",
-      "desc": "Channel to remove star from, or channel where the message to remove star from was posted (used with timestamp).",
-      "type": "channel"
-    },
-    "file": {
-      "required": false,
-      "example": "F1234567890",
-      "desc": "File to remove star from.",
-      "type": "file"
-    },
-    "file_comment": {
-      "required": false,
-      "example": "Fc1234567890",
-      "desc": "File comment to remove star from."
-    },
-    "timestamp": {
-      "required": false,
-      "example": "1234567890.123456",
-      "desc": "Timestamp of the message to remove star from."
-    }
   },
   "response": {
     "examples": [
@@ -40,7 +18,7 @@
     "no_item_specified": "file, file_comment, channel and timestamp was not specified.",
     "not_starred": "The specified item is not currently starred by the authenticated user.",
     "not_authed": "No authentication token provided.",
-    "invalid_auth": "Invalid authentication token.",
+    "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",
     "no_permission": "The workspace token used in this request does not have the permissions necessary to complete the request.",
     "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",

@@ -3,28 +3,6 @@
   "name": "pins.add",
   "desc": "Pins an item to a channel.",
   "args": {
-    "channel": {
-      "required": true,
-      "example": "C1234567890",
-      "desc": "Channel to pin the item in.",
-      "type": "channel"
-    },
-    "file": {
-      "required": false,
-      "example": "F1234567890",
-      "desc": "File to pin.",
-      "type": "file"
-    },
-    "file_comment": {
-      "required": false,
-      "example": "Fc1234567890",
-      "desc": "File comment to pin."
-    },
-    "timestamp": {
-      "required": false,
-      "example": "1234567890.123456",
-      "desc": "Timestamp of the message to pin."
-    }
   },
   "response": {
     "examples": [
@@ -44,7 +22,7 @@
     "file_not_shared": "File specified by file is not public nor shared to the channel.",
     "not_pinnable": "This message type is not pinnable.",
     "not_authed": "No authentication token provided.",
-    "invalid_auth": "Invalid authentication token.",
+    "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",
     "no_permission": "The workspace token used in this request does not have the permissions necessary to complete the request.",
     "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",

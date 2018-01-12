@@ -3,12 +3,6 @@
   "name": "conversations.archive",
   "desc": "Archives a conversation.",
   "args": {
-    "channel": {
-      "required": true,
-      "example": "C1234567890",
-      "desc": "ID of conversation to archive.",
-      "type": "channel"
-    }
   },
   "response": {
     "examples": [
@@ -24,7 +18,7 @@
     "method_not_supported_for_channel_type": "This type of conversation cannot be used with this method.",
     "missing_scope": "The calling token is not granted the necessary scopes to complete this operation.",
     "not_authed": "No authentication token provided.",
-    "invalid_auth": "Invalid authentication token.",
+    "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",
     "no_permission": "The workspace token used in this request does not have the permissions necessary to complete the request.",
     "user_is_bot": "This method cannot be called by a bot user.",
