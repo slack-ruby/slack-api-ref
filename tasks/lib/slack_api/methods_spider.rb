@@ -43,7 +43,7 @@ module SlackApi
     private
 
     def parse_args(api_page, default_data = {})
-      args_wrapper = api_page.search("h2:contains('Arguments') + p + table")
+      args_wrapper = api_page.search("h2:contains('Arguments') + table")
       rows = args_wrapper.search('tr')
       args = {}
       fields = {}
