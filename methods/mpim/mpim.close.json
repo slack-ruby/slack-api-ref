@@ -3,6 +3,12 @@
   "name": "mpim.close",
   "desc": "Closes a multiparty direct message channel.",
   "args": {
+    "channel": {
+      "required": true,
+      "example": "G1234567890",
+      "desc": "MPIM to close.",
+      "type": "channel"
+    }
   },
   "response": {
     "examples": [

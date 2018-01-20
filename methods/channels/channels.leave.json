@@ -3,6 +3,12 @@
   "name": "channels.leave",
   "desc": "Leaves a channel.",
   "args": {
+    "channel": {
+      "required": true,
+      "example": "C1234567890",
+      "desc": "Channel to leave.",
+      "type": "channel"
+    }
   },
   "response": {
     "examples": [

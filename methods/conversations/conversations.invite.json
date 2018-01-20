@@ -3,6 +3,17 @@
   "name": "conversations.invite",
   "desc": "Invites users to a channel.",
   "args": {
+    "channel": {
+      "required": true,
+      "example": "C1234567890",
+      "desc": "The ID of the public or private channel to invite user(s) to.",
+      "type": "channel"
+    },
+    "users": {
+      "required": true,
+      "example": "W1234567890,U2345678901,U3456789012",
+      "desc": "A comma separated list of user IDs. Up to 30 users may be listed."
+    }
   },
   "response": {
     "examples": [

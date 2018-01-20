@@ -3,6 +3,16 @@
   "name": "groups.list",
   "desc": "Lists private channels that the calling user has access to.",
   "args": {
+    "exclude_archived": {
+      "required": false,
+      "example": "true",
+      "desc": "Don't return archived private channels."
+    },
+    "exclude_members": {
+      "required": false,
+      "example": "true",
+      "desc": "Exclude the members from each group."
+    }
   },
   "response": {
     "examples": [

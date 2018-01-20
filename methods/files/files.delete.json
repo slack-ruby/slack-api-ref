@@ -3,6 +3,12 @@
   "name": "files.delete",
   "desc": "Deletes a file.",
   "args": {
+    "file": {
+      "required": true,
+      "example": "F1234567890",
+      "desc": "ID of file to delete.",
+      "type": "file"
+    }
   },
   "response": {
     "examples": [

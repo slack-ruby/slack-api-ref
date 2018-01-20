@@ -3,6 +3,11 @@
   "name": "reminders.complete",
   "desc": "Marks a reminder as complete.",
   "args": {
+    "reminder": {
+      "required": true,
+      "example": "Rm12345678",
+      "desc": "The ID of the reminder to be marked as complete."
+    }
   },
   "response": {
     "examples": [

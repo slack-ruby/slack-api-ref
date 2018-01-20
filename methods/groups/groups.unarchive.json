@@ -3,6 +3,12 @@
   "name": "groups.unarchive",
   "desc": "Unarchives a private channel.",
   "args": {
+    "channel": {
+      "required": true,
+      "example": "G1234567890",
+      "desc": "Private channel to unarchive.",
+      "type": "group"
+    }
   },
   "response": {
     "examples": [

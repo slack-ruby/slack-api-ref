@@ -3,6 +3,12 @@
   "name": "files.revokePublicURL",
   "desc": "Revokes public/external sharing access for a file",
   "args": {
+    "file": {
+      "required": true,
+      "example": "F1234567890",
+      "desc": "File to revoke.",
+      "type": "file"
+    }
   },
   "response": {
     "examples": [

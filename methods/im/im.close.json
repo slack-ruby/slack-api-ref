@@ -3,6 +3,12 @@
   "name": "im.close",
   "desc": "Close a direct message channel.",
   "args": {
+    "channel": {
+      "required": true,
+      "example": "D1234567890",
+      "desc": "Direct message channel to close.",
+      "type": "im"
+    }
   },
   "response": {
     "examples": [

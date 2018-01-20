@@ -3,6 +3,12 @@
   "name": "files.sharedPublicURL",
   "desc": "Enables a file for public/external sharing.",
   "args": {
+    "file": {
+      "required": true,
+      "example": "F1234567890",
+      "desc": "File to share.",
+      "type": "file"
+    }
   },
   "response": {
     "examples": [

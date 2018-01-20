@@ -3,6 +3,11 @@
   "name": "auth.revoke",
   "desc": "Revokes a token.",
   "args": {
+    "test": {
+      "required": false,
+      "example": "true",
+      "desc": "Setting this parameter to 1 triggers a testing mode where the specified token will not actually be revoked."
+    }
   },
   "response": {
     "examples": [

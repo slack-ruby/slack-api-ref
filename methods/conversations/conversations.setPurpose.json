@@ -3,6 +3,17 @@
   "name": "conversations.setPurpose",
   "desc": "Sets the purpose for a conversation.",
   "args": {
+    "channel": {
+      "required": true,
+      "example": "C1234567890",
+      "desc": "Conversation to set the purpose of.",
+      "type": "channel"
+    },
+    "purpose": {
+      "required": true,
+      "example": "My More Special Purpose",
+      "desc": "A new, specialer purpose."
+    }
   },
   "response": {
     "examples": [

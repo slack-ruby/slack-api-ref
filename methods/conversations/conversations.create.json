@@ -3,6 +3,16 @@
   "name": "conversations.create",
   "desc": "Initiates a public or private channel-based conversation",
   "args": {
+    "name": {
+      "required": true,
+      "example": "mychannel",
+      "desc": "Name of the public or private channel to create."
+    },
+    "is_private": {
+      "required": false,
+      "example": "true",
+      "desc": "Create a private channel instead of a public one."
+    }
   },
   "response": {
     "examples": [

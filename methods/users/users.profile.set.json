@@ -3,6 +3,27 @@
   "name": "users.profile.set",
   "desc": "Set the profile information for a user.",
   "args": {
+    "name": {
+      "required": false,
+      "example": "first_name",
+      "desc": "Name of a single key to set. Usable only if profile is not passed."
+    },
+    "profile": {
+      "required": false,
+      "example": "{ first_name: \"John\", ... }",
+      "desc": "Collection of key:value pairs presented as a URL-encoded JSON hash."
+    },
+    "user": {
+      "required": false,
+      "example": "W1234567890",
+      "desc": "ID of user to change. This argument may only be specified by team admins on paid teams.",
+      "type": "user"
+    },
+    "value": {
+      "required": false,
+      "example": "John",
+      "desc": "Value to set a single key to. Usable only if profile is not passed."
+    }
   },
   "response": {
     "examples": [

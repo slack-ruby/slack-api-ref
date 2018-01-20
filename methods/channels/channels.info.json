@@ -3,6 +3,17 @@
   "name": "channels.info",
   "desc": "Gets information about a channel.",
   "args": {
+    "channel": {
+      "required": true,
+      "example": "C1234567890",
+      "desc": "Channel to get info on.",
+      "type": "channel"
+    },
+    "include_locale": {
+      "required": false,
+      "example": "true",
+      "desc": "Set this to true to receive the locale for this channel. Defaults to false."
+    }
   },
   "response": {
     "examples": [

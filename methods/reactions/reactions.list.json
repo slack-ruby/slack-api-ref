@@ -3,6 +3,17 @@
   "name": "reactions.list",
   "desc": "Lists reactions made by a user.",
   "args": {
+    "full": {
+      "required": false,
+      "example": "true",
+      "desc": "If true always return the complete reaction list."
+    },
+    "user": {
+      "required": false,
+      "example": "W1234567890",
+      "desc": "Show reactions made by this user. Defaults to the authed user.",
+      "type": "user"
+    }
   },
   "response": {
     "examples": [
@@ -25,5 +36,7 @@
     "team_added_to_org": "The workspace associated with your request is currently undergoing migration to an Enterprise Organization. Web API and other platform operations will be intermittently unavailable until the transition is complete.",
     "request_timeout": "The method was called via a POST request, but the POST data was either missing or truncated.",
     "fatal_error": "The server could not complete your operation(s) without encountering a catastrophic error. It's possible some aspect of the operation succeeded before the error was raised."
-  }
+  },
+  "has_paging": true,
+  "default_count": 100
 }

@@ -3,6 +3,17 @@
   "name": "users.profile.get",
   "desc": "Retrieves a user's profile information.",
   "args": {
+    "include_labels": {
+      "required": false,
+      "example": "true",
+      "desc": "Include labels for each ID in custom profile fields."
+    },
+    "user": {
+      "required": false,
+      "example": "W1234567890",
+      "desc": "User to retrieve profile info for.",
+      "type": "user"
+    }
   },
   "response": {
     "examples": [

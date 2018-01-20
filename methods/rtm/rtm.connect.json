@@ -3,6 +3,11 @@
   "name": "rtm.connect",
   "desc": "Starts a Real Time Messaging session.",
   "args": {
+    "batch_presence_aware": {
+      "required": false,
+      "example": "1",
+      "desc": "Only deliver presence events when requested by subscription. See presence subscriptions."
+    }
   },
   "response": {
     "examples": [

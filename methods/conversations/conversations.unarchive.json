@@ -3,6 +3,12 @@
   "name": "conversations.unarchive",
   "desc": "Reverses conversation archival.",
   "args": {
+    "channel": {
+      "required": true,
+      "example": "C1234567890",
+      "desc": "ID of conversation to unarchive.",
+      "type": "channel"
+    }
   },
   "response": {
     "examples": [

@@ -3,6 +3,11 @@
   "name": "team.accessLogs",
   "desc": "Gets the access logs for the current team.",
   "args": {
+    "before": {
+      "required": false,
+      "example": "1457989166",
+      "desc": "End of time range of logs to include in results (inclusive)."
+    }
   },
   "response": {
     "examples": [
@@ -26,5 +31,7 @@
     "team_added_to_org": "The workspace associated with your request is currently undergoing migration to an Enterprise Organization. Web API and other platform operations will be intermittently unavailable until the transition is complete.",
     "request_timeout": "The method was called via a POST request, but the POST data was either missing or truncated.",
     "fatal_error": "The server could not complete your operation(s) without encountering a catastrophic error. It's possible some aspect of the operation succeeded before the error was raised."
-  }
+  },
+  "has_paging": true,
+  "default_count": 100
 }

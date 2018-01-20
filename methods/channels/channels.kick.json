@@ -3,6 +3,18 @@
   "name": "channels.kick",
   "desc": "Removes a user from a channel.",
   "args": {
+    "channel": {
+      "required": true,
+      "example": "C1234567890",
+      "desc": "Channel to remove user from.",
+      "type": "channel"
+    },
+    "user": {
+      "required": true,
+      "example": "W1234567890",
+      "desc": "User to remove from channel.",
+      "type": "user"
+    }
   },
   "response": {
     "examples": [

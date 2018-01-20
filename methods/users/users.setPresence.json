@@ -3,6 +3,11 @@
   "name": "users.setPresence",
   "desc": "Manually sets user presence.",
   "args": {
+    "presence": {
+      "required": true,
+      "example": "away",
+      "desc": "Either auto or away."
+    }
   },
   "response": {
     "examples": [

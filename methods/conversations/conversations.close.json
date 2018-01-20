@@ -3,6 +3,12 @@
   "name": "conversations.close",
   "desc": "Closes a direct message or multi-person direct message.",
   "args": {
+    "channel": {
+      "required": true,
+      "example": "G1234567890",
+      "desc": "Conversation to close.",
+      "type": "channel"
+    }
   },
   "response": {
     "examples": [

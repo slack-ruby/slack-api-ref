@@ -3,6 +3,12 @@
   "name": "groups.leave",
   "desc": "Leaves a private channel.",
   "args": {
+    "channel": {
+      "required": true,
+      "example": "G1234567890",
+      "desc": "Private channel to leave.",
+      "type": "group"
+    }
   },
   "response": {
     "examples": [

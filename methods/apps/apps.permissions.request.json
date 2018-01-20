@@ -3,6 +3,16 @@
   "name": "apps.permissions.request",
   "desc": "Allows an app to request additional scopes",
   "args": {
+    "scopes": {
+      "required": true,
+      "example": " ",
+      "desc": "A comma separated list of scopes to request for."
+    },
+    "trigger_id": {
+      "required": true,
+      "example": " ",
+      "desc": "Token used to trigger the permissions API."
+    }
   },
   "response": {
     "examples": [

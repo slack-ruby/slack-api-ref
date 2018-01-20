@@ -3,6 +3,16 @@
   "name": "usergroups.disable",
   "desc": "Disable an existing User Group",
   "args": {
+    "usergroup": {
+      "required": true,
+      "example": "S0604QSJC",
+      "desc": "The encoded ID of the User Group to disable."
+    },
+    "include_count": {
+      "required": false,
+      "example": "true",
+      "desc": "Include the number of users in the User Group."
+    }
   },
   "response": {
     "examples": [

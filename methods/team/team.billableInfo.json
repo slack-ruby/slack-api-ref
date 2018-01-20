@@ -3,6 +3,12 @@
   "name": "team.billableInfo",
   "desc": "Gets billable users information for the current team.",
   "args": {
+    "user": {
+      "required": false,
+      "example": "W1234567890",
+      "desc": "A user to retrieve the billable information for. Defaults to all users.",
+      "type": "user"
+    }
   },
   "response": {
     "examples": [

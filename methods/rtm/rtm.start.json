@@ -3,6 +3,36 @@
   "name": "rtm.start",
   "desc": "Starts a Real Time Messaging session.",
   "args": {
+    "batch_presence_aware": {
+      "required": false,
+      "example": "1",
+      "desc": "Only deliver presence events when requested by subscription. See presence subscriptions."
+    },
+    "include_locale": {
+      "required": false,
+      "example": "true",
+      "desc": "Set this to true to receive the locale for users and channels. Defaults to false."
+    },
+    "mpim_aware": {
+      "required": false,
+      "example": "true",
+      "desc": "Returns MPIMs to the client in the API response."
+    },
+    "no_latest": {
+      "required": false,
+      "example": "1",
+      "desc": "Exclude latest timestamps for channels, groups, mpims, and ims. Automatically sets no_unreads to 1."
+    },
+    "no_unreads": {
+      "required": false,
+      "example": "true",
+      "desc": "Skip unread counts for each channel (improves performance)."
+    },
+    "simple_latest": {
+      "required": false,
+      "example": "true",
+      "desc": "Return timestamp only for latest message object of each channel (improves performance)."
+    }
   },
   "response": {
     "examples": [

@@ -3,6 +3,17 @@
   "name": "conversations.info",
   "desc": "Retrieve information about a conversation.",
   "args": {
+    "channel": {
+      "required": true,
+      "example": "C1234567890",
+      "desc": "Conversation ID to learn more about.",
+      "type": "channel"
+    },
+    "include_locale": {
+      "required": false,
+      "example": "true",
+      "desc": "Set this to true to receive the locale for this conversation. Defaults to false."
+    }
   },
   "response": {
     "examples": [

@@ -3,6 +3,11 @@
   "name": "reminders.info",
   "desc": "Gets information about a reminder.",
   "args": {
+    "reminder": {
+      "required": true,
+      "example": "Rm23456789",
+      "desc": "The ID of the reminder."
+    }
   },
   "response": {
     "examples": [

@@ -3,6 +3,11 @@
   "name": "bots.info",
   "desc": "Gets information about a bot user.",
   "args": {
+    "bot": {
+      "required": false,
+      "example": "B12345678",
+      "desc": "Bot user to get info on."
+    }
   },
   "response": {
     "examples": [

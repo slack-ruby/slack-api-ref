@@ -3,6 +3,16 @@
   "name": "usergroups.users.list",
   "desc": "List all users in a User Group",
   "args": {
+    "usergroup": {
+      "required": true,
+      "example": "S0604QSJC",
+      "desc": "The encoded ID of the User Group to update."
+    },
+    "include_disabled": {
+      "required": false,
+      "example": "true",
+      "desc": "Allow results that involve disabled User Groups."
+    }
   },
   "response": {
     "examples": [

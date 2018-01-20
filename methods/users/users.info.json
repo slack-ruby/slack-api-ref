@@ -3,6 +3,17 @@
   "name": "users.info",
   "desc": "Gets information about a user.",
   "args": {
+    "user": {
+      "required": true,
+      "example": "W1234567890",
+      "desc": "User to get info on.",
+      "type": "user"
+    },
+    "include_locale": {
+      "required": false,
+      "example": "true",
+      "desc": "Set this to true to receive the locale for this user. Defaults to false."
+    }
   },
   "response": {
     "examples": [

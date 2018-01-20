@@ -3,6 +3,22 @@
   "name": "reminders.add",
   "desc": "Creates a reminder.",
   "args": {
+    "text": {
+      "required": true,
+      "example": "eat a banana",
+      "desc": "The content of the reminder."
+    },
+    "time": {
+      "required": true,
+      "example": "1602288000",
+      "desc": "When this reminder should happen: the Unix timestamp (up to five years from now), the number of seconds until the reminder (if within 24 hours), or a natural language description (Ex. \"in 15 minutes,\" or \"every Thursday\")."
+    },
+    "user": {
+      "required": false,
+      "example": "U18888888",
+      "desc": "The user who will receive the reminder. If no user is specified, the reminder will go to user who created it.",
+      "type": "user"
+    }
   },
   "response": {
     "examples": [

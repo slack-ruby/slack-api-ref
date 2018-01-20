@@ -3,6 +3,17 @@
   "name": "groups.setTopic",
   "desc": "Sets the topic for a private channel.",
   "args": {
+    "channel": {
+      "required": true,
+      "example": "G1234567890",
+      "desc": "Private channel to set the topic of.",
+      "type": "group"
+    },
+    "topic": {
+      "required": true,
+      "example": "My Topic",
+      "desc": "The new topic."
+    }
   },
   "response": {
     "examples": [

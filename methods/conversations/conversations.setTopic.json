@@ -3,6 +3,17 @@
   "name": "conversations.setTopic",
   "desc": "Sets the topic for a conversation.",
   "args": {
+    "channel": {
+      "required": true,
+      "example": "C1234567890",
+      "desc": "Conversation to set the topic of.",
+      "type": "channel"
+    },
+    "topic": {
+      "required": true,
+      "example": "Apply topically for best effects",
+      "desc": "The new topic string. Does not support formatting or linkification."
+    }
   },
   "response": {
     "examples": [

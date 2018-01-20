@@ -3,6 +3,18 @@
   "name": "conversations.kick",
   "desc": "Removes a user from a conversation.",
   "args": {
+    "channel": {
+      "required": true,
+      "example": "C1234567890",
+      "desc": "ID of conversation to remove user from.",
+      "type": "channel"
+    },
+    "user": {
+      "required": true,
+      "example": "W1234567890",
+      "desc": "User ID to be removed.",
+      "type": "user"
+    }
   },
   "response": {
     "examples": [

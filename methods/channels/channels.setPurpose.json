@@ -3,6 +3,17 @@
   "name": "channels.setPurpose",
   "desc": "Sets the purpose for a channel.",
   "args": {
+    "channel": {
+      "required": true,
+      "example": "C1234567890",
+      "desc": "Channel to set the purpose of.",
+      "type": "channel"
+    },
+    "purpose": {
+      "required": true,
+      "example": "My Purpose",
+      "desc": "The new purpose."
+    }
   },
   "response": {
     "examples": [

@@ -3,6 +3,42 @@
   "name": "files.upload",
   "desc": "Uploads or creates a file.",
   "args": {
+    "channels": {
+      "required": false,
+      "example": "C1234567890,C2345678901,C3456789012",
+      "desc": "Comma-separated list of channel names or IDs where the file will be shared."
+    },
+    "content": {
+      "required": false,
+      "example": "...",
+      "desc": "File contents via a POST variable. If omitting this parameter, you must provide a file."
+    },
+    "file": {
+      "required": false,
+      "example": "...",
+      "desc": "File contents via multipart/form-data. If omitting this parameter, you must submit content.",
+      "type": "file"
+    },
+    "filename": {
+      "required": false,
+      "example": "foo.txt",
+      "desc": "Filename of file."
+    },
+    "filetype": {
+      "required": false,
+      "example": "php",
+      "desc": "A file type identifier."
+    },
+    "initial_comment": {
+      "required": false,
+      "example": "Best!",
+      "desc": "Initial comment to add to file."
+    },
+    "title": {
+      "required": false,
+      "example": "My File",
+      "desc": "Title of file."
+    }
   },
   "response": {
     "examples": [

@@ -3,6 +3,11 @@
   "name": "team.profile.get",
   "desc": "Retrieve a team's profile.",
   "args": {
+    "visibility": {
+      "required": false,
+      "example": "all",
+      "desc": "Filter by visibility."
+    }
   },
   "response": {
     "examples": [
