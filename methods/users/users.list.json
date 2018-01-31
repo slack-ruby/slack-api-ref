@@ -21,7 +21,7 @@
     "presence": {
       "required": false,
       "example": "true",
-      "desc": "Whether to include presence data in the output. Defaults to false. Setting this to true reduces performance, especially with large teams."
+      "desc": "Deprecated. Whether to include presence data in the output. Defaults to false. Setting this to true reduces performance, especially with large teams."
     }
   },
   "response": {

@@ -39,6 +39,11 @@
       "example": "true",
       "desc": "Find and link channel names and usernames."
     },
+    "mrkdwn": {
+      "required": false,
+      "example": "false",
+      "desc": "Disable Slack markup parsing by setting to false. Enabled by default."
+    },
     "parse": {
       "required": false,
       "example": "full",

@@ -6,7 +6,7 @@
     "batch_presence_aware": {
       "required": false,
       "example": "1",
-      "desc": "Only deliver presence events when requested by subscription. See presence subscriptions."
+      "desc": "Batch presence deliveries via subscription. Enabling changes the shape of presence_change events. See batch presence."
     },
     "include_locale": {
       "required": false,
@@ -27,6 +27,11 @@
       "required": false,
       "example": "true",
       "desc": "Skip unread counts for each channel (improves performance)."
+    },
+    "presence_sub": {
+      "required": false,
+      "example": "true",
+      "desc": "Only deliver presence events when requested by subscription. See presence subscriptions."
     },
     "simple_latest": {
       "required": false,
