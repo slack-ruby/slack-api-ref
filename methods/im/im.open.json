@@ -22,7 +22,7 @@
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true\n}",
+      "{\n    \"ok\": true,\n    \"channel\": {\n        \"id\": \"D947RLWRX\"\n    }\n}",
       "{\n    \"ok\": false,\n    \"error\": \"invalid_auth\"\n}"
     ]
   },
