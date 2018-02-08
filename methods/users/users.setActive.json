@@ -1,7 +1,7 @@
 {
   "group": "users",
   "name": "users.setActive",
-  "desc": "Marks a user as active.",
+  "desc": "Marked a user as active. Deprecated and non-functional.",
   "args": {
   },
   "response": {
