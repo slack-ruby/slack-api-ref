@@ -33,7 +33,7 @@
     "link_names": {
       "required": false,
       "example": "true",
-      "desc": "Find and link channel names and usernames. Defaults to none. This parameter should be used in conjunction with parse. To set link_names to 1, specify a parse mode of full."
+      "desc": "Find and link channel names and usernames. Defaults to none. See below."
     },
     "parse": {
       "required": false,
