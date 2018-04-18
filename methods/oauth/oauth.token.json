@@ -25,13 +25,14 @@
     },
     "single_channel": {
       "required": false,
-      "example": "1",
+      "example": "true",
       "desc": "Request the user to add your app only to a single channel."
     }
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true,\n    \"access_token\": \"xoxa-access-token-string\",\n    \"token_type\": \"app\",\n    \"app_id\": \"A012345678\",\n    \"app_user_id\": \"U0AB12ABC\",\n    \"installer_user_id\": \"U061F7AUR\",\n    \"authorizing_user_id\": \"U0HTT3Q0G\",\n    \"team_name\": \"Subarachnoid Workspace\",\n    \"team_id\": \"T061EG9Z9\",\n    \"permissions\": [\n        {\n            \"scopes\": [\n                \"channels:read\",\n                \"chat:write:user\"\n            ],\n            \"resource_type\": \"channel\",\n            \"resource_id\": 0\n        }\n    ]\n}"
+      "{\n    \"ok\": true,\n    \"access_token\": \"xoxa-access-token-string\",\n    \"token_type\": \"app\",\n    \"app_id\": \"A012345678\",\n    \"app_user_id\": \"U0AB12ABC\",\n    \"installer_user_id\": \"U061F7AUR\",\n    \"authorizing_user_id\": \"U0HTT3Q0G\",\n    \"team_name\": \"Subarachnoid Workspace\",\n    \"team_id\": \"T061EG9Z9\",\n    \"permissions\": [\n        {\n            \"scopes\": [\n                \"channels:read\",\n                \"chat:write:user\"\n            ],\n            \"resource_type\": \"channel\",\n            \"resource_id\": 0\n        }\n    ],\n    \"single_channel_id\": \"C061EG9T2\"\n}",
+      "{\n    \"ok\": false,\n    \"error\": \"invalid_client_id\"\n}"
     ]
   },
   "errors": {
