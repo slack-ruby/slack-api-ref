@@ -11,8 +11,8 @@
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true,\n    \"bot\": {\n        \"id\": \"B061F7JQ1\",\n        \"deleted\": false,\n        \"name\": \"commandeer\",\n        \"updated\": 1449272004,\n        \"app_id\": \"A061BLERW\",\n        \"icons\": {\n            \"image_36\": \"https:\\/\\/...\",\n            \"image_48\": \"https:\\/\\/...\",\n            \"image_72\": \"https:\\/\\/...\"\n        }\n    }\n}",
-      "{\n    \"ok\": true,\n    \"bot\": {\n        \"id\": \"B061F7JD2\",\n        \"deleted\": false,\n        \"name\": \"beforebot\",\n        \"updated\": 1449272004,\n        \"app_id\": \"A161CLERW\",\n        \"user_id\": \"U012ABCDEF\",\n        \"icons\": {\n            \"image_36\": \"https:\\/\\/...\",\n            \"image_48\": \"https:\\/\\/...\",\n            \"image_72\": \"https:\\/\\/...\"\n        }\n    }\n}",
+      "{\n    \"ok\": true,\n    \"bot\": {\n        \"id\": \"B061F7JQ1\",\n        \"deleted\": false,\n        \"name\": \"commandeer\",\n        \"updated\": 1449272004,\n        \"app_id\": \"A061BLERW\",\n        \"icons\": {\n            \"image_36\": \"https://...\",\n            \"image_48\": \"https://...\",\n            \"image_72\": \"https://...\"\n        }\n    }\n}",
+      "{\n    \"ok\": true,\n    \"bot\": {\n        \"id\": \"B061F7JD2\",\n        \"deleted\": false,\n        \"name\": \"beforebot\",\n        \"updated\": 1449272004,\n        \"app_id\": \"A161CLERW\",\n        \"user_id\": \"U012ABCDEF\",\n        \"icons\": {\n            \"image_36\": \"https://...\",\n            \"image_48\": \"https://...\",\n            \"image_72\": \"https://...\"\n        }\n    }\n}",
       "{\n    \"ok\": false,\n    \"error\": \"bot_not_found\"\n}"
     ]
   },
