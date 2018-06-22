@@ -12,6 +12,11 @@
       "required": false,
       "example": "true",
       "desc": "Create a private channel instead of a public one."
+    },
+    "user_ids": {
+      "required": false,
+      "example": "W1234567890,U2345678901,U3456789012",
+      "desc": "Required for workspace apps. A list of between 1 and 30 human users that will be added to the newly-created conversation. This argument has no effect when used by classic Slack apps."
     }
   },
   "response": {
@@ -30,6 +35,10 @@
     "invalid_name_maxlength": "Value passed for name exceeded max length.",
     "invalid_name_specials": "Value passed for name contained unallowed special characters or upper case characters.",
     "invalid_name": "Value passed for name was invalid.",
+    "invalid_users": "Value passed for user_ids was empty or invalid.",
+    "user_not_found": "One or more users in user_ids was not found.",
+    "too_many_convos_for_team": "The workspace has exceeded its limit of public and private channels.",
+    "too_many_convos_for_app_on_team": "This app has exceeded its per-workspace limit of public and private channels.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",
