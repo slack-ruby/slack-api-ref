@@ -3,10 +3,20 @@
   "name": "stars.list",
   "desc": "Lists stars for a user.",
   "args": {
+    "cursor": {
+      "required": false,
+      "example": "dXNlcjpVMDYxTkZUVDI=",
+      "desc": "Parameter for pagination. Set cursor equal to the next_cursor attribute returned by the previous request's response_metadata. This parameter is optional, but pagination is mandatory: the default value simply fetches the first \"page\" of the collection. See pagination for more details."
+    },
+    "limit": {
+      "required": false,
+      "example": "20",
+      "desc": "The maximum number of items to return. Fewer than the requested number of items may be returned, even if the end of the list hasn't been reached."
+    }
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true,\n    \"items\": [\n        {\n            \"type\": \"message\",\n            \"channel\": \"C2147483705\",\n            \"message\": {...}\n        },\n        {\n            \"type\": \"file\",\n            \"file\": { ... }\n        }\n        {\n            \"type\": \"file_comment\",\n            \"file\": { ... },\n            \"comment\": { ... }\n        }\n        {\n            \"type\": \"channel\",\n            \"channel\": \"C2147483705\"\n        },\n\n    ],\n    \"paging\": {\n        \"count\": 100,\n        \"total\": 4,\n        \"page\": 1,\n        \"pages\": 1\n    }\n}"
+      "{\n    \"ok\": true,\n    \"items\": [\n        {\n            \"type\": \"message\",\n            \"channel\": \"C2147483705\",\n            \"message\": {...}\n        },\n        {\n            \"type\": \"file\",\n            \"file\": { ... }\n        }\n        {\n            \"type\": \"file_comment\",\n            \"file\": { ... },\n            \"comment\": { ... }\n        }\n        {\n            \"type\": \"channel\",\n            \"channel\": \"C2147483705\"\n        },\n\n    ],\n    \"response_metadata\": {\n        \"next_cursor\": \"dGVhbTpDMUg5UkVTR0w=\"\n    }\n}"
     ]
   },
   "errors": {

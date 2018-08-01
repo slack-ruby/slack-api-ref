@@ -3,10 +3,20 @@
   "name": "mpim.list",
   "desc": "Lists multiparty direct message channels for the calling user.",
   "args": {
+    "cursor": {
+      "required": false,
+      "example": "dXNlcjpVMDYxTkZUVDI=",
+      "desc": "Parameter for pagination. Set cursor equal to the next_cursor attribute returned by the previous request's response_metadata. This parameter is optional, but pagination is mandatory: the default value simply fetches the first \"page\" of the collection. See pagination for more details."
+    },
+    "limit": {
+      "required": false,
+      "example": "20",
+      "desc": "The maximum number of items to return. Fewer than the requested number of items may be returned, even if the end of the list hasn't been reached."
+    }
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true,\n    \"groups\": [\n        {\n            \"id\": \"G024BE91L\",\n            \"name\": \"dm-messaging-user-1\",\n            \"created\": 1360782804,\n            \"creator\": \"U024BE7LH\",\n            \"is_archived\": false,\n            \"is_mpim\": true\n            \"members\": [\n                \"U024BE7LH\",\n                \"U1234567890\",\n                \"U2345678901\",\n                \"U3456789012\"\n            ],\n            \"topic\": {\n                \"value\": \"Group messaging.\",\n                \"creator\": \"U024BE7LH\",\n                \"last_set\": 1360782804\n            },\n            \"purpose\": {\n                \"value\": \"Group messaging with: @user @user_a @user_b @user_c\",\n                \"creator\": \"U024BE7LH\",\n                \"last_set\": 1360782804\n            }\n        },\n        ....\n    ]\n}"
+      "{\n    \"ok\": true,\n    \"groups\": [\n        {\n            \"id\": \"G024BE91L\",\n            \"name\": \"dm-messaging-user-1\",\n            \"created\": 1360782804,\n            \"creator\": \"U024BE7LH\",\n            \"is_archived\": false,\n            \"is_mpim\": true\n            \"members\": [\n                \"U024BE7LH\",\n                \"U1234567890\",\n                \"U2345678901\",\n                \"U3456789012\"\n            ],\n            \"topic\": {\n                \"value\": \"Group messaging.\",\n                \"creator\": \"U024BE7LH\",\n                \"last_set\": 1360782804\n            },\n            \"purpose\": {\n                \"value\": \"Group messaging with: @user @user_a @user_b @user_c\",\n                \"creator\": \"U024BE7LH\",\n                \"last_set\": 1360782804\n            }\n        },\n        ....\n    ],\n    \"response_metadata\": {\n        \"next_cursor\": \"dGVhbTpDMUg5UkVTR0w=\"\n    }\n}"
     ]
   },
   "errors": {
