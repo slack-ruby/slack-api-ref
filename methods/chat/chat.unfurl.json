@@ -44,6 +44,7 @@
   },
   "errors": {
     "cannot_unfurl_url": "The URL cannot be unfurled. This error may be returned if you haven't acknowledged a link_shared event tied to the same URL. It is also returned when the domain appears in a workspace's administrative blacklists.",
+    "cannot_find_message": "The ts value in the request does not match a message.",
     "cannot_find_service": "A record of your app being allowed to unfurl for this workspace could not be found.",
     "missing_unfurls": "The request is missing the unfurls parameter.",
     "cannot_prompt": "The current user has already interacted with and dismissed a prompt for this application.",
