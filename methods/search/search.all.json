@@ -1,0 +1,54 @@
+{
+  "group": "search",
+  "name": "search.all",
+  "desc": "Searches for messages and files matching a query.",
+  "args": {
+    "query": {
+      "required": true,
+      "example": "pickleface",
+      "desc": "Search query. May contains booleans, etc."
+    },
+    "highlight": {
+      "required": false,
+      "example": "true",
+      "desc": "Pass a value of true to enable query highlight markers (see below)."
+    },
+    "sort": {
+      "required": false,
+      "example": "timestamp",
+      "desc": "Return matches sorted by either score or timestamp."
+    },
+    "sort_dir": {
+      "required": false,
+      "example": "asc",
+      "desc": "Change sort direction to ascending (asc) or descending (desc)."
+    }
+  },
+  "response": {
+    "examples": [
+      "{\n    \"files\": {\n        \"matches\": [\n            {\n                \"channels\": [],\n                \"comments_count\": 1,\n                \"created\": 1508804330,\n                \"display_as_bot\": false,\n                \"editable\": false,\n                \"external_type\": \"\",\n                \"filetype\": \"png\",\n                \"groups\": [],\n                \"id\": \"F7PKF1NR7\",\n                \"image_exif_rotation\": 1,\n                \"ims\": [],\n                \"initial_comment\": {\n                    \"comment\": \"Sure! Here's the workflow diagram!\",\n                    \"created\": 1508804330,\n                    \"id\": \"Fc7NLL52E7\",\n                    \"is_intro\": true,\n                    \"timestamp\": 1508804330,\n                    \"user\": \"U2U85N1RZ\"\n                },\n                \"is_external\": false,\n                \"is_public\": true,\n                \"mimetype\": \"image/png\",\n                \"mode\": \"hosted\",\n                \"name\": \"slack workflow diagram.png\",\n                \"original_h\": 117,\n                \"original_w\": 128,\n                \"permalink\": \"https://example.slack.com/files/U2U85N1RZ/F7PKF1NR7/slack_workflow_diagram.png\",\n                \"permalink_public\": \"https://slack-files.com/T2U81E2FZ-F7PKF1NR7-bea9143f18\",\n                \"pretty_type\": \"PNG\",\n                \"preview\": null,\n                \"public_url_shared\": false,\n                \"score\": \"0.99982661240974\",\n                \"size\": 35705,\n                \"thumb_160\": \"https://files.slack.com/files-tmb/T2U81E2FZ-F7PKF1NR7-19f33fc256/slack_workflow_diagram_160.png\",\n                \"thumb_360\": \"https://files.slack.com/files-tmb/T2U81E2FZ-F7PKF1NR7-19f33fc256/slack_workflow_diagram_360.png\",\n                \"thumb_360_h\": 117,\n                \"thumb_360_w\": 128,\n                \"thumb_64\": \"https://files.slack.com/files-tmb/T2U81E2FZ-F7PKF1NR7-19f33fc256/slack_workflow_diagram_64.png\",\n                \"thumb_80\": \"https://files.slack.com/files-tmb/T2U81E2FZ-F7PKF1NR7-19f33fc256/slack_workflow_diagram_80.png\",\n                \"timestamp\": 1508804330,\n                \"title\": \"slack workflow diagram\",\n                \"top_file\": false,\n                \"url_private\": \"https://files.slack.com/files-pri/T2U81E2FZ-F7PKF1NR7/slack_workflow_diagram.png\",\n                \"url_private_download\": \"https://files.slack.com/files-pri/T2U81E2FZ-F7PKF1NR7/download/slack_workflow_diagram.png\",\n                \"user\": \"U2U85N1RZ\",\n                \"username\": \"amy\"\n            }\n        ],\n        \"pagination\": {\n            \"first\": 1,\n            \"last\": 1,\n            \"page\": 1,\n            \"page_count\": 1,\n            \"per_page\": 20,\n            \"total_count\": 1\n        },\n        \"paging\": {\n            \"count\": 20,\n            \"page\": 1,\n            \"pages\": 1,\n            \"total\": 1\n        },\n        \"total\": 1\n    },\n    \"messages\": {\n        \"matches\": [\n            {\n                \"channel\": {\n                    \"id\": \"C2U86NC6M\",\n                    \"is_ext_shared\": false,\n                    \"is_mpim\": false,\n                    \"is_org_shared\": false,\n                    \"is_pending_ext_shared\": false,\n                    \"is_private\": false,\n                    \"is_shared\": false,\n                    \"name\": \"general\",\n                    \"pending_shared\": []\n                },\n                \"iid\": \"35692677-e60e-43d9-ac45-1987cea88975\",\n                \"next\": {\n                    \"iid\": \"6f510ea1-e1d3-4f3f-bdb9-f9c6f6e9d609\",\n                    \"text\": \"Thanks!\",\n                    \"ts\": \"1508804378.000219\",\n                    \"type\": \"message\",\n                    \"user\": \"U2U85HJ7R\",\n                    \"username\": \"john\"\n                },\n                \"permalink\": \"https://example.slack.com/archives/C2U86NC6M/p1508804330000296\",\n                \"previous\": {\n                    \"iid\": \"aba8603c-0543-4fb2-9118-a5ac85f3d138\",\n                    \"text\": \"Can you send me the Slack workflow diagram?\",\n                    \"ts\": \"1508804301.000026\",\n                    \"type\": \"message\",\n                    \"user\": \"U2U85HJ7R\",\n                    \"username\": \"john\"\n                },\n                \"team\": \"T2U81E2FZ\",\n                \"text\": \"uploaded a file: <https://example.slack.com/files/U2U85N1RZ/F7PKF1NR7/slack_workflow_diagram.png|slack workflow diagram> and commented: Sure! Here's the workflow diagram!\",\n                \"ts\": \"1508804330.000296\",\n                \"type\": \"message\",\n                \"user\": \"U2U85N1RZ\",\n                \"username\": \"amy\"\n            }\n        ],\n        \"pagination\": {\n            \"first\": 1,\n            \"last\": 1,\n            \"page\": 1,\n            \"page_count\": 1,\n            \"per_page\": 20,\n            \"total_count\": 1\n        },\n        \"paging\": {\n            \"count\": 20,\n            \"page\": 1,\n            \"pages\": 1,\n            \"total\": 1\n        },\n        \"total\": 1\n    },\n    \"ok\": true,\n    \"posts\": {\n        \"matches\": [],\n        \"total\": 0\n    },\n    \"query\": \"diagram\"\n}",
+      "{\n    \"error\": \"missing_scope\",\n    \"needed\": \"search:read\",\n    \"ok\": false,\n    \"provided\": \"identify,bot:basic\"\n}",
+      "{\n    \"matches\": [],\n    \"paging\": {\n        \"count\": 100,\n        \"total\": 15,\n        \"page\": 1,\n        \"pages\": 1\n    }\n}"
+    ]
+  },
+  "errors": {
+    "not_authed": "No authentication token provided.",
+    "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
+    "account_inactive": "Authentication token is for a deleted user or workspace.",
+    "token_revoked": "Authentication token is for a deleted user or workspace or the app has been removed.",
+    "no_permission": "The workspace token used in this request does not have the permissions necessary to complete the request. Make sure your app is a member of the conversation it's attempting to post a message to.",
+    "org_login_required": "The workspace is undergoing an enterprise migration and will not be available until migration is complete.",
+    "user_is_bot": "This method cannot be called by a bot user.",
+    "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
+    "invalid_array_arg": "The method was passed a PHP-style array argument (e.g. with a name like foo[7]). These are never valid with the Slack API.",
+    "invalid_charset": "The method was called via a POST request, but the charset specified in the Content-Type header was invalid. Valid charset names are: utf-8 iso-8859-1.",
+    "invalid_form_data": "The method was called via a POST request with Content-Type application/x-www-form-urlencoded or multipart/form-data, but the form data was either missing or syntactically invalid.",
+    "invalid_post_type": "The method was called via a POST request, but the specified Content-Type was invalid. Valid types are: application/x-www-form-urlencoded multipart/form-data text/plain.",
+    "missing_post_type": "The method was called via a POST request and included a data payload, but the request did not include a Content-Type header.",
+    "team_added_to_org": "The workspace associated with your request is currently undergoing migration to an Enterprise Organization. Web API and other platform operations will be intermittently unavailable until the transition is complete.",
+    "request_timeout": "The method was called via a POST request, but the POST data was either missing or truncated.",
+    "fatal_error": "The server could not complete your operation(s) without encountering a catastrophic error. It's possible some aspect of the operation succeeded before the error was raised."
+  },
+  "has_paging": true,
+  "default_count": 100
+}

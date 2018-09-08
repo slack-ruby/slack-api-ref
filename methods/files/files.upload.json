@@ -1,0 +1,74 @@
+{
+  "group": "files",
+  "name": "files.upload",
+  "desc": "Uploads or creates a file.",
+  "args": {
+    "channels": {
+      "required": false,
+      "example": "C1234567890,C2345678901,C3456789012",
+      "desc": "Comma-separated list of channel names or IDs where the file will be shared."
+    },
+    "content": {
+      "required": false,
+      "example": "...",
+      "desc": "File contents via a POST variable. If omitting this parameter, you must provide a file."
+    },
+    "file": {
+      "required": false,
+      "example": "...",
+      "desc": "File contents via multipart/form-data. If omitting this parameter, you must submit content.",
+      "type": "file"
+    },
+    "filename": {
+      "required": false,
+      "example": "foo.txt",
+      "desc": "Filename of file."
+    },
+    "filetype": {
+      "required": false,
+      "example": "php",
+      "desc": "A file type identifier."
+    },
+    "initial_comment": {
+      "required": false,
+      "example": "Best!",
+      "desc": "The message text introducing the file in specified channels."
+    },
+    "thread_ts": {
+      "required": false,
+      "example": "1234567890.123456",
+      "desc": "Provide another message's ts value to upload this file as a reply. Never use a reply's ts value; use its parent instead."
+    },
+    "title": {
+      "required": false,
+      "example": "My File",
+      "desc": "Title of file."
+    }
+  },
+  "response": {
+    "examples": [
+      "{\n    \"ok\": true,\n    \"file\": {\n        \"id\": \"F0TD00400\",\n        \"created\": 1532293501,\n        \"timestamp\": 1532293501,\n        \"name\": \"dramacat.gif\",\n        \"title\": \"dramacat\",\n        \"mimetype\": \"image/jpeg\",\n        \"filetype\": \"gif\",\n        \"pretty_type\": \"JPEG\",\n        \"user\": \"U0L4B9NSU\",\n        \"editable\": false,\n        \"size\": 43518,\n        \"mode\": \"hosted\",\n        \"is_external\": false,\n        \"external_type\": \"\",\n        \"is_public\": false,\n        \"public_url_shared\": false,\n        \"display_as_bot\": false,\n        \"username\": \"\",\n        \"url_private\": \"https://.../dramacat.gif\",\n        \"url_private_download\": \"https://.../dramacat.gif\",\n        \"thumb_64\": \"https://.../dramacat_64.gif\",\n        \"thumb_80\": \"https://.../dramacat_80.gif\",\n        \"thumb_360\": \"https://.../dramacat_360.gif\",\n        \"thumb_360_w\": 360,\n        \"thumb_360_h\": 250,\n        \"thumb_480\": \"https://.../dramacat_480.gif\",\n        \"thumb_480_w\": 480,\n        \"thumb_480_h\": 334,\n        \"thumb_160\": \"https://.../dramacat_160.gif\",\n        \"image_exif_rotation\": 1,\n        \"original_w\": 526,\n        \"original_h\": 366,\n        \"permalink\": \"https://.../dramacat.gif\",\n        \"permalink_public\": \"https://.../More-Path-Components\",\n        \"comments_count\": 0,\n        \"is_starred\": false,\n        \"shares\": {\n            \"private\": {\n                \"D0L4B9P0Q\": [\n                    {\n                        \"reply_users\": [],\n                        \"reply_users_count\": 0,\n                        \"reply_count\": 0,\n                        \"ts\": \"1532293503.000001\"\n                    }\n                ]\n            }\n        },\n        \"channels\": [],\n        \"groups\": [],\n        \"ims\": [\n            \"D0L4B9P0Q\"\n        ],\n        \"has_rich_preview\": false\n    }\n}",
+      "{\n    \"ok\": true,\n    \"file\": {\n        \"id\": \"F0TD0GUTS\",\n        \"created\": 1532294750,\n        \"timestamp\": 1532294750,\n        \"name\": \"-.txt\",\n        \"title\": \"Untitled\",\n        \"mimetype\": \"text/plain\",\n        \"filetype\": \"text\",\n        \"pretty_type\": \"Plain Text\",\n        \"user\": \"U0L4B9NSU\",\n        \"editable\": true,\n        \"size\": 11,\n        \"mode\": \"snippet\",\n        \"is_external\": false,\n        \"external_type\": \"\",\n        \"is_public\": true,\n        \"public_url_shared\": false,\n        \"display_as_bot\": false,\n        \"username\": \"\",\n        \"url_private\": \"https://.../.txt\",\n        \"url_private_download\": \"https://...download/-.txt\",\n        \"permalink\": \"https://.../.txt\",\n        \"permalink_public\": \"https://.../.txt\",\n        \"edit_link\": \"https://.../.txt/edit\",\n        \"preview\": \"launch plan\",\n        \"preview_highlight\": \"<div class=\\\"CodeMirror cm-s-default CodeMirrorServer\\\" oncopy=\\\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\\\u200b/g,''));event.preventDefault();event.stopPropagation();}\\\">\\n<div class=\\\"CodeMirror-code\\\">\\n<div><pre>launch plan</pre></div>\\n</div>\\n</div>\\n\",\n        \"lines\": 1,\n        \"lines_more\": 0,\n        \"preview_is_truncated\": false,\n        \"comments_count\": 0,\n        \"is_starred\": false,\n        \"shares\": {\n            \"public\": {\n                \"C061EG9SL\": [\n                    {\n                        \"reply_users\": [],\n                        \"reply_users_count\": 0,\n                        \"reply_count\": 0,\n                        \"ts\": \"1532294750.000001\",\n                        \"channel_name\": \"general\",\n                        \"team_id\": \"T061EG9R6\"\n                    }\n                ]\n            }\n        },\n        \"channels\": [\n            \"C061EG9SL\"\n        ],\n        \"groups\": [],\n        \"ims\": [],\n        \"has_rich_preview\": false\n    }\n}",
+      "{\n    \"ok\": false,\n    \"error\": \"invalid_auth\"\n}"
+    ]
+  },
+  "errors": {
+    "posting_to_general_channel_denied": "An admin has restricted posting to the #general channel.",
+    "invalid_channel": "One or more channels supplied are invalid.",
+    "not_authed": "No authentication token provided.",
+    "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
+    "account_inactive": "Authentication token is for a deleted user or workspace.",
+    "token_revoked": "Authentication token is for a deleted user or workspace or the app has been removed.",
+    "no_permission": "The workspace token used in this request does not have the permissions necessary to complete the request. Make sure your app is a member of the conversation it's attempting to post a message to.",
+    "org_login_required": "The workspace is undergoing an enterprise migration and will not be available until migration is complete.",
+    "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
+    "invalid_array_arg": "The method was passed a PHP-style array argument (e.g. with a name like foo[7]). These are never valid with the Slack API.",
+    "invalid_charset": "The method was called via a POST request, but the charset specified in the Content-Type header was invalid. Valid charset names are: utf-8 iso-8859-1.",
+    "invalid_form_data": "The method was called via a POST request with Content-Type application/x-www-form-urlencoded or multipart/form-data, but the form data was either missing or syntactically invalid.",
+    "invalid_post_type": "The method was called via a POST request, but the specified Content-Type was invalid. Valid types are: application/x-www-form-urlencoded multipart/form-data text/plain.",
+    "missing_post_type": "The method was called via a POST request and included a data payload, but the request did not include a Content-Type header.",
+    "team_added_to_org": "The workspace associated with your request is currently undergoing migration to an Enterprise Organization. Web API and other platform operations will be intermittently unavailable until the transition is complete.",
+    "request_timeout": "The method was called via a POST request, but the POST data was either missing or truncated.",
+    "fatal_error": "The server could not complete your operation(s) without encountering a catastrophic error. It's possible some aspect of the operation succeeded before the error was raised."
+  }
+}

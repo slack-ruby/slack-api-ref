@@ -1,0 +1,65 @@
+{
+  "group": "rtm",
+  "name": "rtm.start",
+  "desc": "Starts a Real Time Messaging session.",
+  "args": {
+    "batch_presence_aware": {
+      "required": false,
+      "example": "1",
+      "desc": "Batch presence deliveries via subscription. Enabling changes the shape of presence_change events. See batch presence."
+    },
+    "include_locale": {
+      "required": false,
+      "example": "true",
+      "desc": "Set this to true to receive the locale for users and channels. Defaults to false."
+    },
+    "mpim_aware": {
+      "required": false,
+      "example": "true",
+      "desc": "Returns MPIMs to the client in the API response."
+    },
+    "no_latest": {
+      "required": false,
+      "example": "1",
+      "desc": "Exclude latest timestamps for channels, groups, mpims, and ims. Automatically sets no_unreads to 1."
+    },
+    "no_unreads": {
+      "required": false,
+      "example": "true",
+      "desc": "Skip unread counts for each channel (improves performance)."
+    },
+    "presence_sub": {
+      "required": false,
+      "example": "true",
+      "desc": "Only deliver presence events when requested by subscription. See presence subscriptions."
+    },
+    "simple_latest": {
+      "required": false,
+      "example": "true",
+      "desc": "Return timestamp only for latest message object of each channel (improves performance)."
+    }
+  },
+  "response": {
+    "examples": [
+      "{\n    \"ok\": true,\n    \"url\": \"wss:\\/\\/ms9.slack-msgs.com\\/websocket\\/7I5yBpcvk\",\n\n    \"self\": {\n        \"id\": \"U023BECGF\",\n        \"name\": \"bobby\",\n        \"prefs\": {\n            ...\n        },\n        \"created\": 1402463766,\n        \"manual_presence\": \"active\"\n    },\n    \"team\": {\n        \"id\": \"T024BE7LD\",\n        \"name\": \"Example Team\",\n        \"email_domain\": \"\",\n        \"domain\": \"example\",\n        \"icon\": {\n            ...\n        },\n        \"msg_edit_window_mins\": -1,\n        \"over_storage_limit\": false\n        \"prefs\": {\n            ...\n        },\n        \"plan\": \"std\"\n    },\n    \"users\": [ ... ],\n\n    \"channels\": [ ... ],\n    \"groups\": [ ... ],\n    \"mpims\": [ ... ],\n    \"ims\": [ ... ],\n\n    \"bots\": [ ... ],\n}"
+    ]
+  },
+  "errors": {
+    "migration_in_progress": "Workspace is being migrated between servers. See the team_migration_started event documentation for details.",
+    "not_authed": "No authentication token provided.",
+    "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
+    "account_inactive": "Authentication token is for a deleted user or workspace.",
+    "token_revoked": "Authentication token is for a deleted user or workspace or the app has been removed.",
+    "no_permission": "The workspace token used in this request does not have the permissions necessary to complete the request. Make sure your app is a member of the conversation it's attempting to post a message to.",
+    "org_login_required": "The workspace is undergoing an enterprise migration and will not be available until migration is complete.",
+    "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
+    "invalid_array_arg": "The method was passed a PHP-style array argument (e.g. with a name like foo[7]). These are never valid with the Slack API.",
+    "invalid_charset": "The method was called via a POST request, but the charset specified in the Content-Type header was invalid. Valid charset names are: utf-8 iso-8859-1.",
+    "invalid_form_data": "The method was called via a POST request with Content-Type application/x-www-form-urlencoded or multipart/form-data, but the form data was either missing or syntactically invalid.",
+    "invalid_post_type": "The method was called via a POST request, but the specified Content-Type was invalid. Valid types are: application/x-www-form-urlencoded multipart/form-data text/plain.",
+    "missing_post_type": "The method was called via a POST request and included a data payload, but the request did not include a Content-Type header.",
+    "team_added_to_org": "The workspace associated with your request is currently undergoing migration to an Enterprise Organization. Web API and other platform operations will be intermittently unavailable until the transition is complete.",
+    "request_timeout": "The method was called via a POST request, but the POST data was either missing or truncated.",
+    "fatal_error": "The server could not complete your operation(s) without encountering a catastrophic error. It's possible some aspect of the operation succeeded before the error was raised."
+  }
+}
