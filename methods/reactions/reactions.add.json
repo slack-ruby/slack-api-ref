@@ -17,13 +17,13 @@
     "file": {
       "required": false,
       "example": "F1234567890",
-      "desc": "File to add reaction to.",
+      "desc": "File to add reaction to. Now that file threads work the way you'd expect, this argument is deprecated. Specify the timestamp and channel of the message associated with a file instead.",
       "type": "file"
     },
     "file_comment": {
       "required": false,
       "example": "Fc1234567890",
-      "desc": "File comment to add reaction to."
+      "desc": "File comment to add reaction to. Now that file threads work the way you'd expect, this argument is deprecated. Specify the timestamp and channel of the message associated with a file instead."
     },
     "timestamp": {
       "required": false,
