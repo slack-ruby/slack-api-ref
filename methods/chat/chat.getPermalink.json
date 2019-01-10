@@ -6,13 +6,13 @@
     "channel": {
       "required": true,
       "example": "C1234567890",
-      "desc": "The ID of the conversation or channel containing the message.",
+      "desc": ".",
       "type": "channel"
     },
     "message_ts": {
       "required": true,
       "example": "1234567890.123456",
-      "desc": "A message's ts value, uniquely identifying it within a channel."
+      "desc": "."
     }
   },
   "response": {

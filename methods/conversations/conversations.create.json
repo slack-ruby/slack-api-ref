@@ -6,17 +6,17 @@
     "name": {
       "required": true,
       "example": "mychannel",
-      "desc": "Name of the public or private channel to create."
+      "desc": "."
     },
     "is_private": {
       "required": false,
       "example": "true",
-      "desc": "Create a private channel instead of a public one."
+      "desc": "."
     },
     "user_ids": {
       "required": false,
       "example": "W1234567890,U2345678901,U3456789012",
-      "desc": "Required for workspace apps. A list of between 1 and 30 human users that will be added to the newly-created conversation. This argument has no effect when used by classic Slack apps."
+      "desc": "."
     }
   },
   "response": {

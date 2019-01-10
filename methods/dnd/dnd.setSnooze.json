@@ -6,7 +6,7 @@
     "num_minutes": {
       "required": true,
       "example": "60",
-      "desc": "Number of minutes, from now, to snooze until."
+      "desc": "."
     }
   },
   "response": {

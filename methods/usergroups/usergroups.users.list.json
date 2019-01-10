@@ -6,12 +6,12 @@
     "usergroup": {
       "required": true,
       "example": "S0604QSJC",
-      "desc": "The encoded ID of the User Group to update."
+      "desc": "."
     },
     "include_disabled": {
       "required": false,
       "example": "true",
-      "desc": "Allow results that involve disabled User Groups."
+      "desc": "."
     }
   },
   "response": {

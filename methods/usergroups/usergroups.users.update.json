@@ -6,17 +6,17 @@
     "usergroup": {
       "required": true,
       "example": "S0604QSJC",
-      "desc": "The encoded ID of the User Group to update."
+      "desc": "."
     },
     "users": {
       "required": true,
       "example": "U060R4BJ4,U060RNRCZ",
-      "desc": "A comma separated string of encoded user IDs that represent the entire list of users for the User Group."
+      "desc": "."
     },
     "include_count": {
       "required": false,
       "example": "true",
-      "desc": "Include the number of users in the User Group."
+      "desc": "."
     }
   },
   "response": {

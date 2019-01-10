@@ -6,13 +6,13 @@
     "channel": {
       "required": true,
       "example": "C1234567890",
-      "desc": "Conversation to set the purpose of.",
+      "desc": ".",
       "type": "channel"
     },
     "purpose": {
       "required": true,
       "example": "My More Special Purpose",
-      "desc": "A new, specialer purpose."
+      "desc": "."
     }
   },
   "response": {

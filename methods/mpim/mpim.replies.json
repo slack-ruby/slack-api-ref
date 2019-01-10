@@ -6,13 +6,13 @@
     "channel": {
       "required": true,
       "example": "C1234567890",
-      "desc": "Multiparty direct message channel to fetch thread from.",
+      "desc": ".",
       "type": "channel"
     },
     "thread_ts": {
       "required": true,
       "example": "1234567890.123456",
-      "desc": "Unique identifier of a thread's parent message."
+      "desc": "."
     }
   },
   "response": {

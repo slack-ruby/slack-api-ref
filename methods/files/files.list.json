@@ -6,28 +6,28 @@
     "channel": {
       "required": false,
       "example": "C1234567890",
-      "desc": "Filter files appearing in a specific channel, indicated by its ID.",
+      "desc": ".",
       "type": "channel"
     },
     "ts_from": {
       "required": false,
       "example": "123456789",
-      "desc": "Filter files created after this timestamp (inclusive)."
+      "desc": "."
     },
     "ts_to": {
       "required": false,
       "example": "123456789",
-      "desc": "Filter files created before this timestamp (inclusive)."
+      "desc": "."
     },
     "types": {
       "required": false,
       "example": "images",
-      "desc": "Filter files by type:\n* `all` - All files\n* `spaces` - Posts\n* `snippets` - Snippets\n* `images` - Image files\n* `gdocs` - Google docs\n* `zips` - Zip files\n* `pdfs` - PDF files\n\nYou can pass multiple values in the types argument, like `types=spaces,snippets`.The default value is `all`, which does not filter the list.\n\n."
+      "desc": "."
     },
     "user": {
       "required": false,
       "example": "W1234567890",
-      "desc": "Filter files created by a single user.",
+      "desc": ".",
       "type": "user"
     }
   },

@@ -6,13 +6,13 @@
     "channel": {
       "required": true,
       "example": "C1234567890",
-      "desc": "Channel to set the topic of.",
+      "desc": ".",
       "type": "channel"
     },
     "topic": {
       "required": true,
       "example": "My Topic",
-      "desc": "The new topic."
+      "desc": "."
     }
   },
   "response": {

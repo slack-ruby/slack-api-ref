@@ -6,13 +6,13 @@
     "channel": {
       "required": true,
       "example": "C1234567890",
-      "desc": "Channel to send message to. Can be a public channel, private group or IM channel. Can be an encoded ID, or a name.",
+      "desc": ".",
       "type": "channel"
     },
     "text": {
       "required": true,
       "example": "Hello world",
-      "desc": "Text of the message to send."
+      "desc": "."
     }
   },
   "response": {

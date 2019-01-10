@@ -6,39 +6,39 @@
     "channel": {
       "required": true,
       "example": "C1234567890",
-      "desc": "Channel containing the message to be updated.",
+      "desc": ".",
       "type": "channel"
     },
     "text": {
       "required": true,
       "example": "Hello world",
-      "desc": "New text for the message, using the default formatting rules. It's not required when presenting attachments."
+      "desc": "."
     },
     "ts": {
       "required": true,
       "example": "1405894322.002768",
-      "desc": "Timestamp of the message to be updated.",
+      "desc": ".",
       "type": "timestamp"
     },
     "as_user": {
       "required": false,
       "example": "true",
-      "desc": "Pass true to update the message as the authed user. Bot users in this context are considered authed users."
+      "desc": "."
     },
     "attachments": {
       "required": false,
       "example": "[{\"pretext\": \"pre-hello\", \"text\": \"text-world\"}]",
-      "desc": "A JSON-based array of structured attachments, presented as a URL-encoded string. This field is required when not presenting text."
+      "desc": "."
     },
     "link_names": {
       "required": false,
       "example": "true",
-      "desc": "Find and link channel names and usernames. Defaults to none. See below."
+      "desc": "."
     },
     "parse": {
       "required": false,
       "example": "none",
-      "desc": "Change how messages are treated. Defaults to client, unlike chat.postMessage. See below."
+      "desc": "."
     }
   },
   "response": {

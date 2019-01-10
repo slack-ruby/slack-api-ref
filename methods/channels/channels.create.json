@@ -6,12 +6,12 @@
     "name": {
       "required": true,
       "example": "mychannel",
-      "desc": "Name of channel to create."
+      "desc": "."
     },
     "validate": {
       "required": false,
       "example": "true",
-      "desc": "Whether to return errors on invalid channel name instead of modifying it to meet the specified criteria."
+      "desc": "."
     }
   },
   "response": {

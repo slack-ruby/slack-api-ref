@@ -6,7 +6,7 @@
     "file": {
       "required": true,
       "example": "F1234567890",
-      "desc": "File to revoke.",
+      "desc": ".",
       "type": "file"
     }
   },

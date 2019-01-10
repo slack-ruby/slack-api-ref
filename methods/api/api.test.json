@@ -6,12 +6,12 @@
     "error": {
       "required": false,
       "example": "my_error",
-      "desc": "Error response to return."
+      "desc": "."
     },
     "foo": {
       "required": false,
       "example": "bar",
-      "desc": "example property to return."
+      "desc": "."
     }
   },
   "response": {

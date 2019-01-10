@@ -6,22 +6,22 @@
     "cursor": {
       "required": false,
       "example": "dXNlcjpVMDYxTkZUVDI=",
-      "desc": "Parameter for pagination. Set cursor equal to the next_cursor attribute returned by the previous request's response_metadata. This parameter is optional, but pagination is mandatory: the default value simply fetches the first \"page\" of the collection. See pagination for more details."
+      "desc": "."
     },
     "exclude_archived": {
       "required": false,
       "example": "true",
-      "desc": "Don't return archived private channels."
+      "desc": "."
     },
     "exclude_members": {
       "required": false,
       "example": "true",
-      "desc": "Exclude the members from each group."
+      "desc": "."
     },
     "limit": {
       "required": false,
       "example": "20",
-      "desc": "The maximum number of items to return. Fewer than the requested number of items may be returned, even if the end of the list hasn't been reached."
+      "desc": "."
     }
   },
   "response": {

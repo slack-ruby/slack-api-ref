@@ -6,13 +6,13 @@
     "file": {
       "required": true,
       "example": "F1234567890",
-      "desc": "File to delete a comment from.",
+      "desc": ".",
       "type": "file"
     },
     "id": {
       "required": true,
       "example": "Fc1234567890",
-      "desc": "The comment to delete."
+      "desc": "."
     }
   },
   "response": {

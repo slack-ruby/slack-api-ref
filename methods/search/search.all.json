@@ -6,22 +6,22 @@
     "query": {
       "required": true,
       "example": "pickleface",
-      "desc": "Search query. May contains booleans, etc."
+      "desc": "."
     },
     "highlight": {
       "required": false,
       "example": "true",
-      "desc": "Pass a value of true to enable query highlight markers (see below)."
+      "desc": "."
     },
     "sort": {
       "required": false,
       "example": "timestamp",
-      "desc": "Return matches sorted by either score or timestamp."
+      "desc": "."
     },
     "sort_dir": {
       "required": false,
       "example": "asc",
-      "desc": "Change sort direction to ascending (asc) or descending (desc)."
+      "desc": "."
     }
   },
   "response": {

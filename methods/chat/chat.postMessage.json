@@ -6,73 +6,73 @@
     "channel": {
       "required": true,
       "example": "C1234567890",
-      "desc": "Channel, private group, or IM channel to send message to. Can be an encoded ID, or a name. See below for more details.",
+      "desc": ".",
       "type": "channel"
     },
     "text": {
       "required": true,
       "example": "Hello world",
-      "desc": "Text of the message to send. See below for an explanation of formatting. This field is usually required, unless you're providing only attachments instead. Provide no more than 40,000 characters or risk truncation."
+      "desc": "."
     },
     "as_user": {
       "required": false,
       "example": "true",
-      "desc": "Pass true to post the message as the authed user, instead of as a bot. Defaults to false. See authorship below."
+      "desc": "."
     },
     "attachments": {
       "required": false,
       "example": "[{\"pretext\": \"pre-hello\", \"text\": \"text-world\"}]",
-      "desc": "A JSON-based array of structured attachments, presented as a URL-encoded string."
+      "desc": "."
     },
     "icon_emoji": {
       "required": false,
       "example": ":chart_with_upwards_trend:",
-      "desc": "Emoji to use as the icon for this message. Overrides icon_url. Must be used in conjunction with as_user set to false, otherwise ignored. See authorship below."
+      "desc": "."
     },
     "icon_url": {
       "required": false,
       "example": "http://lorempixel.com/48/48",
-      "desc": "URL to an image to use as the icon for this message. Must be used in conjunction with as_user set to false, otherwise ignored. See authorship below."
+      "desc": "."
     },
     "link_names": {
       "required": false,
       "example": "true",
-      "desc": "Find and link channel names and usernames."
+      "desc": "."
     },
     "mrkdwn": {
       "required": false,
       "example": "false",
-      "desc": "Disable Slack markup parsing by setting to false. Enabled by default."
+      "desc": "."
     },
     "parse": {
       "required": false,
       "example": "full",
-      "desc": "Change how messages are treated. Defaults to none. See below."
+      "desc": "."
     },
     "reply_broadcast": {
       "required": false,
       "example": "true",
-      "desc": "Used in conjunction with thread_ts and indicates whether reply should be made visible to everyone in the channel or conversation. Defaults to false."
+      "desc": "."
     },
     "thread_ts": {
       "required": false,
       "example": "1234567890.123456",
-      "desc": "Provide another message's ts value to make this message a reply. Avoid using a reply's ts value; use its parent instead."
+      "desc": "."
     },
     "unfurl_links": {
       "required": false,
       "example": "true",
-      "desc": "Pass true to enable unfurling of primarily text-based content."
+      "desc": "."
     },
     "unfurl_media": {
       "required": false,
       "example": "false",
-      "desc": "Pass false to disable unfurling of media content."
+      "desc": "."
     },
     "username": {
       "required": false,
       "example": "My Bot",
-      "desc": "Set your bot's user name. Must be used in conjunction with as_user set to false, otherwise ignored. See authorship below."
+      "desc": "."
     }
   },
   "response": {

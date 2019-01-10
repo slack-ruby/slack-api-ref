@@ -6,12 +6,12 @@
     "client_id": {
       "required": true,
       "example": "56579136444.26251006572",
-      "desc": "Issued when you created your application."
+      "desc": "."
     },
     "client_secret": {
       "required": true,
       "example": "f25b5ceaf8a3c2a2c4f52bb4f0b0499e",
-      "desc": "Issued when you created your application."
+      "desc": "."
     }
   },
   "response": {

@@ -6,24 +6,24 @@
     "channel": {
       "required": false,
       "example": "C1234567890",
-      "desc": "Channel to remove star from, or channel where the message to remove star from was posted (used with timestamp).",
+      "desc": ".",
       "type": "channel"
     },
     "file": {
       "required": false,
       "example": "F1234567890",
-      "desc": "File to remove star from.",
+      "desc": ".",
       "type": "file"
     },
     "file_comment": {
       "required": false,
       "example": "Fc1234567890",
-      "desc": "File comment to remove star from."
+      "desc": "."
     },
     "timestamp": {
       "required": false,
       "example": "1234567890.123456",
-      "desc": "Timestamp of the message to remove star from."
+      "desc": "."
     }
   },
   "response": {

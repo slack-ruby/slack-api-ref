@@ -6,18 +6,18 @@
     "channel": {
       "required": true,
       "example": "G1234567890",
-      "desc": "Private channel to rename.",
+      "desc": ".",
       "type": "group"
     },
     "name": {
       "required": true,
       "example": " ",
-      "desc": "New name for private channel."
+      "desc": "."
     },
     "validate": {
       "required": false,
       "example": "true",
-      "desc": "Whether to return errors on invalid channel name instead of modifying it to meet the specified criteria."
+      "desc": "."
     }
   },
   "response": {

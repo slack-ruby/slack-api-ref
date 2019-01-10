@@ -6,7 +6,7 @@
     "user": {
       "required": false,
       "example": "W1234567890",
-      "desc": "A user to retrieve the billable information for. Defaults to all users.",
+      "desc": ".",
       "type": "user"
     }
   },

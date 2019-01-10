@@ -6,12 +6,12 @@
     "usergroup": {
       "required": true,
       "example": "S0604QSJC",
-      "desc": "The encoded ID of the User Group to disable."
+      "desc": "."
     },
     "include_count": {
       "required": false,
       "example": "true",
-      "desc": "Include the number of users in the User Group."
+      "desc": "."
     }
   },
   "response": {

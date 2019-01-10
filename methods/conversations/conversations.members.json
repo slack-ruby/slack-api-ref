@@ -6,18 +6,18 @@
     "channel": {
       "required": true,
       "example": "C1234567890",
-      "desc": "ID of the conversation to retrieve members for.",
+      "desc": ".",
       "type": "channel"
     },
     "cursor": {
       "required": false,
       "example": "dXNlcjpVMDYxTkZUVDI=",
-      "desc": "Paginate through collections of data by setting the cursor parameter to a next_cursor attribute returned by a previous request's response_metadata. Default value fetches the first \"page\" of the collection. See pagination for more detail."
+      "desc": "."
     },
     "limit": {
       "required": false,
       "example": "20",
-      "desc": "The maximum number of items to return. Fewer than the requested number of items may be returned, even if the end of the users list hasn't been reached."
+      "desc": "."
     }
   },
   "response": {

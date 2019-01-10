@@ -6,37 +6,37 @@
     "batch_presence_aware": {
       "required": false,
       "example": "1",
-      "desc": "Batch presence deliveries via subscription. Enabling changes the shape of presence_change events. See batch presence."
+      "desc": "."
     },
     "include_locale": {
       "required": false,
       "example": "true",
-      "desc": "Set this to true to receive the locale for users and channels. Defaults to false."
+      "desc": "."
     },
     "mpim_aware": {
       "required": false,
       "example": "true",
-      "desc": "Returns MPIMs to the client in the API response."
+      "desc": "."
     },
     "no_latest": {
       "required": false,
       "example": "1",
-      "desc": "Exclude latest timestamps for channels, groups, mpims, and ims. Automatically sets no_unreads to 1."
+      "desc": "."
     },
     "no_unreads": {
       "required": false,
       "example": "true",
-      "desc": "Skip unread counts for each channel (improves performance)."
+      "desc": "."
     },
     "presence_sub": {
       "required": false,
       "example": "true",
-      "desc": "Only deliver presence events when requested by subscription. See presence subscriptions."
+      "desc": "."
     },
     "simple_latest": {
       "required": false,
       "example": "true",
-      "desc": "Return timestamp only for latest message object of each channel (improves performance)."
+      "desc": "."
     }
   },
   "response": {

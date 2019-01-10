@@ -6,12 +6,12 @@
     "users": {
       "required": true,
       "example": "W1234567890,U2345678901,U3456789012",
-      "desc": "A comma-separated list of user ids, up to 400 per request."
+      "desc": "."
     },
     "to_old": {
       "required": false,
       "example": "true",
-      "desc": "Specify true to convert W global user IDs to workspace-specific U IDs. Defaults to false."
+      "desc": "."
     }
   },
   "response": {

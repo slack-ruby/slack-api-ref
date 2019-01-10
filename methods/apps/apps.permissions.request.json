@@ -6,12 +6,12 @@
     "scopes": {
       "required": true,
       "example": " ",
-      "desc": "A comma separated list of scopes to request for."
+      "desc": "."
     },
     "trigger_id": {
       "required": true,
       "example": " ",
-      "desc": "Token used to trigger the permissions API."
+      "desc": "."
     }
   },
   "response": {

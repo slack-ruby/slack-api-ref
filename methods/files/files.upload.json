@@ -6,43 +6,43 @@
     "channels": {
       "required": false,
       "example": "C1234567890,C2345678901,C3456789012",
-      "desc": "Comma-separated list of channel names or IDs where the file will be shared."
+      "desc": "."
     },
     "content": {
       "required": false,
       "example": "...",
-      "desc": "File contents via a POST variable. If omitting this parameter, you must provide a file."
+      "desc": "."
     },
     "file": {
       "required": false,
       "example": "...",
-      "desc": "File contents via multipart/form-data. If omitting this parameter, you must submit content.",
+      "desc": ".",
       "type": "file"
     },
     "filename": {
       "required": false,
       "example": "foo.txt",
-      "desc": "Filename of file."
+      "desc": "."
     },
     "filetype": {
       "required": false,
       "example": "php",
-      "desc": "A file type identifier."
+      "desc": "."
     },
     "initial_comment": {
       "required": false,
       "example": "Best!",
-      "desc": "The message text introducing the file in specified channels."
+      "desc": "."
     },
     "thread_ts": {
       "required": false,
       "example": "1234567890.123456",
-      "desc": "Provide another message's ts value to upload this file as a reply. Never use a reply's ts value; use its parent instead."
+      "desc": "."
     },
     "title": {
       "required": false,
       "example": "My File",
-      "desc": "Title of file."
+      "desc": "."
     }
   },
   "response": {
