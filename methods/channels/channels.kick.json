@@ -6,13 +6,13 @@
     "channel": {
       "required": true,
       "example": "C1234567890",
-      "desc": ".",
+      "desc": "Channel to remove user from.",
       "type": "channel"
     },
     "user": {
       "required": true,
       "example": "W1234567890",
-      "desc": ".",
+      "desc": "User to remove from channel.",
       "type": "user"
     }
   },

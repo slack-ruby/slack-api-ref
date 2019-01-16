@@ -6,7 +6,7 @@
     "file": {
       "required": true,
       "example": "F1234567890",
-      "desc": ".",
+      "desc": "File to share.",
       "type": "file"
     }
   },

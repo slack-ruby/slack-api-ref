@@ -6,12 +6,12 @@
     "comment": {
       "required": true,
       "example": "Everyone should take a moment to read this file.",
-      "desc": "."
+      "desc": "Text of the comment to add."
     },
     "file": {
       "required": true,
       "example": "F1234467890",
-      "desc": ".",
+      "desc": "File to add a comment to.",
       "type": "file"
     }
   },

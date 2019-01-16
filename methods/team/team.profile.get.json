@@ -6,7 +6,7 @@
     "visibility": {
       "required": false,
       "example": "all",
-      "desc": "."
+      "desc": "Filter by visibility."
     }
   },
   "response": {

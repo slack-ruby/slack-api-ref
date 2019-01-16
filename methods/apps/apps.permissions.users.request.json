@@ -6,17 +6,17 @@
     "scopes": {
       "required": true,
       "example": " ",
-      "desc": "."
+      "desc": "A comma separated list of user scopes to request for."
     },
     "trigger_id": {
       "required": true,
       "example": " ",
-      "desc": "."
+      "desc": "Token used to trigger the request."
     },
     "user": {
       "required": true,
       "example": " ",
-      "desc": ".",
+      "desc": "The user this scope is being requested for.",
       "type": "user"
     }
   },

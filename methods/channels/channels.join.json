@@ -6,12 +6,12 @@
     "name": {
       "required": true,
       "example": "#general",
-      "desc": "."
+      "desc": "Name of channel to join."
     },
     "validate": {
       "required": false,
       "example": "true",
-      "desc": "."
+      "desc": "Whether to return errors on invalid channel name instead of modifying it to meet the specified criteria."
     }
   },
   "response": {

@@ -6,22 +6,22 @@
     "image": {
       "required": true,
       "example": "...",
-      "desc": "."
+      "desc": "File contents via multipart/form-data."
     },
     "crop_w": {
       "required": false,
       "example": "100",
-      "desc": "."
+      "desc": "Width/height of crop box (always square)."
     },
     "crop_x": {
       "required": false,
       "example": "10",
-      "desc": "."
+      "desc": "X coordinate of top-left corner of crop box."
     },
     "crop_y": {
       "required": false,
       "example": "15",
-      "desc": "."
+      "desc": "Y coordinate of top-left corner of crop box."
     }
   },
   "response": {

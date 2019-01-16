@@ -6,23 +6,23 @@
     "name": {
       "required": false,
       "example": "first_name",
-      "desc": "."
+      "desc": "Name of a single key to set. Usable only if profile is not passed."
     },
     "profile": {
       "required": false,
       "example": "{ first_name: \"John\", ... }",
-      "desc": "."
+      "desc": "Collection of key:value pairs presented as a URL-encoded JSON hash. At most 50 fields may be set. Each field name is limited to 255 characters."
     },
     "user": {
       "required": false,
       "example": "W1234567890",
-      "desc": ".",
+      "desc": "ID of user to change. This argument may only be specified by team admins on paid teams.",
       "type": "user"
     },
     "value": {
       "required": false,
       "example": "John",
-      "desc": "."
+      "desc": "Value to set a single key to. Usable only if profile is not passed."
     }
   },
   "response": {

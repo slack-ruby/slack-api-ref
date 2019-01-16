@@ -6,24 +6,24 @@
     "channel": {
       "required": false,
       "example": "C1234567890",
-      "desc": ".",
+      "desc": "Channel to add star to, or channel where the message to add star to was posted (used with timestamp).",
       "type": "channel"
     },
     "file": {
       "required": false,
       "example": "F1234567890",
-      "desc": ".",
+      "desc": "File to add star to.",
       "type": "file"
     },
     "file_comment": {
       "required": false,
       "example": "Fc1234567890",
-      "desc": "."
+      "desc": "File comment to add star to."
     },
     "timestamp": {
       "required": false,
       "example": "1234567890.123456",
-      "desc": "."
+      "desc": "Timestamp of the message to add star to."
     }
   },
   "response": {

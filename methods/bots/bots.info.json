@@ -6,7 +6,7 @@
     "bot": {
       "required": false,
       "example": "B12345678",
-      "desc": "."
+      "desc": "Bot user to get info on."
     }
   },
   "response": {

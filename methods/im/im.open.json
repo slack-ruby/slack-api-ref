@@ -6,18 +6,18 @@
     "user": {
       "required": true,
       "example": "W1234567890",
-      "desc": ".",
+      "desc": "User to open a direct message channel with.",
       "type": "user"
     },
     "include_locale": {
       "required": false,
       "example": "true",
-      "desc": "."
+      "desc": "Set this to true to receive the locale for this im. Defaults to false."
     },
     "return_im": {
       "required": false,
       "example": "true",
-      "desc": "."
+      "desc": "Boolean, indicates you want the full IM channel definition in the response."
     }
   },
   "response": {

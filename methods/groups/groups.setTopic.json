@@ -6,13 +6,13 @@
     "channel": {
       "required": true,
       "example": "G1234567890",
-      "desc": ".",
+      "desc": "Private channel to set the topic of.",
       "type": "group"
     },
     "topic": {
       "required": true,
       "example": "My Topic",
-      "desc": "."
+      "desc": "The new topic."
     }
   },
   "response": {

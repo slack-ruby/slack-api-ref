@@ -6,7 +6,7 @@
     "before": {
       "required": false,
       "example": "1457989166",
-      "desc": "."
+      "desc": "End of time range of logs to include in results (inclusive)."
     }
   },
   "response": {

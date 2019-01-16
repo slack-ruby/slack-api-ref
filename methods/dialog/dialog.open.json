@@ -6,12 +6,12 @@
     "dialog": {
       "required": true,
       "example": " ",
-      "desc": "."
+      "desc": "The dialog definition. This must be a JSON-encoded string."
     },
     "trigger_id": {
       "required": true,
       "example": "12345.98765.abcd2358fdea",
-      "desc": "."
+      "desc": "Exchange a trigger to post to the user."
     }
   },
   "response": {

@@ -6,12 +6,12 @@
     "include_labels": {
       "required": false,
       "example": "true",
-      "desc": "."
+      "desc": "Include labels for each ID in custom profile fields."
     },
     "user": {
       "required": false,
       "example": "W1234567890",
-      "desc": ".",
+      "desc": "User to retrieve profile info for.",
       "type": "user"
     }
   },

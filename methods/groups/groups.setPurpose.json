@@ -6,13 +6,13 @@
     "channel": {
       "required": true,
       "example": "G1234567890",
-      "desc": ".",
+      "desc": "Private channel to set the purpose of.",
       "type": "group"
     },
     "purpose": {
       "required": true,
       "example": "My Purpose",
-      "desc": "."
+      "desc": "The new purpose."
     }
   },
   "response": {

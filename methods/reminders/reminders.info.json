@@ -6,7 +6,7 @@
     "reminder": {
       "required": true,
       "example": "Rm23456789",
-      "desc": "."
+      "desc": "The ID of the reminder."
     }
   },
   "response": {

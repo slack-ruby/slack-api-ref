@@ -6,7 +6,7 @@
     "presence": {
       "required": true,
       "example": "away",
-      "desc": "."
+      "desc": "Either auto or away."
     }
   },
   "response": {

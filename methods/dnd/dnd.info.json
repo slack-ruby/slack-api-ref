@@ -6,7 +6,7 @@
     "user": {
       "required": false,
       "example": "U1234",
-      "desc": ".",
+      "desc": "User to fetch status for (defaults to current user).",
       "type": "user"
     }
   },

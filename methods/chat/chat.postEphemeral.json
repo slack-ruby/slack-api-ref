@@ -6,44 +6,44 @@
     "channel": {
       "required": true,
       "example": "C1234567890",
-      "desc": ".",
+      "desc": "Channel, private group, or IM channel to send message to. Can be an encoded ID, or a name.",
       "type": "channel"
     },
     "text": {
       "required": true,
       "example": "Hello world",
-      "desc": "."
+      "desc": "Text of the message to send. See below for an explanation of formatting. This field is usually required, unless you're providing only attachments instead."
     },
     "user": {
       "required": true,
       "example": "U0BPQUNTA",
-      "desc": ".",
+      "desc": "id of the user who will receive the ephemeral message. The user should be in the channel specified by the channel argument.",
       "type": "user"
     },
     "as_user": {
       "required": false,
       "example": "true",
-      "desc": "."
+      "desc": "Pass true to post the message as the authed user. Defaults to true if the chat:write:bot scope is not included. Otherwise, defaults to false."
     },
     "attachments": {
       "required": false,
       "example": "[{\"pretext\": \"pre-hello\", \"text\": \"text-world\"}]",
-      "desc": "."
+      "desc": "A JSON-based array of structured attachments, presented as a URL-encoded string."
     },
     "link_names": {
       "required": false,
       "example": "true",
-      "desc": "."
+      "desc": "Find and link channel names and usernames."
     },
     "parse": {
       "required": false,
       "example": "full",
-      "desc": "."
+      "desc": "Change how messages are treated. Defaults to none. See below."
     },
     "thread_ts": {
       "required": false,
       "example": "1234567890.123456",
-      "desc": "."
+      "desc": "Provide another message's ts value to make this message a reply. Avoid using a reply's ts value; use its parent instead."
     }
   },
   "response": {

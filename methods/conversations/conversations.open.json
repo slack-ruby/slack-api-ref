@@ -6,18 +6,18 @@
     "channel": {
       "required": false,
       "example": "G1234567890",
-      "desc": ".",
+      "desc": "Resume a conversation by supplying an im or mpim's ID. Or provide the users field instead.",
       "type": "channel"
     },
     "return_im": {
       "required": false,
       "example": "true",
-      "desc": "."
+      "desc": "Boolean, indicates you want the full IM channel definition in the response."
     },
     "users": {
       "required": false,
       "example": "W1234567890,U2345678901,U3456789012",
-      "desc": "."
+      "desc": "Comma separated lists of users. If only one user is included, this creates a 1:1 DM.  The ordering of the users is preserved whenever a multi-person direct message is returned. Supply a channel when not supplying users."
     }
   },
   "response": {

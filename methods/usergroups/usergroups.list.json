@@ -6,17 +6,17 @@
     "include_count": {
       "required": false,
       "example": "true",
-      "desc": "."
+      "desc": "Include the number of users in each User Group."
     },
     "include_disabled": {
       "required": false,
       "example": "true",
-      "desc": "."
+      "desc": "Include disabled User Groups."
     },
     "include_users": {
       "required": false,
       "example": "true",
-      "desc": "."
+      "desc": "Include the list of users for each User Group."
     }
   },
   "response": {

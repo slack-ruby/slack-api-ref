@@ -6,12 +6,12 @@
     "batch_presence_aware": {
       "required": false,
       "example": "1",
-      "desc": "."
+      "desc": "Batch presence deliveries via subscription. Enabling changes the shape of presence_change events. See batch presence."
     },
     "presence_sub": {
       "required": false,
       "example": "true",
-      "desc": "."
+      "desc": "Only deliver presence events when requested by subscription. See presence subscriptions."
     }
   },
   "response": {
