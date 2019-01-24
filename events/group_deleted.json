@@ -1,7 +1,7 @@
 {
   "name": "group_deleted",
   "desc": "A private channel was deleted.",
-  "long_desc": "My Slack API Start here App features Messages Reference Slack App Directory Authentication Keep in touch Community A private channel was deleted  \t\t\t\tCompatibility:\t\t\t\t\t\t\t\t\tRTM \t\t\t\t\t\t\t\t\t\t\t\t\tEvents API \t\t\t\t\t\t\t The group_deleted event is sent to all members of a private channel when it is deleted. Clients can use this to update their local list of private channels.",
+  "long_desc": "My Slack API Start here App features Messages Reference Slack App Directory Authentication Keep in touch Community A private channel was deleted Compatibility: RTM Events API The group_deleted event is sent to all members of a private channel when it is deleted. Clients can use this to update their local list of private channels.",
   "required_scope": "RTM",
   "example": {
     "type": "group_deleted",

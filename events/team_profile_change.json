@@ -1,7 +1,7 @@
 {
   "name": "team_profile_change",
   "desc": "The workspace profile fields have been updated.",
-  "long_desc": "My Slack API Start here App features Messages Reference Slack App Directory Authentication Keep in touch Community The workspace profile fields have been updated  \t\t\t\tCompatibility:\t\t\t\t\t\t\t\t\tRTM \t\t\t\t\t\t\t\t\t\t\t The team_profile_change event is sent to all connections for a workspace when Workspace Admin updates the field definitions in the profile. Only the modified field definitions are included in the payload. Where appropriate, clients should update to reflect new changes immediately.",
+  "long_desc": "My Slack API Start here App features Messages Reference Slack App Directory Authentication Keep in touch Community The workspace profile fields have been updated Compatibility: RTM The team_profile_change event is sent to all connections for a workspace when Workspace Admin updates the field definitions in the profile. Only the modified field definitions are included in the payload. Where appropriate, clients should update to reflect new changes immediately.",
   "required_scope": "RTM",
   "example": {
     "type": "team_profile_change",
