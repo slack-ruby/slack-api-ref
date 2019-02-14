@@ -30,6 +30,11 @@
       "example": "[{\"pretext\": \"pre-hello\", \"text\": \"text-world\"}]",
       "desc": "A JSON-based array of structured attachments, presented as a URL-encoded string."
     },
+    "blocks": {
+      "required": false,
+      "example": "[{\"type\": \"section\", \"text\": {\"type\": \"plain_text\", \"text\": \"Hello world\"}}]",
+      "desc": "A JSON-based array of structured blocks, presented as a URL-encoded string."
+    },
     "link_names": {
       "required": false,
       "example": "true",

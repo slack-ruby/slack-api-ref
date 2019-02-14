@@ -1,7 +1,7 @@
 {
   "name": "dnd_updated",
   "desc": "Do not Disturb settings changed for the current user.",
-  "long_desc": "My Slack API Start here App features Reference Slack App Directory Authentication Message reference Keep in touch Community Do not Disturb settings changed for the current user Compatibility: RTM Events API The dnd_updated event is sent to the current user when their Do Not Disturb settings have changed. This event is not available to bot user subscriptions in the Events API.",
+  "long_desc": "My Slack API Start here App features Messagingnew Reference Slack App Directory Authentication Message reference Keep in touch Community Do not Disturb settings changed for the current user Compatibility: RTM Events API The dnd_updated event is sent to the current user when their Do Not Disturb settings have changed. This event is not available to bot user subscriptions in the Events API.",
   "required_scope": "RTM",
   "example": {
     "type": "dnd_updated",

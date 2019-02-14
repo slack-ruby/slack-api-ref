@@ -1,7 +1,7 @@
 {
   "name": "im_open",
   "desc": "You opened a DM.",
-  "long_desc": "My Slack API Start here App features Reference Slack App Directory Authentication Message reference Keep in touch Community You opened a DM Compatibility: RTM Events API The im_open event is sent to all connections for a user when a direct message channel is opened by that user.",
+  "long_desc": "My Slack API Start here App features Messagingnew Reference Slack App Directory Authentication Message reference Keep in touch Community You opened a DM Compatibility: RTM Events API The im_open event is sent to all connections for a user when a direct message channel is opened by that user.",
   "required_scope": "RTM",
   "example": {
     "type": "im_open",

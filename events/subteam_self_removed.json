@@ -1,7 +1,7 @@
 {
   "name": "subteam_self_removed",
   "desc": "You have been removed from a User Group.",
-  "long_desc": "My Slack API Start here App features Reference Slack App Directory Authentication Message reference Keep in touch Community You have been removed from a User Group Compatibility: RTM Events API The subteam_self_removed event is sent to you when you have been removed to an existing User Group. Clients can use this to update their local list of User Groups. This event is not available to bot user subscriptions in the Events API.",
+  "long_desc": "My Slack API Start here App features Messagingnew Reference Slack App Directory Authentication Message reference Keep in touch Community You have been removed from a User Group Compatibility: RTM Events API The subteam_self_removed event is sent to you when you have been removed to an existing User Group. Clients can use this to update their local list of User Groups. This event is not available to bot user subscriptions in the Events API.",
   "required_scope": "RTM",
   "example": {
     "type": "subteam_self_removed",
