@@ -1,7 +1,7 @@
 {
   "name": "group_open",
   "desc": "You created a group DM.",
-  "long_desc": "My Slack API Start here App features Messagingnew Reference Slack App Directory Authentication Message reference Keep in touch Community You created a group DM Compatibility: RTM Events API The group_open event is sent to all connections for a user when a group Direct Message (or mpim) is opened by that user. This event is not available to bot user subscriptions in the Events API.",
+  "long_desc": "My Slack API Start here App features Messagingnew Reference Slack App Directory Authentication Keep in touch Resources Community You created a group DM Compatibility: RTM Events API The group_open event is sent to all connections for a user when a group Direct Message (or mpim) is opened by that user. This event is not available to bot user subscriptions in the Events API.",
   "required_scope": "RTM",
   "example": {
     "type": "group_open",

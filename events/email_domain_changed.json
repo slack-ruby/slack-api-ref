@@ -1,7 +1,7 @@
 {
   "name": "email_domain_changed",
   "desc": "The workspace email domain has changed.",
-  "long_desc": "My Slack API Start here App features Messagingnew Reference Slack App Directory Authentication Message reference Keep in touch Community The workspace email domain has changed Compatibility: RTM Events API The email_domain_changed event is sent to all connections for a workspace when the email domain settings for a workspace change. Most clients can ignore this event.",
+  "long_desc": "My Slack API Start here App features Messagingnew Reference Slack App Directory Authentication Keep in touch Resources Community The workspace email domain has changed Compatibility: RTM Events API The email_domain_changed event is sent to all connections for a workspace when the email domain settings for a workspace change. Most clients can ignore this event.",
   "required_scope": "RTM",
   "example": {
     "type": "email_domain_changed",

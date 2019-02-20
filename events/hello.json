@@ -1,7 +1,7 @@
 {
   "name": "hello",
   "desc": "The client has successfully connected to the server.",
-  "long_desc": "My Slack API Start here App features Messagingnew Reference Slack App Directory Authentication Message reference Keep in touch Community The client has successfully connected to the server Compatibility: RTM The hello event is sent when a connection is opened to the message server. This allows a client to confirm the connection has been correctly opened.",
+  "long_desc": "My Slack API Start here App features Messagingnew Reference Slack App Directory Authentication Keep in touch Resources Community The client has successfully connected to the server Compatibility: RTM The hello event is sent when a connection is opened to the message server. This allows a client to confirm the connection has been correctly opened.",
   "required_scope": "RTM",
   "example": {
     "type": "hello"

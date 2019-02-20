@@ -1,7 +1,7 @@
 {
   "name": "group_archive",
   "desc": "A private channel was archived.",
-  "long_desc": "My Slack API Start here App features Messagingnew Reference Slack App Directory Authentication Message reference Keep in touch Community A private channel was archived Compatibility: RTM Events API The group_archive event is sent to all connections for members of a private channel when that private channel is archived. Clients can use this to update their local list of private channels.",
+  "long_desc": "My Slack API Start here App features Messagingnew Reference Slack App Directory Authentication Keep in touch Resources Community A private channel was archived Compatibility: RTM Events API The group_archive event is sent to all connections for members of a private channel when that private channel is archived. Clients can use this to update their local list of private channels.",
   "required_scope": "RTM",
   "example": {
     "type": "group_archive",
