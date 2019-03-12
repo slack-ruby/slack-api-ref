@@ -18,7 +18,7 @@
     "unfurls": {
       "required": true,
       "example": " ",
-      "desc": "URL-encoded JSON map with keys set to URLs featured in the the message, pointing to their unfurl message attachments."
+      "desc": "URL-encoded JSON map with keys set to URLs featured in the the message, pointing to their unfurl blocks or message attachments."
     },
     "user_auth_message": {
       "required": false,

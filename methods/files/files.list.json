@@ -22,7 +22,7 @@
     "types": {
       "required": false,
       "example": "images",
-      "desc": "Filter files by type:\n* `all` - All files\n* `spaces` - Posts\n* `snippets` - Snippets\n* `images` - Image files\n* `gdocs` - Google docs\n* `zips` - Zip files\n* `pdfs` - PDF files\n\nYou can pass multiple values in the types argument, like `types=spaces,snippets`.The default value is `all`, which does not filter the list.\n\n."
+      "desc": "Filter files by type (see below). You can pass multiple values in the types argument, like types=spaces,snippets.The default value is all, which does not filter the list."
     },
     "user": {
       "required": false,
