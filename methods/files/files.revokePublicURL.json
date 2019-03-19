@@ -1,7 +1,7 @@
 {
   "group": "files",
   "name": "files.revokePublicURL",
-  "desc": "Revokes public/external sharing access for a file",
+  "desc": "",
   "args": {
     "file": {
       "required": true,

@@ -1,7 +1,7 @@
 {
   "group": "chat",
   "name": "chat.postMessage",
-  "desc": "Sends a message to a channel.",
+  "desc": "",
   "args": {
     "channel": {
       "required": true,

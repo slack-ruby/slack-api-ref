@@ -1,7 +1,7 @@
 {
   "group": "stars",
   "name": "stars.remove",
-  "desc": "Removes a star from an item.",
+  "desc": "",
   "args": {
     "channel": {
       "required": false,

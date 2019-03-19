@@ -1,7 +1,7 @@
 {
   "group": "channels",
   "name": "channels.replies",
-  "desc": "Retrieve a thread of messages posted to a channel",
+  "desc": "",
   "args": {
     "channel": {
       "required": true,

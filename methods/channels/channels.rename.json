@@ -1,7 +1,7 @@
 {
   "group": "channels",
   "name": "channels.rename",
-  "desc": "Renames a channel.",
+  "desc": "",
   "args": {
     "channel": {
       "required": true,

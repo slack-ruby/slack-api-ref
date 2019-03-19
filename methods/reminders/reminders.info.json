@@ -1,7 +1,7 @@
 {
   "group": "reminders",
   "name": "reminders.info",
-  "desc": "Gets information about a reminder.",
+  "desc": "",
   "args": {
     "reminder": {
       "required": true,

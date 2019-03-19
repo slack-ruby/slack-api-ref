@@ -1,7 +1,7 @@
 {
   "group": "usergroups",
   "name": "usergroups.users.list",
-  "desc": "List all users in a User Group",
+  "desc": "",
   "args": {
     "usergroup": {
       "required": true,

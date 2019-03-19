@@ -1,7 +1,7 @@
 {
   "group": "users",
   "name": "users.conversations",
-  "desc": "List conversations the calling user may access.",
+  "desc": "",
   "args": {
     "cursor": {
       "required": false,

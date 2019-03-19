@@ -1,7 +1,7 @@
 {
   "group": "reactions",
   "name": "reactions.remove",
-  "desc": "Removes a reaction from an item.",
+  "desc": "",
   "args": {
     "name": {
       "required": true,

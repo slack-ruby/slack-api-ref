@@ -1,7 +1,7 @@
 {
   "group": "pins",
   "name": "pins.list",
-  "desc": "Lists items pinned to a channel.",
+  "desc": "",
   "args": {
     "channel": {
       "required": true,

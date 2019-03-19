@@ -1,7 +1,7 @@
 {
   "group": "files",
   "name": "files.comments.delete",
-  "desc": "Deletes an existing comment on a file.",
+  "desc": "",
   "args": {
     "file": {
       "required": true,

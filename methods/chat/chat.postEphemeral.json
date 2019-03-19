@@ -1,7 +1,7 @@
 {
   "group": "chat",
   "name": "chat.postEphemeral",
-  "desc": "Sends an ephemeral message to a user in a channel.",
+  "desc": "",
   "args": {
     "channel": {
       "required": true,
@@ -48,7 +48,7 @@
     "thread_ts": {
       "required": false,
       "example": "1234567890.123456",
-      "desc": "Provide another message's ts value to make this message a reply. Avoid using a reply's ts value; use its parent instead."
+      "desc": "Provide another message's ts value to post this message in a thread. Avoid using a reply's ts value; use its parent's value instead. Ephemeral messages in threads are only shown if there is already an active thread."
     }
   },
   "response": {

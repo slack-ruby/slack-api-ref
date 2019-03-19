@@ -1,7 +1,7 @@
 {
   "group": "reactions",
   "name": "reactions.add",
-  "desc": "Adds a reaction to an item.",
+  "desc": "",
   "args": {
     "name": {
       "required": true,

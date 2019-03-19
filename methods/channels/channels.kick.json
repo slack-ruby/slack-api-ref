@@ -1,7 +1,7 @@
 {
   "group": "channels",
   "name": "channels.kick",
-  "desc": "Removes a user from a channel.",
+  "desc": "",
   "args": {
     "channel": {
       "required": true,

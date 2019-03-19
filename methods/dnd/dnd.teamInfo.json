@@ -1,7 +1,7 @@
 {
   "group": "dnd",
   "name": "dnd.teamInfo",
-  "desc": "Retrieves the Do Not Disturb status for users on a team.",
+  "desc": "",
   "args": {
     "users": {
       "required": false,

@@ -1,7 +1,7 @@
 {
   "group": "pins",
   "name": "pins.remove",
-  "desc": "Un-pins an item from a channel.",
+  "desc": "",
   "args": {
     "channel": {
       "required": true,

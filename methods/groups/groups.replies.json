@@ -1,7 +1,7 @@
 {
   "group": "groups",
   "name": "groups.replies",
-  "desc": "Retrieve a thread of messages posted to a private channel",
+  "desc": "",
   "args": {
     "channel": {
       "required": true,

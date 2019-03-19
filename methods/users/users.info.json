@@ -1,7 +1,7 @@
 {
   "group": "users",
   "name": "users.info",
-  "desc": "Gets information about a user.",
+  "desc": "",
   "args": {
     "user": {
       "required": true,

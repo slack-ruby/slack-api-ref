@@ -1,7 +1,7 @@
 {
   "group": "team",
   "name": "team.profile.get",
-  "desc": "Retrieve a team's profile.",
+  "desc": "",
   "args": {
     "visibility": {
       "required": false,

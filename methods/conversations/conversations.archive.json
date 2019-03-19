@@ -1,7 +1,7 @@
 {
   "group": "conversations",
   "name": "conversations.archive",
-  "desc": "Archives a conversation.",
+  "desc": "",
   "args": {
     "channel": {
       "required": true,

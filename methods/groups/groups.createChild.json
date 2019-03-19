@@ -1,7 +1,7 @@
 {
   "group": "groups",
   "name": "groups.createChild",
-  "desc": "Clones and archives a private channel.",
+  "desc": "",
   "args": {
     "channel": {
       "required": true,

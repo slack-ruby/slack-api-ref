@@ -1,7 +1,7 @@
 {
   "group": "chat",
   "name": "chat.getPermalink",
-  "desc": "Retrieve a permalink URL for a specific extant message",
+  "desc": "",
   "args": {
     "channel": {
       "required": true,

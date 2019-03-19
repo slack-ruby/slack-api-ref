@@ -1,7 +1,7 @@
 {
   "group": "groups",
   "name": "groups.history",
-  "desc": "Fetches history of messages and events from a private channel.",
+  "desc": "",
   "args": {
     "channel": {
       "required": true,

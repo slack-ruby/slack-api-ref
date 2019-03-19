@@ -1,7 +1,7 @@
 {
   "group": "team",
   "name": "team.info",
-  "desc": "Gets information about the current team.",
+  "desc": "",
   "args": {
   },
   "response": {

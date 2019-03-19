@@ -1,7 +1,7 @@
 {
   "group": "api",
   "name": "api.test",
-  "desc": "Checks API calling code.",
+  "desc": "",
   "args": {
     "error": {
       "required": false,

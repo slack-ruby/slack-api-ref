@@ -1,7 +1,7 @@
 {
   "group": "pins",
   "name": "pins.add",
-  "desc": "Pins an item to a channel.",
+  "desc": "",
   "args": {
     "channel": {
       "required": true,

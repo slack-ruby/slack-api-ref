@@ -1,7 +1,7 @@
 {
   "group": "rtm",
   "name": "rtm.connect",
-  "desc": "Starts a Real Time Messaging session.",
+  "desc": "",
   "args": {
     "batch_presence_aware": {
       "required": false,

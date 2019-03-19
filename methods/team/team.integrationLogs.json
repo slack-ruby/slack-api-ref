@@ -1,7 +1,7 @@
 {
   "group": "team",
   "name": "team.integrationLogs",
-  "desc": "Gets the integration logs for the current team.",
+  "desc": "",
   "args": {
     "app_id": {
       "required": false,

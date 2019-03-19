@@ -1,7 +1,7 @@
 {
   "group": "im",
   "name": "im.list",
-  "desc": "Lists direct message channels for the calling user.",
+  "desc": "",
   "args": {
     "cursor": {
       "required": false,

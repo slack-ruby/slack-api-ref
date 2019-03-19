@@ -1,7 +1,7 @@
 {
   "group": "im",
   "name": "im.open",
-  "desc": "Opens a direct message channel.",
+  "desc": "",
   "args": {
     "user": {
       "required": true,

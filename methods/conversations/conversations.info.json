@@ -1,7 +1,7 @@
 {
   "group": "conversations",
   "name": "conversations.info",
-  "desc": "Retrieve information about a conversation.",
+  "desc": "",
   "args": {
     "channel": {
       "required": true,

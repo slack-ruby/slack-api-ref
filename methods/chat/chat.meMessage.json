@@ -1,7 +1,7 @@
 {
   "group": "chat",
   "name": "chat.meMessage",
-  "desc": "Share a me message into a channel.",
+  "desc": "",
   "args": {
     "channel": {
       "required": true,

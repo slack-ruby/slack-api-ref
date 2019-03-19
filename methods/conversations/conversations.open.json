@@ -1,7 +1,7 @@
 {
   "group": "conversations",
   "name": "conversations.open",
-  "desc": "Opens or resumes a direct message or multi-person direct message.",
+  "desc": "",
   "args": {
     "channel": {
       "required": false,

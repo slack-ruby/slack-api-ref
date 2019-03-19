@@ -1,7 +1,7 @@
 {
   "group": "conversations",
   "name": "conversations.close",
-  "desc": "Closes a direct message or multi-person direct message.",
+  "desc": "",
   "args": {
     "channel": {
       "required": true,

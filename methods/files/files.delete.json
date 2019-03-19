@@ -1,7 +1,7 @@
 {
   "group": "files",
   "name": "files.delete",
-  "desc": "Deletes a file.",
+  "desc": "",
   "args": {
     "file": {
       "required": true,

@@ -1,7 +1,7 @@
 {
   "group": "oauth",
   "name": "oauth.token",
-  "desc": "Exchanges a temporary OAuth verifier code for a workspace token.",
+  "desc": "",
   "args": {
     "client_id": {
       "required": true,

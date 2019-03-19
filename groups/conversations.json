@@ -1,4 +1,3 @@
 {
-  "name": "conversations",
-  "desc": "Interface with all kinds of conversations the same way, whether they're public or private channels, direct messages, or otherwise."
+  "name": "conversations"
 }

@@ -1,7 +1,7 @@
 {
   "group": "files",
   "name": "files.upload",
-  "desc": "Uploads or creates a file.",
+  "desc": "",
   "args": {
     "channels": {
       "required": false,

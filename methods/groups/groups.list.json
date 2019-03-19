@@ -1,7 +1,7 @@
 {
   "group": "groups",
   "name": "groups.list",
-  "desc": "Lists private channels that the calling user has access to.",
+  "desc": "",
   "args": {
     "cursor": {
       "required": false,

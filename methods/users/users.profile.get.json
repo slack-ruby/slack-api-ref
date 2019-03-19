@@ -1,7 +1,7 @@
 {
   "group": "users",
   "name": "users.profile.get",
-  "desc": "Retrieves a user's profile information.",
+  "desc": "",
   "args": {
     "include_labels": {
       "required": false,

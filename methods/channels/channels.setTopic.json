@@ -1,7 +1,7 @@
 {
   "group": "channels",
   "name": "channels.setTopic",
-  "desc": "Sets the topic for a channel.",
+  "desc": "",
   "args": {
     "channel": {
       "required": true,

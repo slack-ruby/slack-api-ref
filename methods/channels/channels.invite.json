@@ -1,7 +1,7 @@
 {
   "group": "channels",
   "name": "channels.invite",
-  "desc": "Invites a user to a channel.",
+  "desc": "",
   "args": {
     "channel": {
       "required": true,

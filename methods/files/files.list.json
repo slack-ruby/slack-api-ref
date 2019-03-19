@@ -1,7 +1,7 @@
 {
   "group": "files",
   "name": "files.list",
-  "desc": "Lists & filters team files.",
+  "desc": "",
   "args": {
     "channel": {
       "required": false,

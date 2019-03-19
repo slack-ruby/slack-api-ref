@@ -1,7 +1,7 @@
 {
   "group": "stars",
   "name": "stars.list",
-  "desc": "Lists stars for a user.",
+  "desc": "",
   "args": {
     "cursor": {
       "required": false,

@@ -1,7 +1,7 @@
 {
   "group": "groups",
   "name": "groups.mark",
-  "desc": "Sets the read cursor in a private channel.",
+  "desc": "",
   "args": {
     "channel": {
       "required": true,

@@ -1,7 +1,7 @@
 {
   "group": "search",
   "name": "search.messages",
-  "desc": "Searches for messages matching a query.",
+  "desc": "",
   "args": {
     "query": {
       "required": true,

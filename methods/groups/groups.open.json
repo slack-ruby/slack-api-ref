@@ -1,7 +1,7 @@
 {
   "group": "groups",
   "name": "groups.open",
-  "desc": "Opens a private channel.",
+  "desc": "",
   "args": {
     "channel": {
       "required": true,

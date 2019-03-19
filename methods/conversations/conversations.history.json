@@ -1,7 +1,7 @@
 {
   "group": "conversations",
   "name": "conversations.history",
-  "desc": "Fetches a conversation's history of messages and events.",
+  "desc": "",
   "args": {
     "channel": {
       "required": true,

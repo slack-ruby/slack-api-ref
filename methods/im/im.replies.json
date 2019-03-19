@@ -1,7 +1,7 @@
 {
   "group": "im",
   "name": "im.replies",
-  "desc": "Retrieve a thread of messages posted to a direct message conversation",
+  "desc": "",
   "args": {
     "channel": {
       "required": true,

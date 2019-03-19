@@ -1,7 +1,7 @@
 {
   "group": "users",
   "name": "users.deletePhoto",
-  "desc": "Delete the user profile photo",
+  "desc": "",
   "args": {
   },
   "response": {

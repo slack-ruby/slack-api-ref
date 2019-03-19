@@ -1,7 +1,7 @@
 {
   "group": "groups",
   "name": "groups.setPurpose",
-  "desc": "Sets the purpose for a private channel.",
+  "desc": "",
   "args": {
     "channel": {
       "required": true,

@@ -1,7 +1,7 @@
 {
   "group": "mpim",
   "name": "mpim.open",
-  "desc": "This method opens a multiparty direct message.",
+  "desc": "",
   "args": {
     "users": {
       "required": true,

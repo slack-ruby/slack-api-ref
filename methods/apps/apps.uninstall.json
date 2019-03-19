@@ -1,7 +1,7 @@
 {
   "group": "apps",
   "name": "apps.uninstall",
-  "desc": "Uninstalls your app from a workspace.",
+  "desc": "",
   "args": {
     "client_id": {
       "required": true,

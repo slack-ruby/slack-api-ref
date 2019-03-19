@@ -1,7 +1,7 @@
 {
   "group": "usergroups",
   "name": "usergroups.list",
-  "desc": "List all User Groups for a team",
+  "desc": "",
   "args": {
     "include_count": {
       "required": false,

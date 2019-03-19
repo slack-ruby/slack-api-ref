@@ -1,7 +1,7 @@
 {
   "group": "chat",
   "name": "chat.scheduleMessage",
-  "desc": "Schedules a message to be sent to a channel.",
+  "desc": "",
   "args": {
     "channel": {
       "required": true,

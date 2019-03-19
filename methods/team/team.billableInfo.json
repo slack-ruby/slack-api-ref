@@ -1,7 +1,7 @@
 {
   "group": "team",
   "name": "team.billableInfo",
-  "desc": "Gets billable users information for the current team.",
+  "desc": "",
   "args": {
     "user": {
       "required": false,

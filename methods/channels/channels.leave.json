@@ -1,7 +1,7 @@
 {
   "group": "channels",
   "name": "channels.leave",
-  "desc": "Leaves a channel.",
+  "desc": "",
   "args": {
     "channel": {
       "required": true,

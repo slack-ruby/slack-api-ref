@@ -1,7 +1,7 @@
 {
   "group": "dnd",
   "name": "dnd.endDnd",
-  "desc": "Ends the current user's Do Not Disturb session immediately.",
+  "desc": "",
   "args": {
   },
   "response": {

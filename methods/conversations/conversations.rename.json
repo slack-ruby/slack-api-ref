@@ -1,7 +1,7 @@
 {
   "group": "conversations",
   "name": "conversations.rename",
-  "desc": "Renames a conversation.",
+  "desc": "",
   "args": {
     "channel": {
       "required": true,

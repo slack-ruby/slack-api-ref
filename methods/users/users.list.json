@@ -1,7 +1,7 @@
 {
   "group": "users",
   "name": "users.list",
-  "desc": "Lists all users in a Slack team.",
+  "desc": "",
   "args": {
     "cursor": {
       "required": false,

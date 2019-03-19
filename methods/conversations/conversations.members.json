@@ -1,7 +1,7 @@
 {
   "group": "conversations",
   "name": "conversations.members",
-  "desc": "Retrieve members of a conversation.",
+  "desc": "",
   "args": {
     "channel": {
       "required": true,

@@ -1,7 +1,7 @@
 {
   "group": "dialog",
   "name": "dialog.open",
-  "desc": "Open a dialog with a user",
+  "desc": "",
   "args": {
     "dialog": {
       "required": true,

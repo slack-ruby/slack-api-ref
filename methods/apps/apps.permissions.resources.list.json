@@ -1,7 +1,7 @@
 {
   "group": "apps",
   "name": "apps.permissions.resources.list",
-  "desc": "Returns list of resource grants this app has on a team.",
+  "desc": "",
   "args": {
     "cursor": {
       "required": false,

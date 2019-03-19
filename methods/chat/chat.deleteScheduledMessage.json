@@ -1,7 +1,7 @@
 {
   "group": "chat",
   "name": "chat.deleteScheduledMessage",
-  "desc": "Deletes a pending scheduled message from the queue.",
+  "desc": "",
   "args": {
     "channel": {
       "required": true,

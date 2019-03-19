@@ -1,7 +1,7 @@
 {
   "group": "dnd",
   "name": "dnd.setSnooze",
-  "desc": "Turns on Do Not Disturb mode for the current user, or changes its duration.",
+  "desc": "",
   "args": {
     "num_minutes": {
       "required": true,

@@ -1,7 +1,7 @@
 {
   "group": "im",
   "name": "im.history",
-  "desc": "Fetches history of messages and events from direct message channel.",
+  "desc": "",
   "args": {
     "channel": {
       "required": true,

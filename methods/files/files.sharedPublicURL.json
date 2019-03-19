@@ -1,7 +1,7 @@
 {
   "group": "files",
   "name": "files.sharedPublicURL",
-  "desc": "Enables a file for public/external sharing.",
+  "desc": "",
   "args": {
     "file": {
       "required": true,

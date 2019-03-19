@@ -1,7 +1,7 @@
 {
   "group": "users",
   "name": "users.setPhoto",
-  "desc": "Set the user profile photo",
+  "desc": "",
   "args": {
     "image": {
       "required": true,

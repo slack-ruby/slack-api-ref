@@ -1,7 +1,7 @@
 {
   "group": "chat",
   "name": "chat.unfurl",
-  "desc": "Provide custom unfurl behavior for user-posted URLs",
+  "desc": "",
   "args": {
     "channel": {
       "required": true,

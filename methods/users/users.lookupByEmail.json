@@ -1,7 +1,7 @@
 {
   "group": "users",
   "name": "users.lookupByEmail",
-  "desc": "Find a user with an email address.",
+  "desc": "",
   "args": {
     "email": {
       "required": true,

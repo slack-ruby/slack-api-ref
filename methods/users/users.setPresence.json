@@ -1,7 +1,7 @@
 {
   "group": "users",
   "name": "users.setPresence",
-  "desc": "Manually sets user presence.",
+  "desc": "",
   "args": {
     "presence": {
       "required": true,

@@ -1,7 +1,7 @@
 {
   "group": "team",
   "name": "team.accessLogs",
-  "desc": "Gets the access logs for the current team.",
+  "desc": "",
   "args": {
     "before": {
       "required": false,

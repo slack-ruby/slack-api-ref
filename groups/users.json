@@ -1,4 +1,3 @@
 {
-  "name": "users",
-  "desc": "Get info on members of your Slack team."
+  "name": "users"
 }

@@ -1,7 +1,7 @@
 {
   "group": "mpim",
   "name": "mpim.close",
-  "desc": "Closes a multiparty direct message channel.",
+  "desc": "",
   "args": {
     "channel": {
       "required": true,

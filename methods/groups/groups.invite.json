@@ -1,7 +1,7 @@
 {
   "group": "groups",
   "name": "groups.invite",
-  "desc": "Invites a user to a private channel.",
+  "desc": "",
   "args": {
     "channel": {
       "required": true,

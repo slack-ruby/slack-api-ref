@@ -1,7 +1,7 @@
 {
   "group": "groups",
   "name": "groups.unarchive",
-  "desc": "Unarchives a private channel.",
+  "desc": "",
   "args": {
     "channel": {
       "required": true,

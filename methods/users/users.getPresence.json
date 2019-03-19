@@ -1,7 +1,7 @@
 {
   "group": "users",
   "name": "users.getPresence",
-  "desc": "Gets user presence information.",
+  "desc": "",
   "args": {
     "user": {
       "required": true,

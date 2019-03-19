@@ -1,7 +1,7 @@
 {
   "group": "channels",
   "name": "channels.join",
-  "desc": "Joins a channel, creating it if needed.",
+  "desc": "",
   "args": {
     "name": {
       "required": true,

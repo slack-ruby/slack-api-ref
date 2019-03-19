@@ -1,7 +1,7 @@
 {
   "group": "search",
   "name": "search.all",
-  "desc": "Searches for messages and files matching a query.",
+  "desc": "",
   "args": {
     "query": {
       "required": true,

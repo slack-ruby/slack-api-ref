@@ -1,7 +1,7 @@
 {
   "group": "users",
   "name": "users.identity",
-  "desc": "Get a user's identity.",
+  "desc": "",
   "args": {
   },
   "response": {

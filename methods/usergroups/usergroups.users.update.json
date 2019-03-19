@@ -1,7 +1,7 @@
 {
   "group": "usergroups",
   "name": "usergroups.users.update",
-  "desc": "Update the list of users for a User Group",
+  "desc": "",
   "args": {
     "usergroup": {
       "required": true,

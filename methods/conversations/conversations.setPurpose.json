@@ -1,7 +1,7 @@
 {
   "group": "conversations",
   "name": "conversations.setPurpose",
-  "desc": "Sets the purpose for a conversation.",
+  "desc": "",
   "args": {
     "channel": {
       "required": true,
