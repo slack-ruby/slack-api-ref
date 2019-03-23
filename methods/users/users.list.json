@@ -17,11 +17,6 @@
       "required": false,
       "example": "20",
       "desc": "The maximum number of items to return. Fewer than the requested number of items may be returned, even if the end of the users list hasn't been reached."
-    },
-    "presence": {
-      "required": false,
-      "example": "true",
-      "desc": "Deprecated. Whether to include presence data in the output. Defaults to false. Setting this to true reduces performance, especially with large teams."
     }
   },
   "response": {
