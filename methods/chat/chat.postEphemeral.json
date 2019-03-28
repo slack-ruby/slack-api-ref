@@ -58,12 +58,12 @@
     ]
   },
   "errors": {
+    "restricted_action": "A workspace preference prevents the authenticated user from posting.",
     "channel_not_found": "Value passed for channel was invalid.",
     "is_archived": "Channel has been archived.",
+    "too_many_attachments": "Too many attachments were provided with this message. A maximum of 100 attachments are allowed on a message.",
     "msg_too_long": "Message text is too long.",
     "no_text": "No message text provided.",
-    "restricted_action": "A workspace preference prevents the authenticated user from posting.",
-    "too_many_attachments": "Too many attachments were provided with this message. A maximum of 100 attachments are allowed on a message.",
     "user_not_in_channel": "Intended recipient is not in the specified channel.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
