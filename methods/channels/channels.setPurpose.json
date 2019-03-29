@@ -13,6 +13,11 @@
       "required": true,
       "example": "My Purpose",
       "desc": "The new purpose."
+    },
+    "name_tagging": {
+      "required": false,
+      "example": "true",
+      "desc": "if it is true, treat this like a message and not an unescaped thing."
     }
   },
   "response": {
