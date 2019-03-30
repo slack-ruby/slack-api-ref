@@ -27,10 +27,10 @@
     ]
   },
   "errors": {
-    "invalid_trigger": "The provided trigger_id is invalid.",
     "trigger_exchanged": "The provided trigger_id has already been exchanged.",
-    "invalid_scope": "Scopes are invalid.",
     "invalid_user": "There isn't a valid user to request permissions.",
+    "invalid_scope": "Scopes are invalid.",
+    "invalid_trigger": "The provided trigger_id is invalid.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",
