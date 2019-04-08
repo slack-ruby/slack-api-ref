@@ -3,7 +3,7 @@ module SlackApi
     handle 'https://api.slack.com/methods', :process_list
 
     def process_list(page, _default_data = {})
-      page.search('h2').each do |group|
+      page.search('#api_main_content h2').each do |group|
         id = group.attr('id')
         next_p = group.next_sibling.next_sibling
         desc = next_p.text if next_p.name == 'p'
@@ -22,7 +22,9 @@ module SlackApi
     end
 
     def process_method(page, default_data = {})
-      desc = page.search("section[data-tab='docs'] p")[0].text
+      desc = page.search("section[data-tab='docs'] p").detect do |p|
+        p.text && p.text.strip.length > 0
+      end.text
 
       args, fields = parse_args(page, default_data)
       errors = parse_errors(page)
