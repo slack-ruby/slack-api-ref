@@ -1,7 +1,7 @@
 {
   "group": "usergroups",
   "name": "usergroups.disable",
-  "desc": "",
+  "desc": "This method disables an existing User Group.",
   "args": {
     "usergroup": {
       "required": true,

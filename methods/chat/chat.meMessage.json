@@ -1,7 +1,7 @@
 {
   "group": "chat",
   "name": "chat.meMessage",
-  "desc": "",
+  "desc": "This method sends a me message to a channel from the calling user.",
   "args": {
     "channel": {
       "required": true,

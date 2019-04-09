@@ -1,7 +1,7 @@
 {
   "group": "chat",
   "name": "chat.postEphemeral",
-  "desc": "",
+  "desc": "This method posts an ephemeral message, which is visible only to the assigned user in a specific public channel, private channel, or private conversation.",
   "args": {
     "channel": {
       "required": true,

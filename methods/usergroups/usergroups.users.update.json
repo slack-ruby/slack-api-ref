@@ -1,7 +1,7 @@
 {
   "group": "usergroups",
   "name": "usergroups.users.update",
-  "desc": "",
+  "desc": "This method updates the list of users that belong to a User Group. This method replaces all users in a User Group with the list of users provided in the users parameter.",
   "args": {
     "usergroup": {
       "required": true,

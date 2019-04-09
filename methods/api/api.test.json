@@ -1,7 +1,7 @@
 {
   "group": "api",
   "name": "api.test",
-  "desc": "",
+  "desc": "This method helps you test your calling code.",
   "args": {
     "error": {
       "required": false,

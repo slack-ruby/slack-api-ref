@@ -1,7 +1,7 @@
 {
   "group": "oauth",
   "name": "oauth.token",
-  "desc": "",
+  "desc": "This feature was exclusive to our workspace apps developer preview. The preview has now ended, but fan-favorite features such as token rotation and the Conversations API will become available to classic Slack apps over the coming months.",
   "args": {
     "client_id": {
       "required": true,

@@ -1,7 +1,7 @@
 {
   "group": "dnd",
   "name": "dnd.setSnooze",
-  "desc": "",
+  "desc": "Adjusts the snooze duration for a user's Do Not Disturb settings. If a snooze session is not already active for the user, invoking this method will begin one for the specified duration.",
   "args": {
     "num_minutes": {
       "required": true,

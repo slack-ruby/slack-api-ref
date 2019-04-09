@@ -1,7 +1,7 @@
 {
   "group": "reactions",
   "name": "reactions.add",
-  "desc": "",
+  "desc": "This method adds a reaction (emoji) to a message.\nNow that file threads work the way you'd expect, the file and file_comment arguments are deprecated. Specify channel and timestamp instead.",
   "args": {
     "name": {
       "required": true,

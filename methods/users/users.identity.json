@@ -1,7 +1,7 @@
 {
   "group": "users",
   "name": "users.identity",
-  "desc": "",
+  "desc": "After your Slack app is awarded an identity token through Sign in with Slack, use this method to retrieve a user's identity.",
   "args": {
   },
   "response": {

@@ -1,7 +1,7 @@
 {
   "group": "chat",
   "name": "chat.getPermalink",
-  "desc": "",
+  "desc": "Easily exchange a message timestamp and a channel ID for a friendly HTTP-based permalink to that message. Handles message threads and all conversation types.",
   "args": {
     "channel": {
       "required": true,

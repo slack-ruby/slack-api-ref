@@ -1,7 +1,7 @@
 {
   "group": "groups",
   "name": "groups.kick",
-  "desc": "",
+  "desc": "This method allows a user to remove another member from a private channel.",
   "args": {
     "channel": {
       "required": true,

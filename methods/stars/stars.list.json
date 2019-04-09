@@ -1,7 +1,7 @@
 {
   "group": "stars",
   "name": "stars.list",
-  "desc": "",
+  "desc": "This method lists the items starred by the authed user.",
   "args": {
     "cursor": {
       "required": false,

@@ -1,7 +1,7 @@
 {
   "group": "chat",
   "name": "chat.unfurl",
-  "desc": "",
+  "desc": "This method attaches Slack app unfurl behavior to a specified and relevant message. A user token is required as this method does not support bot user tokens.",
   "args": {
     "channel": {
       "required": true,

@@ -1,7 +1,7 @@
 {
   "group": "team",
   "name": "team.profile.get",
-  "desc": "",
+  "desc": "This method is used to get the profile field definitions for this team.",
   "args": {
     "visibility": {
       "required": false,

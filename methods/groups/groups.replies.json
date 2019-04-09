@@ -1,7 +1,7 @@
 {
   "group": "groups",
   "name": "groups.replies",
-  "desc": "",
+  "desc": "This method returns an entire thread (a message plus all the messages in reply to it).",
   "args": {
     "channel": {
       "required": true,

@@ -1,7 +1,7 @@
 {
   "group": "channels",
   "name": "channels.invite",
-  "desc": "",
+  "desc": "This method is used to invite a user to a channel. The calling user must be a member of the channel.",
   "args": {
     "channel": {
       "required": true,

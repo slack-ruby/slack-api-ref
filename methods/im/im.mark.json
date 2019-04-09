@@ -1,7 +1,7 @@
 {
   "group": "im",
   "name": "im.mark",
-  "desc": "",
+  "desc": "This method moves the read cursor in a direct message channel.",
   "args": {
     "channel": {
       "required": true,

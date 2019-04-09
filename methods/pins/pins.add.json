@@ -1,7 +1,7 @@
 {
   "group": "pins",
   "name": "pins.add",
-  "desc": "",
+  "desc": "This method pins an item (file, file comment, channel message, or group message) to a particular channel.\nThe channel argument is required and one of file, file_comment, or timestamp must also be specified.",
   "args": {
     "channel": {
       "required": true,

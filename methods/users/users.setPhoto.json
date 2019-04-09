@@ -1,7 +1,7 @@
 {
   "group": "users",
   "name": "users.setPhoto",
-  "desc": "",
+  "desc": "This method allows the user to set their profile image. The caller can pass image data via image.",
   "args": {
     "image": {
       "required": true,

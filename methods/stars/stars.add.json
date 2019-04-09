@@ -1,7 +1,7 @@
 {
   "group": "stars",
   "name": "stars.add",
-  "desc": "",
+  "desc": "This method adds a star to an item (message, file, file comment, channel, private group, or DM) on behalf of the authenticated user.\nOne of file, file_comment, channel, or the combination of channel and timestamp must be specified.",
   "args": {
     "channel": {
       "required": false,

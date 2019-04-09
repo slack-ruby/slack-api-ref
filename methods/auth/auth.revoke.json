@@ -1,7 +1,7 @@
 {
   "group": "auth",
   "name": "auth.revoke",
-  "desc": "",
+  "desc": "This method revokes an access token. Use it when you no longer need a token. For example, with a Sign In With Slack app, call this to log a user out.",
   "args": {
     "test": {
       "required": false,

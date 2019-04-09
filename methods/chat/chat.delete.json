@@ -1,7 +1,7 @@
 {
   "group": "chat",
   "name": "chat.delete",
-  "desc": "",
+  "desc": "This method deletes a message from a channel.",
   "args": {
     "channel": {
       "required": true,

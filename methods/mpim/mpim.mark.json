@@ -1,7 +1,7 @@
 {
   "group": "mpim",
   "name": "mpim.mark",
-  "desc": "",
+  "desc": "This method moves the read cursor in a multiparty direct message channel.",
   "args": {
     "channel": {
       "required": true,

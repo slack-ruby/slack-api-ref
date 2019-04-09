@@ -1,7 +1,7 @@
 {
   "group": "dnd",
   "name": "dnd.endSnooze",
-  "desc": "",
+  "desc": "Ends the current user's snooze mode immediately.",
   "args": {
   },
   "response": {

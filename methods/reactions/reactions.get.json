@@ -1,7 +1,7 @@
 {
   "group": "reactions",
   "name": "reactions.get",
-  "desc": "",
+  "desc": "This method returns a list of all reactions for a single item (file, file comment, channel message, group message, or direct message).",
   "args": {
     "channel": {
       "required": false,

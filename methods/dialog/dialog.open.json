@@ -1,7 +1,7 @@
 {
   "group": "dialog",
   "name": "dialog.open",
-  "desc": "",
+  "desc": "Open a dialog with a user by exchanging a trigger_id received from another interaction. See the dialogs documentation to learn how to obtain triggers define form elements.",
   "args": {
     "dialog": {
       "required": true,

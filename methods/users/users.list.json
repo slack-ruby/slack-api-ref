@@ -1,7 +1,7 @@
 {
   "group": "users",
   "name": "users.list",
-  "desc": "",
+  "desc": "This method returns a list of all users in the workspace. This includes deleted/deactivated users.",
   "args": {
     "cursor": {
       "required": false,

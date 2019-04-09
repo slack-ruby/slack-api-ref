@@ -1,7 +1,7 @@
 {
   "group": "bots",
   "name": "bots.info",
-  "desc": "",
+  "desc": "This method returns extended information about a bot user.",
   "args": {
     "bot": {
       "required": false,

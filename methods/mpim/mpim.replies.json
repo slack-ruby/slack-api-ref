@@ -1,7 +1,7 @@
 {
   "group": "mpim",
   "name": "mpim.replies",
-  "desc": "",
+  "desc": "This method returns an entire thread (a message plus all the messages in reply to it).",
   "args": {
     "channel": {
       "required": true,

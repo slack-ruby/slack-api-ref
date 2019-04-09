@@ -1,7 +1,7 @@
 {
   "group": "reactions",
   "name": "reactions.list",
-  "desc": "",
+  "desc": "This method returns a list of all items (file, file comment, channel message, group message, or direct message) reacted to by a user.",
   "args": {
     "cursor": {
       "required": false,

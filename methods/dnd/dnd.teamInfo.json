@@ -1,7 +1,7 @@
 {
   "group": "dnd",
   "name": "dnd.teamInfo",
-  "desc": "",
+  "desc": "Provides information about the current Do Not Disturb settings for a list of users in a Slack team.",
   "args": {
     "users": {
       "required": false,

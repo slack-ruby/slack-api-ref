@@ -1,7 +1,7 @@
 {
   "group": "chat",
   "name": "chat.postMessage",
-  "desc": "",
+  "desc": "This method posts a message to a public channel, private channel, or direct message/IM channel.",
   "args": {
     "channel": {
       "required": true,

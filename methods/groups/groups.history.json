@@ -1,7 +1,7 @@
 {
   "group": "groups",
   "name": "groups.history",
-  "desc": "",
+  "desc": "This method returns a portion of messages/events from the specified private channel.\nTo read the entire history for a private channel, call the method with no latest or\noldest arguments, and then continue paging using the instructions below.",
   "args": {
     "channel": {
       "required": true,

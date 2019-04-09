@@ -1,7 +1,7 @@
 {
   "group": "channels",
   "name": "channels.archive",
-  "desc": "",
+  "desc": "This method archives a channel.",
   "args": {
     "channel": {
       "required": true,

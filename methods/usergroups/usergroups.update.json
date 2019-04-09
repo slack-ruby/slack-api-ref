@@ -1,7 +1,7 @@
 {
   "group": "usergroups",
   "name": "usergroups.update",
-  "desc": "",
+  "desc": "This method updates the properties of an existing User Group.",
   "args": {
     "usergroup": {
       "required": true,

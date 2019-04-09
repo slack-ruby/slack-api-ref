@@ -1,7 +1,7 @@
 {
   "group": "reminders",
   "name": "reminders.list",
-  "desc": "",
+  "desc": "This method lists all reminders created by or for a given user.",
   "args": {
   },
   "response": {

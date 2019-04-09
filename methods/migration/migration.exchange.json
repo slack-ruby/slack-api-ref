@@ -1,7 +1,7 @@
 {
   "group": "migration",
   "name": "migration.exchange",
-  "desc": "",
+  "desc": "Easily convert your vintage user IDs to Enterprise Grid-friendly global user IDs.",
   "args": {
     "users": {
       "required": true,

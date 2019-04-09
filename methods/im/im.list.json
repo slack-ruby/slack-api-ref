@@ -1,7 +1,7 @@
 {
   "group": "im",
   "name": "im.list",
-  "desc": "",
+  "desc": "Don't use this method. Use conversations.list instead.",
   "args": {
     "cursor": {
       "required": false,

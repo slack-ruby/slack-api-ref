@@ -1,7 +1,7 @@
 {
   "group": "channels",
   "name": "channels.mark",
-  "desc": "",
+  "desc": "This method moves the read cursor in a channel.",
   "args": {
     "channel": {
       "required": true,

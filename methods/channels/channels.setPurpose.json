@@ -1,7 +1,7 @@
 {
   "group": "channels",
   "name": "channels.setPurpose",
-  "desc": "",
+  "desc": "This method is used to change the purpose of a channel. The calling user must be a member of the channel.",
   "args": {
     "channel": {
       "required": true,

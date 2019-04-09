@@ -1,7 +1,7 @@
 {
   "group": "rtm",
   "name": "rtm.connect",
-  "desc": "",
+  "desc": "This method begins a Real Time Messaging API session and reserves your application a specific URL with which to connect via websocket.",
   "args": {
     "batch_presence_aware": {
       "required": false,

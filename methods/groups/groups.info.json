@@ -1,7 +1,7 @@
 {
   "group": "groups",
   "name": "groups.info",
-  "desc": "",
+  "desc": "Don't use this method. Use conversations.info instead.",
   "args": {
     "channel": {
       "required": true,

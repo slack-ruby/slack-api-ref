@@ -1,7 +1,7 @@
 {
   "group": "team",
   "name": "team.accessLogs",
-  "desc": "",
+  "desc": "This method is used to retrieve the \"access logs\" for users on a workspace.",
   "args": {
     "before": {
       "required": false,

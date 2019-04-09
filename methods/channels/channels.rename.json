@@ -1,7 +1,7 @@
 {
   "group": "channels",
   "name": "channels.rename",
-  "desc": "",
+  "desc": "This method renames a team channel.",
   "args": {
     "channel": {
       "required": true,
