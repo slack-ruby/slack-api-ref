@@ -1,7 +1,7 @@
 {
   "group": "apps",
   "name": "apps.uninstall",
-  "desc": "This method uninstalls a workspace app. Unlike auth.revoke, which revokes a single token, this method revokes all tokens associated with a single installation of a workspace app.",
+  "desc": "This method uninstalls an app. Unlike auth.revoke, which revokes a single token, this method revokes all tokens associated with a single installation of an app.",
   "args": {
     "client_id": {
       "required": true,
