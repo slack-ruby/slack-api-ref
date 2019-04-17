@@ -28,6 +28,8 @@
   },
   "errors": {
     "invalid_scheduled_message_id": "The scheduled_message_id passed is either an invalid ID, or the scheduled message it's referencing has already been sent or deleted.",
+    "channel_not_found": "The channel passed is either an invalid ID or does not exist.",
+    "bad_token": "The provided token was invalid.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",

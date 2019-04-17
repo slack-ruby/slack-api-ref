@@ -10,8 +10,8 @@
     ]
   },
   "errors": {
-    "snooze_not_active": "Snooze is not active for this user and cannot be ended.",
     "snooze_end_failed": "There was a problem setting the user's Do Not Disturb status.",
+    "snooze_not_active": "Snooze is not active for this user and cannot be ended.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",
