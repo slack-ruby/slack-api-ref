@@ -3,6 +3,11 @@
   "name": "chat.postEphemeral",
   "desc": "This method posts an ephemeral message, which is visible only to the assigned user in a specific public channel, private channel, or private conversation.",
   "args": {
+    "attachments": {
+      "required": true,
+      "example": "[{\"pretext\": \"pre-hello\", \"text\": \"text-world\"}]",
+      "desc": "A JSON-based array of structured attachments, presented as a URL-encoded string."
+    },
     "channel": {
       "required": true,
       "example": "C1234567890",
@@ -24,11 +29,6 @@
       "required": false,
       "example": "true",
       "desc": "Pass true to post the message as the authed user. Defaults to true if the chat:write:bot scope is not included. Otherwise, defaults to false."
-    },
-    "attachments": {
-      "required": false,
-      "example": "[{\"pretext\": \"pre-hello\", \"text\": \"text-world\"}]",
-      "desc": "A JSON-based array of structured attachments, presented as a URL-encoded string."
     },
     "blocks": {
       "required": false,
@@ -59,9 +59,9 @@
   },
   "errors": {
     "restricted_action": "A workspace preference prevents the authenticated user from posting.",
-    "channel_not_found": "Value passed for channel was invalid.",
-    "is_archived": "Channel has been archived.",
     "too_many_attachments": "Too many attachments were provided with this message. A maximum of 100 attachments are allowed on a message.",
+    "is_archived": "Channel has been archived.",
+    "channel_not_found": "Value passed for channel was invalid.",
     "msg_too_long": "Message text is too long.",
     "no_text": "No message text provided.",
     "user_not_in_channel": "Intended recipient is not in the specified channel.",
