@@ -1,7 +1,7 @@
 {
   "name": "pin_added",
   "desc": "A pin was added to a channel.",
-  "long_desc": "My Slack API Start here App features Messagingnew Reference Slack App Directory Authentication Keep in touch Resources Community A pin was added to a channel Compatibility: RTM Events API When an item is pinned in a channel, the pin_added event is sent to all members of that channel.",
+  "long_desc": "My Slack API Start herenew App features Messaging Reference Slack App Directory Authentication Keep in touch Resources Community A pin was added to a channel Compatibility: RTM Events API When an item is pinned in a channel, the pin_added event is sent to all members of that channel.",
   "required_scope": "RTM",
   "example": {
     "type": "pin_added",

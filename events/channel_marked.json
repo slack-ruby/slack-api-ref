@@ -1,7 +1,7 @@
 {
   "name": "channel_marked",
   "desc": "Your channel read marker was updated.",
-  "long_desc": "My Slack API Start here App features Messagingnew Reference Slack App Directory Authentication Keep in touch Resources Community Your channel read marker was updated Compatibility: RTM The channel_marked event is sent to all open connections for a user when that user moves the read cursor in a channel by calling the channels.mark API method.",
+  "long_desc": "My Slack API Start herenew App features Messaging Reference Slack App Directory Authentication Keep in touch Resources Community Your channel read marker was updated Compatibility: RTM The channel_marked event is sent to all open connections for a user when that user moves the read cursor in a channel by calling the channels.mark API method.",
   "required_scope": "RTM",
   "example": {
     "type": "channel_marked",

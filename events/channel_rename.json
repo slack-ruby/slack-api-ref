@@ -1,7 +1,7 @@
 {
   "name": "channel_rename",
   "desc": "A channel was renamed.",
-  "long_desc": "My Slack API Start here App features Messagingnew Reference Slack App Directory Authentication Keep in touch Resources Community A channel was renamed Compatibility: RTM Events API The channel_rename event is sent to all connections for a workspace when a channel is renamed. Clients can use this to update their local list of channels.",
+  "long_desc": "My Slack API Start herenew App features Messaging Reference Slack App Directory Authentication Keep in touch Resources Community A channel was renamed Compatibility: RTM Events API The channel_rename event is sent to all connections for a workspace when a channel is renamed. Clients can use this to update their local list of channels.",
   "required_scope": "RTM",
   "example": {
     "type": "channel_rename",

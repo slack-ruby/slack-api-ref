@@ -1,7 +1,7 @@
 {
   "name": "file_public",
   "desc": "A file was made public.",
-  "long_desc": "My Slack API Start here App features Messagingnew Reference Slack App Directory Authentication Keep in touch Resources Community A file was made public Compatibility: RTM Events API The file_public event is sent when a file is made public. It is sent to all connected clients for all users that have permission to see the file. The file property includes the file ID, as well as a top-level file_id. To obtain additional information about the file, use the files.info API method.",
+  "long_desc": "My Slack API Start herenew App features Messaging Reference Slack App Directory Authentication Keep in touch Resources Community A file was made public Compatibility: RTM Events API The file_public event is sent when a file is made public. It is sent to all connected clients for all users that have permission to see the file. The file property includes the file ID, as well as a top-level file_id. To obtain additional information about the file, use the files.info API method.",
   "required_scope": "RTM",
   "example": {
     "type": "file_public",
