@@ -3,6 +3,11 @@
   "name": "team.info",
   "desc": "This method provides information about your team.",
   "args": {
+    "team": {
+      "required": false,
+      "example": " ",
+      "desc": "Team to get info on, if omitted, will return information about the current team. Will only return team that the authenticated token is allowed to see through external shared channels."
+    }
   },
   "response": {
     "examples": [
