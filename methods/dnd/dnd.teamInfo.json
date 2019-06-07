@@ -4,7 +4,7 @@
   "desc": "Provides information about the current Do Not Disturb settings for a list of users in a Slack team.",
   "args": {
     "users": {
-      "required": false,
+      "required": true,
       "example": "U1234,W4567",
       "desc": "Comma-separated list of users to fetch Do Not Disturb status for."
     }
