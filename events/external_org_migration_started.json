@@ -1,0 +1,14 @@
+{
+  "name": "external_org_migration_started",
+  "desc": "An enterprise grid migration has started on an external workspace..",
+  "long_desc": "My Slack API Start herenew App features Messaging Reference Slack App Directory Authentication Keep in touch Resources Community An enterprise grid migration has started on an external workspace. Compatibility: RTM The external_org_migration_started event is sent to all connections when an external workspace begins to migrate to an Enterprise Grid. The team indicates the external workspace that is migrating. The date_started indicates the time the external workspace started to migrate.",
+  "required_scope": "RTM",
+  "example": {
+    "type": "external_org_migration_started",
+    "team": {
+      "id": "TXXXXXXXX",
+      "is_migrating": true
+    },
+    "date_started": 1551398400
+  }
+}
