@@ -35,6 +35,16 @@
       "example": "[{\"type\": \"section\", \"text\": {\"type\": \"plain_text\", \"text\": \"Hello world\"}}]",
       "desc": "A JSON-based array of structured blocks, presented as a URL-encoded string."
     },
+    "icon_emoji": {
+      "required": false,
+      "example": ":chart_with_upwards_trend:",
+      "desc": "Emoji to use as the icon for this message. Overrides icon_url. Must be used in conjunction with as_user set to false, otherwise ignored. See authorship below."
+    },
+    "icon_url": {
+      "required": false,
+      "example": "http://lorempixel.com/48/48",
+      "desc": "URL to an image to use as the icon for this message. Must be used in conjunction with as_user set to false, otherwise ignored. See authorship below."
+    },
     "link_names": {
       "required": false,
       "example": "true",
@@ -49,6 +59,11 @@
       "required": false,
       "example": "1234567890.123456",
       "desc": "Provide another message's ts value to post this message in a thread. Avoid using a reply's ts value; use its parent's value instead. Ephemeral messages in threads are only shown if there is already an active thread."
+    },
+    "username": {
+      "required": false,
+      "example": "My Bot",
+      "desc": "Set your bot's user name. Must be used in conjunction with as_user set to false, otherwise ignored. See authorship below."
     }
   },
   "response": {
