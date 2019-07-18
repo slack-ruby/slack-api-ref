@@ -3,6 +3,21 @@
   "name": "admin.users.session.reset",
   "desc": "This method wipes a user session, leaving the user unauthenticated. The user’s Slack client will reset its local cache.",
   "args": {
+    "user_id": {
+      "required": true,
+      "example": "W12345678",
+      "desc": "The ID of the user to wipe sessions for."
+    },
+    "mobile_only": {
+      "required": false,
+      "example": "true",
+      "desc": "Only expire mobile sessions (default: false)."
+    },
+    "web_only": {
+      "required": false,
+      "example": "true",
+      "desc": "Only expire web sessions (default: false)."
+    }
   },
   "response": {
     "examples": [
