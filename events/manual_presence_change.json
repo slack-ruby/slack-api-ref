@@ -1,7 +1,7 @@
 {
   "name": "manual_presence_change",
   "desc": "You manually updated your presence.",
-  "long_desc": "My Slack API Start herenew App features Messaging Reference Slack App Directory Authentication Keep in touch Resources Community You manually updated your presence Compatibility: RTM The manual_presence_change event is sent to all connections for a user when that user manually updates their presence. Clients can use this to update their local state.",
+  "long_desc": "You manually updated your presence. The manual_presence_change event is sent to all connections for a user when that user manually updates their presence. Clients can use this to update their local state.",
   "required_scope": "RTM",
   "example": {
     "type": "manual_presence_change",

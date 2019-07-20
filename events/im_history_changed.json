@@ -1,7 +1,7 @@
 {
   "name": "im_history_changed",
   "desc": "Bulk updates were made to a DM's history.",
-  "long_desc": "My Slack API Start herenew App features Messaging Reference Slack App Directory Authentication Keep in touch Resources Community Bulk updates were made to a DM's history Compatibility: RTM Events API A im_history_changed event is sent to all clients in a DM channel When bulk changes have occurred to that DM channel's history. When clients receive this message they should reload chat history for the channel if they have any cached messages before latest. These bulk changes may be the result of data importation or bulk action taken by an administrator.",
+  "long_desc": "Bulk updates were made to a DM's history. A im_history_changed event is sent to all clients in a DM channel When bulk changes have occurred to that DM channel's history. When clients receive this message they should reload chat history for the channel if they have any cached messages before latest. These bulk changes may be the result of data importation or bulk action taken by an administrator.",
   "required_scope": "RTM",
   "example": {
     "type": "im_history_changed",

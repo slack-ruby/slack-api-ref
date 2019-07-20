@@ -14,10 +14,12 @@ module SlackApi
     end
 
     def process_event(page, data = {})
-      long_desc = page.search('.card p, h4').map(&:text).join(" ").gsub("\n", " ")
-      long_desc.gsub! /Events API compatibility.*$/, ''
-      long_desc.gsub! /.*API Scope:\s*[\w:]*/, ''
-      long_desc.strip!
+      long_desc = page.search('.card p, .card h4').map(&:text).join(" ").gsub("\n", " ")
+      long_desc = long_desc.gsub ' Compatibility: RTM Events API', '.'
+      long_desc = long_desc.gsub ' Compatibility: RTM', '.'
+      long_desc = long_desc.gsub /Events API compatibility.*$/, ''
+      long_desc = long_desc.gsub /.*API Scope:\s*[\w:]*/, ''
+      long_desc = long_desc.strip
 
       json_hash = {
         'name' => data[:name],

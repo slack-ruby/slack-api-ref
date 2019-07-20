@@ -1,7 +1,7 @@
 {
   "name": "channel_joined",
   "desc": "You joined a channel.",
-  "long_desc": "My Slack API Start herenew App features Messaging Reference Slack App Directory Authentication Keep in touch Resources Community You joined a channel Compatibility: RTM The channel_joined event is sent to all connections for a user when that user joins a channel. In addition to this message, all existing members of the channel may receive a channel_join message event. Of course, there's also the fresher, more dependable member_joined_channel. This changelog entry  clears it all up.",
+  "long_desc": "You joined a channel. The channel_joined event is sent to all connections for a user when that user joins a channel. In addition to this message, all existing members of the channel may receive a channel_join message event. Of course, there's also the fresher, more dependable member_joined_channel. This changelog entry  clears it all up.",
   "required_scope": "RTM",
   "example": {
     "type": "channel_joined",
