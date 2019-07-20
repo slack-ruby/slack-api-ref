@@ -22,10 +22,20 @@ module SlackApi
     end
 
     def process_method(page, default_data = {})
-      desc = page.search("section[data-tab='docs'] p").detect do |p|
+      desc_p = page.search("section[data-tab='docs'] p").detect do |p|
         next if p.key?('class') && p['class'].include?('alert')
         p.text && p.text.strip.length > 0
-      end.text
+      end
+
+      desc = desc_p.text if desc_p
+
+      ul = desc_p.next_sibling
+      ul = ul.next_sibling if ul
+      if ul && ul.name = 'ul'
+        ul.search('li').each do |li|
+          desc += "\n- #{li.text}"
+        end
+      end
 
       args, fields = parse_args(page, default_data)
       errors = parse_errors(page)
