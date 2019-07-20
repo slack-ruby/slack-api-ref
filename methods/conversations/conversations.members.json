@@ -1,7 +1,7 @@
 {
   "group": "conversations",
   "name": "conversations.members",
-  "desc": "As part of the Conversations API, this method's required scopes depend on the type of channel-like object you're working with. For classic Slack apps, a corresponding channels: scope is required when working with public channels, groups: for private channels, also the same rules are applied for im: and mpim:. For workspace apps, a conversations: scope is all that's needed.",
+  "desc": "This Conversations API method returns a paginated list of members party to a conversation.",
   "args": {
     "channel": {
       "required": true,

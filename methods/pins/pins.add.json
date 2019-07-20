@@ -1,7 +1,7 @@
 {
   "group": "pins",
   "name": "pins.add",
-  "desc": "\n     We are phasing out support for pinning files and file comments only. This method will no longer accept the file and file_comment parameters beginning August 22, 2019.\n",
+  "desc": "This method pins a channel message or group message to a particular channel.\nThe channel argument is required and timestamp must also be specified.",
   "args": {
     "channel": {
       "required": true,
