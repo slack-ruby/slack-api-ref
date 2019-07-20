@@ -1,7 +1,7 @@
 {
   "group": "conversations",
   "name": "conversations.open",
-  "desc": "As part of the Conversations API, this method's required scopes depend on the type of channel-like object you're working with. For classic Slack apps, a corresponding channels: scope is required when working with public channels, groups: for private channels, also the same rules are applied for im: and mpim:. For workspace apps, a conversations: scope is all that's needed.",
+  "desc": "This Conversations API method opens a multi-person direct message or just a 1:1 direct message.",
   "args": {
     "channel": {
       "required": false,

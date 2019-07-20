@@ -23,6 +23,7 @@ module SlackApi
 
     def process_method(page, default_data = {})
       desc = page.search("section[data-tab='docs'] p").detect do |p|
+        next if p.key?('class') && p['class'].include?('alert')
         p.text && p.text.strip.length > 0
       end.text
 
