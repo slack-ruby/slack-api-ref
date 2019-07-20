@@ -37,6 +37,8 @@ module SlackApi
         end
       end
 
+      desc = desc.gsub("’", "'")
+
       args, fields = parse_args(page, default_data)
       errors = parse_errors(page)
       response = parse_response(page)
