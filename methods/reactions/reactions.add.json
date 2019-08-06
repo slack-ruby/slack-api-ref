@@ -47,6 +47,7 @@
     "too_many_reactions": "The limit for reactions a person may add to the item has been reached.",
     "file_not_found": "File specified by file does not exist.",
     "no_item_specified": "file, file_comment, or combination of channel and timestamp was not specified.",
+    "is_archived": "Channel specified has been archived.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",
