@@ -1,7 +1,7 @@
 {
   "group": "users",
   "name": "users.lookupByEmail",
-  "desc": "Retrieve a single user by looking them up by their registered email address. Requires users:read.email.",
+  "desc": "Find a user with an email address.",
   "args": {
     "email": {
       "required": true,

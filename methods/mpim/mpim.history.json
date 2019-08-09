@@ -1,7 +1,7 @@
 {
   "group": "mpim",
   "name": "mpim.history",
-  "desc": "This method returns a portion of messages/events from the specified multiparty direct message channel.\nTo read the entire history for a multiparty direct message, call the method with no latest or\noldest arguments, and then continue paging using the instructions below.",
+  "desc": "Fetches history of messages and events from a multiparty direct message.",
   "args": {
     "channel": {
       "required": true,

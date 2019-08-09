@@ -1,7 +1,7 @@
 {
   "group": "team",
   "name": "team.info",
-  "desc": "This method provides information about your team.",
+  "desc": "Gets information about the current team.",
   "args": {
     "team": {
       "required": false,

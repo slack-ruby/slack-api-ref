@@ -1,7 +1,7 @@
 {
   "group": "channels",
   "name": "channels.setTopic",
-  "desc": "This method is used to change the topic of a channel. The calling user must be a member of the channel.",
+  "desc": "Sets the topic for a channel.",
   "args": {
     "channel": {
       "required": true,

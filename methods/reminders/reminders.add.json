@@ -1,7 +1,7 @@
 {
   "group": "reminders",
   "name": "reminders.add",
-  "desc": "This method creates a reminder.",
+  "desc": "Creates a reminder.",
   "args": {
     "text": {
       "required": true,

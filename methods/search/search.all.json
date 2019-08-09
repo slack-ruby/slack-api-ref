@@ -1,7 +1,7 @@
 {
   "group": "search",
   "name": "search.all",
-  "desc": "This method allows users and applications to search both messages and files in a single call.",
+  "desc": "Searches for messages and files matching a query.",
   "args": {
     "query": {
       "required": true,

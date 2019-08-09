@@ -1,7 +1,7 @@
 {
   "group": "channels",
   "name": "channels.kick",
-  "desc": "This method allows a user to remove another member from a team channel.",
+  "desc": "Removes a user from a channel.",
   "args": {
     "channel": {
       "required": true,

@@ -1,7 +1,7 @@
 {
   "group": "files",
   "name": "files.upload",
-  "desc": "A new file commenting experience arrived on July 23, 2018. Learn more about what's new and the migration path for apps already working with files and file comments.",
+  "desc": "Uploads or creates a file.",
   "args": {
     "channels": {
       "required": false,

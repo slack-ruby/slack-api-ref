@@ -1,7 +1,7 @@
 {
   "group": "groups",
   "name": "groups.leave",
-  "desc": "This method is used to leave a private channel.",
+  "desc": "Leaves a private channel.",
   "args": {
     "channel": {
       "required": true,

@@ -1,7 +1,7 @@
 {
   "group": "conversations",
   "name": "conversations.history",
-  "desc": "This method returns a portion of message events from the specified conversation.",
+  "desc": "Fetches a conversation's history of messages and events.",
   "args": {
     "channel": {
       "required": true,

@@ -1,7 +1,7 @@
 {
   "group": "usergroups",
   "name": "usergroups.create",
-  "desc": "This method is used to create a User Group.",
+  "desc": "Create a User Group",
   "args": {
     "name": {
       "required": true,

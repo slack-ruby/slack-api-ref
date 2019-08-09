@@ -1,7 +1,7 @@
 {
   "group": "search",
   "name": "search.files",
-  "desc": "This method returns files matching a search query.",
+  "desc": "Searches for files matching a query.",
   "args": {
     "query": {
       "required": true,

@@ -1,7 +1,7 @@
 {
   "group": "conversations",
   "name": "conversations.rename",
-  "desc": "This method renames a conversation. Some types of conversations cannot be renamed.",
+  "desc": "Renames a conversation.",
   "args": {
     "channel": {
       "required": true,

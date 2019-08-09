@@ -1,7 +1,7 @@
 {
   "group": "usergroups",
   "name": "usergroups.list",
-  "desc": "This method returns a list of all User Groups in the team. This can optionally include disabled User Groups.",
+  "desc": "List all User Groups for a team",
   "args": {
     "include_count": {
       "required": false,

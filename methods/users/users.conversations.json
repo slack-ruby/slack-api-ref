@@ -1,7 +1,7 @@
 {
   "group": "users",
   "name": "users.conversations",
-  "desc": "This method helps answer questions like:\n- Which conversations am I a member of?\n- Which public channels is my bot user in?\n- Do I have any direct messages open with my friend Suzy?\n- Is my bot a member of any private channels?",
+  "desc": "List conversations the calling user may access.",
   "args": {
     "cursor": {
       "required": false,

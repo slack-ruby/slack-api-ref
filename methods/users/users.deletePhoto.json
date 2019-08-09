@@ -1,7 +1,7 @@
 {
   "group": "users",
   "name": "users.deletePhoto",
-  "desc": "This method allows the user to delete their profile image. It will clear whatever image is currently set.",
+  "desc": "Delete the user profile photo",
   "args": {
   },
   "response": {

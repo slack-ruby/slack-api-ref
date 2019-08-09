@@ -1,7 +1,7 @@
 {
   "group": "conversations",
   "name": "conversations.archive",
-  "desc": "This method archives a conversation. Not all types of conversations can be archived.",
+  "desc": "Archives a conversation.",
   "args": {
     "channel": {
       "required": true,

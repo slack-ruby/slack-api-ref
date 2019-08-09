@@ -1,7 +1,7 @@
 {
   "group": "channels",
   "name": "channels.list",
-  "desc": "Don't use this method. Use conversations.list instead.",
+  "desc": "Lists all channels in a Slack team.",
   "args": {
     "cursor": {
       "required": false,

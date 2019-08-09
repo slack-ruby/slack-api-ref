@@ -1,7 +1,7 @@
 {
   "group": "conversations",
   "name": "conversations.invite",
-  "desc": "This Conversations API method invites 1-30 users to a public or private channel. The calling user must be a member of the channel.",
+  "desc": "Invites users to a channel.",
   "args": {
     "channel": {
       "required": true,

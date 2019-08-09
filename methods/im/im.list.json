@@ -1,7 +1,7 @@
 {
   "group": "im",
   "name": "im.list",
-  "desc": "Don't use this method. Use conversations.list instead.",
+  "desc": "Lists direct message channels for the calling user.",
   "args": {
     "cursor": {
       "required": false,

@@ -1,7 +1,7 @@
 {
   "group": "conversations",
   "name": "conversations.open",
-  "desc": "This Conversations API method opens a multi-person direct message or just a 1:1 direct message.",
+  "desc": "Opens or resumes a direct message or multi-person direct message.",
   "args": {
     "channel": {
       "required": false,

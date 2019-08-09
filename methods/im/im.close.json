@@ -1,7 +1,7 @@
 {
   "group": "im",
   "name": "im.close",
-  "desc": "This method closes a direct message channel.",
+  "desc": "Close a direct message channel.",
   "args": {
     "channel": {
       "required": true,

@@ -1,7 +1,7 @@
 {
   "group": "conversations",
   "name": "conversations.kick",
-  "desc": "This Conversations API method allows a user to remove another member from a channel.",
+  "desc": "Removes a user from a conversation.",
   "args": {
     "channel": {
       "required": true,

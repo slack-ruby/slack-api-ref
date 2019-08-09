@@ -1,7 +1,7 @@
 {
   "group": "dnd",
   "name": "dnd.info",
-  "desc": "Provides information about a user's current Do Not Disturb settings.",
+  "desc": "Retrieves a user's current Do Not Disturb status.",
   "args": {
     "user": {
       "required": false,

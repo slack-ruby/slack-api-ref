@@ -1,7 +1,7 @@
 {
   "group": "conversations",
   "name": "conversations.replies",
-  "desc": "This Conversations API method returns an entire thread (a message plus all the messages in reply to it), while conversations.history method returns only parent messages.",
+  "desc": "Retrieve a thread of messages posted to a conversation",
   "args": {
     "channel": {
       "required": true,

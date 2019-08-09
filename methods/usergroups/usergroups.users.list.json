@@ -1,7 +1,7 @@
 {
   "group": "usergroups",
   "name": "usergroups.users.list",
-  "desc": "This method returns a list of all users within a User Group.",
+  "desc": "List all users in a User Group",
   "args": {
     "usergroup": {
       "required": true,

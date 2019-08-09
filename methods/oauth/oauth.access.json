@@ -1,7 +1,7 @@
 {
   "group": "oauth",
   "name": "oauth.access",
-  "desc": "This method allows you to exchange a temporary OAuth code for an API access token.",
+  "desc": "Exchanges a temporary OAuth verifier code for an access token.",
   "args": {
     "client_id": {
       "required": true,

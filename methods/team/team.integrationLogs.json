@@ -1,7 +1,7 @@
 {
   "group": "team",
   "name": "team.integrationLogs",
-  "desc": "This method lists the integration activity logs for a team, including when integrations are added, modified and removed. This method can only be called by Admins.",
+  "desc": "Gets the integration logs for the current team.",
   "args": {
     "app_id": {
       "required": false,

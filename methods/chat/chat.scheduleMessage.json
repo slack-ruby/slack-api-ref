@@ -1,7 +1,7 @@
 {
   "group": "chat",
   "name": "chat.scheduleMessage",
-  "desc": "This method schedules a message for delivery to a public channel, private channel, or direct message/IM channel at a specified time in the future.",
+  "desc": "Schedules a message to be sent to a channel.",
   "args": {
     "channel": {
       "required": true,

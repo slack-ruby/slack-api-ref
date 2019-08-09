@@ -1,7 +1,7 @@
 {
   "group": "chat",
   "name": "chat.deleteScheduledMessage",
-  "desc": "This method deletes a pending scheduled message before it is sent.",
+  "desc": "Deletes a pending scheduled message from the queue.",
   "args": {
     "channel": {
       "required": true,

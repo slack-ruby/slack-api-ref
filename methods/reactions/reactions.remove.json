@@ -1,7 +1,7 @@
 {
   "group": "reactions",
   "name": "reactions.remove",
-  "desc": "This method removes a reaction (emoji) from an item (file, file comment, channel message, group message, or direct message).\nOne of file, file_comment, or the combination of channel and timestamp must be specified.",
+  "desc": "Removes a reaction from an item.",
   "args": {
     "name": {
       "required": true,

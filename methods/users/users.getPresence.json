@@ -1,7 +1,7 @@
 {
   "group": "users",
   "name": "users.getPresence",
-  "desc": "This method lets you find out information about a user's presence.\nConsult the presence documentation for more details.",
+  "desc": "Gets user presence information.",
   "args": {
     "user": {
       "required": true,

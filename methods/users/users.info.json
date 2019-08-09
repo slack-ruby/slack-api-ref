@@ -1,7 +1,7 @@
 {
   "group": "users",
   "name": "users.info",
-  "desc": "This method returns information about a member of a workspace.",
+  "desc": "Gets information about a user.",
   "args": {
     "user": {
       "required": true,

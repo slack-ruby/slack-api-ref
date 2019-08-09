@@ -1,7 +1,7 @@
 {
   "group": "channels",
   "name": "channels.unarchive",
-  "desc": "This method unarchives a channel. The calling user is added to the channel.",
+  "desc": "Unarchives a channel.",
   "args": {
     "channel": {
       "required": true,

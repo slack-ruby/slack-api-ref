@@ -1,7 +1,7 @@
 {
   "group": "auth",
   "name": "auth.test",
-  "desc": "This method checks authentication and tells \"you\" who you are, even if you might be a bot.",
+  "desc": "Checks authentication & identity.",
   "args": {
   },
   "response": {

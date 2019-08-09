@@ -1,7 +1,7 @@
 {
   "group": "conversations",
   "name": "conversations.members",
-  "desc": "This Conversations API method returns a paginated list of members party to a conversation.",
+  "desc": "Retrieve members of a conversation.",
   "args": {
     "channel": {
       "required": true,

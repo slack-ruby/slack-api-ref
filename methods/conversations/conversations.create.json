@@ -1,7 +1,7 @@
 {
   "group": "conversations",
   "name": "conversations.create",
-  "desc": "Create a public or private channel using this Conversations API method.",
+  "desc": "Initiates a public or private channel-based conversation",
   "args": {
     "name": {
       "required": true,

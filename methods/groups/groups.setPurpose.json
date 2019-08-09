@@ -1,7 +1,7 @@
 {
   "group": "groups",
   "name": "groups.setPurpose",
-  "desc": "This method is used to change the purpose of a private channel. The calling user must be a member of the private channel.",
+  "desc": "Sets the purpose for a private channel.",
   "args": {
     "channel": {
       "required": true,

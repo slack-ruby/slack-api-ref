@@ -1,7 +1,7 @@
 {
   "group": "conversations",
   "name": "conversations.join",
-  "desc": "This Conversations API method joins a user to an existing conversation.",
+  "desc": "Joins an existing conversation.",
   "args": {
     "channel": {
       "required": true,

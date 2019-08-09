@@ -1,7 +1,7 @@
 {
   "group": "reminders",
   "name": "reminders.complete",
-  "desc": "This method completes a reminder.",
+  "desc": "Marks a reminder as complete.",
   "args": {
     "reminder": {
       "required": true,

@@ -1,7 +1,7 @@
 {
   "group": "users",
   "name": "users.list",
-  "desc": "This method returns a list of all users in the workspace. This includes deleted/deactivated users.",
+  "desc": "Lists all users in a Slack team.",
   "args": {
     "cursor": {
       "required": false,

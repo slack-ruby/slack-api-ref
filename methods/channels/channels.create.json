@@ -1,7 +1,7 @@
 {
   "group": "channels",
   "name": "channels.create",
-  "desc": "This method is used to create a channel.",
+  "desc": "Creates a channel.",
   "args": {
     "name": {
       "required": true,

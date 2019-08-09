@@ -1,7 +1,7 @@
 {
   "group": "channels",
   "name": "channels.replies",
-  "desc": "This method returns an entire thread (a message plus all the messages in reply to it).",
+  "desc": "Retrieve a thread of messages posted to a channel",
   "args": {
     "channel": {
       "required": true,

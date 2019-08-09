@@ -1,7 +1,7 @@
 {
   "group": "usergroups",
   "name": "usergroups.enable",
-  "desc": "This method enables a User Group which was previously disabled.",
+  "desc": "Enable a User Group",
   "args": {
     "usergroup": {
       "required": true,

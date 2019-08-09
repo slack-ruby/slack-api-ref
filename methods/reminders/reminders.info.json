@@ -1,7 +1,7 @@
 {
   "group": "reminders",
   "name": "reminders.info",
-  "desc": "This method returns information about a reminder.",
+  "desc": "Gets information about a reminder.",
   "args": {
     "reminder": {
       "required": true,

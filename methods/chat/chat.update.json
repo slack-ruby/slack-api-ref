@@ -1,7 +1,7 @@
 {
   "group": "chat",
   "name": "chat.update",
-  "desc": "This method updates a message in a channel. Though related to chat.postMessage, some parameters of chat.update are handled differently.",
+  "desc": "Updates a message.",
   "args": {
     "channel": {
       "required": true,

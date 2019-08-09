@@ -1,7 +1,7 @@
 {
   "group": "stars",
   "name": "stars.remove",
-  "desc": "This method removes a star from an item (message, file, file comment, channel, private group, or DM) on behalf of the authenticated user.\nOne of file, file_comment, channel, or the combination of channel and timestamp must be specified.",
+  "desc": "Removes a star from an item.",
   "args": {
     "channel": {
       "required": false,

@@ -1,7 +1,7 @@
 {
   "group": "pins",
   "name": "pins.remove",
-  "desc": "This method un-pins an item (file, file comment, channel message, or group message) from a channel.\nThe channel argument is required and one of file, file_comment, or timestamp must also be specified.",
+  "desc": "Un-pins an item from a channel.",
   "args": {
     "channel": {
       "required": true,

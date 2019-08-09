@@ -1,7 +1,7 @@
 {
   "group": "emoji",
   "name": "emoji.list",
-  "desc": "This method lists the custom emoji for a team.",
+  "desc": "Lists custom emoji for a team.",
   "args": {
   },
   "response": {

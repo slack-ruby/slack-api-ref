@@ -1,7 +1,7 @@
 {
   "group": "conversations",
   "name": "conversations.info",
-  "desc": "This Conversations API method returns information about a workspace conversation.",
+  "desc": "Retrieve information about a conversation.",
   "args": {
     "channel": {
       "required": true,

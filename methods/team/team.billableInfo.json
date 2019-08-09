@@ -1,7 +1,7 @@
 {
   "group": "team",
   "name": "team.billableInfo",
-  "desc": "This method lists billable information for each user on the team. Currently this consists solely of whether the user is\nsubject to billing per Slack's Fair Billing policy.",
+  "desc": "Gets billable users information for the current team.",
   "args": {
     "user": {
       "required": false,

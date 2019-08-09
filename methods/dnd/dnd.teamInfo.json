@@ -1,7 +1,7 @@
 {
   "group": "dnd",
   "name": "dnd.teamInfo",
-  "desc": "Provides information about the current Do Not Disturb settings for a list of users in a Slack team.",
+  "desc": "Retrieves the Do Not Disturb status for up to 50 users on a team.",
   "args": {
     "users": {
       "required": true,

@@ -1,7 +1,7 @@
 {
   "group": "conversations",
   "name": "conversations.close",
-  "desc": "This Conversations API method closes direct messages, multi-person or 1:1 or otherwise.",
+  "desc": "Closes a direct message or multi-person direct message.",
   "args": {
     "channel": {
       "required": true,

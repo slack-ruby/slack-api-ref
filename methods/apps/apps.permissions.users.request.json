@@ -1,7 +1,7 @@
 {
   "group": "apps",
   "name": "apps.permissions.users.request",
-  "desc": "This feature was exclusive to our workspace apps developer preview. The preview has now ended, but fan-favorite features such as token rotation and the Conversations API will become available to classic Slack apps over the coming months.",
+  "desc": "Enables an app to trigger a permissions modal to grant an app access to a user access scope.",
   "args": {
     "scopes": {
       "required": true,

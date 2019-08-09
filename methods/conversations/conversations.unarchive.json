@@ -1,7 +1,7 @@
 {
   "group": "conversations",
   "name": "conversations.unarchive",
-  "desc": "This method unarchives a conversation. The calling user is added to the conversation.",
+  "desc": "Reverses conversation archival.",
   "args": {
     "channel": {
       "required": true,

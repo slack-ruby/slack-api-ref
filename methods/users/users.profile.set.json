@@ -1,7 +1,7 @@
 {
   "group": "users",
   "name": "users.profile.set",
-  "desc": "Use this method to set a user's profile information, including name, email, current status, and other attributes.",
+  "desc": "Set the profile information for a user.",
   "args": {
     "name": {
       "required": false,

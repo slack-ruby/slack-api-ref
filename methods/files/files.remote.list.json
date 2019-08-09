@@ -1,7 +1,7 @@
 {
   "group": "files",
   "name": "files.remote.list",
-  "desc": "A new file commenting experience arrived on July 23, 2018. Learn more about what's new and the migration path for apps already working with files and file comments.",
+  "desc": "Retrieve information about a remote file added to Slack",
   "args": {
     "channel": {
       "required": false,

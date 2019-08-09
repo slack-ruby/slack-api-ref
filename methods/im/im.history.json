@@ -1,7 +1,7 @@
 {
   "group": "im",
   "name": "im.history",
-  "desc": "This method returns a portion of messages/events from the specified direct message channel.\nTo read the entire history for a direct message channel, call the method with no latest or\noldest arguments, and then continue paging using the instructions below.",
+  "desc": "Fetches history of messages and events from direct message channel.",
   "args": {
     "channel": {
       "required": true,

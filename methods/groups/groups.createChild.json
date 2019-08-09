@@ -1,7 +1,7 @@
 {
   "group": "groups",
   "name": "groups.createChild",
-  "desc": "This method takes an existing private channel and performs the following steps:\n- Renames the existing private channel (from \"example\" to \"example-archived\").\n- Archives the existing private channel.\n- Creates a new private channel with the name of the existing private channel.\n- Adds all members of the existing private channel to the new private channel.",
+  "desc": "Clones and archives a private channel.",
   "args": {
     "channel": {
       "required": true,

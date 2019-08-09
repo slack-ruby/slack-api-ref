@@ -1,7 +1,7 @@
 {
   "group": "im",
   "name": "im.open",
-  "desc": "This method opens a direct message channel with another member of your Slack team.",
+  "desc": "Opens a direct message channel.",
   "args": {
     "user": {
       "required": true,

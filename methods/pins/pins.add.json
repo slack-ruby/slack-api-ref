@@ -1,7 +1,7 @@
 {
   "group": "pins",
   "name": "pins.add",
-  "desc": "This method pins a channel message or group message to a particular channel.\nThe channel argument is required and timestamp must also be specified.",
+  "desc": "Pins an item to a channel.",
   "args": {
     "channel": {
       "required": true,

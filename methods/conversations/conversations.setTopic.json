@@ -1,7 +1,7 @@
 {
   "group": "conversations",
   "name": "conversations.setTopic",
-  "desc": "This method is used to change the topic of a conversation. The calling user must be a member of the conversation. Not all conversation types support a new topic.",
+  "desc": "Sets the topic for a conversation.",
   "args": {
     "channel": {
       "required": true,

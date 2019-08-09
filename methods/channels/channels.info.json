@@ -1,7 +1,7 @@
 {
   "group": "channels",
   "name": "channels.info",
-  "desc": "This method returns information about a team channel.",
+  "desc": "Gets information about a channel.",
   "args": {
     "channel": {
       "required": true,

@@ -1,7 +1,7 @@
 {
   "group": "reminders",
   "name": "reminders.delete",
-  "desc": "This method deletes a reminder.",
+  "desc": "Deletes a reminder.",
   "args": {
     "reminder": {
       "required": true,

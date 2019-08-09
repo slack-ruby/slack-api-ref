@@ -1,7 +1,7 @@
 {
   "group": "conversations",
   "name": "conversations.list",
-  "desc": "This Conversations API method returns a list of all channel-like conversations in a workspace. The \"channels\" returned depend on what the calling token has access to and the directives placed in the types parameter.",
+  "desc": "Lists all channels in a Slack team.",
   "args": {
     "cursor": {
       "required": false,
