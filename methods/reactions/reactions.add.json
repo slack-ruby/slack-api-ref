@@ -38,6 +38,7 @@
     ]
   },
   "errors": {
+    "not_reactable": "Whatever you passed in, like a file or file_comment, can't be reacted to anymore. Your app can react to messages though.",
     "file_comment_not_found": "File comment specified by file_comment does not exist.",
     "invalid_name": "Value passed for name was invalid.",
     "too_many_emoji": "The limit for distinct reactions (i.e emoji) on the item has been reached.",
