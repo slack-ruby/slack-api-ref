@@ -17,7 +17,7 @@
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true,\n    \"messages\": [\n        {\n            \"type\": \"message\",\n            \"ts\": \"1358546515.000008\",\n            \"user\": \"U2147483896\",\n            \"text\": \"Hello\"\n        },\n        {\n            \"type\": \"message\",\n            \"ts\": \"1358546515.000007\",\n            \"user\": \"U2147483896\",\n            \"text\": \"World\",\n            \"is_starred\": true\n        },\n        {\n            \"type\": \"something_else\",\n            \"ts\": \"1358546515.000007\"\n        }\n    ]\n}",
+      "{\n    \"ok\": true,\n    \"messages\": {\n        \"0\": {\n            \"type\": \"message\",\n            \"ts\": \"1358546515.000008\",\n            \"user\": \"U2147483896\",\n            \"text\": \"Hello\"\n        },\n        \"1\": {\n            \"type\": \"message\",\n            \"ts\": \"1358546515.000007\",\n            \"user\": \"U2147483896\",\n            \"text\": \"World\",\n            \"is_starred\": true\n        },\n        \"2\": {\n            \"type\": \"something_else\",\n            \"ts\": \"1358546515.000007\"\n        }\n    }\n}",
       "{\n    \"ok\": false,\n    \"error\": \"channel_not_found\"\n}"
     ]
   },

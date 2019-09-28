@@ -16,7 +16,7 @@
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true,\n    \"team_id\": \"T1KR7PE1W\",\n    \"enterprise_id\": \"E1KQTNXE1\",\n    \"user_id_map\": {\n        \"U06UBSUN5\": \"W06M56XJM\",\n        \"U06UEB62U\": \"W06PTT6GH\",\n        \"U06UBSVB3\": \"W06PUUDLY\",\n        \"U06UBSVDX\": \"W06PUUDMW\",\n        \"W06UAZ65Q\": \"W06UAZ65Q\"\n    },\n    \"invalid_user_ids\": [\n        \"U21ABZZXX\"\n    ]\n}",
+      "{\n    \"ok\": true,\n    \"team_id\": \"T1KR7PE1W\",\n    \"enterprise_id\": \"E1KQTNXE1\",\n    \"user_id_map\": {\n        \"U06UBSUN5\": \"W06M56XJM\",\n        \"U06UEB62U\": \"W06PTT6GH\",\n        \"U06UBSVB3\": \"W06PUUDLY\",\n        \"U06UBSVDX\": \"W06PUUDMW\",\n        \"W06UAZ65Q\": \"W06UAZ65Q\"\n    },\n    \"invalid_user_ids\": {\n        \"0\": \"U21ABZZXX\"\n    }\n}",
       "{\n    \"ok\": false,\n    \"error\": \"not_enterprise_team\"\n}"
     ]
   },

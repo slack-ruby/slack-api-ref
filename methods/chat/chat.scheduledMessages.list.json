@@ -34,7 +34,7 @@
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true,\n    \"scheduled_messages\": [\n        {\n            \"id\": 1298393284,\n            \"channel_id\": \"C1H9RESGL\",\n            \"post_at\": 1551991428,\n            \"date_created\": 1551891734\n        }\n    ],\n    \"response_metadata\": {\n        \"next_cursor\": \"\"\n    }\n}",
+      "{\n    \"ok\": true,\n    \"scheduled_messages\": {\n        \"0\": {\n            \"id\": 1298393284,\n            \"channel_id\": \"C1H9RESGL\",\n            \"post_at\": 1551991428,\n            \"date_created\": 1551891734\n        }\n    },\n    \"response_metadata\": {\n        \"next_cursor\": \"\"\n    }\n}",
       "{\n    \"ok\": false,\n    \"error\": \"invalid_channel\"\n}"
     ]
   },

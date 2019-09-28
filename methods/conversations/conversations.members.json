@@ -22,7 +22,7 @@
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true,\n    \"members\": [\n        \"U023BECGF\",\n        \"U061F7AUR\",\n        \"W012A3CDE\"\n    ],\n    \"response_metadata\": {\n        \"next_cursor\": \"e3VzZXJfaWQ6IFcxMjM0NTY3fQ==\"\n    }\n}",
+      "{\n    \"ok\": true,\n    \"members\": {\n        \"0\": \"U023BECGF\",\n        \"1\": \"U061F7AUR\",\n        \"2\": \"W012A3CDE\"\n    },\n    \"response_metadata\": {\n        \"next_cursor\": \"e3VzZXJfaWQ6IFcxMjM0NTY3fQ==\"\n    }\n}",
       "{\n    \"ok\": false,\n    \"error\": \"invalid_cursor\"\n}"
     ]
   },
