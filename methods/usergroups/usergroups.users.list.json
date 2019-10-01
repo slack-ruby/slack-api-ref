@@ -16,7 +16,7 @@
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true,\n    \"users\": {\n        \"0\": \"U060R4BJ4\",\n        \"1\": \"W123A4BC5\"\n    }\n}",
+      "{\n    \"ok\": true,\n    \"users\": [\n        \"U060R4BJ4\",\n        \"W123A4BC5\"\n    ]\n}",
       "{\n    \"ok\": false,\n    \"error\": \"invalid_auth\"\n}"
     ]
   },
