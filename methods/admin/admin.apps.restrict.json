@@ -32,6 +32,7 @@
     "not_an_admin": "This method is only accessible by org owners and admins.",
     "request_id_or_app_id_is_required": "Must include a request_id or app_id.",
     "too_many_ids_provided": "Please provide only app_id OR request_id.",
+    "too_many_teams_provided": "Please provide only team_id OR enterprise_id.",
     "request_already_resolved": "The app request has already been resolved.",
     "team_not_found": "Returned when team id is not found.",
     "app_management_app_not_installed_on_org": "The app management app must be installed on the org.",
