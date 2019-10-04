@@ -61,6 +61,7 @@
     "too_many_attachments": "Too many attachments were provided with this message. A maximum of 100 attachments are allowed on a message.",
     "no_text": "No message text provided.",
     "as_user_not_supported": "The as_user parameter does not function with workspace apps.",
+    "is_inactive": "The message cannot be edited within a frozen, archived or deleted channel.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",
