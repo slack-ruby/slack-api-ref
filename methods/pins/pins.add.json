@@ -10,7 +10,7 @@
       "type": "channel"
     },
     "timestamp": {
-      "required": false,
+      "required": true,
       "example": "1234567890.123456",
       "desc": "Timestamp of the message to pin."
     }
@@ -23,8 +23,6 @@
   },
   "errors": {
     "bad_timestamp": "Value passed for timestamp was invalid.",
-    "file_not_found": "File specified by file does not exist.",
-    "file_comment_not_found": "File comment specified by file_comment does not exist.",
     "message_not_found": "Message specified by channel and timestamp does not exist.",
     "channel_not_found": "The channel argument was not specified or was invalid.",
     "no_item_specified": "One of file, file_comment, or timestamp was not specified.",
