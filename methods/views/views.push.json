@@ -11,7 +11,7 @@
     "view": {
       "required": true,
       "example": " ",
-      "desc": "The view payload. This must be a JSON-encoded string."
+      "desc": "A view payload. This must be a JSON-encoded string."
     }
   },
   "response": {
