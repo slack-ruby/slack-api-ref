@@ -26,7 +26,7 @@
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true,\n    \"team\": {\n        \"id\": \"T12345\",\n        \"name\": \"My Team\",\n        \"domain\": \"example\",\n        \"email_domain\": \"example.com\",\n        \"icon\": {\n            \"image_34\": \"https://...\",\n            \"image_44\": \"https://...\",\n            \"image_68\": \"https://...\",\n            \"image_88\": \"https://...\",\n            \"image_102\": \"https://...\",\n            \"image_132\": \"https://...\",\n            \"image_default\": true\n        },\n        \"enterprise_id\": \"E1234A12AB\",\n        \"enterprise_name\": \"Umbrella Corporation\"\n    }\n}"
+      "{\n    \"ok\": true,\n    \"team\": \"T12345\"\n}"
     ]
   },
   "errors": {
