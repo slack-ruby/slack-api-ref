@@ -16,7 +16,7 @@
     "team_id": {
       "required": true,
       "example": " ",
-      "desc": "."
+      "desc": "The ID (T1234) of the workspace."
     },
     "custom_message": {
       "required": false,

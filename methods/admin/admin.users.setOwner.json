@@ -3,10 +3,20 @@
   "name": "admin.users.setOwner",
   "desc": "Set an existing guest, regular user, or admin user to be a workspace owner.",
   "args": {
+    "team_id": {
+      "required": true,
+      "example": " ",
+      "desc": "The ID (T1234) of the workspace."
+    },
+    "user_id": {
+      "required": true,
+      "example": " ",
+      "desc": "Id of the user to promote to owner."
+    }
   },
   "response": {
     "examples": [
-
+      "{\n    \"ok\": true\n}"
     ]
   },
   "errors": {
