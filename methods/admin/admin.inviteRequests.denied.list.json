@@ -21,7 +21,7 @@
   },
   "response": {
     "examples": [
-      "{\n        \"ok\": true\n    }"
+      "{\n    \"ok\": true,\n    \"denied_requests\": [\n        ...\n    ]\n}"
     ]
   },
   "errors": {

@@ -21,7 +21,7 @@
   },
   "response": {
     "examples": [
-      "{\n        \"ok\": true\n    }"
+      "{\n        \"ok\": true,\n        \"approved_requests\": [\n            ...\n        ]\n    }"
     ]
   },
   "errors": {
