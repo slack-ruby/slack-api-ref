@@ -1,49 +1,28 @@
 {
-  "group": "files",
-  "name": "files.remote.add",
-  "desc": "Adds a file from a remote service",
+  "group": "admin",
+  "name": "admin.teams.settings.setName",
+  "desc": "Set the name of a given workspace.",
   "args": {
-    "external_id": {
+    "name": {
       "required": true,
-      "example": "123456",
-      "desc": "Creator defined GUID for the file."
+      "example": " ",
+      "desc": "."
     },
-    "external_url": {
+    "team_id": {
       "required": true,
-      "example": "http://example.com/my_cloud_service_file/abc123",
-      "desc": "URL of the remote file."
-    },
-    "title": {
-      "required": true,
-      "example": "Danger, High Voltage!",
-      "desc": "Title of the file being shared."
-    },
-    "filetype": {
-      "required": false,
-      "example": "doc",
-      "desc": "type of file."
-    },
-    "indexable_file_contents": {
-      "required": false,
-      "example": "...",
-      "desc": "File containing contents that can be used to improve searchability for the remote file."
-    },
-    "preview_image": {
-      "required": false,
-      "example": "...",
-      "desc": "Preview of the document via multipart/form-data."
+      "example": " ",
+      "desc": "ID for the workspace to set the name for."
     }
   },
   "response": {
     "examples": [
-      "{\n        \"ok\": true,\n        \"file\": {\n            \"id\": \"F0GDJ3XMH\",\n            \"created\": 1563919925,\n            \"timestamp\": 1563919925,\n            \"name\": \"LeadvilleAndBackAgain\",\n            \"title\": \"LeadvilleAndBackAgain\",\n            \"mimetype\": \"application/vnd.slack-remote\",\n            \"filetype\": \"remote\",\n            \"pretty_type\": \"Remote\",\n            \"user\": \"U0F8RBVNF\",\n            \"editable\": false,\n            \"size\": 0,\n            \"mode\": \"external\",\n            \"is_external\": true,\n            \"external_type\": \"app\",\n            \"is_public\": false,\n            \"public_url_shared\": false,\n            \"display_as_bot\": false,\n            \"username\": \"\",\n            \"url_private\": \"https://docs.google.com/document/d/1TA9fIaph4eSz2fC_1JGMuYaYUc4IvieIop0WqfCXw5Y/edit?usp=sharing\",\n            \"permalink\": \"https://kraneflannel.slack.com/files/U0F8RBVNF/F0GDJ3XMH/leadvilleandbackagain\",\n            \"comments_count\": 0,\n            \"is_starred\": false,\n            \"shares\": {},\n            \"channels\": [],\n            \"groups\": [],\n            \"ims\": [],\n            \"external_id\": \"1234\",\n            \"external_url\": \"https://docs.google.com/document/d/1TA9fIaph4eSz2fC_1JGMuYaYUc4IvieIop0WqfCXw5Y/edit?usp=sharing\",\n            \"has_rich_preview\": false\n        }\n    }"
+      "{\n        \"ok\": true\n    }"
     ]
   },
   "errors": {
-    "bad_image": "The uploaded image could not be processed - try passing a JPG or PNG.",
-    "too_large": "The uploaded image had excessive dimensions.",
-    "invalid_external_id": "The external_id provided is too long.",
-    "bad_title": "The title provided is too long.",
+    "team_not_found": "Returned when team_id  can’t be resolved.",
+    "failed_to_set_name": "Returned when there is an error to set the name.",
+    "feature_not_enabled": "The Admin APIs feature is not enabled for this team.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",
@@ -52,6 +31,7 @@
     "org_login_required": "The workspace is undergoing an enterprise migration and will not be available until migration is complete.",
     "ekm_access_denied": "Administrators have suspended the ability to post a message.",
     "missing_scope": "The token used is not granted the specific scope permissions required to complete this request.",
+    "is_bot": "This method cannot be called by a bot user.",
     "invalid_arguments": "The method was called with invalid arguments.",
     "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
     "invalid_charset": "The method was called via a POST request, but the charset specified in the Content-Type header was invalid. Valid charset names are: utf-8 iso-8859-1.",

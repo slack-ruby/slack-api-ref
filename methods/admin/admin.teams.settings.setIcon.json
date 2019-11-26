@@ -1,57 +1,39 @@
 {
-  "group": "files",
-  "name": "files.remote.add",
-  "desc": "Adds a file from a remote service",
+  "group": "admin",
+  "name": "admin.teams.settings.setIcon",
+  "desc": "Sets the icon of a workspace.",
   "args": {
-    "external_id": {
+    "image_url": {
       "required": true,
-      "example": "123456",
-      "desc": "Creator defined GUID for the file."
+      "example": "http://mysite.com/icon.jpeg",
+      "desc": "Set cursor to next_cursor returned by the previous call to list items in the next page."
     },
-    "external_url": {
+    "team_id": {
       "required": true,
-      "example": "http://example.com/my_cloud_service_file/abc123",
-      "desc": "URL of the remote file."
-    },
-    "title": {
-      "required": true,
-      "example": "Danger, High Voltage!",
-      "desc": "Title of the file being shared."
-    },
-    "filetype": {
-      "required": false,
-      "example": "doc",
-      "desc": "type of file."
-    },
-    "indexable_file_contents": {
-      "required": false,
-      "example": "...",
-      "desc": "File containing contents that can be used to improve searchability for the remote file."
-    },
-    "preview_image": {
-      "required": false,
-      "example": "...",
-      "desc": "Preview of the document via multipart/form-data."
+      "example": " ",
+      "desc": "ID for the workspace to set the icon for."
     }
   },
   "response": {
     "examples": [
-      "{\n        \"ok\": true,\n        \"file\": {\n            \"id\": \"F0GDJ3XMH\",\n            \"created\": 1563919925,\n            \"timestamp\": 1563919925,\n            \"name\": \"LeadvilleAndBackAgain\",\n            \"title\": \"LeadvilleAndBackAgain\",\n            \"mimetype\": \"application/vnd.slack-remote\",\n            \"filetype\": \"remote\",\n            \"pretty_type\": \"Remote\",\n            \"user\": \"U0F8RBVNF\",\n            \"editable\": false,\n            \"size\": 0,\n            \"mode\": \"external\",\n            \"is_external\": true,\n            \"external_type\": \"app\",\n            \"is_public\": false,\n            \"public_url_shared\": false,\n            \"display_as_bot\": false,\n            \"username\": \"\",\n            \"url_private\": \"https://docs.google.com/document/d/1TA9fIaph4eSz2fC_1JGMuYaYUc4IvieIop0WqfCXw5Y/edit?usp=sharing\",\n            \"permalink\": \"https://kraneflannel.slack.com/files/U0F8RBVNF/F0GDJ3XMH/leadvilleandbackagain\",\n            \"comments_count\": 0,\n            \"is_starred\": false,\n            \"shares\": {},\n            \"channels\": [],\n            \"groups\": [],\n            \"ims\": [],\n            \"external_id\": \"1234\",\n            \"external_url\": \"https://docs.google.com/document/d/1TA9fIaph4eSz2fC_1JGMuYaYUc4IvieIop0WqfCXw5Y/edit?usp=sharing\",\n            \"has_rich_preview\": false\n        }\n    }"
+      "{\n        \"ok\": true\n    }"
     ]
   },
   "errors": {
-    "bad_image": "The uploaded image could not be processed - try passing a JPG or PNG.",
-    "too_large": "The uploaded image had excessive dimensions.",
-    "invalid_external_id": "The external_id provided is too long.",
-    "bad_title": "The title provided is too long.",
-    "not_authed": "No authentication token provided.",
+    "team_not_found": "team_id was not found.",
+    "feature_not_enabled": "The Admin APIs feature is not enabled for this team.",
+    "not_an_admin": "This method is only accessible by org owners and admins.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
+    "invalid_url": "Invalid url.",
+    "failed_to_set_icon": "Setting the url in the database failed. This may be transient, please try again soon.",
+    "not_authed": "No authentication token provided.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",
     "token_revoked": "Authentication token is for a deleted user or workspace or the app has been removed.",
     "no_permission": "The workspace token used in this request does not have the permissions necessary to complete the request. Make sure your app is a member of the conversation it's attempting to post a message to.",
     "org_login_required": "The workspace is undergoing an enterprise migration and will not be available until migration is complete.",
     "ekm_access_denied": "Administrators have suspended the ability to post a message.",
     "missing_scope": "The token used is not granted the specific scope permissions required to complete this request.",
+    "is_bot": "This method cannot be called by a bot user.",
     "invalid_arguments": "The method was called with invalid arguments.",
     "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
     "invalid_charset": "The method was called via a POST request, but the charset specified in the Content-Type header was invalid. Valid charset names are: utf-8 iso-8859-1.",
