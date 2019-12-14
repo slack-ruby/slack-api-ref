@@ -1,29 +1,46 @@
 {
-  "group": "conversations",
-  "name": "conversations.leave",
-  "desc": "Leaves a conversation.",
+  "group": "admin",
+  "name": "admin.conversations.setTeams",
+  "desc": "Set the workspaces in an Enterprise grid org that connect to a channel.",
   "args": {
-    "channel": {
+    "channel_id": {
       "required": true,
-      "example": "C1234567890",
-      "desc": "Conversation to leave.",
-      "type": "channel"
+      "example": " ",
+      "desc": "The encoded channel_id to add or remove to workspaces."
+    },
+    "org_channel": {
+      "required": false,
+      "example": "true",
+      "desc": "True if channel has to be converted to an org channel."
+    },
+    "target_team_ids": {
+      "required": false,
+      "example": " ",
+      "desc": "The list of workspaces to which the channel should be shared. Not required if the channel is being shared orgwide."
+    },
+    "team_id": {
+      "required": false,
+      "example": " ",
+      "desc": "The workspace to which the channel belongs. Omit this argument if the channel is a cross-workspace shared channel."
     }
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true\n}",
-      "{\n    \"ok\": true,\n    \"not_in_channel\": true\n}",
-      "{\n    \"ok\": false,\n    \"error\": \"cant_leave_general\"\n}"
+      "{\n    \"ok\": true\n}"
     ]
   },
   "errors": {
-    "channel_not_found": "Value passed for channel was invalid.",
-    "is_archived": "Channel has been archived.",
-    "method_not_supported_for_channel_type": "This type of conversation cannot be used with this method.",
-    "missing_scope": "The token used is not granted the specific scope permissions required to complete this request.",
-    "cant_leave_general": "Authenticated user cannot leave the general channel.",
-    "last_member": "The last member party to a channel cannot leave the channel. Someone else must join the channel before this user is permitted to exit.",
+    "restricted_action": "The caller of this API is not allowed to perform this operation.",
+    "not_enabled": "The API endpoint is not enabled for your team.",
+    "invalid_channel_id": "channel_id was invalid.",
+    "channel_not_found": "The channel wasn't found or isn't shared to this workspace.",
+    "invalid_target_team": "Target workspace is invalid.",
+    "channel_type_not_supported": "The requested channel_id is not a supported type of channel.",
+    "channel_not_shared_with_team": "The requested channel_id has not been shared with the target workspace.",
+    "channel_cannot_be_unshared": "Channel cannot be unshared from this workspace.",
+    "default_org_wide_channel": "Default org wide channel cannot be unshared from a workspace.",
+    "unsupported_arguments": "The provided method arguments are not supported.",
+    "too_many_target_teams": "Too many target_team_ids were provided.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",
@@ -31,8 +48,8 @@
     "no_permission": "The workspace token used in this request does not have the permissions necessary to complete the request. Make sure your app is a member of the conversation it's attempting to post a message to.",
     "org_login_required": "The workspace is undergoing an enterprise migration and will not be available until migration is complete.",
     "ekm_access_denied": "Administrators have suspended the ability to post a message.",
+    "missing_scope": "The token used is not granted the specific scope permissions required to complete this request.",
     "is_bot": "This method cannot be called by a bot user.",
-    "user_is_ultra_restricted": "This method cannot be called by a single channel guest.",
     "invalid_arguments": "The method was called with invalid arguments.",
     "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
     "invalid_charset": "The method was called via a POST request, but the charset specified in the Content-Type header was invalid. Valid charset names are: utf-8 iso-8859-1.",
