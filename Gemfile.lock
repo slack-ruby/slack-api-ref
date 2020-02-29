@@ -29,7 +29,7 @@ GEM
       mini_portile2 (~> 2.4.0)
     ntlm-http (0.1.1)
     public_suffix (2.0.5)
-    rake (11.2.2)
+    rake (12.3.3)
     spidey (0.1.0)
       mechanize
     unf (0.1.4)
