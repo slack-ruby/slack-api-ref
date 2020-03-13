@@ -5,12 +5,12 @@
   "args": {
     "channel_ids": {
       "required": true,
-      "example": " ",
-      "desc": "A list of channel IDs."
+      "example": "",
+      "desc": "An array of channel IDs."
     },
     "team_id": {
       "required": true,
-      "example": " ",
+      "example": "",
       "desc": "ID for the workspace to set the default channel for."
     }
   },

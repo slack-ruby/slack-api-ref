@@ -10,7 +10,7 @@
     },
     "team_id": {
       "required": false,
-      "example": " ",
+      "example": "",
       "desc": "ID for the workspace where the invite request was made."
     }
   },

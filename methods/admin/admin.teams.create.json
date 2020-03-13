@@ -5,22 +5,22 @@
   "args": {
     "team_domain": {
       "required": true,
-      "example": " ",
+      "example": "",
       "desc": "Team domain (for example, slacksoftballteam)."
     },
     "team_name": {
       "required": true,
-      "example": " ",
+      "example": "",
       "desc": "Team name (for example, Slack Softball Team)."
     },
     "team_description": {
       "required": false,
-      "example": " ",
+      "example": "",
       "desc": "Description for the team."
     },
     "team_discoverability": {
       "required": false,
-      "example": " ",
+      "example": "",
       "desc": "Who can join the team. A team's discoverability can be open, closed, invite_only, or unlisted."
     }
   },
@@ -35,6 +35,8 @@
     "must_provide_team_name": "No team name has been provided.",
     "must_provide_team_domain": "No team domain has been provided.",
     "domain_taken": "The requested domain is taken.",
+    "name_taken_in_org": "The team with the specified name already exists in the org.",
+    "bad_url": "Invalid URL.",
     "could_not_create_workspace": "The workspace could not be created.",
     "discoverability_setting_invalid": "The given discoverability setting is invalid.",
     "not_authed": "No authentication token provided.",

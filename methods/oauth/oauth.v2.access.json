@@ -35,7 +35,7 @@
     "bad_client_secret": "Value passed for client_secret was invalid.",
     "invalid_code": "Value passed for code was invalid.",
     "bad_redirect_uri": "Value passed for redirect_uri did not match the redirect_uri in the original request.",
-    "oauth_authorization_url_mismatch": "The OAuth flow was initiated on an incorrect version of the authorization url. The flow must be initiated via /oauth/authorize/v2 .",
+    "oauth_authorization_url_mismatch": "The OAuth flow was initiated on an incorrect version of the authorization url. The flow must be initiated via /oauth/v2/authorize .",
     "preview_feature_not_available": "Returned when the API method is not yet available on the team in context.",
     "invalid_arguments": "The method was called with invalid arguments.",
     "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",

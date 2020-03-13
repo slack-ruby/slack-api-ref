@@ -5,7 +5,7 @@
   "args": {
     "name": {
       "required": true,
-      "example": " ",
+      "example": "",
       "desc": "Name of private channel to create."
     },
     "validate": {

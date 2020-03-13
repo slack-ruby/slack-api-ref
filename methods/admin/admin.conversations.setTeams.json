@@ -5,7 +5,7 @@
   "args": {
     "channel_id": {
       "required": true,
-      "example": " ",
+      "example": "",
       "desc": "The encoded channel_id to add or remove to workspaces."
     },
     "org_channel": {
@@ -15,12 +15,12 @@
     },
     "target_team_ids": {
       "required": false,
-      "example": " ",
-      "desc": "The list of workspaces to which the channel should be shared. Not required if the channel is being shared orgwide."
+      "example": "",
+      "desc": "The list of workspaces to which the channel should be shared. Not required if the channel is being shared orgwide. Example: ['T1234', 'T5678']."
     },
     "team_id": {
       "required": false,
-      "example": " ",
+      "example": "",
       "desc": "The workspace to which the channel belongs. Omit this argument if the channel is a cross-workspace shared channel."
     }
   },

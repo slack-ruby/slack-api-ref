@@ -1,12 +1,17 @@
 {
   "group": "admin",
-  "name": "admin.apps.requests.list",
-  "desc": "List app requests for a team/workspace.",
+  "name": "admin.apps.approved.list",
+  "desc": "List approved apps for an org or workspace.",
   "args": {
     "cursor": {
       "required": false,
       "example": "5c3e53d5",
       "desc": "Set cursor to next_cursor returned by the previous call to list items in the next page."
+    },
+    "enterprise_id": {
+      "required": false,
+      "example": "E0AS553RN",
+      "desc": "."
     },
     "limit": {
       "required": false,
@@ -15,22 +20,22 @@
     },
     "team_id": {
       "required": false,
-      "example": "",
+      "example": "T0HFE6EBT",
       "desc": "."
     }
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true,\n    \"app_requests\": [\n        {\n            \"id\": \"Ar0XJGFLMLS\",\n            \"app\": {\n                \"id\": \"A061BL8RQ0\",\n                \"name\": \"Test App\",\n                \"description\": \"\",\n                \"help_url\": \"\",\n                \"privacy_policy_url\": \"https://testapp.com/privacy\",\n                \"app_homepage_url\": \"\",\n                \"app_directory_url\": \"https://acmecorp.slack.com/apps/A061BL8RQ0-test-app\",\n                \"is_app_directory_approved\": true,\n                \"is_internal\": false,\n                \"icons\": {\n                    \"image_32\": \"/cdn/157658203/img/testapp/service_32.png\",\n                    \"image_36\": \"/cdn/157658203/img/testapp/service_36.png\",\n                    \"image_48\": \"/cdn/157658203/img/testapp/service_48.png\",\n                    \"image_64\": \"/cdn/157658203/img/testapp/service_64.png\",\n                    \"image_72\": \"/cdn/157658203/img/testapp/service_72.png\",\n                    \"image_96\": \"/cdn/157658203/img/testapp/service_96.png\",\n                    \"image_128\": \"/cdn/157258203/img/testapp/service_128.png\",\n                    \"image_192\": \"/cdn/157258203/img/testapp/service_192.png\",\n                    \"image_512\": \"/cdn/15758203/img/testapp/service_512.png\",\n                    \"image_1024\": \"/cdn/15258203/img/testapp/service_1024.png\"\n                },\n                \"additional_info\": \"\"\n            },\n            \"previous_resolution\": null,\n            \"user\": {\n                \"id\": \"W08RA9G5HR\",\n                \"name\": \"Jane Doe\",\n                \"email\": \"janedoe@example.com\"\n            },\n            \"team\": {\n                \"id\": \"T0M94LNUCR\",\n                \"name\": \"Acme Corp\",\n                \"domain\": \"acmecorp\"\n            },\n            \"scopes\": [\n                {\n                    \"name\": \"incoming-webhook\",\n                    \"description\": \"Post messages to specific channels in Slack\",\n                    \"is_sensitive\": false,\n                    \"token_type\": \"user\"\n                }\n            ],\n            \"message\": \"test test again\",\n            \"date_created\": 1578956327\n        }\n    ],\n    \"response_metadata\": {\n        \"next_cursor\": \"\"\n    }\n}",
-      "{\n    \"ok\": false,\n    \"error\": \"missing_scope\",\n    \"needed\": \"admin.apps:read\",\n    \"provided\": \"read,client,admin,identify,post,apps\"\n}"
+      "{\n    \"ok\": true,\n    \"approved_apps\": [\n        {\n            \"app\": {\n                \"id\": \"A0W7UKG8E\",\n                \"name\": \"My Test App\",\n                \"description\": \"test app\",\n                \"help_url\": \"https://www.slack.com\",\n                \"privacy_policy_url\": \"https://www.slack.com\",\n                \"app_homepage_url\": \"https://www.slack.com\",\n                \"app_directory_url\": \"https://myteam.enterprise.slack.com/apps/A0W7UKG8E-my-test-app\",\n                \"is_app_directory_approved\": false,\n                \"is_internal\": false,\n                \"icons\": {\n                    \"image_32\": \"https://302674312496446w_2bd4ea1ad1f89a23c242_32.png\",\n                    \"image_36\": \"https://302674312496446w_2bd4ea1ad1f89a23c242_36.png\",\n                    \"image_48\": \"https://302674312496446w_2bd4ea1ad1f89a23c242_48.png\",\n                    \"image_64\": \"https://302674312496446w_2bd4ea1ad1f89a23c242_64.png\",\n                    \"image_72\": \"https://302674312496446w_2bd4ea1ad1f89a23c242_72.png\",\n                    \"image_96\": \"https://302674312496446w_2bd4ea1ad1f89a23c242_96.png\",\n                    \"image_128\": \"https://30267341249446w6_2bd4ea1ad1f89a23c242_128.png\",\n                    \"image_192\": \"https://30267431249446w6_2bd4ea1ad1f89a23c242_192.png\",\n                    \"image_512\": \"https://30267431249446w6_2bd4ea1ad1f89a23c242_512.png\",\n                    \"image_1024\": \"https://3026743124446w96_2bd4ea1ad1f89a23c242_1024.png\",\n                    \"image_original\": \"https://302674446w12496_2bd4ea1ad1f89a23c242_original.png\"\n                },\n                \"additional_info\": \"\"\n            },\n            \"scopes\": [\n                {\n                    \"name\": \"bot\",\n                    \"description\": \"Add the ability for people to direct message or mention @my_test_app\",\n                    \"is_sensitive\": true,\n                    \"token_type\": \"bot\"\n                }\n            ],\n            \"date_updated\": 1574296707,\n            \"last_resolved_by\": {\n                \"actor_id\": \"W0G82F4FD\",\n                \"actor_type\": \"user\"\n            }\n        }\n    ],\n    \"response_metadata\": {\n        \"next_cursor\": \"\"\n    }\n}",
+      "{\n    \"ok\": false,\n    \"error\": \"invalid_auth\"\n}"
     ]
   },
   "errors": {
     "invalid_cursor": "Value passed for cursor was not valid or is no longer valid.",
     "feature_not_enabled": "Returned when the Admin APIs feature is not enabled for this team.",
-    "not_an_admin": "This method is only accessible by org owners and admins.",
+    "not_an_admin": "This method is only accessible by org/workspace owners and admins.",
     "team_not_found": "Returned when team id is not found.",
-    "app_management_app_not_installed_on_org": "The app management app must be installed on the org.",
+    "too_many_teams_provided": "Please provide only team_id OR enterprise_id.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",

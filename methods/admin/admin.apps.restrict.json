@@ -15,7 +15,7 @@
     },
     "team_id": {
       "required": false,
-      "example": " ",
+      "example": "",
       "desc": "."
     }
   },

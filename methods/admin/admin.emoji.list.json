@@ -1,31 +1,28 @@
 {
   "group": "admin",
-  "name": "admin.users.setRegular",
-  "desc": "Set an existing guest user, admin user, or owner to be a regular user.",
+  "name": "admin.emoji.list",
+  "desc": "List emoji for an Enterprise Grid organization.",
   "args": {
-    "team_id": {
-      "required": true,
-      "example": "",
-      "desc": "The ID (T1234) of the workspace."
+    "cursor": {
+      "required": false,
+      "example": "5c3e53d5",
+      "desc": "Set cursor to next_cursor returned by the previous call to list items in the next page."
     },
-    "user_id": {
-      "required": true,
-      "example": "W12345678",
-      "desc": "The ID of the user to designate as a regular user."
+    "limit": {
+      "required": false,
+      "example": "100",
+      "desc": "The maximum number of items to return. Must be between 1 - 1000 both inclusive."
     }
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true\n}"
+      "{\n    \"ok\": true,\n    \"emoji\": {\n        \"bowtie\": \"https://emoji.slack-edge.com/T9TK3CUKW/bowtie/f3ec6f2bb0.png\",\n        \"squirrel\": \"https://emoji.slack-edge.com/T9TK3CUKW/squirrel/465f40c0e0.png\",\n        \"glitch_crab\": \"https://emoji.slack-edge.com/T9TK3CUKW/glitch_crab/db049f1f9c.png\",\n        \"piggy\": \"https://emoji.slack-edge.com/T9TK3CUKW/piggy/b7762ee8cd.png\",\n        \"cubimal_chick\": \"https://emoji.slack-edge.com/T9TK3CUKW/cubimal_chick/85961c43d7.png\",\n        \"dusty_stick\": \"https://emoji.slack-edge.com/T9TK3CUKW/dusty_stick/6177a62312.png\",\n        \"slack\": \"https://emoji.slack-edge.com/T9TK3CUKW/slack/7d462d2443.png\",\n        \"pride\": \"https://emoji.slack-edge.com/T9TK3CUKW/pride/56b1bd3388.png\",\n        \"thumbsup_all\": \"https://emoji.slack-edge.com/T9TK3CUKW/thumbsup_all/50096a1020.gif\",\n        \"slack_call\": \"https://emoji.slack-edge.com/T9TK3CUKW/slack_call/b81fffd6dd.png\",\n        \"shipit\": \"alias:squirrel\",\n        \"white_square\": \"alias:white_large_square\",\n        \"black_square\": \"alias:black_large_square\",\n        \"simple_smile\": {\n            \"apple\": \"https://a.slack-edge.com/80588/img/emoji_2017_12_06/apple/simple_smile.png\",\n            \"google\": \"https://a.slack-edge.com/80588/img/emoji_2017_12_06/google/simple_smile.png\"\n        }\n    },\n    \"cache_ts\": \"1575283387.000000\",\n    \"categories_version\": \"5\",\n    \"categories\": [\n        {\n            \"name\": \"Smileys & People\",\n            \"emoji_names\": [\n                \"grinning\",\n                \"grin\",\n                \"joy\",\n                \"etc etc ...\"\n            ]\n        }\n    ]\n}"
     ]
   },
   "errors": {
-    "team_not_found": "team_id was not found.",
+    "invalid_cursor": "Value passed for cursor was not valid or is no longer valid.",
     "feature_not_enabled": "The Admin APIs feature is not enabled for this team.",
-    "user_not_found": "The requested user was not found.",
-    "cannot_modify_primary_owner": "The primary owner cannot be modified.",
-    "failed_to_set_user_to_regular": "Changing a user to a regular member failed.",
-    "not_an_admin": "This method can only be accessed by org owners and admins.",
+    "not_an_admin": "This method is only accessible by org owners and Admins.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",

@@ -5,12 +5,12 @@
   "args": {
     "scopes": {
       "required": true,
-      "example": " ",
+      "example": "",
       "desc": "A comma separated list of scopes to request for."
     },
     "trigger_id": {
       "required": true,
-      "example": " ",
+      "example": "",
       "desc": "Token used to trigger the permissions API."
     }
   },

@@ -10,7 +10,7 @@
     },
     "team_id": {
       "required": true,
-      "example": " ",
+      "example": "",
       "desc": "The ID (T1234) of the workspace."
     },
     "user_id": {

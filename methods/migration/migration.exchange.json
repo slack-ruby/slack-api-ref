@@ -5,7 +5,7 @@
   "args": {
     "users": {
       "required": true,
-      "example": " ",
+      "example": "",
       "desc": "A comma-separated list of user ids, up to 400 per request."
     },
     "to_old": {

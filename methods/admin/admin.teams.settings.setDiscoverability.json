@@ -5,12 +5,12 @@
   "args": {
     "discoverability": {
       "required": true,
-      "example": " ",
+      "example": "",
       "desc": "This workspace's discovery setting. It must be set to one of open, invite_only, closed, or unlisted."
     },
     "team_id": {
       "required": true,
-      "example": " ",
+      "example": "",
       "desc": "The ID of the workspace to set discoverability on."
     }
   },

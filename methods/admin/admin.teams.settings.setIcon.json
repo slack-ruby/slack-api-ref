@@ -6,11 +6,11 @@
     "image_url": {
       "required": true,
       "example": "http://mysite.com/icon.jpeg",
-      "desc": "Set cursor to next_cursor returned by the previous call to list items in the next page."
+      "desc": "Image URL for the icon."
     },
     "team_id": {
       "required": true,
-      "example": " ",
+      "example": "",
       "desc": "ID for the workspace to set the icon for."
     }
   },

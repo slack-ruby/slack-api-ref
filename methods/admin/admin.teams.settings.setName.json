@@ -5,12 +5,12 @@
   "args": {
     "name": {
       "required": true,
-      "example": " ",
-      "desc": "."
+      "example": "",
+      "desc": "The new name of the workspace."
     },
     "team_id": {
       "required": true,
-      "example": " ",
+      "example": "",
       "desc": "ID for the workspace to set the name for."
     }
   },

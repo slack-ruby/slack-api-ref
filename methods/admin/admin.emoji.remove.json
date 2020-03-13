@@ -1,17 +1,12 @@
 {
   "group": "admin",
-  "name": "admin.users.setRegular",
-  "desc": "Set an existing guest user, admin user, or owner to be a regular user.",
+  "name": "admin.emoji.remove",
+  "desc": "Remove an emoji across an Enterprise Grid organization",
   "args": {
-    "team_id": {
+    "name": {
       "required": true,
       "example": "",
-      "desc": "The ID (T1234) of the workspace."
-    },
-    "user_id": {
-      "required": true,
-      "example": "W12345678",
-      "desc": "The ID of the user to designate as a regular user."
+      "desc": "The name of the emoji to be removed. Colons (:myemoji:) around the value are not required, although they may be included."
     }
   },
   "response": {
@@ -20,12 +15,10 @@
     ]
   },
   "errors": {
-    "team_not_found": "team_id was not found.",
     "feature_not_enabled": "The Admin APIs feature is not enabled for this team.",
-    "user_not_found": "The requested user was not found.",
-    "cannot_modify_primary_owner": "The primary owner cannot be modified.",
-    "failed_to_set_user_to_regular": "Changing a user to a regular member failed.",
-    "not_an_admin": "This method can only be accessed by org owners and admins.",
+    "not_an_admin": "This method is only accessible by org owners and Admins.",
+    "emoji_not_found": "Value passed for name was invalid.",
+    "failure_removing_emoji": "This emoji could not be removed. It might be part of the standard Unicode set or the default Slack package.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",

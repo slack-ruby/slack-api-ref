@@ -5,7 +5,7 @@
   "args": {
     "view": {
       "required": true,
-      "example": " ",
+      "example": "",
       "desc": "A view payload This must be a JSON-encoded string."
     },
     "external_id": {

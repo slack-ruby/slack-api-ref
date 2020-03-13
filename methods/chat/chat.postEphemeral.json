@@ -17,7 +17,7 @@
     "text": {
       "required": true,
       "example": "Hello world",
-      "desc": "Text of the message to send. See below for an explanation of formatting. This field is usually required, unless you're providing only attachments instead."
+      "desc": "How this field works and whether it is required depends on other fields you use in your API call. See below for more detail."
     },
     "user": {
       "required": true,

@@ -5,12 +5,12 @@
   "args": {
     "team_id": {
       "required": true,
-      "example": " ",
+      "example": "",
       "desc": "The ID (T1234) of the workspace."
     },
     "user_id": {
       "required": true,
-      "example": " ",
+      "example": "",
       "desc": "Id of the user to promote to owner."
     }
   },

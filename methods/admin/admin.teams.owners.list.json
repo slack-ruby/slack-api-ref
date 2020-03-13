@@ -5,7 +5,7 @@
   "args": {
     "team_id": {
       "required": true,
-      "example": " ",
+      "example": "",
       "desc": "."
     },
     "cursor": {

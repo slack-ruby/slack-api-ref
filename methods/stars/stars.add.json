@@ -39,6 +39,7 @@
     "channel_not_found": "Channel, private group, or DM specified by channel does not exist.",
     "no_item_specified": "file, file_comment, channel and timestamp was not specified.",
     "already_starred": "The specified item has already been starred by the authenticated user.",
+    "external_channel_migrating": "Channel is undergoing active migration.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",

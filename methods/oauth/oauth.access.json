@@ -26,7 +26,7 @@
     "single_channel": {
       "required": false,
       "example": "true",
-      "desc": "Request the user to add your app only to a single channel."
+      "desc": "Request the user to add your app only to a single channel. Only valid with a legacy workspace app."
     }
   },
   "response": {
@@ -43,6 +43,7 @@
     "invalid_code": "Value passed for code was invalid.",
     "bad_redirect_uri": "Value passed for redirect_uri did not match the redirect_uri in the original request.",
     "oauth_authorization_url_mismatch": "The OAuth flow was initiated on an incorrect version of the authorization url. The flow must be initiated via /oauth/authorize.",
+    "code_already_used": "Value passed for code was already exchanged.",
     "invalid_arguments": "The method was called with invalid arguments.",
     "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
     "invalid_charset": "The method was called via a POST request, but the charset specified in the Content-Type header was invalid. Valid charset names are: utf-8 iso-8859-1.",

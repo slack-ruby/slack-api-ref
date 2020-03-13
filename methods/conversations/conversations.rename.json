@@ -11,7 +11,7 @@
     },
     "name": {
       "required": true,
-      "example": " ",
+      "example": "",
       "desc": "New name for conversation."
     }
   },

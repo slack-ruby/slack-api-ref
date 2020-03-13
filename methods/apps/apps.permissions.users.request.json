@@ -5,17 +5,17 @@
   "args": {
     "scopes": {
       "required": true,
-      "example": " ",
+      "example": "",
       "desc": "A comma separated list of user scopes to request for."
     },
     "trigger_id": {
       "required": true,
-      "example": " ",
+      "example": "",
       "desc": "Token used to trigger the request."
     },
     "user": {
       "required": true,
-      "example": " ",
+      "example": "",
       "desc": "The user this scope is being requested for.",
       "type": "user"
     }

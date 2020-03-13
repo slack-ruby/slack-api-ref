@@ -10,7 +10,7 @@
     },
     "view": {
       "required": true,
-      "example": " ",
+      "example": "",
       "desc": "A view payload. This must be a JSON-encoded string."
     },
     "hash": {
@@ -30,6 +30,7 @@
     "duplicate_external_id": "Error returned when the given external_id has already be used.",
     "view_too_large": "Error returned if the provided view is greater than 250kb.",
     "not_enabled": "Error returned if a home view is published but the Home tab isn't enabled for the app.",
+    "not_allowed_token_type": "The type of token your app used when requesting this method is not allowed.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",
