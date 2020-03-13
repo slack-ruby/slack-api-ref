@@ -58,16 +58,15 @@ module SlackApi
     private
 
     def parse_args(api_page, default_data = {})
-      args_wrapper = api_page.search("h2:contains('Arguments') + table")
-      rows = args_wrapper.search('tr')
+      args_wrapper = api_page.search("h2:contains('Arguments') + .method_arguments")
+      rows = args_wrapper.search('.method_argument')
       args = {}
       fields = {}
       rows.each do |row|
-        next if row.search('th').any?
-        name = row.search('td:nth-child(1)').text
-        example = row.search('td:nth-child(2)').text
-        required = row.search('td:nth-child(3)').text == 'Required' ? true : false
-        desc = row.search('td:nth-child(4)').text.tap { |t| t.slice!("\n") }.tap { |t| (t[-1] != '.') ? t << '.' : t }.gsub("’", "'")
+        name = row.search('.arg_name').text
+        example = row.search('.arg_example code').text
+        required = row.search('.arg_required').any? ? true : false
+        desc = row.search('.arg_desc p:first').text.tap { |t| t.slice!("\n") }.tap { |t| (t[-1] != '.') ? t << '.' : t }.gsub("’", "'")
 
         rows = args_wrapper.search('tr')
 
