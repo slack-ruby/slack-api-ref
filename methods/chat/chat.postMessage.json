@@ -88,6 +88,8 @@
   },
   "errors": {
     "channel_not_found": "Value passed for channel was invalid.",
+    "duplicate_channel_not_found": "Channel associated with client_msg_id was invalid.",
+    "duplicate_message_not_found": "No duplicate message exists associated with client_msg_id.",
     "not_in_channel": "Cannot post user messages to a channel they are not in.",
     "is_archived": "Channel has been archived.",
     "msg_too_long": "Message text is too long.",
