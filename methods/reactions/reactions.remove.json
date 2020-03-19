@@ -45,6 +45,7 @@
     "no_item_specified": "file, file_comment, or combination of channel and timestamp was not specified.",
     "invalid_name": "Value passed for name was invalid.",
     "no_reaction": "The specified item does not have the user/reaction combination.",
+    "channel_not_found": "The specified channel was not found.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",
