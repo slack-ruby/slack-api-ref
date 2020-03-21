@@ -39,6 +39,7 @@
     "feature_not_enabled": "The Admin APIs feature is not enabled for this team.",
     "user_not_found": "user_id was not found.",
     "user_already_team_member": "The given user is already active on the given team.",
+    "user_is_bot": "The given user is a bot from an app. This api only works with humans.",
     "invalid_role_for_user": "The requested status is incompatible with the user's role on another workspace.",
     "not_an_admin": "This method wasn't called by an admin.",
     "invited_user_not_created": "The invited user could not be created.",

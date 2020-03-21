@@ -9,11 +9,6 @@
       "desc": "Channel containing the message to be updated.",
       "type": "channel"
     },
-    "text": {
-      "required": true,
-      "example": "Hello world",
-      "desc": "New text for the message, using the default formatting rules. It's not required when presenting attachments."
-    },
     "ts": {
       "required": true,
       "example": "1405894322.002768",
@@ -43,7 +38,12 @@
     "parse": {
       "required": false,
       "example": "none",
-      "desc": "Change how messages are treated. Defaults to client, unlike chat.postMessage. See below."
+      "desc": "Change how messages are treated. Defaults to client, unlike chat.postMessage. Accepts either none or full. See below."
+    },
+    "text": {
+      "required": false,
+      "example": "Hello world",
+      "desc": "New text for the message, using the default formatting rules. It's not required when presenting attachments."
     }
   },
   "response": {
@@ -55,13 +55,18 @@
   "errors": {
     "message_not_found": "No message exists with the requested timestamp.",
     "cant_update_message": "Authenticated user does not have permission to update this message.",
+    "update_failed": "Internal update failure.",
     "channel_not_found": "Value passed for channel was invalid.",
+    "team_not_found": "Team associated with the message and channel could not be found.",
     "edit_window_closed": "The message cannot be edited due to the team message edit settings.",
     "msg_too_long": "Message text is too long.",
     "too_many_attachments": "Too many attachments were provided with this message. A maximum of 100 attachments are allowed on a message.",
     "no_text": "No message text provided.",
     "as_user_not_supported": "The as_user parameter does not function with workspace apps.",
     "is_inactive": "The message cannot be edited within a frozen, archived or deleted channel.",
+    "invalid_blocks": "The blocks were invalid for the requesting user.",
+    "invalid_attachments": "The attachments were invalid.",
+    "external_channel_migrating": "The channel is in the process of migrating and so the message cannot be updated at this time.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",
