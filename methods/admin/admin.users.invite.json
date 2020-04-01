@@ -59,6 +59,7 @@
     "feature_not_enabled": "The Admin APIs feature is not enabled for this team.",
     "invalid_email": "Email address was not valid.",
     "already_in_team": "The user is already on the team.",
+    "user_disabled": "The user is disabled.",
     "already_in_team_invited_user": "The user has already been invited to the team.",
     "failed_looking_up_user": "We couldn't find the requested user.",
     "failed_to_validate_caller": "The token calling this method doesn't have permission to invite a user.",
