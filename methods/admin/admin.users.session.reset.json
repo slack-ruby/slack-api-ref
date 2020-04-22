@@ -26,6 +26,7 @@
   },
   "errors": {
     "user_not_found": "Error fetching user.",
+    "cannot_reset_bot": "Cannot reset bot users.",
     "user_session_reset_failed": "There was an error starting the session reset. Try again.",
     "not_an_admin": "This method is only accessible by org/compliance team owners and admins.",
     "unknown_method": "This method is currently not available.",
