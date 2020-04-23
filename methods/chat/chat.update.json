@@ -33,17 +33,17 @@
     "link_names": {
       "required": false,
       "example": "true",
-      "desc": "Find and link channel names and usernames. Defaults to none. See below."
+      "desc": "Find and link channel names and usernames. Defaults to none."
     },
     "parse": {
       "required": false,
       "example": "none",
-      "desc": "Change how messages are treated. Defaults to client, unlike chat.postMessage. Accepts either none or full. See below."
+      "desc": "Change how messages are treated. Defaults to client, unlike chat.postMessage. Accepts either none or full."
     },
     "text": {
       "required": false,
       "example": "Hello world",
-      "desc": "New text for the message, using the default formatting rules. It's not required when presenting attachments."
+      "desc": "New text for the message, using the default formatting rules. It's not required when presenting blocks or attachments."
     }
   },
   "response": {
