@@ -16,7 +16,7 @@
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true,\n    \"teams\": [\n        {\n            \"id\": \"T1234\",\n            \"name\": \"My Team\",\n            \"discoverability\": \"hidden\",\n            \"primary_owner\": {\n                \"user_id\": \"W1234\",\n                \"email\": \"bront@slack.com\"\n            }\n        }\n    ]\n}"
+      "{\n    \"ok\": true,\n    \"teams\": [\n        {\n            \"id\": \"T1234\",\n            \"name\": \"My Team\",\n            \"discoverability\": \"hidden\",\n            \"primary_owner\": {\n                \"user_id\": \"W1234\",\n                \"email\": \"bront@slack.com\"\n            },\n            \"team_url\": \"https://subarachnoid.slack.com/\"\n        }\n    ]\n}"
     ]
   },
   "errors": {

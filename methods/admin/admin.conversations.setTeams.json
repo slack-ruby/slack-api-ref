@@ -15,8 +15,8 @@
     },
     "target_team_ids": {
       "required": false,
-      "example": "",
-      "desc": "The list of workspaces to which the channel should be shared. Not required if the channel is being shared orgwide. Example: ['T1234', 'T5678']."
+      "example": "T1234,T5678,T9012,T3456",
+      "desc": "A comma-separated list of workspaces to which the channel should be shared. Not required if the channel is being shared org-wide."
     },
     "team_id": {
       "required": false,
