@@ -34,6 +34,7 @@
     "not_enabled": "The API endpoint is not enabled for your team.",
     "invalid_channel_id": "channel_id was invalid.",
     "channel_not_found": "The channel wasn't found or isn't shared to this workspace.",
+    "name_taken": "The channel's name was already used in one of the workspce.",
     "invalid_target_team": "Target workspace is invalid.",
     "channel_type_not_supported": "The requested channel_id is not a supported type of channel.",
     "could_not_set_teams_for_channel": "The requested channel_id has not been shared with the target workspace.",
