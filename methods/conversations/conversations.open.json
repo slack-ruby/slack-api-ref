@@ -36,6 +36,7 @@
     "not_enough_users": "Needs at least 2 users to open.",
     "too_many_users": "Needs at most 8 users to open.",
     "method_not_supported_for_channel_type": "This type of conversation cannot be used with this method.",
+    "invalid_user_combination": "To message people from multiple organizations, those organizations must be in at least one channel together.",
     "missing_scope": "The token used is not granted the specific scope permissions required to complete this request.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",

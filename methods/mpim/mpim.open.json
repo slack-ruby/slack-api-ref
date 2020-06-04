@@ -18,6 +18,7 @@
     "users_list_not_supplied": "Missing users in request.",
     "not_enough_users": "Needs at least 2 users to open.",
     "too_many_users": "Needs at most 8 users to open.",
+    "invalid_user_combination": "To message people from multiple organizations, those organizations must be in at least one channel together.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",
