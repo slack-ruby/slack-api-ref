@@ -22,10 +22,6 @@ module SlackApi
     end
 
     def process_method(page, default_data = {})
-      deprecation_div = page.search("#api_main_content .callout_warning div").detect do |div|
-        div.text.include?('deprecated')
-      end
-
       desc_p = page.search("section[data-tab='docs'] p").detect do |p|
         next if p.key?('class') && p['class'].include?('alert')
         p.text && p.text.strip.length > 0
@@ -55,12 +51,30 @@ module SlackApi
         'response' => response,
         'errors' => errors
       }.merge(fields)
-      json_hash.merge!('deprecation_warning' => deprecation_div.text) if deprecation_div
+      if deprecation_warning = deprecation_warning(page)
+        json_hash.merge!('deprecation_warning' => deprecation_warning)
+      end
 
       record(file_name: default_data[:filename], json: JSON.pretty_generate(json_hash))
     end
 
     private
+
+    def deprecation_warning(page)
+      div = page.search("#api_main_content .callout_warning div").first
+      return unless div
+
+      sentences = div.children.map do |child|
+        case child.name
+        when 'ul'
+          child.search('li').map(&:text).join(', ')
+        else
+          child.text
+        end
+      end
+
+      sentences.map(&:strip).join(' ').gsub('Learn more. ', '')
+    end
 
     def parse_args(api_page, default_data = {})
       args_wrapper = api_page.search("h2:contains('Arguments') + .method_arguments")
