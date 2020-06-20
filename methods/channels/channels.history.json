@@ -65,5 +65,5 @@
   },
   "has_paging": true,
   "default_count": 100,
-  "deprecation_warning": "This method is deprecated. It will stop functioning in February 2021 and will not work with newly created apps after June 10th, 2020. Learn more. Please use these methods instead:conversations.history"
+  "deprecation_warning": "This method is deprecated. It will stop functioning in February 2021 and will not work with newly created apps after June 10th, 2020. Please use these methods instead: conversations.history"
 }
