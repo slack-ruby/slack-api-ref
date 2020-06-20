@@ -22,8 +22,8 @@ module SlackApi
     end
 
     def process_method(page, default_data = {})
-      deprecation_p = page.search("h1 + p.alert").detect do |p|
-        p.text.include?('deprecated')
+      deprecation_div = page.search("#api_main_content .callout_warning div").detect do |div|
+        div.text.include?('deprecated')
       end
 
       desc_p = page.search("section[data-tab='docs'] p").detect do |p|
@@ -55,7 +55,7 @@ module SlackApi
         'response' => response,
         'errors' => errors
       }.merge(fields)
-      json_hash.merge!('deprecated' => true) unless deprecation_p.nil?
+      json_hash.merge!('deprecation_warning' => deprecation_div.text) if deprecation_div
 
       record(file_name: default_data[:filename], json: JSON.pretty_generate(json_hash))
     end
