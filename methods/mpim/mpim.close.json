@@ -40,5 +40,5 @@
     "internal_error": "The server could not complete your operation(s) without encountering an error, likely due to a transient issue on our end. It's possible some aspect of the operation succeeded before the error was raised.",
     "method_deprecated": "The method called is retired and no longer accepts requests. Examine the error closely for suggestions on alternative methods to use or browse api.slack.com/changelog for more information."
   },
-  "deprecated": true
+  "deprecation_warning": "This method is deprecated. It will stop functioning in February 2021 and will not work with newly created apps after June 10th, 2020. Learn more. Please use these methods instead:conversations.close"
 }
