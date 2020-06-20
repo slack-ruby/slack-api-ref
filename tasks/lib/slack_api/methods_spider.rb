@@ -51,7 +51,7 @@ module SlackApi
         'response' => response,
         'errors' => errors
       }.merge(fields)
-      if deprecation_warning = deprecation_warning(page)
+      if deprecation_warning = scrape_deprecation_warning(page)
         json_hash.merge!('deprecation_warning' => deprecation_warning)
       end
 
@@ -60,7 +60,7 @@ module SlackApi
 
     private
 
-    def deprecation_warning(page)
+    def scrape_deprecation_warning(page)
       div = page.search("#api_main_content .callout_warning div").first
       return unless div
 
