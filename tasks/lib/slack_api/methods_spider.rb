@@ -51,8 +51,11 @@ module SlackApi
         'response' => response,
         'errors' => errors
       }.merge(fields)
-      if deprecation_warning = scrape_deprecation_warning(page)
-        json_hash.merge!('deprecation_warning' => deprecation_warning)
+      if deprecation = scrape_deprecation(page)
+        json_hash.merge!(
+          'deprecated' => true,
+          'deprecation' => deprecation
+        )
       end
 
       record(file_name: default_data[:filename], json: JSON.pretty_generate(json_hash))
@@ -60,20 +63,17 @@ module SlackApi
 
     private
 
-    def scrape_deprecation_warning(page)
+    def scrape_deprecation(page)
       div = page.search("#api_main_content .callout_warning div").first
       return unless div
 
-      sentences = div.children.map do |child|
-        case child.name
-        when 'ul'
-          child.search('li').map(&:text).join(', ')
-        else
-          child.text
-        end
-      end
+      warning_text = div.children.first.text.sub('Learn more.', '').gsub(/\u00a0/, ' ').strip
+      alternative_methods = div.search('li').map(&:text)
 
-      sentences.map(&:strip).join(' ').gsub('Learn more. ', '')
+      return {
+        deprecation_warning: warning_text,
+        alternative_methods: alternative_methods
+      }
     end
 
     def parse_args(api_page, default_data = {})
