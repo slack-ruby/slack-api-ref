@@ -22,10 +22,6 @@ module SlackApi
     end
 
     def process_method(page, default_data = {})
-      deprecation_p = page.search("h1 + p.alert").detect do |p|
-        p.text.include?('deprecated')
-      end
-
       desc_p = page.search("section[data-tab='docs'] p").detect do |p|
         next if p.key?('class') && p['class'].include?('alert')
         p.text && p.text.strip.length > 0
@@ -55,12 +51,35 @@ module SlackApi
         'response' => response,
         'errors' => errors
       }.merge(fields)
-      json_hash.merge!('deprecated' => true) unless deprecation_p.nil?
+      if deprecation = scrape_deprecation(page)
+        json_hash.merge!(
+          'deprecated' => true,
+          'deprecation' => deprecation
+        )
+      end
 
       record(file_name: default_data[:filename], json: JSON.pretty_generate(json_hash))
     end
 
     private
+
+    #
+    # @param [Mechanize::Page] page - the page to scrape
+    #
+    # @return [Hash, nil] a Hash containing information about the deprecation or nil
+    #
+    def scrape_deprecation(page)
+      div = page.search("#api_main_content .callout_warning div").first
+      return unless div
+
+      warning_text = div.children.first.text.sub('Learn more.', '').gsub(/\u00a0/, ' ').strip
+      alternative_methods = div.search('li').map(&:text)
+
+      return {
+        deprecation_warning: warning_text,
+        alternative_methods: alternative_methods
+      }
+    end
 
     def parse_args(api_page, default_data = {})
       args_wrapper = api_page.search("h2:contains('Arguments') + .method_arguments")
