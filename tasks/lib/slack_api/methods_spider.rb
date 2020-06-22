@@ -63,6 +63,11 @@ module SlackApi
 
     private
 
+    #
+    # @param [Mechanize::Page] page - the page to scrape
+    #
+    # @return [Hash, nil] a Hash containing information about the deprecation or nil
+    #
     def scrape_deprecation(page)
       div = page.search("#api_main_content .callout_warning div").first
       return unless div
