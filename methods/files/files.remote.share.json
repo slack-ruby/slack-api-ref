@@ -5,7 +5,7 @@
   "args": {
     "channels": {
       "required": true,
-      "example": "",
+      "example": "C1234567890,C2345678901,C3456789012",
       "desc": "Comma-separated list of channel IDs where the file will be shared."
     },
     "external_id": {
