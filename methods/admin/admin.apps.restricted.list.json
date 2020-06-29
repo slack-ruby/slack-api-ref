@@ -31,6 +31,7 @@
     ]
   },
   "errors": {
+    "invalid_actor": "The provided actor_id is not a valid user or application.",
     "invalid_cursor": "Value passed for cursor was not valid or is no longer valid.",
     "feature_not_enabled": "Returned when the Admin APIs feature is not enabled for this team.",
     "not_an_admin": "This method is only accessible by org/workspace owners and admins.",

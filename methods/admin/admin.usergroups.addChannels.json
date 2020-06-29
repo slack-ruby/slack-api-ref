@@ -8,15 +8,15 @@
       "example": "C00000000,C00000001",
       "desc": "Comma separated string of channel IDs."
     },
-    "team_id": {
-      "required": true,
-      "example": "T00000000",
-      "desc": "The workspace to add default channels in."
-    },
     "usergroup_id": {
       "required": true,
       "example": "S00000000",
       "desc": "ID of the IDP group to add default channels for."
+    },
+    "team_id": {
+      "required": false,
+      "example": "T00000000",
+      "desc": "The workspace to add default channels in."
     }
   },
   "response": {
