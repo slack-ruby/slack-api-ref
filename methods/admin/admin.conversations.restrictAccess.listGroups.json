@@ -16,7 +16,7 @@
   },
   "response": {
     "examples": [
-
+      "{\n    \"ok\": true,\n    \"group_ids\": [\n        \"YOUR_GROUP_ID\"\n    ]\n}"
     ]
   },
   "errors": {
