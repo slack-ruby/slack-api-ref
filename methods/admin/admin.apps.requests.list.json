@@ -31,6 +31,7 @@
     "not_an_admin": "This method is only accessible by org owners and admins.",
     "team_not_found": "Returned when team id is not found.",
     "app_management_app_not_installed_on_org": "The app management app must be installed on the org.",
+    "not_allowed": "The user is not allowed to access this API method.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",
