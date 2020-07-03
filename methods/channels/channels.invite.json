@@ -31,6 +31,7 @@
     "is_archived": "Channel has been archived.",
     "cant_invite": "User cannot be invited to this channel.",
     "ura_max_channels": "URA is already in the maximum number of channels.",
+    "method_not_supported_for_channel_type": "This method cannot be called on this channel type.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",

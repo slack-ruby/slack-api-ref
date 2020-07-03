@@ -15,6 +15,7 @@
     ]
   },
   "errors": {
+    "no_users_provided": "Must provide more than one user.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",
