@@ -49,7 +49,7 @@
   "deprecation": {
     "deprecation_warning": "This method is deprecated. It will stop functioning in February 2021 and will not work with newly created apps after June 10th, 2020.",
     "alternative_methods": [
-
+      "conversations.mark"
     ]
   }
 }

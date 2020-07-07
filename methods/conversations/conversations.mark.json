@@ -1,18 +1,18 @@
 {
-  "group": "channels",
-  "name": "channels.mark",
+  "group": "conversations",
+  "name": "conversations.mark",
   "desc": "Sets the read cursor in a channel.",
   "args": {
     "channel": {
       "required": true,
-      "example": "C1234567890",
-      "desc": "Channel to set reading cursor in.",
+      "example": "C012345678",
+      "desc": "Channel or conversation to set the read cursor for.",
       "type": "channel"
     },
     "ts": {
       "required": true,
-      "example": "1234567890.123456",
-      "desc": "Timestamp of the most recently seen message.",
+      "example": "1593473566.000200",
+      "desc": "Unique identifier of message you want marked as most recently seen in this conversation.",
       "type": "timestamp"
     }
   },
@@ -43,14 +43,6 @@
     "team_added_to_org": "The workspace associated with your request is currently undergoing migration to an Enterprise Organization. Web API and other platform operations will be intermittently unavailable until the transition is complete.",
     "request_timeout": "The method was called via a POST request, but the POST data was either missing or truncated.",
     "fatal_error": "The server could not complete your operation(s) without encountering a catastrophic error. It's possible some aspect of the operation succeeded before the error was raised.",
-    "internal_error": "The server could not complete your operation(s) without encountering an error, likely due to a transient issue on our end. It's possible some aspect of the operation succeeded before the error was raised.",
-    "method_deprecated": "The method called is retired and no longer accepts requests. Examine the error closely for suggestions on alternative methods to use or browse api.slack.com/changelog for more information."
-  },
-  "deprecated": true,
-  "deprecation": {
-    "deprecation_warning": "This method is deprecated. It will stop functioning in February 2021 and will not work with newly created apps after June 10th, 2020.",
-    "alternative_methods": [
-      "conversations.mark"
-    ]
+    "internal_error": "The server could not complete your operation(s) without encountering an error, likely due to a transient issue on our end. It's possible some aspect of the operation succeeded before the error was raised."
   }
 }
