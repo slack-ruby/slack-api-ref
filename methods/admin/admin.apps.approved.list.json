@@ -31,6 +31,7 @@
     ]
   },
   "errors": {
+    "app_management_app_not_installed_on_org": "The app management app must be installed on the org.",
     "invalid_actor": "The provided actor_id is not a valid user or application.",
     "invalid_cursor": "Value passed for cursor was not valid or is no longer valid.",
     "feature_not_enabled": "Returned when the Admin APIs feature is not enabled for this team.",
