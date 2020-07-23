@@ -3,16 +3,6 @@
   "name": "workflows.stepFailed",
   "desc": "Indicate that an app's step in a workflow failed to execute.",
   "args": {
-    "error": {
-      "required": true,
-      "example": "",
-      "desc": "Key-value object of errors from your step. Keys of this object reflect the configured key properties of your outputs array from your configuration object."
-    },
-    "workflow_step_execute_id": {
-      "required": true,
-      "example": "",
-      "desc": "Context identifier that maps to the correct workflow step execution."
-    }
   },
   "response": {
     "examples": [

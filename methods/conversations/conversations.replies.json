@@ -12,7 +12,7 @@
     "ts": {
       "required": true,
       "example": "1234567890.123456",
-      "desc": "Unique identifier of a thread's parent message.",
+      "desc": "Unique identifier of a thread's parent message. ts must be the timestamp of an existing message with 0 or more replies. If there are no replies then just the single message referenced by ts will return - it is just an ordinary, unthreaded message.",
       "type": "timestamp"
     },
     "cursor": {

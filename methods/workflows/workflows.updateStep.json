@@ -3,21 +3,6 @@
   "name": "workflows.updateStep",
   "desc": "Update the configuration for a workflow extension step.",
   "args": {
-    "workflow_step_edit_id": {
-      "required": true,
-      "example": "",
-      "desc": "A workflow_step object defining expected inputs and output from this step. workflow_step_edit_id is required when calling this method."
-    },
-    "inputs": {
-      "required": false,
-      "example": "",
-      "desc": "."
-    },
-    "outputs": {
-      "required": false,
-      "example": "",
-      "desc": "."
-    }
   },
   "response": {
     "examples": [
