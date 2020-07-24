@@ -3,6 +3,16 @@
   "name": "workflows.stepCompleted",
   "desc": "Indicate that an app's step in a workflow completed execution.",
   "args": {
+    "workflow_step_execute_id": {
+      "required": true,
+      "example": "",
+      "desc": "Context identifier that maps to the correct workflow step execution."
+    },
+    "outputs": {
+      "required": false,
+      "example": "",
+      "desc": "Key-value object of outputs from your step. Keys of this object reflect the configured key properties of your outputs array from your workflow_step object."
+    }
   },
   "response": {
     "examples": [

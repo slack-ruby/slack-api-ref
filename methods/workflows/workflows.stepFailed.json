@@ -3,6 +3,16 @@
   "name": "workflows.stepFailed",
   "desc": "Indicate that an app's step in a workflow failed to execute.",
   "args": {
+    "error": {
+      "required": true,
+      "example": "",
+      "desc": "A JSON-based object with a message property that should contain a human readable error message."
+    },
+    "workflow_step_execute_id": {
+      "required": true,
+      "example": "",
+      "desc": "Context identifier that maps to the correct workflow step execution."
+    }
   },
   "response": {
     "examples": [

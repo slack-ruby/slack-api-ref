@@ -16,6 +16,7 @@
   },
   "errors": {
     "invalid_presence": "Value passed for presence was invalid.",
+    "service_unavailable": "Service is temporarily unavailable.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",
