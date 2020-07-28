@@ -52,6 +52,7 @@
     "pagination_not_available": "Pagination does not currently function on Enterprise Grid workspaces.",
     "invalid_ts_latest": "Value passed for latest was invalid.",
     "invalid_ts_oldest": "Value passed for oldest was invalid.",
+    "forbidden": "Access forbidden.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",

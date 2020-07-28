@@ -6,35 +6,42 @@
   "example": {
     "type": "subteam_updated",
     "subteam": {
-      "id": "S0614TZR7",
-      "team_id": "T060RNRCH",
+      "id": "S516MPG9X",
+      "team_id": "T0GMXV71T",
       "is_usergroup": true,
-      "name": "Team Admins",
-      "description": "A group of all Administrators on your team.",
-      "handle": "admins",
+      "is_subteam": true,
+      "name": "New Group Apr 29",
+      "description": "Test usergroups.list with default channel deleted",
+      "handle": "user-group-test",
       "is_external": false,
-      "date_create": 1446598059,
-      "date_update": 1446670362,
+      "date_create": 1492655498,
+      "date_update": 1595814882,
       "date_delete": 0,
-      "auto_type": "admin",
-      "created_by": "USLACKBOT",
-      "updated_by": "U060RNRCZ",
+      "auto_type": null,
+      "auto_provision": false,
+      "enterprise_subteam_id": "",
+      "created_by": "U0GN26UBG",
+      "updated_by": "U0GN26UBG",
       "deleted_by": null,
       "prefs": {
         "channels": [
-
+          "CJG07GZDK"
         ],
         "groups": [
 
         ]
       },
       "users": [
-        "U060RNRCZ",
-        "U060ULRC0",
-        "U06129G2V",
-        "U061309JM"
+        "U0GN26UBG",
+        "U0GNBSG1G",
+        "U0K0XMM2R",
+        "U1FLR7FB8",
+        "U3S7347ED",
+        "U5ZR5M0FM",
+        "U600XRXS9"
       ],
-      "user_count": "4"
+      "user_count": 7,
+      "channel_count": 0
     }
   }
 }

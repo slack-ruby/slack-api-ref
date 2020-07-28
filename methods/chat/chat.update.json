@@ -67,6 +67,7 @@
     "invalid_blocks": "The blocks were invalid for the requesting user.",
     "invalid_attachments": "The attachments were invalid.",
     "external_channel_migrating": "The channel is in the process of migrating and so the message cannot be updated at this time.",
+    "forbidden": "Access forbidden.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",
