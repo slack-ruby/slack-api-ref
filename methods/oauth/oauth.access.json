@@ -46,7 +46,7 @@
     "code_already_used": "Value passed for code was already exchanged.",
     "missing_resource": "Missing permission resource.",
     "internal_error": "The server could not complete your operation(s) without encountering an error, likely due to a transient issue on our end. It's possible some aspect of the operation succeeded before the error was raised.",
-    "ratelimited": "Too many requests made in succession.",
+    "ratelimited": "The request has been ratelimited. Refer to the Retry-After header for when to retry the request.",
     "invalid_token": "Invalid refresh token.",
     "invalid_arguments": "The method was called with invalid arguments.",
     "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",

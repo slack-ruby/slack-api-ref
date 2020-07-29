@@ -34,7 +34,7 @@
     "error_bad_wide": "The image width or height is too large.",
     "too_many_frames": "The image has too many frames.",
     "resized_but_still_too_large": "The image is still too large after resizing.",
-    "ratelimited": "Too many api calls in a time period.",
+    "ratelimited": "The request has been ratelimited. Refer to the Retry-After header for when to retry the request.",
     "failed_to_fetch_active_team": "There are no active teams on the org and we need at least one.",
     "failed_to_add_emoji": "Failed to add the specified emoji.",
     "not_authed": "No authentication token provided.",
