@@ -37,6 +37,7 @@
     "ratelimited": "The request has been ratelimited. Refer to the Retry-After header for when to retry the request.",
     "failed_to_fetch_active_team": "There are no active teams on the org and we need at least one.",
     "failed_to_add_emoji": "Failed to add the specified emoji.",
+    "emoji_limit_reached": "Unable to add emoji due to limit reached.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",

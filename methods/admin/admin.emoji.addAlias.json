@@ -28,6 +28,7 @@
     "error_name_taken": "Value passed for name already exists.",
     "error_invalid_alias": "Value passed for alias_for does not exist.",
     "failed_to_alias_emoji": "Failed to alias the specified emoji.",
+    "emoji_limit_reached": "Unable to add emoji due to limit reached.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",
