@@ -17,6 +17,16 @@
       "required": false,
       "example": "",
       "desc": "."
+    },
+    "step_image_url": {
+      "required": false,
+      "example": "",
+      "desc": "An optional field that can be used to override app image that is shown in the Workflow Builder."
+    },
+    "step_name": {
+      "required": false,
+      "example": "",
+      "desc": "An optional field that can be used to override the step name that is shown in the Workflow Builder."
     }
   },
   "response": {
