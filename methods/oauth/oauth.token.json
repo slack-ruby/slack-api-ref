@@ -40,7 +40,7 @@
     "bad_client_secret": "Value passed for client_secret was invalid.",
     "invalid_code": "Value passed for code was invalid.",
     "bad_redirect_uri": "Value passed for redirect_uri did not match the redirect_uri in the original request.",
-    "invalid_arguments": "The method was called with invalid arguments.",
+    "invalid_arguments": "The method was either called with invalid arguments or some detail about the arguments passed are invalid, which is more likely when using complex arguments like blocks or attachments.",
     "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
     "invalid_charset": "The method was called via a POST request, but the charset specified in the Content-Type header was invalid. Valid charset names are: utf-8 iso-8859-1.",
     "invalid_form_data": "The method was called via a POST request with Content-Type application/x-www-form-urlencoded or multipart/form-data, but the form data was either missing or syntactically invalid.",

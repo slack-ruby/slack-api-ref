@@ -40,7 +40,7 @@
     "oauth_authorization_url_mismatch": "The OAuth flow was initiated on an incorrect version of the authorization url. The flow must be initiated via /oauth/v2/authorize .",
     "preview_feature_not_available": "Returned when the API method is not yet available on the team in context.",
     "cannot_install_an_org_installed_app": "Returned when the the org-installed app cannot be installed on a workspace.",
-    "invalid_arguments": "The method was called with invalid arguments.",
+    "invalid_arguments": "The method was either called with invalid arguments or some detail about the arguments passed are invalid, which is more likely when using complex arguments like blocks or attachments.",
     "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
     "invalid_charset": "The method was called via a POST request, but the charset specified in the Content-Type header was invalid. Valid charset names are: utf-8 iso-8859-1.",
     "invalid_form_data": "The method was called via a POST request with Content-Type application/x-www-form-urlencoded or multipart/form-data, but the form data was either missing or syntactically invalid.",
