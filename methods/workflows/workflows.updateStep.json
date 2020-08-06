@@ -6,17 +6,17 @@
     "workflow_step_edit_id": {
       "required": true,
       "example": "",
-      "desc": "A workflow_step object defining expected inputs and output from this step. workflow_step_edit_id is required when calling this method."
+      "desc": "A context identifier provided with view_submission payloads used to call back to workflows.updateStep."
     },
     "inputs": {
       "required": false,
-      "example": "",
-      "desc": "."
+      "example": "{\"title\":{\"value\":\"The Title\"},\"submitter\":{\"value\":\"{{user}}\"}}",
+      "desc": "A JSON key-value map of inputs required from a user during configuration. This is the data your app expects to receive when the workflow step starts."
     },
     "outputs": {
       "required": false,
-      "example": "",
-      "desc": "."
+      "example": "[{\"name\":\"ticket_id\",\"type\":\"text\",\"label\":\"Ticket ID\"},{\"name\":\"title\",\"type\":\"text\",\"label\":\"Title\"}]",
+      "desc": "An JSON array of output objects used during step execution. This is the data your app agrees to provide when your workflow step was executed."
     }
   },
   "response": {
@@ -39,6 +39,7 @@
     "ekm_access_denied": "Administrators have suspended the ability to post a message.",
     "missing_scope": "The token used is not granted the specific scope permissions required to complete this request.",
     "not_allowed_token_type": "The token type used in this request is not allowed.",
+    "is_bot": "This method cannot be called by a bot user.",
     "invalid_arguments": "The method was either called with invalid arguments or some detail about the arguments passed are invalid, which is more likely when using complex arguments like blocks or attachments.",
     "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
     "invalid_charset": "The method was called via a POST request, but the charset specified in the Content-Type header was invalid. Valid charset names are: utf-8 iso-8859-1.",
