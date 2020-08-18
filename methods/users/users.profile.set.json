@@ -43,7 +43,6 @@
     "not_app_admin": "Only team owners and selected members can update the profile of a bot user.",
     "cannot_update_admin_user": "Only a primary owner can update the profile of an admin.",
     "too_long": "You attempted to set a custom status but it was longer than the maximum allowed, 100.",
-    "forbidden": "Access forbidden.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",

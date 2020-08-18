@@ -26,6 +26,10 @@
     ]
   },
   "errors": {
+    "not_in_channel": "Authenticated user is not in at least one of the the provided channels.",
+    "file_not_found": "No file with the requested ID found.",
+    "channel_not_found": "At least one of the values passed for channels was invalid.",
+    "invalid_args": "Invalid arguments passed to endpoint.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",

@@ -24,6 +24,7 @@
     "too_many_ids": "The request specified both an external_id and a file, only one may be specified.",
     "file_not_found": "Value passed for file or external_id was invalid.",
     "file_under_review": "File passed is tombstoned for DLP review.",
+    "invalid_args": "Invalid arguments passed to endpoint.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",

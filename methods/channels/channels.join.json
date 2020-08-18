@@ -32,6 +32,7 @@
     "invalid_name_maxlength": "Value passed for name exceeded max length.",
     "invalid_name_specials": "Value passed for name contained unallowed special characters or upper case characters.",
     "invalid_name": "Value passed for name was invalid.",
+    "missing_argument": "A required argument is missing.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",

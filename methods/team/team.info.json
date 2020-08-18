@@ -17,6 +17,7 @@
   },
   "errors": {
     "team_not_on_enterprise": "Cannot query team by domain because team is not on an enterprise.",
+    "team_not_found": "The team was not found.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",
