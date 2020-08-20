@@ -41,6 +41,8 @@
     "ekm_access_denied": "Administrators have suspended the ability to post a message.",
     "missing_scope": "The token used is not granted the specific scope permissions required to complete this request.",
     "not_allowed_token_type": "The token type used in this request is not allowed.",
+    "method_deprecated": "The method called is retired and no longer accepts requests. Examine the error closely for suggestions on alternative methods to use or browse api.slack.com/changelog for more information.",
+    "deprecated_endpoint": "The endpoint has been deprecated.",
     "invalid_arguments": "The method was either called with invalid arguments or some detail about the arguments passed are invalid, which is more likely when using complex arguments like blocks or attachments.",
     "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
     "invalid_charset": "The method was called via a POST request, but the charset specified in the Content-Type header was invalid. Valid charset names are: utf-8 iso-8859-1.",
@@ -52,8 +54,7 @@
     "request_timeout": "The method was called via a POST request, but the POST data was either missing or truncated.",
     "service_unavailable": "The service is temporarily unavailable.",
     "fatal_error": "The server could not complete your operation(s) without encountering a catastrophic error. It's possible some aspect of the operation succeeded before the error was raised.",
-    "internal_error": "The server could not complete your operation(s) without encountering an error, likely due to a transient issue on our end. It's possible some aspect of the operation succeeded before the error was raised.",
-    "method_deprecated": "The method called is retired and no longer accepts requests. Examine the error closely for suggestions on alternative methods to use or browse api.slack.com/changelog for more information."
+    "internal_error": "The server could not complete your operation(s) without encountering an error, likely due to a transient issue on our end. It's possible some aspect of the operation succeeded before the error was raised."
   },
   "deprecated": true,
   "deprecation": {

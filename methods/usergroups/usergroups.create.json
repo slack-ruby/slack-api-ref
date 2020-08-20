@@ -46,6 +46,8 @@
     "ekm_access_denied": "Administrators have suspended the ability to post a message.",
     "missing_scope": "The token used is not granted the specific scope permissions required to complete this request.",
     "not_allowed_token_type": "The token type used in this request is not allowed.",
+    "method_deprecated": "The method has been deprecated.",
+    "deprecated_endpoint": "The endpoint has been deprecated.",
     "is_bot": "This method cannot be called by a bot user.",
     "user_is_restricted": "This method cannot be called by a restricted user or single channel guest.",
     "invalid_arguments": "The method was either called with invalid arguments or some detail about the arguments passed are invalid, which is more likely when using complex arguments like blocks or attachments.",
