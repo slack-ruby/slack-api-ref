@@ -1,7 +1,7 @@
 {
   "group": "files",
   "name": "files.info",
-  "desc": "Gets information about a team file.",
+  "desc": "Gets information about a file.",
   "args": {
     "file": {
       "required": true,

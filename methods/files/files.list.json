@@ -1,7 +1,7 @@
 {
   "group": "files",
   "name": "files.list",
-  "desc": "Lists & filters team files.",
+  "desc": "List for a team, in a channel, or from a user with applied filters.",
   "args": {
     "channel": {
       "required": false,
