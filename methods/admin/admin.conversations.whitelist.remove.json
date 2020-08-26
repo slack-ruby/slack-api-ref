@@ -62,7 +62,7 @@
   },
   "deprecated": true,
   "deprecation": {
-    "deprecation_warning": "",
+    "deprecation_warning": "**This method is deprecated**. Use [`admin.conversations.restrictAccess.removeGroup`](/methods/admin.conversations.restrictAccess.removeGroup) instead.",
     "alternative_methods": [
 
     ]

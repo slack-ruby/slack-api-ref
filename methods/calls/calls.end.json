@@ -16,8 +16,8 @@
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true\n}",
-      "{\n    \"ok\": true,\n    \"error\": \"inactive_call\"\n}"
+      "{\n\t\"ok\": true\n}",
+      "{\n\t\"ok\": true,\n\t\"error\": \"inactive_call\"\n}"
     ]
   },
   "errors": {

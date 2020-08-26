@@ -16,8 +16,8 @@
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true\n}",
-      "{\n    \"ok\": true,\n    \"error\" : \"bad_users\"\n}"
+      "{\n\t\"ok\": true\n}",
+      "{\n\t\"ok\": true,\n\t\"error\" : \"bad_users\"\n}"
     ]
   },
   "errors": {

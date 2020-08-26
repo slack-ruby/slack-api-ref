@@ -6,7 +6,7 @@
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true,\n    \"reminders\": [\n        {\n            \"id\": \"Rm12345678\",\n            \"creator\": \"U18888888\",\n            \"user\": \"U18888888\",\n            \"text\": \"eat a banana\",\n            \"recurring\": false,\n            \"time\": 1458678068,\n            \"complete_ts\": 0\n        },\n        {\n            \"id\": \"Rm23456789\",\n            \"creator\": \"U18888888\",\n            \"user\": \"U18888888\",\n            \"text\": \"drink water\",\n            \"recurring\": true\n        }\n    ]\n}"
+      "{\n\t\"ok\": true,\n\t\"reminders\": [\n\t\t{\n\t\t\t\"id\": \"Rm12345678\",\n\t\t\t\"creator\": \"U18888888\",\n\t\t\t\"user\": \"U18888888\",\n\t\t\t\"text\": \"eat a banana\",\n\t\t\t\"recurring\": false,\n\t\t\t\"time\": 1458678068,\n\t\t\t\"complete_ts\": 0\n\t\t},\n\t\t{\n\t\t\t\"id\": \"Rm23456789\",\n\t\t\t\"creator\": \"U18888888\",\n\t\t\t\"user\": \"U18888888\",\n\t\t\t\"text\": \"drink water\",\n\t\t\t\"recurring\": true\n\t\t}\n\t]\n}"
     ]
   },
   "errors": {

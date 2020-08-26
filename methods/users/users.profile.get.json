@@ -6,7 +6,7 @@
     "include_labels": {
       "required": false,
       "example": "true",
-      "desc": "Include labels for each ID in custom profile fields."
+      "desc": "Include labels for each ID in custom profile fields. Using this parameter will cause calls to this method to be heavily rate-limited, and as such should be used sparingly. The rate limit when using include_labels will be 10 calls per minute."
     },
     "user": {
       "required": false,

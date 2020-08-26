@@ -16,7 +16,7 @@
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true,\n    \"items\": [\n        {\n            \"type\": \"message\",\n            \"channel\": \"C2147483705\",\n            \"message\": {...}\n        },\n        {\n            \"type\": \"file\",\n            \"file\": { ... }\n        }\n        {\n            \"type\": \"file_comment\",\n            \"file\": { ... },\n            \"comment\": { ... }\n        }\n        {\n            \"type\": \"channel\",\n            \"channel\": \"C2147483705\"\n        },\n\n    ],\n    \"response_metadata\": {\n        \"next_cursor\": \"dGVhbTpDMUg5UkVTR0w=\"\n    }\n}"
+      "{\n\t\"ok\": true,\n\t\"items\": [\n\t\t{\n\t\t\t\"type\": \"message\",\n\t\t\t\"channel\": \"C2147483705\",\n\t\t\t\"message\": {...}\n\t\t},\n\t\t{\n\t\t\t\"type\": \"file\",\n\t\t\t\"file\": { ... }\n\t\t}\n\t\t{\n\t\t\t\"type\": \"file_comment\",\n\t\t\t\"file\": { ... },\n\t\t\t\"comment\": { ... }\n\t\t}\n\t\t{\n\t\t\t\"type\": \"channel\",\n\t\t\t\"channel\": \"C2147483705\"\n\t\t},\n\n\t],\n\t\"response_metadata\": {\n    \t\"next_cursor\": \"dGVhbTpDMUg5UkVTR0w=\"\n\t}\n}"
     ]
   },
   "errors": {

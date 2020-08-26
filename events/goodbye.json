@@ -1,7 +1,7 @@
 {
   "name": "goodbye",
   "desc": "The server intends to close the connection soon..",
-  "long_desc": "The server intends to close the connection soon.. The goodbye event may be sent by a server that expects it will close the connection after an unspecified amount of time. A well formed client should reconnect to avoid data loss. Other scenarios where you might encounter the goodbye event are: -  reaching the maximum duration of a RTM web socket connection (8 hours) -  your workspace has been inactive for over two minutes",
+  "long_desc": "The server intends to close the connection soon.. The goodbye event may be sent by a server that expects it will close the connection after an unspecified amount of time. A well formed client should reconnect to avoid data loss. Other scenarios where you might encounter the goodbye event are:",
   "required_scope": "RTM",
   "example": {
     "type": "goodbye"

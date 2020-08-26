@@ -22,7 +22,7 @@
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true,\n    \"reminder\": {\n        \"id\": \"Rm12345678\",\n        \"creator\": \"U18888888\",\n        \"user\": \"U18888888\",\n        \"text\": \"eat a banana\",\n        \"recurring\": false,\n        \"time\": 1602288000,\n        \"complete_ts\": 0\n    }\n}"
+      "{\n\t\"ok\": true,\n\t\"reminder\": {\n\t\t\"id\": \"Rm12345678\",\n\t\t\"creator\": \"U18888888\",\n\t\t\"user\": \"U18888888\",\n\t\t\"text\": \"eat a banana\",\n\t\t\"recurring\": false,\n\t\t\"time\": 1602288000,\n\t\t\"complete_ts\": 0\n\t}\n}"
     ]
   },
   "errors": {

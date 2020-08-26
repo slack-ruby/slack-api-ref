@@ -15,7 +15,7 @@
     },
     "limit": {
       "required": false,
-      "example": "true",
+      "example": "50",
       "desc": "Limit for how many users to be retrieved per page."
     }
   },
