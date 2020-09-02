@@ -1,49 +1,49 @@
 {
   "group": "admin",
-  "name": "admin.conversations.setTeams",
-  "desc": "Set the workspaces in an Enterprise grid org that connect to a public or private channel.",
+  "name": "admin.conversations.create",
+  "desc": "Create a public or private channel-based conversation.",
   "args": {
-    "channel_id": {
+    "is_private": {
       "required": true,
-      "example": "",
-      "desc": "The encoded channel_id to add or remove to workspaces."
+      "example": "true",
+      "desc": "When true, creates a private channel instead of a public channel."
     },
-    "org_channel": {
+    "name": {
+      "required": true,
+      "example": "mychannel",
+      "desc": "Name of the public or private channel to create."
+    },
+    "description": {
+      "required": false,
+      "example": "It's a good channel, Bront.",
+      "desc": "Description of the public or private channel to create."
+    },
+    "org_wide": {
       "required": false,
       "example": "true",
-      "desc": "True if channel has to be converted to an org channel."
-    },
-    "target_team_ids": {
-      "required": false,
-      "example": "T1234,T5678,T9012,T3456",
-      "desc": "A comma-separated list of workspaces to which the channel should be shared. Not required if the channel is being shared org-wide."
+      "desc": "When true, the channel will be available org-wide. Note: if the channel is not org_wide=true, you must specify a team_id for this channel."
     },
     "team_id": {
       "required": false,
       "example": "",
-      "desc": "The workspace to which the channel belongs. Omit this argument if the channel is a cross-workspace shared channel."
+      "desc": "The workspace to create the channel in. Note: this argument is required unless you set org_wide=true."
     }
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true\n}"
+      "{\n    \"ok\": true,\n    \"channel_id\": \"C12345\"\n}"
     ]
   },
   "errors": {
-    "restricted_action": "The caller of this API is not allowed to perform this operation.",
-    "not_enabled": "The API endpoint is not enabled for your team.",
-    "invalid_channel_id": "channel_id was invalid.",
-    "channel_not_found": "The channel wasn't found or isn't shared to this workspace.",
-    "name_taken": "The channel's name was already used in one of the workspce.",
-    "invalid_target_team": "Target workspace is invalid.",
-    "channel_type_not_supported": "The requested channel_id is not a supported type of channel.",
-    "could_not_set_teams_for_channel": "The requested channel_id has not been shared with the target workspace.",
-    "channel_cannot_be_unshared": "Channel cannot be unshared from this workspace.",
-    "default_org_wide_channel": "Default org wide channel cannot be unshared from a workspace.",
-    "unsupported_arguments": "The provided method arguments are not supported.",
-    "too_many_target_teams": "Too many target_team_ids were provided.",
-    "externally_shared_or_disconnected_channel": "The channel is or was externally shared.",
-    "cannot_move_local_channel": "This API cannot be used to move a local channel from one workspace to another.",
+    "feature_not_enabled": "The token provided doesn't have access to this method.",
+    "name_taken": "A channel cannot be created with the given name.",
+    "restricted_action": "A workspace preference prevents the authenticated user from creating channels.",
+    "team_not_found": "No workspace was found for the team_id provided.",
+    "invalid_team": "The provided workspace is invalid.",
+    "invalid_name": "The value passed for name was invalid.",
+    "could_not_create_channel": "The channel could not be created.",
+    "team_id_or_org_required": "You must provide a team_id or set org_wide to true.",
+    "no_local_user_on_team": "The workspace provided had no users.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",
@@ -56,6 +56,7 @@
     "method_deprecated": "The method has been deprecated.",
     "deprecated_endpoint": "The endpoint has been deprecated.",
     "is_bot": "This method cannot be called by a bot user.",
+    "user_is_ultra_restricted": "This method cannot be called by a single channel guest.",
     "invalid_arguments": "The method was either called with invalid arguments or some detail about the arguments passed are invalid, which is more likely when using complex arguments like blocks or attachments.",
     "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
     "invalid_charset": "The method was called via a POST request, but the charset specified in the Content-Type header was invalid. Valid charset names are: utf-8 iso-8859-1.",
