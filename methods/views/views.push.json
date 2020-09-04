@@ -21,8 +21,9 @@
     ]
   },
   "errors": {
-    "push_limit_reached": "Error returned when the max push limit has been reached for views. Currently the limit is 3.",
     "duplicate_external_id": "Error returned when the given external_id has already be used.",
+    "not_found": "Error returned when the requested view can't be found.",
+    "push_limit_reached": "Error returned when the max push limit has been reached for views. Currently the limit is 3.",
     "view_too_large": "Error returned if the provided view is greater than 250kb.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",

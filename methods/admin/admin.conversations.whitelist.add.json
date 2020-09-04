@@ -65,7 +65,7 @@
   },
   "deprecated": true,
   "deprecation": {
-    "deprecation_warning": "**This method is deprecated**. Use [`admin.conversations.restrictAccess.addGroup`](/methods/admin.conversations.restrictAccess.addGroup) instead.",
+    "deprecation_warning": "This method is deprecated",
     "alternative_methods": [
 
     ]

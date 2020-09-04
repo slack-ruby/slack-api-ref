@@ -52,7 +52,7 @@
   },
   "deprecated": true,
   "deprecation": {
-    "deprecation_warning": "**This method is deprecated**. Use [`admin.conversations.restrictAccess.listGroups`](/methods/admin.conversations.restrictAccess.listGroups) instead.",
+    "deprecation_warning": "This method is deprecated",
     "alternative_methods": [
 
     ]
