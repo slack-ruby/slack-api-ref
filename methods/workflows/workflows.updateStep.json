@@ -28,6 +28,7 @@
     "not_found": "Error returned when the context_id is invalid.",
     "invalid_payload": "Error returned when the payload is invalid.",
     "invalid_inputs": "Error returned when an input is missing the required value key.",
+    "invalid_trigger": "Error returned when the provided workflow_step_edit_id does not much any steps in the workflow.",
     "unsupported_context_type": "The context_type is unsupported.",
     "trigger_expired": "Error returned when there was a timeout between view submission and updateStep call.",
     "internal_error": "The server could not complete your operation(s) without encountering an error, likely due to a transient issue on our end. It's possible some aspect of the operation succeeded before the error was raised.",
