@@ -37,6 +37,13 @@
   "errors": {
     "permission_denied": "The user does not have permission to create a User Group.",
     "plan_upgrade_required": "This workspace does not have access to User Groups, as that feature is only available on Standard and above plans.",
+    "handle_already_exists": "Handle is already in use on this workspace.",
+    "forbidden_handle": "Handle is invalid.",
+    "bad_handle": "Handle is invalid.",
+    "description_too_long": "Given usergroup description is too long.",
+    "paid_teams_only": "Usergroups can only be used on paid Slack teams.",
+    "name_already_exists": "Name is already in use on this workspace.",
+    "missing_subteam_name": "Subteam name is required.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",
