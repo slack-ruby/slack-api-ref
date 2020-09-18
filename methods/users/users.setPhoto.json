@@ -3,11 +3,6 @@
   "name": "users.setPhoto",
   "desc": "Set the user profile photo",
   "args": {
-    "image": {
-      "required": true,
-      "example": "...",
-      "desc": "File contents via multipart/form-data."
-    },
     "crop_w": {
       "required": false,
       "example": "100",
@@ -22,6 +17,11 @@
       "required": false,
       "example": "15",
       "desc": "Y coordinate of top-left corner of crop box."
+    },
+    "image": {
+      "required": false,
+      "example": "...",
+      "desc": "File contents via multipart/form-data."
     }
   },
   "response": {
@@ -33,6 +33,7 @@
     "bad_image": "The uploaded image could not be processed - try passing a JPEG, GIF or PNG.",
     "too_large": "The uploaded image had excessive dimensions.",
     "too_many_frames": "An animated GIF with too many frames was uploaded.",
+    "internal_error": "The server could not complete your operation(s) without encountering an error, likely due to a transient issue on our end. It's possible some aspect of the operation succeeded before the error was raised.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",
@@ -59,7 +60,6 @@
     "accesslimited": "Access to this method is limited on the current network.",
     "request_timeout": "The method was called via a POST request, but the POST data was either missing or truncated.",
     "service_unavailable": "The service is temporarily unavailable.",
-    "fatal_error": "The server could not complete your operation(s) without encountering a catastrophic error. It's possible some aspect of the operation succeeded before the error was raised.",
-    "internal_error": "The server could not complete your operation(s) without encountering an error, likely due to a transient issue on our end. It's possible some aspect of the operation succeeded before the error was raised."
+    "fatal_error": "The server could not complete your operation(s) without encountering a catastrophic error. It's possible some aspect of the operation succeeded before the error was raised."
   }
 }
