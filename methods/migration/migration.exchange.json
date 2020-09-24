@@ -8,6 +8,11 @@
       "example": "",
       "desc": "A comma-separated list of user ids, up to 400 per request."
     },
+    "team_id": {
+      "required": false,
+      "example": "T1234567890",
+      "desc": "Specify team_id starts with T in case of Org Token."
+    },
     "to_old": {
       "required": false,
       "example": "true",
