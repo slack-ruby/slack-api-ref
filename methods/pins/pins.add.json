@@ -10,7 +10,7 @@
       "type": "channel"
     },
     "timestamp": {
-      "required": true,
+      "required": false,
       "example": "1234567890.123456",
       "desc": "Timestamp of the message to pin."
     }
@@ -30,6 +30,10 @@
     "permission_denied": "The user does not have permission to add pins to the channel.",
     "file_not_shared": "File specified by file is not public nor shared to the channel.",
     "not_pinnable": "This message type is not pinnable.",
+    "not_in_channel": "Item is not in channel.",
+    "file_not_found": "File not found.",
+    "too_many_pins": "Too many pins in channel.",
+    "external_channel_migrating": "Channel is undergoing an active migration.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",

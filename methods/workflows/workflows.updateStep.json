@@ -11,12 +11,22 @@
     "inputs": {
       "required": false,
       "example": "{\"title\":{\"value\":\"The Title\"},\"submitter\":{\"value\":\"{{user}}\"}}",
-      "desc": "A JSON key-value map of inputs required from a user during configuration. This is the data your app expects to receive when the workflow step starts."
+      "desc": "A JSON key-value map of inputs required from a user during configuration. This is the data your app expects to receive when the workflow step starts. Please note: the embedded variable format is set and replaced by the workflow system. You cannot create custom variables that will be replaced at runtime. Read more about variables in workflow steps here."
     },
     "outputs": {
       "required": false,
       "example": "[{\"name\":\"ticket_id\",\"type\":\"text\",\"label\":\"Ticket ID\"},{\"name\":\"title\",\"type\":\"text\",\"label\":\"Title\"}]",
       "desc": "An JSON array of output objects used during step execution. This is the data your app agrees to provide when your workflow step was executed."
+    },
+    "step_image_url": {
+      "required": false,
+      "example": "",
+      "desc": "An optional field that can be used to override app image that is shown in the Workflow Builder."
+    },
+    "step_name": {
+      "required": false,
+      "example": "",
+      "desc": "An optional field that can be used to override the step name that is shown in the Workflow Builder."
     }
   },
   "response": {
