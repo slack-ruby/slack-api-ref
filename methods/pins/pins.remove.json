@@ -9,17 +9,6 @@
       "desc": "Channel where the item is pinned to.",
       "type": "channel"
     },
-    "file": {
-      "required": false,
-      "example": "F1234567890",
-      "desc": "File to un-pin.",
-      "type": "file"
-    },
-    "file_comment": {
-      "required": false,
-      "example": "Fc1234567890",
-      "desc": "File comment to un-pin."
-    },
     "timestamp": {
       "required": false,
       "example": "1234567890.123456",
@@ -41,6 +30,8 @@
     "not_pinned": "The specified item is not pinned to the channel.",
     "permission_denied": "The user does not have permission to remove pins from the channel.",
     "channel_not_found": "The channel argument was not specified or was invalid.",
+    "no_pin": "The pin could not be found.",
+    "external_channel_migrating": "Channel is undergoing an active migration.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",
