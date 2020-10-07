@@ -22,6 +22,7 @@
   "errors": {
     "permission_denied": "The user does not have permission to enables the User Group.",
     "plan_upgrade_required": "This workspace does not have access to User Groups, as that feature is only available on Standard and above plans.",
+    "missing_argument": "A required argument is missing.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",
