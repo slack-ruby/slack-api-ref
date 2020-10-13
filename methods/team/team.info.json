@@ -5,7 +5,7 @@
   "args": {
     "team": {
       "required": false,
-      "example": "",
+      "example": "T1234567890",
       "desc": "Team to get info on, if omitted, will return information about the current team. Will only return team that the authenticated token is allowed to see through external shared channels."
     }
   },
@@ -18,6 +18,11 @@
   "errors": {
     "team_not_on_enterprise": "Cannot query team by domain because team is not on an enterprise.",
     "team_not_found": "The team was not found.",
+    "fail_to_get_teams_for_restricted_user": "Failed to get teams for restricted user.",
+    "user_not_found": "The user was not found.",
+    "org_not_found": "The org was not found.",
+    "missing_user": "The user was not found.",
+    "enterprise_not_found": "The enterprise was not found.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",
