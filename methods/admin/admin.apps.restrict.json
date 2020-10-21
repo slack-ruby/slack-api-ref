@@ -8,6 +8,11 @@
       "example": "A12345",
       "desc": "The id of the app to restrict."
     },
+    "enterprise_id": {
+      "required": false,
+      "example": "E12345",
+      "desc": "The ID of the enterprise to approve the app on."
+    },
     "request_id": {
       "required": false,
       "example": "Ar12345",
@@ -15,8 +20,8 @@
     },
     "team_id": {
       "required": false,
-      "example": "",
-      "desc": "."
+      "example": "T12345",
+      "desc": "The ID of the workspace to approve the app on."
     }
   },
   "response": {
