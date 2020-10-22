@@ -1,7 +1,7 @@
 {
   "group": "users",
   "name": "users.profile.set",
-  "desc": "Set the profile information for a user.",
+  "desc": "Set a user's profile information, including custom status.",
   "args": {
     "name": {
       "required": false,
