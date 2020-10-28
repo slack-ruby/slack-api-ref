@@ -1,0 +1,62 @@
+{
+  "group": "admin",
+  "name": "admin.analytics.getFile",
+  "desc": "Get a gzipped new-line delimited JSON file containing analytics data for a given date.",
+  "args": {
+    "date": {
+      "required": true,
+      "example": "2020-09-01",
+      "desc": "Date to retreive the analytics data for, expressed as YYYY-MM-DD in UTC."
+    },
+    "type": {
+      "required": true,
+      "example": "member",
+      "desc": "The type of analytics to retrieve. The options are currently limited to member."
+    }
+  },
+  "response": {
+    "examples": [
+      "{\n    \"ok\": false,\n    \"error\": \"org_level_email_display_disabled\"\n}",
+      "{\"enterprise_id\":\"E5UBAR8CH\",\"date\":\"2020-10-05\",\"user_id\":\"W0POSID23ID\",\"email_address\":\"rbrautigan@example.org\",\"is_guest\":false,\"is_billable_seat\":false,\"is_active\":false,\"is_active_ios\":false,\"is_active_android\":false,\"is_active_desktop\":false,\"reactions_added_count\":0,\"messages_posted_count\":0,\"channel_messages_posted_count\":0,\"files_added_count\":0}\n{\"enterprise_id\":\"E5UBAR8CH\",\"date\":\"2020-10-05\",\"user_id\":\"W1ZOSID3ZI2\",\"email_address\":\"rbrautigan@example.org\",\"is_guest\":false,\"is_billable_seat\":true,\"is_active\":true,\"is_active_ios\":false,\"is_active_android\":false,\"is_active_desktop\":true,\"reactions_added_count\":23,\"messages_posted_count\":123,\"channel_messages_posted_count\":23,\"files_added_count\":3}\n{\"enterprise_id\":\"E5UBAR8CH\",\"date\":\"2020-10-05\",\"user_id\":\"W3DOSZD23IP\",\"email_address\":\"rbrautigan@example.org\",\"is_guest\":false,\"is_billable_seat\":true,\"is_active\":true,\"is_active_ios\":true,\"is_active_android\":false,\"is_active_desktop\":false,\"reactions_added_count\":521,\"messages_posted_count\":5,\"channel_messages_posted_count\":5,\"files_added_count\":0}"
+    ]
+  },
+  "errors": {
+    "data_not_available": "The date was before the API became available.",
+    "file_not_found": "The analytics data for the date specified weren't found.",
+    "file_not_yet_available": "The analytics data for the date isn't available yet.",
+    "invalid_type": "The analytics data for the type specified weren't found.",
+    "invalid_arguments": "The method was either called with invalid arguments or some detail about the arguments passed are invalid, which is more likely when using complex arguments like blocks or attachments.",
+    "invalid_date": "The date argument was invalid.",
+    "missing_scope": "The token used is not granted the specific scope permissions required to complete this request.",
+    "not_an_admin": "This token doesn't have admin privileges.",
+    "feature_not_enabled": "This feature is not enabled on your workspace.",
+    "member_analytics_disabled": "Member analytics are disabled for your org.",
+    "org_level_email_display_disabled": "This API is unavailable for orgs with a 'Hide email addresses.' policy.",
+    "not_authed": "No authentication token provided.",
+    "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
+    "account_inactive": "Authentication token is for a deleted user or workspace.",
+    "token_revoked": "Authentication token is for a deleted user or workspace or the app has been removed.",
+    "no_permission": "The workspace token used in this request does not have the permissions necessary to complete the request. Make sure your app is a member of the conversation it's attempting to post a message to.",
+    "org_login_required": "The workspace is undergoing an enterprise migration and will not be available until migration is complete.",
+    "ekm_access_denied": "Administrators have suspended the ability to post a message.",
+    "not_allowed_token_type": "The token type used in this request is not allowed.",
+    "method_deprecated": "The method has been deprecated.",
+    "deprecated_endpoint": "The endpoint has been deprecated.",
+    "two_factor_setup_required": "Two factor setup is required.",
+    "enterprise_is_restricted": "The method cannot be called from an Enterprise.",
+    "is_bot": "This method cannot be called by a bot user.",
+    "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
+    "invalid_array_arg": "The method was passed an array as an argument. Please only input valid strings.",
+    "invalid_charset": "The method was called via a POST request, but the charset specified in the Content-Type header was invalid. Valid charset names are: utf-8 iso-8859-1.",
+    "invalid_form_data": "The method was called via a POST request with Content-Type application/x-www-form-urlencoded or multipart/form-data, but the form data was either missing or syntactically invalid.",
+    "invalid_post_type": "The method was called via a POST request, but the specified Content-Type was invalid. Valid types are: application/json application/x-www-form-urlencoded multipart/form-data text/plain.",
+    "missing_post_type": "The method was called via a POST request and included a data payload, but the request did not include a Content-Type header.",
+    "team_added_to_org": "The workspace associated with your request is currently undergoing migration to an Enterprise Organization. Web API and other platform operations will be intermittently unavailable until the transition is complete.",
+    "ratelimited": "The request has been ratelimited. Refer to the Retry-After header for when to retry the request.",
+    "accesslimited": "Access to this method is limited on the current network.",
+    "request_timeout": "The method was called via a POST request, but the POST data was either missing or truncated.",
+    "service_unavailable": "The service is temporarily unavailable.",
+    "fatal_error": "The server could not complete your operation(s) without encountering a catastrophic error. It's possible some aspect of the operation succeeded before the error was raised.",
+    "internal_error": "The server could not complete your operation(s) without encountering an error, likely due to a transient issue on our end. It's possible some aspect of the operation succeeded before the error was raised."
+  }
+}
