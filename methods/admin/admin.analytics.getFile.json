@@ -1,12 +1,12 @@
 {
   "group": "admin",
   "name": "admin.analytics.getFile",
-  "desc": "Get a gzipped new-line delimited JSON file containing analytics data for a given date.",
+  "desc": "Retrieve analytics data for a given date, presented as a compressed JSON file",
   "args": {
     "date": {
       "required": true,
       "example": "2020-09-01",
-      "desc": "Date to retreive the analytics data for, expressed as YYYY-MM-DD in UTC."
+      "desc": "Date to retrieve the analytics data for, expressed as YYYY-MM-DD in UTC."
     },
     "type": {
       "required": true,

@@ -1,7 +1,7 @@
 {
   "group": "admin",
   "name": "admin.users.session.list",
-  "desc": "Lists all active user sessions for an organization",
+  "desc": "List active user sessions for an organization",
   "args": {
     "cursor": {
       "required": false,
@@ -15,32 +15,32 @@
     },
     "team_id": {
       "required": false,
-      "example": "",
-      "desc": "ID of the team you'd like active sessions for (must be used with user_id)."
+      "example": "T1234",
+      "desc": "The ID of the workspace you'd like active sessions for. If you pass a team_id, you'll need to pass a user_id as well."
     },
     "user_id": {
       "required": false,
-      "example": "",
-      "desc": "ID of user you'd like active sessions for (must be used with team_id)."
+      "example": "U1234",
+      "desc": "The ID of user you'd like active sessions for. If you pass a user_id, you'll need to pass a team_id as well."
     }
   },
   "response": {
     "examples": [
-
+      "{\n    \"ok\": true,\n    \"active_sessions\": [\n        {\n            \"user_id\": \"string\",\n            \"team_id\": \"string\",\n            \"session_id\": 12345,\n            \"recent\": {\n                \"device_hardware\": \"string\",\n                \"os\": \"string\",\n                \"os_version\": \"string\",\n                \"slack_client_version\": \"string\",\n                \"ip\": \"string\"\n            },\n            \"created\": {\n                \"device_hardware\": \"string\",\n                \"os\": \"string\",\n                \"os_version\": \"string\",\n                \"slack_client_version\": \"string\",\n                \"ip\": \"string\"\n            }\n        }\n    ]\n}"
     ]
   },
   "errors": {
-    "no_active_sessions": "No active sessions found.",
-    "user_not_found": "Error fetching user.",
-    "team_not_found": "Error fetching team.",
-    "missing_team": "A team ID must be provided with a user ID.",
-    "missing_user": "A user ID must be provided with a team ID.",
-    "bots_not_allowed": "Bot sessions are not included.",
-    "invalid_cursor": "Invalid cursor.",
-    "admin_unauthorized": "Admin is not authorized.",
-    "not_an_admin": "This method is only accessible by org/compliance team owners and admins.",
+    "no_active_sessions": "No active sessions were found.",
+    "user_not_found": "There was an error finding the requested user.",
+    "team_not_found": "There was an error finding the requested workspace.",
+    "missing_team": "A team_id must be provided with a user_id.",
+    "missing_user": "A user_id must be provided with a team_id.",
+    "bots_not_allowed": "Bot sessions are not listed by this method.",
+    "invalid_cursor": "The cursor passed was invalid.",
+    "admin_unauthorized": "The owner of this token isn't authorized to list sessions.",
+    "not_an_admin": "The owner of this token isn't an Org Owner or Admin.",
     "unknown_method": "This method is currently not available.",
-    "feature_not_enabled": "This method is not available for this product level.",
+    "feature_not_enabled": "This method is only available to Enterprise customers.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "not_authed": "No authentication token provided.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",
