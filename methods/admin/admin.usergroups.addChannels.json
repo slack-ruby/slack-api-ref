@@ -1,7 +1,7 @@
 {
   "group": "admin",
   "name": "admin.usergroups.addChannels",
-  "desc": "Add one or more default channels to an IDP group.",
+  "desc": "Add up to one hundred default channels to an IDP group.",
   "args": {
     "channel_ids": {
       "required": true,
