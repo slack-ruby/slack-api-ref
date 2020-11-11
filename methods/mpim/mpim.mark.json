@@ -5,14 +5,14 @@
   "args": {
     "channel": {
       "required": true,
-      "example": "G1234567890",
-      "desc": "multiparty direct message channel to set reading cursor in.",
+      "example": "C012345678",
+      "desc": "Channel or conversation to set the read cursor for.",
       "type": "channel"
     },
     "ts": {
       "required": true,
-      "example": "1234567890.123456",
-      "desc": "Timestamp of the most recently seen message.",
+      "example": "1593473566.000200",
+      "desc": "Unique identifier of message you want marked as most recently seen in this conversation.",
       "type": "timestamp"
     }
   },
