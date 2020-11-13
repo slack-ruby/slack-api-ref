@@ -1,28 +1,23 @@
 {
-  "group": "users",
-  "name": "users.profile.get",
-  "desc": "Retrieve a user's profile information, including their custom status.",
+  "group": "admin",
+  "name": "admin.barriers.delete",
+  "desc": "Delete an existing Information Barrier",
   "args": {
-    "include_labels": {
-      "required": false,
-      "example": "true",
-      "desc": "Include labels for each ID in custom profile fields. Using this parameter will heavily rate-limit your requests and is not recommended."
-    },
-    "user": {
-      "required": false,
-      "example": "W1234567890",
-      "desc": "User to retrieve profile info for.",
-      "type": "user"
+    "barrier_id": {
+      "required": true,
+      "example": "",
+      "desc": "The ID of the barrier you're trying to delete."
     }
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true,\n    \"profile\": {\n        \"avatar_hash\": \"ge3b51ca72de\",\n        \"status_text\": \"Print is dead\",\n        \"status_emoji\": \":books:\",\n        \"status_expiration\": 0,\n        \"real_name\": \"Egon Spengler\",\n        \"display_name\": \"spengler\",\n        \"real_name_normalized\": \"Egon Spengler\",\n        \"display_name_normalized\": \"spengler\",\n        \"email\": \"spengler@ghostbusters.example.com\",\n        \"image_original\": \"https://.../avatar/e3b51ca72dee4ef87916ae2b9240df50.jpg\",\n        \"image_24\": \"https://.../avatar/e3b51ca72dee4ef87916ae2b9240df50.jpg\",\n        \"image_32\": \"https://.../avatar/e3b51ca72dee4ef87916ae2b9240df50.jpg\",\n        \"image_48\": \"https://.../avatar/e3b51ca72dee4ef87916ae2b9240df50.jpg\",\n        \"image_72\": \"https://.../avatar/e3b51ca72dee4ef87916ae2b9240df50.jpg\",\n        \"image_192\": \"https://.../avatar/e3b51ca72dee4ef87916ae2b9240df50.jpg\",\n        \"image_512\": \"https://.../avatar/e3b51ca72dee4ef87916ae2b9240df50.jpg\",\n        \"team\": \"T012AB3C4\"\n    }\n}",
-      "{\n    \"ok\": false,\n    \"error\": \"user_not_found\"\n}"
+
     ]
   },
   "errors": {
-    "user_not_found": "Value passed for user was invalid.",
+    "feature_not_enabled": "The information barrier feature is not enabled, please reach out to your CSM.",
+    "not_an_admin": "The token provided is not associated with an org admin.",
+    "barrier_not_found": "The barrier you're trying to delete cannot be found.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",
