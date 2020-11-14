@@ -30,6 +30,7 @@
     "primary_usergroup_not_found": "The id passed in for primary_usergroup_id can’t be found.",
     "barriered_from_usergroups_not_found": "One or more of the ids passed in for barriered_from_usergroup_ids can’t be found.",
     "barrier_already_exists": "There already exists another barrier restricting activity between two or more of your requested usergroups.",
+    "invalid_restricted_subjects": "The restricted subjects provided are invalid or not currently supported.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",
