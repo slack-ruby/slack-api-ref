@@ -6,7 +6,7 @@
     "name": {
       "required": true,
       "example": "",
-      "desc": "The name of the emoji to be removed. Colons (:myemoji:) around the value are not required, although they may be included."
+      "desc": "The name of the emoji to be added. Colons (:myemoji:) around the value are not required, although they may be included."
     },
     "url": {
       "required": true,
