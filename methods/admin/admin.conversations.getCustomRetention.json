@@ -1,22 +1,42 @@
 {
-  "group": "api",
-  "name": "api.test",
-  "desc": "Checks API calling code.",
+  "group": "admin",
+  "name": "admin.conversations.getCustomRetention",
+  "desc": "This API endpoint can be used by any admin to get a channel's retention policy.",
   "args": {
-    "error": {
-      "required": false,
-      "example": "my_error",
-      "desc": "Error response to return."
+    "channel_id": {
+      "required": true,
+      "example": "C12345678",
+      "desc": "The channel to get the retention policy for."
     }
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true\n}",
-      "{\n    \"ok\": true,\n    \"args\": {\n        \"foo\": \"bar\"\n    }\n}",
-      "{\n    \"ok\": false,\n    \"error\": \"my_error\",\n    \"args\": {\n        \"error\": \"my_error\"\n    }\n}"
+
     ]
   },
   "errors": {
+    "feature_not_enabled": "The Admin APIs feature is not enabled for this team.",
+    "not_an_admin": "The token provided is not associated with an org admin.",
+    "channel_not_found": "Value given for channel_id was invalid.",
+    "channel_type_not_supported": "Value given for channel_id was a group dm, direct message, or #general channel.",
+    "retention_override_not_allowed": "The current org retention policy disallows modifying the retention policy of this channel.",
+    "could_not_get_retention": "The retention policy could not be retrieved.",
+    "restricted_action": "A team preference prevents the authenticated user from modifying the retention policy of this channel.",
+    "default_org_wide_channel": "The channel given is a default org-wide channel.",
+    "not_authed": "No authentication token provided.",
+    "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
+    "account_inactive": "Authentication token is for a deleted user or workspace.",
+    "token_revoked": "Authentication token is for a deleted user or workspace or the app has been removed.",
+    "no_permission": "The workspace token used in this request does not have the permissions necessary to complete the request. Make sure your app is a member of the conversation it's attempting to post a message to.",
+    "org_login_required": "The workspace is undergoing an enterprise migration and will not be available until migration is complete.",
+    "ekm_access_denied": "Administrators have suspended the ability to post a message.",
+    "missing_scope": "The token used is not granted the specific scope permissions required to complete this request.",
+    "not_allowed_token_type": "The token type used in this request is not allowed.",
+    "method_deprecated": "The method has been deprecated.",
+    "deprecated_endpoint": "The endpoint has been deprecated.",
+    "two_factor_setup_required": "Two factor setup is required.",
+    "enterprise_is_restricted": "The method cannot be called from an Enterprise.",
+    "is_bot": "This method cannot be called by a bot user.",
     "invalid_arguments": "The method was either called with invalid arguments or some detail about the arguments passed are invalid, which is more likely when using complex arguments like blocks or attachments.",
     "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
     "invalid_array_arg": "The method was passed an array as an argument. Please only input valid strings.",
