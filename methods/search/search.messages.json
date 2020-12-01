@@ -22,6 +22,11 @@
       "required": false,
       "example": "asc",
       "desc": "Change sort direction to ascending (asc) or descending (desc)."
+    },
+    "team_id": {
+      "required": false,
+      "example": "T1234567890",
+      "desc": "encoded team id to search in, required if org token is used."
     }
   },
   "response": {

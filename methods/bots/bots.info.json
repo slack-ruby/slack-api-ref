@@ -7,6 +7,11 @@
       "required": false,
       "example": "B12345678",
       "desc": "Bot user to get info on."
+    },
+    "team_id": {
+      "required": false,
+      "example": "T1234567890",
+      "desc": "encoded team id or enterprise id where the bot exists, required if org token is used."
     }
   },
   "response": {

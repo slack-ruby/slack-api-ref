@@ -22,6 +22,11 @@
       "required": false,
       "example": "20",
       "desc": "The maximum number of items to return. Fewer than the requested number of items may be returned, even if the end of the list hasn't been reached."
+    },
+    "team_id": {
+      "required": false,
+      "example": "T1234567890",
+      "desc": "encoded team id to list channels in, required if org token is used."
     }
   },
   "response": {

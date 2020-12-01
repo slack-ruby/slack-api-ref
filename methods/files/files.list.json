@@ -14,6 +14,11 @@
       "example": "true",
       "desc": "Show truncated file info for files hidden due to being too old, and the team who owns the file being over the file limit."
     },
+    "team_id": {
+      "required": false,
+      "example": "T1234567890",
+      "desc": "encoded team id to list files in, required if org token is used."
+    },
     "ts_from": {
       "required": false,
       "example": "123456789",

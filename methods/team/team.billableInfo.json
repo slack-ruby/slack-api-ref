@@ -3,6 +3,11 @@
   "name": "team.billableInfo",
   "desc": "Gets billable users information for the current team.",
   "args": {
+    "team_id": {
+      "required": false,
+      "example": "T1234567890",
+      "desc": "encoded team id to get the billable information from, required if org token is used."
+    },
     "user": {
       "required": false,
       "example": "W1234567890",

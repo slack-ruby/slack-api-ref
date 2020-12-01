@@ -18,6 +18,11 @@
       "example": "",
       "desc": "Filter logs to this service. Defaults to all logs."
     },
+    "team_id": {
+      "required": false,
+      "example": "T1234567890",
+      "desc": "encoded team id to get logs from, required if org token is used."
+    },
     "user": {
       "required": false,
       "example": "W1234567890",

@@ -1,55 +1,32 @@
 {
-  "group": "usergroups",
-  "name": "usergroups.update",
-  "desc": "Update an existing User Group",
+  "group": "auth",
+  "name": "auth.teams.list",
+  "desc": "List the workspaces a token can access.",
   "args": {
-    "usergroup": {
-      "required": true,
-      "example": "S0604QSJC",
-      "desc": "The encoded ID of the User Group to update."
-    },
-    "channels": {
+    "cursor": {
       "required": false,
-      "example": "C1234567890,C2345678901,C3456789012",
-      "desc": "A comma separated string of encoded channel IDs for which the User Group uses as a default."
+      "example": "5c3e53d5",
+      "desc": "Set cursor to next_cursor returned by the previous call to list items in the next page."
     },
-    "description": {
+    "include_icon": {
       "required": false,
-      "example": "",
-      "desc": "A short description of the User Group."
+      "example": "false",
+      "desc": "Whether to return icon paths for each workspace. An icon path represents a URI pointing to the image signifying the workspace."
     },
-    "handle": {
+    "limit": {
       "required": false,
-      "example": "marketing",
-      "desc": "A mention handle. Must be unique among channels, users and User Groups."
-    },
-    "include_count": {
-      "required": false,
-      "example": "true",
-      "desc": "Include the number of users in the User Group."
-    },
-    "name": {
-      "required": false,
-      "example": "My Test Team",
-      "desc": "A name for the User Group. Must be unique among User Groups."
-    },
-    "team_id": {
-      "required": false,
-      "example": "T1234567890",
-      "desc": "encoded team id where the user group exists, required if org token is used."
+      "example": "50",
+      "desc": "The maximum number of workspaces to return. Must be a positive integer no larger than 1000."
     }
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true,\n    \"usergroup\": {\n        \"id\": \"S0616NG6M\",\n        \"team_id\": \"T060R4BHN\",\n        \"is_usergroup\": true,\n        \"name\": \"Marketing Team\",\n        \"description\": \"Marketing gurus, PR experts and product advocates.\",\n        \"handle\": \"marketing-team\",\n        \"is_external\": false,\n        \"date_create\": 1447096577,\n        \"date_update\": 1447102109,\n        \"date_delete\": 0,\n        \"auto_type\": null,\n        \"created_by\": \"U060R4BJ4\",\n        \"updated_by\": \"U060R4BJ4\",\n        \"deleted_by\": null,\n        \"prefs\": {\n            \"channels\": [],\n            \"groups\": []\n        },\n        \"users\": [\n            \"U060R4BJ4\",\n            \"U060RNRCZ\"\n        ],\n        \"user_count\": 1\n    }\n}",
-      "{\n    \"ok\": false,\n    \"error\": \"invalid_auth\"\n}"
+      "{\n    \"ok\": true,\n    \"teams\": [\n        {\n            \"name\": \"Shinichi's workspace\",\n            \"id\": \"T12345678\"\n        },\n        {\n            \"name\": \"Migi's workspace\",\n            \"id\": \"T12345679\"\n        }\n    ],\n    \"response_metadata\": {\n        \"next_cursor\": \"dXNlcl9pZDo5MTQyOTI5Mzkz\"\n    }\n}"
     ]
   },
   "errors": {
-    "permission_denied": "The user does not have permission to update the User Group.",
-    "plan_upgrade_required": "This workspace does not have access to User Groups, as that feature is only available on Standard and above plans.",
-    "too_many_linked_channels": "This request exceeds the number of channels we supporting linking to a single usergroup.",
-    "missing_argument": "A required argument is missing.",
+    "invalid_cursor": "Invalid cursor.",
+    "invalid_limit": "The value passed for limit was not valid.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",
@@ -64,7 +41,6 @@
     "two_factor_setup_required": "Two factor setup is required.",
     "enterprise_is_restricted": "The method cannot be called from an Enterprise.",
     "is_bot": "This method cannot be called by a bot user.",
-    "user_is_restricted": "This method cannot be called by a restricted user or single channel guest.",
     "invalid_arguments": "The method was either called with invalid arguments or some detail about the arguments passed are invalid, which is more likely when using complex arguments like blocks or attachments.",
     "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
     "invalid_array_arg": "The method was passed an array as an argument. Please only input valid strings.",

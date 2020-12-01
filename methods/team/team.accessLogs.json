@@ -7,6 +7,11 @@
       "required": false,
       "example": "1457989166",
       "desc": "End of time range of logs to include in results (inclusive)."
+    },
+    "team_id": {
+      "required": false,
+      "example": "T1234567890",
+      "desc": "encoded team id to get logs from, required if org token is used."
     }
   },
   "response": {

@@ -8,6 +8,11 @@
       "example": "#general",
       "desc": "Name of channel to join."
     },
+    "team_id": {
+      "required": false,
+      "example": "T1234567890",
+      "desc": "encoded team id to list channels in, required if org token is used."
+    },
     "validate": {
       "required": false,
       "example": "true",

@@ -30,6 +30,11 @@
       "example": "1562137200",
       "desc": "A UNIX timestamp of the oldest value in the time range.",
       "type": "timestamp"
+    },
+    "team_id": {
+      "required": false,
+      "example": "T1234567890",
+      "desc": "encoded team id to list channels in, required if org token is used."
     }
   },
   "response": {

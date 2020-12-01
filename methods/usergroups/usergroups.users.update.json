@@ -17,6 +17,11 @@
       "required": false,
       "example": "true",
       "desc": "Include the number of users in the User Group."
+    },
+    "team_id": {
+      "required": false,
+      "example": "T1234567890",
+      "desc": "encoded team id where the user group exists, required if org token is used."
     }
   },
   "response": {

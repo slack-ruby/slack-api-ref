@@ -12,6 +12,11 @@
       "required": false,
       "example": "true",
       "desc": "Create a private channel instead of a public one."
+    },
+    "team_id": {
+      "required": false,
+      "example": "T1234567890",
+      "desc": "encoded team id to create the channel in, required if org token is used."
     }
   },
   "response": {
