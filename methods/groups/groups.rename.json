@@ -62,12 +62,5 @@
     "service_unavailable": "The service is temporarily unavailable.",
     "fatal_error": "The server could not complete your operation(s) without encountering a catastrophic error. It's possible some aspect of the operation succeeded before the error was raised.",
     "internal_error": "The server could not complete your operation(s) without encountering an error, likely due to a transient issue on our end. It's possible some aspect of the operation succeeded before the error was raised."
-  },
-  "deprecated": true,
-  "deprecation": {
-    "deprecation_warning": "This method is deprecated. It will stop functioning in February 2021 and will not work with newly created apps after June 10th, 2020.",
-    "alternative_methods": [
-      "conversations.rename"
-    ]
   }
 }
