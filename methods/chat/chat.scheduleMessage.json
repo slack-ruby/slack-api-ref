@@ -86,6 +86,7 @@
     "restricted_action_non_threadable_channel": "Cannot post thread replies into a non_threadable channel.",
     "too_many_attachments": "Too many attachments were provided with this message. A maximum of 100 attachments are allowed on a message.",
     "rate_limited": "Application has posted too many messages, read the Rate Limit documentation for more information.",
+    "slack_connect_file_link_sharing_blocked": "Admin has disabled Slack File sharing in all Slack Connect communications.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",
