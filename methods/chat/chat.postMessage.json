@@ -32,12 +32,12 @@
     "icon_emoji": {
       "required": false,
       "example": ":chart_with_upwards_trend:",
-      "desc": "Emoji to use as the icon for this message. Overrides icon_url. Must be used in conjunction with as_user set to false, otherwise ignored. See authorship below. This argument may not be used with newer bot tokens."
+      "desc": "Emoji to use as the icon for this message. Overrides icon_url. See authorship below. Use with bot tokens requires chat:write.customize."
     },
     "icon_url": {
       "required": false,
       "example": "http://lorempixel.com/48/48",
-      "desc": "URL to an image to use as the icon for this message. Must be used in conjunction with as_user set to false, otherwise ignored. See authorship below. This argument may not be used with newer bot tokens."
+      "desc": "URL to an image to use as the icon for this message. See authorship below. Use with bot tokens requires chat:write.customize."
     },
     "link_names": {
       "required": false,
@@ -77,7 +77,7 @@
     "username": {
       "required": false,
       "example": "My Bot",
-      "desc": "Set your bot's user name. Must be used in conjunction with as_user set to false, otherwise ignored. See authorship below."
+      "desc": "Set your bot's user name. See authorship below. Use with bot tokens requires chat:write.customize."
     }
   },
   "response": {
