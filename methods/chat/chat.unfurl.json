@@ -54,6 +54,7 @@
     "cannot_prompt": "The current user has already interacted with and dismissed a prompt for this application.",
     "cannot_find_message": "The ts value in the request does not match a message.",
     "cannot_unfurl_message": "The URL cannot be unfurled because the URL provided does not appear in the message.",
+    "cannot_auth_user": "The current user cannot be authenticated.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",
