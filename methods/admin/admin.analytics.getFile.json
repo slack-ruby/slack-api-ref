@@ -3,15 +3,15 @@
   "name": "admin.analytics.getFile",
   "desc": "Retrieve analytics data for a given date, presented as a compressed JSON file",
   "args": {
-    "date": {
-      "required": true,
-      "example": "2020-09-01",
-      "desc": "Date to retrieve the analytics data for, expressed as YYYY-MM-DD in UTC."
-    },
     "type": {
       "required": true,
       "example": "member",
       "desc": "The type of analytics to retrieve. The options are currently limited to member."
+    },
+    "date": {
+      "required": false,
+      "example": "2020-09-01",
+      "desc": "Date to retrieve the analytics data for, expressed as YYYY-MM-DD in UTC."
     }
   },
   "response": {
