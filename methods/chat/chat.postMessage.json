@@ -103,6 +103,7 @@
     "as_user_not_supported": "The as_user parameter does not function with workspace apps.",
     "ekm_access_denied": "Administrators have suspended the ability to post a message.",
     "slack_connect_file_link_sharing_blocked": "Admin has disabled Slack File sharing in all Slack Connect communications.",
+    "team_access_not_granted": "The token used is not granted the specific workspace access required to complete this request.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",

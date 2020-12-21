@@ -43,6 +43,7 @@
     "invalid_cursor": "Value passed for cursor was not valid or is no longer valid.",
     "invalid_limit": "Value passed for limit is not understood.",
     "missing_argument": "A required argument is missing.",
+    "team_access_not_granted": "The token used is not granted the specific workspace access required to complete this request.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",
