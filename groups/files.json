@@ -1,0 +1,4 @@
+{
+  "name": "files",
+  "desc": "Get info on files uploaded to Slack, upload new files to Slack."
+}

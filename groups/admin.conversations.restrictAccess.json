@@ -1,0 +1,4 @@
+{
+  "name": "admin.conversations.restrictAccess",
+  "desc": "Add and remove user groups from conversations."
+}
