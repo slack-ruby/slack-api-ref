@@ -69,7 +69,7 @@ module SlackApi
     # @return [Hash, nil] a Hash containing information about the deprecation or nil
     #
     def scrape_deprecation(page)
-      div = page.search("#api_main_content .callout_warning div").first
+      div = page.search(".content_container .callout_warning div").first
       return unless div
 
       warning_text = div.children.first.text.sub('Learn more.', '').gsub(/\u00a0/, ' ').strip
