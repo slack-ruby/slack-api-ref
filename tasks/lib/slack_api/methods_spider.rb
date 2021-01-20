@@ -3,9 +3,9 @@ module SlackApi
     handle 'https://api.slack.com/methods', :process_list
 
     def process_list(page, _default_data = {})
-      page.search('#api_main_content h2').each do |group|
+      page.search('.content_container h2').each do |group|
         id = group.attr('id')
-        next_p = group.next_sibling.next_sibling
+        next_p = group.next_sibling
         desc = next_p.text if next_p.name == 'p'
         file_name = 'groups/' + id + '.json'
         json_hash = { name: id }
