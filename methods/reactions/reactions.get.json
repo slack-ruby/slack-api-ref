@@ -5,7 +5,7 @@
   "args": {
     "channel": {
       "required": false,
-      "example": "C1234567890",
+      "example": "C0NF841BK",
       "desc": "Channel where the message to get reactions for was posted.",
       "type": "channel"
     },
@@ -27,7 +27,7 @@
     },
     "timestamp": {
       "required": false,
-      "example": "1234567890.123456",
+      "example": "1524523204.000192",
       "desc": "Timestamp of the message to get reactions for."
     }
   },
