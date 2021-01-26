@@ -32,6 +32,7 @@
     "channel_not_found": "Value passed for channel was invalid.",
     "cant_delete_message": "Authenticated user does not have permission to delete this message.",
     "compliance_exports_prevent_deletion": "Compliance exports are on, messages can not be deleted.",
+    "external_channel_migrating": "channel being migrated.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",
