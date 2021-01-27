@@ -24,7 +24,7 @@
     "feature_not_enabled": "The Admin APIs feature is not enabled for this team.",
     "not_an_admin": "This method is only accessible by org owners and admins.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
-    "channel_not_found": "Value passed for channel_ids was invalid.",
+    "one_or_more_invalid_channels": "One or more of the passed channel IDs was invalid.",
     "failed_to_set_default_channels": "We encountered an error while trying to set the default channel.",
     "not_authed": "No authentication token provided.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",
