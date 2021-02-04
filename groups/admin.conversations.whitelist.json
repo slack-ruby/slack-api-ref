@@ -1,4 +1,0 @@
-{
-  "name": "admin.conversations.whitelist",
-  "desc": "Add and remove user groups from conversations. Use admin.conversations.* equivalents instead."
-}
