@@ -6,7 +6,7 @@
     "team_domain": {
       "required": true,
       "example": "",
-      "desc": "Team domain (for example, slacksoftballteam)."
+      "desc": "Team domain (for example, slacksoftballteam). Domains are limited to 21 characters."
     },
     "team_name": {
       "required": true,
@@ -36,7 +36,7 @@
     "must_provide_team_domain": "No team domain has been provided.",
     "domain_taken": "The requested domain is taken.",
     "name_taken_in_org": "The team with the specified name already exists in the org.",
-    "bad_url": "Invalid URL.",
+    "bad_url": "Invalid URL. Note that domains can be at most 21 characters.",
     "could_not_create_workspace": "The workspace could not be created.",
     "discoverability_setting_invalid": "The given discoverability setting is invalid.",
     "not_authed": "No authentication token provided.",
