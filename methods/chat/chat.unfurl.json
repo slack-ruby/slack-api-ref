@@ -20,10 +20,15 @@
       "example": "",
       "desc": "URL-encoded JSON map with keys set to URLs featured in the the message, pointing to their unfurl blocks or message attachments."
     },
+    "user_auth_blocks": {
+      "required": false,
+      "example": "",
+      "desc": "Provide a JSON based array of structured blocks presented as URL-encoded string to send as an ephemeral message to the user as invitation to authenticate further and enable full unfurling behavior."
+    },
     "user_auth_message": {
       "required": false,
       "example": "",
-      "desc": "Provide a simply-formatted string to send as an ephemeral message to the user as invitation to authenticate further and enable full unfurling behavior."
+      "desc": "Provide a simply-formatted string to send as an ephemeral message to the user as invitation to authenticate further and enable full unfurling behavior. Provides two buttons, Not now or Never ask me again."
     },
     "user_auth_required": {
       "required": false,
