@@ -37,6 +37,7 @@
     "cannot_add_more_groups_to_channel": "The maximum number of groups have already been linked to the channel.",
     "cannot_add_more_channels_to_group": "The maximum number of channels have already been linked to the group.",
     "channel_is_not_private": "The channel is a public channel, a multi-party direct message, a direct message, or is externally-shared.",
+    "invalid_channel_type": "The channel is a public channel, a multi-party direct message, a direct message, or is externally-shared.",
     "default_channel_restricted": "The channel is a default channel on the workspace.",
     "group_must_not_be_empty": "The IDP group is currently empty.",
     "not_authed": "No authentication token provided.",

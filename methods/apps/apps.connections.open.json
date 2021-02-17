@@ -14,6 +14,7 @@
     "missing_args": "An app-level token wasn't provided.",
     "internal_error": "The server could not complete your operation(s) without encountering an error, likely due to a transient issue on our end. It's possible some aspect of the operation succeeded before the error was raised.",
     "insecure_request": "The method was not called via a POST request.",
+    "forbidden_team": "The authenticated team cannot use this API.",
     "not_authed": "No authentication token provided.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",
     "token_revoked": "Authentication token is for a deleted user or workspace or the app has been removed.",
