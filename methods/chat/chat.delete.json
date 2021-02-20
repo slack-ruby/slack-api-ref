@@ -11,7 +11,7 @@
     },
     "ts": {
       "required": true,
-      "example": "1405894322.002768",
+      "example": "\"1405894322.002768\"",
       "desc": "Timestamp of the message to be deleted.",
       "type": "timestamp"
     },

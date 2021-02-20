@@ -21,7 +21,7 @@
     "team_id": {
       "required": false,
       "example": "T1234567890",
-      "desc": "encoded team id to list channels in, required if org token is used."
+      "desc": "encoded team id to list channels in, required if token belongs to org-wide app."
     },
     "types": {
       "required": false,
