@@ -1,41 +1,24 @@
 {
-  "group": "conversations",
-  "name": "conversations.invite",
-  "desc": "Invites users to a channel.",
+  "group": "files",
+  "name": "files.sharedPublicURL",
+  "desc": "Enables a file for public/external sharing.",
   "args": {
-    "channel": {
+    "file": {
       "required": true,
-      "example": "C1234567890",
-      "desc": "The ID of the public or private channel to invite user(s) to.",
-      "type": "channel"
-    },
-    "users": {
-      "required": true,
-      "example": "W1234567890,U2345678901,U3456789012",
-      "desc": "A comma separated list of user IDs. Up to 1000 users may be listed."
+      "example": "F1234567890",
+      "desc": "File to share.",
+      "type": "file"
     }
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true,\n    \"channel\": {\n        \"id\": \"C012AB3CD\",\n        \"name\": \"general\",\n        \"is_channel\": true,\n        \"is_group\": false,\n        \"is_im\": false,\n        \"created\": 1449252889,\n        \"creator\": \"W012A3BCD\",\n        \"is_archived\": false,\n        \"is_general\": true,\n        \"unlinked\": 0,\n        \"name_normalized\": \"general\",\n        \"is_read_only\": false,\n        \"is_shared\": false,\n        \"is_ext_shared\": false,\n        \"is_org_shared\": false,\n        \"pending_shared\": [],\n        \"is_pending_ext_shared\": false,\n        \"is_member\": true,\n        \"is_private\": false,\n        \"is_mpim\": false,\n        \"last_read\": \"1502126650.228446\",\n        \"topic\": {\n            \"value\": \"For public discussion of generalities\",\n            \"creator\": \"W012A3BCD\",\n            \"last_set\": 1449709364\n        },\n        \"purpose\": {\n            \"value\": \"This part of the workspace is for fun. Make fun here.\",\n            \"creator\": \"W012A3BCD\",\n            \"last_set\": 1449709364\n        },\n        \"previous_names\": [\n            \"specifics\",\n            \"abstractions\",\n            \"etc\"\n        ]\n    }\n}",
-      "{\n    \"ok\": false,\n    \"error\": \"method_not_supported_for_channel_type\"\n}"
+      "{\n    \"ok\": true,\n    \"file\": {\n        \"id\" : \"F2147483862\",\n        \"timestamp\" : 1356032811,\n\n        \"name\" : \"file.htm\",\n        \"title\" : \"My HTML file\",\n        \"mimetype\" : \"text\\/plain\",\n        \"filetype\" : \"text\",\n        \"pretty_type\": \"Text\",\n        \"user\" : \"U2147483697\",\n\n        \"mode\" : \"hosted\",\n        \"editable\" : true,\n        \"is_external\": false,\n        \"external_type\": \"\",\n\n        \"size\" : 12345,\n\n        \"url_private\": \"https:\\/\\/slack.com\\/files-pri\\/T024BE7LD-F024BERPE\\/1.png\",\n        \"url_private_download\": \"https:\\/\\/slack.com\\/files-pri\\/T024BE7LD-F024BERPE\\/download\\/1.png\",\n\n        \"thumb_64\": \"https:\\/\\/slack-files.com\\/files-tmb\\/T024BE7LD-F024BERPE-c66246\\/1_64.png\",\n        \"thumb_80\": \"https:\\/\\/slack-files.com\\/files-tmb\\/T024BE7LD-F024BERPE-c66246\\/1_80.png\",\n        \"thumb_360\": \"https:\\/\\/slack-files.com\\/files-tmb\\/T024BE7LD-F024BERPE-c66246\\/1_360.png\",\n        \"thumb_360_gif\": \"https:\\/\\/slack-files.com\\/files-tmb\\/T024BE7LD-F024BERPE-c66246\\/1_360.gif\",\n        \"thumb_360_w\": 100,\n        \"thumb_360_h\": 100,\n\n        \"permalink\": \"https:\\/\\/coolkids.slack.com\\/files\\/cal\\/F024BERPE\\/1.png\",\n        \"permalink_public\": \"https:\\/\\/slack-files.com\\/T024BE7LD-F024BERPE-8004f909b1\",\n        \"edit_link\": \"https:\\/\\/coolkids.slack.com\\/files\\/cal\\/F024BERPE\\/1.png/edit\",\n        \"preview\": \"&lt;!DOCTYPE html&gt;\\n&lt;html&gt;\\n&lt;meta charset='utf-8'&gt;\",\n        \"preview_highlight\": \"&lt;div class=\\\"sssh-code\\\"&gt;&lt;div class=\\\"sssh-line\\\"&gt;&lt;pre&gt;&lt;!DOCTYPE html...\",\n        \"lines\" : 123,\n        \"lines_more\": 118,\n\n        \"is_public\": true,\n        \"public_url_shared\": false,\n        \"channels\": [\"C024BE7LT\", ...],\n        \"groups\": [\"G12345\", ...],\n        \"initial_comment\": {...},\n        \"num_stars\": 7,\n        \"is_starred\": true\n    },\n    \"comments\": [\n        {\n            \"id\": \"Fc027BN9L9\",\n            \"timestamp\": 1356032811,\n            \"user\": \"U2147483697\",\n            \"comment\": \"This is a comment\"\n        },\n        ...\n    ],\n    \"paging\": {\n        \"count\": 100,\n        \"total\": 2,\n        \"page\": 1,\n        \"pages\": 0\n    }\n}"
     ]
   },
   "errors": {
-    "channel_not_found": "Value passed for channel was invalid.",
-    "user_not_found": "Value passed for users was invalid.",
-    "no_user": "No value was passed for users.",
-    "cant_invite_self": "Authenticated user cannot invite themselves to a channel.",
-    "not_in_channel": "Authenticated user is not in the channel.",
-    "already_in_channel": "Invited user is already in the channel.",
-    "is_archived": "Channel has been archived.",
-    "cant_invite": "User cannot be invited to this channel.",
-    "method_not_supported_for_channel_type": "This type of conversation cannot be used with this method.",
-    "missing_scope": "The token used is not granted the specific scope permissions required to complete this request.",
-    "invitee_cant_see_channel": "The Grid multi-workspace channel you are inviting a user to is not shared with any workspaces the user is currently a member of.",
-    "ura_max_channels": "An invited user is a single-channel guest user ('ultra restricted access') that is already in the maximum number of conversations.",
-    "user_is_restricted": "An invited user is a guest user that is restricted from accessing this conversation.",
-    "org_user_not_in_team": "One or more members invited are part of the Enterprise Grid organization but not the specific workspace you're interfacing with.",
+    "file_not_found": "Value passed for file was invalid.",
+    "not_allowed": "Public sharing has been disabled for this team.",
+    "public_video_not_allowed": "Public sharing of videos is not available. A Free instance of Slack may encounter this error because free teams don't have the ability to share video files publicly.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",
@@ -43,13 +26,14 @@
     "no_permission": "The workspace token used in this request does not have the permissions necessary to complete the request. Make sure your app is a member of the conversation it's attempting to post a message to.",
     "org_login_required": "The workspace is undergoing an enterprise migration and will not be available until migration is complete.",
     "ekm_access_denied": "Administrators have suspended the ability to post a message.",
+    "missing_scope": "The token used is not granted the specific scope permissions required to complete this request.",
     "not_allowed_token_type": "The token type used in this request is not allowed.",
     "method_deprecated": "The method has been deprecated.",
     "deprecated_endpoint": "The endpoint has been deprecated.",
     "two_factor_setup_required": "Two factor setup is required.",
     "enterprise_is_restricted": "The method cannot be called from an Enterprise.",
     "is_bot": "This method cannot be called by a bot user.",
-    "user_is_ultra_restricted": "This method cannot be called by a single channel guest.",
+    "user_is_restricted": "This method cannot be called by a restricted user or single channel guest.",
     "team_access_not_granted": "The token used is not granted the specific workspace access required to complete this request.",
     "invalid_arguments": "The method was either called with invalid arguments or some detail about the arguments passed are invalid, which is more likely when using complex arguments like blocks or attachments.",
     "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",

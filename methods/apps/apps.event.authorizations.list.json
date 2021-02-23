@@ -21,7 +21,7 @@
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true,\n    \"authorizations\": {\n        \"enterprise_id\": \"string\",\n        \"team_id\": \"string\",\n        \"user_id\": \"string\",\n        \"is_bot\": \"string\"\n    }\n}"
+      "{\n    \"ok\": true,\n    \"authorizations\": [\n        {\n            \"enterprise_id\": \"string\",\n            \"team_id\": \"string\",\n            \"user_id\": \"string\",\n            \"is_bot\": \"string\"\n        },\n        {\n            \"enterprise_id\": \"string2\",\n            \"team_id\": \"string2\",\n            \"user_id\": \"string2\",\n            \"is_bot\": \"string2\"\n        }\n    ]\n}"
     ]
   },
   "errors": {
