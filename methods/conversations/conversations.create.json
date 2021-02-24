@@ -35,8 +35,6 @@
     "invalid_name_maxlength": "Value passed for name exceeded max length.",
     "invalid_name_specials": "Value passed for name contained unallowed special characters or upper case characters.",
     "invalid_name": "Value passed for name was invalid.",
-    "invalid_users": "Value passed for user_ids was empty or invalid.",
-    "user_not_found": "One or more users in user_ids was not found.",
     "too_many_convos_for_team": "The workspace has exceeded its limit of public and private channels.",
     "too_many_convos_for_app_on_team": "This app has exceeded its per-workspace limit of public and private channels.",
     "missing_argument": "A required argument is missing.",

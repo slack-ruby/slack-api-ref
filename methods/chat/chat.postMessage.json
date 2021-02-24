@@ -24,6 +24,11 @@
       "example": "[{\"type\": \"section\", \"text\": {\"type\": \"plain_text\", \"text\": \"Hello world\"}}]",
       "desc": "A JSON-based array of structured blocks, presented as a URL-encoded string."
     },
+    "draft_id": {
+      "required": false,
+      "example": "",
+      "desc": "The id of the draft associated with the message."
+    },
     "icon_emoji": {
       "required": false,
       "example": ":chart_with_upwards_trend:",
