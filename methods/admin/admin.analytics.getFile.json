@@ -6,21 +6,33 @@
     "type": {
       "required": true,
       "example": "member",
-      "desc": "The type of analytics to retrieve. The options are currently limited to member."
+      "desc": "The type of analytics to retrieve. The options are currently limited to member (for grid member analytics) and public_channel (for public channel analytics)."
     },
     "date": {
       "required": false,
       "example": "2020-09-01",
       "desc": "Date to retrieve the analytics data for, expressed as YYYY-MM-DD in UTC."
+    },
+    "metadata_only": {
+      "required": false,
+      "example": "true",
+      "desc": "Retrieve metadata for the type of analytics indicated. Can be used only with type set to public_channel analytics. See detail below. Omit the date parameter when using this argument."
     }
   },
   "response": {
     "examples": [
       "{\n    \"ok\": false,\n    \"error\": \"org_level_email_display_disabled\"\n}",
-      "{\"enterprise_id\":\"E5UBAR8CH\",\"date\":\"2020-10-05\",\"user_id\":\"W0POSID23ID\",\"email_address\":\"rbrautigan@example.org\",\"is_guest\":false,\"is_billable_seat\":false,\"is_active\":false,\"is_active_ios\":false,\"is_active_android\":false,\"is_active_desktop\":false,\"reactions_added_count\":0,\"messages_posted_count\":0,\"channel_messages_posted_count\":0,\"files_added_count\":0}\n{\"enterprise_id\":\"E5UBAR8CH\",\"date\":\"2020-10-05\",\"user_id\":\"W1ZOSID3ZI2\",\"email_address\":\"rbrautigan@example.org\",\"is_guest\":false,\"is_billable_seat\":true,\"is_active\":true,\"is_active_ios\":false,\"is_active_android\":false,\"is_active_desktop\":true,\"reactions_added_count\":23,\"messages_posted_count\":123,\"channel_messages_posted_count\":23,\"files_added_count\":3}\n{\"enterprise_id\":\"E5UBAR8CH\",\"date\":\"2020-10-05\",\"user_id\":\"W3DOSZD23IP\",\"email_address\":\"rbrautigan@example.org\",\"is_guest\":false,\"is_billable_seat\":true,\"is_active\":true,\"is_active_ios\":true,\"is_active_android\":false,\"is_active_desktop\":false,\"reactions_added_count\":521,\"messages_posted_count\":5,\"channel_messages_posted_count\":5,\"files_added_count\":0}"
+      "{\"enterprise_id\":\"E5UBAR8CH\",\"date\":\"2020-10-05\",\"user_id\":\"W0POSID23ID\",\"email_address\":\"rbrautigan@example.org\",\"is_guest\":false,\"is_billable_seat\":false,\"is_active\":false,\"is_active_ios\":false,\"is_active_android\":false,\"is_active_desktop\":false,\"reactions_added_count\":0,\"messages_posted_count\":0,\"channel_messages_posted_count\":0,\"files_added_count\":0}\n{\"enterprise_id\":\"E5UBAR8CH\",\"date\":\"2020-10-05\",\"user_id\":\"W1ZOSID3ZI2\",\"email_address\":\"gstein@example.org\",\"is_guest\":false,\"is_billable_seat\":true,\"is_active\":true,\"is_active_ios\":false,\"is_active_android\":false,\"is_active_desktop\":true,\"reactions_added_count\":23,\"messages_posted_count\":123,\"channel_messages_posted_count\":23,\"files_added_count\":3}\n{\"enterprise_id\":\"E5UBAR8CH\",\"date\":\"2020-10-05\",\"user_id\":\"W3DOSZD23IP\",\"email_address\":\"obutler@example.org\",\"is_guest\":false,\"is_billable_seat\":true,\"is_active\":true,\"is_active_ios\":true,\"is_active_android\":false,\"is_active_desktop\":false,\"reactions_added_count\":521,\"messages_posted_count\":5,\"channel_messages_posted_count\":5,\"files_added_count\":0}",
+      "{\n\t\"enterprise_id\": \"E5UBAR8CH\",\n\t\"date\": \"2020-10-05\",\n\t\"user_id\": \"W3DOSZD23IP\",\n\t\"email_address\": \"obutler@example.org\",\n\t\"is_guest\": false,\n\t\"is_billable_seat\": true,\n\t\"is_active\": true,\n\t\"is_active_ios\": true,\n\t\"is_active_android\": false,\n\t\"is_active_desktop\": false,\n\t\"reactions_added_count\": 521,\n\t\"messages_posted_count\": 5,\n\t\"channel_messages_posted_count\": 5,\n\t\"files_added_count\": 0\n}",
+      "{\"enterprise_id\":\"EJB3MZFLM\",\"originating_team\":{\"team_id\":\"T5J3Q04QZ\",\"name\":\"postmodernity\"},\"channel_id\":\"CNGL0KGG1\",\"date_created\":1555111593,\"date_last_active\":1684820530,\"total_members_count\":7,\"full_members_count\":6,\"guest_member_count\":1,\"active_members_count\":6,\"messages_posted_count\":223,\"messages_posted_by_members_count\":80,\"members_who_viewed_count\":225,\"members_who_posted_count\":3,\"reactions_added_count\":23,\"visibility\":\"public\",\"channel_type\":\"single_workspace_channel\",\"is_shared_externally\":false,\"shared_with\":[],\"date\":\"2020-11-14\"}\n{\"enterprise_id\":\"EJB3MZFLM\",\"originating_team\":{\"team_id\":\"T3J3A04QB\",\"name\":\"modernity\"},\"channel_id\":\"CNGG2KB92\",\"date_created\":1358111593,\"date_last_active\":1452719593,\"total_members_count\":227,\"full_members_count\":227,\"guest_member_count\":0,\"active_members_count\":202,\"messages_posted_count\":1138,\"messages_posted_by_members_count\":1137,\"members_who_viewed_count\":226,\"members_who_posted_count\":7,\"reactions_added_count\":7212,\"visibility\":\"public\",\"channel_type\":\"single_workspace_channel\",\"is_shared_externally\":true,\"shared_with\":[],\"date\":\"2020-11-14\"}\n{\"enterprise_id\":\"EJB3MZFLM\",\"originating_team\":{\"team_id\":\"EJB3MZFLM\",\"name\":\"arcane-enterprise\"},\"channel_id\":\"CNGZ5K595\",\"date_created\":1355111593,\"date_last_active\":1452719593,\"total_members_count\":5,\"full_members_count\":4,\"guest_member_count\":1,\"active_members_count\":1,\"messages_posted_count\":1,\"messages_posted_by_members_count\":1,\"members_who_viewed_count\":5,\"members_who_posted_count\":1,\"reactions_added_count\":1,\"visibility\":\"public\",\"channel_type\":\"multi_workspace_channel\",\"is_shared_externally\":false,\"shared_with\":[{\"team_id\":\"T5J3Q04QA\",\"name\":\"scifi\"},{\"team_id\":\"EJB3MZFLM\",\"name\":\"arcane-enterprise\"}],\"date\":\"2020-11-14\"}",
+      "{\n\t\"enterprise_id\": \"EJB3MZFLM\",\n\t\"originating_team\": {\n\t\t\"team_id\": \"EJB3MZFLM\",\n\t\t\"name\": \"arcane-enterprise\"\n\t},\n\t\"channel_id\": \"CNGZ5K595\",\n\t\"date_created\": 1355111593,\n\t\"date_last_active\": 1452719593,\n\t\"total_members_count\": 5,\n\t\"full_members_count\": 4,\n\t\"guest_member_count\": 1,\n\t\"active_members_count\": 1,\n\t\"messages_posted_count\": 1,\n\t\"messages_posted_by_members_count\": 1,\n\t\"members_who_viewed_count\": 5,\n\t\"members_who_posted_count\": 1,\n\t\"reactions_added_count\": 1,\n\t\"visibility\": \"public\",\n\t\"channel_type\": \"multi_workspace_channel\",\n\t\"is_shared_externally\": false,\n\t\"shared_with\": [\n\t\t{\n\t\t\t\"team_id\": \"T5J3Q04QA\",\n\t\t\t\"name\": \"scifi\"\n\t\t},\n\t\t{\n\t\t\t\"team_id\": \"EJB3MZFLM\",\n\t\t\t\"name\": \"arcane-enterprise\"\n\t\t}\n\t],\n\t\"date\": \"2020-11-14\"\n}",
+      "{\"channel_id\":\"CNGL0K091\",\"name\":\"tomorrow\",\"topic\":\"I'd gladly pay you Tuesday for a hamburger today\",\"description\":\"What do you want to do tomorrow?\",\"date\":\"2020-11-14\"}\n{\"channel_id\":\"CNGG2KB92\",\"name\":\"announcements\",\"topic\":\"What's new with what you do\",\"description\":\"Company announcements, edicts, and mandates\",\"date\":\"2020-11-14\"}\n{\"channel_id\":\"CNGZ5K595\",\"name\":\"teds\",\"topic\":\"'No you meant the other ted' - @ted\",\"description\":\"A channel just for teds, by teds.\",\"date\":\"2020-11-14\"}",
+      "{\n\t\"channel_id\": \"CNGZ5K595\",\n\t\"name\": \"teds\",\n\t\"topic\": \"'No you meant the other ted' - @ted\",\n\t\"description\": \"A channel just for teds, by teds.\",\n\t\"date\": \"2020-11-14\"\n}"
     ]
   },
   "errors": {
+    "metadata_not_available": "Metadata not available for the analytics type you provided.",
+    "metadata_only_does_not_support_date": "The metadata_only field gets the latest metadata file. The date field is not supported.",
     "data_not_available": "The date was before the API became available.",
     "file_not_found": "The analytics data for the date specified weren't found.",
     "file_not_yet_available": "The analytics data for the date isn't available yet.",
@@ -31,8 +43,8 @@
     "not_an_enterprise": "The user token does not belong to an enterprise.",
     "not_an_admin": "The user token does not have admin privileges.",
     "feature_not_enabled": "This feature is not enabled on your workspace.",
-    "member_analytics_disabled": "Member analytics are disabled for your org.",
-    "org_level_email_display_disabled": "This API is unavailable for orgs with a 'Hide email addresses.' policy.",
+    "member_analytics_disabled": "Member analytics are disabled for your organization.",
+    "org_level_email_display_disabled": "This API is unavailable for organizations with a 'Hide email addresses' policy.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",
