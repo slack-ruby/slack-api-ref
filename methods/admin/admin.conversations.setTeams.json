@@ -45,6 +45,7 @@
     "externally_shared_or_disconnected_channel": "The channel is or was externally shared.",
     "cannot_move_local_channel": "This API cannot be used to move a local channel from one workspace to another.",
     "not_allowed_for_grid_workspace": "Slack Connect is not allowed for this grid workspace.",
+    "cannot_add_legacy_disconnected_channel_to_workspaces": "Cannot add legacy disconnected channel to workspaces.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace.",
