@@ -1,7 +1,7 @@
 {
   "group": "apps",
   "name": "apps.permissions.users.request",
-  "desc": "Enables an app to trigger a permissions modal to grant an app access to a user access scope.",
+  "desc": "(Deprecated) Enables an app to trigger a permissions modal to grant an app access to a user access scope.",
   "args": {
     "scopes": {
       "required": true,

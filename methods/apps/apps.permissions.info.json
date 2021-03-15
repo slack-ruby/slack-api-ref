@@ -1,7 +1,7 @@
 {
   "group": "apps",
   "name": "apps.permissions.info",
-  "desc": "Returns list of permissions this app has on a team.",
+  "desc": "(Deprecated) Returns list of permissions this app has on a team.",
   "args": {
   },
   "response": {

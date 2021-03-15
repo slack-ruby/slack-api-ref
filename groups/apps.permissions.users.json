@@ -1,3 +1,4 @@
 {
-  "name": "apps.permissions.users"
+  "name": "apps.permissions.users",
+  "desc": "Manage permissions for legacy workspace apps."
 }

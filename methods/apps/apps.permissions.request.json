@@ -1,7 +1,7 @@
 {
   "group": "apps",
   "name": "apps.permissions.request",
-  "desc": "Allows an app to request additional scopes",
+  "desc": "(Deprecated) Allows an app to request additional scopes",
   "args": {
     "scopes": {
       "required": true,

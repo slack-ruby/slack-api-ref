@@ -1,7 +1,7 @@
 {
   "group": "apps",
   "name": "apps.permissions.users.list",
-  "desc": "Returns list of user grants and corresponding scopes this app has on a team.",
+  "desc": "(Deprecated) Returns list of user grants and corresponding scopes this app has on a team.",
   "args": {
     "cursor": {
       "required": false,

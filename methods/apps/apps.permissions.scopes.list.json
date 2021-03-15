@@ -1,7 +1,7 @@
 {
   "group": "apps",
   "name": "apps.permissions.scopes.list",
-  "desc": "Returns list of scopes this app has on a team.",
+  "desc": "(Deprecated) Returns list of scopes this app has on a team.",
   "args": {
   },
   "response": {
