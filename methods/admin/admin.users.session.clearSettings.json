@@ -1,0 +1,19 @@
+{
+  "group": "admin",
+  "name": "admin.users.session.clearSettings",
+  "desc": "Clear user-specific session settings—the session duration and what happens when the client closes—for a list of users.",
+  "args": {
+    "user_ids": {
+      "required": true,
+      "example": "['U1234']",
+      "desc": "The IDs of users you'd like to clear session settings for."
+    }
+  },
+  "response": {
+    "examples": [
+      "{\n    \"ok\": true\n}"
+    ]
+  },
+  "errors": {
+  }
+}
