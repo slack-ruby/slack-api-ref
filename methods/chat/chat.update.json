@@ -40,6 +40,11 @@
       "example": "none",
       "desc": "Change how messages are treated. Defaults to client, unlike chat.postMessage. Accepts either none or full. If you do not specify a value for this field, the original value set for the message will be overwritten with the default, client."
     },
+    "reply_broadcast": {
+      "required": false,
+      "example": "true",
+      "desc": "Broadcast an existing thread reply to make it visible to everyone in the channel or conversation."
+    },
     "text": {
       "required": false,
       "example": "Hello world",
@@ -55,6 +60,7 @@
   "errors": {
     "message_not_found": "No message exists with the requested timestamp.",
     "cant_update_message": "Authenticated user does not have permission to update this message.",
+    "cant_broadcast_message": "Unable to broadcast this message.",
     "update_failed": "Internal update failure.",
     "channel_not_found": "Value passed for channel was invalid.",
     "team_not_found": "Team associated with the message and channel could not be found.",
