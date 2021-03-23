@@ -67,6 +67,7 @@
     "edit_window_closed": "The message cannot be edited due to the team message edit settings.",
     "msg_too_long": "Message text is too long.",
     "too_many_attachments": "Too many attachments were provided with this message. A maximum of 100 attachments are allowed on a message.",
+    "no_dual_broadcast_content_update": "Can't broadcast an old reply and update the content at the same time.",
     "no_text": "No message text provided.",
     "as_user_not_supported": "The as_user parameter does not function with workspace apps.",
     "is_inactive": "The message cannot be edited within a frozen, archived or deleted channel.",
