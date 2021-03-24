@@ -28,6 +28,7 @@
     "missing_scope": "The token used is not granted the specific scope permissions required to complete this request.",
     "could_not_set_channel_pref": "Setting the preference or permission failed.",
     "default_org_wide_channel": "Returned when you try to modify a default org wide channel.",
+    "invalid_value": "Value passed for the preferences are invalid.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
