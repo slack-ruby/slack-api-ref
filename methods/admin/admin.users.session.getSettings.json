@@ -11,7 +11,7 @@
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true,\n    \"session_settings\": [\n        {\n            \"user_id\": \"U1234\",\n            \"desktop_app_browser_quit\": true,\n            \"durationOf\": 315569520\n        }\n    ],\n    \"no_settings_applied\": []\n}"
+      "{\n    \"ok\": true,\n    \"session_settings\": [\n        {\n            \"user_id\": \"U1234\",\n            \"desktop_app_browser_quit\": true,\n            \"duration\": 315569520\n        }\n    ],\n    \"no_settings_applied\": []\n}"
     ]
   },
   "errors": {

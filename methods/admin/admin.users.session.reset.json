@@ -25,6 +25,7 @@
     ]
   },
   "errors": {
+    "internal_error": "The server could not complete your operation(s) without encountering an error, likely due to a transient issue on our end. It's possible some aspect of the operation succeeded before the error was raised.",
     "user_not_found": "Error fetching user.",
     "cannot_reset_bot": "Cannot reset bot users.",
     "user_session_reset_failed": "There was an error starting the session reset. Try again.",
@@ -58,7 +59,6 @@
     "accesslimited": "Access to this method is limited on the current network.",
     "request_timeout": "The method was called via a POST request, but the POST data was either missing or truncated.",
     "service_unavailable": "The service is temporarily unavailable.",
-    "fatal_error": "The server could not complete your operation(s) without encountering a catastrophic error. It's possible some aspect of the operation succeeded before the error was raised.",
-    "internal_error": "The server could not complete your operation(s) without encountering an error, likely due to a transient issue on our end. It's possible some aspect of the operation succeeded before the error was raised."
+    "fatal_error": "The server could not complete your operation(s) without encountering a catastrophic error. It's possible some aspect of the operation succeeded before the error was raised."
   }
 }
