@@ -15,13 +15,13 @@
     },
     "team_id": {
       "required": false,
-      "example": "",
+      "example": "T0U9RERW4",
       "desc": "ID for the workspace where the invite requests were made."
     }
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true,\n    \"denied_requests\": [\n        ...\n    ]\n}"
+      "{\n    \"ok\": true,\n    \"denied_requests\": [\n        {\n            \"invite_request\": {\n                \"id\": \"Ir0P0Z6SKD\",\n                \"email\": \"example1@slack-corp.com\",\n                \"date_created\": 1569863763,\n                \"requester_ids\": [\n                    \"W0GBAEJKD\"\n                ],\n                \"channel_ids\": [\n                    \"C0GU730DQ\",\n                    \"C0U9WES0Y\"\n                ],\n                \"is_restricted\": false,\n                \"is_ultra_restricted\": false,\n                \"real_name\": \"Example\",\n                \"date_expire\": null,\n                \"request_reason\": null\n            },\n            \"denied_by\": {\n                \"actor_type\": \"app\",\n                \"actor_id\": \"A00\"\n            }\n        },\n        {\n            \"invite_request\": {\n                \"id\": \"Ir0GL738RY\",\n                \"email\": \"example2@slack-corp.com\",\n                \"date_created\": 1564016487,\n                \"requester_ids\": [\n                    \"W0GAAFJKD\"\n                ],\n                \"channel_ids\": [\n                    \"G06LHQYCS\",\n                    \"G0BMCEY2W\",\n                    \"C0GLJ30DQ\",\n                    \"C0U9RQS0Y\"\n                ],\n                \"is_restricted\": false,\n                \"is_ultra_restricted\": false,\n                \"real_name\": \"seesijkdswsss\",\n                \"date_expire\": null,\n                \"request_reason\": null\n            },\n            \"denied_by\": {\n                \"actor_type\": \"user\",\n                \"actor_id\": \"W0GAAUJKD\"\n            }\n        }\n    ],\n    \"response_metadata\": {\n        \"next_cursor\": \"ZGF0ZV9jcmVhdGU6MTU2MTc0Nzc2Ng==\"\n    }\n}"
     ]
   },
   "errors": {
