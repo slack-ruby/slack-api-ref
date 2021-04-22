@@ -12,6 +12,11 @@
       "required": false,
       "example": "20",
       "desc": "The maximum number of items to return. Fewer than the requested number of items may be returned, even if the end of the list hasn't been reached."
+    },
+    "team_id": {
+      "required": false,
+      "example": "T1234567890",
+      "desc": "encoded team id to list stars in, required if org token is used."
     }
   },
   "response": {
@@ -20,6 +25,7 @@
     ]
   },
   "errors": {
+    "missing_argument": "A required argument is missing.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
@@ -34,6 +40,7 @@
     "two_factor_setup_required": "Two factor setup is required.",
     "enterprise_is_restricted": "The method cannot be called from an Enterprise.",
     "is_bot": "This method cannot be called by a bot user.",
+    "team_access_not_granted": "The token used is not granted the specific workspace access required to complete this request.",
     "invalid_arguments": "The method was either called with invalid arguments or some detail about the arguments passed are invalid, which is more likely when using complex arguments like blocks or attachments.",
     "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
     "invalid_array_arg": "The method was passed an array as an argument. Please only input valid strings.",
