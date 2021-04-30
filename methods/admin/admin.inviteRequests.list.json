@@ -21,7 +21,7 @@
   },
   "response": {
     "examples": [
-      "{\n        \"ok\": true\n    }"
+      "{\n        \"ok\": true,\n        \"invite_requests\": [\n            {\n                \"id\": \"Ir558ULC1J\",\n                \"email\": \"foobar@example.com\",\n                \"date_created\":1619700970,\n                \"requester_ids\": [\n                    \"U558ULC10\"\n                ],\n                \"channel_ids\": [\n                    \"C558ULC19\",\n                    \"C558ULC0W\"\n                ],\n                \"invite_type\": \"full_member\",\n                \"real_name\":null,\n                \"date_expire\":null,\n                \"request_reason\":null\n            }\n        ],\n        \"response_metadata\": {\n            \"next_cursor\": \"ZGF0ZV9jcmVhdGU6MTYxOTcwMDk3MA==\"\n        }\n    }"
     ]
   },
   "errors": {

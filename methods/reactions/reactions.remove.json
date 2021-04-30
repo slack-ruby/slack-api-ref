@@ -47,6 +47,7 @@
     "no_reaction": "The specified item does not have the user/reaction combination.",
     "channel_not_found": "The specified channel was not found.",
     "external_channel_migrating": "The reaction is in a channel that is being migrated.",
+    "thread_locked": "Reactions are disabled as the specified message is part of a locked thread.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",

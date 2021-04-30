@@ -103,6 +103,7 @@
     "restricted_action_read_only_channel": "Cannot post any message into a read-only channel.",
     "restricted_action_thread_only_channel": "Cannot post top-level messages into a thread-only channel.",
     "restricted_action_non_threadable_channel": "Cannot post thread replies into a non_threadable channel.",
+    "restricted_action_thread_locked": "Cannot post replies to a thread that has been locked by admins.",
     "too_many_attachments": "Too many attachments were provided with this message. A maximum of 100 attachments are allowed on a message.",
     "rate_limited": "Application has posted too many messages, read the Rate Limit documentation for more information.",
     "as_user_not_supported": "The as_user parameter does not function with workspace apps.",
