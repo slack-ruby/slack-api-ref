@@ -5,9 +5,12 @@
   "required_scope": "RTM",
   "example": {
     "type": "file_shared",
+    "channel_id": "D01315BHHSN",
     "file_id": "F2147483862",
+    "user_id": "U0Z7K8SRH",
     "file": {
       "id": "F2147483862"
-    }
+    },
+    "event_ts": "1617804931.000300"
   }
 }
