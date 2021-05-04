@@ -55,7 +55,7 @@
     "cannot_parse_attachment": "The provided unfurls argument could not be parsed or understood.",
     "missing_unfurls": "The request is missing the unfurls parameter.",
     "invalid_unfurls_format": "The unfurls parameter cannot be JSON-decoded into a map of URLs to attachments.",
-    "cannot_unfurl_url": "The URL cannot be unfurled. This error may be returned if you haven't acknowledged a link_shared event tied to the same URL. It is also returned when the domain appears in a workspace's administrative blacklists.",
+    "cannot_unfurl_url": "The URL cannot be unfurled. This error may be returned if you haven't acknowledged a link_shared event tied to the same URL. It is also returned when the domain appears in a workspace's administrative blocklists.",
     "cannot_prompt": "The current user has already interacted with and dismissed a prompt for this application.",
     "cannot_find_message": "The ts value in the request does not match a message.",
     "cannot_unfurl_message": "The URL cannot be unfurled because the URL provided does not appear in the message.",
