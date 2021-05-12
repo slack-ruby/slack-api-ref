@@ -8,6 +8,11 @@
       "example": "pickleface",
       "desc": "Search query."
     },
+    "cursor": {
+      "required": false,
+      "example": "",
+      "desc": "Use this when getting results with cursormark pagination. For first call send * for subsequent calls, send the value of next_cursor returned in the previous call's results."
+    },
     "highlight": {
       "required": false,
       "example": "true",
