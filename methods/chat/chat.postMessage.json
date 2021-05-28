@@ -29,6 +29,11 @@
       "example": "",
       "desc": "The id of the draft associated with the message."
     },
+    "file_annotation": {
+      "required": false,
+      "example": "",
+      "desc": "."
+    },
     "icon_emoji": {
       "required": false,
       "example": ":chart_with_upwards_trend:",
