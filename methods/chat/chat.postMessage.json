@@ -24,6 +24,11 @@
       "example": "[{\"type\": \"section\", \"text\": {\"type\": \"plain_text\", \"text\": \"Hello world\"}}]",
       "desc": "A JSON-based array of structured blocks, presented as a URL-encoded string."
     },
+    "container_id": {
+      "required": false,
+      "example": "",
+      "desc": "."
+    },
     "draft_id": {
       "required": false,
       "example": "",

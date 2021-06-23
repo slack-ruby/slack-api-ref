@@ -4,20 +4,21 @@
   "desc": "Turns on Do Not Disturb mode for the current user, or changes its duration.",
   "args": {
     "num_minutes": {
-      "required": true,
+      "required": false,
       "example": "60",
       "desc": "Number of minutes, from now, to snooze until."
     }
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true,\n    \"snooze_enabled\": true,\n    \"snooze_endtime\": 1450373897,\n    \"snooze_remaining\": 60,\n}"
+      "{\n    \"ok\": true,\n    \"snooze_enabled\": true,\n    \"snooze_endtime\": 1450373897,\n    \"snooze_remaining\": 60,\n    \"snooze_is_indefinite\": false\n}"
     ]
   },
   "errors": {
     "snooze_failed": "There was a problem setting the user's Do Not Disturb status.",
     "too_long": "The value for num_minutes was too large.",
     "missing_duration": "No value provided for num_minutes.",
+    "cannot_set_both_num_minutes_and_is_indefinite": "Cannot set both num_minutes and is_indefinite at the same time.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
