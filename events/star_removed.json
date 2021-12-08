@@ -1,6 +1,6 @@
 {
   "name": "star_removed",
   "desc": "A member removed a star.",
-  "long_desc": "A member removed a star. When an item is starred, the star_removed event is sent to all connected clients for users who can see the content that was starred. See the stars.list method for details of the structure of the item property.",
+  "long_desc": "When an item is starred, the star_removed event is sent to all connected clients for users who can see the content that was starred. See the stars.list method for details of the structure of the item property.",
   "required_scope": "RTM"
 }

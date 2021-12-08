@@ -1,7 +1,7 @@
 {
   "name": "group_open",
   "desc": "You created a group DM.",
-  "long_desc": "You created a group DM. The group_open event is sent to all connections for a user when a group Direct Message (or mpim) is opened by that user. This event is not available to bot user subscriptions in the Events API.",
+  "long_desc": "The group_open event is sent to all connections for a user when a group Direct Message (or mpim) is opened by that user. This event is not available to bot user subscriptions in the Events API.",
   "required_scope": "RTM",
   "example": {
     "type": "group_open",

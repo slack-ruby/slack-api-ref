@@ -1,7 +1,7 @@
 {
   "name": "channel_marked",
   "desc": "Your channel read marker was updated.",
-  "long_desc": "Your channel read marker was updated. The channel_marked event is sent to all open connections for a user when that user moves the read cursor in a channel.",
+  "long_desc": "The channel_marked event is sent to all open connections for a user when that user moves the read cursor in a channel.",
   "required_scope": "RTM",
   "example": {
     "type": "channel_marked",

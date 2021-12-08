@@ -1,7 +1,7 @@
 {
   "name": "subteam_created",
   "desc": "A User Group has been added to the workspace.",
-  "long_desc": "A User Group has been added to the workspace. The subteam_created event is sent to all connections for a workspace when a new User Group is created. Clients can use this to update their local list of User Groups and group members.",
+  "long_desc": "The subteam_created event is sent to all connections for a workspace when a new User Group is created. Clients can use this to update their local list of User Groups and group members.",
   "required_scope": "RTM",
   "example": {
     "type": "subteam_created",
