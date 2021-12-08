@@ -1,7 +1,7 @@
 {
   "name": "reconnect_url",
   "desc": "Experimental.",
-  "long_desc": "Experimental. The reconnect_url event is currently unsupported and experimental.",
+  "long_desc": "The reconnect_url event is currently unsupported and experimental.",
   "required_scope": "RTM",
   "example": {
     "type": "reconnect_url"

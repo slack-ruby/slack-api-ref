@@ -1,7 +1,7 @@
 {
   "name": "user_change",
   "desc": "A member's data has changed.",
-  "long_desc": "A member's data has changed. The user_change event is sent to all connections for a workspace when a member updates their profile or data. Clients can use this to update their local cache of members. Use the users.profile.set method to update user profile data.",
+  "long_desc": "The user_change event is sent to all connections for a workspace when a member updates their profile or data. Clients can use this to update their local cache of members. Use the users.profile.set method to update user profile data.",
   "required_scope": "RTM",
   "example": {
     "type": "user_change",

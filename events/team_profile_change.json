@@ -1,7 +1,7 @@
 {
   "name": "team_profile_change",
   "desc": "The workspace profile fields have been updated.",
-  "long_desc": "The workspace profile fields have been updated. The team_profile_change event is sent to all connections for a workspace when Workspace Admin updates the field definitions in the profile. Only the modified field definitions are included in the payload. Where appropriate, clients should update to reflect new changes immediately.",
+  "long_desc": "The team_profile_change event is sent to all connections for a workspace when Workspace Admin updates the field definitions in the profile. Only the modified field definitions are included in the payload. Where appropriate, clients should update to reflect new changes immediately.",
   "required_scope": "RTM",
   "example": {
     "type": "team_profile_change",

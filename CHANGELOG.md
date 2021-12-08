@@ -4,6 +4,7 @@ Changelog
 Some notable infrastructure contributions below. See [commits](commits/master) for Slack API updates.
 
 * Your contribution here.
+* Updated crawlers to use new API documentation DOM - [@chrisbloom7](https://github.com/chrisbloom7).
 * Added undocumented methods - [@manuelmeurer](https://github.com/manuelmeurer).
 * Modified method scraper to look for <a> tags within <table> - [@alexagranov](https://github.com/alexagranov).
 * Added events - [@dblock](https://github.com/dblock).

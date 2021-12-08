@@ -1,7 +1,7 @@
 {
   "name": "channel_unarchive",
   "desc": "A channel was unarchived.",
-  "long_desc": "A channel was unarchived. The channel_unarchive event is sent to all connections for a workspace when a channel is unarchived. Clients can use this to update their local list of channels.",
+  "long_desc": "The channel_unarchive event is sent to all connections for a workspace when a channel is unarchived. Clients can use this to update their local list of channels.",
   "required_scope": "RTM",
   "example": {
     "type": "channel_unarchive",

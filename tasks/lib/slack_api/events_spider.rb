@@ -1,25 +1,32 @@
 module SlackApi
-  class EventsSpider < Spidey::AbstractSpider
+  class EventsSpider < BaseSpider
     handle 'https://api.slack.com/events', :process_list
 
     def process_list(page, _default_data = {})
-      page.search('.card tr').each do |event|
-        tds = event.search('td')
-        next unless tds.count >= 3
-        name, desc, required_scope = tds.map(&:text).map(&:strip)
-        next unless required_scope == "RTM"
-        href = event.search('a[href^="/events"]').first
-        handle resolve_url(href[:href], page), :process_event, name: name, desc: desc, required_scope: required_scope
+      events_page = ensure!(page, '.apiEventsPage')
+      list = events_page.search('.apiEventPage__eventList')
+      ref = list.search('[data-automount-component=ApiDocsFilterableReferenceList]')
+      data = JSON.parse(ref.attribute('data-automount-props'))
+      raise(ElementNotFound, "Could not parse events reference") unless data['items'].any?
+
+      data["items"].each do |event|
+        next unless event['isPublic']
+        next if event['isDeprecated']
+        next unless event['groups'].include?('RTM')
+
+        handle resolve_url(event['link'], page),
+               :process_event,
+               name: event['name'],
+               desc: event['description'],
+               required_scope: 'RTM'
       end
     end
 
     def process_event(page, data = {})
-      long_desc = page.search('.card p, .card h4').map(&:text).join(" ").gsub("\n", " ")
-      long_desc = long_desc.gsub ' Compatibility: RTM Events API', '.'
-      long_desc = long_desc.gsub ' Compatibility: RTM', '.'
-      long_desc = long_desc.gsub /Events API compatibility.*$/, ''
-      long_desc = long_desc.gsub /.*API Scope:\s*[\w:]*/, ''
-      long_desc = long_desc.strip
+      event_page = ensure!(page, '.apiEventPage', data[:name])
+      descriptions = event_page.search('.apiDocsPage__markdownOutput p')
+      long_desc = descriptions.map(&:text).join(' ').gsub("\n", ' ').strip
+      # required_scopes = event_page.search('.apiReference__scope code').map(&:text).map(&:strip).join(', ')
 
       json_hash = {
         'name' => data[:name],
@@ -28,14 +35,14 @@ module SlackApi
         'required_scope' => data[:required_scope]
       }
 
-      example = JSON.parse(page.search('pre code')
-          .text
-          .gsub('…', '')
-          .gsub('...', '')
-          .gsub("\n", " ")
-          .gsub(/\s+/, " ")
-          .gsub(', }', '}')
-          .gsub(', ]', ']')
+      example = JSON.parse(event_page.search('.apiDocsPage__markdownOutput pre:first code')
+        .text
+        .gsub('…', '')
+        .gsub('...', '')
+        .gsub("\n", ' ')
+        .gsub(/\s+/, ' ')
+        .gsub(', }', '}')
+        .gsub(', ]', ']')
       ) rescue nil
 
       json_hash['example'] = example if example

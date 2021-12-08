@@ -1,0 +1,96 @@
+{
+  "group": "calls",
+  "name": "calls.add",
+  "deprecated": false,
+  "desc": "Registers a new Call.",
+  "args": {
+    "external_unique_id": {
+      "required": true,
+      "example": "025169F6-E37A-4E62-BB54-7F93A0FC4C1F",
+      "desc": "An ID supplied by the 3rd-party Call provider. It must be unique across all Calls from that service.",
+      "type": "string"
+    },
+    "join_url": {
+      "required": true,
+      "example": "https://example.com/calls/1234567890",
+      "desc": "The URL required for a client to join the Call.",
+      "type": "string"
+    },
+    "created_by": {
+      "required": false,
+      "example": "U1H77",
+      "desc": "The valid Slack user ID of the user who created this Call. When this method is called with a user token, the created_by field is optional and defaults to the authed user of the token. Otherwise, the field is required.",
+      "type": "string"
+    },
+    "date_start": {
+      "required": false,
+      "example": "1562002086",
+      "desc": "Call start time in UTC UNIX timestamp format.",
+      "type": "integer"
+    },
+    "desktop_app_join_url": {
+      "required": false,
+      "example": "callapp://join/1234567890",
+      "desc": "When supplied, available Slack clients will attempt to directly launch the 3rd-party Call with this URL.",
+      "type": "string"
+    },
+    "external_display_id": {
+      "required": false,
+      "example": "705-292-868",
+      "desc": "An optional, human-readable ID supplied by the 3rd-party Call provider. If supplied, this ID will be displayed in the Call object.",
+      "type": "string"
+    },
+    "title": {
+      "required": false,
+      "example": "Kimpossible sync up",
+      "desc": "The name of the Call.",
+      "type": "string"
+    },
+    "users": {
+      "required": false,
+      "example": "[{\"slack_id\": \"U1H77\"}, {\"external_id\": \"54321678\", \"display_name\": \"External User\", \"avatar_url\": \"https://example.com/users/avatar1234.jpg\"}]",
+      "desc": "The list of users to register as participants in the Call. Read more on how to specify users here.",
+      "type": "array"
+    }
+  },
+  "response": {
+    "examples": [
+
+    ]
+  },
+  "errors": {
+    "not_implemented": "This method is not available.",
+    "internal_error": "The server could not complete your operation(s) without encountering an error, likely due to a transient issue on our end. It's possible some aspect of the operation succeeded before the error was raised.",
+    "invalid_start_time": "The start time is invalid.",
+    "not_authorized": "The specified user is not authorized to create a Call in this channel.",
+    "user_not_found": "A specified user wasn't found.",
+    "invalid_created_by": "The created_by user ID is invalid.",
+    "not_authed": "No authentication token provided.",
+    "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
+    "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
+    "token_revoked": "Authentication token is for a deleted user or workspace or the app has been removed when using a user token.",
+    "token_expired": "Authentication token has expired.",
+    "no_permission": "The workspace token used in this request does not have the permissions necessary to complete the request. Make sure your app is a member of the conversation it's attempting to post a message to.",
+    "org_login_required": "The workspace is undergoing an enterprise migration and will not be available until migration is complete.",
+    "ekm_access_denied": "Administrators have suspended the ability to post a message.",
+    "missing_scope": "The token used is not granted the specific scope permissions required to complete this request.",
+    "not_allowed_token_type": "The token type used in this request is not allowed.",
+    "method_deprecated": "The method has been deprecated.",
+    "deprecated_endpoint": "The endpoint has been deprecated.",
+    "two_factor_setup_required": "Two factor setup is required.",
+    "enterprise_is_restricted": "The method cannot be called from an Enterprise.",
+    "invalid_arguments": "The method was either called with invalid arguments or some detail about the arguments passed are invalid, which is more likely when using complex arguments like blocks or attachments.",
+    "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
+    "invalid_array_arg": "The method was passed an array as an argument. Please only input valid strings.",
+    "invalid_charset": "The method was called via a POST request, but the charset specified in the Content-Type header was invalid. Valid charset names are: utf-8 iso-8859-1.",
+    "invalid_form_data": "The method was called via a POST request with Content-Type application/x-www-form-urlencoded or multipart/form-data, but the form data was either missing or syntactically invalid.",
+    "invalid_post_type": "The method was called via a POST request, but the specified Content-Type was invalid. Valid types are: application/json application/x-www-form-urlencoded multipart/form-data text/plain.",
+    "missing_post_type": "The method was called via a POST request and included a data payload, but the request did not include a Content-Type header.",
+    "team_added_to_org": "The workspace associated with your request is currently undergoing migration to an Enterprise Organization. Web API and other platform operations will be intermittently unavailable until the transition is complete.",
+    "ratelimited": "The request has been ratelimited. Refer to the Retry-After header for when to retry the request.",
+    "accesslimited": "Access to this method is limited on the current network.",
+    "request_timeout": "The method was called via a POST request, but the POST data was either missing or truncated.",
+    "service_unavailable": "The service is temporarily unavailable.",
+    "fatal_error": "The server could not complete your operation(s) without encountering a catastrophic error. It's possible some aspect of the operation succeeded before the error was raised."
+  }
+}

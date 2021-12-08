@@ -1,7 +1,7 @@
 {
   "name": "file_deleted",
   "desc": "A file was deleted.",
-  "long_desc": "A file was deleted. The file_deleted event is sent to all connected clients for a workspace when a file is deleted. Unlike most file events, the file property contains a file ID and not a full file object.",
+  "long_desc": "The file_deleted event is sent to all connected clients for a workspace when a file is deleted. Unlike most file events, the file property contains a file ID and not a full file object.",
   "required_scope": "RTM",
   "example": {
     "type": "file_deleted",

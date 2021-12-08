@@ -1,3 +1,4 @@
+require_relative 'lib/slack_api/base_spider'
 require_relative 'lib/slack_api/methods_spider'
 require_relative 'lib/slack_api/events_spider'
 require_relative 'lib/slack_api/spec_validator'
@@ -9,9 +10,20 @@ namespace :api do
       Rake::Task['api:clean_files'].invoke('events')
       spider = SlackApi::EventsSpider.new(verbose: true, request_interval: 0)
       spider.crawl
+
+      puts "\nRecording #{spider.results.size} events"
       spider.results.each do |result|
         File.open(result[:file_name], 'w+') { |f| f.write(result[:json]) }
       end
+
+      if spider.errors.any?
+        puts "\nEncountered #{spider.errors.size} errors!"
+        spider.errors.each do |error|
+          puts "  #{error[:error]} (#{error[:handler]}, #{error[:url]})\n"
+        end
+      end
+
+      puts "\nFinished updating events"
     end
     task :validate do
       schema = IO.read('schemas/events.json')
@@ -27,11 +39,22 @@ namespace :api do
       Rake::Task['api:clean_files'].invoke(%w(groups methods))
       spider = SlackApi::MethodsSpider.new(verbose: true, request_interval: 0)
       spider.crawl
+
+      puts "\nRecording #{spider.results.size} methods"
       spider.results.each do |result|
         dir = File.dirname(result[:file_name])
         FileUtils.mkdir(dir) unless Dir.exists?(dir)
         File.open(result[:file_name], 'w+') { |f| f.write(result[:json]) }
       end
+
+      if spider.errors.any?
+        puts "\nEncountered #{spider.errors.size} errors!"
+        spider.errors.each do |error|
+          puts "  #{error[:error]} (#{error[:handler]}, #{error[:url]})\n"
+        end
+      end
+
+      puts "\nFinished updating methods"
     end
     task :validate do
       schema = IO.read('schemas/methods.json')
