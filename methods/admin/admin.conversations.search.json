@@ -59,7 +59,7 @@
     "team_not_found": "One of the workspaces provided in the list wasn't found.",
     "not_allowed": "The authenticated user does not have the permission to call this method.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
-    "invalid_cursor": "The provided cursor is not valid.",
+    "invalid_cursor": "The provided cursor is not valid, often due to not urlencoding query parameters.",
     "invalid_search_channel_type": "An invalid search_channel_types arg was passed. Make sure there are no spaces between your args and that each is one of the enumerated options listed above.",
     "invalid_sort": "The provided sort argument wasn't valid.",
     "invalid_sort_dir": "The provided sort_dir argument wasn't valid.",
