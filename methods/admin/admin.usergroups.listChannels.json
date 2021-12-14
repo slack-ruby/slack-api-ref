@@ -6,18 +6,15 @@
   "args": {
     "usergroup_id": {
       "required": true,
-      "example": "S00000000",
       "desc": "ID of the IDP group to list default channels for."
     },
     "include_num_members": {
       "required": false,
-      "example": "true",
       "desc": "Flag to include or exclude the count of members per channel.",
       "type": "boolean"
     },
     "team_id": {
       "required": false,
-      "example": "T00000000",
       "desc": "ID of the the workspace.",
       "type": "string"
     }

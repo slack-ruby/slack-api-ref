@@ -6,7 +6,6 @@
   "args": {
     "channel": {
       "required": true,
-      "example": "C1234567890",
       "desc": "Channel ID of the message. Both channel and ts must be provided together, or unfurl_id and source must be provided together.",
       "type": "channel"
     },
@@ -22,13 +21,11 @@
     },
     "source": {
       "required": false,
-      "example": "composer",
       "desc": "The source of the link to unfurl. The source may either be composer, when the link is inside the message composer, or conversations_history, when the link has been posted to a conversation.",
       "type": "string"
     },
     "unfurl_id": {
       "required": false,
-      "example": "Uxxxxxxx-909b5454-75f8-4ac4-b325-1b40e230bbd8",
       "desc": "The ID of the link to unfurl. Both unfurl_id and source must be provided together, or channel and ts must be provided together.",
       "type": "string"
     },
@@ -42,13 +39,11 @@
     },
     "user_auth_required": {
       "required": false,
-      "example": "0",
       "desc": "Set to true or 1 to indicate the user must install your Slack app to trigger unfurls for this domain.",
       "type": "boolean"
     },
     "user_auth_url": {
       "required": false,
-      "example": "https://example.com/onboarding?user_id=xxx",
       "desc": "Send users to this custom URL where they will complete authentication in your app to fully trigger unfurling. Value should be properly URL-encoded."
     }
   },

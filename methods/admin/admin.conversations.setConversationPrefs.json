@@ -6,13 +6,11 @@
   "args": {
     "channel_id": {
       "required": true,
-      "example": "C1234",
       "desc": "The channel to set the prefs for.",
       "type": "string"
     },
     "prefs": {
       "required": true,
-      "example": "{'who_can_post':'type:admin,user:U1234,subteam:S1234'}",
       "desc": "The prefs for this channel in a stringified JSON format.",
       "type": "string"
     }

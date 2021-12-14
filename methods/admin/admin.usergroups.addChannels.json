@@ -6,19 +6,16 @@
   "args": {
     "channel_ids": {
       "required": true,
-      "example": "C00000000,C00000001",
       "desc": "Comma separated string of channel IDs.",
       "type": "array"
     },
     "usergroup_id": {
       "required": true,
-      "example": "S00000000",
       "desc": "ID of the IDP group to add default channels for.",
       "type": "string"
     },
     "team_id": {
       "required": false,
-      "example": "T00000000",
       "desc": "The workspace to add default channels in.",
       "type": "string"
     }

@@ -6,18 +6,15 @@
   "args": {
     "app_id": {
       "required": true,
-      "example": "A12345",
       "desc": "The id of the app whose resolution you want to clear/undo.",
       "type": "string"
     },
     "enterprise_id": {
       "required": false,
-      "example": "E12345",
       "desc": "The enterprise to clear the app resolution from."
     },
     "team_id": {
       "required": false,
-      "example": "T12345",
       "desc": "The workspace to clear the app resolution from."
     }
   },

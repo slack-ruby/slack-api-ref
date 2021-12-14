@@ -6,19 +6,16 @@
   "args": {
     "channel": {
       "required": true,
-      "example": "C1234567890",
       "desc": "Channel containing the message to be deleted.",
       "type": "channel"
     },
     "ts": {
       "required": true,
-      "example": "\"1405894322.002768\"",
       "desc": "Timestamp of the message to be deleted.",
       "type": "timestamp"
     },
     "as_user": {
       "required": false,
-      "example": "true",
       "desc": "Pass true to delete the message as the authed user with chat:write:user scope. Bot users in this context are considered authed users. If unused or false, the message will be deleted with chat:write:bot scope.",
       "type": "boolean"
     }

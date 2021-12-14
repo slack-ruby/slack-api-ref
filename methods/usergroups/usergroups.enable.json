@@ -6,19 +6,16 @@
   "args": {
     "usergroup": {
       "required": true,
-      "example": "S0604QSJC",
       "desc": "The encoded ID of the User Group to enable.",
       "type": "string"
     },
     "include_count": {
       "required": false,
-      "example": "true",
       "desc": "Include the number of users in the User Group.",
       "type": "boolean"
     },
     "team_id": {
       "required": false,
-      "example": "T1234567890",
       "desc": "Encoded team id where the user group is, required if org token is used.",
       "type": "string"
     }

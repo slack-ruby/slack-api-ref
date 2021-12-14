@@ -6,18 +6,15 @@
   "args": {
     "channel_id": {
       "required": true,
-      "example": "C12345",
       "desc": "The channel to determine connected workspaces within the organization for."
     },
     "cursor": {
       "required": false,
-      "example": "5c3e53d5",
       "desc": "Set cursor to next_cursor returned by the previous call to list items in the next page.",
       "type": "string"
     },
     "limit": {
       "required": false,
-      "example": "100",
       "desc": "The maximum number of items to return. Must be between 1 - 1000 both inclusive.",
       "type": "integer"
     }

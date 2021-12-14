@@ -6,7 +6,6 @@
   "args": {
     "channel": {
       "required": true,
-      "example": "C1234567890",
       "desc": "ID of the channel on your team that you'd like to share.",
       "type": "channel"
     },
@@ -17,7 +16,6 @@
     },
     "external_limited": {
       "required": false,
-      "example": "true",
       "desc": "Optional boolean on whether invite is to a external limited member. Defaults to true.",
       "type": "boolean"
     },

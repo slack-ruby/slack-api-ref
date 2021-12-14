@@ -6,7 +6,6 @@
   "args": {
     "team_id": {
       "required": false,
-      "example": "T1234567890",
       "desc": "Encoded team id, required if org token is passed.",
       "type": "string"
     }

@@ -6,7 +6,6 @@
   "args": {
     "num_minutes": {
       "required": false,
-      "example": "60",
       "desc": "Number of minutes, from now, to snooze until.",
       "type": "string"
     }

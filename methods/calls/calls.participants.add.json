@@ -6,13 +6,11 @@
   "args": {
     "id": {
       "required": true,
-      "example": "R0E69JAIF",
       "desc": "id returned by the calls.add method.",
       "type": "string"
     },
     "users": {
       "required": true,
-      "example": "[{\"slack_id\": \"U1H77\"}, {\"external_id\": \"54321678\", \"display_name\": \"External User\", \"avatar_url\": \"https://example.com/users/avatar1234.jpg\"}]",
       "desc": "The list of users to add as participants in the Call. Read more on how to specify users here.",
       "type": "array"
     }

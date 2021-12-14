@@ -11,13 +11,11 @@
     },
     "org_channel": {
       "required": false,
-      "example": "false",
       "desc": "True if channel has to be converted to an org channel.",
       "type": "boolean"
     },
     "target_team_ids": {
       "required": false,
-      "example": "T1234,T5678,T9012,T3456",
       "desc": "A comma-separated list of workspaces to which the channel should be shared. Not required if the channel is being shared org-wide.",
       "type": "array"
     },

@@ -6,13 +6,11 @@
   "args": {
     "channel_ids": {
       "required": true,
-      "example": "C00000000,C00000001",
       "desc": "Comma-separated string of channel IDs.",
       "type": "array"
     },
     "usergroup_id": {
       "required": true,
-      "example": "S00000000",
       "desc": "ID of the IDP Group.",
       "type": "string"
     }

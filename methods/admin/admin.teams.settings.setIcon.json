@@ -6,7 +6,6 @@
   "args": {
     "image_url": {
       "required": true,
-      "example": "http://mysite.com/icon.jpeg",
       "desc": "Image URL for the icon.",
       "type": "string"
     },

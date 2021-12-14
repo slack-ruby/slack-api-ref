@@ -6,13 +6,11 @@
   "args": {
     "before": {
       "required": false,
-      "example": "now",
       "desc": "End of time range of logs to include in results (inclusive).",
       "type": "string"
     },
     "team_id": {
       "required": false,
-      "example": "T1234567890",
       "desc": "encoded team id to get logs from, required if org token is used.",
       "type": "string"
     }

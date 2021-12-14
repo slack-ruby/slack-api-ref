@@ -10,13 +10,11 @@
     },
     "cursor": {
       "required": false,
-      "example": "dXNlcjpVMEc5V0ZYTlo=",
       "desc": "Set cursor to next_cursor returned by the previous call to list items in the next page.",
       "type": "string"
     },
     "limit": {
       "required": false,
-      "example": "200",
       "desc": "The maximum number of items to return.",
       "type": "integer"
     }

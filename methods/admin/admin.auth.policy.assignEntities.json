@@ -6,7 +6,6 @@
   "args": {
     "entity_ids": {
       "required": true,
-      "example": "['U12345','U27345']",
       "desc": "Array of IDs to assign to the policy.",
       "type": "array"
     },
@@ -16,7 +15,6 @@
     },
     "policy_name": {
       "required": true,
-      "example": "email_password",
       "desc": "The name of the authentication policy to assign the entities to. Currently, email_password is the only policy that may be used with this method.",
       "type": "string"
     }

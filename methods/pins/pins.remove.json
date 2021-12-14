@@ -6,13 +6,11 @@
   "args": {
     "channel": {
       "required": true,
-      "example": "C1234567890",
       "desc": "Channel where the item is pinned to.",
       "type": "channel"
     },
     "timestamp": {
       "required": false,
-      "example": "1234567890.123456",
       "desc": "Timestamp of the message to un-pin.",
       "type": "string"
     }

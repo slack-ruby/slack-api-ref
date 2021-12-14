@@ -6,7 +6,6 @@
   "args": {
     "channel_id": {
       "required": true,
-      "example": "C12345",
       "desc": "The channel to convert to private."
     }
   },

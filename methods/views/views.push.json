@@ -6,13 +6,13 @@
   "args": {
     "trigger_id": {
       "required": true,
-      "example": "12345.98765.abcd2358fdea",
       "desc": "Exchange a trigger to post to the user.",
       "type": "string"
     },
     "view": {
       "required": true,
-      "desc": "A view payload. This must be a JSON-encoded string."
+      "desc": "A view payload. This must be a JSON-encoded string.",
+      "type": "view as string"
     }
   },
   "response": {

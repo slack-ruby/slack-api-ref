@@ -6,37 +6,31 @@
   "args": {
     "external_id": {
       "required": true,
-      "example": "123456",
       "desc": "Creator defined GUID for the file.",
       "type": "string"
     },
     "external_url": {
       "required": true,
-      "example": "http://example.com/my_cloud_service_file/abc123",
       "desc": "URL of the remote file.",
       "type": "string"
     },
     "title": {
       "required": true,
-      "example": "Danger, High Voltage!",
       "desc": "Title of the file being shared.",
       "type": "string"
     },
     "filetype": {
       "required": false,
-      "example": "doc",
       "desc": "type of file.",
       "type": "string"
     },
     "indexable_file_contents": {
       "required": false,
-      "example": "...",
       "desc": "A text file (txt, pdf, doc, etc.) containing textual search terms that are used to improve discovery of the remote file.",
       "type": "string"
     },
     "preview_image": {
       "required": false,
-      "example": "...",
       "desc": "Preview of the document via multipart/form-data.",
       "type": "string"
     }

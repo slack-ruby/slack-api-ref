@@ -6,24 +6,20 @@
   "args": {
     "app_id": {
       "required": false,
-      "example": "A12345",
       "desc": "The id of the app to restrict.",
       "type": "string"
     },
     "enterprise_id": {
       "required": false,
-      "example": "E12345",
       "desc": "The ID of the enterprise to approve the app on."
     },
     "request_id": {
       "required": false,
-      "example": "Ar12345",
       "desc": "The id of the request to restrict.",
       "type": "string"
     },
     "team_id": {
       "required": false,
-      "example": "T12345",
       "desc": "The ID of the workspace to approve the app on."
     }
   },
@@ -45,6 +41,7 @@
     "team_not_found": "Returned when team id is not found.",
     "app_management_app_not_installed_on_org": "The app management app must be installed on the org.",
     "invalid_scopes": "Some of the provided scopes do not exist.",
+    "custom_integration_not_allowed_at_enterprise": "Returned when the install request is for custom integration app.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",

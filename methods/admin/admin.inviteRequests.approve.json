@@ -6,7 +6,6 @@
   "args": {
     "invite_request_id": {
       "required": true,
-      "example": "Ir1234",
       "desc": "ID of the request to invite.",
       "type": "string"
     },

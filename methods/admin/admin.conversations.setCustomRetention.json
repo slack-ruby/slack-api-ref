@@ -6,13 +6,11 @@
   "args": {
     "channel_id": {
       "required": true,
-      "example": "C12345678",
       "desc": "The channel to set the retention policy for.",
       "type": "string"
     },
     "duration_days": {
       "required": true,
-      "example": "500",
       "desc": "The message retention duration in days to set for this channel.",
       "type": "integer"
     }

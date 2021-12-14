@@ -6,19 +6,16 @@
   "args": {
     "channel": {
       "required": true,
-      "example": "C1234567890",
       "desc": "Channel where the message to add reaction to was posted.",
       "type": "channel"
     },
     "name": {
       "required": true,
-      "example": "thumbsup",
       "desc": "Reaction (emoji) name.",
       "type": "string"
     },
     "timestamp": {
       "required": true,
-      "example": "1234567890.123456",
       "desc": "Timestamp of the message to add reaction to.",
       "type": "string"
     }

@@ -6,19 +6,16 @@
   "args": {
     "user_ids": {
       "required": true,
-      "example": "[\"W12345678\", \"W98765432\"]",
       "desc": "The ID of the user to wipe sessions for.",
       "type": "array"
     },
     "mobile_only": {
       "required": false,
-      "example": "true",
       "desc": "Only expire mobile sessions (default: false).",
       "type": "boolean"
     },
     "web_only": {
       "required": false,
-      "example": "true",
       "desc": "Only expire web sessions (default: false).",
       "type": "boolean"
     }

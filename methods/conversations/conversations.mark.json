@@ -6,13 +6,11 @@
   "args": {
     "channel": {
       "required": true,
-      "example": "C012345678",
       "desc": "Channel or conversation to set the read cursor for.",
       "type": "channel"
     },
     "ts": {
       "required": true,
-      "example": "1593473566.000200",
       "desc": "Unique identifier of message you want marked as most recently seen in this conversation.",
       "type": "timestamp"
     }

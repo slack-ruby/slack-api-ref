@@ -6,13 +6,11 @@
   "args": {
     "batch_presence_aware": {
       "required": false,
-      "example": "",
       "desc": "Batch presence deliveries via subscription. Enabling changes the shape of presence_change events. See batch presence.",
       "type": "boolean"
     },
     "presence_sub": {
       "required": false,
-      "example": "1",
       "desc": "Only deliver presence events when requested by subscription. See presence subscriptions.",
       "type": "boolean"
     }

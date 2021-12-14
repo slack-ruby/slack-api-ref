@@ -6,7 +6,6 @@
   "args": {
     "user_ids": {
       "required": true,
-      "example": "['U1234']",
       "desc": "The IDs of users you'd like to fetch session settings for. Note: if a user does not have any active sessions, they will not be returned in the response.",
       "type": "array"
     }

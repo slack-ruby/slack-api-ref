@@ -6,13 +6,11 @@
   "args": {
     "cursor": {
       "required": false,
-      "example": "5c3e53d5",
       "desc": "Set cursor to next_cursor returned by the previous call to list items in the next page.",
       "type": "string"
     },
     "limit": {
       "required": false,
-      "example": "100",
       "desc": "Limit for how many users to be retrieved per page.",
       "type": "integer"
     },

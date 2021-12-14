@@ -6,7 +6,6 @@
   "args": {
     "user": {
       "required": false,
-      "example": "W1234567890",
       "desc": "User to get presence info on. Defaults to the authed user.",
       "type": "user"
     }
