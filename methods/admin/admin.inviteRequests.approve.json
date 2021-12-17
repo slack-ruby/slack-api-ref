@@ -27,6 +27,7 @@
     "invalid_request": "The invite_request_id passed is invalid.",
     "already_processed": "The invite_request_id passed has already been approved or denied.",
     "feature_not_enabled": "The Invite Request Admin APIs are not enabled for this team.",
+    "failed_to_send_invite": "The actual invite (separate from approval) failed to process. This may happen because the user is disabled, already in the team, etc.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
