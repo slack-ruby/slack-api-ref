@@ -1,7 +1,7 @@
 Slack API Reference
 -------------------
 
-[![Build Status](https://travis-ci.org/slack-ruby/slack-api-ref.svg?branch=master)](https://travis-ci.org/slack-ruby/slack-api-ref)
+[![Build Status](https://app.travis-ci.com/slack-ruby/slack-api-ref.svg?branch=master)](https://app.travis-ci.com/slack-ruby/slack-api-ref)
 
 ![](slack.png)
 
