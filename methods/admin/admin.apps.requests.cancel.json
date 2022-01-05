@@ -1,28 +1,36 @@
 {
-  "group": "rtm",
-  "name": "rtm.connect",
+  "group": "admin",
+  "name": "admin.apps.requests.cancel",
   "deprecated": false,
-  "desc": "Starts a Real Time Messaging session.",
+  "desc": "Cancel approval request for team",
   "args": {
-    "batch_presence_aware": {
-      "required": false,
-      "desc": "Batch presence deliveries via subscription. Enabling changes the shape of presence_change events. See batch presence.",
-      "type": "boolean"
+    "request_id": {
+      "required": true,
+      "desc": "The id of the request to cancel.",
+      "type": "string"
     },
-    "presence_sub": {
+    "enterprise_id": {
       "required": false,
-      "desc": "Only deliver presence events when requested by subscription. See presence subscriptions.",
-      "type": "boolean"
+      "desc": "The ID of the enterprise where this request belongs."
+    },
+    "team_id": {
+      "required": false,
+      "desc": "The ID of the workspace where this request belongs."
     }
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true,\n    \"self\": {\n        \"id\": \"U4X318ZMZ\",\n        \"name\": \"robotoverlord\"\n    },\n    \"team\": {\n        \"domain\": \"slackdemo\",\n        \"id\": \"T2U81E2FP\",\n        \"name\": \"SlackDemo\"\n    },\n    \"url\": \"wss://...\"\n}",
-      "{\n    \"ok\": false,\n    \"error\": \"invalid_auth\"\n}"
+
     ]
   },
   "errors": {
-    "migration_in_progress": "Team is being migrated between servers. See the team_migration_started event documentation for details.",
+    "invalid_request_id": "The request_id passed is invalid.",
+    "feature_not_enabled": "Returned when the Admin APIs feature is not enabled for this team.",
+    "not_an_admin": "This method is only accessible by org owners and admins.",
+    "request_already_resolved": "The app request has already been resolved.",
+    "app_management_app_not_installed_on_org": "The app management app must be installed on the org.",
+    "too_many_teams_provided": "Please provide only team_id OR enterprise_id.",
+    "team_not_found": "Returned when team id is not found.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "access_denied": "Access to a resource specified in the request is denied.",
@@ -38,6 +46,7 @@
     "deprecated_endpoint": "The endpoint has been deprecated.",
     "two_factor_setup_required": "Two factor setup is required.",
     "enterprise_is_restricted": "The method cannot be called from an Enterprise.",
+    "is_bot": "This method cannot be called by a bot user.",
     "invalid_arguments": "The method was either called with invalid arguments or some detail about the arguments passed are invalid, which is more likely when using complex arguments like blocks or attachments.",
     "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
     "invalid_array_arg": "The method was passed an array as an argument. Please only input valid strings.",

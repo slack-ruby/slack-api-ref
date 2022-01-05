@@ -25,6 +25,7 @@
     "missing_scope": "The token used is not granted the specific scope permissions required to complete this request.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
+    "access_denied": "Access to a resource specified in the request is denied.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
     "token_revoked": "Authentication token is for a deleted user or workspace or the app has been removed when using a user token.",
     "token_expired": "Authentication token has expired.",

@@ -26,6 +26,7 @@
     "invalid_channel": "The requested channel couldn’t be linked to an IDP group. It might be a public channel or an externally-shared channel.",
     "not_an_admin": "This token doesn't belong to an Org Admin or Owner.",
     "not_authed": "No authentication token provided.",
+    "access_denied": "Access to a resource specified in the request is denied.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
     "token_revoked": "Authentication token is for a deleted user or workspace or the app has been removed when using a user token.",
     "token_expired": "Authentication token has expired.",

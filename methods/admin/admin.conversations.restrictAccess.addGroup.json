@@ -39,6 +39,7 @@
     "default_channel_restricted": "The channel is a default channel on the workspace.",
     "group_must_not_be_empty": "The IDP group is currently empty.",
     "not_authed": "No authentication token provided.",
+    "access_denied": "Access to a resource specified in the request is denied.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
     "token_revoked": "Authentication token is for a deleted user or workspace or the app has been removed when using a user token.",
     "token_expired": "Authentication token has expired.",
