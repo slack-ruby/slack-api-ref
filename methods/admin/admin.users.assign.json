@@ -43,6 +43,7 @@
     "not_an_admin": "This method wasn't called by an admin.",
     "invited_user_not_created": "The invited user could not be created.",
     "invited_user_not_reactivated": "The invited user could not be reactivated.",
+    "invitor_cannot_see_channel": "The invitor is not part of one or many channels that the user was requested to be added to.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "access_denied": "Access to a resource specified in the request is denied.",
