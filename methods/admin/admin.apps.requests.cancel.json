@@ -20,7 +20,8 @@
   },
   "response": {
     "examples": [
-
+      "{\n    \"ok\": true\n}",
+      "{\n    \"ok\": false,\n    \"error\": \"missing_scope\",\n    \"needed\": \"admin.apps:read\",\n    \"provided\": \"read,client,admin,identify,post,apps\"\n}"
     ]
   },
   "errors": {
