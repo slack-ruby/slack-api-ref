@@ -7,6 +7,11 @@
     "channel_id": {
       "required": true,
       "desc": "The channel to convert to private."
+    },
+    "name": {
+      "required": false,
+      "desc": "Name of private channel to create. Only respected when converting an MPIM.",
+      "type": "string"
     }
   },
   "response": {
