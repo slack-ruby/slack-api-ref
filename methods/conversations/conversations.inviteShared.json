@@ -27,7 +27,8 @@
   },
   "response": {
     "examples": [
-
+      "{\n    \"ok\": true,\n    \"invite_id\": \"I02UKAJ6RJA\",\n    \"is_legacy_shared_channel\": false\n}",
+      "{\n    \"ok\": false,\n    \"error\": \"restricted_action\"\n}"
     ]
   },
   "errors": {
@@ -53,6 +54,7 @@
     "ratelimit": "The rate-limit for this method has been reached. The ratelimit is applied on a per-user basis when you pass the emails parameter.",
     "too_many_emails": "Too many email recipients were passed in the emails parameter.",
     "not_allowed_for_grid_workspace": "This workspace does not have Slack Connect enabled.",
+    "recipients_not_specified": "Bots are required to specify which users to invite.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "access_denied": "Access to a resource specified in the request is denied.",
