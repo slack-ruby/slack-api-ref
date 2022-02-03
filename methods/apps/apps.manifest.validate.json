@@ -8,6 +8,10 @@
       "required": true,
       "desc": "The manifest to be validated. Will be validated against the app manifest schema - read our guide.",
       "type": "manifest object as string"
+    },
+    "app_id": {
+      "required": false,
+      "desc": "The ID of the app whose configuration you want to validate."
     }
   },
   "response": {
