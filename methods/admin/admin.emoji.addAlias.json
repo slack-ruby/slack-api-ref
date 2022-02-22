@@ -6,12 +6,12 @@
   "args": {
     "alias_for": {
       "required": true,
-      "desc": "The alias of the emoji.",
+      "desc": "Name of the emoji for which the alias is being made. Any wrapping whitespace or colons will be automatically trimmed.",
       "type": "string"
     },
     "name": {
       "required": true,
-      "desc": "The name of the emoji to be aliased. Colons (:myemoji:) around the value are not required, although they may be included.",
+      "desc": "The new alias for the specified emoji. Any wrapping whitespace or colons will be automatically trimmed.",
       "type": "string"
     }
   },
