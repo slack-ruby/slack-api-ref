@@ -1,7 +1,7 @@
 {
   "name": "user_typing",
   "desc": "A channel member is typing a message.",
-  "long_desc": "The user_typing event is sent to all members of a channel when a user is typing a message in that channel.",
+  "long_desc": "The user_typing event is sent to all members of a channel when a user is typing a message in that channel. When an event occurs, we will send an HTTP POST request to your Request URL. The outer payload is uniform across all Events API methods, and contains fields like team_id and event. Learn more",
   "required_scope": "RTM",
   "example": {
     "type": "user_typing",

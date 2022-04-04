@@ -1,6 +1,6 @@
 {
   "name": "subteam_updated",
   "desc": "An existing User Group has been updated or its members changed.",
-  "long_desc": "The subteam_updated event is sent to all connections for a workspace when an existing User Group is updated. This event is triggered for changes to the User Group information (name, description, or handle) as well as the members of the group. Clients can use this to update their local list of groups and group members. The users field is truncated at 500, however the user_count field will still show the actual count. If you are only interested in User Group membership changes, consider using the subteam_members_changed event instead. This event type may also arise when a subteam has been disabled.",
+  "long_desc": "The subteam_updated event is sent to all connections for a workspace when an existing User Group is updated. This event is triggered for changes to the User Group information (name, description, or handle) as well as the members of the group. Clients can use this to update their local list of groups and group members. The users field is truncated at 500, however the user_count field will still show the actual count. If you are only interested in User Group membership changes, consider using the subteam_members_changed event instead. This event type may also arise when a subteam has been disabled. When an event occurs, we will send an HTTP POST request to your Request URL. The outer payload is uniform across all Events API methods, and contains fields like team_id and event. Learn more",
   "required_scope": "RTM"
 }

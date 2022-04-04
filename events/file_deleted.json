@@ -1,7 +1,7 @@
 {
   "name": "file_deleted",
   "desc": "A file was deleted.",
-  "long_desc": "The file_deleted event is sent to all connected clients for a workspace when a file is deleted. Unlike most file events, the file property contains a file ID and not a full file object.",
+  "long_desc": "The file_deleted event is sent to all connected clients for a workspace when a file is deleted. Unlike most file events, the file property contains a file ID and not a full file object. This event is not raised if the reason for a file's removal is due to a workspace's file retention policy, as opposed to a user deleting the file. When an event occurs, we will send an HTTP POST request to your Request URL. The outer payload is uniform across all Events API methods, and contains fields like team_id and event. Learn more",
   "required_scope": "RTM",
   "example": {
     "type": "file_deleted",

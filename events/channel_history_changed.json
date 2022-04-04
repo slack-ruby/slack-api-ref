@@ -1,7 +1,7 @@
 {
   "name": "channel_history_changed",
   "desc": "Bulk updates were made to a channel's history.",
-  "long_desc": "A channel_history_changed event is sent to all clients in a channel when bulk changes have occurred to that channel's history. When clients receive this message they should reload chat history for the channel if they have any cached messages before latest. This message is most often triggered as the result of a channel data import by a workspace administrator.",
+  "long_desc": "A channel_history_changed event is sent to all clients in a channel when bulk changes have occurred to that channel's history. When clients receive this message they should reload chat history for the channel if they have any cached messages before latest. This message is most often triggered as the result of a channel data import by a workspace administrator. When an event occurs, we will send an HTTP POST request to your Request URL. The outer payload is uniform across all Events API methods, and contains fields like team_id and event. Learn more",
   "required_scope": "RTM",
   "example": {
     "type": "channel_history_changed",

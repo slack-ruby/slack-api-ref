@@ -1,7 +1,7 @@
 {
   "name": "dnd_updated",
   "desc": "Do not Disturb settings changed for the current user.",
-  "long_desc": "The dnd_updated event is sent to the current user when their Do Not Disturb settings have changed. This event is not available to bot user subscriptions in the Events API.",
+  "long_desc": "The dnd_updated event is sent to the current user when their Do Not Disturb settings have changed. This event is not available to bot user subscriptions in the Events API. When an event occurs, we will send an HTTP POST request to your Request URL. The outer payload is uniform across all Events API methods, and contains fields like team_id and event. Learn more",
   "required_scope": "RTM",
   "example": {
     "type": "dnd_updated",

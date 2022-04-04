@@ -1,7 +1,7 @@
 {
   "name": "channel_left",
   "desc": "You left a channel.",
-  "long_desc": "The channel_left event is sometimes sent to all connections for a user when that user leaves a public channel. It is sometimes withheld. Clients should respond to this message by closing the channel — this means that when a channel is left from client A, it will automatically be closed in client B. In addition to this message, all existing members of the channel will receive a channel_leave message event.",
+  "long_desc": "The channel_left event is sometimes sent to all connections for a user when that user leaves a public channel. It is sometimes withheld. Clients should respond to this message by closing the channel — this means that when a channel is left from client A, it will automatically be closed in client B. In addition to this message, all existing members of the channel will receive a channel_leave message event. When an event occurs, we will send an HTTP POST request to your Request URL. The outer payload is uniform across all Events API methods, and contains fields like team_id and event. Learn more",
   "required_scope": "RTM",
   "example": {
     "type": "channel_left",

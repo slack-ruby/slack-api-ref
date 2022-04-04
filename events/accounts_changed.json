@@ -1,7 +1,7 @@
 {
   "name": "accounts_changed",
   "desc": "The list of accounts a user is signed into has changed.",
-  "long_desc": "The accounts_changed event is used by our web client to maintain a list of logged-in accounts. Other clients should ignore this event.",
+  "long_desc": "The accounts_changed event is used by our web client to maintain a list of logged-in accounts. Other clients should ignore this event. When an event occurs, we will send an HTTP POST request to your Request URL. The outer payload is uniform across all Events API methods, and contains fields like team_id and event. Learn more",
   "required_scope": "RTM",
   "example": {
     "type": "accounts_changed"

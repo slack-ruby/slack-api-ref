@@ -1,7 +1,7 @@
 {
   "name": "pin_removed",
   "desc": "A pin was removed from a channel.",
-  "long_desc": "When an item is un-pinned from a channel, the pin_removed event is sent to all members of that channel. The has_pins property indicates that there are other pinned items in that channel.",
+  "long_desc": "When an item is un-pinned from a channel, the pin_removed event is sent to all members of that channel. The has_pins property indicates that there are other pinned items in that channel. When an event occurs, we will send an HTTP POST request to your Request URL. The outer payload is uniform across all Events API methods, and contains fields like team_id and event. Learn more",
   "required_scope": "RTM",
   "example": {
     "type": "pin_removed",

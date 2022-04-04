@@ -1,6 +1,6 @@
 {
   "name": "star_removed",
   "desc": "A member removed a star.",
-  "long_desc": "When an item is starred, the star_removed event is sent to all connected clients for users who can see the content that was starred. See the stars.list method for details of the structure of the item property.",
+  "long_desc": "When an item is starred, the star_removed event is sent to all connected clients for users who can see the content that was starred. See the stars.list method for details of the structure of the item property. When an event occurs, we will send an HTTP POST request to your Request URL. The outer payload is uniform across all Events API methods, and contains fields like team_id and event. Learn more",
   "required_scope": "RTM"
 }

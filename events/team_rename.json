@@ -1,6 +1,6 @@
 {
   "name": "team_rename",
   "desc": "The workspace name has changed.",
-  "long_desc": "The team_rename event is sent to all connections for a workspace when an admin changes the workspace name. Clients can use this to update the display of the workspace name as soon as it changes. If they don't the client will receive the new name the next time it calls rtm.start.",
+  "long_desc": "The team_rename event is sent to all connections for a workspace when an admin changes the workspace name. Clients can use this to update the display of the workspace name as soon as it changes. If they don't the client will receive the new name the next time it calls rtm.start. When an event occurs, we will send an HTTP POST request to your Request URL. The outer payload is uniform across all Events API methods, and contains fields like team_id and event. Learn more",
   "required_scope": "RTM"
 }

@@ -1,7 +1,7 @@
 {
   "name": "file_created",
   "desc": "A file was created.",
-  "long_desc": "The file_created event is sent to all connected clients for a user when that user uploads a file to Slack. The file property includes the file ID, as well as a top-level file_id. To obtain additional information about the file, use the files.info API method. When a file is shared with other members of the workspace (which can happen at upload time) a file_shared event will also be sent.",
+  "long_desc": "The file_created event is sent to all connected clients for a user when that user uploads a file to Slack. The file property includes the file ID, as well as a top-level file_id. To obtain additional information about the file, use the files.info API method. When a file is shared with other members of the workspace (which can happen at upload time) a file_shared event will also be sent. When an event occurs, we will send an HTTP POST request to your Request URL. The outer payload is uniform across all Events API methods, and contains fields like team_id and event. Learn more",
   "required_scope": "RTM",
   "example": {
     "type": "file_created",

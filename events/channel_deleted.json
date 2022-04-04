@@ -1,7 +1,7 @@
 {
   "name": "channel_deleted",
   "desc": "A channel was deleted.",
-  "long_desc": "The channel_deleted event is sent to all connections for a workspace when a channel is deleted. Clients can use this to update their local cache of non-joined channels.",
+  "long_desc": "The channel_deleted event is sent to all connections for a workspace when a channel is deleted. Clients can use this to update their local cache of non-joined channels. When an event occurs, we will send an HTTP POST request to your Request URL. The outer payload is uniform across all Events API methods, and contains fields like team_id and event. Learn more",
   "required_scope": "RTM",
   "example": {
     "type": "channel_deleted",

@@ -1,7 +1,7 @@
 {
   "name": "pin_added",
   "desc": "A pin was added to a channel.",
-  "long_desc": "When an item is pinned in a channel, the pin_added event is sent to all members of that channel.",
+  "long_desc": "When an item is pinned in a channel, the pin_added event is sent to all members of that channel. When an event occurs, we will send an HTTP POST request to your Request URL. The outer payload is uniform across all Events API methods, and contains fields like team_id and event. Learn more",
   "required_scope": "RTM",
   "example": {
     "type": "pin_added",

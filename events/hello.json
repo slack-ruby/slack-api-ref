@@ -1,7 +1,7 @@
 {
   "name": "hello",
   "desc": "The client has successfully connected to the server.",
-  "long_desc": "The hello event is sent when a connection is opened to the message server. This allows a client to confirm the connection has been correctly opened.",
+  "long_desc": "The hello event is sent when a connection is opened to the message server. This allows a client to confirm the connection has been correctly opened. When an event occurs, we will send an HTTP POST request to your Request URL. The outer payload is uniform across all Events API methods, and contains fields like team_id and event. Learn more",
   "required_scope": "RTM",
   "example": {
     "type": "hello"

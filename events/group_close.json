@@ -1,7 +1,7 @@
 {
   "name": "group_close",
   "desc": "You closed a private channel.",
-  "long_desc": "The group_close event is sent to all connections for a user when a private channel is closed by that user. This event is not available to bot user subscriptions in the Events API.",
+  "long_desc": "The group_close event is sent to all connections for a user when a private channel is closed by that user. This event is not available to bot user subscriptions in the Events API. When an event occurs, we will send an HTTP POST request to your Request URL. The outer payload is uniform across all Events API methods, and contains fields like team_id and event. Learn more",
   "required_scope": "RTM",
   "example": {
     "type": "group_close",

@@ -1,7 +1,7 @@
 {
   "name": "manual_presence_change",
   "desc": "You manually updated your presence.",
-  "long_desc": "The manual_presence_change event is sent to all connections for a user when that user manually updates their presence. Clients can use this to update their local state.",
+  "long_desc": "The manual_presence_change event is sent to all connections for a user when that user manually updates their presence. Clients can use this to update their local state. When an event occurs, we will send an HTTP POST request to your Request URL. The outer payload is uniform across all Events API methods, and contains fields like team_id and event. Learn more",
   "required_scope": "RTM",
   "example": {
     "type": "manual_presence_change",

@@ -1,7 +1,7 @@
 {
   "name": "im_marked",
   "desc": "A direct message read marker was updated.",
-  "long_desc": "The im_marked event is sent to all open connections for a user when that user moves the read cursor in a direct message channel.",
+  "long_desc": "The im_marked event is sent to all open connections for a user when that user moves the read cursor in a direct message channel. When an event occurs, we will send an HTTP POST request to your Request URL. The outer payload is uniform across all Events API methods, and contains fields like team_id and event. Learn more",
   "required_scope": "RTM",
   "example": {
     "type": "im_marked",
