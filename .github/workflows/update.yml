@@ -1,0 +1,29 @@
+name: update
+
+on:
+  schedule:
+    - cron: "15 22 * * *"
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "2.6.5"
+          bundler-cache: true
+      - name: Update
+        run: bundle exec rake api:update
+      - name: Validate
+        run: bundle exec rake api:validate
+      - name: Get current date
+        run: echo "CURRENT_DATE=$(date +%Y/%m/%d)" >> $GITHUB_ENV
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v9
+        with:
+          author_name: Slack API Ref Buildbot
+          author_email: buildbot@slack-api-ref.com
+          message: "Updated from Slack docs, ${{ env.CURRENT_DATE }}"

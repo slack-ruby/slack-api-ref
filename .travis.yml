@@ -1,8 +1,0 @@
-language: ruby
-
-rvm:
-  - 2.6.5
-
-script:
-  - 'if [ "$TRAVIS_EVENT_TYPE" != "cron" ]; then bundle exec rake api:validate; fi'
-  - 'if [ "$TRAVIS_EVENT_TYPE" == "cron" ]; then bash ./scripts/update.sh; fi'

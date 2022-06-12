@@ -1,7 +1,8 @@
 Slack API Reference
 -------------------
 
-[![Build Status](https://app.travis-ci.com/slack-ruby/slack-api-ref.svg?branch=master)](https://app.travis-ci.com/slack-ruby/slack-api-ref)
+[![validate](https://github.com/slack-ruby/slack-api-ref/actions/workflows/validate.yml/badge.svg)](https://github.com/slack-ruby/slack-api-ref/actions/workflows/validate.yml)
+[![update](https://github.com/slack-ruby/slack-api-ref/actions/workflows/update.yml/badge.svg)](https://github.com/slack-ruby/slack-api-ref/actions/workflows/update.yml)
 
 ![](slack.png)
 
