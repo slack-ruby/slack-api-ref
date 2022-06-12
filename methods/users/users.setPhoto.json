@@ -21,8 +21,7 @@
     },
     "image": {
       "required": false,
-      "desc": "File contents via multipart/form-data.",
-      "type": "string"
+      "desc": "File contents via multipart/form-data."
     }
   },
   "response": {

@@ -30,6 +30,7 @@
     "file_not_found": "Value passed for file was invalid.",
     "file_deleted": "The requested file has been deleted.",
     "access_denied": "Access to a resource specified in the request is denied.",
+    "not_visible": "Do not have permission to view the file.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",

@@ -4,6 +4,11 @@
   "deprecated": false,
   "desc": "Search for public or private channels in an Enterprise organization.",
   "args": {
+    "connected_team_ids": {
+      "required": false,
+      "desc": "Array of encoded team IDs, signifying the external orgs to search through.",
+      "type": "array"
+    },
     "cursor": {
       "required": false,
       "desc": "Set cursor to next_cursor returned by the previous call to list items in the next page.",
@@ -36,7 +41,7 @@
     },
     "team_ids": {
       "required": false,
-      "desc": "Comma separated string of team IDs, signifying the workspaces to search through.",
+      "desc": "Comma separated string of team IDs, signifying the internal workspaces to search through.",
       "type": "array"
     }
   },
@@ -50,6 +55,8 @@
     "not_an_admin": "The token provided is not associated with an Org Admin or Owner.",
     "not_an_enterprise": "This endpoint can only be called by an Enterprise organization.",
     "team_not_found": "One of the workspaces provided in the list wasn't found.",
+    "connected_team_passed_in_is_not_top_level_team": "One of the orgs provided in the external connected teams filter is not a top level team.",
+    "external_team_not_connected_to_this_org": "One of the teams provided in the external connected teams filter is not connected to the org.",
     "not_allowed": "The authenticated user does not have the permission to call this method.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "invalid_cursor": "The provided cursor is not valid, often due to not urlencoding query parameters.",

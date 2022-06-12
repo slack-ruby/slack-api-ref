@@ -17,8 +17,8 @@
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true\n}",
-      "{\n    \"ok\": false,\n    \"error\": \"invalid_auth\"\n}"
+      "{\n    \"ok\": true,\n    \"channel\": {\n        \"id\": \"C12345678\",\n        \"name\": \"tips-and-tricks\",\n        \"is_channel\": true,\n        \"is_group\": false,\n        \"is_im\": false,\n        \"is_mpim\": false,\n        \"is_private\": false,\n        \"created\": 1649195947,\n        \"is_archived\": false,\n        \"is_general\": false,\n        \"unlinked\": 0,\n        \"name_normalized\": \"tips-and-tricks\",\n        \"is_shared\": false,\n        \"is_frozen\": false,\n        \"is_org_shared\": false,\n        \"is_pending_ext_shared\": false,\n        \"pending_shared\": [],\n        \"parent_conversation\": null,\n        \"creator\": \"U12345678\",\n        \"is_ext_shared\": false,\n        \"shared_team_ids\": [\n            \"T12345678\"\n        ],\n        \"pending_connected_team_ids\": [],\n        \"is_member\": true,\n        \"last_read\": \"1649869848.627809\",\n        \"latest\": {\n            \"type\": \"message\",\n            \"subtype\": \"channel_topic\",\n            \"ts\": \"1649952691.429799\",\n            \"user\": \"U12345678\",\n            \"text\": \"set the channel topic: Apply topically for best effects\",\n            \"topic\": \"Apply topically for best effects\"\n        },\n        \"unread_count\": 1,\n        \"unread_count_display\": 0,\n        \"topic\": {\n            \"value\": \"Apply topically for best effects\",\n            \"creator\": \"U12345678\",\n            \"last_set\": 1649952691\n        },\n        \"purpose\": {\n            \"value\": \"\",\n            \"creator\": \"\",\n            \"last_set\": 0\n        },\n        \"previous_names\": []\n    }\n}",
+      "{\n    \"ok\": false,\n    \"error\": \"invalid_arguments\",\n    \"response_metadata\": {\n        \"messages\": [\n            \"[ERROR] missing required field: topic\"\n        ]\n    }\n}"
     ]
   },
   "errors": {

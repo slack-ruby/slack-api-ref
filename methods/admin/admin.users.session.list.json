@@ -27,7 +27,7 @@
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true,\n    \"active_sessions\": [\n        {\n            \"user_id\": \"string\",\n            \"team_id\": \"string\",\n            \"session_id\": 12345,\n            \"recent\": {\n                \"device_hardware\": \"string\",\n                \"os\": \"string\",\n                \"os_version\": \"string\",\n                \"slack_client_version\": \"string\",\n                \"ip\": \"string\"\n            },\n            \"created\": {\n                \"device_hardware\": \"string\",\n                \"os\": \"string\",\n                \"os_version\": \"string\",\n                \"slack_client_version\": \"string\",\n                \"ip\": \"string\"\n            }\n        }\n    ]\n}"
+      "{\n    \"ok\": true,\n    \"active_sessions\": [\n        {\n            \"user_id\": \"U012S9M77JP\",\n            \"team_id\": \"E011E2SBBFC\",\n            \"session_id\": 1112275520242,\n            \"recent\": {\n                \"device_hardware\": \"Intel\",\n                \"os\": \"OS X\",\n                \"os_version\": \"10.15.7\",\n                \"slack_client_version\": \"91.0.4472.77\",\n                \"ip\": \"24.6.145.138\"\n            },\n            \"created\": {\n                \"device_hardware\": \"Intel\",\n                \"os\": \"OS X\",\n                \"os_version\": \"10.15.7\",\n                \"slack_client_version\": \"91.0.4472.77\",\n                \"ip\": \"24.6.145.138\"\n            }\n        }\n    ]\n}"
     ]
   },
   "errors": {

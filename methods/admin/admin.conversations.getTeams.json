@@ -21,7 +21,7 @@
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true,\n    \"team_ids\": \"T1234,T5679\"\n}"
+      "{\n    \"ok\": true,\n    \"team_ids\": [\n        \"T1234\",\n        \"T5679\"\n    ]\n}"
     ]
   },
   "errors": {

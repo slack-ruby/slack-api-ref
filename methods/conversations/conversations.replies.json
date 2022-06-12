@@ -21,12 +21,12 @@
     },
     "inclusive": {
       "required": false,
-      "desc": "Include messages with latest or oldest timestamp in results only when either timestamp is specified.",
+      "desc": "Include messages with oldest or latest timestamps in results. Ignored unless either timestamp is specified.",
       "type": "boolean"
     },
     "latest": {
       "required": false,
-      "desc": "End of time range of messages to include in results.",
+      "desc": "Only messages before this Unix timestamp will be included in results.",
       "type": "timestamp"
     },
     "limit": {
@@ -36,7 +36,7 @@
     },
     "oldest": {
       "required": false,
-      "desc": "Start of time range of messages to include in results.",
+      "desc": "Only messages after this Unix timestamp will be included in results.",
       "type": "timestamp"
     }
   },

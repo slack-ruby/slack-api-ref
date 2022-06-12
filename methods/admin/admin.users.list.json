@@ -16,7 +16,7 @@
     },
     "team_id": {
       "required": false,
-      "desc": "The ID (T1234) of the workspace."
+      "desc": "The ID (T1234) of the workspace. The team_id is required if you use an org-level token."
     }
   },
   "response": {

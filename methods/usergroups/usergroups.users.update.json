@@ -33,7 +33,7 @@
   },
   "errors": {
     "permission_denied": "The user does not have permission to update the list of users for a User Group.",
-    "no_user_provided": "Either the users field wasn't provided or an empty value was passed.",
+    "no_users_provided": "Either the users field wasn't provided or an empty value was passed.",
     "invalid_users": "Value passed for users was empty or invalid.",
     "plan_upgrade_required": "This workspace does not have access to User Groups, as that feature is only available on Standard and above plans.",
     "subteam_max_users_exceeded": "Exceeds maximum supported number of users per subteam.",

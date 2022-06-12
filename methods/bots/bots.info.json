@@ -12,7 +12,7 @@
     "team_id": {
       "required": false,
       "desc": "encoded team id or enterprise id where the bot exists, required if org token is used.",
-      "type": "team"
+      "type": "string"
     }
   },
   "response": {

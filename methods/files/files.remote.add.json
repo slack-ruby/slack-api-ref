@@ -26,13 +26,11 @@
     },
     "indexable_file_contents": {
       "required": false,
-      "desc": "A text file (txt, pdf, doc, etc.) containing textual search terms that are used to improve discovery of the remote file.",
-      "type": "string"
+      "desc": "A text file (txt, pdf, doc, etc.) containing textual search terms that are used to improve discovery of the remote file."
     },
     "preview_image": {
       "required": false,
-      "desc": "Preview of the document via multipart/form-data.",
-      "type": "string"
+      "desc": "Preview of the document via multipart/form-data."
     }
   },
   "response": {

@@ -26,13 +26,11 @@
     },
     "indexable_file_contents": {
       "required": false,
-      "desc": "File containing contents that can be used to improve searchability for the remote file.",
-      "type": "string"
+      "desc": "File containing contents that can be used to improve searchability for the remote file."
     },
     "preview_image": {
       "required": false,
-      "desc": "Preview of the document via multipart/form-data.",
-      "type": "string"
+      "desc": "Preview of the document via multipart/form-data."
     },
     "title": {
       "required": false,

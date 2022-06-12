@@ -39,6 +39,11 @@
       "desc": "Find and link channel names and usernames.",
       "type": "boolean"
     },
+    "metadata": {
+      "required": false,
+      "desc": "JSON object with event_type and event_payload fields, presented as a URL-encoded string. Metadata you post to Slack is accessible to any app or user who is a member of that workspace.",
+      "type": "string"
+    },
     "parse": {
       "required": false,
       "desc": "Change how messages are treated. Defaults to none. See chat.postMessage.",
@@ -76,6 +81,7 @@
     "time_in_past": "value passed for post_time was in the past.",
     "time_too_far": "value passed for post_time was too far into the future.",
     "channel_not_found": "Value passed for channel was invalid.",
+    "metadata_too_large": "Metadata exceeds size limit.",
     "not_in_channel": "Cannot post user messages to a channel they are not in.",
     "is_archived": "Channel has been archived.",
     "msg_too_long": "Message text is too long.",
@@ -89,6 +95,10 @@
     "slack_connect_file_link_sharing_blocked": "Admin has disabled Slack File sharing in all Slack Connect communications.",
     "invalid_blocks": "Blocks submitted with this message are not valid.",
     "invalid_blocks_format": "The blocks is not a valid JSON object or doesn't match the Block Kit syntax.",
+    "restricted_too_many": "Too many messages were scheduled in the channel for a given period. See usage info for additional details.",
+    "invalid_metadata_format": "Invalid metadata format provided.",
+    "invalid_metadata_schema": "Invalid metadata schema provided.",
+    "metadata_must_be_sent_from_app": "Message metadata can only be posted or updated using an app token.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "access_denied": "Access to a resource specified in the request is denied.",

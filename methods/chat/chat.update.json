@@ -39,6 +39,11 @@
       "desc": "Find and link channel names and usernames. Defaults to none. If you do not specify a value for this field, the original value set for the message will be overwritten with the default, none.",
       "type": "boolean"
     },
+    "metadata": {
+      "required": false,
+      "desc": "JSON object with event_type and event_payload fields, presented as a URL-encoded string. If you don't include this field, the message's previous metadata will be retained. To remove previous metadata, include an empty object for this field. Metadata you post to Slack is accessible to any app or user who is a member of that workspace.",
+      "type": "string"
+    },
     "parse": {
       "required": false,
       "desc": "Change how messages are treated. Defaults to client, unlike chat.postMessage. Accepts either none or full. If you do not specify a value for this field, the original value set for the message will be overwritten with the default, client.",
@@ -79,6 +84,10 @@
     "invalid_attachments": "The attachments were invalid.",
     "external_channel_migrating": "The channel is in the process of migrating and so the message cannot be updated at this time.",
     "slack_connect_file_link_sharing_blocked": "Admin has disabled Slack File sharing in all Slack Connect communications.",
+    "metadata_too_large": "Metadata exceeds size limit.",
+    "invalid_metadata_schema": "Invalid metadata schema provided.",
+    "invalid_metadata_format": "Invalid metadata format provided.",
+    "metadata_must_be_sent_from_app": "Message metadata can only be posted or updated using an app token.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "access_denied": "Access to a resource specified in the request is denied.",

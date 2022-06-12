@@ -44,6 +44,11 @@
       "desc": "Find and link channel names and usernames.",
       "type": "boolean"
     },
+    "metadata": {
+      "required": false,
+      "desc": "JSON object with event_type and event_payload fields, presented as a URL-encoded string. Metadata you post to Slack is accessible to any app or user who is a member of that workspace.",
+      "type": "string"
+    },
     "mrkdwn": {
       "required": false,
       "desc": "Disable Slack markup parsing by setting to false. Enabled by default.",
@@ -108,7 +113,11 @@
     "invalid_blocks": "Blocks submitted with this message are not valid.",
     "invalid_blocks_format": "The blocks is not a valid JSON object or doesn't match the Block Kit syntax.",
     "messages_tab_disabled": "Messages tab for the app is disabled.",
+    "metadata_too_large": "Metadata exceeds size limit.",
     "team_access_not_granted": "The token used is not granted the specific workspace access required to complete this request.",
+    "invalid_metadata_format": "Invalid metadata format provided.",
+    "invalid_metadata_schema": "Invalid metadata schema provided.",
+    "metadata_must_be_sent_from_app": "Message metadata can only be posted or updated using an app token.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "access_denied": "Access to a resource specified in the request is denied.",

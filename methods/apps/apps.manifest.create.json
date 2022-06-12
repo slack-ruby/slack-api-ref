@@ -22,6 +22,7 @@
     "failed_adding_collaborator": "Failed writing a collaborator record for this new app.",
     "unknown_method": "Unknown method.",
     "ratelimited": "The request has been ratelimited. Refer to the Retry-After header for when to retry the request.",
+    "client_secret_env_key_not_found": "Unable to find the specified client_secret_env.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "access_denied": "Access to a resource specified in the request is denied.",

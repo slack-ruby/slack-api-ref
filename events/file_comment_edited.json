@@ -2,5 +2,14 @@
   "name": "file_comment_edited",
   "desc": "A file comment was edited.",
   "long_desc": "This event is no longer served. File comments have been phased out in favor of regular messages and threads—read our changelog entry for more information. The file_comment_edited event is sent when a file comment is edited. It is sent to all connected clients for users who can see the file. Clients can use this notification to update comments in real-time for open files. The file property includes the file ID, as well as a top-level file_id. To obtain additional information about the file, use the files.info API method. When an event occurs, we will send an HTTP POST request to your Request URL. The outer payload is uniform across all Events API methods, and contains fields like team_id and event. Learn more",
-  "required_scope": "RTM"
+  "required_scope": "RTM",
+  "example": {
+    "type": "file_comment_edited",
+    "comment": {
+    },
+    "file_id": "F2147483862",
+    "file": {
+      "id": "F2147483862"
+    }
+  }
 }
