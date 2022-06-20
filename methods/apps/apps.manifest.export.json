@@ -17,6 +17,7 @@
   },
   "errors": {
     "invalid_app_id": "The app ID passed is invalid.",
+    "app_not_eligible": "The specified app is not elgible for this API.",
     "app_not_found": "The specified app was not found.",
     "unknown_method": "This method does not exist.",
     "failed_export": "Failed to export manifest for given app ID.",

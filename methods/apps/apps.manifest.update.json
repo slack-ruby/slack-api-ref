@@ -20,6 +20,7 @@
     ]
   },
   "errors": {
+    "app_not_eligible": "The specified app is not elgible for this API.",
     "invalid_app_id": "The app id passed is invalid.",
     "invalid_manifest": "The provided manifest file does not validate against schema.",
     "invalid_app": "An app created from the provided manifest would not be valid.",
