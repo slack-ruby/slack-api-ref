@@ -73,6 +73,7 @@
     "failed_to_validate_expiration": "expiration_ts was invalid.",
     "failed_to_validate_custom_message": "extra_message was invalid.",
     "failed_to_send_invite": "The invite failed to send.",
+    "not_an_admin": "The user token does not have admin privileges.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "access_denied": "Access to a resource specified in the request is denied.",
