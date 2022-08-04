@@ -24,7 +24,7 @@
     "feature_not_enabled": "The Admin APIs feature is not enabled for this team.",
     "not_an_admin": "The token provided is not associated with an org admin.",
     "channel_not_found": "Value passed for channel was invalid.",
-    "channel_type_not_supported": "Value passed for channel was a group dm, direct message, or general channel.",
+    "channel_type_not_supported": "Value given for channel_id was a #general channel.",
     "restricted_action": "A workspace preference prevents the authenticated user from archiving.",
     "missing_scope": "The token used is not granted the specific scope permissions required to complete this request.",
     "could_not_set_channel_pref": "Setting the preference or permission failed.",
