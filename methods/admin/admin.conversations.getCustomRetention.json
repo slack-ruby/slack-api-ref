@@ -12,7 +12,7 @@
   },
   "response": {
     "examples": [
-
+      "{\n    \"ok\": true,\n    \"is_policy_enabled\": true,\n    \"duration_days\": 70\n}"
     ]
   },
   "errors": {
