@@ -11,7 +11,8 @@
   },
   "response": {
     "examples": [
-
+      "{\n    \"ok\": true\n}",
+      "{\n    \"ok\": false,\n    \"error\": \"feature_not_enabled\"\n}"
     ]
   },
   "errors": {

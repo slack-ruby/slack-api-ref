@@ -21,7 +21,7 @@
   },
   "response": {
     "examples": [
-
+      "{\n    \"ok\": true,\n    \"barrier\": {\n        \"id\": \"Ba03T70KB2H3\",\n        \"enterprise_id\": \"E03055H6DAS\",\n        \"primary_usergroup\": {\n            \"id\": \"S03TZK4A9H6\",\n            \"name\": \"Company That Pays Contracting Teams\"\n        },\n        \"barriered_from_usergroups\": [\n            {\n                \"id\": \"S03TNHGAUGZ\",\n                \"name\": \"Another External Contracting Team\"\n            },\n            {\n                \"id\": \"S03TNHF56UR\",\n                \"name\": \"External Contracting Team\"\n            }\n        ],\n        \"restricted_subjects\": [\n            \"im\",\n            \"mpim\",\n            \"call\"\n        ],\n        \"date_update\": 1660224825\n    }\n}"
     ]
   },
   "errors": {
