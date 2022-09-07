@@ -2,11 +2,11 @@
   "group": "admin",
   "name": "admin.conversations.removeCustomRetention",
   "deprecated": false,
-  "desc": "This API endpoint can be used by any admin to remove a channel's retention policy.",
+  "desc": "This API endpoint can be used by any admin to remove a conversation's retention policy.",
   "args": {
     "channel_id": {
       "required": true,
-      "desc": "The channel to set the retention policy for.",
+      "desc": "The conversation to set the retention policy for.",
       "type": "string"
     }
   },
