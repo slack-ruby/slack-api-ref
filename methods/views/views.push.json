@@ -4,15 +4,20 @@
   "deprecated": false,
   "desc": "Push a view onto the stack of a root view.",
   "args": {
-    "trigger_id": {
-      "required": true,
-      "desc": "Exchange a trigger to post to the user.",
-      "type": "string"
-    },
     "view": {
       "required": true,
       "desc": "A view payload. This must be a JSON-encoded string.",
       "type": "view as string"
+    },
+    "trigger_id": {
+      "required": false,
+      "desc": "Exchange a trigger to post to the user.",
+      "type": "string"
+    },
+    "interactivity_pointer": {
+      "required": false,
+      "desc": "Exchange an interactivity pointer to post to the user.",
+      "type": "string"
     }
   },
   "response": {
