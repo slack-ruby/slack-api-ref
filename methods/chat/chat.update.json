@@ -88,6 +88,7 @@
     "invalid_metadata_schema": "Invalid metadata schema provided.",
     "invalid_metadata_format": "Invalid metadata format provided.",
     "metadata_must_be_sent_from_app": "Message metadata can only be posted or updated using an app token.",
+    "block_mismatch": "Rich-text blocks cannot be replaced with non-rich-text blocks.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "access_denied": "Access to a resource specified in the request is denied.",
