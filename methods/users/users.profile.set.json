@@ -42,6 +42,7 @@
     "too_long": "You attempted to set a custom status but it was longer than the maximum allowed, 100.",
     "must_clear_both_status_text_and_status_emoji": "Clearing the status requires setting both status_text and status_emoji to ''.",
     "email_taken": "email taken.",
+    "sudo_required": "Request requires sudo session.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "access_denied": "Access to a resource specified in the request is denied.",
