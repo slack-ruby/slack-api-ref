@@ -13,6 +13,11 @@
       "required": true,
       "desc": "Channel to remove bookmark.",
       "type": "string"
+    },
+    "quip_section_id": {
+      "required": false,
+      "desc": "Quip section ID to unbookmark.",
+      "type": "string"
     }
   },
   "response": {
