@@ -19,6 +19,11 @@
       "desc": "Paginate through collections of data by setting the cursor parameter to a next_cursor attribute returned by a previous request's response_metadata. Default value fetches the first \"page\" of the collection. See pagination for more detail.",
       "type": "string"
     },
+    "include_all_metadata": {
+      "required": false,
+      "desc": "Return all metadata associated with this message.",
+      "type": "boolean"
+    },
     "inclusive": {
       "required": false,
       "desc": "Include messages with oldest or latest timestamps in results. Ignored unless either timestamp is specified.",
