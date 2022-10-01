@@ -37,6 +37,8 @@ module SlackApi
     def process_method(page, default_data = {})
       method_page = ensure!(page, '.apiMethodPage', default_data[:method_name])
       desc = method_page.search('.apiReference__mainDescription').text.gsub("’", "'")
+      return if desc.downcase.start_with? 'deprecated:'
+
       args, fields = parse_args(method_page, default_data)
       errors = parse_errors(method_page, default_data)
       response = parse_response(method_page, default_data)
