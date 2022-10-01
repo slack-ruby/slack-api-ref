@@ -1,16 +1,16 @@
 Contributing
 ============
 
-This project is work of [many contributors](https://github.com/dblock/slack-api-ref/graphs/contributors). You're encouraged to submit [pull requests](https://github.com/dblock/slack-api-ref/pulls) and [propose topics](https://github.com/dblock/slack-api-ref/issues).
+This project is work of [many contributors](https://github.com/slack-ruby/slack-api-ref/graphs/contributors). You're encouraged to submit [pull requests](https://github.com/dblock/slack-api-ref/pulls) and [propose topics](https://github.com/dblock/slack-api-ref/issues).
 
 #### Fork the Project
 
-Fork the [project on Github](https://github.com/dblock/slack-api-ref) and check out your copy.
+Fork the [project on Github](https://github.com/slack-ruby/slack-api-ref) and check out your copy.
 
 ```
 git clone https://github.com/contributor/slack-api-ref.git
 cd slack-api-ref
-git remote add upstream https://github.com/dblock/slack-api-ref.git
+git remote add upstream https://github.com/slack-ruby/slack-api-ref.git
 ```
 
 #### Create a Topic Branch
