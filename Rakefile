@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'json'
 require 'json-schema'
 require 'spidey'
@@ -8,4 +10,3 @@ require 'fileutils'
 Bundler.setup :default, :development
 
 load 'tasks/update.rake'
-

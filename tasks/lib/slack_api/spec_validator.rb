@@ -1,6 +1,8 @@
-module SlackApi
-  class SpecValidator
+# frozen_string_literal: true
 
+module SlackApi
+  # Validates JSON against an expected schema
+  class SpecValidator
     def initialize(schema)
       @schema = schema
     end

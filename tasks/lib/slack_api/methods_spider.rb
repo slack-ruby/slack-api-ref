@@ -1,4 +1,7 @@
+# frozen_string_literal: true
+
 module SlackApi
+  # Scrapes Slack Web API method
   class MethodsSpider < BaseSpider
     handle 'https://api.slack.com/methods', :process_list
 
@@ -7,18 +10,18 @@ module SlackApi
       list = methods_page.search('.apiMethodPage__methodList')
       ref = list.search('[data-automount-component=ApiDocsFilterableReferenceList]')
       data = JSON.parse(ref.attribute('data-automount-props'))
-      raise(ElementNotFound, "Could not parse methods reference") unless data['items'].any?
+      raise(ElementNotFound, 'Could not parse methods reference') unless data['items'].any?
 
       groups = Set.new
-      data["items"].each do |method|
+      data['items'].each do |method|
         next unless method['isPublic']
         next if method['isDeprecated']
 
-        groups += method["groups"]
-        method_name = method["name"]
-        method_group = method["groups"].first.split('.').first
-        file_name = 'methods/' + method_group + '/' + method_name + '.json'
-        method_url = resolve_url(method["link"], page)
+        groups += method['groups']
+        method_name = method['name']
+        method_group = method['groups'].first.split('.').first
+        file_name = "methods/#{method_group}/#{method_name}.json"
+        method_url = resolve_url(method['link'], page)
         handle method_url,
                :process_method,
                filename: file_name,
@@ -28,7 +31,7 @@ module SlackApi
       end
 
       groups.each do |group|
-        file_name = 'groups/' + group + '.json'
+        file_name = "groups/#{group}.json"
         json_hash = { name: group }
         record(file_name: file_name, json: JSON.pretty_generate(json_hash))
       end
@@ -36,7 +39,7 @@ module SlackApi
 
     def process_method(page, default_data = {})
       method_page = ensure!(page, '.apiMethodPage', default_data[:method_name])
-      desc = method_page.search('.apiReference__mainDescription').text.gsub("’", "'")
+      desc = method_page.search('.apiReference__mainDescription').text.gsub('’', "'")
       return if desc.downcase.start_with? 'deprecated:'
 
       args, fields = parse_args(method_page, default_data)
@@ -68,19 +71,19 @@ module SlackApi
         type = massage_type(name,
                             row.search('.apiMethodPage__argumentType').text,
                             default_data)
-        required = row.search('.apiMethodPage__argumentOptionality--required').any? ? true : false
+        required = row.search('.apiMethodPage__argumentOptionality--required').any?
 
         desc = row.search('.apiMethodPage__argumentDesc p')
           .text
           .tap { |t| t.slice!("\n") }
-          .tap { |t| (t[-1] != '.') ? t << '.' : t }
-          .gsub("’", "'")
+          .tap { |t| t << '.' unless t.end_with?('.') }
+          .gsub('’', "'")
         example = row.search('.apiReference__example__code').first&.text
 
         case name
-        when 'token' then
+        when 'token'
           # ignore token, always required
-        when 'count', 'page' then
+        when 'count', 'page'
           fields['has_paging'] = true
           fields['default_count'] = 100
         else
@@ -101,7 +104,7 @@ module SlackApi
       when 'latest', 'oldest', 'ts' then 'timestamp'
       when 'file' then 'file'
       when 'bot', 'user' then 'user'
-      when 'channel' then
+      when 'channel'
         case default_data[:method_group]
         when 'im' then 'im'
         when 'mpim' then 'mpim'
@@ -123,11 +126,12 @@ module SlackApi
       responses.each do |response|
         response.search('pre').each do |pre|
           text = pre.text.strip
-          next unless text =~ /^\{.*\}$/m
+          next unless text =~ /^\{.*}$/m
+
           examples.push(text)
         end
       end
-      { "examples" => examples }
+      { 'examples' => examples }
     end
 
     def parse_errors(api_page, default_data = {})
@@ -138,7 +142,9 @@ module SlackApi
         next if row.search('th').any?
 
         name = row.search('[data-label=Error]').text
-        desc = row.search('[data-label=Description]').text.tap { |t| t.slice!("\n") }.tap { |t| (t[-1] != '.') ? t << '.' : t }
+        desc = row.search('[data-label=Description]').text
+          .tap { |t| t.slice!("\n") }
+          .tap { |t| t << '.' unless t.end_with?('.') }
 
         errors[name] = desc
       end
