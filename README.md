@@ -27,7 +27,7 @@ If you need to trigger an update right now, run `rake api:update`. To check if a
 
 The reference is used by the following client projects to generate API client code.
 
-* [slack-ruby-client](https://github.com/dblock/slack-ruby-client): Slack Ruby Client
+* [slack-ruby-client](https://github.com/slack-ruby/slack-ruby-client): Slack Ruby Client
 
 ### Slack
 
