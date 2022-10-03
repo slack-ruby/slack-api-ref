@@ -1,4 +1,7 @@
+# frozen_string_literal: true
+
 module SlackApi
+  # Abstract base class for each Spider implementation
   class BaseSpider < Spidey::AbstractSpider
     class ElementNotFound < StandardError; end
 

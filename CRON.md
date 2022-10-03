@@ -1,6 +1,6 @@
 # GitHub Actions cron support
 
-This project uses a [GitHub Actions cronjob](https://github.com/slack-ruby/slack-api-ref/actions/workflows/update.yml) to automatically sync with the offical Slack documentation once per day.
+This project uses a [GitHub Actions cronjob](https://github.com/slack-ruby/slack-api-ref/actions/workflows/update.yml) to automatically sync with the official Slack documentation once per day.
 
 # Running manually
 

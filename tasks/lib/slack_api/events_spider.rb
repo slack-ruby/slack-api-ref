@@ -1,4 +1,7 @@
+# frozen_string_literal: true
+
 module SlackApi
+  # Scrapes Slack events
   class EventsSpider < BaseSpider
     handle 'https://api.slack.com/events', :process_list
 
@@ -7,9 +10,9 @@ module SlackApi
       list = events_page.search('.apiEventPage__eventList')
       ref = list.search('[data-automount-component=ApiDocsFilterableReferenceList]')
       data = JSON.parse(ref.attribute('data-automount-props'))
-      raise(ElementNotFound, "Could not parse events reference") unless data['items'].any?
+      raise(ElementNotFound, 'Could not parse events reference') unless data['items'].any?
 
-      data["items"].each do |event|
+      data['items'].each do |event|
         next unless event['isPublic']
         next if event['isDeprecated']
         next unless event['groups'].include?('RTM')
@@ -30,24 +33,29 @@ module SlackApi
 
       json_hash = {
         'name' => data[:name],
-        'desc' => data[:desc] + '.',
+        'desc' => "#{data[:desc]}.",
         'long_desc' => long_desc,
         'required_scope' => data[:required_scope]
       }
 
-      example = JSON.parse(event_page.search('.apiDocsPage__markdownOutput pre:first code')
-        .text
-        .gsub('…', '')
-        .gsub('...', '')
-        .gsub("\n", ' ')
-        .gsub(/\s+/, ' ')
-        .gsub(', }', '}')
-        .gsub(', ]', ']')
-      ) rescue nil
+      example = begin
+        JSON.parse(
+          event_page.search('.apiDocsPage__markdownOutput pre:first code')
+            .text
+            .gsub('…', '')
+            .gsub('...', '')
+            .gsub("\n", ' ')
+            .gsub(/\s+/, ' ')
+            .gsub(', }', '}')
+            .gsub(', ]', ']')
+        )
+      rescue StandardError
+        nil
+      end
 
       json_hash['example'] = example if example
 
-      record(file_name: 'events/' + data[:name] + '.json', json: JSON.pretty_generate(json_hash))
+      record(file_name: "events/#{data[:name]}.json", json: JSON.pretty_generate(json_hash))
     end
   end
 end
