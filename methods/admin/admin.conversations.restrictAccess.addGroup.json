@@ -38,6 +38,7 @@
     "invalid_channel_type": "The channel is a public channel, a multi-party direct message, a direct message, or is externally-shared.",
     "default_channel_restricted": "The channel is a default channel on the workspace.",
     "group_must_not_be_empty": "The IDP group is currently empty.",
+    "no_channel_memberships": "The channel has no members.",
     "not_authed": "No authentication token provided.",
     "access_denied": "Access to a resource specified in the request is denied.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
