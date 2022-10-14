@@ -2,7 +2,7 @@
   "group": "files",
   "name": "files.getUploadURLExternal",
   "deprecated": false,
-  "desc": "Gets a URL for an edge external upload",
+  "desc": "Gets a URL for an edge external file upload",
   "args": {
     "filename": {
       "required": true,
@@ -27,7 +27,8 @@
   },
   "response": {
     "examples": [
-
+      "{\n    \"ok\": true,\n    \"upload_url\": \"https://files.slack.com/upload/v1/ABC123...\",\n    \"file_id\": \"F123ABC456\"\n}",
+      "{\n    \"ok\": false,\n    \"error\": \"invalid_auth\"\n}"
     ]
   },
   "errors": {
