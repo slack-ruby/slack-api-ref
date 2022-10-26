@@ -35,7 +35,7 @@
     "invalid_arguments": "The method was either called with invalid arguments or some detail about the arguments passed are invalid, which is more likely when using complex arguments like blocks or attachments.",
     "invalid_date": "The date argument was invalid.",
     "missing_scope": "The token used is not granted the specific scope permissions required to complete this request.",
-    "not_an_enterprise": "The user token does not belong to an enterprise.",
+    "feature_not_available": "The user token does not belong to an Enterprise or Business+ team.",
     "not_an_admin": "The user token does not have admin privileges.",
     "feature_not_enabled": "This feature is not enabled on your workspace.",
     "member_analytics_disabled": "Member analytics are disabled for your organization.",
