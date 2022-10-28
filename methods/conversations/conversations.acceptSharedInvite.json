@@ -29,8 +29,7 @@
     },
     "team_id": {
       "required": false,
-      "desc": "The ID of the workspace to accept the channel in. If an org-level token is used to call this method, the team_id argument is required.",
-      "type": "string"
+      "desc": "The ID of the workspace to accept the channel in. If an org-level token is used to call this method, the team_id argument is required."
     }
   },
   "response": {
