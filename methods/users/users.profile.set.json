@@ -16,7 +16,7 @@
     },
     "user": {
       "required": false,
-      "desc": "ID of user to change. This argument may only be specified by team admins on paid teams.",
+      "desc": "ID of user to change. This argument may only be specified by admins on paid teams.",
       "type": "user"
     },
     "value": {
