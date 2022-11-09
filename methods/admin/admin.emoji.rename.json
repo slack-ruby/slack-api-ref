@@ -30,6 +30,7 @@
     "error_invalid_emoji_to_rename": "Value passed for name was invalid.",
     "failed_to_fetch_active_team": "There are no active teams on the org and we need at least one.",
     "failed_to_rename_emoji": "The emoji could not be renamed.",
+    "cannot_resolve_alias": "The alias emoji could not be resolved.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "access_denied": "Access to a resource specified in the request is denied.",
