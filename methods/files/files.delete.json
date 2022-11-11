@@ -21,6 +21,7 @@
     "file_deleted": "The file has already been deleted.",
     "cant_delete_file": "Authenticated user does not have permission to delete this file.",
     "file_deleting_disabled": "This functionality is disabled.",
+    "delete_not_allowed": "Error returned when the requested file does not support deletion.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "access_denied": "Access to a resource specified in the request is denied.",
