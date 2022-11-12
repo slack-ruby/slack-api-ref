@@ -62,6 +62,7 @@
     "slack_connect_clip_sharing_blocked": "Admin has disabled Clip sharing in Slack Connect channels.",
     "slack_connect_blocked_file_type": "File uploads with certain types are blocked in all Slack Connect communications.",
     "malware_detected": "This file may contain a virus or other malware and can't be uploaded to Slack.",
+    "post_contents_too_large": "File content is larger than 130kb.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "access_denied": "Access to a resource specified in the request is denied.",
