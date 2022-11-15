@@ -110,6 +110,7 @@
     "as_user_not_supported": "The as_user parameter does not function with workspace apps.",
     "ekm_access_denied": "Administrators have suspended the ability to post a message.",
     "slack_connect_file_link_sharing_blocked": "Admin has disabled Slack File sharing in all Slack Connect communications.",
+    "slack_connect_canvas_link_sharing_blocked": "Admin has disabled Canvas File sharing in all Slack Connect communications.",
     "invalid_blocks": "Blocks submitted with this message are not valid.",
     "invalid_blocks_format": "The blocks is not a valid JSON object or doesn't match the Block Kit syntax.",
     "messages_tab_disabled": "Messages tab for the app is disabled.",

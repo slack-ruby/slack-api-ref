@@ -33,6 +33,7 @@
     "could_not_get_teams": "Could not fetch the workspaces that the channel is shared with in this organization.",
     "invalid_cursor": "The provided cursor wasn't valid.",
     "invalid_limit": "The value passed for limit wasn't valid.",
+    "external_channel_migrating": "The channel is actively being migrated.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "access_denied": "Access to a resource specified in the request is denied.",
