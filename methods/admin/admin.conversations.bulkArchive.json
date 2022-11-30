@@ -21,6 +21,7 @@
     "team_not_found": "Team ID provided does not exist.",
     "invalid_enterprise": "Enterprise does not exist.",
     "action_already_in_progress": "Another bulk action request is currently in progress.",
+    "no_valid_channels": "All input channels are invalid.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "access_denied": "Access to a resource specified in the request is denied.",
