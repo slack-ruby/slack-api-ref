@@ -21,7 +21,7 @@
     },
     "as_user": {
       "required": false,
-      "desc": "Pass true to post the message as the authed user. Defaults to true if the chat:write:bot scope is not included. Otherwise, defaults to false.",
+      "desc": "(Legacy) Pass true to post the message as the authed user. Defaults to true if the chat:write:bot scope is not included. Otherwise, defaults to false.",
       "type": "boolean"
     },
     "attachments": {
