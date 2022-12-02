@@ -50,6 +50,8 @@
     "user_not_found": "Value passed for user was invalid.",
     "unknown_type": "Value passed for types was invalid.",
     "missing_argument": "A required argument is missing.",
+    "slack_connect_team_blocked": "The spaceship_slack_connect_team is disabled - disabling canvas sharing in slack connect.",
+    "slack_connect_canvas_sharing_blocked": "Admin has disabled sharing of Canvas links in all Slack Connect communications.",
     "not_authed": "No authentication token provided.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "access_denied": "Access to a resource specified in the request is denied.",
