@@ -18,7 +18,7 @@
   },
   "errors": {
     "file_not_found": "Value passed for file was invalid.",
-    "not_allowed": "Public sharing has been disabled for this team.",
+    "not_allowed": "Public sharing has been disabled for this team. You may see this error if you are creating an external link from a free or trial workspace. You can either upgrade to a Paid Plan or use file.list to get a url_private_download link, download the file with an application, and re-upload it somewhere it can be shared with users who are not members of your workspace. Be sure to pass the Slack Bot token to the request on the headers file when calling url_private_download.",
     "public_video_not_allowed": "Public sharing of videos is not available. A Free instance of Slack may encounter this error because free teams don't have the ability to share video files publicly.",
     "access_denied": "Access to a resource specified in the request is denied.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
