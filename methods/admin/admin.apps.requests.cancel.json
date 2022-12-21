@@ -2,7 +2,7 @@
   "group": "admin",
   "name": "admin.apps.requests.cancel",
   "deprecated": false,
-  "desc": "Cancel approval request for team",
+  "desc": "Cancel app request for team",
   "args": {
     "request_id": {
       "required": true,
@@ -21,7 +21,7 @@
   "response": {
     "examples": [
       "{\n    \"ok\": true\n}",
-      "{\n    \"ok\": false,\n    \"error\": \"missing_scope\",\n    \"needed\": \"admin.apps:read\",\n    \"provided\": \"read,client,admin,identify,post,apps\"\n}"
+      "{\n    \"ok\": false,\n    \"error\": \"missing_scope\",\n    \"needed\": \"admin.apps:write\",\n    \"provided\": \"read,client,admin,identify,post,apps\"\n}"
     ]
   },
   "errors": {
