@@ -11,7 +11,7 @@
     },
     "date": {
       "required": false,
-      "desc": "Date to retrieve the analytics data for, expressed as YYYY-MM-DD in UTC.",
+      "desc": "Date to retrieve the analytics data for, expressed as YYYY-MM-DD in UTC. Required unless metadata_only is set to true.",
       "type": "date"
     },
     "metadata_only": {

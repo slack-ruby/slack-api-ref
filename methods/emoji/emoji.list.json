@@ -4,6 +4,11 @@
   "deprecated": false,
   "desc": "Lists custom emoji for a team.",
   "args": {
+    "include_categories": {
+      "required": false,
+      "desc": "Include a list of categories for Unicode emoji and the emoji in each category.",
+      "type": "boolean"
+    }
   },
   "response": {
     "examples": [
