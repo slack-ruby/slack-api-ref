@@ -26,6 +26,7 @@
     "error_invalid_alias": "Value passed for alias_for does not exist.",
     "error_missing_name": "Value passed for name is missing or empty.",
     "error_name_taken": "Value passed for name already exists.",
+    "error_name_taken_i18n": "The name has already been taken by another emoji, in the international set. Emoji must have unique names.",
     "failed_to_alias_emoji": "Failed to alias the specified emoji.",
     "feature_not_enabled": "The Admin APIs feature is not enabled for this team.",
     "no_alias_selected": "Value passed for alias_for was invalid.",
