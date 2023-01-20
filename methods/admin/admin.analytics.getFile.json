@@ -31,7 +31,7 @@
     "feature_not_enabled": "This feature is not enabled on your workspace.",
     "file_not_found": "The analytics data for the date specified weren't found.",
     "file_not_yet_available": "The analytics data for the date isn't available yet.",
-    "invalid_arguments": "The method was either called with invalid arguments or some detail about the arguments passed are invalid, which is more likely when using complex arguments like blocks or attachments.",
+    "invalid_arguments": "The method was either called with invalid arguments or some detail about the arguments passed is invalid, which is more likely when using complex arguments like blocks or attachments.",
     "invalid_date": "The date argument was invalid.",
     "invalid_type": "The analytics data for the type specified weren't found.",
     "member_analytics_disabled": "Member analytics are disabled for your organization.",

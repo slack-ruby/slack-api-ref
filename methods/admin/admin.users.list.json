@@ -26,7 +26,7 @@
   },
   "errors": {
     "feature_not_enabled": "The Admin APIs feature is not enabled for this team.",
-    "invalid_arguments": "The method was either called with invalid arguments or some detail about the arguments passed are invalid, which is more likely when using complex arguments like blocks or attachments.",
+    "invalid_arguments": "The method was either called with invalid arguments or some detail about the arguments passed is invalid, which is more likely when using complex arguments like blocks or attachments.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "invalid_cursor": "The passed cursor could not be validated.",
     "team_not_found": "team_id was not found.",

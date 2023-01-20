@@ -43,7 +43,7 @@
     "email_does_not_match": "User's email does not match the email in the invite.",
     "failed_to_start_trial": "Unable to initiate a trial on shared invite acceptance.",
     "has_already_connected_to_org": "A team on the workspace of the org is already in the channel.",
-    "invalid_arguments": "The method was either called with invalid arguments or some detail about the arguments passed are invalid, which is more likely when using complex arguments like blocks or attachments.",
+    "invalid_arguments": "The method was either called with invalid arguments or some detail about the arguments passed is invalid, which is more likely when using complex arguments like blocks or attachments.",
     "invalid_emoji_not_allowed": "The desired name contains emoji.",
     "invalid_host_team": "The host workspace is invalid.",
     "invalid_link": "We couldn't find an invite associated with the ID provided.",

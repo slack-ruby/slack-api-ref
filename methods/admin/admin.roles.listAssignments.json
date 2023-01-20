@@ -38,7 +38,7 @@
   "errors": {
     "feature_not_enabled": "This API is currently not enabled.",
     "invalid_actor": "This API is only enabled for the Admins/Owners.",
-    "invalid_arguments": "The method was either called with invalid arguments or some detail about the arguments passed are invalid, which is more likely when using complex arguments like blocks or attachments.",
+    "invalid_arguments": "The method was either called with invalid arguments or some detail about the arguments passed is invalid, which is more likely when using complex arguments like blocks or attachments.",
     "invalid_cursor": "The passed cursor was invalid.",
     "invalid_sort": "Sort parameters are invalid.",
     "access_denied": "Access to a resource specified in the request is denied.",
