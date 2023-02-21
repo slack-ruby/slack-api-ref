@@ -27,7 +27,7 @@
     "invalid_action": "This action is no longer valid, e.g., trying to approve an invite that has already been approved.",
     "invalid_link": "The link provided was invalid.",
     "invite_not_found": "The invite specified wasn't found.",
-    "missing_target_team": "The target_team parameter is required for this request.",
+    "missing_target_team": "The target_team parameter is required for this request. The inviting team must provide this argument.",
     "not_paid": "The team attempting to approve this invite is not paid and therefore not eligible.",
     "restricted_action": "A team preference prevents the authenticated user from creating private channels.",
     "access_denied": "Access to a resource specified in the request is denied.",
