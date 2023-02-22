@@ -32,7 +32,8 @@
   },
   "response": {
     "examples": [
-
+      "{\n    \"ok\": true,\n    \"role_assignments\": [\n        {\n            \"role_id\": \"Rl0C\",\n            \"entity_id\": \"T123ABC456\",\n            \"user_id\": \"U123ABC456\",\n            \"date_create\": 1677038902\n        },\n        {\n            \"role_id\": \"Rl0C\",\n            \"entity_id\": \"T123ABC456\",\n            \"user_id\": \"U123ABC456\",\n            \"date_create\": 1677038902\n        },\n        {\n            \"role_id\": \"Rl0A\",\n            \"entity_id\": \"C123ABC456\",\n            \"user_id\": \"U123ABC456\",\n            \"date_create\": 1666624374\n        },\n        {\n            \"role_id\": \"Rl03\",\n            \"entity_id\": \"E123ABC456\",\n            \"user_id\": \"U123ABC456\",\n            \"date_create\": 1663617026\n        },\n        {\n            \"role_id\": \"Rl01\",\n            \"entity_id\": \"E123ABC456\",\n            \"user_id\": \"U123ABC456\",\n            \"date_create\": 1643231331\n        }\n    ],\n    \"response_metadata\": {\n        \"next_cursor\": \"dXNlcl9pZDozMDA1NjIwNTc0MjYyO2VudGl0eV90eXBlOjE7ZW50aXR5X2lkOjMwMDUxODcyMTczNjY7ZGF0ZV9jcmVhdGU6MTY0MzIzMTMzMQ==\"\n    }\n}",
+      "{\n    \"ok\": false,\n    \"error\": \"invalid_actor\"\n}"
     ]
   },
   "errors": {

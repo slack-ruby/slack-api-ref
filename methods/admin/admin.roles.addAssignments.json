@@ -22,7 +22,8 @@
   },
   "response": {
     "examples": [
-
+      "{\n    \"ok\": true\n}",
+      "{\n    \"ok\": false,\n    \"error\": \"failed_for_some_entities\",\n    \"rejected_entities\": [\n        {\n            \"id\": \"E123ABC456\",\n            \"error\": \"invalid_auth\"\n        }\n    ]\n}"
     ]
   },
   "errors": {
