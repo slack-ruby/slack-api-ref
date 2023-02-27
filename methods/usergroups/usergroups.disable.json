@@ -15,7 +15,7 @@
     },
     "team_id": {
       "required": false,
-      "desc": "Encoded team id where the user group is, required if org token is used."
+      "desc": "Encoded target team id where the user group is, required if org token is used."
     }
   },
   "response": {
@@ -28,6 +28,8 @@
     "missing_argument": "A required argument is missing.",
     "permission_denied": "The user does not have permission to disables the User Group.",
     "plan_upgrade_required": "This workspace does not have access to User Groups, as that feature is only available on Standard and above plans.",
+    "target_team_not_on_org": "Target team specified is not on the org in context.",
+    "target_team_must_be_specified_in_org_context": "No target team was specified but the team in context is an org.",
     "access_denied": "Access to a resource specified in the request is denied.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
     "deprecated_endpoint": "The endpoint has been deprecated.",
