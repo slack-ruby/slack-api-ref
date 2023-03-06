@@ -29,6 +29,7 @@
   "errors": {
     "access_denied": "Access to a resource specified in the request is denied.",
     "file_deleted": "The requested file has been deleted.",
+    "channel_canvas_deleted": "The requested file is a channel canvas that has been deleted.",
     "file_not_found": "Value passed for file was invalid.",
     "not_visible": "Do not have permission to view the file.",
     "slack_connect_canvas_sharing_blocked": "Admin has disabled sharing of Canvas links in all Slack Connect communications.",
