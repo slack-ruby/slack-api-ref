@@ -37,7 +37,7 @@
     "no_item_specified": "One of file, file_comment, or timestamp was not specified.",
     "not_in_channel": "Item is not in channel.",
     "not_pinnable": "This message type is not pinnable.",
-    "permission_denied": "The user does not have permission to add pins to the channel.",
+    "restricted_action": "The user does not have permission to add pins to the channel.",
     "too_many_pins": "Too many pins in channel.",
     "access_denied": "Access to a resource specified in the request is denied.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",

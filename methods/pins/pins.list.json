@@ -18,6 +18,7 @@
   },
   "errors": {
     "channel_not_found": "Value passed for channel was invalid.",
+    "restricted_action": "The user does not have permission to view the channel.",
     "access_denied": "Access to a resource specified in the request is denied.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
     "deprecated_endpoint": "The endpoint has been deprecated.",

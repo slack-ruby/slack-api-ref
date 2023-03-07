@@ -31,7 +31,7 @@
     "no_item_specified": "One of file, file_comment, or timestamp was not specified.",
     "no_pin": "The pin could not be found.",
     "not_pinned": "The specified item is not pinned to the channel.",
-    "permission_denied": "The user does not have permission to remove pins from the channel.",
+    "restricted_action": "The user does not have permission to remove pins from the channel.",
     "access_denied": "Access to a resource specified in the request is denied.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
     "deprecated_endpoint": "The endpoint has been deprecated.",
