@@ -12,12 +12,14 @@
     "inputs": {
       "required": false,
       "desc": "A JSON key-value map of inputs required from a user during configuration. This is the data your app expects to receive when the workflow step starts. Please note: the embedded variable format is set and replaced by the workflow system. You cannot create custom variables that will be replaced at runtime. Read more about variables in workflow steps here.",
-      "type": "object"
+      "type": "object",
+      "json_encoded_string": true
     },
     "outputs": {
       "required": false,
       "desc": "An JSON array of output objects used during step execution. This is the data your app agrees to provide when your workflow step was executed.",
-      "type": "array"
+      "type": "array",
+      "json_encoded_string": true
     },
     "step_image_url": {
       "required": false,

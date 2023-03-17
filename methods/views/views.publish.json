@@ -12,7 +12,8 @@
     "view": {
       "required": true,
       "desc": "A view payload. This must be a JSON-encoded string.",
-      "type": "view as string"
+      "type": "view as string",
+      "json_encoded_string": true
     },
     "hash": {
       "required": false,

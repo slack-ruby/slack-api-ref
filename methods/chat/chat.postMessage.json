@@ -12,12 +12,14 @@
     "attachments": {
       "required": false,
       "desc": "A JSON-based array of structured attachments, presented as a URL-encoded string.",
-      "type": "string"
+      "type": "string",
+      "json_encoded_string": true
     },
     "blocks": {
       "required": false,
       "desc": "A JSON-based array of structured blocks, presented as a URL-encoded string.",
-      "type": "blocks[] as string"
+      "type": "blocks[] as string",
+      "json_encoded_string": true
     },
     "text": {
       "required": false,
@@ -47,7 +49,8 @@
     "metadata": {
       "required": false,
       "desc": "JSON object with event_type and event_payload fields, presented as a URL-encoded string. Metadata you post to Slack is accessible to any app or user who is a member of that workspace.",
-      "type": "string"
+      "type": "string",
+      "json_encoded_string": true
     },
     "mrkdwn": {
       "required": false,
@@ -85,6 +88,17 @@
       "type": "string"
     }
   },
+  "arg_groups": [
+    {
+      "args": [
+        "attachments",
+        "blocks",
+        "text"
+      ],
+      "desc": "One of these arguments is required to describe the content of the message. If attachments or blocks are included, text will be used as fallback text for notifications only.",
+      "mutually_exclusive": false
+    }
+  ],
   "response": {
     "examples": [
       "{\n    \"ok\": true,\n    \"channel\": \"C123456\",\n    \"ts\": \"1503435956.000247\",\n    \"message\": {\n        \"text\": \"Here's a message for you\",\n        \"username\": \"ecto1\",\n        \"bot_id\": \"B123456\",\n        \"attachments\": [\n            {\n                \"text\": \"This is an attachment\",\n                \"id\": 1,\n                \"fallback\": \"This is an attachment's fallback\"\n            }\n        ],\n        \"type\": \"message\",\n        \"subtype\": \"bot_message\",\n        \"ts\": \"1503435956.000247\"\n    }\n}",

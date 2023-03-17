@@ -17,7 +17,8 @@
     "unfurls": {
       "required": true,
       "desc": "URL-encoded JSON map with keys set to URLs featured in the the message, pointing to their unfurl blocks or message attachments.",
-      "type": "string"
+      "type": "string",
+      "json_encoded_string": true
     },
     "source": {
       "required": false,
@@ -31,7 +32,8 @@
     },
     "user_auth_blocks": {
       "required": false,
-      "desc": "Provide a JSON based array of structured blocks presented as URL-encoded string to send as an ephemeral message to the user as invitation to authenticate further and enable full unfurling behavior."
+      "desc": "Provide a JSON based array of structured blocks presented as URL-encoded string to send as an ephemeral message to the user as invitation to authenticate further and enable full unfurling behavior.",
+      "json_encoded_string": true
     },
     "user_auth_message": {
       "required": false,
