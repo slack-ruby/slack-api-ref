@@ -113,9 +113,9 @@ module SlackApi
 
         desc = group.search('.apiMethodPage__argumentGroupDesc p')
           .text
-            .tap { |t| t.slice!("\n") }
-            .tap { |t| t << '.' unless t.end_with?('.') }
-            .gsub('’', "'")
+          .tap { |t| t.slice!("\n") }
+          .tap { |t| t << '.' unless t.end_with?('.') }
+          .gsub('’', "'")
 
         rows = group.search('.apiMethodPage__argumentRow')
         names = rows.map do |row|
