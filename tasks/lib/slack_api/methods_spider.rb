@@ -66,7 +66,6 @@ module SlackApi
       args_wrapper = ensure!(api_page, '.apiReference__arguments', default_data[:method_name])
       rows = args_wrapper.search('.apiMethodPage__argumentRow')
       args = {}
-      arg_groups = []
       fields = {}
       rows.each do |row|
         name = row.search('.apiMethodPage__argument code').text
@@ -99,9 +98,15 @@ module SlackApi
         end
       end
 
+      arg_groups = parse_arg_groups(args_wrapper)
+
+      [args, arg_groups, fields]
+    end
+
+    def parse_arg_groups(args_wrapper)
       # Look for groups of args that are interdependent
       groups = args_wrapper.search('.apiMethodPage__argumentGroup')
-      groups.each do |group|
+      groups = groups.map do |group|
         # "At least one of" or "One of"
         requirement = group.search('.apiMethodPage__argument em').text
         mutually_exclusive = requirement.downcase == 'one of'
@@ -116,16 +121,15 @@ module SlackApi
         names = rows.map do |row|
           row.search('.apiMethodPage__argument code').text
         end
-        data = {
+
+        {
           'args' => names,
           'desc' => desc,
           'mutually_exclusive' => mutually_exclusive
         }
-        arg_groups << data
       end
 
-      arg_groups = nil if arg_groups.empty?
-      [args, arg_groups, fields]
+      groups unless groups.empty?
     end
 
     def massage_type(name, detected, default_data = {})
