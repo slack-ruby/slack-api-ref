@@ -4,8 +4,8 @@ Changelog
 Some notable infrastructure contributions below. See [commits](commits/master) for Slack API updates.
 
 * Your contribution here.
-* [#64](https://github.com/slack-ruby/slack-api-ref/pull/64): Add `arg_groups` for groups of arguments whose requirement is interdependent.
-* [#64](https://github.com/slack-ruby/slack-api-ref/pull/64): Add `"format": "json"` attribute for arguments that need to be JSON strings.
+* [#64](https://github.com/slack-ruby/slack-api-ref/pull/64): Add `arg_groups` for groups of arguments whose requirement is interdependent - [@jmanian](https://github.com/jmanian).
+* [#64](https://github.com/slack-ruby/slack-api-ref/pull/64): Add `"format": "json"` attribute for arguments that need to be JSON strings - [@jmanian](https://github.com/jmanian).
 * [#58](https://github.com/slack-ruby/slack-api-ref/pull/58): Set up Rubocop - [@kstole](https://github.com/kstole).
 * [#55](https://github.com/slack-ruby/slack-api-ref/pull/55): Consider `Deprecated:` label in API method summary - [@kstole](https://github.com/kstole).
 * Updated crawlers to use new API documentation DOM - [@chrisbloom7](https://github.com/chrisbloom7).
