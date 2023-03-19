@@ -12,7 +12,7 @@
       "required": true,
       "desc": "A JSON app manifest encoded as a string. This manifest must use a valid app manifest schema - read our guide to creating one. As this method entirely replaces any previous configuration, manifest must contain both unmodified and modified fields.",
       "type": "manifest object as string",
-      "json_encoded_string": true
+      "format": "json"
     }
   },
   "response": {

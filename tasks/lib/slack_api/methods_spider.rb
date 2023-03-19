@@ -94,7 +94,7 @@ module SlackApi
           h['example'] = example if example
           h['desc'] = desc if desc
           h['type'] = type if type
-          h['json_encoded_string'] = true if desc&.include?('JSON')
+          h['format'] = 'json' if desc&.include?('JSON')
           args[name] = h
         end
       end

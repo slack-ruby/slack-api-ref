@@ -8,7 +8,7 @@
       "required": true,
       "desc": "The dialog definition. This must be a JSON-encoded string.",
       "type": "string",
-      "json_encoded_string": true
+      "format": "json"
     },
     "trigger_id": {
       "required": true,

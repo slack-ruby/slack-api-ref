@@ -13,7 +13,7 @@
       "required": false,
       "desc": "Collection of key:value pairs presented as a URL-encoded JSON hash. At most 50 fields may be set. Each field name is limited to 255 characters.",
       "type": "string",
-      "json_encoded_string": true
+      "format": "json"
     },
     "user": {
       "required": false,

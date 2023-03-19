@@ -13,13 +13,13 @@
       "required": false,
       "desc": "A JSON-based array of structured attachments, presented as a URL-encoded string.",
       "type": "string",
-      "json_encoded_string": true
+      "format": "json"
     },
     "blocks": {
       "required": false,
       "desc": "A JSON-based array of structured blocks, presented as a URL-encoded string.",
       "type": "blocks[] as string",
-      "json_encoded_string": true
+      "format": "json"
     },
     "text": {
       "required": false,
@@ -50,7 +50,7 @@
       "required": false,
       "desc": "JSON object with event_type and event_payload fields, presented as a URL-encoded string. Metadata you post to Slack is accessible to any app or user who is a member of that workspace.",
       "type": "string",
-      "json_encoded_string": true
+      "format": "json"
     },
     "mrkdwn": {
       "required": false,
