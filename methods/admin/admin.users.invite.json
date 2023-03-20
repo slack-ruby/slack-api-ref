@@ -6,11 +6,13 @@
   "args": {
     "channel_ids": {
       "required": true,
+      "example": "C1A2B3C4D,C26Z25Y24",
       "desc": "A comma-separated list of channel_ids for this user to join. At least one channel is required.",
       "type": "string"
     },
     "email": {
       "required": true,
+      "example": "joe@email.com",
       "desc": "The email address of the person to invite.",
       "type": "string"
     },
@@ -20,36 +22,43 @@
     },
     "custom_message": {
       "required": false,
+      "example": "Come and join our team!",
       "desc": "An optional message to send to the user in the invite email.",
       "type": "string"
     },
     "email_password_policy_enabled": {
       "required": false,
+      "example": "true",
       "desc": "Allow invited user to sign in via email and password. Only available for Enterprise Grid teams via admin invite.",
       "type": "boolean"
     },
     "guest_expiration_ts": {
       "required": false,
+      "example": "0123456789.012345",
       "desc": "Timestamp when guest account should be disabled. Only include this timestamp if you are inviting a guest user and you want their account to expire on a certain date.",
       "type": "string"
     },
     "is_restricted": {
       "required": false,
+      "example": "true",
       "desc": "Is this user a multi-channel guest user? (default: false).",
       "type": "boolean"
     },
     "is_ultra_restricted": {
       "required": false,
+      "example": "true",
       "desc": "Is this user a single channel guest user? (default: false).",
       "type": "boolean"
     },
     "real_name": {
       "required": false,
+      "example": "{\"full_name\":\"Joe Smith\"}",
       "desc": "Full name of the user.",
       "type": "string"
     },
     "resend": {
       "required": false,
+      "example": "true",
       "desc": "Allow this invite to be resent in the future if a user has not signed up yet. (default: false).",
       "type": "boolean"
     }

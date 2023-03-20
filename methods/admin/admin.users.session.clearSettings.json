@@ -6,6 +6,7 @@
   "args": {
     "user_ids": {
       "required": true,
+      "example": "['U1234']",
       "desc": "The IDs of users you'd like to clear session settings for.",
       "type": "array"
     }

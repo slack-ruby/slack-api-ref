@@ -6,6 +6,7 @@
   "args": {
     "include_categories": {
       "required": false,
+      "example": "true",
       "desc": "Include a list of categories for Unicode emoji and the emoji in each category.",
       "type": "boolean"
     }

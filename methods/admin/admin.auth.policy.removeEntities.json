@@ -6,6 +6,7 @@
   "args": {
     "entity_ids": {
       "required": true,
+      "example": "['U1234']",
       "desc": "Encoded IDs of the entities you'd like to remove from the policy.",
       "type": "array"
     },
@@ -15,6 +16,7 @@
     },
     "policy_name": {
       "required": true,
+      "example": "email_password",
       "desc": "The name of the policy to remove entities from. Currently, email_password is the only policy that may be used with this method.",
       "type": "string"
     }

@@ -6,21 +6,25 @@
   "args": {
     "is_private": {
       "required": true,
+      "example": "true",
       "desc": "When true, creates a private channel instead of a public channel.",
       "type": "boolean"
     },
     "name": {
       "required": true,
+      "example": "mychannel",
       "desc": "Name of the public or private channel to create.",
       "type": "string"
     },
     "description": {
       "required": false,
+      "example": "It's a good channel, Bront.",
       "desc": "Description of the public or private channel to create.",
       "type": "string"
     },
     "org_wide": {
       "required": false,
+      "example": "false",
       "desc": "When true, the channel will be available org-wide. Note: if the channel is not org_wide=true, you must specify a team_id for this channel.",
       "type": "boolean"
     },

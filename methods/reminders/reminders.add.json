@@ -6,26 +6,31 @@
   "args": {
     "text": {
       "required": true,
+      "example": "eat a banana",
       "desc": "The content of the reminder.",
       "type": "string"
     },
     "time": {
       "required": true,
+      "example": "1602288000",
       "desc": "When this reminder should happen: the Unix timestamp (up to five years from now), the number of seconds until the reminder (if within 24 hours), or a natural language description (Ex. \"in 15 minutes,\" or \"every Thursday\").",
       "type": "string"
     },
     "recurrence": {
       "required": false,
+      "example": "{ \"frequency\": \"weekly\", \"weekdays\": [\"monday\", \"wednesday\", \"friday\"] }",
       "desc": "Specify the repeating behavior of a reminder. Available options: daily, weekly, monthly, or yearly. If weekly, may further specify the days of the week.",
       "type": "object"
     },
     "team_id": {
       "required": false,
+      "example": "T1234567890",
       "desc": "Encoded team id, required if org token is used.",
       "type": "string"
     },
     "user": {
       "required": false,
+      "example": "U18888888",
       "desc": "The user who will receive the reminder. If no user is specified, the reminder will go to user who created it.",
       "type": "user"
     }

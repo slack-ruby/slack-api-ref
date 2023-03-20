@@ -6,11 +6,13 @@
   "args": {
     "external_id": {
       "required": false,
+      "example": "123456",
       "desc": "Creator defined GUID for the file.",
       "type": "string"
     },
     "file": {
       "required": false,
+      "example": "F2147483862",
       "desc": "Specify a file by providing its ID.",
       "type": "file"
     }

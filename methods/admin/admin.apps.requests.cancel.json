@@ -6,15 +6,18 @@
   "args": {
     "request_id": {
       "required": true,
+      "example": "Ar12345",
       "desc": "The id of the request to cancel.",
       "type": "string"
     },
     "enterprise_id": {
       "required": false,
+      "example": "E12345",
       "desc": "The ID of the enterprise where this request belongs."
     },
     "team_id": {
       "required": false,
+      "example": "T12345",
       "desc": "The ID of the workspace where this request belongs."
     }
   },

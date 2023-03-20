@@ -6,21 +6,25 @@
   "args": {
     "include_count": {
       "required": false,
+      "example": "true",
       "desc": "Include the number of users in each User Group.",
       "type": "boolean"
     },
     "include_disabled": {
       "required": false,
+      "example": "true",
       "desc": "Include disabled User Groups.",
       "type": "boolean"
     },
     "include_users": {
       "required": false,
+      "example": "true",
       "desc": "Include the list of users for each User Group.",
       "type": "boolean"
     },
     "team_id": {
       "required": false,
+      "example": "T1234567890",
       "desc": "encoded team id to list user groups in, required if org token is used.",
       "type": "string"
     }

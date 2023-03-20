@@ -6,6 +6,7 @@
   "args": {
     "query": {
       "required": true,
+      "example": "pickleface",
       "desc": "Search query.",
       "type": "string"
     },
@@ -16,21 +17,25 @@
     },
     "highlight": {
       "required": false,
+      "example": "true",
       "desc": "Pass a value of true to enable query highlight markers (see below).",
       "type": "boolean"
     },
     "sort": {
       "required": false,
+      "example": "score",
       "desc": "Return matches sorted by either score or timestamp.",
       "type": "string"
     },
     "sort_dir": {
       "required": false,
+      "example": "desc",
       "desc": "Change sort direction to ascending (asc) or descending (desc).",
       "type": "string"
     },
     "team_id": {
       "required": false,
+      "example": "T1234567890",
       "desc": "encoded team id to search in, required if org token is used.",
       "type": "string"
     }

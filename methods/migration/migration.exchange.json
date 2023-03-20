@@ -11,11 +11,13 @@
     },
     "team_id": {
       "required": false,
+      "example": "T1234567890",
       "desc": "Specify team_id starts with T in case of Org Token.",
       "type": "string"
     },
     "to_old": {
       "required": false,
+      "example": "",
       "desc": "Specify true to convert W global user IDs to workspace-specific U IDs. Defaults to false.",
       "type": "boolean"
     }

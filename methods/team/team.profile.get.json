@@ -6,6 +6,7 @@
   "args": {
     "visibility": {
       "required": false,
+      "example": "all",
       "desc": "Filter by visibility.",
       "type": "string"
     }

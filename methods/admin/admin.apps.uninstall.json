@@ -6,11 +6,13 @@
   "args": {
     "app_id": {
       "required": true,
+      "example": "A12345",
       "desc": "The ID of the app to uninstall.",
       "type": "string"
     },
     "enterprise_id": {
       "required": false,
+      "example": "E12345",
       "desc": "The enterprise to completely uninstall the application from (across all workspaces). With an org-level token, this or team_ids is required.",
       "type": "string"
     },

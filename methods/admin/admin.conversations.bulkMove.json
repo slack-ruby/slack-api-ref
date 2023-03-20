@@ -11,6 +11,7 @@
     },
     "target_team_id": {
       "required": true,
+      "example": "T1234567890",
       "desc": "Target team ID.",
       "type": "string"
     }

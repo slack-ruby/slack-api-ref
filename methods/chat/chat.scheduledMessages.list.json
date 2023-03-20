@@ -6,31 +6,37 @@
   "args": {
     "channel": {
       "required": false,
+      "example": "C123456789",
       "desc": "The channel of the scheduled messages.",
       "type": "channel"
     },
     "cursor": {
       "required": false,
+      "example": "dXNlcjpVMDYxTkZUVDI=",
       "desc": "For pagination purposes, this is the cursor value returned from a previous call to chat.scheduledmessages.list indicating where you want to start this call from.",
       "type": "string"
     },
     "latest": {
       "required": false,
+      "example": "1562137200",
       "desc": "A UNIX timestamp of the latest value in the time range.",
       "type": "timestamp"
     },
     "limit": {
       "required": false,
+      "example": "100",
       "desc": "Maximum number of original entries to return.",
       "type": "integer"
     },
     "oldest": {
       "required": false,
+      "example": "1562137200",
       "desc": "A UNIX timestamp of the oldest value in the time range.",
       "type": "timestamp"
     },
     "team_id": {
       "required": false,
+      "example": "T1234567890",
       "desc": "encoded team id to list channels in, required if org token is used.",
       "type": "string"
     }

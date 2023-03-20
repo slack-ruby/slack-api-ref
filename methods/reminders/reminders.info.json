@@ -6,11 +6,13 @@
   "args": {
     "reminder": {
       "required": true,
+      "example": "Rm23456789",
       "desc": "The ID of the reminder.",
       "type": "string"
     },
     "team_id": {
       "required": false,
+      "example": "T1234567890",
       "desc": "Encoded team id, required if org token is passed.",
       "type": "string"
     }

@@ -6,21 +6,25 @@
   "args": {
     "filename": {
       "required": true,
+      "example": "laughingoutloudcat.jpg",
       "desc": "Name of the file being uploaded.",
       "type": "string"
     },
     "length": {
       "required": true,
+      "example": "53072",
       "desc": "Size in bytes of the file being uploaded.",
       "type": "integer"
     },
     "alt_txt": {
       "required": false,
+      "example": "Aerial view of the Bixby Bridge and coastline of the Big Sur area in California",
       "desc": "Description of image for screen-reader.",
       "type": "string"
     },
     "snippet_type": {
       "required": false,
+      "example": "python",
       "desc": "Syntax type of the snippet being uploaded.",
       "type": "string"
     }

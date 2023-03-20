@@ -16,16 +16,19 @@
     },
     "cursor": {
       "required": false,
+      "example": "*",
       "desc": "Set cursor to next_cursor returned in the previous call, to fetch the next page.",
       "type": "string"
     },
     "limit": {
       "required": false,
+      "example": "1000",
       "desc": "Maximum number of results.",
       "type": "integer"
     },
     "max_member_count": {
       "required": false,
+      "example": "1",
       "desc": "Filter by public channels with member count equal to or less than the specified number.",
       "type": "integer"
     }

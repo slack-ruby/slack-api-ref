@@ -12,6 +12,7 @@
     },
     "trigger_id": {
       "required": true,
+      "example": "12345.98765.abcd2358fdea",
       "desc": "Exchange a trigger to post to the user.",
       "type": "string"
     }

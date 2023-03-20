@@ -6,16 +6,19 @@
   "args": {
     "entity_ids": {
       "required": true,
+      "example": "['T00000001', 'E00000002']",
       "desc": "List of the entity IDs for which roles will be assigned. These can be Org IDs, Team IDs or Channel IDs.",
       "type": "array"
     },
     "role_id": {
       "required": true,
+      "example": "R0001",
       "desc": "ID of the role to which users will be assigned.",
       "type": "string"
     },
     "user_ids": {
       "required": true,
+      "example": "['U00000001', 'U00000002', 'U00000003']",
       "desc": "List of IDs from the users to be added to the given role.",
       "type": "array"
     }

@@ -6,11 +6,13 @@
   "args": {
     "policy_name": {
       "required": true,
+      "example": "email_password",
       "desc": "The name of the policy to fetch entities for. Currently, email_password is the only policy that may be used with this method.",
       "type": "string"
     },
     "cursor": {
       "required": false,
+      "example": "5c3e53d5",
       "desc": "Set cursor to next_cursor returned by the previous call to list items in the next page.",
       "type": "string"
     },
@@ -20,6 +22,7 @@
     },
     "limit": {
       "required": false,
+      "example": "1000",
       "desc": "The maximum number of items to return. Must be between 1 and 1000, both inclusive.",
       "type": "integer"
     }

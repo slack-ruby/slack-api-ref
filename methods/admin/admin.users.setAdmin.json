@@ -10,6 +10,7 @@
     },
     "user_id": {
       "required": true,
+      "example": "W12345678",
       "desc": "The ID of the user to designate as an admin.",
       "type": "string"
     }

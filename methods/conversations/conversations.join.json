@@ -6,6 +6,7 @@
   "args": {
     "channel": {
       "required": true,
+      "example": "C1234567890",
       "desc": "ID of conversation to join.",
       "type": "channel"
     }
