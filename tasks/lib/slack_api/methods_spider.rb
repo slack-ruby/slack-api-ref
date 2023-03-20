@@ -42,7 +42,7 @@ module SlackApi
       desc = method_page.search('.apiReference__mainDescription').text.gsub('’', "'")
       return if desc.downcase.start_with? 'deprecated:'
 
-      args, fields = parse_args(method_page, default_data)
+      args, arg_groups, fields = parse_args(method_page, default_data)
       errors = parse_errors(method_page, default_data)
       response = parse_response(method_page, default_data)
 
@@ -52,9 +52,10 @@ module SlackApi
         'deprecated' => false, # Deprecated methods are filtered out
         'desc' => desc,
         'args' => args,
+        'arg_groups' => arg_groups,
         'response' => response,
         'errors' => errors
-      }.merge(fields)
+      }.compact.merge(fields)
 
       record(file_name: default_data[:filename], json: JSON.pretty_generate(json_hash))
     end
@@ -92,10 +93,43 @@ module SlackApi
           h['example'] = example if example
           h['desc'] = desc if desc
           h['type'] = type if type
+          h['format'] = 'json' if desc&.include?('JSON')
           args[name] = h
         end
       end
-      [args, fields]
+
+      arg_groups = parse_arg_groups(args_wrapper)
+
+      [args, arg_groups, fields]
+    end
+
+    def parse_arg_groups(args_wrapper)
+      # Look for groups of args that are interdependent
+      groups = args_wrapper.search('.apiMethodPage__argumentGroup')
+      groups = groups.map do |group|
+        # "At least one of" or "One of"
+        requirement = group.search('.apiMethodPage__argument em').text
+        mutually_exclusive = requirement.downcase == 'one of'
+
+        desc = group.search('.apiMethodPage__argumentGroupDesc p')
+          .text
+          .tap { |t| t.slice!("\n") }
+          .tap { |t| t << '.' unless t.end_with?('.') }
+          .gsub('’', "'")
+
+        rows = group.search('.apiMethodPage__argumentRow')
+        names = rows.map do |row|
+          row.search('.apiMethodPage__argument code').text
+        end
+
+        {
+          'args' => names,
+          'desc' => desc,
+          'mutually_exclusive' => mutually_exclusive
+        }
+      end
+
+      groups unless groups.empty?
     end
 
     def massage_type(name, detected, default_data = {})

@@ -7,7 +7,8 @@
     "view": {
       "required": true,
       "desc": "A view object. This must be a JSON-encoded string.",
-      "type": "view as string"
+      "type": "view as string",
+      "format": "json"
     },
     "external_id": {
       "required": false,
@@ -25,6 +26,16 @@
       "type": "string"
     }
   },
+  "arg_groups": [
+    {
+      "args": [
+        "external_id",
+        "view_id"
+      ],
+      "desc": "Exactly one of these arguments is required to identify the view that is to be updated.",
+      "mutually_exclusive": true
+    }
+  ],
   "response": {
     "examples": [
       "{\n    \"ok\": true,\n    \"view\": {\n        \"id\": \"VNM522E2U\",\n        \"team_id\": \"T9M4RL1JM\",\n        \"type\": \"modal\",\n        \"title\": {\n            \"type\": \"plain_text\",\n            \"text\": \"Updated Modal\",\n            \"emoji\": true\n        },\n        \"close\": {\n            \"type\": \"plain_text\",\n            \"text\": \"Close\",\n            \"emoji\": true\n        },\n        \"submit\": null,\n        \"blocks\": [\n            {\n                \"type\": \"section\",\n                \"block_id\": \"s_block\",\n                \"text\": {\n                    \"type\": \"plain_text\",\n                    \"text\": \"I am but an updated modal\",\n                    \"emoji\": true\n                },\n                \"accessory\": {\n                    \"type\": \"button\",\n                    \"action_id\": \"button_4\",\n                    \"text\": {\n                        \"type\": \"plain_text\",\n                        \"text\": \"Click me\"\n                    }\n                }\n            }\n        ],\n        \"private_metadata\": \"\",\n        \"callback_id\": \"view_2\",\n        \"external_id\": \"\",\n        \"state\": {\n            \"values\": {}\n        },\n        \"hash\": \"1569262015.55b5e41b\",\n        \"clear_on_close\": true,\n        \"notify_on_close\": false,\n        \"root_view_id\": \"VNN729E3U\",\n        \"previous_view_id\": null,\n        \"app_id\": \"AAD3351BQ\",\n        \"bot_id\": \"BADF7A34H\"\n    }\n}",

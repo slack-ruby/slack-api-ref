@@ -12,7 +12,8 @@
     "prefs": {
       "required": true,
       "desc": "The prefs for this channel in a stringified JSON format.",
-      "type": "string"
+      "type": "string",
+      "format": "json"
     }
   },
   "response": {

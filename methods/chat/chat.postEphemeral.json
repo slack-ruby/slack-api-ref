@@ -27,12 +27,14 @@
     "attachments": {
       "required": false,
       "desc": "A JSON-based array of structured attachments, presented as a URL-encoded string.",
-      "type": "string"
+      "type": "string",
+      "format": "json"
     },
     "blocks": {
       "required": false,
       "desc": "A JSON-based array of structured blocks, presented as a URL-encoded string.",
-      "type": "blocks[] as string"
+      "type": "blocks[] as string",
+      "format": "json"
     },
     "icon_emoji": {
       "required": false,

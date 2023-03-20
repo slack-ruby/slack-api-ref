@@ -7,7 +7,8 @@
     "error": {
       "required": true,
       "desc": "A JSON-based object with a message property that should contain a human readable error message.",
-      "type": "object"
+      "type": "object",
+      "format": "json"
     },
     "workflow_step_execute_id": {
       "required": true,

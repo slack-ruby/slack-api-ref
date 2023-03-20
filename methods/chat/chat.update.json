@@ -22,12 +22,14 @@
     "attachments": {
       "required": false,
       "desc": "A JSON-based array of structured attachments, presented as a URL-encoded string. This field is required when not presenting text. If you don't include this field, the message's previous attachments will be retained. To remove previous attachments, include an empty array for this field.",
-      "type": "string"
+      "type": "string",
+      "format": "json"
     },
     "blocks": {
       "required": false,
       "desc": "A JSON-based array of structured blocks, presented as a URL-encoded string. If you don't include this field, the message's previous blocks will be retained. To remove previous blocks, include an empty array for this field.",
-      "type": "blocks[] as string"
+      "type": "blocks[] as string",
+      "format": "json"
     },
     "file_ids": {
       "required": false,
@@ -42,7 +44,8 @@
     "metadata": {
       "required": false,
       "desc": "JSON object with event_type and event_payload fields, presented as a URL-encoded string. If you don't include this field, the message's previous metadata will be retained. To remove previous metadata, include an empty object for this field. Metadata you post to Slack is accessible to any app or user who is a member of that workspace.",
-      "type": "string"
+      "type": "string",
+      "format": "json"
     },
     "parse": {
       "required": false,
