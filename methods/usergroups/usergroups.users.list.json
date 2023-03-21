@@ -6,16 +6,19 @@
   "args": {
     "usergroup": {
       "required": true,
+      "example": "S0604QSJC",
       "desc": "The encoded ID of the User Group to update.",
       "type": "string"
     },
     "include_disabled": {
       "required": false,
+      "example": "true",
       "desc": "Allow results that involve disabled User Groups.",
       "type": "boolean"
     },
     "team_id": {
       "required": false,
+      "example": "T1234567890",
       "desc": "encoded team id where the user group exists, required if org token is used.",
       "type": "string"
     }

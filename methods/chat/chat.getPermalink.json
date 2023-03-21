@@ -6,11 +6,13 @@
   "args": {
     "channel": {
       "required": true,
+      "example": "53072",
       "desc": "The ID of the conversation or channel containing the message.",
       "type": "channel"
     },
     "message_ts": {
       "required": true,
+      "example": "1234567890.123456",
       "desc": "A message's ts value, uniquely identifying it within a channel.",
       "type": "string"
     }

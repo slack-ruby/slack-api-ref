@@ -14,16 +14,19 @@
     },
     "channel_ids": {
       "required": false,
+      "example": "",
       "desc": "Comma separated values of channel IDs to add user in the new workspace.",
       "type": "string"
     },
     "is_restricted": {
       "required": false,
+      "example": "",
       "desc": "True if user should be added to the workspace as a guest.",
       "type": "boolean"
     },
     "is_ultra_restricted": {
       "required": false,
+      "example": "",
       "desc": "True if user should be added to the workspace as a single-channel guest.",
       "type": "boolean"
     }

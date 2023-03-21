@@ -6,6 +6,7 @@
   "args": {
     "file": {
       "required": true,
+      "example": "F1234567890",
       "desc": "File to share.",
       "type": "file"
     }

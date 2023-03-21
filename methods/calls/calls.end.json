@@ -6,11 +6,13 @@
   "args": {
     "id": {
       "required": true,
+      "example": "R0E69JAIF",
       "desc": "id returned when registering the call using the calls.add method.",
       "type": "string"
     },
     "duration": {
       "required": false,
+      "example": "1800",
       "desc": "Call duration in seconds.",
       "type": "integer"
     }

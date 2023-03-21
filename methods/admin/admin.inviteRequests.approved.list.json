@@ -6,16 +6,19 @@
   "args": {
     "cursor": {
       "required": false,
+      "example": "5cweb43",
       "desc": "Value of the next_cursor field sent as part of the previous API response.",
       "type": "string"
     },
     "limit": {
       "required": false,
+      "example": "100",
       "desc": "The number of results that will be returned by the API on each invocation. Must be between 1 - 1000, both inclusive.",
       "type": "integer"
     },
     "team_id": {
       "required": false,
+      "example": "",
       "desc": "ID for the workspace where the invite requests were made.",
       "type": "string"
     }

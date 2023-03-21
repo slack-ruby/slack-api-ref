@@ -6,6 +6,7 @@
   "args": {
     "presence": {
       "required": true,
+      "example": "away",
       "desc": "Either auto or away.",
       "type": "string"
     }

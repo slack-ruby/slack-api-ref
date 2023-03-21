@@ -6,11 +6,13 @@
   "args": {
     "files": {
       "required": true,
+      "example": "[{\"id\":\"F044GKUHN9Z\", \"title\":\"slack-test\"}]",
       "desc": "Array of file ids and their corresponding (optional) titles.",
       "type": "array"
     },
     "channel_id": {
       "required": false,
+      "example": "C0NF841BK",
       "desc": "Channel ID where the file will be shared. If not specified the file will be private."
     },
     "initial_comment": {
@@ -20,6 +22,7 @@
     },
     "thread_ts": {
       "required": false,
+      "example": "1524523204.000192",
       "desc": "Provide another message's ts value to upload this file as a reply. Never use a reply's ts value; use its parent instead.",
       "type": "string"
     }

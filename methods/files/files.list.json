@@ -6,36 +6,43 @@
   "args": {
     "channel": {
       "required": false,
+      "example": "C1234567890",
       "desc": "Filter files appearing in a specific channel, indicated by its ID.",
       "type": "channel"
     },
     "show_files_hidden_by_limit": {
       "required": false,
+      "example": "true",
       "desc": "Show truncated file info for files hidden due to being too old, and the team who owns the file being over the file limit.",
       "type": "boolean"
     },
     "team_id": {
       "required": false,
+      "example": "T1234567890",
       "desc": "encoded team id to list files in, required if org token is used.",
       "type": "string"
     },
     "ts_from": {
       "required": false,
+      "example": "123456789",
       "desc": "Filter files created after this timestamp (inclusive).",
       "type": "string"
     },
     "ts_to": {
       "required": false,
+      "example": "123456789",
       "desc": "Filter files created before this timestamp (inclusive).",
       "type": "string"
     },
     "types": {
       "required": false,
+      "example": "all",
       "desc": "Filter files by type (see below). You can pass multiple values in the types argument, like types=spaces,snippets.The default value is all, which does not filter the list.",
       "type": "string"
     },
     "user": {
       "required": false,
+      "example": "W1234567890",
       "desc": "Filter files created by a single user.",
       "type": "user"
     }

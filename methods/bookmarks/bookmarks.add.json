@@ -6,6 +6,7 @@
   "args": {
     "channel_id": {
       "required": true,
+      "example": "C1234567890",
       "desc": "Channel to add bookmark in.",
       "type": "string"
     },

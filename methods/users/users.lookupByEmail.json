@@ -6,6 +6,7 @@
   "args": {
     "email": {
       "required": true,
+      "example": "spengler@ghostbusters.example.com",
       "desc": "An email address belonging to a user in the workspace.",
       "type": "string"
     }

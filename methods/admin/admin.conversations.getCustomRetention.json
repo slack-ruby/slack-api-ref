@@ -6,6 +6,7 @@
   "args": {
     "channel_id": {
       "required": true,
+      "example": "C12345678",
       "desc": "The conversation to get the retention policy for.",
       "type": "string"
     }

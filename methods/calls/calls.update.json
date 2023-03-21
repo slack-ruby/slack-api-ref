@@ -6,21 +6,25 @@
   "args": {
     "id": {
       "required": true,
+      "example": "R0E69JAIF",
       "desc": "id returned by the calls.add method.",
       "type": "string"
     },
     "desktop_app_join_url": {
       "required": false,
+      "example": "callapp://join/0987654321",
       "desc": "When supplied, available Slack clients will attempt to directly launch the 3rd-party Call with this URL.",
       "type": "string"
     },
     "join_url": {
       "required": false,
+      "example": "https://example.com/calls/0987654321",
       "desc": "The URL required for a client to join the Call.",
       "type": "string"
     },
     "title": {
       "required": false,
+      "example": "Kimpossible sync up call",
       "desc": "The name of the Call.",
       "type": "string"
     }

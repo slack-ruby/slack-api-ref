@@ -6,16 +6,19 @@
   "args": {
     "name": {
       "required": true,
+      "example": "mychannel",
       "desc": "Name of the public or private channel to create.",
       "type": "string"
     },
     "is_private": {
       "required": false,
+      "example": "true",
       "desc": "Create a private channel instead of a public one.",
       "type": "boolean"
     },
     "team_id": {
       "required": false,
+      "example": "T1234567890",
       "desc": "encoded team id to create the channel in, required if org token is used.",
       "type": "string"
     }

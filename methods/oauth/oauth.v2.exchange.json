@@ -6,11 +6,13 @@
   "args": {
     "client_id": {
       "required": true,
+      "example": "4123121235.9872358710",
       "desc": "Issued when you created your application.",
       "type": "string"
     },
     "client_secret": {
       "required": true,
+      "example": "e1b9e11dfcd19c1982d5de12921e17e8c",
       "desc": "Issued when you created your application.",
       "type": "string"
     }

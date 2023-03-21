@@ -6,6 +6,7 @@
   "args": {
     "channel": {
       "required": true,
+      "example": "C1234567890",
       "desc": "Channel to pin the messsage to. You must also include a timestamp when pinning messages.",
       "type": "channel"
     },
@@ -16,6 +17,7 @@
     },
     "timestamp": {
       "required": false,
+      "example": "1234567890.123456",
       "desc": "Timestamp of the message to pin. You must also include the channel.",
       "type": "string"
     }

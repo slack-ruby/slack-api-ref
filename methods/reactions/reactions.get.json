@@ -6,26 +6,31 @@
   "args": {
     "channel": {
       "required": false,
+      "example": "C0NF841BK",
       "desc": "Channel where the message to get reactions for was posted.",
       "type": "channel"
     },
     "file": {
       "required": false,
+      "example": "F1234567890",
       "desc": "File to get reactions for.",
       "type": "file"
     },
     "file_comment": {
       "required": false,
+      "example": "Fc1234567890",
       "desc": "File comment to get reactions for.",
       "type": "string"
     },
     "full": {
       "required": false,
+      "example": "true",
       "desc": "If true always return the complete reaction list.",
       "type": "boolean"
     },
     "timestamp": {
       "required": false,
+      "example": "1524523204.000192",
       "desc": "Timestamp of the message to get reactions for.",
       "type": "string"
     }

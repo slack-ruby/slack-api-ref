@@ -6,26 +6,31 @@
   "args": {
     "name": {
       "required": true,
+      "example": "thumbsup",
       "desc": "Reaction (emoji) name.",
       "type": "string"
     },
     "channel": {
       "required": false,
+      "example": "C1234567890",
       "desc": "Channel where the message to remove reaction from was posted.",
       "type": "channel"
     },
     "file": {
       "required": false,
+      "example": "F1234567890",
       "desc": "File to remove reaction from.",
       "type": "file"
     },
     "file_comment": {
       "required": false,
+      "example": "Fc1234567890",
       "desc": "File comment to remove reaction from.",
       "type": "string"
     },
     "timestamp": {
       "required": false,
+      "example": "1234567890.123456",
       "desc": "Timestamp of the message to remove reaction from.",
       "type": "string"
     }

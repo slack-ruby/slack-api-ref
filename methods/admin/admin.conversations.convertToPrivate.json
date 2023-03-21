@@ -6,10 +6,12 @@
   "args": {
     "channel_id": {
       "required": true,
+      "example": "C12345",
       "desc": "The channel to convert to private."
     },
     "name": {
       "required": false,
+      "example": "new_private_channel_name",
       "desc": "Name of private channel to create. Only respected when converting an MPIM.",
       "type": "string"
     }

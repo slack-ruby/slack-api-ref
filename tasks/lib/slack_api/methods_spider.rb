@@ -79,7 +79,7 @@ module SlackApi
           .tap { |t| t.slice!("\n") }
           .tap { |t| t << '.' unless t.end_with?('.') }
           .gsub('’', "'")
-        example = row.search('.apiReference__example__code').first&.text
+        example = row.search('.apiReference__exampleCode code').first&.text
 
         case name
         when 'token'

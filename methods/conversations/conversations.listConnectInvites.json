@@ -6,11 +6,13 @@
   "args": {
     "cursor": {
       "required": false,
+      "example": "5c3e53d5",
       "desc": "Set to next_cursor returned by previous call to list items in subsequent page.",
       "type": "string"
     },
     "team_id": {
       "required": false,
+      "example": "T1234567890",
       "desc": "Encoded team id for the workspace to retrieve invites for, required if org token is used.",
       "type": "string"
     }

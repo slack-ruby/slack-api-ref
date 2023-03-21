@@ -6,11 +6,13 @@
   "args": {
     "session_id": {
       "required": true,
+      "example": "12345",
       "desc": "ID of the session to invalidate.",
       "type": "integer"
     },
     "team_id": {
       "required": true,
+      "example": "T1234",
       "desc": "ID of the workspace that the session belongs to.",
       "type": "string"
     }

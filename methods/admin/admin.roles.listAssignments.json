@@ -6,26 +6,31 @@
   "args": {
     "cursor": {
       "required": false,
+      "example": "5c3e53d5",
       "desc": "Set cursor to next_cursor returned by the previous call to list items in the next page.",
       "type": "string"
     },
     "entity_ids": {
       "required": false,
+      "example": "['T12345', 'C12345']",
       "desc": "The entities for which the roles apply.",
       "type": "array"
     },
     "limit": {
       "required": false,
+      "example": "200",
       "desc": "The maximum number of items to return. Must be between 1 - 100 both inclusive.",
       "type": "integer"
     },
     "role_ids": {
       "required": false,
+      "example": "['Rl01', 'Rl0A']",
       "desc": "collection of role ids to scope results by.",
       "type": "array"
     },
     "sort_dir": {
       "required": false,
+      "example": "DESC",
       "desc": "Sort direction. Default is descending on date_create, can be either ASC or DESC.",
       "type": "string"
     }

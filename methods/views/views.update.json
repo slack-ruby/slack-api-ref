@@ -12,16 +12,19 @@
     },
     "external_id": {
       "required": false,
+      "example": "bmarley_view2",
       "desc": "A unique identifier of the view set by the developer. Must be unique for all views on a team. Max length of 255 characters. Either view_id or external_id is required.",
       "type": "string"
     },
     "view_id": {
       "required": false,
+      "example": "VMM512F2U",
       "desc": "A unique identifier of the view to be updated. Either view_id or external_id is required.",
       "type": "string"
     },
     "hash": {
       "required": false,
+      "example": "156772938.1827394",
       "desc": "A string that represents view state to protect against possible race conditions.",
       "type": "string"
     }

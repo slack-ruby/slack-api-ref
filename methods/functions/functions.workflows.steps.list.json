@@ -11,6 +11,7 @@
     },
     "workflow": {
       "required": false,
+      "example": "#/workflows/my-workflow",
       "desc": "The workflow encoded ID or workflow reference.",
       "type": "string"
     },
