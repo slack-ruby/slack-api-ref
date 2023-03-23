@@ -10,6 +10,18 @@
       "desc": "End of time range of logs to include in results (inclusive).",
       "type": "string"
     },
+    "cursor": {
+      "required": false,
+      "example": "dXNlcjpVMDYxTkZUVDI=",
+      "desc": "Parameter for pagination. Set cursor equal to the next_cursor attribute returned by the previous request's response_metadata. This parameter is optional, but pagination is mandatory: the default value simply fetches the first \"page\" of the collection. See pagination for more details.",
+      "type": "string"
+    },
+    "limit": {
+      "required": false,
+      "example": "0",
+      "desc": "The maximum number of items to return. Fewer than the requested number of items may be returned, even if the end of the list hasn't been reached. If specified, result is returned using a cursor-based approach instead of a classic one.",
+      "type": "integer"
+    },
     "team_id": {
       "required": false,
       "example": "T1234567890",
@@ -30,6 +42,8 @@
     "over_pagination_limit": "It is not possible to request more than 1000 items per page or more than 100 pages.",
     "paid_only": "This is only available to paid teams.",
     "token_revoked": "Authentication token is for a deleted user or workspace or the app has been removed when using a user token.",
+    "invalid_cursor": "Value passed for cursor was not valid or is no longer valid.",
+    "invalid_limit": "The value passed for limit was not valid.",
     "access_denied": "Access to a resource specified in the request is denied.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
     "deprecated_endpoint": "The endpoint has been deprecated.",
