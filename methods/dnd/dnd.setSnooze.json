@@ -13,12 +13,11 @@
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true\n}",
+      "{\n    \"ok\": true,\n    \"snooze_enabled\": true,\n    \"snooze_endtime\": 1450373897,\n    \"snooze_remaining\": 60,\n    \"snooze_is_indefinite\": false\n}",
       "{\n    \"ok\": false,\n    \"error\": \"invalid_auth\"\n}"
     ]
   },
   "errors": {
-    "cannot_set_both_num_minutes_and_is_indefinite": "Cannot set both num_minutes and is_indefinite at the same time.",
     "missing_duration": "No value provided for num_minutes.",
     "snooze_failed": "There was a problem setting the user's Do Not Disturb status.",
     "too_long": "The value for num_minutes was too large.",
