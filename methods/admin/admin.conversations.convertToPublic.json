@@ -26,6 +26,7 @@
     "invalid_user": "Value passed for user_id was not valid.",
     "external_limited_restriction": "away-side SC conversion fails due to being under Limited Access (“external_limited” aka “can only post”).",
     "channel_owner_restriction": "away-side SC conversion fails due to home-side being private.",
+    "is_idp_managed": "The channel cannot be converted because it is IDP Managed.",
     "access_denied": "Access to a resource specified in the request is denied.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
     "deprecated_endpoint": "The endpoint has been deprecated.",
