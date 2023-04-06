@@ -71,6 +71,7 @@
     "slack_connect_blocked_file_type": "File uploads with certain types are blocked in all Slack Connect communications.",
     "slack_connect_clip_sharing_blocked": "Admin has disabled Clip sharing in Slack Connect channels.",
     "slack_connect_file_upload_sharing_blocked": "Admin has disabled File uploads in all Slack Connect communications.",
+    "invalid_thread_ts": "Value passed to thread_ts was invalid.",
     "access_denied": "Access to a resource specified in the request is denied.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
     "deprecated_endpoint": "The endpoint has been deprecated.",
