@@ -6,13 +6,18 @@
   "args": {
     "step_id": {
       "required": true,
-      "desc": ".",
+      "desc": "The ID of the OpenForm step to export.",
       "type": "string"
     },
     "workflow": {
       "required": false,
       "example": "#/workflows/my-workflow",
       "desc": "The workflow encoded ID or workflow reference.",
+      "type": "string"
+    },
+    "workflow_app_id": {
+      "required": false,
+      "desc": "The app tied to the workflow reference.",
       "type": "string"
     },
     "workflow_id": {
@@ -23,7 +28,8 @@
   },
   "response": {
     "examples": [
-
+      "{\n    \"ok\": true\n}",
+      "{\n    \"ok\": false,\n    \"error\": \"unknown_workflow_id\"\n}"
     ]
   },
   "errors": {
