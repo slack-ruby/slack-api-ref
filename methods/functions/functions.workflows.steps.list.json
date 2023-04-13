@@ -6,13 +6,18 @@
   "args": {
     "function_id": {
       "required": true,
-      "desc": ".",
+      "desc": "The ID of the function to query.",
       "type": "string"
     },
     "workflow": {
       "required": false,
       "example": "#/workflows/my-workflow",
       "desc": "The workflow encoded ID or workflow reference.",
+      "type": "string"
+    },
+    "workflow_app_id": {
+      "required": false,
+      "desc": "The app tied to the workflow reference.",
       "type": "string"
     },
     "workflow_id": {
@@ -23,7 +28,8 @@
   },
   "response": {
     "examples": [
-
+      "{\n    \"ok\": true,\n    \"steps_versions\": [\n        {\n            \"title\": \"Send a greeting\",\n            \"workflow_id\": \"Wf014H7FCWG2\",\n            \"step_id\": \"0\",\n            \"is_deleted\": false,\n            \"workflow_version_created\": \"1677282339978193\"\n        }\n    ]\n}",
+      "{\n    \"ok\": false,\n    \"error\": \"unknown_workflow_id\"\n}"
     ]
   },
   "errors": {
