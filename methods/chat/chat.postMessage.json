@@ -146,7 +146,6 @@
     "restricted_action_thread_only_channel": "Cannot post top-level messages into a thread-only channel.",
     "slack_connect_canvas_sharing_blocked": "Admin has disabled Canvas File sharing in all Slack Connect communications.",
     "slack_connect_file_link_sharing_blocked": "Admin has disabled Slack File sharing in all Slack Connect communications.",
-    "slack_connect_team_blocked": "The spaceship_slack_connect_team is disabled - disabling canvas sharing in slack connect.",
     "team_access_not_granted": "The token used is not granted the specific workspace access required to complete this request.",
     "too_many_attachments": "Too many attachments were provided with this message. A maximum of 100 attachments are allowed on a message.",
     "too_many_contact_cards": "Too many contact_cards were provided with this message. A maximum of 10 contact cards are allowed on a message.",
