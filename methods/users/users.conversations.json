@@ -19,7 +19,7 @@
     "limit": {
       "required": false,
       "example": "100",
-      "desc": "The maximum number of items to return. Fewer than the requested number of items may be returned, even if the end of the list hasn't been reached. Must be an integer no larger than 1000.",
+      "desc": "The maximum number of items to return. Fewer than the requested number of items may be returned, even if the end of the list hasn't been reached. Must be an integer with a max value of 999.",
       "type": "number"
     },
     "team_id": {
