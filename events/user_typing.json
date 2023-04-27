@@ -5,7 +5,7 @@
   "required_scope": "RTM",
   "example": {
     "type": "user_typing",
-    "channel": "C02ELGNBH",
-    "user": "U024BE7LH"
+    "channel": "C123ABC456",
+    "user": "U123ABC456"
   }
 }

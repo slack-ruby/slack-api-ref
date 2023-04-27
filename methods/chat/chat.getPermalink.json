@@ -19,8 +19,8 @@
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true,\n    \"channel\": \"C1H9RESGA\",\n    \"permalink\": \"https://ghostbusters.slack.com/archives/C1H9RESGA/p135854651500008\"\n}",
-      "{\n    \"ok\": true,\n    \"channel\": \"C1H9RESGA\",\n    \"permalink\": \"https://ghostbusters.slack.com/archives/C1H9RESGL/p135854651700023?thread_ts=1358546515.000008&cid=C1H9RESGL\"\n}",
+      "{\n    \"ok\": true,\n    \"channel\": \"C123ABC456\",\n    \"permalink\": \"https://ghostbusters.slack.com/archives/C1H9RESGA/p135854651500008\"\n}",
+      "{\n    \"ok\": true,\n    \"channel\": \"C123ABC456\",\n    \"permalink\": \"https://ghostbusters.slack.com/archives/C1H9RESGL/p135854651700023?thread_ts=1358546515.000008&cid=C1H9RESGL\"\n}",
       "{\n    \"ok\": false,\n    \"error\": \"channel_not_found\"\n}"
     ]
   },

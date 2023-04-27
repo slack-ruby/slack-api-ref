@@ -5,10 +5,10 @@
   "required_scope": "RTM",
   "example": {
     "type": "member_joined_channel",
-    "user": "W06GH7XHN",
-    "channel": "C0698JE0H",
+    "user": "W123ABC456",
+    "channel": "C123ABC456",
     "channel_type": "C",
-    "team": "T024BE7LD",
+    "team": "T123ABC456",
     "inviter": "U123456789"
   }
 }

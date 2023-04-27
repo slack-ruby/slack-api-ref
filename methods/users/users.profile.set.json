@@ -41,6 +41,7 @@
     "email_taken": "email taken.",
     "invalid_profile": "Profile object passed in is not valid JSON (make sure it is URL encoded!).",
     "must_clear_both_status_text_and_status_emoji": "Clearing the status requires setting both status_text and status_emoji to ''.",
+    "name_not_allowed": "name cannot contain URL.",
     "not_admin": "Only admins can update the profile of another user. Some fields, like email may only be updated by an admin.",
     "not_app_admin": "Only team owners and selected members can update the profile of a bot user.",
     "partial_profile_set_failed": "Failed to set user profile.",

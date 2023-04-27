@@ -5,12 +5,12 @@
   "required_scope": "RTM",
   "example": {
     "type": "reaction_added",
-    "user": "U024BE7LH",
+    "user": "U123ABC456",
     "reaction": "thumbsup",
-    "item_user": "U0G9QF9C6",
+    "item_user": "U222222222",
     "item": {
       "type": "message",
-      "channel": "C0G9QF9GZ",
+      "channel": "C123ABC456",
       "ts": "1360782400.498405"
     },
     "event_ts": "1360782804.083113"

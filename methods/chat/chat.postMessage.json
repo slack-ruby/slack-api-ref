@@ -116,7 +116,7 @@
   ],
   "response": {
     "examples": [
-      "{\n    \"ok\": true,\n    \"channel\": \"C123456\",\n    \"ts\": \"1503435956.000247\",\n    \"message\": {\n        \"text\": \"Here's a message for you\",\n        \"username\": \"ecto1\",\n        \"bot_id\": \"B123456\",\n        \"attachments\": [\n            {\n                \"text\": \"This is an attachment\",\n                \"id\": 1,\n                \"fallback\": \"This is an attachment's fallback\"\n            }\n        ],\n        \"type\": \"message\",\n        \"subtype\": \"bot_message\",\n        \"ts\": \"1503435956.000247\"\n    }\n}",
+      "{\n    \"ok\": true,\n    \"channel\": \"C123ABC456\",\n    \"ts\": \"1503435956.000247\",\n    \"message\": {\n        \"text\": \"Here's a message for you\",\n        \"username\": \"ecto1\",\n        \"bot_id\": \"B123ABC456\",\n        \"attachments\": [\n            {\n                \"text\": \"This is an attachment\",\n                \"id\": 1,\n                \"fallback\": \"This is an attachment's fallback\"\n            }\n        ],\n        \"type\": \"message\",\n        \"subtype\": \"bot_message\",\n        \"ts\": \"1503435956.000247\"\n    }\n}",
       "{\n    \"ok\": false,\n    \"error\": \"too_many_attachments\"\n}"
     ]
   },

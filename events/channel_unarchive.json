@@ -5,7 +5,7 @@
   "required_scope": "RTM",
   "example": {
     "type": "channel_unarchive",
-    "channel": "C024BE91L",
-    "user": "U024BE7LH"
+    "channel": "C123ABC456",
+    "user": "U123ABC456"
   }
 }

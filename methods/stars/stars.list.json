@@ -2,7 +2,7 @@
   "group": "stars",
   "name": "stars.list",
   "deprecated": false,
-  "desc": "List a user's saved items, formerly known as _stars_.",
+  "desc": "List a user's saved items, formerly known as stars.",
   "args": {
     "cursor": {
       "required": false,
@@ -25,7 +25,7 @@
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true\n}",
+      "{\n    \"ok\": true,\n    \"items\": [\n        {\n            \"type\": \"message\",\n            \"channel\": \"C123ABC456\",\n            \"message\": {\n                \"type\": \"message\",\n                \"subtype\": \"bot_message\",\n                \"text\": \"\",\n                \"ts\": \"1655762568.324229\",\n                \"username\": \"username\",\n                \"icons\": {\n                    \"emoji\": \":test:\"\n                },\n                \"bot_id\": \"BSLACKBOT\",\n                \"attachments\": [\n                    {\n                        \"color\": \"ecb438\",\n                        \"ts\": 1655762568,\n                        \"id\": 1,\n                        \"fallback\": \"some text\",\n                        \"text\": \"some text\",\n                        \"pretext\": \"*chat.postMessage*\",\n                        \"mrkdwn_in\": [\n                            \"pretext\",\n                            \"text\"\n                        ]\n                    }\n                ],\n                \"permalink\": \"https://your-workspace.slack.com/archives/C123ABC456/p123456789\"\n            },\n            \"date_create\": 1656014995\n        }\n    ],\n    \"paging\": {\n        \"per_page\": 100,\n        \"spill\": 0,\n        \"page\": 1,\n        \"total\": 1,\n        \"pages\": 1\n    }\n}",
       "{\n    \"ok\": false,\n    \"error\": \"invalid_auth\"\n}"
     ]
   },

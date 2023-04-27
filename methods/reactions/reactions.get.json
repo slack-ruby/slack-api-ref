@@ -37,7 +37,7 @@
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true,\n    \"type\": \"message\",\n    \"message\": {\n        \"type\": \"message\",\n        \"text\": \"Hi there!\",\n        \"user\": \"W123456\",\n        \"ts\": \"1648602352.215969\",\n        \"team\": \"T123456\",\n        \"reactions\": [\n            {\n                \"name\": \"grinning\",\n                \"users\": [\n                    \"W222222\"\n                ],\n                \"count\": 1\n            },\n            {\n                \"name\": \"question\",\n                \"users\": [\n                    \"W333333\"\n                ],\n                \"count\": 1\n            }\n        ],\n        \"permalink\": \"https://xxx.slack.com/archives/C123456/p1648602352215969\"\n    },\n    \"channel\": \"C123456\"\n}",
+      "{\n    \"ok\": true,\n    \"type\": \"message\",\n    \"message\": {\n        \"type\": \"message\",\n        \"text\": \"Hi there!\",\n        \"user\": \"W123456\",\n        \"ts\": \"1648602352.215969\",\n        \"team\": \"T123456\",\n        \"reactions\": [\n            {\n                \"name\": \"grinning\",\n                \"users\": [\n                    \"W222222\"\n                ],\n                \"count\": 1\n            },\n            {\n                \"name\": \"question\",\n                \"users\": [\n                    \"W333333\"\n                ],\n                \"count\": 1\n            }\n        ],\n        \"permalink\": \"https://xxx.slack.com/archives/C123456/p1648602352215969\"\n    },\n    \"channel\": \"C123ABC456\"\n}",
       "{\n    \"ok\": false,\n    \"error\": \"invalid_auth\"\n}"
     ]
   },

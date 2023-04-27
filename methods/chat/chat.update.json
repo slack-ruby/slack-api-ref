@@ -76,7 +76,7 @@
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true,\n    \"channel\": \"C024BE91L\",\n    \"ts\": \"1401383885.000061\",\n    \"text\": \"Updated text you carefully authored\",\n    \"message\": {\n        \"text\": \"Updated text you carefully authored\",\n        \"user\": \"U34567890\"\n    }\n}",
+      "{\n    \"ok\": true,\n    \"channel\": \"C123ABC456\",\n    \"ts\": \"1401383885.000061\",\n    \"text\": \"Updated text you carefully authored\",\n    \"message\": {\n        \"text\": \"Updated text you carefully authored\",\n        \"user\": \"U34567890\"\n    }\n}",
       "{\n    \"ok\": false,\n    \"error\": \"cant_update_message\"\n}"
     ]
   },

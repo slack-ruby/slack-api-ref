@@ -5,6 +5,6 @@
   "required_scope": "RTM",
   "example": {
     "type": "channel_left",
-    "channel": "C024BE91L"
+    "channel": "C123ABC456"
   }
 }

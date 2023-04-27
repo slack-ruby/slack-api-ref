@@ -19,7 +19,7 @@
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true,\n    \"channel\": \"C024BE7LR\",\n    \"ts\": \"1417671948.000006\"\n}",
+      "{\n    \"ok\": true,\n    \"channel\": \"C123ABC456\",\n    \"ts\": \"1417671948.000006\"\n}",
       "{\n    \"ok\": false,\n    \"error\": \"invalid_auth\"\n}"
     ]
   },

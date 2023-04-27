@@ -87,7 +87,7 @@
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true,\n    \"channel\": \"C123456\",\n    \"scheduled_message_id\": \"Q1298393284\",\n    \"post_at\": \"1562180400\",\n    \"message\": {\n        \"text\": \"Here's a message for you in the future\",\n        \"username\": \"ecto1\",\n        \"bot_id\": \"B123456\",\n        \"attachments\": [\n            {\n                \"text\": \"This is an attachment\",\n                \"id\": 1,\n                \"fallback\": \"This is an attachment's fallback\"\n            }\n        ],\n        \"type\": \"delayed_message\",\n        \"subtype\": \"bot_message\"\n    }\n}",
+      "{\n    \"ok\": true,\n    \"channel\": \"C123ABC456\",\n    \"scheduled_message_id\": \"Q1298393284\",\n    \"post_at\": \"1562180400\",\n    \"message\": {\n        \"text\": \"Here's a message for you in the future\",\n        \"username\": \"ecto1\",\n        \"bot_id\": \"B123ABC456\",\n        \"attachments\": [\n            {\n                \"text\": \"This is an attachment\",\n                \"id\": 1,\n                \"fallback\": \"This is an attachment's fallback\"\n            }\n        ],\n        \"type\": \"delayed_message\",\n        \"subtype\": \"bot_message\"\n    }\n}",
       "{\n    \"ok\": false,\n    \"error\": \"time_in_past\"\n}"
     ]
   },
