@@ -19,7 +19,7 @@
     "limit": {
       "required": false,
       "example": "200",
-      "desc": "The maximum number of items to return. Must be between 1 - 100 both inclusive.",
+      "desc": "The maximum number of items to return. Must be between 1 - 200 both inclusive.",
       "type": "integer"
     },
     "role_ids": {
