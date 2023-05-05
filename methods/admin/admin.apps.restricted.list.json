@@ -4,6 +4,12 @@
   "deprecated": false,
   "desc": "List restricted apps for an org or workspace.",
   "args": {
+    "certified": {
+      "required": false,
+      "example": "",
+      "desc": "Only return certified apps when true, return only non-certified apps when false.",
+      "type": "boolean"
+    },
     "cursor": {
       "required": false,
       "example": "5c3e53d5",
