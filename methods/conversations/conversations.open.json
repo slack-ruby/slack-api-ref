@@ -38,7 +38,7 @@
   },
   "errors": {
     "channel_not_found": "Value passed for channel was invalid.",
-    "invalid_user_combination": "To message people from multiple organizations, those organizations must be in at least one channel together.",
+    "invalid_user_combination": "All external people must already be in at least one channel together to send a message.",
     "method_not_supported_for_channel_type": "This type of conversation cannot be used with this method.",
     "missing_scope": "The token used is not granted the specific scope permissions required to complete this request.",
     "not_enough_users": "Needs at least 2 users to open.",
