@@ -7,7 +7,7 @@
     "certified": {
       "required": false,
       "example": "",
-      "desc": "Limit the results to only include certified apps. When false, no certified apps will appear in the result.",
+      "desc": "Include requests for certified apps.",
       "type": "boolean"
     },
     "cursor": {

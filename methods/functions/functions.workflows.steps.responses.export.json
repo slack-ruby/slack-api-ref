@@ -35,6 +35,7 @@
   "errors": {
     "unknown_method": "This method does not exist.",
     "access_denied": "Access to a resource specified in the request is denied.",
+    "workflows_export_csv_not_enabled": "Downloading form responses is not allowed. Admin pref needs to be enabled.",
     "unknown_workflow_id": "The passed in workflow_id is invalid.",
     "unknown_step_id": "The passed in step_id is invalid.",
     "invalid_arguments": "The method was either called with invalid arguments or some detail about the arguments passed is invalid, which is more likely when using complex arguments like blocks or attachments.",
