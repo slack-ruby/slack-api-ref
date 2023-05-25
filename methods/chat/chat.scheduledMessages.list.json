@@ -19,7 +19,7 @@
     "latest": {
       "required": false,
       "example": "1562137200",
-      "desc": "A UNIX timestamp of the latest value in the time range.",
+      "desc": "A Unix timestamp of the latest value in the time range.",
       "type": "timestamp"
     },
     "limit": {
@@ -31,7 +31,7 @@
     "oldest": {
       "required": false,
       "example": "1562137200",
-      "desc": "A UNIX timestamp of the oldest value in the time range.",
+      "desc": "A Unix timestamp of the oldest value in the time range.",
       "type": "timestamp"
     },
     "team_id": {
