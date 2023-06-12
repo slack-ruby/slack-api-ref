@@ -39,6 +39,7 @@
     "feature_not_enabled": "Returned when the Admin APIs feature is not enabled for this team.",
     "invalid_request_id": "The request_id passed is invalid.",
     "invalid_app_id": "The app_id passed is invalid.",
+    "org_resolution_required": "The team_id is on a grid while app_id is certified.",
     "invalid_scopes": "Some of the provided scopes do not exist.",
     "not_an_admin": "This method is only accessible by org owners and admins.",
     "request_already_resolved": "The app request has already been resolved.",
