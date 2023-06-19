@@ -43,7 +43,7 @@
     "invalid_channel_id": "channel_id was invalid.",
     "invalid_target_team": "Target workspace is invalid.",
     "managed_channel_not_supported": "Cannot unshare a managed channel.",
-    "name_taken": "The channel's name was already used in one of the workspce.",
+    "name_taken": "The proposed new name for the channel is already in use within your organization.",
     "not_allowed_for_grid_workspace": "Slack Connect is not allowed for this grid workspace.",
     "not_enabled": "The API endpoint is not enabled for your team.",
     "restricted_action": "The caller of this API is not allowed to perform this operation.",
