@@ -2,7 +2,7 @@
   "group": "stars",
   "name": "stars.add",
   "deprecated": false,
-  "desc": "Save an item for later. Formerly known as _adding a star_.",
+  "desc": "Save an item for later. Formerly known as adding a star.",
   "args": {
     "channel": {
       "required": false,

@@ -1,6 +1,6 @@
 {
   "name": "star_added",
   "desc": "A member has starred an item.",
-  "long_desc": "When an item is starred, the star_added event is sent to all connected clients for the authenticated user who starred the item. See the stars.list method for details of the structure of the item property. When an event occurs, we will send an HTTP POST request to your Request URL. The outer payload is uniform across all Events API methods, and contains fields like team_id and event. Learn more",
+  "long_desc": "Stars can no longer be interacted with by end-users. The star_added event is no longer emitted. We recommend retiring any app functionality that relies on stars APIs. End-users can use the new Later view, but Later APIs are not currently available. When an item was starred, the star_added event was sent to all connected clients for the authenticated user who starred the item. See the stars.list method for details of the structure of the item property. When an event occurs, we will send an HTTP POST request to your Request URL. The outer payload is uniform across all Events API methods, and contains fields like team_id and event. Learn more",
   "required_scope": "RTM"
 }
