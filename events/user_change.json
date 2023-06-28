@@ -1,7 +1,7 @@
 {
   "name": "user_change",
   "desc": "A member's data has changed.",
-  "long_desc": "The user_change event is sent to all connections for a workspace when a member updates their profile or data. Clients can use this to update their local cache of members. Note on profile data Custom fields being modified on a user profile will not trigger the user_change event. Depending on what event took place, one of the following three other events will be dispatched simultaneously: Use the users.profile.set method to update user profile data. Accessing email addresses The users:read.email OAuth scope is required to access the email field in user objects. When an event occurs, we will send an HTTP POST request to your Request URL. The outer payload is uniform across all Events API methods, and contains fields like team_id and event. Learn more",
+  "long_desc": "The user_change event is sent to all connections for a workspace when a member updates their profile or data. Clients can use this to update their local cache of members. Custom fields being modified on a user profile will not trigger the user_change event. Depending on what event took place, one of the following three other events will be dispatched simultaneously: Use the users.profile.set method to update user profile data. Accessing email addresses The users:read.email OAuth scope is required to access the email field in user objects. When an event occurs, we will send an HTTP POST request to your Request URL. The outer payload is uniform across all Events API methods, and contains fields like team_id and event. Learn more",
   "required_scope": "RTM",
   "example": {
     "user": {

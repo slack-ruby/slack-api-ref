@@ -1,7 +1,7 @@
 {
   "name": "user_profile_changed",
   "desc": "A user's profile data has changed.",
-  "long_desc": "The user_profile_changed event is sent to all connections for a workspace when a user's profile data is changed. Note on profile data Custom fields being modified on a user profile will not trigger the user_profile_changed event. The event is identical to the existing user_change event. Both user_change and user_profile_changed are dispatched at the exact same time. Use the users.profile.set method to update user profile data. When an event occurs, we will send an HTTP POST request to your Request URL. The outer payload is uniform across all Events API methods, and contains fields like team_id and event. Learn more",
+  "long_desc": "The user_profile_changed event is sent to all connections for a workspace when a user's profile data is changed. Custom fields being modified on a user profile will not trigger the user_profile_changed event. The event is identical to the existing user_change event. Both user_change and user_profile_changed are dispatched at the exact same time. Use the users.profile.set method to update user profile data. When an event occurs, we will send an HTTP POST request to your Request URL. The outer payload is uniform across all Events API methods, and contains fields like team_id and event. Learn more",
   "required_scope": "RTM",
   "example": {
     "type": "user_profile_changed",
