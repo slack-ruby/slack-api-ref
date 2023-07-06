@@ -2,7 +2,7 @@
   "group": "stars",
   "name": "stars.list",
   "deprecated": false,
-  "desc": "List a user's saved items, formerly known as stars.",
+  "desc": "Listed a user's saved items, formerly known as stars.",
   "args": {
     "cursor": {
       "required": false,
