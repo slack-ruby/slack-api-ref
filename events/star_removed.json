@@ -1,6 +1,6 @@
 {
   "name": "star_removed",
-  "desc": "A member removed a star.",
-  "long_desc": "Stars can no longer be interacted with by end-users. We recommend retiring any app functionality that relies on stars APIs. End-users can use the new Later view, but Later APIs are not currently available. When an item was unstarred, the star_removed event was sent to all connected clients for users who can see the content that was unstarred. See the stars.list method for details of the structure of the item property. When an event occurs, we will send an HTTP POST request to your Request URL. The outer payload is uniform across all Events API methods, and contains fields like team_id and event. Learn more",
+  "desc": "A member has removed an item saved for later or starred an item.",
+  "long_desc": "When an item was unstarred, the star_removed event was sent to all connected clients for users who can see the content that was unstarred. See the stars.list method for details of the structure of the item property. When an event occurs, we will send an HTTP POST request to your Request URL. The outer payload is uniform across all Events API methods, and contains fields like team_id and event. Learn more",
   "required_scope": "RTM"
 }

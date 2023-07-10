@@ -38,6 +38,7 @@
     "canvas_disabled_user_team": "Canvas is disabled on user's team for connected Channels.",
     "canvas_disabled_file_team": "Canvas is disabled on file's team.",
     "not_visible": "Do not have permission to view the file.",
+    "template_not_visible": "Do not have permissions to view this template.",
     "slack_connect_canvas_sharing_blocked": "Admin has disabled sharing of Canvas links in all Slack Connect communications.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
     "deprecated_endpoint": "The endpoint has been deprecated.",
