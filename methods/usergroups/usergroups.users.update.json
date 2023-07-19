@@ -37,7 +37,7 @@
   },
   "errors": {
     "invalid_users": "Value passed for users was empty or invalid.",
-    "user_not_a_member_of_this_workspace": "User(s) are not in the workspace where this usergroup exists.",
+    "failed_for_some_users": "User(s) are not in the workspace where this usergroup exists.",
     "missing_argument": "A required argument is missing.",
     "no_users_provided": "Either the users field wasn't provided or an empty value was passed.",
     "permission_denied": "The user does not have permission to update the list of users for a User Group.",
