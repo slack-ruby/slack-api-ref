@@ -59,7 +59,7 @@
     "resend": {
       "required": false,
       "example": "true",
-      "desc": "Allow this invite to be resent in the future if a user has not signed up yet. (default: false).",
+      "desc": "Allow this invite to be resent in the future if a user has not signed up yet. Resending can only be done via the UI and has no expiration. (default: false).",
       "type": "boolean"
     }
   },
