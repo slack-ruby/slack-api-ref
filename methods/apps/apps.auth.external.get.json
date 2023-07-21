@@ -6,7 +6,7 @@
   "args": {
     "external_token_id": {
       "required": true,
-      "example": "Et123",
+      "example": "Et12345ABCDE",
       "desc": "The id of the token you want to get the token for.",
       "type": "string"
     },
@@ -19,7 +19,8 @@
   },
   "response": {
     "examples": [
-
+      "{\n    \"ok\": true,\n    \"external_token\": \"00D3j00000025Zh!AQ4AQMAl46qme3wdZiKo5j3WHcJujZXoB0FtsFuC5JxWZdje2aiecF9vY5KdY5wTPUZIYBekIraDWuw_u_ZUgeIA1.opF6L9\"\n}",
+      "{\n    \"ok\": false,\n    \"error\": \"not_allowed_token_type\"\n}"
     ]
   },
   "errors": {
