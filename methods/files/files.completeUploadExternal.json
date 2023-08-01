@@ -35,6 +35,7 @@
   },
   "errors": {
     "access_denied": "Access to a resource specified in the request is denied.",
+    "channel_not_found": "Value passed for channel_id was invalid.",
     "file_not_found": "Could not find the file from the upload ticket.",
     "file_update_failed": "Failure occured when attempting to update the file.",
     "invalid_channel": "Channel could not be found or channel specified is invalid.",

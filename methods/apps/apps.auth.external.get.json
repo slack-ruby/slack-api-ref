@@ -27,6 +27,7 @@
     "token_not_found": "No token found for the passed external_token_id.",
     "method_not_supported": "This API method is not supported.",
     "no_refresh_token": "No refresh token found for the passed external_token_id.",
+    "access_token_exchange_failed": "There was an error while attempting to exchange or refresh token.",
     "access_denied": "Access to a resource specified in the request is denied.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
     "deprecated_endpoint": "The endpoint has been deprecated.",
