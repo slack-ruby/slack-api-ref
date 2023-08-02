@@ -22,7 +22,7 @@
     },
     "invite_id": {
       "required": false,
-      "desc": "See the shared_channel_invite_received event payload for more details on how to retrieve the ID of the invitation."
+      "desc": "ID of the invite that you'd like to accept. Must provide either invite_id or channel_id. See the shared_channel_invite_received event payload for more details on how to retrieve the ID of the invitation."
     },
     "is_private": {
       "required": false,
