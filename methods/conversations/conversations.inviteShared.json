@@ -12,7 +12,7 @@
     },
     "emails": {
       "required": false,
-      "desc": "Optional email to receive this invite. Either emails or user_ids must be provided.",
+      "desc": "Optional email to receive this invite. Either emails or user_ids must be provided. Only one email or one user ID may be invited at a time.",
       "type": "array"
     },
     "external_limited": {
@@ -23,7 +23,7 @@
     },
     "user_ids": {
       "required": false,
-      "desc": "Optional user_id to receive this invite. Either emails or user_ids must be provided.",
+      "desc": "Optional user_id to receive this invite. Either emails or user_ids must be provided. Only one email or one user ID may be invited at a time.",
       "type": "array"
     }
   },
