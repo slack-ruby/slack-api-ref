@@ -29,7 +29,7 @@
     "invalid_arguments": "The method was either called with invalid arguments or some detail about the arguments passed is invalid, which is more likely when using complex arguments like blocks or attachments.",
     "invalid_datastore": "The provided datastore is invalid.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
-    "app_not_hosted": "The App Datastore feature is not available for use by this app.",
+    "app_not_hosted": "The app developer is not using a Slack-hosted environment. App datastores are exclusively available for Slack-hosted apps.",
     "not_found": "Item not found.",
     "datastore_error": "Datastore error.",
     "access_denied": "Access to a resource specified in the request is denied.",
