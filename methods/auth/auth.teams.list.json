@@ -2,7 +2,7 @@
   "group": "auth",
   "name": "auth.teams.list",
   "deprecated": false,
-  "desc": "List the workspaces a token can access.",
+  "desc": "Obtain a full list of workspaces your org-wide app has been approved for.",
   "args": {
     "cursor": {
       "required": false,

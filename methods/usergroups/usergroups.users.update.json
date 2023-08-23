@@ -40,7 +40,7 @@
     "failed_for_some_users": "User(s) are not in the workspace where this usergroup exists.",
     "missing_argument": "A required argument is missing.",
     "no_users_provided": "Either the users field wasn't provided or an empty value was passed.",
-    "permission_denied": "The user does not have permission to update the list of users for a User Group.",
+    "permission_denied": "The user does not have permission to update the list of users for a User Group. Check workspace settings to confirm whether the calling user has permission.",
     "plan_upgrade_required": "This workspace does not have access to User Groups, as that feature is only available on Standard and above plans.",
     "subteam_max_users_exceeded": "Exceeds maximum supported number of users per subteam.",
     "access_denied": "Access to a resource specified in the request is denied.",
