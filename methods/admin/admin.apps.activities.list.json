@@ -7,12 +7,12 @@
     "app_id": {
       "required": false,
       "example": "A12345",
-      "desc": "The id of the app to get activities from."
+      "desc": "The ID of the app to get activities from."
     },
     "component_id": {
       "required": false,
       "example": "Wf013SMGL4V9",
-      "desc": "The component id of log events to be returned. Will be 'FnXXXXXX' for functions, and 'WfXXXXXX' for worflows.",
+      "desc": "The component ID of log events to be returned. Will be 'FnXXXXXX' for functions, and 'WfXXXXXX' for worflows.",
       "type": "string"
     },
     "component_type": {
@@ -78,7 +78,7 @@
     "trace_id": {
       "required": false,
       "example": "Tr432f2",
-      "desc": "The trace id of log events to be returned.",
+      "desc": "The trace ID of log events to be returned.",
       "type": "string"
     }
   },
