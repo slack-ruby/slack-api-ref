@@ -7,7 +7,7 @@
     "expiration_ts": {
       "required": true,
       "example": "1234567890",
-      "desc": "Timestamp when guest account should be disabled.",
+      "desc": "Epoch timestamp in seconds when guest account should be disabled.",
       "type": "integer"
     },
     "user_id": {
