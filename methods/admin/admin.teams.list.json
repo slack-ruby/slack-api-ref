@@ -13,7 +13,7 @@
     "limit": {
       "required": false,
       "example": "100",
-      "desc": "The maximum number of items to return. Must be between 1 - 100 both inclusive.",
+      "desc": "The maximum number of items to return. Must be a positive integer no larger than 1000.",
       "type": "integer"
     }
   },

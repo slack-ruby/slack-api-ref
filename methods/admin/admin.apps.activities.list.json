@@ -84,7 +84,7 @@
   },
   "response": {
     "examples": [
-
+      "{\n    \"ok\": true,\n    \"activities\": [\n        {\n            \"app_id\": \"A123456789\",\n            \"level\": \"info\",\n            \"event_type\": \"function_execution_started\",\n            \"source\": \"slack\",\n            \"component_type\": \"functions\",\n            \"component_id\": \"Fn123\",\n            \"payload\": {\n                \"function_name\": \"Reverse\",\n                \"function_type\": \"app\"\n            },\n            \"created\": 1650463798824317,\n            \"trace_id\": \"Tr123\"\n        }\n    ],\n    \"response_metadata\": {\n        \"next_cursor\": \"\"\n    }\n}"
     ]
   },
   "errors": {
