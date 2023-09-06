@@ -1,7 +1,7 @@
 {
   "name": "channel_archive",
   "desc": "A channel was archived.",
-  "long_desc": "The channel_archive event is sent to all connections for a workspace when a channel is archived. Clients can use this to update their local list of channels. When an event occurs, we will send an HTTP POST request to your Request URL. The outer payload is uniform across all Events API methods, and contains fields like team_id and event. Learn more",
+  "long_desc": "The channel_archive event is sent to all connections for a workspace when a public channel is archived. Clients can use this to update their local list of channels. When an event occurs, we will send an HTTP POST request to your Request URL. The outer payload is uniform across all Events API methods, and contains fields like team_id and event. Learn more",
   "required_scope": "RTM",
   "example": {
     "type": "channel_archive",
