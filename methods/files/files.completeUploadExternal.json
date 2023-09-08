@@ -54,6 +54,7 @@
     "token_expired": "Authentication token has expired.",
     "token_revoked": "Authentication token is for a deleted user or workspace or the app has been removed when using a user token.",
     "two_factor_setup_required": "Two factor setup is required.",
+    "team_access_not_granted": "The token used is not granted the specific workspace access required to complete this request.",
     "accesslimited": "Access to this method is limited on the current network.",
     "fatal_error": "The server could not complete your operation(s) without encountering a catastrophic error. It's possible some aspect of the operation succeeded before the error was raised.",
     "internal_error": "The server could not complete your operation(s) without encountering an error, likely due to a transient issue on our end. It's possible some aspect of the operation succeeded before the error was raised.",
