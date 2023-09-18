@@ -79,6 +79,12 @@
       "desc": "Used in conjunction with thread_ts and indicates whether reply should be made visible to everyone in the channel or conversation. Defaults to false.",
       "type": "boolean"
     },
+    "service_team_id": {
+      "required": false,
+      "example": "T123A4B56",
+      "desc": "For a message posted in App Home, Team ID corresponding to the selected app installation.",
+      "type": "string"
+    },
     "thread_ts": {
       "required": false,
       "desc": "Provide another message's ts value to make this message a reply. Avoid using a reply's ts value; use its parent instead.",
