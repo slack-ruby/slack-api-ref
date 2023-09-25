@@ -51,6 +51,12 @@
       "example": "T00000000,T00000001",
       "desc": "Comma separated string of team IDs, signifying the internal workspaces to search through.",
       "type": "array"
+    },
+    "total_count_only": {
+      "required": false,
+      "example": "",
+      "desc": "Only return the total_count of channels. Omits channel data and allows access for admins without channel manager permissions.",
+      "type": "boolean"
     }
   },
   "response": {
