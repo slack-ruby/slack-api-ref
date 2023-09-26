@@ -25,7 +25,7 @@
     "ekm_access_denied": "Administrators have suspended the ability to post a message.",
     "enterprise_is_restricted": "The method cannot be called from an Enterprise.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
-    "is_bot": "This method cannot be called by a bot user.",
+    "is_bot": "This method cannot be called by a legacy bot.",
     "user_is_restricted": "This method cannot be called by a restricted user or single channel guest.",
     "method_deprecated": "The method has been deprecated.",
     "missing_scope": "The token used is not granted the specific scope permissions required to complete this request.",
