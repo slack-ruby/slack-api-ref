@@ -28,6 +28,7 @@
     "internal_error": "The server could not complete your operation(s) without encountering an error, likely due to a transient issue on our end. It's possible some aspect of the operation succeeded before the error was raised.",
     "no_valid_channels": "All input channels are invalid.",
     "target_team_not_found": "Target team ID provided does not exist.",
+    "restricted_action": "User does not have permission to perform this action.",
     "access_denied": "Access to a resource specified in the request is denied.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
     "deprecated_endpoint": "The endpoint has been deprecated.",

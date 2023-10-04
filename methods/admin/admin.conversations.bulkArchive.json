@@ -22,6 +22,7 @@
     "invalid_enterprise": "Enterprise does not exist.",
     "no_valid_channels": "All input channels are invalid.",
     "team_not_found": "Team ID provided does not exist.",
+    "restricted_action": "User does not have permission to perform this action.",
     "access_denied": "Access to a resource specified in the request is denied.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
     "deprecated_endpoint": "The endpoint has been deprecated.",
