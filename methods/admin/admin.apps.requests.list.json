@@ -6,7 +6,7 @@
   "args": {
     "certified": {
       "required": false,
-      "example": "",
+      "example": "false",
       "desc": "Include requests for certified apps.",
       "type": "boolean"
     },

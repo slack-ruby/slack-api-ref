@@ -6,7 +6,7 @@
   "args": {
     "certified": {
       "required": false,
-      "example": "",
+      "example": "false",
       "desc": "Limit the results to only include certified apps. When false, no certified apps will appear in the result.",
       "type": "boolean"
     },

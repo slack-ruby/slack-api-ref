@@ -11,12 +11,12 @@
     },
     "domain_restrictions": {
       "required": false,
-      "desc": "Domain restrictions for the app.",
+      "desc": "Domain restrictions for the app. Should be an object with two properties: urls and emails. Each is an array of strings, and each sets the allowed URLs and emails for connector authorization, respectively.",
       "type": "object"
     },
     "workflow_auth_strategy": {
       "required": false,
-      "desc": "The workflow auth permission.",
+      "desc": "The workflow auth permission. Can be one of builder_choice or end_user_only.",
       "type": "string"
     }
   },
