@@ -32,7 +32,7 @@
     "blocks": {
       "required": false,
       "example": "[{\"type\": \"section\", \"text\": {\"type\": \"plain_text\", \"text\": \"Hello world\"}}]",
-      "desc": "A JSON-based array of structured blocks, presented as a URL-encoded string. If you don't include this field, the message's previous blocks will be retained. To remove previous blocks, include an empty array for this field.",
+      "desc": "A JSON-based array of structured blocks, presented as a URL-encoded string. If you don't include this field, the message's previous blocks will only be retained if the text argument is not provided. If the text argument is provided and blocks are not provided, the blocks will be unset. To remove previous blocks, include an empty array for this field.",
       "type": "blocks[] as string",
       "format": "json"
     },
@@ -70,7 +70,7 @@
     "text": {
       "required": false,
       "example": "Hello world",
-      "desc": "New text for the message, using the default formatting rules. It's not required when presenting blocks or attachments.",
+      "desc": "New text for the message, using the default formatting rules. This text, combined with either blocks or attachments, is used as fallback text for notifications.",
       "type": "string"
     }
   },
