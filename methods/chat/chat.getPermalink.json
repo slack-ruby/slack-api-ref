@@ -6,7 +6,7 @@
   "args": {
     "channel": {
       "required": true,
-      "example": "53072",
+      "example": "C1234567890",
       "desc": "The ID of the conversation or channel containing the message.",
       "type": "channel"
     },
