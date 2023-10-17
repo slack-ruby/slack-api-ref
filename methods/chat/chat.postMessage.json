@@ -156,6 +156,7 @@
     "too_many_attachments": "Too many attachments were provided with this message. A maximum of 100 attachments are allowed on a message.",
     "too_many_contact_cards": "Too many contact_cards were provided with this message. A maximum of 10 contact cards are allowed on a message.",
     "cannot_reply_to_message": "This message type cannot have thread replies.",
+    "missing_file_data": "Attempted to share a file but some required data was missing.",
     "access_denied": "Access to a resource specified in the request is denied.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
     "deprecated_endpoint": "The endpoint has been deprecated.",
