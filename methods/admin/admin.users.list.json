@@ -13,7 +13,7 @@
     "is_active": {
       "required": false,
       "example": "true",
-      "desc": "If true, only active users will be returned.",
+      "desc": "If true, only active users will be returned. If false, only deactivated users will be returned. Default is true.",
       "type": "boolean"
     },
     "limit": {
