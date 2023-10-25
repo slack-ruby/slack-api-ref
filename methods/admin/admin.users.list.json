@@ -10,6 +10,12 @@
       "desc": "Set cursor to next_cursor returned by the previous call to list items in the next page.",
       "type": "string"
     },
+    "include_deactivated_workspaces": {
+      "required": false,
+      "example": "true",
+      "desc": "Only applies with org token and no team_id. If true, both active and deactivated workspaces are returned for a user in workspaces. If false, only active workspaces are returned for a user in workspaces. Default is false.",
+      "type": "boolean"
+    },
     "is_active": {
       "required": false,
       "example": "true",
@@ -29,7 +35,7 @@
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true,\n    \"users\": [\n        {\n            \"id\": \"T1234\",\n            \"email\": \"bront@slack.com\",\n            \"is_admin\": false,\n            \"is_owner\": false,\n            \"is_primary_owner\": false,\n            \"is_restricted\": false,\n            \"is_ultra_restricted\": false,\n            \"is_bot\": false\n        }\n    ]\n}"
+      "{\n    \"ok\": true,\n    \"users\": [\n        {\n            \"id\": \"W0L3P31SP\",\n            \"email\": \"john.doe@slack.com\",\n            \"is_admin\": false,\n            \"is_owner\": false,\n            \"is_primary_owner\": false,\n            \"is_restricted\": false,\n            \"is_ultra_restricted\": false,\n            \"is_bot\": false,\n            \"username\": \"john_doe\",\n            \"full_name\": \"John Doe\",\n            \"is_active\": true,\n            \"date_created\": 1566922090,\n            \"deactivated_ts\": 1678435283,\n            \"expiration_ts\": 0,\n            \"workspaces\": [\n                \"T123\"\n            ],\n            \"has_2fa\": false,\n            \"has_sso\": false\n        }\n    ]\n}"
     ]
   },
   "errors": {
@@ -38,6 +44,7 @@
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "invalid_cursor": "The passed cursor could not be validated.",
     "team_not_found": "team_id was not found.",
+    "include_deactivated_workspaces_invalid": "include_deactivated_workspaces only applies with org token and no team_id.",
     "access_denied": "Access to a resource specified in the request is denied.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
     "deprecated_endpoint": "The endpoint has been deprecated.",
