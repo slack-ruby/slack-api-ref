@@ -27,7 +27,7 @@
     "text": {
       "required": false,
       "example": "Hello world",
-      "desc": "The formatted text of the message to be published. If blocks are included, this will become the fallback text used in notifications.",
+      "desc": "How this field works and whether it is required depends on other fields you use in your API call. See below for more detail.",
       "type": "string"
     },
     "as_user": {

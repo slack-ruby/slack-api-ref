@@ -12,7 +12,8 @@
   },
   "response": {
     "examples": [
-
+      "{\n    \"ok\": true,\n    \"prefs\": {\n        \"who_can_post\": {\n            \"type\": [],\n            \"user\": []\n        },\n        \"can_thread\": {\n            \"type\": [],\n            \"user\": []\n        }\n    }\n}",
+      "{\n    \"ok\": true,\n    \"prefs\": {\n        \"who_can_post\": {\n            \"type\": [\n                \"admin\"\n            ],\n            \"user\": [\n                \"ABCD4567E\"\n            ]\n        },\n        \"can_thread\": {\n            \"type\": [\n                \"ra\"\n            ],\n            \"user\": []\n        },\n        \"enable_at_channel\": {\n            \"enabled\": false\n        },\n        \"enable_at_here\": {\n            \"enabled\": false\n        }\n    }\n}"
     ]
   },
   "errors": {

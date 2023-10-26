@@ -16,18 +16,6 @@
       "desc": "Unix EPOCH timestamp of time in future to send the message.",
       "type": "integer"
     },
-    "text": {
-      "required": true,
-      "example": "Hello world",
-      "desc": "How this field works and whether it is required depends on other fields you use in your API call. See below for more detail.",
-      "type": "string"
-    },
-    "as_user": {
-      "required": false,
-      "example": "true",
-      "desc": "Set to true to post the message as the authed user, instead of as a bot. Defaults to false. Cannot be used by new Slack apps. See chat.postMessage.",
-      "type": "boolean"
-    },
     "attachments": {
       "required": false,
       "example": "[{\"pretext\": \"pre-hello\", \"text\": \"text-world\"}]",
@@ -41,6 +29,18 @@
       "desc": "A JSON-based array of structured blocks, presented as a URL-encoded string.",
       "type": "blocks[] as string",
       "format": "json"
+    },
+    "text": {
+      "required": false,
+      "example": "Hello world",
+      "desc": "How this field works and whether it is required depends on other fields you use in your API call. See below for more detail.",
+      "type": "string"
+    },
+    "as_user": {
+      "required": false,
+      "example": "true",
+      "desc": "Set to true to post the message as the authed user, instead of as a bot. Defaults to false. Cannot be used by new Slack apps. See chat.postMessage.",
+      "type": "boolean"
     },
     "link_names": {
       "required": false,
@@ -85,6 +85,17 @@
       "type": "boolean"
     }
   },
+  "arg_groups": [
+    {
+      "args": [
+        "attachments",
+        "blocks",
+        "text"
+      ],
+      "desc": "If attachments or blocks are also included, text will be used as fallback text for notifications only.",
+      "mutually_exclusive": false
+    }
+  ],
   "response": {
     "examples": [
       "{\n    \"ok\": true,\n    \"channel\": \"C123ABC456\",\n    \"scheduled_message_id\": \"Q1298393284\",\n    \"post_at\": \"1562180400\",\n    \"message\": {\n        \"text\": \"Here's a message for you in the future\",\n        \"username\": \"ecto1\",\n        \"bot_id\": \"B123ABC456\",\n        \"attachments\": [\n            {\n                \"text\": \"This is an attachment\",\n                \"id\": 1,\n                \"fallback\": \"This is an attachment's fallback\"\n            }\n        ],\n        \"type\": \"delayed_message\",\n        \"subtype\": \"bot_message\"\n    }\n}",

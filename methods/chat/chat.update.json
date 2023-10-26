@@ -16,25 +16,31 @@
       "desc": "Timestamp of the message to be updated.",
       "type": "timestamp"
     },
-    "as_user": {
-      "required": false,
-      "example": "true",
-      "desc": "Pass true to update the message as the authed user. Bot users in this context are considered authed users.",
-      "type": "boolean"
-    },
     "attachments": {
       "required": false,
       "example": "[{\"pretext\": \"pre-hello\", \"text\": \"text-world\"}]",
-      "desc": "A JSON-based array of structured attachments, presented as a URL-encoded string. This field is required when not presenting text. If you don't include this field, the message's previous attachments will be retained. To remove previous attachments, include an empty array for this field.",
+      "desc": "A JSON-based array of structured attachments, presented as a URL-encoded string.",
       "type": "string",
       "format": "json"
     },
     "blocks": {
       "required": false,
       "example": "[{\"type\": \"section\", \"text\": {\"type\": \"plain_text\", \"text\": \"Hello world\"}}]",
-      "desc": "A JSON-based array of structured blocks, presented as a URL-encoded string. If you don't include this field, the message's previous blocks will only be retained if the text argument is not provided. If the text argument is provided and blocks are not provided, the blocks will be unset. To remove previous blocks, include an empty array for this field.",
+      "desc": "A JSON-based array of structured blocks, presented as a URL-encoded string.",
       "type": "blocks[] as string",
       "format": "json"
+    },
+    "text": {
+      "required": false,
+      "example": "Hello world",
+      "desc": "How this field works and whether it is required depends on other fields you use in your API call. See below for more detail.",
+      "type": "string"
+    },
+    "as_user": {
+      "required": false,
+      "example": "true",
+      "desc": "Pass true to update the message as the authed user. Bot users in this context are considered authed users.",
+      "type": "boolean"
     },
     "file_ids": {
       "required": false,
@@ -66,14 +72,19 @@
       "example": "false",
       "desc": "Broadcast an existing thread reply to make it visible to everyone in the channel or conversation.",
       "type": "boolean"
-    },
-    "text": {
-      "required": false,
-      "example": "Hello world",
-      "desc": "New text for the message, using the default formatting rules. This text, combined with either blocks or attachments, is used as fallback text for notifications.",
-      "type": "string"
     }
   },
+  "arg_groups": [
+    {
+      "args": [
+        "attachments",
+        "blocks",
+        "text"
+      ],
+      "desc": "One of these arguments is required to describe the content of the message. If attachments or blocks are included, text will be used as fallback text for notifications only.",
+      "mutually_exclusive": false
+    }
+  ],
   "response": {
     "examples": [
       "{\n    \"ok\": true,\n    \"channel\": \"C123ABC456\",\n    \"ts\": \"1401383885.000061\",\n    \"text\": \"Updated text you carefully authored\",\n    \"message\": {\n        \"text\": \"Updated text you carefully authored\",\n        \"user\": \"U34567890\"\n    }\n}",
