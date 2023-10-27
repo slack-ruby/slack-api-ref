@@ -2,7 +2,7 @@
   "group": "usergroups",
   "name": "usergroups.enable",
   "deprecated": false,
-  "desc": "Enable a User Group",
+  "desc": "Enable a User Group.",
   "args": {
     "usergroup": {
       "required": true,

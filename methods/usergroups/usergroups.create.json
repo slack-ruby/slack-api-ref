@@ -2,7 +2,7 @@
   "group": "usergroups",
   "name": "usergroups.create",
   "deprecated": false,
-  "desc": "Create a User Group",
+  "desc": "Create a User Group.",
   "args": {
     "name": {
       "required": true,

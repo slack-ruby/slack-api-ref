@@ -2,7 +2,7 @@
   "group": "usergroups",
   "name": "usergroups.list",
   "deprecated": false,
-  "desc": "List all User Groups for a team",
+  "desc": "List all User Groups for a team.",
   "args": {
     "include_count": {
       "required": false,

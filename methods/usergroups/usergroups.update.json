@@ -2,7 +2,7 @@
   "group": "usergroups",
   "name": "usergroups.update",
   "deprecated": false,
-  "desc": "Update an existing User Group",
+  "desc": "Update an existing User Group.",
   "args": {
     "usergroup": {
       "required": true,

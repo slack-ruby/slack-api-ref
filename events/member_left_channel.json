@@ -1,13 +1,13 @@
 {
   "name": "member_left_channel",
   "desc": "A user left a public or private channel.",
-  "long_desc": "The member_left_channel event is sent to all websocket connections and event subscriptions when users leave public or private channels. The provided user value is a user ID belonging to the user that joined the channel. The channel value is the ID for a public channel or private channel (AKA group). The channel_type value is a single letter indicating the type of channel used in channel: The team identifies which workspace the user is from. This event is supported as a bot user subscription in the Events API. Workspace event subscriptions are also available for tokens holding at least one of the channels:read or groups:read scopes. Which events your app will receive depends on the scopes and their context. For instance, you'll only receive member_left_channel events for private channels if your app has the groups:read permission. When an event occurs, we will send an HTTP POST request to your Request URL. The outer payload is uniform across all Events API methods, and contains fields like team_id and event. Learn more",
+  "long_desc": "The member_left_channel event is sent to all websocket connections and event subscriptions when users leave public or private channels. This event is supported as a bot user subscription in the Events API. Workspace event subscriptions are also available for tokens holding at least one of the channels:read or groups:read scopes. Which events your app will receive depends on the scopes and their context. For instance, you'll only receive member_left_channel events for private channels if your app has the groups:read permission. When an event occurs, we will send an HTTP POST request to your Request URL. The outer payload is uniform across all Events API methods, and contains fields like team_id and event. Learn more",
   "required_scope": "RTM",
   "example": {
     "type": "member_left_channel",
-    "user": "W06GH7XHN",
-    "channel": "C0698JE0H",
+    "user": "W123ABC456",
+    "channel": "C123ABC456",
     "channel_type": "C",
-    "team": "T024BE7LD"
+    "team": "T123ABC456"
   }
 }

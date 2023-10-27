@@ -2,7 +2,7 @@
   "group": "usergroups",
   "name": "usergroups.disable",
   "deprecated": false,
-  "desc": "Disable an existing User Group",
+  "desc": "Disable an existing User Group.",
   "args": {
     "usergroup": {
       "required": true,

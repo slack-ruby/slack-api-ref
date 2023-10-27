@@ -2,7 +2,7 @@
   "group": "usergroups",
   "name": "usergroups.users.update",
   "deprecated": false,
-  "desc": "Update the list of users for a User Group",
+  "desc": "Update the list of users for a User Group.",
   "args": {
     "usergroup": {
       "required": true,

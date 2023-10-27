@@ -2,12 +2,12 @@
   "group": "usergroups",
   "name": "usergroups.users.list",
   "deprecated": false,
-  "desc": "List all users in a User Group",
+  "desc": "List all users in a User Group.",
   "args": {
     "usergroup": {
       "required": true,
       "example": "S0604QSJC",
-      "desc": "The encoded ID of the User Group to update.",
+      "desc": "The encoded ID of the User Group to list users for.",
       "type": "string"
     },
     "include_disabled": {
