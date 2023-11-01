@@ -10,10 +10,10 @@
       "desc": "Set cursor to next_cursor returned by the previous call to list items in the next page.",
       "type": "string"
     },
-    "include_deactivated_workspaces": {
+    "include_deactivated_user_workspaces": {
       "required": false,
       "example": "true",
-      "desc": "Only applies with org token and no team_id. If true, both active and deactivated workspaces are returned for a user in workspaces. If false, only active workspaces are returned for a user in workspaces. Default is false.",
+      "desc": "Only applies with org token and no team_id. If true, return workspaces for a user even if they may be deactivated on them. If false, return workspaces for a user only when user is active on them. Default is false.",
       "type": "boolean"
     },
     "is_active": {
@@ -44,7 +44,7 @@
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "invalid_cursor": "The passed cursor could not be validated.",
     "team_not_found": "team_id was not found.",
-    "include_deactivated_workspaces_invalid": "include_deactivated_workspaces only applies with org token and no team_id.",
+    "include_deactivated_user_workspaces_invalid": "include_deactivated_user_workspaces only applies with org token and no team_id.",
     "access_denied": "Access to a resource specified in the request is denied.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
     "deprecated_endpoint": "The endpoint has been deprecated.",
