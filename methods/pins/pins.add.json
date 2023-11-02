@@ -10,11 +10,6 @@
       "desc": "Channel to pin the messsage to. You must also include a timestamp when pinning messages.",
       "type": "channel"
     },
-    "quip_component_id": {
-      "required": false,
-      "desc": "Component ID for the pins component that was inserted into the channel canvas, if any.",
-      "type": "string"
-    },
     "timestamp": {
       "required": false,
       "example": "1234567890.123456",
