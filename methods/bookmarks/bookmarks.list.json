@@ -13,7 +13,7 @@
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true,\n    \"bookmark\": {\n        \"id\": \"Bk033XFJ9BTJ\",\n        \"channel_id\": \"C1RQ000\",\n        \"title\": \"bookmark-1\",\n        \"link\": \"https://google.com\",\n        \"emoji\": \":clap:\",\n        \"icon_url\": \"https://www.google.com/favicon.ico\",\n        \"type\": \"link\",\n        \"entity_id\": null,\n        \"date_created\": 1644956055,\n        \"date_updated\": 0,\n        \"rank\": \"g\",\n        \"last_updated_by_user_id\": \"U0334B6G6G5\",\n        \"last_updated_by_team_id\": \"T018DF03GHY\",\n        \"shortcut_id\": null,\n        \"app_id\": null\n    }\n}",
+      "{\n    \"ok\": true,\n    \"bookmarks\": [\n        {\n            \"id\": \"Bk123ABC4DEF\",\n            \"channel_id\": \"C1RQ000\",\n            \"title\": \"bookmark-1\",\n            \"link\": \"https://google.com\",\n            \"emoji\": \":clap:\",\n            \"icon_url\": \"https://www.google.com/favicon.ico\",\n            \"type\": \"link\",\n            \"entity_id\": null,\n            \"date_created\": 1644956055,\n            \"date_updated\": 0,\n            \"rank\": \"g\",\n            \"last_updated_by_user_id\": \"U0123A1B1C1\",\n            \"last_updated_by_team_id\": \"T012AB34CDE\",\n            \"shortcut_id\": null,\n            \"app_id\": null\n        }\n    ]\n}",
       "{\n    \"ok\": false,\n    \"error\": \"invalid_auth\"\n}"
     ]
   },
