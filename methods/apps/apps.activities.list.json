@@ -93,6 +93,7 @@
     "invalid_app": "App ID provided is not valid for team and user.",
     "invalid_args": "Required arguments either were not provided or contain invalid values.",
     "invalid_cursor": "Value passed for cursor was not valid or is no longer valid.",
+    "free_team_not_allowed": "Feature is only available on a paid team.",
     "access_denied": "Access to a resource specified in the request is denied.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
     "deprecated_endpoint": "The endpoint has been deprecated.",
