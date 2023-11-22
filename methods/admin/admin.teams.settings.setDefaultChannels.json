@@ -25,6 +25,7 @@
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "not_an_admin": "This method is only accessible by org owners and admins.",
     "one_or_more_invalid_channels": "One or more of the passed channel IDs was invalid.",
+    "restricted_action": "The actor does not have admin permissions for the team in context.",
     "team_not_found": "team_id was not found.",
     "access_denied": "Access to a resource specified in the request is denied.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
