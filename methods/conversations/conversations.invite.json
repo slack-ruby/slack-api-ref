@@ -15,6 +15,12 @@
       "example": "W1234567890,U2345678901,U3456789012",
       "desc": "A comma separated list of user IDs. Up to 1000 users may be listed.",
       "type": "string"
+    },
+    "force": {
+      "required": false,
+      "example": "false",
+      "desc": "When set to true and multiple user IDs are provided, continue inviting the valid ones while disregarding invalid IDs. Defaults to false.",
+      "type": "boolean"
     }
   },
   "response": {
