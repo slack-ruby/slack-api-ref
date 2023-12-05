@@ -13,7 +13,7 @@
       "required": false,
       "example": "added",
       "desc": "Filter logs with this change type. Possible values are added, removed, enabled, disabled, and updated. Defaults to all logs.",
-      "type": "string"
+      "type": "enum"
     },
     "service_id": {
       "required": false,

@@ -31,7 +31,7 @@
       "required": false,
       "example": "desc",
       "desc": "Change sort direction to ascending (asc) or descending (desc).",
-      "type": "string"
+      "type": "enum"
     },
     "team_id": {
       "required": false,

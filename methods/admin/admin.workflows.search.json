@@ -48,18 +48,18 @@
       "required": false,
       "example": "premium_runs",
       "desc": "The field used to sort the returned workflows.",
-      "type": "string"
+      "type": "enum"
     },
     "sort_dir": {
       "required": false,
       "example": "desc",
       "desc": "Sort direction. Possible values are asc for ascending order like (1, 2, 3) or (a, b, c), and desc for descending order like (3, 2, 1) or (c, b, a).",
-      "type": "string"
+      "type": "enum"
     },
     "source": {
       "required": false,
       "desc": "Source of workflow creation, either from code or workflow builder.",
-      "type": "string"
+      "type": "enum"
     }
   },
   "response": {

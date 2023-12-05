@@ -59,7 +59,7 @@
       "required": false,
       "example": "full",
       "desc": "Change how messages are treated. See chat.postMessage.",
-      "type": "string"
+      "type": "enum"
     },
     "reply_broadcast": {
       "required": false,

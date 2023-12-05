@@ -25,7 +25,7 @@
       "required": false,
       "example": "composer",
       "desc": "The source of the link to unfurl. The source may either be composer, when the link is inside the message composer, or conversations_history, when the link has been posted to a conversation.",
-      "type": "string"
+      "type": "enum"
     },
     "unfurl_id": {
       "required": false,

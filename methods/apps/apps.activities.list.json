@@ -61,7 +61,7 @@
       "required": false,
       "example": "asc",
       "desc": "The direction you want the data sorted by (always by timestamp).",
-      "type": "string"
+      "type": "enum"
     },
     "source": {
       "required": false,

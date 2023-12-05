@@ -12,7 +12,7 @@
     "visibility": {
       "required": true,
       "desc": "The function visibility.",
-      "type": "string"
+      "type": "enum"
     },
     "user_ids": {
       "required": false,

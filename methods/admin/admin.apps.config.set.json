@@ -17,7 +17,7 @@
     "workflow_auth_strategy": {
       "required": false,
       "desc": "The workflow auth permission. Can be one of builder_choice or end_user_only.",
-      "type": "string"
+      "type": "enum"
     }
   },
   "response": {
