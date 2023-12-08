@@ -2,24 +2,24 @@
   "group": "usergroups",
   "name": "usergroups.users.update",
   "deprecated": false,
-  "desc": "Update the list of users for a User Group.",
+  "desc": "Update the list of users for a user group.",
   "args": {
     "usergroup": {
       "required": true,
       "example": "S0604QSJC",
-      "desc": "The encoded ID of the User Group to update.",
+      "desc": "The encoded ID of the user group to update.",
       "type": "string"
     },
     "users": {
       "required": true,
       "example": "U060R4BJ4,U060RNRCZ",
-      "desc": "A comma separated string of encoded user IDs that represent the entire list of users for the User Group.",
+      "desc": "A comma separated string of encoded user IDs that represent the entire list of users for the user group.",
       "type": "array"
     },
     "include_count": {
       "required": false,
       "example": "true",
-      "desc": "Include the number of users in the User Group.",
+      "desc": "Include the number of users in the user group.",
       "type": "boolean"
     },
     "team_id": {
@@ -40,8 +40,8 @@
     "failed_for_some_users": "User(s) are not in the workspace where this usergroup exists.",
     "missing_argument": "A required argument is missing.",
     "no_users_provided": "Either the users field wasn't provided or an empty value was passed.",
-    "permission_denied": "The user does not have permission to update the list of users for a User Group. Check workspace settings to confirm whether the calling user has permission.",
-    "plan_upgrade_required": "This workspace does not have access to User Groups, as that feature is only available on Standard and above plans.",
+    "permission_denied": "The user does not have permission to update the list of users for a user group. Check workspace settings to confirm whether the calling user has permission.",
+    "plan_upgrade_required": "This workspace does not have access to user groups, as that feature is only available on Standard and above plans.",
     "subteam_max_users_exceeded": "Exceeds maximum supported number of users per subteam.",
     "access_denied": "Access to a resource specified in the request is denied.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
