@@ -23,6 +23,7 @@
     "internal_error": "The server could not complete your operation(s) without encountering an error, likely due to a transient issue on our end. It's possible some aspect of the operation succeeded before the error was raised.",
     "invalid_arguments": "The method was either called with invalid arguments or some detail about the arguments passed is invalid, which is more likely when using complex arguments like blocks or attachments.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
+    "restricted_action": "The owner of this token isn't an Org Owner or Admin.",
     "not_an_admin": "The owner of this token isn't an Org Owner or Admin.",
     "unknown_method": "This method is currently not available.",
     "user_not_found": "There was an error finding the requested user.",
