@@ -41,6 +41,7 @@
     "unknown_method": "This method is currently not available.",
     "user_not_found": "Error fetching user.",
     "user_session_reset_failed": "There was an error starting the session reset. Try again.",
+    "restricted_action": "Restricted action.",
     "access_denied": "Access to a resource specified in the request is denied.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
     "deprecated_endpoint": "The endpoint has been deprecated.",
