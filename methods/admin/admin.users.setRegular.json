@@ -21,7 +21,7 @@
     ]
   },
   "errors": {
-    "cannot_set_this_guest_to_regular_at_team_level": "This guest is active on multiple workspaces so cannot set it to regular on one team. Set at enterprise level.",
+    "cannot_set_this_guest_to_regular_at_team_level": "This guest cannot be set to regular because they are active on multiple workspaces.",
     "cannot_modify_primary_owner": "The primary owner cannot be modified.",
     "failed_to_set_user_to_regular": "Changing a user to a regular member failed.",
     "feature_not_enabled": "The Admin APIs feature is not enabled for this team.",
