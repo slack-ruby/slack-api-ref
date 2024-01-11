@@ -39,6 +39,7 @@
     "unknown_function_id": "The passed in function_id is invalid.",
     "invalid_arguments": "The method was either called with invalid arguments or some detail about the arguments passed is invalid, which is more likely when using complex arguments like blocks or attachments.",
     "unknown_app_id": "The passed in workflow_app_id is invalid.",
+    "missing_step_ids": "The passed in workflow is missing step IDs.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
     "deprecated_endpoint": "The endpoint has been deprecated.",
     "ekm_access_denied": "Administrators have suspended the ability to post a message.",
