@@ -6,13 +6,14 @@
   "args": {
     "channel_ids": {
       "required": true,
-      "desc": "An array of channel IDs to archive.",
+      "desc": "An array of channel IDs to archive. No more than 100 items are allowed.",
       "type": "array"
     }
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true,\n    \"bulk_action_id\": \"Ab123456\",\n    \"not_added\": [\n        {\n            \"channel_id\": \"C12346\",\n            \"error\": \"invalid_channel\"\n        }\n    ]\n}"
+      "{\n    \"ok\": true,\n    \"bulk_action_id\": \"Ab123456\",\n    \"not_added\": [\n        {\n            \"channel_id\": \"C12346\",\n            \"error\": \"invalid_channel\"\n        }\n    ]\n}",
+      "{\n    \"ok\": false,\n    \"error\": \"invalid_arguments\",\n    \"response_metadata\": {\n        \"messages\": [\n            \"[ERROR] no more than 100 items allowed [json-pointer:/channel_ids]\"\n        ]\n    }\n}"
     ]
   },
   "errors": {
