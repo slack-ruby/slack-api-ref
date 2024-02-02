@@ -105,7 +105,7 @@
     "invalid_metadata_schema": "Invalid metadata schema provided.",
     "is_inactive": "The message cannot be edited within a frozen, archived or deleted channel.",
     "message_not_found": "No message exists with the requested timestamp.",
-    "metadata_must_be_sent_from_app": "Message metadata can only be posted or updated using an app token.",
+    "metadata_must_be_sent_from_app": "Message metadata can only be posted or updated using an app-level token.",
     "metadata_too_large": "Metadata exceeds size limit.",
     "msg_too_long": "Message text is too long.",
     "no_dual_broadcast_content_update": "Can't broadcast an old reply and update the content at the same time.",

@@ -111,7 +111,7 @@
     "invalid_metadata_schema": "Invalid metadata schema provided.",
     "invalid_time": "value passed for post_time was invalid.",
     "message_limit_exceeded": "Members on this team are sending too many messages. For more details, see https://slack.com/help/articles/115002422943-Usage-limits-for-free-workspaces.",
-    "metadata_must_be_sent_from_app": "Message metadata can only be posted or updated using an app token.",
+    "metadata_must_be_sent_from_app": "Message metadata can only be posted or updated using an app-level token.",
     "metadata_too_large": "Metadata exceeds size limit.",
     "msg_too_long": "Message text is too long.",
     "no_text": "No message text provided.",
