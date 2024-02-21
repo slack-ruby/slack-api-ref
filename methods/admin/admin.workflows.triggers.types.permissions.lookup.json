@@ -1,36 +1,22 @@
 {
-  "group": "apps",
-  "name": "apps.manifest.update",
+  "group": "admin",
+  "name": "admin.workflows.triggers.types.permissions.lookup",
   "deprecated": false,
-  "desc": "Update an app from an app manifest",
+  "desc": "list the permissions for using each trigger type in workflow builder",
   "args": {
-    "app_id": {
+    "trigger_type_ids": {
       "required": true,
-      "desc": "The ID of the app whose configuration you want to update."
-    },
-    "manifest": {
-      "required": true,
-      "desc": "A JSON app manifest encoded as a string. This manifest must use a valid app manifest schema - read our guide to creating one. As this method entirely replaces any previous configuration, manifest must contain both unmodified and modified fields.",
-      "type": "manifest object as string",
-      "format": "json"
+      "example": "['FTT01', 'FTT02', 'FTT03']",
+      "desc": "The trigger types IDs for which to get the permissions.",
+      "type": "array"
     }
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true,\n    \"app_id\": \"A012ABCD0A0\",\n    \"permissions_updated\": false\n}"
+
     ]
   },
   "errors": {
-    "app_not_eligible": "The specified app is not elgible for this API.",
-    "failed_adding_collaborator": "Failed writing a collaborator record for this new app.",
-    "failed_creating_app": "Failed to create the app model.",
-    "failed_datastore_operation": "Failed while managing datastore infrastructure.",
-    "internal_error": "The server could not complete your operation(s) without encountering an error, likely due to a transient issue on our end. It's possible some aspect of the operation succeeded before the error was raised.",
-    "invalid_app": "An app created from the provided manifest would not be valid.",
-    "invalid_app_id": "The app id passed is invalid.",
-    "invalid_manifest": "The provided manifest file does not validate against schema.",
-    "no_permission": "The workspace token used in this request does not have the permissions necessary to complete the request. Make sure your app is a member of the conversation it's attempting to post a message to.",
-    "unknown_method": "Unknown method.",
     "access_denied": "Access to a resource specified in the request is denied.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
     "deprecated_endpoint": "The endpoint has been deprecated.",
@@ -42,12 +28,14 @@
     "missing_scope": "The token used is not granted the specific scope permissions required to complete this request.",
     "not_allowed_token_type": "The token type used in this request is not allowed.",
     "not_authed": "No authentication token provided.",
+    "no_permission": "The workspace token used in this request does not have the permissions necessary to complete the request. Make sure your app is a member of the conversation it's attempting to post a message to.",
     "org_login_required": "The workspace is undergoing an enterprise migration and will not be available until migration is complete.",
     "token_expired": "Authentication token has expired.",
     "token_revoked": "Authentication token is for a deleted user or workspace or the app has been removed when using a user token.",
     "two_factor_setup_required": "Two factor setup is required.",
     "accesslimited": "Access to this method is limited on the current network.",
     "fatal_error": "The server could not complete your operation(s) without encountering a catastrophic error. It's possible some aspect of the operation succeeded before the error was raised.",
+    "internal_error": "The server could not complete your operation(s) without encountering an error, likely due to a transient issue on our end. It's possible some aspect of the operation succeeded before the error was raised.",
     "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
     "invalid_arguments": "The method was either called with invalid arguments or some detail about the arguments passed is invalid, which is more likely when using complex arguments like blocks or attachments.",
     "invalid_array_arg": "The method was passed an array as an argument. Please only input valid strings.",
