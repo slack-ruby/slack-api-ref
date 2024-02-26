@@ -37,7 +37,7 @@
     "limit": {
       "required": false,
       "example": "100",
-      "desc": "The maximum number of items to return. Fewer than the requested number of items may be returned, even if the end of the users list hasn't been reached.",
+      "desc": "The maximum number of items to return. Fewer than the requested number of items may be returned, even if the end of the conversation history hasn't been reached. Maximum of 999.",
       "type": "number"
     },
     "oldest": {
