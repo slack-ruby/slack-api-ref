@@ -1,24 +1,47 @@
 {
-  "group": "admin",
-  "name": "admin.workflows.triggers.types.permissions.lookup",
+  "group": "functions",
+  "name": "functions.distributions.permissions.add",
   "deprecated": false,
-  "desc": "list the permissions for using each trigger type in workflow builder",
+  "desc": "Grant users access to a custom slack function that has its permission type set to named_entitiess",
   "args": {
-    "trigger_type_ids": {
-      "required": true,
-      "example": "['FTT01', 'FTT02', 'FTT03']",
-      "desc": "The trigger types IDs for which to get the permissions.",
+    "function_app_id": {
+      "required": false,
+      "example": "A12345",
+      "desc": "The encoded ID of the app.",
+      "type": "string"
+    },
+    "function_callback_id": {
+      "required": false,
+      "example": "my_function",
+      "desc": "The callback ID defined in the function's definition file.",
+      "type": "string"
+    },
+    "function_id": {
+      "required": false,
+      "example": "Fn12345",
+      "desc": "The encoded ID of the function.",
+      "type": "string"
+    },
+    "user_ids": {
+      "required": false,
+      "example": "U1234,U2345,U3456",
+      "desc": "List of encoded user IDs.",
       "type": "array"
     }
   },
   "response": {
     "examples": [
-
+      "{\n    \"ok\": true,\n    \"permission_type\": \"named_entities\",\n    \"users\": [\n        {\n            \"user_id\": \"U01565LTEBD\",\n            \"username\": \"joe_smith\",\n            \"email\": \"joesmith@salesforce.com\"\n        }\n    ]\n}",
+      "{\n    \"ok\": false,\n    \"error\": \"invalid_permission_type\"\n}"
     ]
   },
   "errors": {
+    "unknown_method": "This method does not exist.",
     "access_denied": "Access to a resource specified in the request is denied.",
-    "trigger_type_id_not_found": "one or more of the given IDs do not map to a valid trigger type.",
+    "function_not_found": "This function does not exist.",
+    "invalid_permission_type": "This function requires permission_type to be set as named_entities before adding users.",
+    "user_not_found": "One or more of the named entities was not found.",
+    "app_not_found": "This app does not exist.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
     "deprecated_endpoint": "The endpoint has been deprecated.",
     "ekm_access_denied": "Administrators have suspended the ability to post a message.",
