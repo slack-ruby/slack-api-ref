@@ -20,6 +20,12 @@
       "desc": "A short description of the User Group.",
       "type": "string"
     },
+    "enable_section": {
+      "required": false,
+      "example": "true",
+      "desc": "Configure this usergroup to be a channel section.",
+      "type": "boolean"
+    },
     "handle": {
       "required": false,
       "example": "marketing",
