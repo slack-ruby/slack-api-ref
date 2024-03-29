@@ -2,7 +2,7 @@
   "group": "admin",
   "name": "admin.users.setAdmin",
   "deprecated": false,
-  "desc": "Set an existing guest, regular user, or owner to be an admin user.",
+  "desc": "Set an existing regular user or owner to be a workspace admin.",
   "args": {
     "team_id": {
       "required": true,
