@@ -18,7 +18,7 @@
   },
   "errors": {
     "access_denied": "Access to a resource specified in the request is denied.",
-    "trigger_type_id_not_found": "one or more of the given IDs do not map to a valid trigger type.",
+    "trigger_type_id_not_found": "The given trigger type ID(s) do not map to valid trigger types.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
     "deprecated_endpoint": "The endpoint has been deprecated.",
     "ekm_access_denied": "Administrators have suspended the ability to post a message.",
