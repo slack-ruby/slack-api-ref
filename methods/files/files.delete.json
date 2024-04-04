@@ -19,7 +19,7 @@
   },
   "errors": {
     "cant_delete_file": "Authenticated user does not have permission to delete this file.",
-    "delete_not_allowed": "Error returned when the requested file does not support deletion.",
+    "delete_not_allowed": "Error returned when the requested file does not support deletion; for example, when attempting to delete a canvas template.",
     "file_deleted": "The file has already been deleted.",
     "file_deleting_disabled": "This functionality is disabled.",
     "file_not_found": "The file does not exist, or is not visible to the calling user.",
