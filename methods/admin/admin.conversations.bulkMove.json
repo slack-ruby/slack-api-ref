@@ -23,7 +23,6 @@
   },
   "errors": {
     "action_already_in_progress": "Another bulk action request is currently in progress.",
-    "feature_not_enabled": "The feature is not enabled.",
     "team_not_found": "Target team cannot be found.",
     "internal_error": "The server could not complete your operation(s) without encountering an error, likely due to a transient issue on our end. It's possible some aspect of the operation succeeded before the error was raised.",
     "no_valid_channels": "All input channels are invalid.",

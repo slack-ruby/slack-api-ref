@@ -2,7 +2,7 @@
   "group": "functions",
   "name": "functions.distributions.permissions.remove",
   "deprecated": false,
-  "desc": "Revoke users' access to a custom slack function that has its permission type set to named_entities",
+  "desc": "Revoke user access to a custom slack function if permission_type set to named_entities",
   "args": {
     "function_app_id": {
       "required": false,

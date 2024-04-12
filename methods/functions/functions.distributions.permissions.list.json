@@ -2,7 +2,7 @@
   "group": "functions",
   "name": "functions.distributions.permissions.list",
   "deprecated": false,
-  "desc": "List the visibility of a custom slack function and include the users with access if its permission type is set to named_entities",
+  "desc": "List the access type of a custom slack function and include the users with access if its permission_type is set to named_entities",
   "args": {
     "function_app_id": {
       "required": false,

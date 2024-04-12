@@ -2,7 +2,7 @@
   "group": "functions",
   "name": "functions.distributions.permissions.add",
   "deprecated": false,
-  "desc": "Grant users access to a custom slack function that has its permission type set to named_entitiess",
+  "desc": "Grant users access to a custom slack function if its permission_type is set to named_entities",
   "args": {
     "function_app_id": {
       "required": false,

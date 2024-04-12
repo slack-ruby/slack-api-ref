@@ -2,7 +2,7 @@
   "group": "functions",
   "name": "functions.distributions.permissions.set",
   "deprecated": false,
-  "desc": "Set the remixability of a slack function and define the users to be granted access if permission_type is set to named_entities",
+  "desc": "Set the access type of a custom slack function and define the users to be granted access if permission_type is set to named_entities",
   "args": {
     "permission_type": {
       "required": false,
