@@ -58,6 +58,7 @@
     "too_many_emails": "Too many email recipients were passed in the emails parameter.",
     "url_in_message": "The message contained a URL.",
     "user_not_found": "User lookup failed.",
+    "no_external_invite_permission": "User does not have permission to invite an external user.",
     "access_denied": "Access to a resource specified in the request is denied.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
     "deprecated_endpoint": "The endpoint has been deprecated.",
