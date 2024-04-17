@@ -5,7 +5,7 @@
   "desc": "Turns on Do Not Disturb mode for the current user, or changes its duration.",
   "args": {
     "num_minutes": {
-      "required": false,
+      "required": true,
       "example": "60",
       "desc": "This argument is required. Number of minutes, from now, to snooze until.",
       "type": "string"
