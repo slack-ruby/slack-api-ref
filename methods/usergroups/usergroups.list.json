@@ -38,6 +38,7 @@
   "errors": {
     "missing_argument": "A required argument is missing.",
     "plan_upgrade_required": "This workspace does not have access to User Groups, as that feature is only available on Standard and above plans.",
+    "invalid_cursor": "Value passed for cursor was not valid or is no longer valid.",
     "access_denied": "Access to a resource specified in the request is denied.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
     "deprecated_endpoint": "The endpoint has been deprecated.",
