@@ -47,6 +47,7 @@
     "invalid_arguments": "The method was either called with invalid arguments or some detail about the arguments passed is invalid, which is more likely when using complex arguments like blocks or attachments.",
     "invalid_cursor": "The passed cursor was invalid.",
     "invalid_sort": "Sort parameters are invalid.",
+    "invalid_role_id": "One or more role IDs could not be validated.",
     "access_denied": "Access to a resource specified in the request is denied.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
     "deprecated_endpoint": "The endpoint has been deprecated.",
