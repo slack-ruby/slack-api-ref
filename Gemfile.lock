@@ -41,7 +41,8 @@ GEM
     rainbow (3.1.1)
     rake (13.0.1)
     regexp_parser (2.6.0)
-    rexml (3.2.5)
+    rexml (3.2.8)
+      strscan (>= 3.0.9)
     rubocop (1.36.0)
       json (~> 2.3)
       parallel (~> 1.10)
@@ -60,6 +61,7 @@ GEM
     rubyntlm (0.6.3)
     spidey (0.1.0)
       mechanize
+    strscan (3.1.0)
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.8.2)
