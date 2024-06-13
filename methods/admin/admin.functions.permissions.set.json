@@ -29,6 +29,7 @@
   "errors": {
     "access_denied": "Access to a resource specified in the request is denied.",
     "function_not_found": "The referenced function does not exist.",
+    "invalid_visibility": "Invalid value for visibility.",
     "unknown_method": "This method does not exist.",
     "invalid_setting": "The app_collaborators setting is not allowed for apps not owned by your team/org.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
