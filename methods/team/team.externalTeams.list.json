@@ -1,29 +1,61 @@
 {
-  "group": "users",
-  "name": "users.discoverableContacts.lookup",
+  "group": "team",
+  "name": "team.externalTeams.list",
   "deprecated": false,
-  "desc": "Lookup an email address to see if someone is on Slack",
+  "desc": "Returns a list of all the external teams connected and details about the connection.",
   "args": {
-    "email": {
-      "required": true,
-      "example": "scott.slacksalot@example.com",
-      "desc": ".",
+    "connection_status_filter": {
+      "required": false,
+      "desc": "Status of the connected team.",
+      "type": "enum"
+    },
+    "cursor": {
+      "required": false,
+      "example": "T9012948",
+      "desc": "encoded team ID to retrieve next page of connected teams, if absent will return first page.",
       "type": "string"
+    },
+    "limit": {
+      "required": false,
+      "example": "20",
+      "desc": "The maximum number of items to return per page.",
+      "type": "integer"
+    },
+    "slack_connect_pref_filter": {
+      "required": false,
+      "desc": "Filters connected orgs by Slack Connect pref override(s).",
+      "type": "array"
+    },
+    "sort_direction": {
+      "required": false,
+      "example": "asc",
+      "desc": "Direction to sort in asc or desc.",
+      "type": "enum"
+    },
+    "sort_field": {
+      "required": false,
+      "example": "team_name",
+      "desc": "Name of the parameter that we are sorting by.",
+      "type": "enum"
+    },
+    "workspace_filter": {
+      "required": false,
+      "desc": "Shows connected orgs which are connected on a specified encoded workspace ID.",
+      "type": "array"
     }
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true,\n    \"user\": {\n        \"is_discoverable\": true\n    }\n}",
-      "{\n    \"ok\": true,\n    \"is_discoverable\": false\n}",
+      "{\n    \"ok\": true,\n    \"organizations\": {\n        \"team_id\": \"T123ABC456\",\n        \"team_name\": \"Sandra Inc.\",\n        \"team_domain\": \"sandra\",\n        \"public_channel_count\": 1,\n        \"private_channel_count\": 1,\n        \"im_channel_count\": 1,\n        \"mpim_channel_count\": 1,\n        \"connected_workspaces\": {\n            \"name\": \"Jesse Inc\",\n            \"id\": \"E123ABC456\"\n        },\n        \"slack_connect_prefs\": {},\n        \"connection_status\": \"CONNECTED\",\n        \"last_active_timestamp\": 1718656058,\n        \"is_sponsored\": false,\n        \"canvas\": {\n            \"total_count\": 1,\n            \"ownership_details\": [\n                {\n                    \"team_id\": \"T123ABC456\"\n                },\n                {\n                    \"count\": 1\n                }\n            ]\n        },\n        \"lists\": {\n            \"total_count\": 1,\n            \"ownership_details\": [\n                {\n                    \"team_id\": \"T123ABC456\"\n                },\n                {\n                    \"count\": 1\n                }\n            ]\n        }\n    },\n    \"total_count\": 1\n}",
       "{\n    \"ok\": false,\n    \"error\": \"invalid_auth\"\n}"
     ]
   },
   "errors": {
-    "not_allowed": "user is not allowed to call this API.",
-    "ratelimited": "The request has been ratelimited. Refer to the Retry-After header for when to retry the request.",
     "invalid_arguments": "The method was either called with invalid arguments or some detail about the arguments passed is invalid, which is more likely when using complex arguments like blocks or attachments.",
-    "restricted_action": "user is restricted from calling this API.",
-    "not_an_enterprise": "The token does not belong to an enterprise.",
+    "not_allowed": "The user is not allowed to perform the action.",
+    "internal_error": "The server could not complete your operation(s) without encountering an error, likely due to a transient issue on our end. It's possible some aspect of the operation succeeded before the error was raised.",
+    "invalid_workspace_filter": "The specified workspace is not valid.",
+    "user_cannot_manage_workspace": "The calling user cannot manage the workspace passed in the workspace filter.",
     "access_denied": "Access to a resource specified in the request is denied.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
     "deprecated_endpoint": "The endpoint has been deprecated.",
@@ -42,13 +74,13 @@
     "two_factor_setup_required": "Two factor setup is required.",
     "accesslimited": "Access to this method is limited on the current network.",
     "fatal_error": "The server could not complete your operation(s) without encountering a catastrophic error. It's possible some aspect of the operation succeeded before the error was raised.",
-    "internal_error": "The server could not complete your operation(s) without encountering an error, likely due to a transient issue on our end. It's possible some aspect of the operation succeeded before the error was raised.",
     "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
     "invalid_array_arg": "The method was passed an array as an argument. Please only input valid strings.",
     "invalid_charset": "The method was called via a POST request, but the charset specified in the Content-Type header was invalid. Valid charset names are: utf-8 iso-8859-1.",
     "invalid_form_data": "The method was called via a POST request with Content-Type application/x-www-form-urlencoded or multipart/form-data, but the form data was either missing or syntactically invalid.",
     "invalid_post_type": "The method was called via a POST request, but the specified Content-Type was invalid. Valid types are: application/json application/x-www-form-urlencoded multipart/form-data text/plain.",
     "missing_post_type": "The method was called via a POST request and included a data payload, but the request did not include a Content-Type header.",
+    "ratelimited": "The request has been ratelimited. Refer to the Retry-After header for when to retry the request.",
     "request_timeout": "The method was called via a POST request, but the POST data was either missing or truncated.",
     "service_unavailable": "The service is temporarily unavailable.",
     "team_added_to_org": "The workspace associated with your request is currently undergoing migration to an Enterprise Organization. Web API and other platform operations will be intermittently unavailable until the transition is complete."
