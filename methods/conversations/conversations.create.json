@@ -41,8 +41,6 @@
     "name_taken": "A channel cannot be created with the given name.",
     "no_channel": "Value passed for name was empty.",
     "restricted_action": "A team preference prevents the authenticated user from creating channels.",
-    "too_many_convos_for_app_on_team": "This app has exceeded its per-workspace limit of public and private channels.",
-    "too_many_convos_for_team": "The workspace has exceeded its limit of public and private channels.",
     "canvas_disabled_user_team": "Canvas is disabled on user's team.",
     "access_denied": "Access to a resource specified in the request is denied.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",

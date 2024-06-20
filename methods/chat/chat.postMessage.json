@@ -149,6 +149,7 @@
     "slack_connect_file_link_sharing_blocked": "Admin has disabled Slack File sharing in all Slack Connect communications.",
     "slack_connect_lists_sharing_blocked": "Admin has disabled Lists sharing in all Slack Connect communications.",
     "team_access_not_granted": "The token used is not granted the specific workspace access required to complete this request.",
+    "team_not_found": "This error occurs if, when using an org-wide token, the channel_name is passed instead of the channel_id.",
     "too_many_attachments": "Too many attachments were provided with this message. A maximum of 100 attachments are allowed on a message.",
     "too_many_contact_cards": "Too many contact_cards were provided with this message. A maximum of 10 contact cards are allowed on a message.",
     "cannot_reply_to_message": "This message type cannot have thread replies.",
