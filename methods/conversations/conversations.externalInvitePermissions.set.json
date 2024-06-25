@@ -2,7 +2,7 @@
   "group": "conversations",
   "name": "conversations.externalInvitePermissions.set",
   "deprecated": false,
-  "desc": "Convert a team in a shared channel from an External Limited channel to a fully shared Slack Connect channel or vice versa.",
+  "desc": "Upgrade or downgrade Slack Connect channel permissions between 'can post only' and 'can post and invite'.",
   "args": {
     "action": {
       "required": true,
