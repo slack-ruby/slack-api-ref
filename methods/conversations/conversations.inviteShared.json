@@ -49,6 +49,7 @@
     "member_limit_exceeded": "This channel that has hit the limit of members.",
     "message_too_long": "The provided message was longer than 560 characters.",
     "not_allowed_for_grid_workspace": "This workspace does not have Slack Connect enabled.",
+    "not_in_channel": "The app is not a member of the channel to invite.",
     "not_owner": "Only the host organization for a channel can request to share it.",
     "not_paid": "This feature is only available to paid teams.",
     "not_supported": "This channel cannot be shared.",

@@ -11,8 +11,8 @@
     },
     "cursor": {
       "required": false,
-      "example": "T9012948",
-      "desc": "encoded team ID to retrieve next page of connected teams, if absent will return first page.",
+      "example": "T123ABC456",
+      "desc": "Paginate through collections of data by setting parameter to the team_id attribute returned by a previous request's response_metadata. If not provided, the first page of the collection is returned. See pagination for more detail.",
       "type": "string"
     },
     "limit": {
@@ -23,7 +23,7 @@
     },
     "slack_connect_pref_filter": {
       "required": false,
-      "desc": "Filters connected orgs by Slack Connect pref override(s).",
+      "desc": "Filters connected orgs by Slack Connect pref override(s). Value can be: approved_orgs_only allow_sc_file_uploads profile_visibility away_team_sc_invite_permissions accept_sc_invites sc_mpdm_to_private require_sc_channel_for_sc_dm external_awareness_context_bar.",
       "type": "array"
     },
     "sort_direction": {
