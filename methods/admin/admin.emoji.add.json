@@ -31,6 +31,7 @@
     "error_name_taken_i18n": "Value passed for name already exists.",
     "error_no_image": "Empty image data was provided.",
     "error_too_big": "The image file size is too large.",
+    "error_lower_case_names_only": "Capital letters are not allowed in emoji names.",
     "failed_to_add_emoji": "Failed to add the specified emoji.",
     "failed_to_fetch_active_team": "There are no active teams on the org and we need at least one.",
     "feature_not_enabled": "The Admin APIs feature is not enabled for this team.",
