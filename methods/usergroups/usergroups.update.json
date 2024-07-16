@@ -22,7 +22,7 @@
     "enable_section": {
       "required": false,
       "example": "true",
-      "desc": "Configure this usergroup to be a channel section.",
+      "desc": "Configure this user group to show as a sidebar section for all group members. Note: Only relevant if group has 1 or more default channels added.",
       "type": "boolean"
     },
     "handle": {
