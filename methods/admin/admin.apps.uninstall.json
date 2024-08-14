@@ -37,6 +37,7 @@
     "specify_enterprise_or_teams": "Provide exactly one of enterprise_id or team_ids.",
     "teams_not_found": "One or more of the provided team_ids were not found.",
     "too_many_teams": "Too many IDs are present in team_ids.",
+    "restricted_action": "the user is not authorized to perform this action.",
     "access_denied": "Access to a resource specified in the request is denied.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
     "deprecated_endpoint": "The endpoint has been deprecated.",
