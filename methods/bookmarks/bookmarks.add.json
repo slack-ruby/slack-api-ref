@@ -52,6 +52,7 @@
     "channel_not_found": "Channel cannot be found.",
     "file_not_found": "File cannot be found.",
     "invalid_bookmark_type": "Bookmark type is not valid.",
+    "invalid_shortcut_type": "Shortcut type is not valid.",
     "invalid_child_type": "Child type is not valid.",
     "invalid_emoji": "Invalid emoji, does not follow the pattern of a valid emoji name.",
     "invalid_entity_id": "Invalid entity_id, file or message type bookmark should have original file or message ID.",

@@ -10,13 +10,27 @@
       "desc": "ID of the session to invalidate.",
       "type": "integer"
     },
+    "user_id": {
+      "required": false,
+      "example": "U12345",
+      "desc": "ID of the user that the session belongs to."
+    },
     "team_id": {
-      "required": true,
+      "required": false,
       "example": "T1234",
-      "desc": "ID of the workspace that the session belongs to.",
-      "type": "string"
+      "desc": "ID of the workspace that the session belongs to."
     }
   },
+  "arg_groups": [
+    {
+      "args": [
+        "user_id",
+        "team_id"
+      ],
+      "desc": "Exactly one of these arguments is required to identify the session that is to be invalidated, user_id is preferred and team_id will be deprecated and eventually removed.",
+      "mutually_exclusive": true
+    }
+  ],
   "response": {
     "examples": [
       "{\n    \"ok\": true\n}"
@@ -28,7 +42,6 @@
     "feature_not_enabled": "The token provided can't call this method.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "not_an_admin": "This method must be called by an Org Owner or Admin.",
-    "session_expired": "The requested session has already expired.",
     "session_invalidation_failed": "There was an error invalidating the session.",
     "session_not_found": "The requested session wasn't found.",
     "unknown_method": "This method is currently not available.",
