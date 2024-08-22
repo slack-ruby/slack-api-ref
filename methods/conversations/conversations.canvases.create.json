@@ -27,6 +27,7 @@
     "restricted_action": "User does not have permission to perform this action.",
     "channel_canvas_creation_failed": "Channel canvas was unable to be created.",
     "channel_canvas_already_exists": "Channel canvas for the specified channel already exists.",
+    "team_tier_cannot_create_channel_canvases": "Team tier cannot create channel canvases.",
     "access_denied": "Access to a resource specified in the request is denied.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
     "deprecated_endpoint": "The endpoint has been deprecated.",
