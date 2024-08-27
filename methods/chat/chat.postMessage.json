@@ -33,7 +33,7 @@
     "as_user": {
       "required": false,
       "example": "true",
-      "desc": "(Legacy) Pass true to post the message as the authed user instead of as a bot. Defaults to false. Can only be used by classic Slack apps. See authorship below.",
+      "desc": "(Legacy) Pass true to post the message as the authed user instead of as a bot. Defaults to false. Can only be used by classic Slack apps. See legacy as_user parameter below.",
       "type": "boolean"
     },
     "icon_emoji": {
