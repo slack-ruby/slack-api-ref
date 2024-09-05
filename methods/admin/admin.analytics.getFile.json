@@ -43,6 +43,7 @@
     "missing_scope": "The token used is not granted the specific scope permissions required to complete this request.",
     "not_an_admin": "The user token does not have admin privileges.",
     "org_level_email_display_disabled": "This API is unavailable for organizations with a 'Hide email addresses' policy.",
+    "user_cannot_manage_public_channels": "The user must have permissions to manage public channels at the Enterprise level.",
     "access_denied": "Access to a resource specified in the request is denied.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
     "deprecated_endpoint": "The endpoint has been deprecated.",
