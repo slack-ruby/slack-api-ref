@@ -36,6 +36,7 @@
     "free_team_not_allowed": "Datastore put not allowed on a free team.",
     "team_quota_exceeded": "Total number of requests exceeded team quota.",
     "datastore_migration_in_progress": "The datastore is currently unavailable due to an in progress Enterprise Grid migration.",
+    "restricted_plan_level": "Feature is not available on this team.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
     "deprecated_endpoint": "The endpoint has been deprecated.",
     "ekm_access_denied": "Administrators have suspended the ability to post a message.",
