@@ -2,18 +2,18 @@
   "group": "conversations",
   "name": "conversations.setPurpose",
   "deprecated": false,
-  "desc": "Sets the purpose for a conversation.",
+  "desc": "Sets the channel description.",
   "args": {
     "channel": {
       "required": true,
       "example": "C1234567890",
-      "desc": "Conversation to set the purpose of.",
+      "desc": "Channel to set the description of.",
       "type": "channel"
     },
     "purpose": {
       "required": true,
-      "example": "My More Special Purpose",
-      "desc": "A new, specialer purpose.",
+      "example": "This is the random channel, anything goes!",
+      "desc": "The description.",
       "type": "string"
     }
   },
@@ -26,10 +26,10 @@
   "errors": {
     "channel_not_found": "Value passed for channel was invalid.",
     "is_archived": "Channel has been archived.",
-    "method_not_supported_for_channel_type": "This type of conversation cannot be used with this method.",
+    "method_not_supported_for_channel_type": "This conversation type cannot be used with this method.",
     "missing_scope": "The token used is not granted the specific scope permissions required to complete this request.",
     "not_in_channel": "Authenticated user is not in the channel.",
-    "too_long": "Purpose was longer than 250 characters.",
+    "too_long": "Description was longer than 250 characters.",
     "user_is_restricted": "This method cannot be called by a restricted user or single channel guest.",
     "access_denied": "Access to a resource specified in the request is denied.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
