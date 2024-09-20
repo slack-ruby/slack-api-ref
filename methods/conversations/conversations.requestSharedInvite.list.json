@@ -1,0 +1,89 @@
+{
+  "group": "conversations",
+  "name": "conversations.requestSharedInvite.list",
+  "deprecated": false,
+  "desc": "Lists requests to add external users to channels with ability to filter.",
+  "args": {
+    "cursor": {
+      "required": false,
+      "example": "bG9nX2lkOjc5NjQ1NA==",
+      "desc": "Paginate through collections of data by setting the cursor parameter to a next_cursor attribute returned by a previous request's response_metadata. See pagination for more detail.",
+      "type": "string"
+    },
+    "include_approved": {
+      "required": false,
+      "example": "",
+      "desc": "When true approved invitation requests will be returned, otherwise they will be excluded.",
+      "type": "boolean"
+    },
+    "include_denied": {
+      "required": false,
+      "example": "",
+      "desc": "When true denied invitation requests will be returned, otherwise they will be excluded.",
+      "type": "boolean"
+    },
+    "include_expired": {
+      "required": false,
+      "example": "",
+      "desc": "When true expired invitation requests will be returned, otherwise they will be excluded.",
+      "type": "boolean"
+    },
+    "invite_ids": {
+      "required": false,
+      "desc": "An optional list of invitation ids to look up.",
+      "type": "array"
+    },
+    "limit": {
+      "required": false,
+      "example": "200",
+      "desc": "The number of items to return. Must be between 1 - 1000 (inclusive).",
+      "type": "integer"
+    },
+    "user_id": {
+      "required": false,
+      "desc": "Optional filter to return invitation requests for the inviting user."
+    }
+  },
+  "response": {
+    "examples": [
+      "{\n    \"ok\": true,\n    \"invite_requests\": [\n        {\n            \"date_last_updated\": 1722372331,\n            \"id\": \"I12345\",\n            \"date_created\": 1722372331,\n            \"expires_at\": 1723581931,\n            \"inviting_team\": {\n                \"id\": \"E12345\",\n                \"name\": \"Acme corp\",\n                \"icon\": {\n                    \"image_34\": \"https://.../avatar/avatars-teams/ava_0011-34.png\",\n                    \"image_44\": \"https://.../avatar/avatars-teams/ava_0011-44.png\",\n                    \"image_68\": \"https://.../avatar/avatars-teams/ava_0011-68.png\",\n                    \"image_88\": \"https://.../avatar/avatars-teams/ava_0011-88.png\",\n                    \"image_102\": \"https://.../avatar/avatars-teams/ava_0011-102.png\",\n                    \"image_132\": \"https://.../avatar/avatars-teams/ava_0011-132.png\",\n                    \"image_230\": \"https://.../avatar/avatars-teams/ava_0011-230.png\",\n                    \"image_default\": true\n                },\n                \"avatar_base_url\": \"https://dev.slack.com/avatarsource/\",\n                \"is_verified\": false,\n                \"domain\": \"acme-corp\",\n                \"date_created\": 1637947110,\n                \"requires_sponsorship\": false\n            },\n            \"inviting_user\": {\n                \"id\": \"U12345\",\n                \"team_id\": \"E12345\",\n                \"name\": \"acme-corp-user\",\n                \"updated\": 1721741979,\n                \"who_can_share_contact_card\": \"EVERYONE\",\n                \"profile\": {\n                    \"real_name\": \"acme-corp-user\",\n                    \"display_name\": \"acme-corp-user\",\n                    \"real_name_normalized\": \"acme-corp-user\",\n                    \"display_name_normalized\": \"acme-corp-user\",\n                    \"team\": \"E12345\",\n                    \"avatar_hash\": \"hash\",\n                    \"email\": \"acme-corp-user@acme-corp.com\",\n                    \"image_24\": \"https://secure.gravatar.com/avatar/...0001-24.png\",\n                    \"image_32\": \"https://secure.gravatar.com/avatar/...0001-32.png\",\n                    \"image_48\": \"https://secure.gravatar.com/avatar/...0001-48.png\",\n                    \"image_72\": \"https://secure.gravatar.com/avatar/...0001-72.png\",\n                    \"image_192\": \"https://secure.gravatar.com/avatar/...0001-192.png\",\n                    \"image_512\": \"https://secure.gravatar.com/avatar/...0001-512.png\"\n                }\n            },\n            \"is_external_limited\": false,\n            \"is_sponsored\": true,\n            \"recipient_email\": \"external-user@other-corp.com\",\n            \"target_user\": {\n                \"recipient_email\": \"external-user1@other-corp.com\",\n                \"recipient_user_id\": \"U123456\"\n            }\n        },\n        {\n            \"id\": \"I12345\",\n            \"date_created\": 1722372331,\n            \"expires_at\": 1723581931,\n            \"date_denied\": 1723581901,\n            \"inviting_team\": {\n                \"id\": \"E12345\",\n                \"name\": \"Acme Corp.\",\n                \"icon\": {\n                    \"image_34\": \"https://.../avatars-teams/ava_0011-34.png\",\n                    \"image_44\": \"https://.../avatars-teams/ava_0011-44.png\",\n                    \"image_68\": \"https://.../avatars-teams/ava_0011-68.png\",\n                    \"image_88\": \"https://.../avatars-teams/ava_0011-88.png\",\n                    \"image_102\": \"https://.../avatars-teams/ava_0011-102.png\",\n                    \"image_132\": \"https://.../avatars-teams/ava_0011-132.png\",\n                    \"image_230\": \"https://.../avatars-teams/ava_0011-230.png\",\n                    \"image_default\": true\n                },\n                \"avatar_base_url\": \"https://dev.slack.com/avatarsource/\",\n                \"is_verified\": false,\n                \"domain\": \"acme-corp\",\n                \"date_created\": 1637947110,\n                \"requires_sponsorship\": false\n            },\n            \"inviting_user\": {\n                \"id\": \"U12345\",\n                \"team_id\": \"E12345\",\n                \"name\": \"acme-corp-user\",\n                \"updated\": 1721741979,\n                \"who_can_share_contact_card\": \"EVERYONE\",\n                \"profile\": {\n                    \"real_name\": \"acme-corp-user\",\n                    \"display_name\": \"acme-corp-user\",\n                    \"real_name_normalized\": \"acme-corp-user\",\n                    \"display_name_normalized\": \"acme-corp-user\",\n                    \"team\": \"E12345\",\n                    \"avatar_hash\": \"hash\",\n                    \"email\": \"acme-corp-user@acme-corp.com\",\n                    \"image_24\": \"https://secure.gravatar.com/avatar/...0001-24.png\",\n                    \"image_32\": \"https://secure.gravatar.com/avatar/...0001-32.png\",\n                    \"image_48\": \"https://secure.gravatar.com/avatar/...0001-48.png\",\n                    \"image_72\": \"https://secure.gravatar.com/avatar/...0001-72.png\",\n                    \"image_192\": \"https://secure.gravatar.com/avatar/...0001-192.png\",\n                    \"image_512\": \"https://secure.gravatar.com/avatar/...0001-512.png\"\n                }\n            },\n            \"is_external_limited\": false,\n            \"channel\": {\n                \"id\": \"C12345\",\n                \"is_im\": false,\n                \"is_private\": true,\n                \"date_created\": 1721764754,\n                \"name\": \"channel-name\",\n                \"connections\": [\n                    {\n                        \"team\": {\n                            \"id\": \"E12345\",\n                            \"name\": \"Acme Corp.\",\n                            \"icon\": {\n                                \"image_34\": \"https://.../ava_0011-34.png\",\n                                \"image_44\": \"https://.../ava_0011-44.png\",\n                                \"image_68\": \"https://.../ava_0011-68.png\",\n                                \"image_88\": \"https://.../ava_0011-88.png\",\n                                \"image_102\": \"https://.../ava_0011-102.png\",\n                                \"image_132\": \"https://.../ava_0011-132.png\",\n                                \"image_230\": \"https://.../ava_0011-230.png\",\n                                \"image_default\": true\n                            },\n                            \"avatar_base_url\": \"https://dev.slack.com/avatarsource/\",\n                            \"is_verified\": false,\n                            \"domain\": \"acme-corp\",\n                            \"date_created\": 1637947110,\n                            \"requires_sponsorship\": false\n                        },\n                        \"is_private\": true\n                    }\n                ],\n                \"pending_connections\": [],\n                \"previous_connections\": []\n            },\n            \"target_user\": {\n                \"recipient_email\": \"external-user@other-corp.com\"\n            },\n            \"reviewing_user\": {\n                \"id\": \"U12345\",\n                \"team_id\": \"E12345\",\n                \"name\": \"acme-corp-user\",\n                \"updated\": 1721741979,\n                \"who_can_share_contact_card\": \"EVERYONE\",\n                \"profile\": {\n                    \"real_name\": \"acme-corp-user\",\n                    \"display_name\": \"acme-corp-user\",\n                    \"real_name_normalized\": \"acme-corp-user\",\n                    \"display_name_normalized\": \"acme-corp-user\",\n                    \"team\": \"E12345\",\n                    \"avatar_hash\": \"hash\",\n                    \"email\": \"acme-corp-user@acme-corp.com\",\n                    \"image_24\": \"https://secure.gravatar.com/avatar/...0001-24.png\",\n                    \"image_32\": \"https://secure.gravatar.com/avatar/...0001-32.png\",\n                    \"image_48\": \"https://secure.gravatar.com/avatar/...0001-48.png\",\n                    \"image_72\": \"https://secure.gravatar.com/avatar/...0001-72.png\",\n                    \"image_192\": \"https://secure.gravatar.com/avatar/...0001-192.png\",\n                    \"image_512\": \"https://secure.gravatar.com/avatar/...0001-512.png\"\n                }\n            }\n        }\n    ],\n    \"response_metadata\": {\n        \"next_cursor\": \"aWQ6STAxNkszN0FBQUU=\"\n    }\n}",
+      "{\n    \"ok\": false,\n    \"error\": \"invalid_cursor\"\n}"
+    ]
+  },
+  "errors": {
+    "restricted_action": "A team preference prevents the user from listing invitation requests.",
+    "invalid_cursor": "The provided cursor is not valid.",
+    "internal_error": "The server could not complete your operation(s) without encountering an error, likely due to a transient issue on our end. It's possible some aspect of the operation succeeded before the error was raised.",
+    "not_implemented": "its not implemented!  TODO: remove me.",
+    "access_denied": "Access to a resource specified in the request is denied.",
+    "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
+    "deprecated_endpoint": "The endpoint has been deprecated.",
+    "ekm_access_denied": "Administrators have suspended the ability to post a message.",
+    "enterprise_is_restricted": "The method cannot be called from an Enterprise.",
+    "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
+    "is_bot": "This method cannot be called by a legacy bot.",
+    "user_is_restricted": "This method cannot be called by a restricted user or single channel guest.",
+    "method_deprecated": "The method has been deprecated.",
+    "missing_scope": "The token used is not granted the specific scope permissions required to complete this request.",
+    "not_allowed_token_type": "The token type used in this request is not allowed.",
+    "not_authed": "No authentication token provided.",
+    "no_permission": "The workspace token used in this request does not have the permissions necessary to complete the request. Make sure your app is a member of the conversation it's attempting to post a message to.",
+    "org_login_required": "The workspace is undergoing an enterprise migration and will not be available until migration is complete.",
+    "token_expired": "Authentication token has expired.",
+    "token_revoked": "Authentication token is for a deleted user or workspace or the app has been removed when using a user token.",
+    "two_factor_setup_required": "Two factor setup is required.",
+    "accesslimited": "Access to this method is limited on the current network.",
+    "fatal_error": "The server could not complete your operation(s) without encountering a catastrophic error. It's possible some aspect of the operation succeeded before the error was raised.",
+    "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
+    "invalid_arguments": "The method was either called with invalid arguments or some detail about the arguments passed is invalid, which is more likely when using complex arguments like blocks or attachments.",
+    "invalid_array_arg": "The method was passed an array as an argument. Please only input valid strings.",
+    "invalid_charset": "The method was called via a POST request, but the charset specified in the Content-Type header was invalid. Valid charset names are: utf-8 iso-8859-1.",
+    "invalid_form_data": "The method was called via a POST request with Content-Type application/x-www-form-urlencoded or multipart/form-data, but the form data was either missing or syntactically invalid.",
+    "invalid_post_type": "The method was called via a POST request, but the specified Content-Type was invalid. Valid types are: application/json application/x-www-form-urlencoded multipart/form-data text/plain.",
+    "missing_post_type": "The method was called via a POST request and included a data payload, but the request did not include a Content-Type header.",
+    "ratelimited": "The request has been ratelimited. Refer to the Retry-After header for when to retry the request.",
+    "request_timeout": "The method was called via a POST request, but the POST data was either missing or truncated.",
+    "service_unavailable": "The service is temporarily unavailable.",
+    "team_added_to_org": "The workspace associated with your request is currently undergoing migration to an Enterprise Organization. Web API and other platform operations will be intermittently unavailable until the transition is complete."
+  }
+}
