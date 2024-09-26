@@ -126,6 +126,7 @@
     "time_in_past": "value passed for post_time was in the past.",
     "time_too_far": "value passed for post_time was too far into the future.",
     "too_many_attachments": "Too many attachments were provided with this message. A maximum of 100 attachments are allowed on a message.",
+    "invalid_token": "The passed token is invalid or not supported by this method.",
     "access_denied": "Access to a resource specified in the request is denied.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
     "deprecated_endpoint": "The endpoint has been deprecated.",
