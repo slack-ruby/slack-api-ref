@@ -2,7 +2,7 @@
   "group": "canvases",
   "name": "canvases.delete",
   "deprecated": false,
-  "desc": "Deletes a canvas.",
+  "desc": "Deletes a canvas",
   "args": {
     "canvas_id": {
       "required": true,

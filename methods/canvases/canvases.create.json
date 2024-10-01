@@ -2,7 +2,7 @@
   "group": "canvases",
   "name": "canvases.create",
   "deprecated": false,
-  "desc": "Create Canvas for a user.",
+  "desc": "Create canvas for a user",
   "args": {
     "document_content": {
       "required": false,

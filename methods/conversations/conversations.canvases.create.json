@@ -2,7 +2,7 @@
   "group": "conversations",
   "name": "conversations.canvases.create",
   "deprecated": false,
-  "desc": "Create a Channel Canvas for a channel.",
+  "desc": "Create a channel canvas for a channel",
   "args": {
     "channel_id": {
       "required": true,
