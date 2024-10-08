@@ -7,7 +7,7 @@
     "channel": {
       "required": true,
       "example": "C1234567890",
-      "desc": "Channel, private group, or IM channel to send message to. Can be an encoded ID, or a name. See below for more details.",
+      "desc": "An encoded ID that represents a channel, private group, or IM channel to send the message to. See below for more details.",
       "type": "channel"
     },
     "attachments": {
