@@ -60,6 +60,7 @@
     "no_scopes": "Missing scope in the request.",
     "oauth_authorization_url_mismatch": "The OAuth flow was initiated on an incorrect version of the authorization url. The flow must be initiated via /oauth/v2/authorize .",
     "preview_feature_not_available": "Returned when the API method is not yet available on the team in context.",
+    "user_email_unverified": "The users email is unverified.",
     "accesslimited": "Access to this method is limited on the current network.",
     "fatal_error": "The server could not complete your operation(s) without encountering a catastrophic error. It's possible some aspect of the operation succeeded before the error was raised.",
     "internal_error": "The server could not complete your operation(s) without encountering an error, likely due to a transient issue on our end. It's possible some aspect of the operation succeeded before the error was raised.",
