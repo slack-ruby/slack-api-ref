@@ -17,6 +17,7 @@
   },
   "errors": {
     "emoji_not_found": "Value passed for name was invalid.",
+    "failed_to_remove_emoji": "Failed to remove the specified emoji.",
     "failure_removing_emoji": "This emoji could not be removed. It might be part of the standard Unicode set or the default Slack package.",
     "feature_not_enabled": "The Admin APIs feature is not enabled for this team.",
     "not_an_admin": "This method is only accessible by org owners and Admins.",
