@@ -54,6 +54,7 @@
     "missing_resource": "Missing permission resource.",
     "ratelimited": "The request has been ratelimited. Refer to the Retry-After header for when to retry the request.",
     "oauth_authorization_url_mismatch": "The OAuth flow was initiated on an incorrect version of the authorization url. The flow must be initiated via /oauth/authorize.",
+    "user_email_unverified": "The users email is unverified.",
     "accesslimited": "Access to this method is limited on the current network.",
     "fatal_error": "The server could not complete your operation(s) without encountering a catastrophic error. It's possible some aspect of the operation succeeded before the error was raised.",
     "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
