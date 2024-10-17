@@ -39,6 +39,7 @@
     "file_not_found": "Could not find the file from the upload ticket.",
     "file_update_failed": "Failure occured when attempting to update the file.",
     "invalid_channel": "Channel could not be found or channel specified is invalid.",
+    "not_in_channel": "User/bot membership is required for the specified channel.",
     "posting_to_channel_denied": "User is not authorized to post to channel.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
     "deprecated_endpoint": "The endpoint has been deprecated.",

@@ -18,7 +18,7 @@
     "external_limited": {
       "required": false,
       "example": "true",
-      "desc": "Optional boolean on whether invite is to a external limited member. Defaults to true.",
+      "desc": "Optional boolean on whether invite is to an external limited member. Defaults to true.",
       "type": "boolean"
     },
     "user_ids": {

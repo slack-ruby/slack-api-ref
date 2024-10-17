@@ -20,8 +20,7 @@
     },
     "title": {
       "required": false,
-      "example": "Suggested Prompts",
-      "desc": "Title for the prompts. For example: Suggested Prompts, Related questions. This value is currently ignored by the Slack client.",
+      "desc": "Title for the prompts. For example: Suggested Prompts, Related questions.",
       "type": "string"
     }
   },
