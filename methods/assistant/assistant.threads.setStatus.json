@@ -18,6 +18,12 @@
       "required": true,
       "desc": "Message timestamp of the thread of where to set the status.",
       "type": "string"
+    },
+    "is_send_allowed": {
+      "required": false,
+      "example": "",
+      "desc": "Whether or not the user is allowed to send a message while the status is being displayed.",
+      "type": "boolean"
     }
   },
   "response": {
