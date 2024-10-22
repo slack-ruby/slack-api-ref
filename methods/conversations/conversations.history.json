@@ -62,7 +62,6 @@
     "invalid_ts_latest": "Value passed for latest was invalid.",
     "invalid_ts_oldest": "Value passed for oldest was invalid.",
     "not_in_channel": "The token used does not have access to the proper channel. Only user tokens can access public channels they are not in.",
-    "pagination_not_available": "Pagination does not currently function on Enterprise Grid workspaces.",
     "access_denied": "Access to a resource specified in the request is denied.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
     "deprecated_endpoint": "The endpoint has been deprecated.",
