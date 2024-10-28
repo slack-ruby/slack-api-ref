@@ -64,7 +64,7 @@ GEM
       unf_ext
     unf_ext (0.0.8.2)
     unicode-display_width (2.3.0)
-    webrick (1.7.0)
+    webrick (1.8.2)
     webrobots (0.1.2)
 
 PLATFORMS
