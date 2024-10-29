@@ -53,6 +53,7 @@
   "errors": {
     "invalid_arguments": "The method was either called with invalid arguments or some detail about the arguments passed is invalid, which is more likely when using complex arguments like blocks or attachments.",
     "not_allowed": "The user is not allowed to perform the action.",
+    "restricted_action": "The user does not have permission to perform the action.",
     "internal_error": "The server could not complete your operation(s) without encountering an error, likely due to a transient issue on our end. It's possible some aspect of the operation succeeded before the error was raised.",
     "invalid_workspace_filter": "The specified workspace is not valid.",
     "user_cannot_manage_workspace": "The calling user cannot manage the workspace passed in the workspace filter.",
