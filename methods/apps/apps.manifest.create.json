@@ -19,6 +19,8 @@
   "errors": {
     "invalid_app": "An app created from the provided manifest would not be valid.",
     "invalid_manifest": "The provided manifest file does not validate against schema. Consult the additional errors field to locate specific issues.",
+    "invalid_team_id": "The provided team ID is not valid.",
+    "not_in_team": "Cannot create an app in a team that user is not a member of.",
     "failed_adding_collaborator": "Failed writing a collaborator record for this new app.",
     "failed_creating_app": "Failed to create the app model.",
     "failed_datastore_operation": "Failed while managing datastore infrastructure.",

@@ -48,6 +48,7 @@
     "not_an_admin": "This method is only accessible by org/workspace owners and admins.",
     "team_not_found": "Returned when team id is not found.",
     "too_many_teams_provided": "Please provide only team_id OR enterprise_id.",
+    "restricted_action": "User does not have permission to access method.",
     "access_denied": "Access to a resource specified in the request is denied.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
     "deprecated_endpoint": "The endpoint has been deprecated.",

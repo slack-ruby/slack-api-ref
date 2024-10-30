@@ -11,7 +11,7 @@
     },
     "prompts": {
       "required": true,
-      "desc": "."
+      "desc": "Each prompt should be supplied with its title and message attribute."
     },
     "thread_ts": {
       "required": true,
@@ -20,7 +20,7 @@
     },
     "title": {
       "required": false,
-      "desc": "Title for the prompts. For example: Suggested Prompts, Related questions.",
+      "desc": "Title for the list of provided prompts. For example: Suggested Prompts, Related Questions.",
       "type": "string"
     }
   },

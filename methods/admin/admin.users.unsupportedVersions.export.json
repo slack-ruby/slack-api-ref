@@ -28,6 +28,7 @@
     "invalid_team_id": "The team ID passed is invalid.",
     "missing_scope": "The token used is not granted the specific scope permissions required to complete this request.",
     "not_authed": "No authentication token provided.",
+    "not_an_enterprise": "Only enterprises are supported.",
     "access_denied": "Access to a resource specified in the request is denied.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
     "deprecated_endpoint": "The endpoint has been deprecated.",
