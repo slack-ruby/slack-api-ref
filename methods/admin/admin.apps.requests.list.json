@@ -18,6 +18,7 @@
     },
     "enterprise_id": {
       "required": false,
+      "example": "E1234567890",
       "desc": "."
     },
     "limit": {
@@ -28,6 +29,7 @@
     },
     "team_id": {
       "required": false,
+      "example": "T1234567890",
       "desc": "."
     }
   },
@@ -42,8 +44,12 @@
     "enterprise_not_found": "Returned when enterprise id is not found.",
     "feature_not_enabled": "Returned when the Admin APIs feature is not enabled for this team.",
     "invalid_cursor": "Value passed for cursor was not valid or is no longer valid.",
+    "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "not_allowed": "The user is not allowed to access this API method.",
     "not_an_admin": "This method is only accessible by org owners and admins.",
+    "restricted_action": "The action is restricted for this team.",
+    "user_is_restricted": "This method is only accessible by org owners, admins, and integration managers.",
+    "no_team_or_enterprise_provided": "Must provide team ID or enterprise ID.",
     "team_not_found": "Returned when team id is not found.",
     "too_many_teams_provided": "Please provide only team_id OR enterprise_id.",
     "access_denied": "Access to a resource specified in the request is denied.",
@@ -51,7 +57,6 @@
     "deprecated_endpoint": "The endpoint has been deprecated.",
     "ekm_access_denied": "Administrators have suspended the ability to post a message.",
     "enterprise_is_restricted": "The method cannot be called from an Enterprise.",
-    "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
     "is_bot": "This method cannot be called by a legacy bot.",
     "method_deprecated": "The method has been deprecated.",
     "missing_scope": "The token used is not granted the specific scope permissions required to complete this request.",
