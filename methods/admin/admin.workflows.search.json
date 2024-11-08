@@ -52,7 +52,7 @@
     },
     "sort": {
       "required": false,
-      "example": "premium_runs",
+      "example": "name",
       "desc": "The field used to sort the returned workflows.",
       "type": "enum"
     },
