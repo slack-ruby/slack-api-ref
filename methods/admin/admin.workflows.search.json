@@ -11,7 +11,7 @@
     },
     "collaborator_ids": {
       "required": false,
-      "desc": "Only include workflows where the provided user IDs are a manager/collaborator of that workflow.",
+      "desc": "Only include workflows where all of the provided user IDs are a manager/collaborator of that workflow.",
       "type": "array"
     },
     "cursor": {
