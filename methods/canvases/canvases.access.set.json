@@ -33,11 +33,12 @@
     ]
   },
   "errors": {
-    "canvas_not_found": "The canvas you wish to update permissions for is not available.",
-    "restricted_action": "User does not have permission to perform this action.",
     "canvas_disabled_user_team": "Canvas is disabled on user's team.",
-    "invalid_parameters": "One of user_ids and channel_ids must be defined.",
+    "canvas_not_found": "The canvas you wish to update permissions for is not available.",
     "channel_not_found": "A channel could not be found.",
+    "failed_to_update_user_ids": "Failed to update the specified user_ids.",
+    "invalid_parameters": "One of user_ids and channel_ids must be defined.",
+    "restricted_action": "User does not have permission to perform this action.",
     "user_not_found": "A user could not be found.",
     "access_denied": "Access to a resource specified in the request is denied.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",

@@ -136,7 +136,6 @@
     "metadata_must_be_sent_from_app": "Message metadata can only be posted or updated using an app-level token.",
     "metadata_too_large": "Metadata exceeds size limit.",
     "msg_blocks_too_long": "Blocks submitted with this message are too long.",
-    "msg_too_long": "Message text is too long.",
     "no_text": "No message text provided.",
     "not_in_channel": "Cannot post user messages to a channel they are not in.",
     "rate_limited": "Application has posted too many messages, read the Rate Limit documentation for more information.",
