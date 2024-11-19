@@ -30,7 +30,7 @@
     "team_tier_cannot_create_channel_canvases": "Team tier cannot create channel canvases.",
     "canvas_creation_failed": "Canvas was unable to be created.",
     "canvas_tab_creation_failed": "Canvas tab was unable to be created.",
-    "free_team_canvas_tab_already_exists": "Canvas tab for specified channel already exists.",
+    "free_team_canvas_tab_already_exists": "Canvas tab for specified channel and team tier already exists.",
     "access_denied": "Access to a resource specified in the request is denied.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
     "deprecated_endpoint": "The endpoint has been deprecated.",
