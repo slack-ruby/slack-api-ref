@@ -20,6 +20,11 @@
       "desc": "Type of the bookmark i.e link.",
       "type": "string"
     },
+    "access_level": {
+      "required": false,
+      "desc": "The level that we are setting the file's permission to (read or write).",
+      "type": "enum"
+    },
     "emoji": {
       "required": false,
       "desc": "Emoji tag to apply to the link.",
