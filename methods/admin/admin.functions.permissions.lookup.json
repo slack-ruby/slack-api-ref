@@ -17,6 +17,7 @@
   },
   "errors": {
     "access_denied": "Access to a resource specified in the request is denied.",
+    "restricted_action": "User does not have access to this API.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
     "deprecated_endpoint": "The endpoint has been deprecated.",
     "ekm_access_denied": "Administrators have suspended the ability to post a message.",
