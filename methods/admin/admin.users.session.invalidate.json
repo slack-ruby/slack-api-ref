@@ -27,7 +27,7 @@
         "user_id",
         "team_id"
       ],
-      "desc": "Exactly one of these arguments is required to identify the session that is to be invalidated, user_id is preferred and team_id will be deprecated and eventually removed.",
+      "desc": "Exactly one of these arguments is required to identify the session that is to be invalidated, user_id is preferred and team_id will be deprecated and eventually removed on January 15, 2025.",
       "mutually_exclusive": true
     }
   ],
