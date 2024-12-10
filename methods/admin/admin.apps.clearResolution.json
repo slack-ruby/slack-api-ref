@@ -35,6 +35,7 @@
     "access_denied": "Access to a resource specified in the request is denied.",
     "team_not_found": "Returned when team id is not found.",
     "too_many_teams_provided": "Please provide only team_id OR enterprise_id.",
+    "restricted_action": "This actor does not have access to the permissions on this resource.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
     "deprecated_endpoint": "The endpoint has been deprecated.",
     "ekm_access_denied": "Administrators have suspended the ability to post a message.",
