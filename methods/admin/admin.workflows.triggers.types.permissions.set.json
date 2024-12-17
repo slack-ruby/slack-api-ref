@@ -2,7 +2,7 @@
   "group": "admin",
   "name": "admin.workflows.triggers.types.permissions.set",
   "deprecated": false,
-  "desc": "Set the permissions for using a trigger type in workflow builder",
+  "desc": "Set the permissions for using a trigger type",
   "args": {
     "id": {
       "required": true,
@@ -27,10 +27,11 @@
     ]
   },
   "errors": {
-    "access_denied": "Access to a resource specified in the request is denied.",
+    "restricted_action": "This actor does not have access to the permissions on this resource.",
     "trigger_type_id_not_found": "The referenced trigger type ID does not exist.",
     "visibility_is_not_named_entities": "The visibility should be named enitites when the user_ids, team_ids, or org_ids args are set.",
     "invalid_named_entities": "Named entities visibility requires a valid set of named entities to be specified.",
+    "access_denied": "Access to a resource specified in the request is denied.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
     "deprecated_endpoint": "The endpoint has been deprecated.",
     "ekm_access_denied": "Administrators have suspended the ability to post a message.",

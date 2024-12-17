@@ -2,7 +2,7 @@
   "group": "admin",
   "name": "admin.workflows.triggers.types.permissions.lookup",
   "deprecated": false,
-  "desc": "list the permissions for using each trigger type in workflow builder",
+  "desc": "list the permissions for using each trigger type",
   "args": {
     "trigger_type_ids": {
       "required": true,
@@ -17,8 +17,9 @@
     ]
   },
   "errors": {
-    "access_denied": "Access to a resource specified in the request is denied.",
+    "restricted_action": "This actor does not have access to view the permissions on this resource.",
     "trigger_type_id_not_found": "The given trigger type ID(s) do not map to valid trigger types.",
+    "access_denied": "Access to a resource specified in the request is denied.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
     "deprecated_endpoint": "The endpoint has been deprecated.",
     "ekm_access_denied": "Administrators have suspended the ability to post a message.",
