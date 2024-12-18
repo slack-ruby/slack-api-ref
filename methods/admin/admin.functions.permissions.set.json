@@ -32,6 +32,7 @@
     "invalid_visibility": "Invalid value for visibility.",
     "unknown_method": "This method does not exist.",
     "invalid_setting": "The app_collaborators setting is not allowed for apps not owned by your team/org.",
+    "restricted_action": "This actor does not have access to the permissions on this resource.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
     "deprecated_endpoint": "The endpoint has been deprecated.",
     "ekm_access_denied": "Administrators have suspended the ability to post a message.",
