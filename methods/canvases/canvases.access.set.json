@@ -6,7 +6,7 @@
   "args": {
     "access_level": {
       "required": true,
-      "desc": "Desired level of access (e.g. read, write, owner)."
+      "desc": "Desired level of access."
     },
     "canvas_id": {
       "required": true,
