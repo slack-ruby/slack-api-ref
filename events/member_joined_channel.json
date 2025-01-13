@@ -2,5 +2,14 @@
   "name": "member_joined_channel",
   "desc": "A user joined a public channel, private channel or MPDM..",
   "long_desc": "The member_joined_channel event is sent when users join any channel type, including public and private channels, with the exception of direct messages between two users. For direct messages, there can only ever be two users, and additional members cannot be added. This event requires membership in the conversation in order to receive events. It is supported as a bot user subscription in the Events API. Bot users will receive this event when a new member joins a channel your bot or app is already a member of. Which events your bot or app will receive depends on the scopes granted and their context. For example, if your bot or app has the channels:read scope, it will receive events for public channels. If it has groups:read, it will receive events for private channels. This event is also triggered when creating a new channel. This example illustrates an absent inviter property, a result of a channel being converted from public to private: When an event occurs, we will send an HTTP POST request to your Request URL. The outer payload is uniform across all Events API methods, and contains fields like team_id and event. Learn more",
-  "required_scope": "RTM"
+  "required_scope": "RTM",
+  "example": {
+    "type": "member_joined_channel",
+    "user": "W123ABC456",
+    "channel": "C123ABC456",
+    "channel_type": "C",
+    "team": "T123ABC456",
+    "inviter": "U123456789",
+    "enterprise": "E123456789"
+  }
 }

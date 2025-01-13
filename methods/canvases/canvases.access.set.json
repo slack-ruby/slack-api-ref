@@ -16,13 +16,13 @@
     "channel_ids": {
       "required": false,
       "example": "[\"C1234ABCD\"]",
-      "desc": "List of channels you wish to update access for.",
+      "desc": "List of channels you wish to update access for. Can only be used if user_ids is not provided.",
       "type": "array"
     },
     "user_ids": {
       "required": false,
       "example": "[\"U1234ABCD\"]",
-      "desc": "List of users you wish to update access for.",
+      "desc": "List of users you wish to update access for. Can only be used if channel_ids is not provided.",
       "type": "array"
     }
   },
@@ -37,7 +37,7 @@
     "canvas_not_found": "The canvas you wish to update permissions for is not available.",
     "channel_not_found": "A channel could not be found.",
     "failed_to_update_user_ids": "Failed to update the specified user_ids.",
-    "invalid_parameters": "One of user_ids and channel_ids must be defined.",
+    "invalid_parameters": "One of user_ids or channel_ids must be defined, but not both.",
     "restricted_action": "User does not have permission to perform this action.",
     "user_not_found": "A user could not be found.",
     "access_denied": "Access to a resource specified in the request is denied.",
