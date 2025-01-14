@@ -36,6 +36,7 @@
   "errors": {
     "invalid_cursor": "Value passed for cursor was not valid or is no longer valid.",
     "not_allowed": "The user is not allowed to access this API method.",
+    "restricted_action": "The user is not allowed to access this API method.",
     "access_denied": "Access to a resource specified in the request is denied.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
     "deprecated_endpoint": "The endpoint has been deprecated.",

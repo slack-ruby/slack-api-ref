@@ -44,6 +44,12 @@
       "desc": "Number of trigger IDs to fetch for each workflow; default is 10.",
       "type": "integer"
     },
+    "publish_status": {
+      "required": false,
+      "example": "published",
+      "desc": "Filter workflows by their published status.",
+      "type": "enum"
+    },
     "query": {
       "required": false,
       "example": "Time off",
@@ -66,6 +72,11 @@
       "required": false,
       "desc": "Source of workflow creation, either from code or workflow builder.",
       "type": "enum"
+    },
+    "step_function_ids": {
+      "required": false,
+      "desc": "Only include workflows that use all of the provided step function ids.",
+      "type": "array"
     },
     "trigger_type_id": {
       "required": false,
