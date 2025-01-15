@@ -6,7 +6,8 @@
   "args": {
     "access_level": {
       "required": true,
-      "desc": "Desired level of access."
+      "desc": "Desired level of access.",
+      "type": "enum"
     },
     "canvas_id": {
       "required": true,
