@@ -27,6 +27,10 @@
       "example": "T1234567890",
       "desc": "encoded team id to list user groups in, required if org token is used.",
       "type": "string"
+    },
+    "usergroup_id": {
+      "required": false,
+      "desc": "The id of the usergroup you would like to filter the results down to."
     }
   },
   "response": {
@@ -39,6 +43,7 @@
     "missing_argument": "A required argument is missing.",
     "plan_upgrade_required": "This workspace does not have access to User Groups, as that feature is only available on Standard and above plans.",
     "invalid_cursor": "Value passed for cursor was not valid or is no longer valid.",
+    "users_not_found": "Cannot find users on subteam.",
     "access_denied": "Access to a resource specified in the request is denied.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
     "deprecated_endpoint": "The endpoint has been deprecated.",
