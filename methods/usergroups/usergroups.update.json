@@ -9,6 +9,11 @@
       "example": "S0604QSJC",
       "desc": "The encoded ID of the User Group to update."
     },
+    "additional_channels": {
+      "required": false,
+      "desc": "A comma separated string of encoded channel IDs for which the User Group uses as a additional channels.",
+      "type": "array"
+    },
     "channels": {
       "required": false,
       "desc": "A comma separated string of encoded channel IDs for which the User Group uses as a default.",
