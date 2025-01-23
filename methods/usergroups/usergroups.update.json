@@ -11,7 +11,7 @@
     },
     "additional_channels": {
       "required": false,
-      "desc": "A comma separated string of encoded channel IDs for which the User Group uses as a additional channels.",
+      "desc": "A comma separated string of encoded channel IDs for which the User Group can custom add usergroup members too.",
       "type": "array"
     },
     "channels": {
