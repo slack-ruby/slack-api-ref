@@ -16,6 +16,11 @@
       "desc": "A comma separated string of encoded user IDs that represent the entire list of users for the user group.",
       "type": "array"
     },
+    "additional_channels": {
+      "required": false,
+      "desc": "A comma separated string of encoded channel IDs for which the User Group can custom add usergroup members too.",
+      "type": "array"
+    },
     "include_count": {
       "required": false,
       "example": "true",
