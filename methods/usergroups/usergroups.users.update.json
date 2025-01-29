@@ -27,6 +27,12 @@
       "desc": "Include the number of users in the user group.",
       "type": "boolean"
     },
+    "is_shared": {
+      "required": false,
+      "example": "true",
+      "desc": "Boolean to identify if the API is getting called when a shared section is getting shared.",
+      "type": "boolean"
+    },
     "team_id": {
       "required": false,
       "example": "T1234567890",
