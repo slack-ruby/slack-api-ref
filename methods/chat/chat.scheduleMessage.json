@@ -48,6 +48,12 @@
       "desc": "Find and link user groups. No longer supports linking individual users; use syntax shown in Mentioning Users instead.",
       "type": "boolean"
     },
+    "markdown_text": {
+      "required": false,
+      "example": "**This is bold text**",
+      "desc": "Accepts message text formatted in markdown. This argument should not be used in conjunction with blocks or text. Limit this field to 12,000 characters.",
+      "type": "string"
+    },
     "metadata": {
       "required": false,
       "example": "{\"event_type\": \"task_created\", \"event_payload\": { \"id\": \"11223\", \"title\": \"Redesign Homepage\"}}",
@@ -110,6 +116,7 @@
     "invalid_metadata_format": "Invalid metadata format provided.",
     "invalid_metadata_schema": "Invalid metadata schema provided.",
     "invalid_time": "value passed for post_time was invalid.",
+    "markdown_text_conflict": "Markdown text cannot be used in conjunction with blocks or text argument.",
     "message_limit_exceeded": "Members on this team are sending too many messages. For more details, see https://slack.com/help/articles/115002422943-Usage-limits-for-free-workspaces.",
     "metadata_must_be_sent_from_app": "Message metadata can only be posted or updated using an app-level token.",
     "metadata_too_large": "Metadata exceeds size limit.",

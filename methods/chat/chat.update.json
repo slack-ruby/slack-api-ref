@@ -54,6 +54,12 @@
       "desc": "Find and link channel names and usernames. Defaults to none. If you do not specify a value for this field, the original value set for the message will be overwritten with the default, none.",
       "type": "boolean"
     },
+    "markdown_text": {
+      "required": false,
+      "example": "**This is bold text**",
+      "desc": "Accepts message text formatted in markdown. This argument should not be used in conjunction with blocks or text. Limit this field to 12,000 characters.",
+      "type": "string"
+    },
     "metadata": {
       "required": false,
       "example": "{\"event_type\": \"task_created\", \"event_payload\": { \"id\": \"11223\", \"title\": \"Redesign Homepage\"}}",
@@ -104,6 +110,7 @@
     "invalid_metadata_format": "Invalid metadata format provided.",
     "invalid_metadata_schema": "Invalid metadata schema provided.",
     "is_inactive": "The message cannot be edited within a frozen, archived or deleted channel.",
+    "markdown_text_conflict": "Markdown text cannot be used in conjunction with blocks or text argument.",
     "message_not_found": "No message exists with the requested timestamp.",
     "metadata_must_be_sent_from_app": "Message metadata can only be posted or updated using an app-level token.",
     "metadata_too_large": "Metadata exceeds size limit.",

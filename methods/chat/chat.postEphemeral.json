@@ -60,6 +60,12 @@
       "desc": "Find and link channel names and usernames.",
       "type": "boolean"
     },
+    "markdown_text": {
+      "required": false,
+      "example": "**This is bold text**",
+      "desc": "Accepts message text formatted in markdown. This argument should not be used in conjunction with blocks or text. Limit this field to 12,000 characters.",
+      "type": "string"
+    },
     "parse": {
       "required": false,
       "example": "full",
@@ -101,6 +107,7 @@
     "invalid_blocks": "Blocks submitted with this message are not valid.",
     "invalid_blocks_format": "The blocks is not a valid JSON object or doesn't match the Block Kit syntax.",
     "is_archived": "Channel has been archived.",
+    "markdown_text_conflict": "Markdown text cannot be used in conjunction with blocks or text argument.",
     "message_limit_exceeded": "Members on this team are sending too many messages. For more details, see https://slack.com/help/articles/115002422943-Usage-limits-for-free-workspaces.",
     "messages_tab_disabled": "Messages tab for the app is disabled.",
     "msg_too_long": "Message text is too long.",
