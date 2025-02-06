@@ -7,7 +7,7 @@
     "channel": {
       "required": true,
       "example": "C1234567890",
-      "desc": "Channel containing the message to be updated.",
+      "desc": "Channel containing the message to be updated. For direct messages, ensure that this value is a DM ID (starts with D) instead of a User ID (starts with either U or W).",
       "type": "channel"
     },
     "ts": {
