@@ -23,7 +23,7 @@
     },
     "team_id": {
       "required": false,
-      "desc": "The workspace to which the channel belongs. Omit this argument if the channel is a cross-workspace shared channel."
+      "desc": "The workspace to which the channel belongs if the channel is a local workspace channel. Omit this argument if the channel is a cross-workspace or org-wide shared channel."
     }
   },
   "response": {
