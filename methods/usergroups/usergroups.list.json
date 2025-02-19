@@ -27,10 +27,6 @@
       "example": "T1234567890",
       "desc": "encoded team id to list user groups in, required if org token is used.",
       "type": "string"
-    },
-    "usergroup_id": {
-      "required": false,
-      "desc": "The id of the usergroup you would like to filter the results down to."
     }
   },
   "response": {
