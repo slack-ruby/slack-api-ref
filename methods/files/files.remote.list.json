@@ -37,7 +37,7 @@
   },
   "response": {
     "examples": [
-
+      "{\n    \"ok\": true,\n    \"files\": [],\n    \"response_metadata\": {\n        \"next_cursor\": \"\"\n    }\n}"
     ]
   },
   "errors": {

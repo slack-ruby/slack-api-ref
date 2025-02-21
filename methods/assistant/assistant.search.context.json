@@ -1,38 +1,79 @@
 {
-  "group": "files",
-  "name": "files.remote.info",
+  "group": "assistant",
+  "name": "assistant.search.context",
   "deprecated": false,
-  "desc": "Retrieve information about a remote file added to Slack",
+  "desc": "Searches messages across your Slack organization—perfect for broad, specific, and real-time data retrieval.",
   "args": {
-    "external_id": {
-      "required": false,
-      "example": "123456",
-      "desc": "Creator defined GUID for the file.",
+    "query": {
+      "required": true,
+      "example": "What is project gizmo?",
+      "desc": "User prompt or search query.",
       "type": "string"
     },
-    "file": {
+    "action_token": {
       "required": false,
-      "example": "F2147483862",
-      "desc": "Specify a file by providing its ID.",
-      "type": "file"
+      "example": "12345.98765.abcd2358fdea",
+      "desc": "Send action_token as received in a message event.",
+      "type": "string"
+    },
+    "channel_types": {
+      "required": false,
+      "example": "public_channel",
+      "desc": "Mix and match channel types by providing a comma-separated list of any combination of public_channel, private_channel, mpim, im.",
+      "type": "array"
+    },
+    "content_types": {
+      "required": false,
+      "example": "messages",
+      "desc": "Content types to include, a comma-separated list of any combination of messages, files.",
+      "type": "array"
+    },
+    "context_channel_id": {
+      "required": false,
+      "example": "C1234567890",
+      "desc": "Context channel ID to support scoping the search when applicable."
+    },
+    "cursor": {
+      "required": false,
+      "example": "asf91j9jfd",
+      "desc": "The cursor returned by the API. Leave this blank for the first request, and use this to get the next page of results.",
+      "type": "string"
+    },
+    "include_bots": {
+      "required": false,
+      "example": "",
+      "desc": "If you want the results to include bots.",
+      "type": "boolean"
+    },
+    "limit": {
+      "required": false,
+      "example": "20",
+      "desc": "Number of results to return, up to a max of 20. Defaults to 20.",
+      "type": "integer"
     }
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true,\n    \"file\": {\n        \"id\": \"F08EAQ813FW\",\n        \"created\": 1740062388,\n        \"timestamp\": 1740062388,\n        \"name\": \"Test\",\n        \"title\": \"Test\",\n        \"mimetype\": \"application/vnd.slack-remote\",\n        \"filetype\": \"remote\",\n        \"pretty_type\": \"Remote\",\n        \"user\": \"U123A4BCDE5\",\n        \"user_team\": \"T123A4BC5DE\",\n        \"editable\": false,\n        \"size\": 0,\n        \"mode\": \"external\",\n        \"is_external\": true,\n        \"external_type\": \"app\",\n        \"is_public\": false,\n        \"public_url_shared\": false,\n        \"display_as_bot\": false,\n        \"username\": \"\",\n        \"url_private\": \"https://docs.google.com/document/d/1e8LtkvCSe_NH0UU0RyLgssmUQLT8G_3RMCGzyPWcx58/edit?tab=t.0\",\n        \"media_display_type\": \"unknown\",\n        \"permalink\": \"https://thetestenv.slack.com/files/U123A4BCDE5/F08EAQ813FW/test\",\n        \"comments_count\": 0,\n        \"is_starred\": false,\n        \"shares\": {},\n        \"channels\": [],\n        \"groups\": [],\n        \"ims\": [],\n        \"has_more_shares\": false,\n        \"external_id\": \"1234\",\n        \"external_url\": \"https://docs.google.com/document/d/1e8LtkvCSe_NH0UU0RyLgssmUQLT8G_3RMCGzyPWcx58/edit?tab=t.0\",\n        \"has_rich_preview\": false,\n        \"file_access\": \"visible\"\n    }\n}"
+      "{\n    \"ok\": true,\n    \"results\": {\n        \"messages\": [\n            {\n                \"author_user_id\": \"U0123456\",\n                \"team_id\": \"T0123456\",\n                \"channel_id\": \"C0123456\",\n                \"message_ts\": \"123456.7890\",\n                \"content\": \"Hey team, we'll be kicking off our mobile UX revamp for the Gizmo App...\",\n                \"is_author_bot\": false,\n                \"permalink\": \"https://mycompany.slack.com/archives/C012345ABC/p123456789\"\n            }\n        ]\n    },\n    \"response_metadata\": {\n        \"next_cursor\": \"Q1VSUkVOVF9QQUdFOjI=\"\n    }\n}",
+      "{\n    \"ok\": false,\n    \"error\": \"invalid_auth\"\n}"
     ]
   },
   "errors": {
-    "file_not_found": "Value passed for file or external_id was invalid.",
-    "invalid_args": "Invalid arguments passed to endpoint.",
-    "no_bot_user_for_app": "Cannot call the Remote Files endpoints unless app has associated bot user.",
-    "too_many_ids": "The request specified both an external_id and a file, only one may be specified.",
+    "internal_error": "The server could not complete your operation(s) without encountering an error, likely due to a transient issue on our end. It's possible some aspect of the operation succeeded before the error was raised.",
+    "rate_limited": "rate limited.",
+    "missing_query": "missing query.",
+    "query_too_long": "query too long.",
+    "feature_not_enabled": "The feature is not available on the current workspace.",
+    "invalid_action_token": "action_token provided is not valid.",
+    "invalid_cursor": "cursormark provided is not valid.",
+    "context_channel_not_found": "Specified context_channel_id is invalid, or the user lacks permission to view it.",
     "access_denied": "Access to a resource specified in the request is denied.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
     "deprecated_endpoint": "The endpoint has been deprecated.",
     "ekm_access_denied": "Administrators have suspended the ability to post a message.",
     "enterprise_is_restricted": "The method cannot be called from an Enterprise.",
     "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
+    "is_bot": "This method cannot be called by a legacy bot.",
     "method_deprecated": "The method has been deprecated.",
     "missing_scope": "The token used is not granted the specific scope permissions required to complete this request.",
     "not_allowed_token_type": "The token type used in this request is not allowed.",
@@ -45,7 +86,6 @@
     "team_access_not_granted": "The token used is not granted the specific workspace access required to complete this request.",
     "accesslimited": "Access to this method is limited on the current network.",
     "fatal_error": "The server could not complete your operation(s) without encountering a catastrophic error. It's possible some aspect of the operation succeeded before the error was raised.",
-    "internal_error": "The server could not complete your operation(s) without encountering an error, likely due to a transient issue on our end. It's possible some aspect of the operation succeeded before the error was raised.",
     "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
     "invalid_arguments": "The method was either called with invalid arguments or some detail about the arguments passed is invalid, which is more likely when using complex arguments like blocks or attachments.",
     "invalid_array_arg": "The method was passed an array as an argument. Please only input valid strings.",
