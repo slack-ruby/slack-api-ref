@@ -41,7 +41,7 @@
     },
     "include_bots": {
       "required": false,
-      "example": "",
+      "example": "true",
       "desc": "If you want the results to include bots.",
       "type": "boolean"
     },
