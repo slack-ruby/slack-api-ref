@@ -19,7 +19,7 @@
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true\n}",
+      "{\n    \"ok\": true,\n    \"errors\": {}\n}",
       "{\n    \"ok\": false,\n    \"error\": \"cant_kick_self\"\n}"
     ]
   },
