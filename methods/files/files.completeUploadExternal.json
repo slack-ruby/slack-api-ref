@@ -10,6 +10,13 @@
       "desc": "Array of file ids and their corresponding (optional) titles.",
       "type": "array"
     },
+    "blocks": {
+      "required": false,
+      "example": "[{\"type\": \"section\", \"text\": {\"type\": \"plain_text\", \"text\": \"Hello world\"}}]",
+      "desc": "A JSON-based array of structured blocks, presented as a URL-encoded string. If the initial_comment field is provided, the blocks field is ignored.",
+      "type": "blocks[] as string",
+      "format": "json"
+    },
     "channel_id": {
       "required": false,
       "example": "C0NF841BK",
@@ -48,6 +55,7 @@
     "not_in_channel": "User/bot membership is required for the specified channel.",
     "posting_to_channel_denied": "User is not authorized to post to channel.",
     "channels_limit_exceeded": "Exceeded the channel limit. A maximum of 100 channels is allowed per request.",
+    "invalid_blocks": "Provided blocks are in the incorrect format.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
     "deprecated_endpoint": "The endpoint has been deprecated.",
     "ekm_access_denied": "Administrators have suspended the ability to post a message.",
