@@ -69,6 +69,8 @@
     "parent_with_link": "Parent bookmark should not have link.",
     "permission_denied": "No permission to perform this operation.",
     "too_many_bookmarks": "Bookmark limit reached for channel.",
+    "file_already_added": "The file has already been added to the folder.",
+    "too_many_tabs": "tab limit reached for channel.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
     "deprecated_endpoint": "The endpoint has been deprecated.",
     "ekm_access_denied": "Administrators have suspended the ability to post a message.",
