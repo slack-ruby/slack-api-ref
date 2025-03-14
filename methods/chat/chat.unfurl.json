@@ -71,6 +71,7 @@
     "cannot_unfurl_url": "The URL cannot be unfurled. This error may be returned if you haven't acknowledged a link_shared event tied to the same URL. It is also returned when the domain appears in a workspace's administrative blocklists.",
     "invalid_unfurl_id": "The unfurl ID is invalid.",
     "invalid_unfurls_format": "The unfurls parameter cannot be JSON-decoded into a map of URLs to attachments.",
+    "invalid_metadata_format": "The metadata parameter cannot be JSON-decoded into the expected format.",
     "invalid_source": "The unfurl source is invalid.",
     "missing_channel": "The request is missing the channel parameter.",
     "missing_source": "The request is missing the source parameter.",
