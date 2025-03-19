@@ -13,7 +13,7 @@
     "blocks": {
       "required": false,
       "example": "[{\"type\": \"section\", \"text\": {\"type\": \"plain_text\", \"text\": \"Hello world\"}}]",
-      "desc": "A JSON-based array of structured blocks, presented as a URL-encoded string. If the initial_comment field is provided, the blocks field is ignored.",
+      "desc": "A JSON-based array of structured rich text blocks, presented as a URL-encoded string. If the initial_comment field is provided, the blocks field is ignored.",
       "type": "blocks[] as string",
       "format": "json"
     },

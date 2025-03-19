@@ -30,6 +30,10 @@
       "desc": "How this field works and whether it is required depends on other fields you use in your API call. See below for more detail.",
       "type": "string"
     },
+    "agent_message_source_type": {
+      "required": false,
+      "desc": "Identify how the message was posted for agentforce BE logging."
+    },
     "as_user": {
       "required": false,
       "example": "true",
