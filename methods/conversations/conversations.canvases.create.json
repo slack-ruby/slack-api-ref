@@ -14,6 +14,12 @@
       "required": false,
       "example": "{\"type\": \"markdown\", \"markdown\": \"> channel canvas!\"}",
       "desc": "Structure describing the type and value of the content to create."
+    },
+    "title": {
+      "required": false,
+      "example": "The Coolest Title Ever",
+      "desc": "Title of the newly created canvas.",
+      "type": "string"
     }
   },
   "response": {
