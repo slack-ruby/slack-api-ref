@@ -4,6 +4,12 @@
   "deprecated": false,
   "desc": "Create canvas for a user",
   "args": {
+    "channel_id": {
+      "required": false,
+      "example": "C1234567890",
+      "desc": "Channel ID of the channel we create the channel canvas for.",
+      "type": "string"
+    },
     "document_content": {
       "required": false,
       "example": "{\"type\": \"markdown\", \"markdown\": \"> standalone canvas!\"}",
