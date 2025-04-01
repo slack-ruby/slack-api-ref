@@ -7,7 +7,7 @@
     "channel_id": {
       "required": false,
       "example": "C1234567890",
-      "desc": "Channel ID of the channel we create the channel canvas for.",
+      "desc": "Channel ID of the channel the canvas will be tabbed in. This is a required field for free teams.",
       "type": "string"
     },
     "document_content": {
@@ -30,7 +30,7 @@
   },
   "errors": {
     "canvas_disabled_user_team": "Canvas is disabled on user's team.",
-    "free_teams_cannot_create_standalone_canvases": "Free teams cannot create standalone canvases.",
+    "free_teams_cannot_create_non_tabbed_canvases": "Free teams cannot create non-tabbed standalone canvases.",
     "restricted_action": "User does not have permission to perform this action.",
     "canvas_creation_failed": "Canvas was unable to be created.",
     "access_denied": "Access to a resource specified in the request is denied.",
