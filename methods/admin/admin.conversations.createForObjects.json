@@ -19,7 +19,7 @@
     "invite_object_team": {
       "required": false,
       "example": "false",
-      "desc": "Optional flag to add all team members related to the object to the newly created Salesforce channel.",
+      "desc": "Optional flag to add all team members related to the object to the newly created Salesforce channel. When true, adds a maximum of 100 team members to the channel.",
       "type": "boolean"
     }
   },
