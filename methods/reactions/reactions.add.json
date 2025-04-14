@@ -42,6 +42,7 @@
     "thread_locked": "Reactions are disabled as the specified message is part of a locked thread.",
     "too_many_emoji": "The limit for distinct reactions (i.e emoji) on the item has been reached.",
     "too_many_reactions": "The limit for reactions a person may add to the item has been reached.",
+    "no_access": "User does not have access to react to this canvas.",
     "access_denied": "Access to a resource specified in the request is denied.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
     "deprecated_endpoint": "The endpoint has been deprecated.",
