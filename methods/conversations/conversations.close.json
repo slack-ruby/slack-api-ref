@@ -23,6 +23,8 @@
     "method_not_supported_for_channel_type": "This type of conversation cannot be used with this method.",
     "missing_scope": "The token used is not granted the specific scope permissions required to complete this request.",
     "user_does_not_own_channel": "Calling user does not own this DM channel.",
+    "not_permitted": "Not permitted.",
+    "external_channel_migrating": "External channel migrating.",
     "access_denied": "Access to a resource specified in the request is denied.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
     "deprecated_endpoint": "The endpoint has been deprecated.",

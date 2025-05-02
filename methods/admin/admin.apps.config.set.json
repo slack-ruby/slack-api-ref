@@ -33,6 +33,7 @@
     "invalid_domains": "At least one URL or email is invalid.",
     "invalid_app": "App is invalid.",
     "invalid_workflow_auth_strategy": "workflow auth strategy is invalid.",
+    "restricted_plan_level": "The given parameter is not supported on this team.",
     "unknown_method": "This method does not exist.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
     "deprecated_endpoint": "The endpoint has been deprecated.",

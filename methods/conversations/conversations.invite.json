@@ -46,6 +46,7 @@
     "ura_max_channels": "An invited user is a single-channel guest user ('ultra restricted access') that is already in the maximum number of conversations.",
     "user_is_restricted": "An invited user is a guest user that is restricted from accessing this conversation.",
     "user_not_found": "Value passed for users was invalid.",
+    "external_channel_migrating": "External channel migrating.",
     "access_denied": "Access to a resource specified in the request is denied.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
     "deprecated_endpoint": "The endpoint has been deprecated.",
