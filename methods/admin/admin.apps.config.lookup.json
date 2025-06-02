@@ -5,18 +5,25 @@
   "desc": "Look up the app config for connectors by their IDs",
   "args": {
     "app_ids": {
-      "required": true,
+      "required": false,
       "example": "A0A2R51A5,A0A2R51A6",
       "desc": "An array of app IDs to get app configs for.",
+      "type": "array"
+    },
+    "rich_link_preview_types": {
+      "required": false,
+      "example": "limited_details, no_preview",
+      "desc": "return apps with the corresponding rich link preview layouts.",
       "type": "array"
     }
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true,\n    \"configs\": [\n        {\n            \"app_id\": \"A123\",\n            \"workflow_auth_strategy\": \"end_user_only\",\n            \"domain_restrictions\": {\n                \"emails\": [\n                    \"my-corp.com\",\n                    \"yourcorp.com\"\n                ],\n                \"urls\": [\n                    \"mycorp.company.com\",\n                    \"mycorp2.company.com\"\n                ]\n            }\n        },\n        {\n            \"app_id\": \"A456\",\n            \"workflow_auth_strategy\": \"builder_choice\",\n            \"domain_restrictions\": {\n                \"emails\": [],\n                \"urls\": []\n            }\n        }\n    ]\n}"
+      "{\n    \"ok\": true,\n    \"configs\": [\n        {\n            \"app_id\": \"A123\",\n            \"workflow_auth_strategy\": \"end_user_only\",\n            \"rich_link_preview_type\": \"limited_details\",\n            \"domain_restrictions\": {\n                \"emails\": [\n                    \"my-corp.com\",\n                    \"yourcorp.com\"\n                ],\n                \"urls\": [\n                    \"mycorp.company.com\",\n                    \"mycorp2.company.com\"\n                ]\n            }\n        },\n        {\n            \"app_id\": \"A456\",\n            \"workflow_auth_strategy\": \"builder_choice\",\n            \"rich_link_preview_type\": \"no_preview\",\n            \"domain_restrictions\": {\n                \"emails\": [],\n                \"urls\": []\n            }\n        }\n    ]\n}"
     ]
   },
   "errors": {
+    "missing_args": "Either app_ids or rich_link_preview_types must be provided.",
     "access_denied": "Access to a resource specified in the request is denied.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
     "deprecated_endpoint": "The endpoint has been deprecated.",
