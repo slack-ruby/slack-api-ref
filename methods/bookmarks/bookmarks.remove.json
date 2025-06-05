@@ -30,6 +30,7 @@
   "errors": {
     "access_denied": "Access to a resource specified in the request is denied.",
     "channel_not_found": "Channel cannot be found.",
+    "user_not_found": "User cannot be found.",
     "invalid_bookmark_type": "Bookmark type is not valid.",
     "not_found": "Bookmark cannot be found.",
     "not_implemented": "bookmarking not available for the user.",
