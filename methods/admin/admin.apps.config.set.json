@@ -14,6 +14,11 @@
       "desc": "Domain restrictions for the app. Should be an object with two properties: urls and emails. Each is an array of strings, and each sets the allowed URLs and emails for connector authorization, respectively.",
       "type": "object"
     },
+    "rich_link_preview_type": {
+      "required": false,
+      "desc": "Indicates the app-level override for rich link preview. Unsupported for free teams.",
+      "type": "enum"
+    },
     "workflow_auth_strategy": {
       "required": false,
       "desc": "The workflow auth permission. Can be one of builder_choice or end_user_only.",
