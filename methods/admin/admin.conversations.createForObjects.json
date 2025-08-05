@@ -30,8 +30,7 @@
   },
   "errors": {
     "restricted_action": "User does not have access to perform this action.",
-    "record_not_found": "Value passed for object_id is invalid.",
-    "invalid_org_id": "Value passed for salesforce_org_id is invalid.",
+    "record_not_found": "Value passed for salesforce_org_id or object_id is invalid.",
     "feature_not_enabled": "Feature not enabled.",
     "channel_already_exists": "Object is linked to a different channel.",
     "missing_record_channel_config": "Record Channels are not enabled for the given object type.",
