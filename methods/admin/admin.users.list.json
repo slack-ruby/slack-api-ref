@@ -28,6 +28,12 @@
       "desc": "Limit for how many users to be retrieved per page.",
       "type": "integer"
     },
+    "only_guests": {
+      "required": false,
+      "example": "true",
+      "desc": "If true, returns only guests and their expiration dates that belong to the team_id.",
+      "type": "boolean"
+    },
     "team_id": {
       "required": false,
       "desc": "The ID (T1234) of a workspace. Filters results to just the specified workspace."
