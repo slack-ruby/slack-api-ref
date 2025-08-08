@@ -16,6 +16,18 @@
       "desc": "Send action_token as received in a message event.",
       "type": "string"
     },
+    "after": {
+      "required": false,
+      "example": "1754670081",
+      "desc": "UNIX timestamp filter. If present, filters for results after this date.",
+      "type": "integer"
+    },
+    "before": {
+      "required": false,
+      "example": "1754670081",
+      "desc": "UNIX timestamp filter. If present, filters for results before this date.",
+      "type": "integer"
+    },
     "channel_types": {
       "required": false,
       "example": "public_channel",
@@ -43,6 +55,12 @@
       "required": false,
       "example": "true",
       "desc": "If you want the results to include bots.",
+      "type": "boolean"
+    },
+    "include_context_messages": {
+      "required": false,
+      "example": "",
+      "desc": "Whether to include context messages surrounding the main message result. Defaults to false if unspecified.",
       "type": "boolean"
     },
     "limit": {

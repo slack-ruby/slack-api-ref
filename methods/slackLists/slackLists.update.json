@@ -1,78 +1,49 @@
 {
-  "group": "bookmarks",
-  "name": "bookmarks.add",
+  "group": "slackLists",
+  "name": "slackLists.update",
   "deprecated": false,
-  "desc": "Add bookmark to a channel.",
+  "desc": "Update a list",
   "args": {
-    "channel_id": {
+    "id": {
       "required": true,
-      "example": "C1234567890",
-      "desc": "Channel to add bookmark in.",
-      "type": "string"
+      "desc": "Id of list to update."
     },
-    "title": {
-      "required": true,
-      "desc": "Title for the bookmark.",
-      "type": "string"
-    },
-    "type": {
-      "required": true,
-      "desc": "Type of the bookmark i.e link.",
-      "type": "string"
-    },
-    "access_level": {
+    "description_blocks": {
       "required": false,
-      "desc": "The level that we are setting the file's permission to (read or write).",
-      "type": "enum"
+      "example": "[{\"type\":\"rich_text\",\"elements\":[{\"type\":\"rich_text_section\",\"elements\":[{\"type\":\"text\",\"text\":\"My list description!\"}]}]}]",
+      "desc": "A rich text description of the list.",
+      "type": "array"
     },
-    "emoji": {
+    "name": {
       "required": false,
-      "desc": "Emoji tag to apply to the link.",
+      "example": "My List",
+      "desc": "Updated name of the list.",
       "type": "string"
     },
-    "entity_id": {
+    "todo_mode": {
       "required": false,
-      "desc": "ID of the entity being bookmarked. Only applies to message and file types.",
-      "type": "string"
-    },
-    "link": {
-      "required": false,
-      "desc": "Link to bookmark.",
-      "type": "string"
-    },
-    "parent_id": {
-      "required": false,
-      "desc": "Id of this bookmark's parent.",
-      "type": "string"
+      "example": "true",
+      "desc": "Boolean indicating if list should be in todo mode.",
+      "type": "boolean"
     }
   },
   "response": {
     "examples": [
-      "{\n    \"ok\": true,\n    \"bookmark\": {\n        \"id\": \"Bk033XFJ9BTJ\",\n        \"channel_id\": \"C1RQ000\",\n        \"title\": \"bookmark-1\",\n        \"link\": \"https://google.com\",\n        \"emoji\": \":clap:\",\n        \"icon_url\": \"https://www.google.com/favicon.ico\",\n        \"type\": \"link\",\n        \"entity_id\": null,\n        \"date_created\": 1644956055,\n        \"date_updated\": 0,\n        \"rank\": \"g\",\n        \"last_updated_by_user_id\": \"U0334B6G6G5\",\n        \"last_updated_by_team_id\": \"T018DF03GHY\",\n        \"shortcut_id\": null,\n        \"app_id\": null\n    }\n}",
-      "{\n    \"ok\": false,\n    \"error\": \"invalid_auth\"\n}"
+      "{\n    \"ok\": true\n}",
+      "{\n    \"ok\": false,\n    \"error\": \"list_not_found\"\n}"
     ]
   },
   "errors": {
+    "list_not_found": "The list was not found.",
+    "team_not_found": "The team cannot be found.",
+    "user_not_found": "The user cannot be found.",
+    "list_edits_update_error": "Failed to update list metadata.",
+    "list_editor_upsert_error": "Failed to upsert list editor.",
+    "over_title_length_maximum": "Title can not exceed defined length.",
+    "file_channel_rename_error": "Failed to rename file channel based on file title.",
+    "unexpected_description_blocks_arg": "Unexpected description blocks argument.",
+    "missing_arguments": "No arguments were provided to update the list.",
     "access_denied": "Access to a resource specified in the request is denied.",
-    "cannot_bookmark_from_external_org": "File is an external file and cannot be bookmarked.",
-    "cannot_bookmark_restricted_sharing_enabled": "File has restricted sharing enabled and cannot be bookmarked.",
-    "channel_not_found": "Channel cannot be found.",
-    "file_not_found": "File cannot be found.",
-    "invalid_bookmark_type": "Bookmark type is not valid.",
-    "invalid_app_action_type": "App action type is not valid.",
-    "invalid_shortcut_type": "Shortcut type is not valid.",
-    "invalid_child_type": "Child type is not valid.",
-    "invalid_emoji": "Invalid emoji, does not follow the pattern of a valid emoji name.",
-    "invalid_entity_id": "Invalid entity_id, file or message type bookmark should have original file or message ID.",
-    "invalid_link": "Invalid link, link should begin with either http:// or https://.",
-    "invalid_parent_type": "Parent type is not valid.",
-    "not_implemented": "bookmarking not available for the user.",
-    "parent_bookmark_disabled": "Parent bookmark feature flag is off.",
-    "parent_with_link": "Parent bookmark should not have link.",
-    "permission_denied": "No permission to perform this operation.",
-    "too_many_bookmarks": "Bookmark limit reached for channel.",
-    "file_already_added": "The file has already been added to the folder.",
-    "too_many_tabs": "tab limit reached for channel.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
     "deprecated_endpoint": "The endpoint has been deprecated.",
     "ekm_access_denied": "Administrators have suspended the ability to post a message.",
