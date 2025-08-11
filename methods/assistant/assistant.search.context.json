@@ -68,6 +68,18 @@
       "example": "20",
       "desc": "Number of results to return, up to a max of 20. Defaults to 20.",
       "type": "integer"
+    },
+    "sort": {
+      "required": false,
+      "example": "score",
+      "desc": "The field to sort the results by. Defaults to score. Can be one of: score, timestamp.",
+      "type": "enum"
+    },
+    "sort_dir": {
+      "required": false,
+      "example": "desc",
+      "desc": "The direction to sort the results by. Defaults to desc.",
+      "type": "enum"
     }
   },
   "response": {

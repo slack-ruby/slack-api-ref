@@ -56,6 +56,7 @@
     ]
   },
   "errors": {
+    "channel_is_limited_access": "The user has no access to the channel. This is only applicable to private Salesforce record channels.",
     "channel_not_found": "Value passed for channel was invalid.",
     "invalid_cursor": "Value passed for cursor was not valid or is no longer valid.",
     "invalid_metadata_filter_keys": "Value passed for metadata_keys_to_include was invalid. Must be valid json array of strings.",
