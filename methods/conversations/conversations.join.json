@@ -18,6 +18,7 @@
     ]
   },
   "errors": {
+    "channel_is_limited_access": "The user has no access to the channel. This is only applicable to private Salesforce record channels.",
     "channel_not_found": "Value passed for channel was invalid.",
     "is_archived": "Channel has been archived.",
     "method_not_supported_for_channel_type": "This type of conversation cannot be used with this method.",
