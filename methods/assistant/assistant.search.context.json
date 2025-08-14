@@ -63,6 +63,12 @@
       "desc": "Whether to include context messages surrounding the main message result. Defaults to false if unspecified.",
       "type": "boolean"
     },
+    "include_message_blocks": {
+      "required": false,
+      "example": "",
+      "desc": "Whether to return the message blocks in the response.",
+      "type": "boolean"
+    },
     "limit": {
       "required": false,
       "example": "20",
