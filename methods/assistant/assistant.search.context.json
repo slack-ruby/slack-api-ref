@@ -51,6 +51,12 @@
       "desc": "The cursor returned by the API. Leave this blank for the first request, and use this to get the next page of results.",
       "type": "string"
     },
+    "highlight": {
+      "required": false,
+      "example": "",
+      "desc": "Whether to highlight the search query in the results. Defaults to false if unspecified.",
+      "type": "boolean"
+    },
     "include_bots": {
       "required": false,
       "example": "true",
