@@ -122,6 +122,7 @@
     "too_many_attachments": "Too many attachments were provided with this message. A maximum of 100 attachments are allowed on a message.",
     "update_failed": "Internal update failure.",
     "invalid_blocks_format": "The blocks is not a valid JSON object or doesn't match the Block Kit syntax.",
+    "streaming_state_conflict": "The message is currently streaming text and cannot be edited.",
     "access_denied": "Access to a resource specified in the request is denied.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
     "deprecated_endpoint": "The endpoint has been deprecated.",

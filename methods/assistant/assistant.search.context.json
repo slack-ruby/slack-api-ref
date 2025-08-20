@@ -37,7 +37,7 @@
     "content_types": {
       "required": false,
       "example": "messages",
-      "desc": "Content types to include, a comma-separated list of any combination of messages, files.",
+      "desc": "Content types to include, a comma-separated list of any combination of messages, files, channels, users.",
       "type": "array"
     },
     "context_channel_id": {
