@@ -4,9 +4,15 @@ namespace :api do
   namespace :methods do
     desc 'Update methods.'
     task :update do
-      FileUtils.rm_rf 'methods'
-      FileUtils.rm_rf 'groups'
+      Rake::Task['api:methods:clean_files'].invoke('methods')
+      Rake::Task['api:methods:clean_files'].invoke('groups')
       SlackApi::MethodsGenerator.new.generate!
+    end
+
+    desc 'Delete all generated files except undocumented ones.'
+    task :clean_files, :dirs do |_t, args|
+      files = Dir["./{#{Array(args[:dirs]).join(',')}}/*"].grep_v(%r{/undocumented\b})
+      FileUtils.rm_rf files
     end
   end
 
