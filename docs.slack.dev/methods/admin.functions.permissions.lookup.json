@@ -77,8 +77,7 @@
       "description": "Typical success response",
       "example": {
         "ok": true,
-        "errors": {
-        }
+        "errors": {}
       }
     }
   }

@@ -35,8 +35,7 @@
   },
   "output": {
     "type": "object",
-    "properties": {
-    }
+    "properties": {}
   },
   "errors": {
     "channel_not_found": {

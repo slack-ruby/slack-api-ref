@@ -123,12 +123,8 @@
           "updated_by": "U060R4BJ4",
           "deleted_by": null,
           "prefs": {
-            "channels": [
-
-            ],
-            "groups": [
-
-            ]
+            "channels": [],
+            "groups": []
           },
           "users": [
             "U060R4BJ4",

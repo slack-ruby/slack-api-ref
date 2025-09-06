@@ -19,8 +19,7 @@
     }
   },
   "output": null,
-  "errors": {
-  },
+  "errors": {},
   "examples": {
     "success": {
       "url": "/api/users.setActive?token=YOUR_TOKEN",

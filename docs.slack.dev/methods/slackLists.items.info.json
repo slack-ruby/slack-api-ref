@@ -292,14 +292,10 @@
                 "show_completed_items": true
               }
             ],
-            "integrations": [
-
-            ],
+            "integrations": [],
             "icon": "",
             "description": "",
-            "description_blocks": [
-
-            ],
+            "description_blocks": [],
             "is_trial": false,
             "subtask_schema": [
               {
@@ -367,9 +363,7 @@
             "private": {
               "D013V9WPZ99": [
                 {
-                  "reply_users": [
-
-                  ],
+                  "reply_users": [],
                   "reply_users_count": 0,
                   "reply_count": 0,
                   "ts": "1753896412.387799",
@@ -380,12 +374,8 @@
               ]
             }
           },
-          "channels": [
-
-          ],
-          "groups": [
-
-          ],
+          "channels": [],
+          "groups": [],
           "ims": [
             "D013V9WPZ99"
           ],

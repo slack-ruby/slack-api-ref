@@ -92,12 +92,8 @@
             "updated_by": "U060RNRCZ",
             "deleted_by": null,
             "prefs": {
-              "channels": [
-
-              ],
-              "groups": [
-
-              ]
+              "channels": [],
+              "groups": []
             },
             "user_count": "2"
           },
@@ -117,12 +113,8 @@
             "updated_by": "USLACKBOT",
             "deleted_by": null,
             "prefs": {
-              "channels": [
-
-              ],
-              "groups": [
-
-              ]
+              "channels": [],
+              "groups": []
             },
             "user_count": "1"
           },
@@ -142,12 +134,8 @@
             "updated_by": "U060RNRCZ",
             "deleted_by": null,
             "prefs": {
-              "channels": [
-
-              ],
-              "groups": [
-
-              ]
+              "channels": [],
+              "groups": []
             },
             "user_count": "0"
           }

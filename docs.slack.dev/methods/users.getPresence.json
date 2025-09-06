@@ -48,8 +48,7 @@
       }
     }
   },
-  "errors": {
-  },
+  "errors": {},
   "examples": {
     "success": {
       "url": "/api/users.getPresence?token=YOUR_TOKEN",

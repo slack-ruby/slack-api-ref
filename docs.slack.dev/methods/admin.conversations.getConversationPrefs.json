@@ -180,9 +180,7 @@
             "type": [
               "ra"
             ],
-            "user": [
-
-            ]
+            "user": []
           },
           "enable_at_channel": {
             "enabled": false

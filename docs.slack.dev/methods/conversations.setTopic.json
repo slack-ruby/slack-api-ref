@@ -93,18 +93,14 @@
           "is_frozen": false,
           "is_org_shared": false,
           "is_pending_ext_shared": false,
-          "pending_shared": [
-
-          ],
+          "pending_shared": [],
           "parent_conversation": null,
           "creator": "U12345678",
           "is_ext_shared": false,
           "shared_team_ids": [
             "T12345678"
           ],
-          "pending_connected_team_ids": [
-
-          ],
+          "pending_connected_team_ids": [],
           "is_member": true,
           "last_read": "1649869848.627809",
           "latest": {
@@ -127,9 +123,7 @@
             "creator": "",
             "last_set": 0
           },
-          "previous_names": [
-
-          ]
+          "previous_names": []
         }
       }
     },

@@ -2,9 +2,7 @@
   {
     "name": "accounts_changed",
     "description": "The list of accounts a user is signed into has changed",
-    "scopes": [
-
-    ],
+    "scopes": [],
     "APIs": [
       "RTM"
     ]
@@ -13,9 +11,7 @@
     "name": "app_mention",
     "description": "Subscribe to only the message events that mention your app or bot",
     "app_event": true,
-    "scopes": [
-
-    ],
+    "scopes": [],
     "APIs": [
       "Events"
     ]
@@ -24,9 +20,7 @@
     "name": "app_deleted",
     "description": "User has deleted an app",
     "app_event": true,
-    "scopes": [
-
-    ],
+    "scopes": [],
     "APIs": [
       "Events"
     ]
@@ -35,9 +29,7 @@
     "name": "app_home_opened",
     "description": "User clicked into your App Home",
     "app_event": true,
-    "scopes": [
-
-    ],
+    "scopes": [],
     "APIs": [
       "Events"
     ]
@@ -46,9 +38,7 @@
     "name": "app_installed",
     "description": "User has installed an app",
     "app_event": true,
-    "scopes": [
-
-    ],
+    "scopes": [],
     "APIs": [
       "Events"
     ]
@@ -58,9 +48,7 @@
     "description": "Indicates your app's event subscriptions are being rate limited",
     "automatic": true,
     "app_event": true,
-    "scopes": [
-
-    ],
+    "scopes": [],
     "APIs": [
       "Events"
     ]
@@ -70,9 +58,7 @@
     "description": "User requested an app",
     "automatic": true,
     "app_event": true,
-    "scopes": [
-
-    ],
+    "scopes": [],
     "APIs": [
       "Events"
     ]
@@ -81,9 +67,7 @@
     "name": "app_uninstalled",
     "description": "Your Slack app was uninstalled",
     "app_event": true,
-    "scopes": [
-
-    ],
+    "scopes": [],
     "APIs": [
       "Events"
     ]
@@ -92,9 +76,7 @@
     "name": "app_uninstalled_team",
     "description": "User has uninstalled an app",
     "app_event": true,
-    "scopes": [
-
-    ],
+    "scopes": [],
     "APIs": [
       "Events"
     ]
@@ -117,9 +99,7 @@
     "name": "assistant_thread_context_changed",
     "description": "The context changed while an AI assistant thread was visible",
     "app_event": true,
-    "scopes": [
-
-    ],
+    "scopes": [],
     "APIs": [
       "Events"
     ]
@@ -128,9 +108,7 @@
     "name": "assistant_thread_started",
     "description": "An AI assistant thread was started",
     "app_event": true,
-    "scopes": [
-
-    ],
+    "scopes": [],
     "APIs": [
       "Events"
     ]
@@ -138,9 +116,7 @@
   {
     "name": "bot_added",
     "description": "A bot user was added",
-    "scopes": [
-
-    ],
+    "scopes": [],
     "APIs": [
       "RTM"
     ]
@@ -148,18 +124,14 @@
   {
     "name": "bot_changed",
     "description": "A bot user was changed",
-    "scopes": [
-
-    ],
+    "scopes": [],
     "APIs": [
       "RTM"
     ]
   },
   {
     "name": "bot_message",
-    "scopes": [
-
-    ],
+    "scopes": [],
     "description": "A message was posted by an integration",
     "APIs": [
       "Events",
@@ -169,9 +141,7 @@
   {
     "name": "call_rejected",
     "description": "A call was rejected",
-    "scopes": [
-
-    ],
+    "scopes": [],
     "APIs": [
       "Events"
     ]
@@ -203,9 +173,7 @@
   },
   {
     "name": "channel_convert_to_public",
-    "scopes": [
-
-    ],
+    "scopes": [],
     "description": "This channel was made public; now any member in this workspace can see and join it",
     "APIs": [
       "Events",
@@ -253,18 +221,14 @@
   {
     "name": "channel_id_changed",
     "description": "A channel ID changed",
-    "scopes": [
-
-    ],
+    "scopes": [],
     "APIs": [
       "Events"
     ]
   },
   {
     "name": "channel_join",
-    "scopes": [
-
-    ],
+    "scopes": [],
     "description": "A member joined a channel",
     "APIs": [
       "Events",
@@ -274,18 +238,14 @@
   {
     "name": "channel_joined",
     "description": "You joined a channel",
-    "scopes": [
-
-    ],
+    "scopes": [],
     "APIs": [
       "RTM"
     ]
   },
   {
     "name": "channel_leave",
-    "scopes": [
-
-    ],
+    "scopes": [],
     "description": "A member left a channel",
     "APIs": [
       "Events",
@@ -306,18 +266,14 @@
   {
     "name": "channel_marked",
     "description": "Your channel read marker was updated",
-    "scopes": [
-
-    ],
+    "scopes": [],
     "APIs": [
       "RTM"
     ]
   },
   {
     "name": "channel_name",
-    "scopes": [
-
-    ],
+    "scopes": [],
     "description": "A channel was renamed",
     "APIs": [
       "Events",
@@ -340,9 +296,7 @@
   },
   {
     "name": "channel_purpose",
-    "scopes": [
-
-    ],
+    "scopes": [],
     "description": "A channel purpose was updated",
     "APIs": [
       "Events",
@@ -351,9 +305,7 @@
   },
   {
     "name": "channel_topic",
-    "scopes": [
-
-    ],
+    "scopes": [],
     "description": "A channel topic was updated",
     "APIs": [
       "Events",
@@ -407,9 +359,7 @@
   {
     "name": "commands_changed",
     "description": "A slash command has been added or changed",
-    "scopes": [
-
-    ],
+    "scopes": [],
     "APIs": [
       "RTM"
     ]
@@ -489,9 +439,7 @@
   {
     "name": "external_org_migration_finished",
     "description": "An enterprise org migration has finished on an external workspace",
-    "scopes": [
-
-    ],
+    "scopes": [],
     "APIs": [
       "RTM"
     ]
@@ -499,9 +447,7 @@
   {
     "name": "external_org_migration_started",
     "description": "An enterprise org migration has started on an external workspace",
-    "scopes": [
-
-    ],
+    "scopes": [],
     "APIs": [
       "RTM"
     ]
@@ -519,9 +465,7 @@
   },
   {
     "name": "file_comment",
-    "scopes": [
-
-    ],
+    "scopes": [],
     "description": "A comment was added to a file",
     "APIs": [
       "Events",
@@ -585,9 +529,7 @@
   },
   {
     "name": "file_mention",
-    "scopes": [
-
-    ],
+    "scopes": [],
     "description": "A file was mentioned in a channel",
     "APIs": [
       "Events",
@@ -607,9 +549,7 @@
   },
   {
     "name": "file_share",
-    "scopes": [
-
-    ],
+    "scopes": [],
     "description": "A file was shared into a channel",
     "APIs": [
       "Events",
@@ -641,9 +581,7 @@
   {
     "name": "function_executed",
     "description": "Your app function is executed as a step in a workflow",
-    "scopes": [
-
-    ],
+    "scopes": [],
     "APIs": [
       "Events"
     ]
@@ -651,9 +589,7 @@
   {
     "name": "goodbye",
     "description": "The server intends to close the connection soon",
-    "scopes": [
-
-    ],
+    "scopes": [],
     "APIs": [
       "RTM"
     ]
@@ -662,9 +598,7 @@
     "name": "grid_migration_finished",
     "description": "An enterprise org migration has finished on this workspace",
     "app_event": true,
-    "scopes": [
-
-    ],
+    "scopes": [],
     "APIs": [
       "Events"
     ]
@@ -673,9 +607,7 @@
     "name": "grid_migration_started",
     "description": "An enterprise org migration has started on this workspace",
     "app_event": true,
-    "scopes": [
-
-    ],
+    "scopes": [],
     "APIs": [
       "Events"
     ]
@@ -726,9 +658,7 @@
   },
   {
     "name": "group_join",
-    "scopes": [
-
-    ],
+    "scopes": [],
     "description": "A member joined a group",
     "APIs": [
       "Events",
@@ -738,18 +668,14 @@
   {
     "name": "group_joined",
     "description": "You joined a private channel",
-    "scopes": [
-
-    ],
+    "scopes": [],
     "APIs": [
       "RTM"
     ]
   },
   {
     "name": "group_leave",
-    "scopes": [
-
-    ],
+    "scopes": [],
     "description": "A member left a group",
     "APIs": [
       "Events",
@@ -770,18 +696,14 @@
   {
     "name": "group_marked",
     "description": "A private channel read marker was updated",
-    "scopes": [
-
-    ],
+    "scopes": [],
     "APIs": [
       "RTM"
     ]
   },
   {
     "name": "group_name",
-    "scopes": [
-
-    ],
+    "scopes": [],
     "description": "A group was renamed",
     "APIs": [
       "Events",
@@ -801,9 +723,7 @@
   },
   {
     "name": "group_purpose",
-    "scopes": [
-
-    ],
+    "scopes": [],
     "description": "A group purpose was updated",
     "APIs": [
       "Events",
@@ -823,9 +743,7 @@
   },
   {
     "name": "group_topic",
-    "scopes": [
-
-    ],
+    "scopes": [],
     "description": "A group topic was updated",
     "APIs": [
       "Events",
@@ -849,9 +767,7 @@
     "bot_user_contexts": [
       ""
     ],
-    "scopes": [
-
-    ],
+    "scopes": [],
     "APIs": [
       "RTM"
     ]
@@ -892,9 +808,7 @@
   {
     "name": "im_marked",
     "description": "A direct message read marker was updated",
-    "scopes": [
-
-    ],
+    "scopes": [],
     "APIs": [
       "RTM"
     ]
@@ -933,9 +847,7 @@
   {
     "name": "manual_presence_change",
     "description": "You manually updated your presence",
-    "scopes": [
-
-    ],
+    "scopes": [],
     "APIs": [
       "RTM"
     ]
@@ -997,9 +909,7 @@
         ]
       },
       "bot_message": {
-        "scopes": [
-
-        ],
+        "scopes": [],
         "description": "A message was posted by an integration",
         "APIs": [
           "Events",
@@ -1007,9 +917,7 @@
         ]
       },
       "channel_archive": {
-        "scopes": [
-
-        ],
+        "scopes": [],
         "description": "A channel was archived.",
         "APIs": [
           "Events"
@@ -1029,9 +937,7 @@
         ]
       },
       "channel_convert_to_public": {
-        "scopes": [
-
-        ],
+        "scopes": [],
         "description": "This channel was made public. Any member in this workspace can see and join it",
         "APIs": [
           "Events",
@@ -1039,9 +945,7 @@
         ]
       },
       "channel_join": {
-        "scopes": [
-
-        ],
+        "scopes": [],
         "description": "A member joined a channel",
         "APIs": [
           "Events",
@@ -1049,9 +953,7 @@
         ]
       },
       "channel_leave": {
-        "scopes": [
-
-        ],
+        "scopes": [],
         "description": "A member left a channel",
         "APIs": [
           "Events",
@@ -1059,9 +961,7 @@
         ]
       },
       "channel_name": {
-        "scopes": [
-
-        ],
+        "scopes": [],
         "description": "A channel was renamed",
         "APIs": [
           "Events",
@@ -1082,9 +982,7 @@
         ]
       },
       "channel_purpose": {
-        "scopes": [
-
-        ],
+        "scopes": [],
         "description": "A channel purpose was updated",
         "APIs": [
           "Events",
@@ -1092,9 +990,7 @@
         ]
       },
       "channel_topic": {
-        "scopes": [
-
-        ],
+        "scopes": [],
         "description": "A channel topic was updated",
         "APIs": [
           "Events",
@@ -1102,9 +998,7 @@
         ]
       },
       "channel_unarchive": {
-        "scopes": [
-
-        ],
+        "scopes": [],
         "description": "A channel was unarchived",
         "APIs": [
           "RTM"
@@ -1137,9 +1031,7 @@
         ]
       },
       "file_comment": {
-        "scopes": [
-
-        ],
+        "scopes": [],
         "description": "A comment was added to a file",
         "APIs": [
           "Events",
@@ -1147,9 +1039,7 @@
         ]
       },
       "file_mention": {
-        "scopes": [
-
-        ],
+        "scopes": [],
         "description": "A file was mentioned in a channel",
         "APIs": [
           "Events",
@@ -1157,9 +1047,7 @@
         ]
       },
       "file_share": {
-        "scopes": [
-
-        ],
+        "scopes": [],
         "description": "A file was shared into a channel",
         "APIs": [
           "Events",
@@ -1167,18 +1055,14 @@
         ]
       },
       "group_archive": {
-        "scopes": [
-
-        ],
+        "scopes": [],
         "description": "A group was archived",
         "APIs": [
           "RTM"
         ]
       },
       "group_join": {
-        "scopes": [
-
-        ],
+        "scopes": [],
         "description": "A member joined a group",
         "APIs": [
           "Events",
@@ -1186,9 +1070,7 @@
         ]
       },
       "group_leave": {
-        "scopes": [
-
-        ],
+        "scopes": [],
         "description": "A member left a group",
         "APIs": [
           "Events",
@@ -1196,9 +1078,7 @@
         ]
       },
       "group_name": {
-        "scopes": [
-
-        ],
+        "scopes": [],
         "description": "A group was renamed",
         "APIs": [
           "Events",
@@ -1206,9 +1086,7 @@
         ]
       },
       "group_purpose": {
-        "scopes": [
-
-        ],
+        "scopes": [],
         "description": "A group purpose was updated",
         "APIs": [
           "Events",
@@ -1216,9 +1094,7 @@
         ]
       },
       "group_topic": {
-        "scopes": [
-
-        ],
+        "scopes": [],
         "description": "A group topic was updated",
         "APIs": [
           "Events",
@@ -1226,9 +1102,7 @@
         ]
       },
       "group_unarchive": {
-        "scopes": [
-
-        ],
+        "scopes": [],
         "description": "A group was unarchived",
         "APIs": [
           "RTM"
@@ -1300,9 +1174,7 @@
         ]
       },
       "pinned_item": {
-        "scopes": [
-
-        ],
+        "scopes": [],
         "description": "An item was pinned in a channel",
         "APIs": [
           "Events",
@@ -1350,9 +1222,7 @@
         ]
       },
       "unpinned_item": {
-        "scopes": [
-
-        ],
+        "scopes": [],
         "description": "An item was unpinned from a channel",
         "APIs": [
           "Events",
@@ -1375,9 +1245,7 @@
     "name": "message.app_home",
     "description": "A user sent a message to your Slack app",
     "app_permissions_event": true,
-    "scopes": [
-
-    ],
+    "scopes": [],
     "APIs": [
       "Events"
     ]
@@ -1518,9 +1386,7 @@
   },
   {
     "name": "pinned_item",
-    "scopes": [
-
-    ],
+    "scopes": [],
     "description": "An item was pinned in a channel",
     "APIs": [
       "Events",
@@ -1530,9 +1396,7 @@
   {
     "name": "pref_change",
     "description": "You have updated your preferences",
-    "scopes": [
-
-    ],
+    "scopes": [],
     "APIs": [
       "RTM"
     ]
@@ -1540,9 +1404,7 @@
   {
     "name": "presence_change",
     "description": "A member's presence changed",
-    "scopes": [
-
-    ],
+    "scopes": [],
     "APIs": [
       "RTM"
     ]
@@ -1550,9 +1412,7 @@
   {
     "name": "presence_query",
     "description": "Determine the current presence status for a list of users",
-    "scopes": [
-
-    ],
+    "scopes": [],
     "APIs": [
       "RTM"
     ]
@@ -1560,9 +1420,7 @@
   {
     "name": "presence_sub",
     "description": "Subscribe to presence events for the specified users",
-    "scopes": [
-
-    ],
+    "scopes": [],
     "APIs": [
       "RTM"
     ]
@@ -1592,9 +1450,7 @@
   {
     "name": "reconnect_url",
     "description": "Experimental",
-    "scopes": [
-
-    ],
+    "scopes": [],
     "APIs": [
       "RTM"
     ]
@@ -1631,9 +1487,7 @@
   {
     "name": "shared_channel_invite_accepted",
     "description": "A shared channel invited was accepted",
-    "scopes": [
-
-    ],
+    "scopes": [],
     "APIs": [
       "Events"
     ]
@@ -1641,9 +1495,7 @@
   {
     "name": "shared_channel_invite_approved",
     "description": "A shared channel invited was approved",
-    "scopes": [
-
-    ],
+    "scopes": [],
     "APIs": [
       "Events"
     ]
@@ -1651,9 +1503,7 @@
   {
     "name": "shared_channel_invite_declined",
     "description": "A shared channel invited was declined",
-    "scopes": [
-
-    ],
+    "scopes": [],
     "APIs": [
       "Events"
     ]
@@ -1661,9 +1511,7 @@
   {
     "name": "shared_channel_invite_received",
     "description": "A shared channel invited was sent to a Slack user",
-    "scopes": [
-
-    ],
+    "scopes": [],
     "APIs": [
       "Events",
       "RTM"
@@ -1672,9 +1520,7 @@
   {
     "name": "shared_channel_invite_requested",
     "description": "A shared channel invited was requested",
-    "scopes": [
-
-    ],
+    "scopes": [],
     "APIs": [
       "Events"
     ]
@@ -1759,18 +1605,14 @@
   {
     "name": "team_access_granted",
     "description": "Access to a set of teams was granted to your org app",
-    "scopes": [
-
-    ],
+    "scopes": [],
     "APIs": [
       "Events"
     ]
   },
   {
     "name": "team_access_revoked",
-    "scopes": [
-
-    ],
+    "scopes": [],
     "description": "Access to a set of teams was revoked from your org app",
     "APIs": [
       "Events"
@@ -1801,9 +1643,7 @@
   {
     "name": "team_migration_started",
     "description": "The workspace is being migrated between servers",
-    "scopes": [
-
-    ],
+    "scopes": [],
     "APIs": [
       "RTM"
     ]
@@ -1811,9 +1651,7 @@
   {
     "name": "team_plan_change",
     "description": "The account billing plan has changed",
-    "scopes": [
-
-    ],
+    "scopes": [],
     "APIs": [
       "RTM"
     ]
@@ -1821,9 +1659,7 @@
   {
     "name": "team_pref_change",
     "description": "A preference has been updated",
-    "scopes": [
-
-    ],
+    "scopes": [],
     "APIs": [
       "RTM"
     ]
@@ -1831,9 +1667,7 @@
   {
     "name": "team_profile_change",
     "description": "The workspace profile fields have been updated",
-    "scopes": [
-
-    ],
+    "scopes": [],
     "APIs": [
       "RTM"
     ]
@@ -1841,9 +1675,7 @@
   {
     "name": "team_profile_delete",
     "description": "The workspace profile fields have been deleted",
-    "scopes": [
-
-    ],
+    "scopes": [],
     "APIs": [
       "RTM"
     ]
@@ -1851,9 +1683,7 @@
   {
     "name": "team_profile_reorder",
     "description": "The workspace profile fields have been reordered",
-    "scopes": [
-
-    ],
+    "scopes": [],
     "APIs": [
       "RTM"
     ]
@@ -1887,18 +1717,14 @@
     "name": "tokens_revoked",
     "description": "API tokens for your app were revoked",
     "app_event": true,
-    "scopes": [
-
-    ],
+    "scopes": [],
     "APIs": [
       "Events"
     ]
   },
   {
     "name": "unpinned_item",
-    "scopes": [
-
-    ],
+    "scopes": [],
     "description": "An item was unpinned from a channel",
     "APIs": [
       "Events",
@@ -1910,9 +1736,7 @@
     "description": "Verifies ownership of an Events API Request URL",
     "automatic": true,
     "app_event": true,
-    "scopes": [
-
-    ],
+    "scopes": [],
     "APIs": [
       "Events"
     ]
@@ -1939,9 +1763,7 @@
   {
     "name": "user_typing",
     "description": "A channel member is typing a message",
-    "scopes": [
-
-    ],
+    "scopes": [],
     "APIs": [
       "RTM"
     ]
@@ -1949,9 +1771,7 @@
   {
     "name": "workflow_deleted",
     "description": "A workflow that contains a step supported by your app was deleted",
-    "scopes": [
-
-    ],
+    "scopes": [],
     "APIs": [
       "Events"
     ]
@@ -1959,9 +1779,7 @@
   {
     "name": "workflow_published",
     "description": "A workflow that contains a step supported by your app was published",
-    "scopes": [
-
-    ],
+    "scopes": [],
     "APIs": [
       "Events"
     ]
@@ -1979,9 +1797,7 @@
   {
     "name": "workflow_step_execute",
     "description": "A workflow step supported by your app should execute",
-    "scopes": [
-
-    ],
+    "scopes": [],
     "APIs": [
       "Events"
     ]
@@ -1989,9 +1805,7 @@
   {
     "name": "workflow_unpublished",
     "description": "A workflow that contains a step supported by your app was unpublished",
-    "scopes": [
-
-    ],
+    "scopes": [],
     "APIs": [
       "Events"
     ]

@@ -80,9 +80,7 @@
           },
           "status_text": "Watching cold brew steep",
           "status_emoji": ":coffee:",
-          "status_emoji_display_info": [
-
-          ],
+          "status_emoji_display_info": [],
           "status_expiration": 0,
           "avatar_hash": "123xyz",
           "start_date": "2022-03-21",

@@ -9,8 +9,7 @@
     "required": [
       "token"
     ],
-    "properties": {
-    }
+    "properties": {}
   },
   "output": {
     "type": "object",

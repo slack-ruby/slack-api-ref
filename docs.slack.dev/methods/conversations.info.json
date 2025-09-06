@@ -92,9 +92,7 @@
           "is_frozen": false,
           "is_org_shared": false,
           "is_pending_ext_shared": false,
-          "pending_shared": [
-
-          ],
+          "pending_shared": [],
           "context_team_id": "T123ABC456",
           "updated": 1723130875818,
           "parent_conversation": null,
@@ -103,9 +101,7 @@
           "shared_team_ids": [
             "T123ABC456"
           ],
-          "pending_connected_team_ids": [
-
-          ],
+          "pending_connected_team_ids": [],
           "topic": {
             "value": "For public discussion of generalities",
             "creator": "W012A3BCD",
@@ -135,9 +131,7 @@
               }
             ]
           },
-          "previous_names": [
-
-          ]
+          "previous_names": []
         }
       }
     },

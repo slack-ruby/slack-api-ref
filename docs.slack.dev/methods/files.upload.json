@@ -169,9 +169,7 @@
             "private": {
               "D0L4B9P0Q": [
                 {
-                  "reply_users": [
-
-                  ],
+                  "reply_users": [],
                   "reply_users_count": 0,
                   "reply_count": 0,
                   "ts": "1532293503.000001"
@@ -179,12 +177,8 @@
               ]
             }
           },
-          "channels": [
-
-          ],
-          "groups": [
-
-          ],
+          "channels": [],
+          "groups": [],
           "ims": [
             "D0L4B9P0Q"
           ],
@@ -231,9 +225,7 @@
             "public": {
               "C061EG9SL": [
                 {
-                  "reply_users": [
-
-                  ],
+                  "reply_users": [],
                   "reply_users_count": 0,
                   "reply_count": 0,
                   "ts": "1532294750.000001",
@@ -246,12 +238,8 @@
           "channels": [
             "C061EG9SL"
           ],
-          "groups": [
-
-          ],
-          "ims": [
-
-          ],
+          "groups": [],
+          "ims": [],
           "has_rich_preview": false
         }
       }

@@ -167,14 +167,10 @@
             "is_org_mandatory": false,
             "is_org_shared": true,
             "is_frozen": false,
-            "connected_team_ids": [
-
-            ],
+            "connected_team_ids": [],
             "internal_team_ids_count": 4,
             "internal_team_ids_sample_team": "T013F30DBAB",
-            "pending_connected_team_ids": [
-
-            ],
+            "pending_connected_team_ids": [],
             "is_pending_ext_shared": false
           },
           {
@@ -194,14 +190,10 @@
             "is_org_mandatory": false,
             "is_org_shared": true,
             "is_frozen": false,
-            "connected_team_ids": [
-
-            ],
+            "connected_team_ids": [],
             "internal_team_ids_count": 1,
             "internal_team_ids_sample_team": "TPQ67R81F",
-            "pending_connected_team_ids": [
-
-            ],
+            "pending_connected_team_ids": [],
             "is_pending_ext_shared": false
           }
         ],

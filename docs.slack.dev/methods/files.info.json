@@ -217,18 +217,12 @@
           "channels": [
             "C0T8SE4AU"
           ],
-          "groups": [
-
-          ],
-          "ims": [
-
-          ],
+          "groups": [],
+          "ims": [],
           "has_rich_preview": false,
           "alt_txt": "tedair.gif"
         },
-        "comments": [
-
-        ],
+        "comments": [],
         "response_metadata": {
           "next_cursor": "dGVhbTpDMUg5UkVTR0w="
         }

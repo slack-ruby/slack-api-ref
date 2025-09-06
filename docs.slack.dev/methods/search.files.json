@@ -203,9 +203,7 @@
         "files": {
           "matches": [
             {
-              "channels": [
-
-              ],
+              "channels": [],
               "comments_count": 1,
               "created": 1507850315,
               "deanimate_gif": "https://files.slack.com/files-tmb/T2U81E2BB-F7H0D7ZBB-21624821e6/computer_deanimate_gif.png",
@@ -213,14 +211,10 @@
               "editable": false,
               "external_type": "",
               "filetype": "gif",
-              "groups": [
-
-              ],
+              "groups": [],
               "id": "F7H0D7ZBB",
               "image_exif_rotation": 1,
-              "ims": [
-
-              ],
+              "ims": [],
               "is_external": false,
               "is_public": true,
               "mimetype": "image/gif",

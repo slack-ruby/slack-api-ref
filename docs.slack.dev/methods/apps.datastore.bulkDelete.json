@@ -96,9 +96,7 @@
       "description": "Typical success response",
       "example": {
         "ok": true,
-        "failed_items": [
-
-        ]
+        "failed_items": []
       }
     },
     "error": {

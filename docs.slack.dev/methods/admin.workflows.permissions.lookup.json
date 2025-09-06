@@ -43,11 +43,9 @@
     "required": [
       "permissions"
     ],
-    "properties": {
-    }
+    "properties": {}
   },
-  "errors": {
-  },
+  "errors": {},
   "examples": {
     "success": {
       "url": "/api/admin.worksflows.permissions?token=YOUR_TOKEN&workflow_ids=Wf123,Wf456",

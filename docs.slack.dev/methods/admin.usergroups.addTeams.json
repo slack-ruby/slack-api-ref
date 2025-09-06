@@ -39,8 +39,7 @@
       }
     }
   },
-  "output": {
-  },
+  "output": {},
   "errors": {
     "auto_provision_failure": {
       "desc": "A failure occurred while assigning IDP group members to a specific workspace; see `errors` element for a list of failed team IDs."

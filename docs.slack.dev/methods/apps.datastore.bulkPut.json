@@ -101,9 +101,7 @@
       "example": {
         "ok": true,
         "datastore": "delicious_meals",
-        "failed_items": [
-
-        ]
+        "failed_items": []
       }
     },
     "error": {

@@ -231,12 +231,8 @@
                   "is_private": true
                 }
               ],
-              "pending_connections": [
-
-              ],
-              "previous_connections": [
-
-              ]
+              "pending_connections": [],
+              "previous_connections": []
             },
             "target_user": {
               "recipient_email": "external-user@other-corp.com"

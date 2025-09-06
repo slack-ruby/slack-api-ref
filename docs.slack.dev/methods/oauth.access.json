@@ -367,9 +367,7 @@
             "im:history",
             "im:read"
           ],
-          "team": [
-
-          ],
+          "team": [],
           "channel": [
             "channels:history",
             "channels:read",
@@ -384,9 +382,7 @@
           "im": [
             "chat:write"
           ],
-          "user": [
-
-          ]
+          "user": []
         }
       }
     },

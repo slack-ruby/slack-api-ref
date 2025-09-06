@@ -34,8 +34,7 @@
       }
     }
   },
-  "output": {
-  },
+  "output": {},
   "errors": {
     "channel_not_found": {
       "desc": "Error returned when given an invalid channel_id"

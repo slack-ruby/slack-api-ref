@@ -108,8 +108,7 @@
           "callback_id": "view_2",
           "external_id": "",
           "state": {
-            "values": {
-            }
+            "values": {}
           },
           "hash": "1569262015.55b5e41b",
           "clear_on_close": true,

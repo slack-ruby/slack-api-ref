@@ -42,8 +42,7 @@
       }
     }
   },
-  "output": {
-  },
+  "output": {},
   "errors": {
     "not_allowed": {
       "desc": "The user is not allowed to access this API method"

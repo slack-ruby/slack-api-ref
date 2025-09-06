@@ -33,8 +33,7 @@
       }
     }
   },
-  "errors": {
-  },
+  "errors": {},
   "examples": {
     "success": {
       "url": "/api/assistant.search.info?token=YOUR_TOKEN",

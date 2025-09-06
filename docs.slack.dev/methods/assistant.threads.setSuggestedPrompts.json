@@ -38,8 +38,7 @@
       }
     }
   },
-  "output": {
-  },
+  "output": {},
   "errors": {
     "invalid_thread_ts": {
       "desc": "Thread not found"

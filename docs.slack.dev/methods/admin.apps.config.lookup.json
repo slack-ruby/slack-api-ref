@@ -110,12 +110,8 @@
             "workflow_auth_strategy": "builder_choice",
             "rich_link_preview_type": "no_preview",
             "domain_restrictions": {
-              "emails": [
-
-              ],
-              "urls": [
-
-              ]
+              "emails": [],
+              "urls": []
             }
           }
         ]

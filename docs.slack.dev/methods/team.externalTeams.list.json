@@ -292,8 +292,7 @@
               "workspace_id": "Jesse Inc",
               "workspace_name": "E123ABC456"
             },
-            "slack_connect_prefs": {
-            },
+            "slack_connect_prefs": {},
             "connection_status": "CONNECTED",
             "last_active_timestamp": 1718656058,
             "is_sponsored": false,
