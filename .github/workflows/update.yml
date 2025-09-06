@@ -15,6 +15,7 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           bundler-cache: true
+          ruby-version: '3.4'
       - name: Download
         run: bundle exec rake api:download
       - name: Update
