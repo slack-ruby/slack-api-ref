@@ -1,0 +1,82 @@
+{
+  "desc": "Remove bookmark from the channel.",
+  "http_method": "POST",
+  "scope": "bookmarks:write",
+  "scope_by_token_type": {
+    "app": "bookmarks:write",
+    "granular_bot": "bookmarks:write"
+  },
+  "json_input_supported": true,
+  "slack_connect_workspaces_allowed": true,
+  "rate_limits": "t2",
+  "args": {
+    "type": "object",
+    "required": [
+      "token",
+      "channel_id",
+      "bookmark_id"
+    ],
+    "properties": {
+      "token": {
+        "type": "string",
+        "subtype": "auth",
+        "desc": "Authentication token bearing required scopes. Tokens should be passed as an HTTP Authorization header or alternatively, as a POST parameter.",
+        "example": "xxxx-xxxxxxxxx-xxxx"
+      },
+      "channel_id": {
+        "desc": "Channel to remove bookmark.",
+        "type": "string",
+        "subtype": "channel"
+      },
+      "bookmark_id": {
+        "desc": "Bookmark to remove.",
+        "type": "string"
+      },
+      "quip_section_id": {
+        "desc": "Quip section ID to unbookmark",
+        "type": "string"
+      }
+    }
+  },
+  "output": null,
+  "errors": {
+    "access_denied": {
+      "desc": "Actor lacks access to the requested resource."
+    },
+    "channel_not_found": {
+      "desc": "Channel cannot be found."
+    },
+    "user_not_found": {
+      "desc": "User cannot be found."
+    },
+    "invalid_bookmark_type": {
+      "desc": "Bookmark type is not valid."
+    },
+    "not_found": {
+      "desc": "Bookmark cannot be found."
+    },
+    "not_implemented": {
+      "desc": "bookmarking not available for the user."
+    },
+    "permission_denied": {
+      "desc": "No permission to perform this operation."
+    }
+  },
+  "examples": {
+    "success": {
+      "url": "/api/bookmarks.remove?bookmark_id=Bk032T42309M&channel_id=C0330JVH00",
+      "description": "Typical success response",
+      "example": {
+        "ok": true
+      }
+    },
+    "error": {
+      "url": "/api/bookmarks.remove?bookmark_id=Bk032T42309M&channel_id=C0330JVH00",
+      "description": "Typical error response",
+      "example": {
+        "ok": false,
+        "error": "not_found"
+      }
+    }
+  }
+}

@@ -1,0 +1,183 @@
+{
+  "desc": "Lists reactions made by a user.",
+  "http_method": "GET",
+  "scope": "reactions:read",
+  "rate_limits": "t2",
+  "slack_connect_workspaces_allowed": true,
+  "args": {
+    "type": "object",
+    "required": [
+      "token"
+    ],
+    "properties": {
+      "token": {
+        "type": "string",
+        "subtype": "auth",
+        "desc": "Authentication token bearing required scopes. Tokens should be passed as an HTTP Authorization header or alternatively, as a POST parameter.",
+        "example": "xxxx-xxxxxxxxx-xxxx"
+      },
+      "user": {
+        "desc": "Show reactions made by this user. Defaults to the authed user.",
+        "type": "string",
+        "subtype": "user"
+      },
+      "full": {
+        "desc": "If true always return the complete reaction list.",
+        "type": "boolean"
+      },
+      "count": {
+        "default": 100,
+        "type": "integer",
+        "subtype": "paging"
+      },
+      "page": {
+        "default": 1,
+        "type": "integer",
+        "subtype": "paging"
+      },
+      "cursor": {
+        "desc": "Parameter for pagination. Set `cursor` equal to the `next_cursor` attribute returned by the previous request's `response_metadata`. This parameter is optional, but pagination is mandatory: the default value simply fetches the first \"page\" of the collection. See [pagination](/apis/web-api/pagination) for more details.",
+        "example": "dXNlcjpVMDYxTkZUVDI=",
+        "type": "string"
+      },
+      "limit": {
+        "default": 0,
+        "desc": "The maximum number of items to return. Fewer than the requested number of items may be returned, even if the end of the list hasn't been reached.",
+        "example": "20",
+        "type": "integer"
+      },
+      "team_id": {
+        "desc": "encoded team id to list reactions in, required if org token is used",
+        "type": "string",
+        "subtype": "team"
+      }
+    }
+  },
+  "output": {
+    "type": "object",
+    "required": [
+      "items"
+    ],
+    "properties": {
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "object"
+        }
+      },
+      "paging": {
+        "schema": "paging"
+      }
+    }
+  },
+  "errors": {
+    "user_not_found": {
+      "desc": "Value passed for `user` was invalid."
+    }
+  },
+  "examples": {
+    "success": {
+      "url": "/api/reactions.list?token=YOUR_TOKEN",
+      "description": "Typical success response",
+      "example": {
+        "items": [
+          {
+            "type": "message",
+            "channel": "C123ABC456",
+            "message": {
+              "bot_id": "B123ABC456",
+              "reactions": [
+                {
+                  "count": 1,
+                  "name": "robot_face",
+                  "users": [
+                    "U123ABC456"
+                  ]
+                }
+              ],
+              "subtype": "bot_message",
+              "text": "Hello from Python! :tada:",
+              "ts": "1507849573.000090",
+              "username": "Shipit Notifications"
+            }
+          },
+          {
+            "comment": {
+              "type": "file_comment",
+              "comment": "This is a file comment",
+              "created": 1508286096,
+              "id": "Fc123ABC456",
+              "reactions": [
+                {
+                  "count": 1,
+                  "name": "white_check_mark",
+                  "users": [
+                    "U123ABC456"
+                  ]
+                }
+              ],
+              "timestamp": 1508286096,
+              "user": "U123ABC456"
+            },
+            "file": {
+              "channels": [
+                "C123ABC456"
+              ],
+              "comments_count": 1,
+              "created": 1507850315,
+              "reactions": [
+                {
+                  "count": 1,
+                  "name": "stuck_out_tongue_winking_eye",
+                  "users": [
+                    "U123ABC456"
+                  ]
+                }
+              ],
+              "title": "computer.gif",
+              "user": "U123ABC456",
+              "username": ""
+            }
+          },
+          {
+            "file": {
+              "channels": [
+                "C123ABC456"
+              ],
+              "comments_count": 1,
+              "created": 1507850315,
+              "id": "F123ABC456",
+              "name": "computer.gif",
+              "reactions": [
+                {
+                  "count": 1,
+                  "name": "stuck_out_tongue_winking_eye",
+                  "users": [
+                    "U123ABC456"
+                  ]
+                }
+              ],
+              "size": 1639034,
+              "title": "computer.gif",
+              "user": "U123ABC456",
+              "username": ""
+            },
+            "type": "file"
+          }
+        ],
+        "ok": true,
+        "response_metadata": {
+          "next_cursor": "dGVhbTpDMUg5UkVTR0w="
+        }
+      }
+    },
+    "error": {
+      "url": "/api/reactions.list?token=INVALID_TOKEN",
+      "description": "Typical error response",
+      "example": {
+        "ok": false,
+        "error": "invalid_auth"
+      }
+    }
+  }
+}

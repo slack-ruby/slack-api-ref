@@ -1,0 +1,83 @@
+{
+  "desc": "Gets user presence information.",
+  "http_method": "GET",
+  "scope": "users:read",
+  "rate_limits": "t3",
+  "args": {
+    "type": "object",
+    "required": [
+      "token"
+    ],
+    "properties": {
+      "token": {
+        "type": "string",
+        "subtype": "auth",
+        "desc": "Authentication token bearing required scopes. Tokens should be passed as an HTTP Authorization header or alternatively, as a POST parameter.",
+        "example": "xxxx-xxxxxxxxx-xxxx"
+      },
+      "user": {
+        "desc": "User to get presence info on. Defaults to the authed user.",
+        "type": "string",
+        "subtype": "user"
+      }
+    }
+  },
+  "output": {
+    "required": [
+      "presence"
+    ],
+    "type": "object",
+    "properties": {
+      "last_activity": {
+        "type": "integer"
+      },
+      "manual_away": {
+        "type": "boolean"
+      },
+      "presence": {
+        "type": "string"
+      },
+      "online": {
+        "type": "boolean"
+      },
+      "connection_count": {
+        "type": "integer"
+      },
+      "auto_away": {
+        "type": "boolean"
+      }
+    }
+  },
+  "errors": {
+  },
+  "examples": {
+    "success": {
+      "url": "/api/users.getPresence?token=YOUR_TOKEN",
+      "description": "When requesting information for a different user, this method just returns the current presence (either `active` or `away`).",
+      "example": {
+        "ok": true,
+        "presence": "active"
+      }
+    },
+    "success_for_token_holder": {
+      "description": "If you are requesting presence information for the authed user, this method returns the current presence, along with details on how it was calculated.",
+      "example": {
+        "ok": true,
+        "presence": "active",
+        "online": true,
+        "auto_away": false,
+        "manual_away": false,
+        "connection_count": 1,
+        "last_activity": 1419027078
+      }
+    },
+    "error": {
+      "url": "/api/users.getPresence?token=INVALID_TOKEN",
+      "description": "Typical error response",
+      "example": {
+        "ok": false,
+        "error": "invalid_auth"
+      }
+    }
+  }
+}

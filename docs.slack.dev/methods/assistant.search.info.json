@@ -1,0 +1,48 @@
+{
+  "desc": "Returns search capabilities on a given team.",
+  "http_method": "POST",
+  "scope": "search:read",
+  "scope_by_token_type": {
+    "granular_bot": "search:read.public",
+    "oauth": "search:read.public"
+  },
+  "json_input_supported": true,
+  "rate_limits": "t2",
+  "args": {
+    "type": "object",
+    "required": [
+      "token"
+    ],
+    "properties": {
+      "token": {
+        "desc": "Auth token to authenticate the session",
+        "type": "string",
+        "subtype": "auth"
+      }
+    }
+  },
+  "output": {
+    "type": "object",
+    "required": [
+      "is_ai_search_enabled"
+    ],
+    "properties": {
+      "is_ai_search_enabled": {
+        "type": "boolean",
+        "desc": "Whether AI search is enabled for the team"
+      }
+    }
+  },
+  "errors": {
+  },
+  "examples": {
+    "success": {
+      "url": "/api/assistant.search.info?token=YOUR_TOKEN",
+      "description": "Typical success response",
+      "example": {
+        "ok": true,
+        "is_ai_search_enabled": true
+      }
+    }
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "desc": "Lists items pinned to a channel.",
+  "http_method": "GET",
+  "scope": "pins:read",
+  "slack_connect_workspaces_allowed": true,
+  "rate_limits": "t2",
+  "args": {
+    "type": "object",
+    "required": [
+      "token",
+      "channel"
+    ],
+    "properties": {
+      "token": {
+        "type": "string",
+        "subtype": "auth",
+        "desc": "Authentication token bearing required scopes. Tokens should be passed as an HTTP Authorization header or alternatively, as a POST parameter.",
+        "example": "xxxx-xxxxxxxxx-xxxx"
+      },
+      "channel": {
+        "desc": "Channel to get pinned items for.",
+        "type": "string",
+        "subtype": "channel"
+      }
+    }
+  },
+  "output": {
+    "type": "object",
+    "properties": {
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": [
+            "type",
+            "created",
+            "created_by"
+          ],
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": [
+                "file",
+                "message",
+                "file_comment"
+              ]
+            },
+            "created": {
+              "type": "integer"
+            },
+            "created_by": {
+              "schema": "user_id"
+            },
+            "channel": {
+              "schema": "channel"
+            },
+            "message": {
+              "schema": "message"
+            },
+            "file": {
+              "schema": "file"
+            },
+            "comment": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "count": {
+        "type": "integer"
+      }
+    }
+  },
+  "errors": {
+    "channel_not_found": {
+      "desc": "Value passed for `channel` was invalid."
+    },
+    "restricted_action": {
+      "desc": "The user does not have permission to view the channel."
+    }
+  },
+  "examples": {
+    "success": {
+      "url": "/api/pins.list?token=YOUR_TOKEN",
+      "description": "Typical success response",
+      "example": {
+        "items": [
+          {
+            "channel": "C123ABC456",
+            "created": 1508881078,
+            "created_by": "U123ABC456",
+            "message": {
+              "permalink": "https://hitchhikers.slack.com/archives/C2U86NC6H/p1508197641000151",
+              "pinned_to": [
+                "C2U86NC6H"
+              ],
+              "text": "What is the meaning of life?",
+              "ts": "1508197641.000151",
+              "type": "message",
+              "user": "U123ABC456"
+            },
+            "type": "message"
+          },
+          {
+            "channel": "C123ABC456",
+            "created": 1508880991,
+            "created_by": "U123ABC456",
+            "message": {
+              "permalink": "https://hitchhikers.slack.com/archives/C2U86NC6H/p1508284197000015",
+              "pinned_to": [
+                "C123ABC456"
+              ],
+              "text": "The meaning of life, the universe, and everything is 42.",
+              "ts": "1503289197.000015",
+              "type": "message",
+              "user": "U123ABC456"
+            },
+            "type": "message"
+          }
+        ],
+        "ok": true
+      }
+    },
+    "error": {
+      "url": "/api/pins.list?token=INVALID_TOKEN",
+      "description": "Typical error response",
+      "example": {
+        "ok": false,
+        "error": "invalid_auth"
+      }
+    }
+  }
+}

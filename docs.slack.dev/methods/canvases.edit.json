@@ -1,0 +1,75 @@
+{
+  "desc": "Update an existing canvas",
+  "http_method": "POST",
+  "scope": "canvases:write",
+  "json_input_supported": true,
+  "rate_limits": "t3",
+  "args": {
+    "type": "object",
+    "required": [
+      "token",
+      "canvas_id",
+      "changes"
+    ],
+    "properties": {
+      "token": {
+        "desc": "Auth token with which to authenticate the session",
+        "type": "string",
+        "subtype": "auth",
+        "example": "xxxx-xxxxxxxxx-xxxx"
+      },
+      "canvas_id": {
+        "desc": "Encoded ID of the canvas",
+        "example": "F1234ABCD",
+        "subtype": "canvas",
+        "schema": "file_id"
+      },
+      "changes": {
+        "desc": "List of changes to apply on the specified canvas",
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 1,
+        "items": {
+          "schema": "selection"
+        },
+        "example": "[{\"operation\":\"insert_before\",\"document_content\":{\"type\":\"markdown\",\"markdown\":\"Example content\"},\"section_id\":\"temp:C:AAAAAAAAAAAAAAAAAAAAAAAAAAAA\"}]"
+      }
+    }
+  },
+  "output": null,
+  "errors": {
+    "canvas_not_found": {
+      "desc": "The canvas you wish to apply changes to is not available."
+    },
+    "canvas_disabled_user_team": {
+      "desc": "Canvas is disabled on user's team"
+    },
+    "free_teams_cannot_edit_standalone_canvases": {
+      "desc": "Free teams cannot edit standalone canvases"
+    },
+    "restricted_action": {
+      "desc": "User does not have permission to perform this action."
+    },
+    "canvas_editing_failed": {
+      "desc": "The changes to the canvas failed to be applied."
+    }
+  },
+  "examples": {
+    "success": {
+      "url": "/api/canvases.edit?token=YOUR_TOKEN",
+      "description": "Typical success response",
+      "example": {
+        "ok": true
+      }
+    },
+    "error": {
+      "url": "/api/canvases.edit?token=YOUR_TOKEN",
+      "description": "Typical error response for bad content",
+      "example": {
+        "ok": false,
+        "error": "canvas_editing_failed",
+        "detail": "'content' error: line 28: Unsupported block type (List) within block quote"
+      }
+    }
+  }
+}

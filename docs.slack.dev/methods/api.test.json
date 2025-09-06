@@ -1,0 +1,55 @@
+{
+  "desc": "Checks API calling code.",
+  "http_method": "POST",
+  "scope": "none",
+  "json_input_supported": true,
+  "rate_limits": "t4",
+  "args": {
+    "type": "object",
+    "properties": {
+      "error": {
+        "type": "string",
+        "desc": "Error response to return",
+        "example": "my_error"
+      }
+    }
+  },
+  "output": {
+    "type": "object",
+    "properties": {
+      "args": {
+        "type": "object"
+      }
+    }
+  },
+  "examples": {
+    "success": {
+      "description": "Standard success response",
+      "url": "/api/api.test",
+      "example": {
+        "ok": true
+      }
+    },
+    "success_with_params": {
+      "description": "Artificial parameter echoing response by passing `foo=bar`",
+      "url": "/api/api.test?foo=bar",
+      "example": {
+        "ok": true,
+        "args": {
+          "foo": "bar"
+        }
+      }
+    },
+    "error": {
+      "description": "Artificial error response",
+      "url": "/api/api.test?error=my_error",
+      "example": {
+        "ok": false,
+        "error": "my_error",
+        "args": {
+          "error": "my_error"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,393 @@
+{
+  "desc": "Search workflows within the team or enterprise",
+  "http_method": "POST",
+  "scope": "read",
+  "scope_by_token_type": {
+    "oauth": "admin.workflows:read"
+  },
+  "json_input_supported": true,
+  "rate_limits": "t2",
+  "args": {
+    "type": "object",
+    "required": [
+      "token"
+    ],
+    "properties": {
+      "token": {
+        "type": "string",
+        "subtype": "auth",
+        "desc": "Authentication token bearing required scopes. Tokens should be passed as an HTTP Authorization header or alternatively, as a POST parameter.",
+        "example": "xxxx-xxxxxxxxx-xxxx"
+      },
+      "query": {
+        "type": "string",
+        "desc": "A search query to filter for workflow name or description",
+        "example": "Time off"
+      },
+      "app_id": {
+        "desc": "The parent app ID for which to return workflows",
+        "example": "A12345",
+        "schema": "app_id"
+      },
+      "cursor": {
+        "desc": "Set `cursor` to `next_cursor` returned by the previous call to list items in the next page",
+        "example": "dXNlcjpVMDYxTkZUVDI=",
+        "type": "string"
+      },
+      "limit": {
+        "desc": "The number of results that will be returned by the API on each invocation",
+        "example": "20",
+        "type": "integer",
+        "default": 20,
+        "minimum": 1,
+        "maximum": 50
+      },
+      "no_collaborators": {
+        "desc": "Only include workflows with no collaborators in the result; default is false",
+        "type": "boolean",
+        "default": false
+      },
+      "collaborator_ids": {
+        "desc": "Only include workflows where all of the provided user IDs are a manager/collaborator of that workflow",
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "num_trigger_ids": {
+        "desc": "Number of trigger IDs to fetch for each workflow; default is 10",
+        "type": "integer",
+        "default": 10,
+        "maximum": 100
+      },
+      "is_sales_elevate": {
+        "type": "boolean",
+        "desc": "Filter workflows by their Sales Elevate status"
+      },
+      "source": {
+        "desc": "Source of workflow creation, either from code or workflow builder",
+        "type": "string",
+        "enum": [
+          "code",
+          "workflow_builder",
+          "sales_home"
+        ]
+      },
+      "sort": {
+        "desc": "The field used to sort the returned workflows",
+        "type": "string",
+        "default": "name",
+        "enum": [
+          "name"
+        ]
+      },
+      "sort_dir": {
+        "desc": "Sort direction. Possible values are `asc` for ascending order like (1, 2, 3) or (a, b, c), and `desc` for descending order like (3, 2, 1) or (c, b, a)",
+        "type": "string",
+        "default": "desc",
+        "enum": [
+          "asc",
+          "desc"
+        ]
+      },
+      "trigger_type_id": {
+        "desc": "Only include workflows with this trigger type",
+        "type": "string",
+        "schema": "function_trigger_type_id"
+      },
+      "publish_status": {
+        "desc": "Filter workflows by their published status",
+        "type": "string",
+        "enum": [
+          "all",
+          "published",
+          "unpublished"
+        ],
+        "default": "published"
+      },
+      "step_function_ids": {
+        "desc": "Only include workflows that use all of the provided step function ids",
+        "type": "array",
+        "items": {
+          "schema": "function_id"
+        }
+      }
+    }
+  },
+  "output": {
+    "type": "object",
+    "required": [
+      "workflows",
+      "total_found"
+    ],
+    "properties": {
+      "workflows": {
+        "type": "array",
+        "items": {
+          "schema": "workflow-with-trigger-ids"
+        }
+      },
+      "response_metadata": {
+        "schema": "response_metadata_new"
+      },
+      "total_found": {
+        "type": "integer",
+        "desc": "The total number of workflows that match this search criteria"
+      }
+    }
+  },
+  "errors": {
+    "invalid_cursor": {
+      "desc": "Value passed for `cursor` was not valid or is no longer valid."
+    },
+    "not_allowed": {
+      "desc": "The user is not allowed to access this API method."
+    }
+  },
+  "examples": {
+    "success": {
+      "url": "/api/admin.workflows.list?token=YOUR_TOKEN&limit=2",
+      "description": "Typical success response",
+      "example": {
+        "ok": true,
+        "total_found": 2,
+        "workflows": [
+          {
+            "id": "Wf014FQ97ZT5",
+            "workflow_function_id": "Fn014EPW7SBU",
+            "callback_id": "untitled_workflow",
+            "title": "Hello there",
+            "description": "A brand new workflow",
+            "input_parameters": {
+              "Ft014FQ980RZ__user_id": {
+                "type": "slack#/reference/objects/user-object_id",
+                "name": "Ft014FQ980RZ__user_id",
+                "description": "User who reacted to the message",
+                "title": "User who reacted to the message",
+                "is_required": false
+              },
+              "Ft014FQ980RZ__message_context": {
+                "type": "slack#/types/message_context",
+                "name": "Ft014FQ980RZ__message_context",
+                "description": "Reference to the message that was reacted to",
+                "title": "Reference to the message that was reacted to",
+                "is_required": true
+              }
+            },
+            "steps": [
+              {
+                "id": "a1468ed7-82a2-4d3a-8598-d67194a10148",
+                "function_id": "Fn010P",
+                "inputs": {
+                  "message": {
+                    "value": [
+                      {
+                        "type": "rich_text",
+                        "elements": [
+                          {
+                            "type": "rich_text_section",
+                            "elements": [
+                              {
+                                "text": "Hello ",
+                                "type": "text"
+                              },
+                              {
+                                "id": "{{inputs.Ft014FQ980RZ__user_id}}",
+                                "type": "workflowtoken",
+                                "property": "",
+                                "data_type": "slack#/reference/objects/user-object_id"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "locked": false
+                  },
+                  "message_context": {
+                    "value": "{{inputs.Ft014FQ980RZ__message_context}}",
+                    "locked": false
+                  },
+                  "reply_broadcast": {
+                    "value": "false",
+                    "locked": false
+                  }
+                }
+              }
+            ],
+            "collaborators": [
+              "U014FM2DQF5"
+            ],
+            "icons": {
+              "image_96": "https://slack-pantry.dev.slack.com/11d89af/img/apps/workflows_96.png",
+              "image_192": "https://slack-pantry.dev.slack.com/11d89af/img/apps/workflows_192.png"
+            },
+            "is_published": true,
+            "last_updated_by": "U014FM2DQF5",
+            "unpublished_change_count": 0,
+            "app_id": "A014EPW7S3U",
+            "source": "workflow_builder",
+            "billing_type": "simple",
+            "date_updated": 1715661162,
+            "is_billable": false,
+            "creation_source_type": 1,
+            "creation_source_id": "Wt06DWT50W57",
+            "last_published_version_id": "Wfv014FQ9NHCK",
+            "last_published_date": "1674675746",
+            "trigger_ids": [
+              "Ft050QQ638NS"
+            ],
+            "is_sales_home_workflow": false,
+            "is_sales_elevate": false,
+            "trigger_types": [
+              {
+                "id": "Ftt0102",
+                "type": "event",
+                "subtype": "slack#/events/reaction_added"
+              }
+            ]
+          },
+          {
+            "id": "Wf014HH0GN9G",
+            "workflow_function_id": "Fn014HH0GN82",
+            "callback_id": "give_kudos_workflow",
+            "title": "Give kudos",
+            "description": "Acknowledge the impact someone had on you",
+            "input_parameters": {
+              "interactivity": {
+                "type": "slack#/types/interactivity",
+                "name": "interactivity",
+                "title": "Interactivity",
+                "is_required": true
+              }
+            },
+            "steps": [
+              {
+                "id": "0",
+                "function_id": "Fn010N",
+                "inputs": {
+                  "title": {
+                    "value": "Give someone kudos",
+                    "locked": false
+                  },
+                  "fields": {
+                    "value": {
+                      "elements": [
+                        {
+                          "name": "doer_of_good_deeds",
+                          "type": "slack#/reference/objects/user-object_id",
+                          "title": "Whose deeds are deemed worthy of a kudo?",
+                          "description": "Recognizing such deeds is dazzlingly desirable of you!"
+                        },
+                        {
+                          "name": "kudo_channel",
+                          "type": "slack#/reference/objects/channel-object_id",
+                          "title": "Where should this message be shared?"
+                        },
+                        {
+                          "long": true,
+                          "name": "kudo_message",
+                          "type": "string",
+                          "title": "What would you like to say?"
+                        },
+                        {
+                          "enum": [
+                            "Appreciation for someone 🫂",
+                            "Celebrating a victory 🏆",
+                            "Thankful for great teamwork ⚽️",
+                            "Amazed at awesome work ☄️",
+                            "Excited for the future 🎉",
+                            "No vibes, just plants 🪴"
+                          ],
+                          "name": "kudo_vibe",
+                          "type": "string",
+                          "title": "What is this kudo's \"vibe\"?",
+                          "description": "What sorts of energy is given off?"
+                        }
+                      ],
+                      "required": [
+                        "doer_of_good_deeds",
+                        "kudo_channel",
+                        "kudo_message"
+                      ]
+                    },
+                    "locked": false
+                  },
+                  "description": {
+                    "value": "Continue the positive energy through your written word",
+                    "locked": false
+                  },
+                  "submit_label": {
+                    "value": "Share",
+                    "locked": false
+                  },
+                  "interactivity": {
+                    "value": "{{inputs.interactivity}}",
+                    "locked": false
+                  }
+                }
+              },
+              {
+                "id": "1",
+                "function_id": "Fn014JHDUP3M",
+                "inputs": {
+                  "vibe": {
+                    "value": "{{steps.0.fields.kudo_vibe}}",
+                    "locked": false
+                  }
+                }
+              },
+              {
+                "id": "2",
+                "function_id": "Fn0102",
+                "inputs": {
+                  "message": {
+                    "value": "*Hey <@{{steps.0.fields.doer_of_good_deeds}}>!* Someone wanted to share some kind words with you :otter:\n> {{steps.0.fields.kudo_message}}\n{{steps.1.URL}}",
+                    "locked": false
+                  },
+                  "channel_id": {
+                    "value": "{{steps.0.fields.kudo_channel}}",
+                    "locked": false
+                  }
+                }
+              }
+            ],
+            "collaborators": [
+              "U014ELP4Z9Q"
+            ],
+            "icons": {
+              "image_96": "https://example.com/avatars/2023-03-01/1153578567186_dd65b1ee58919c5d8665_96.png",
+              "image_192": "https://example.com/avatars/2023-03-01/1153578567186_dd65b1ee58919c5d8665_192.png"
+            },
+            "is_published": true,
+            "last_updated_by": "U014ELP4Z9Q",
+            "unpublished_change_count": 0,
+            "app_id": "A014HH0GN7L",
+            "source": "app",
+            "billing_type": "complex",
+            "date_updated": 1715661162,
+            "is_billable": true,
+            "creation_source_type": 1,
+            "creation_source_id": "Wt06DWT50W57",
+            "last_published_version_id": "Wfv014JHDUP4K",
+            "last_published_date": "1677682235",
+            "trigger_ids": [
+              "Ft0481M8V85R"
+            ],
+            "is_sales_home_workflow": false,
+            "is_sales_elevate": false,
+            "trigger_types": [
+              {
+                "id": "Ftt0101",
+                "type": "shortcut"
+              }
+            ]
+          }
+        ],
+        "response_metadata": {
+          "next_cursor": "aWQ6MTE1MzU3ODU2NjMyMg=="
+        }
+      }
+    }
+  }
+}

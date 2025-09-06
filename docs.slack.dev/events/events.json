@@ -1,0 +1,1999 @@
+[
+  {
+    "name": "accounts_changed",
+    "description": "The list of accounts a user is signed into has changed",
+    "scopes": [
+
+    ],
+    "APIs": [
+      "RTM"
+    ]
+  },
+  {
+    "name": "app_mention",
+    "description": "Subscribe to only the message events that mention your app or bot",
+    "app_event": true,
+    "scopes": [
+
+    ],
+    "APIs": [
+      "Events"
+    ]
+  },
+  {
+    "name": "app_deleted",
+    "description": "User has deleted an app",
+    "app_event": true,
+    "scopes": [
+
+    ],
+    "APIs": [
+      "Events"
+    ]
+  },
+  {
+    "name": "app_home_opened",
+    "description": "User clicked into your App Home",
+    "app_event": true,
+    "scopes": [
+
+    ],
+    "APIs": [
+      "Events"
+    ]
+  },
+  {
+    "name": "app_installed",
+    "description": "User has installed an app",
+    "app_event": true,
+    "scopes": [
+
+    ],
+    "APIs": [
+      "Events"
+    ]
+  },
+  {
+    "name": "app_rate_limited",
+    "description": "Indicates your app's event subscriptions are being rate limited",
+    "automatic": true,
+    "app_event": true,
+    "scopes": [
+
+    ],
+    "APIs": [
+      "Events"
+    ]
+  },
+  {
+    "name": "app_requested",
+    "description": "User requested an app",
+    "automatic": true,
+    "app_event": true,
+    "scopes": [
+
+    ],
+    "APIs": [
+      "Events"
+    ]
+  },
+  {
+    "name": "app_uninstalled",
+    "description": "Your Slack app was uninstalled",
+    "app_event": true,
+    "scopes": [
+
+    ],
+    "APIs": [
+      "Events"
+    ]
+  },
+  {
+    "name": "app_uninstalled_team",
+    "description": "User has uninstalled an app",
+    "app_event": true,
+    "scopes": [
+
+    ],
+    "APIs": [
+      "Events"
+    ]
+  },
+  {
+    "name": "assistant_app_thread",
+    "description": "The message sent is an app assistant thread.",
+    "scopes": [
+      "channels:history",
+      "groups:history",
+      "im:history",
+      "mpim:history"
+    ],
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "assistant_thread_context_changed",
+    "description": "The context changed while an AI assistant thread was visible",
+    "app_event": true,
+    "scopes": [
+
+    ],
+    "APIs": [
+      "Events"
+    ]
+  },
+  {
+    "name": "assistant_thread_started",
+    "description": "An AI assistant thread was started",
+    "app_event": true,
+    "scopes": [
+
+    ],
+    "APIs": [
+      "Events"
+    ]
+  },
+  {
+    "name": "bot_added",
+    "description": "A bot user was added",
+    "scopes": [
+
+    ],
+    "APIs": [
+      "RTM"
+    ]
+  },
+  {
+    "name": "bot_changed",
+    "description": "A bot user was changed",
+    "scopes": [
+
+    ],
+    "APIs": [
+      "RTM"
+    ]
+  },
+  {
+    "name": "bot_message",
+    "scopes": [
+
+    ],
+    "description": "A message was posted by an integration",
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "call_rejected",
+    "description": "A call was rejected",
+    "scopes": [
+
+    ],
+    "APIs": [
+      "Events"
+    ]
+  },
+  {
+    "name": "channel_archive",
+    "description": "A channel was archived",
+    "scopes": [
+      "channels:read"
+    ],
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "channel_convert_to_private",
+    "scopes": [
+      "channels:history",
+      "groups:history",
+      "im:history",
+      "mpim:history"
+    ],
+    "description": "This channel was made private; now it can only be viewed or joined by invitation",
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "channel_convert_to_public",
+    "scopes": [
+
+    ],
+    "description": "This channel was made public; now any member in this workspace can see and join it",
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "channel_created",
+    "description": "A channel was created",
+    "bot_user_contexts": [
+      ""
+    ],
+    "scopes": [
+      "channels:read"
+    ],
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "channel_deleted",
+    "description": "A channel was deleted",
+    "scopes": [
+      "channels:read"
+    ],
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "channel_history_changed",
+    "description": "Bulk updates were made to a channel's history",
+    "scopes": [
+      "channels:history",
+      "groups:history",
+      "mpim:history"
+    ],
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "channel_id_changed",
+    "description": "A channel ID changed",
+    "scopes": [
+
+    ],
+    "APIs": [
+      "Events"
+    ]
+  },
+  {
+    "name": "channel_join",
+    "scopes": [
+
+    ],
+    "description": "A member joined a channel",
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "channel_joined",
+    "description": "You joined a channel",
+    "scopes": [
+
+    ],
+    "APIs": [
+      "RTM"
+    ]
+  },
+  {
+    "name": "channel_leave",
+    "scopes": [
+
+    ],
+    "description": "A member left a channel",
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "channel_left",
+    "description": "You left a channel",
+    "scopes": [
+      "channels:read"
+    ],
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "channel_marked",
+    "description": "Your channel read marker was updated",
+    "scopes": [
+
+    ],
+    "APIs": [
+      "RTM"
+    ]
+  },
+  {
+    "name": "channel_name",
+    "scopes": [
+
+    ],
+    "description": "A channel was renamed",
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "channel_posting_permissions",
+    "scopes": [
+      "channels:history",
+      "groups:history",
+      "im:history",
+      "mpim:history"
+    ],
+    "description": "The posting permissions for a channel changed",
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "channel_purpose",
+    "scopes": [
+
+    ],
+    "description": "A channel purpose was updated",
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "channel_topic",
+    "scopes": [
+
+    ],
+    "description": "A channel topic was updated",
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "channel_rename",
+    "description": "A channel was renamed",
+    "scopes": [
+      "channels:read"
+    ],
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "channel_shared",
+    "description": "A channel has been shared with an external workspace",
+    "scopes": [
+      "channels:read",
+      "groups:read"
+    ],
+    "APIs": [
+      "Events"
+    ]
+  },
+  {
+    "name": "channel_unarchive",
+    "description": "A channel was unarchived",
+    "scopes": [
+      "channels:read"
+    ],
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "channel_unshared",
+    "description": "A channel has been unshared with an external workspace",
+    "scopes": [
+      "channels:read",
+      "groups:read"
+    ],
+    "APIs": [
+      "Events"
+    ]
+  },
+  {
+    "name": "commands_changed",
+    "description": "A slash command has been added or changed",
+    "scopes": [
+
+    ],
+    "APIs": [
+      "RTM"
+    ]
+  },
+  {
+    "name": "document_mention",
+    "scopes": [
+      "channels:history",
+      "groups:history",
+      "im:history",
+      "mpim:history"
+    ],
+    "description": "A bot is mentioned in the body of a canvas",
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "dnd_updated",
+    "description": "Do not Disturb settings changed for the current user",
+    "scopes": [
+      "dnd:read"
+    ],
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "dnd_updated_user",
+    "description": "Do not Disturb settings changed for a member",
+    "scopes": [
+      "dnd:read"
+    ],
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "ekm_access_denied",
+    "scopes": [
+      "channels:history",
+      "groups:history",
+      "im:history",
+      "mpim:history"
+    ],
+    "description": "Message content redacted due to Enterprise Key Management (EKM)",
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "email_domain_changed",
+    "description": "The workspace email domain has changed",
+    "scopes": [
+      "team:read"
+    ],
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "emoji_changed",
+    "description": "A custom emoji has been added or changed",
+    "scopes": [
+      "emoji:read"
+    ],
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "external_org_migration_finished",
+    "description": "An enterprise org migration has finished on an external workspace",
+    "scopes": [
+
+    ],
+    "APIs": [
+      "RTM"
+    ]
+  },
+  {
+    "name": "external_org_migration_started",
+    "description": "An enterprise org migration has started on an external workspace",
+    "scopes": [
+
+    ],
+    "APIs": [
+      "RTM"
+    ]
+  },
+  {
+    "name": "file_change",
+    "description": "A file was changed",
+    "scopes": [
+      "files:read"
+    ],
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "file_comment",
+    "scopes": [
+
+    ],
+    "description": "A comment was added to a file",
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "file_comment_added",
+    "description": "A file comment was added",
+    "scopes": [
+      "files:read"
+    ],
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "file_comment_deleted",
+    "description": "A file comment was deleted",
+    "scopes": [
+      "files:read"
+    ],
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "file_comment_edited",
+    "description": "A file comment was edited",
+    "scopes": [
+      "files:read"
+    ],
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "file_created",
+    "description": "A file was created",
+    "scopes": [
+      "files:read"
+    ],
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "file_deleted",
+    "description": "A file was deleted",
+    "scopes": [
+      "files:read"
+    ],
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "file_mention",
+    "scopes": [
+
+    ],
+    "description": "A file was mentioned in a channel",
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "file_public",
+    "description": "A file was made public",
+    "scopes": [
+      "files:read"
+    ],
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "file_share",
+    "scopes": [
+
+    ],
+    "description": "A file was shared into a channel",
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "file_shared",
+    "description": "A file was shared",
+    "scopes": [
+      "files:read"
+    ],
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "file_unshared",
+    "description": "A file was unshared",
+    "scopes": [
+      "files:read"
+    ],
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "function_executed",
+    "description": "Your app function is executed as a step in a workflow",
+    "scopes": [
+
+    ],
+    "APIs": [
+      "Events"
+    ]
+  },
+  {
+    "name": "goodbye",
+    "description": "The server intends to close the connection soon",
+    "scopes": [
+
+    ],
+    "APIs": [
+      "RTM"
+    ]
+  },
+  {
+    "name": "grid_migration_finished",
+    "description": "An enterprise org migration has finished on this workspace",
+    "app_event": true,
+    "scopes": [
+
+    ],
+    "APIs": [
+      "Events"
+    ]
+  },
+  {
+    "name": "grid_migration_started",
+    "description": "An enterprise org migration has started on this workspace",
+    "app_event": true,
+    "scopes": [
+
+    ],
+    "APIs": [
+      "Events"
+    ]
+  },
+  {
+    "name": "group_archive",
+    "description": "A private channel was archived",
+    "scopes": [
+      "groups:read"
+    ],
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "group_close",
+    "description": "You closed a private channel",
+    "scopes": [
+      "groups:read"
+    ],
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "group_deleted",
+    "description": "A private channel was deleted",
+    "scopes": [
+      "groups:read"
+    ],
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "group_history_changed",
+    "description": "Bulk updates were made to a private channel's history",
+    "scopes": [
+      "groups:history"
+    ],
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "group_join",
+    "scopes": [
+
+    ],
+    "description": "A member joined a group",
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "group_joined",
+    "description": "You joined a private channel",
+    "scopes": [
+
+    ],
+    "APIs": [
+      "RTM"
+    ]
+  },
+  {
+    "name": "group_leave",
+    "scopes": [
+
+    ],
+    "description": "A member left a group",
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "group_left",
+    "description": "You left a private channel",
+    "scopes": [
+      "groups:read"
+    ],
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "group_marked",
+    "description": "A private channel read marker was updated",
+    "scopes": [
+
+    ],
+    "APIs": [
+      "RTM"
+    ]
+  },
+  {
+    "name": "group_name",
+    "scopes": [
+
+    ],
+    "description": "A group was renamed",
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "group_open",
+    "description": "You created a group DM",
+    "scopes": [
+      "groups:read"
+    ],
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "group_purpose",
+    "scopes": [
+
+    ],
+    "description": "A group purpose was updated",
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "group_rename",
+    "description": "A private channel was renamed",
+    "scopes": [
+      "groups:read"
+    ],
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "group_topic",
+    "scopes": [
+
+    ],
+    "description": "A group topic was updated",
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "group_unarchive",
+    "description": "A private channel was unarchived",
+    "scopes": [
+      "groups:read"
+    ],
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "hello",
+    "description": "The client has successfully connected to the server",
+    "bot_user_contexts": [
+      ""
+    ],
+    "scopes": [
+
+    ],
+    "APIs": [
+      "RTM"
+    ]
+  },
+  {
+    "name": "im_close",
+    "description": "You closed a DM",
+    "scopes": [
+      "im:read"
+    ],
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "im_created",
+    "description": "A DM was created",
+    "scopes": [
+      "im:read"
+    ],
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "im_history_changed",
+    "description": "Bulk updates were made to a DM's history",
+    "scopes": [
+      "im:history"
+    ],
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "im_marked",
+    "description": "A direct message read marker was updated",
+    "scopes": [
+
+    ],
+    "APIs": [
+      "RTM"
+    ]
+  },
+  {
+    "name": "im_open",
+    "description": "You opened a DM",
+    "scopes": [
+      "im:read"
+    ],
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "invite_requested",
+    "description": "User requested an invite",
+    "scopes": [
+      "admin.invites:read"
+    ],
+    "APIs": [
+      "Events"
+    ]
+  },
+  {
+    "name": "link_shared",
+    "description": "A message was posted containing one or more links relevant to your application",
+    "scopes": [
+      "links:read"
+    ],
+    "APIs": [
+      "Events"
+    ]
+  },
+  {
+    "name": "manual_presence_change",
+    "description": "You manually updated your presence",
+    "scopes": [
+
+    ],
+    "APIs": [
+      "RTM"
+    ]
+  },
+  {
+    "name": "me_message",
+    "scopes": [
+      "channels:history",
+      "groups:history",
+      "im:history",
+      "mpim:history"
+    ],
+    "description": "A /me message was sent",
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "member_joined_channel",
+    "description": "A user joined a public channel, private channel or MPDM",
+    "scopes": [
+      "channels:read",
+      "groups:read",
+      "mpim:read"
+    ],
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "member_left_channel",
+    "description": "A user left a public or private channel",
+    "scopes": [
+      "channels:read",
+      "groups:read"
+    ],
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "message",
+    "description": "A message was sent to a channel",
+    "subtypes": {
+      "assistant_app_thread": {
+        "scopes": [
+          "channels:history",
+          "groups:history",
+          "im:history",
+          "mpim:history"
+        ],
+        "description": "The message sent is an app assistant thread",
+        "APIs": [
+          "Events",
+          "RTM"
+        ]
+      },
+      "bot_message": {
+        "scopes": [
+
+        ],
+        "description": "A message was posted by an integration",
+        "APIs": [
+          "Events",
+          "RTM"
+        ]
+      },
+      "channel_archive": {
+        "scopes": [
+
+        ],
+        "description": "A channel was archived.",
+        "APIs": [
+          "Events"
+        ]
+      },
+      "channel_convert_to_private": {
+        "scopes": [
+          "channels:history",
+          "groups:history",
+          "im:history",
+          "mpim:history"
+        ],
+        "description": "This channel was made private. Now, it can only be viewed or joined by invitation",
+        "APIs": [
+          "Events",
+          "RTM"
+        ]
+      },
+      "channel_convert_to_public": {
+        "scopes": [
+
+        ],
+        "description": "This channel was made public. Any member in this workspace can see and join it",
+        "APIs": [
+          "Events",
+          "RTM"
+        ]
+      },
+      "channel_join": {
+        "scopes": [
+
+        ],
+        "description": "A member joined a channel",
+        "APIs": [
+          "Events",
+          "RTM"
+        ]
+      },
+      "channel_leave": {
+        "scopes": [
+
+        ],
+        "description": "A member left a channel",
+        "APIs": [
+          "Events",
+          "RTM"
+        ]
+      },
+      "channel_name": {
+        "scopes": [
+
+        ],
+        "description": "A channel was renamed",
+        "APIs": [
+          "Events",
+          "RTM"
+        ]
+      },
+      "channel_posting_permission": {
+        "scopes": [
+          "channels:history",
+          "groups:history",
+          "im:history",
+          "mpim:history"
+        ],
+        "description": "The posting permissions for a channel changed",
+        "APIs": [
+          "Events",
+          "RTM"
+        ]
+      },
+      "channel_purpose": {
+        "scopes": [
+
+        ],
+        "description": "A channel purpose was updated",
+        "APIs": [
+          "Events",
+          "RTM"
+        ]
+      },
+      "channel_topic": {
+        "scopes": [
+
+        ],
+        "description": "A channel topic was updated",
+        "APIs": [
+          "Events",
+          "RTM"
+        ]
+      },
+      "channel_unarchive": {
+        "scopes": [
+
+        ],
+        "description": "A channel was unarchived",
+        "APIs": [
+          "RTM"
+        ]
+      },
+      "document_mention": {
+        "scopes": [
+          "channels:history",
+          "groups:history",
+          "im:history",
+          "mpim:history"
+        ],
+        "description": "A bot is mentioned in the body of a canvas",
+        "APIs": [
+          "Events",
+          "RTM"
+        ]
+      },
+      "ekm_access_denied": {
+        "scopes": [
+          "channels:history",
+          "groups:history",
+          "im:history",
+          "mpim:history"
+        ],
+        "description": "Message content redacted due to Enterprise Key Management (EKM)",
+        "APIs": [
+          "Events",
+          "RTM"
+        ]
+      },
+      "file_comment": {
+        "scopes": [
+
+        ],
+        "description": "A comment was added to a file",
+        "APIs": [
+          "Events",
+          "RTM"
+        ]
+      },
+      "file_mention": {
+        "scopes": [
+
+        ],
+        "description": "A file was mentioned in a channel",
+        "APIs": [
+          "Events",
+          "RTM"
+        ]
+      },
+      "file_share": {
+        "scopes": [
+
+        ],
+        "description": "A file was shared into a channel",
+        "APIs": [
+          "Events",
+          "RTM"
+        ]
+      },
+      "group_archive": {
+        "scopes": [
+
+        ],
+        "description": "A group was archived",
+        "APIs": [
+          "RTM"
+        ]
+      },
+      "group_join": {
+        "scopes": [
+
+        ],
+        "description": "A member joined a group",
+        "APIs": [
+          "Events",
+          "RTM"
+        ]
+      },
+      "group_leave": {
+        "scopes": [
+
+        ],
+        "description": "A member left a group",
+        "APIs": [
+          "Events",
+          "RTM"
+        ]
+      },
+      "group_name": {
+        "scopes": [
+
+        ],
+        "description": "A group was renamed",
+        "APIs": [
+          "Events",
+          "RTM"
+        ]
+      },
+      "group_purpose": {
+        "scopes": [
+
+        ],
+        "description": "A group purpose was updated",
+        "APIs": [
+          "Events",
+          "RTM"
+        ]
+      },
+      "group_topic": {
+        "scopes": [
+
+        ],
+        "description": "A group topic was updated",
+        "APIs": [
+          "Events",
+          "RTM"
+        ]
+      },
+      "group_unarchive": {
+        "scopes": [
+
+        ],
+        "description": "A group was unarchived",
+        "APIs": [
+          "RTM"
+        ]
+      },
+      "me_message": {
+        "scopes": [
+          "channels:history",
+          "groups:history",
+          "im:history",
+          "mpim:history"
+        ],
+        "description": "A /me message was sent",
+        "APIs": [
+          "Events",
+          "RTM"
+        ]
+      },
+      "message_changed": {
+        "scopes": [
+          "channels:history",
+          "groups:history",
+          "im:history",
+          "mpim:history"
+        ],
+        "description": "A message was changed",
+        "APIs": [
+          "Events",
+          "RTM"
+        ]
+      },
+      "message_deleted": {
+        "scopes": [
+          "channels:history",
+          "groups:history",
+          "im:history",
+          "mpim:history"
+        ],
+        "description": "A message was deleted",
+        "APIs": [
+          "Events",
+          "RTM"
+        ]
+      },
+      "message_locked": {
+        "scopes": [
+          "channels:history",
+          "groups:history",
+          "im:history",
+          "mpim:history"
+        ],
+        "description": "A message thread was locked",
+        "APIs": [
+          "Events",
+          "RTM"
+        ]
+      },
+      "message_replied": {
+        "scopes": [
+          "channels:history",
+          "groups:history",
+          "im:history",
+          "mpim:history"
+        ],
+        "description": "A message thread received a reply",
+        "APIs": [
+          "Events",
+          "RTM"
+        ]
+      },
+      "pinned_item": {
+        "scopes": [
+
+        ],
+        "description": "An item was pinned in a channel",
+        "APIs": [
+          "Events",
+          "RTM"
+        ]
+      },
+      "reminder_add": {
+        "scopes": [
+          "channels:history",
+          "groups:history",
+          "im:history",
+          "mpim:history"
+        ],
+        "description": "A reminder was added to the channel",
+        "APIs": [
+          "Events",
+          "RTM"
+        ]
+      },
+      "reply_broadcast": {
+        "scopes": [
+          "channels:history",
+          "groups:history",
+          "im:history",
+          "mpim:history"
+        ],
+        "deprecated": true,
+        "description": "(No longer served) A message thread's reply was broadcast to a channel",
+        "APIs": [
+          "Events",
+          "RTM"
+        ]
+      },
+      "thread_broadcast": {
+        "scopes": [
+          "channels:history",
+          "groups:history",
+          "im:history",
+          "mpim:history"
+        ],
+        "description": "A message thread's reply was broadcast to a channel",
+        "APIs": [
+          "Events",
+          "RTM"
+        ]
+      },
+      "unpinned_item": {
+        "scopes": [
+
+        ],
+        "description": "An item was unpinned from a channel",
+        "APIs": [
+          "Events",
+          "RTM"
+        ]
+      }
+    },
+    "scopes": [
+      "channels:history",
+      "groups:history",
+      "im:history",
+      "mpim:history"
+    ],
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "message.app_home",
+    "description": "A user sent a message to your Slack app",
+    "app_permissions_event": true,
+    "scopes": [
+
+    ],
+    "APIs": [
+      "Events"
+    ]
+  },
+  {
+    "name": "message_changed",
+    "scopes": [
+      "channels:history",
+      "groups:history",
+      "im:history",
+      "mpim:history"
+    ],
+    "description": "A message was changed",
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "message.channels",
+    "description": "A message was posted to a channel",
+    "scopes": [
+      "channels:history"
+    ],
+    "APIs": [
+      "Events"
+    ]
+  },
+  {
+    "name": "message_deleted",
+    "scopes": [
+      "channels:history",
+      "groups:history",
+      "im:history",
+      "mpim:history"
+    ],
+    "description": "A message was deleted",
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "message.groups",
+    "description": "A message was posted to a private channel",
+    "scopes": [
+      "groups:history"
+    ],
+    "APIs": [
+      "Events"
+    ]
+  },
+  {
+    "name": "message.im",
+    "description": "A message was posted in a direct message channel",
+    "scopes": [
+      "im:history"
+    ],
+    "APIs": [
+      "Events"
+    ]
+  },
+  {
+    "name": "message.mpim",
+    "description": "A message was posted in a multiparty direct message channel",
+    "scopes": [
+      "mpim:history"
+    ],
+    "APIs": [
+      "Events"
+    ]
+  },
+  {
+    "name": "message_metadata_deleted",
+    "description": "Message metadata was deleted",
+    "scopes": [
+      "metadata.message:read"
+    ],
+    "APIs": [
+      "Events"
+    ]
+  },
+  {
+    "name": "message_metadata_posted",
+    "description": "Message metadata was posted",
+    "scopes": [
+      "metadata.message:read"
+    ],
+    "APIs": [
+      "Events"
+    ]
+  },
+  {
+    "name": "message_metadata_updated",
+    "description": "Message metadata was updated",
+    "scopes": [
+      "metadata.message:read"
+    ],
+    "APIs": [
+      "Events"
+    ]
+  },
+  {
+    "name": "message_replied",
+    "scopes": [
+      "channels:history",
+      "groups:history",
+      "im:history",
+      "mpim:history"
+    ],
+    "description": "A message thread received a reply",
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "pin_added",
+    "description": "A pin was added to a channel",
+    "scopes": [
+      "pins:read"
+    ],
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "pin_removed",
+    "description": "A pin was removed from a channel",
+    "scopes": [
+      "pins:read"
+    ],
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "pinned_item",
+    "scopes": [
+
+    ],
+    "description": "An item was pinned in a channel",
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "pref_change",
+    "description": "You have updated your preferences",
+    "scopes": [
+
+    ],
+    "APIs": [
+      "RTM"
+    ]
+  },
+  {
+    "name": "presence_change",
+    "description": "A member's presence changed",
+    "scopes": [
+
+    ],
+    "APIs": [
+      "RTM"
+    ]
+  },
+  {
+    "name": "presence_query",
+    "description": "Determine the current presence status for a list of users",
+    "scopes": [
+
+    ],
+    "APIs": [
+      "RTM"
+    ]
+  },
+  {
+    "name": "presence_sub",
+    "description": "Subscribe to presence events for the specified users",
+    "scopes": [
+
+    ],
+    "APIs": [
+      "RTM"
+    ]
+  },
+  {
+    "name": "reaction_added",
+    "description": "A member has added an emoji reaction to an item",
+    "scopes": [
+      "reactions:read"
+    ],
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "reaction_removed",
+    "description": "A member removed an emoji reaction",
+    "scopes": [
+      "reactions:read"
+    ],
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "reconnect_url",
+    "description": "Experimental",
+    "scopes": [
+
+    ],
+    "APIs": [
+      "RTM"
+    ]
+  },
+  {
+    "name": "reminder_add",
+    "scopes": [
+      "channels:history",
+      "groups:history",
+      "im:history",
+      "mpim:history"
+    ],
+    "description": "A reminder was added to the channel",
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "reply_broadcast",
+    "scopes": [
+      "channels:history",
+      "groups:history",
+      "im:history",
+      "mpim:history"
+    ],
+    "deprecated": true,
+    "description": "(No longer served) A message thread's reply was broadcast to a channel",
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "shared_channel_invite_accepted",
+    "description": "A shared channel invited was accepted",
+    "scopes": [
+
+    ],
+    "APIs": [
+      "Events"
+    ]
+  },
+  {
+    "name": "shared_channel_invite_approved",
+    "description": "A shared channel invited was approved",
+    "scopes": [
+
+    ],
+    "APIs": [
+      "Events"
+    ]
+  },
+  {
+    "name": "shared_channel_invite_declined",
+    "description": "A shared channel invited was declined",
+    "scopes": [
+
+    ],
+    "APIs": [
+      "Events"
+    ]
+  },
+  {
+    "name": "shared_channel_invite_received",
+    "description": "A shared channel invited was sent to a Slack user",
+    "scopes": [
+
+    ],
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "shared_channel_invite_requested",
+    "description": "A shared channel invited was requested",
+    "scopes": [
+
+    ],
+    "APIs": [
+      "Events"
+    ]
+  },
+  {
+    "name": "star_added",
+    "description": "A member has saved an item for later or starred an item",
+    "scopes": [
+      "stars:read"
+    ],
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "star_removed",
+    "description": "A member has removed an item saved for later or starred an item",
+    "scopes": [
+      "stars:read"
+    ],
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "subteam_created",
+    "description": "A User Group has been added to the workspace",
+    "scopes": [
+      "usergroups:read"
+    ],
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "subteam_members_changed",
+    "description": "The membership of an existing User Group has changed",
+    "scopes": [
+      "usergroups:read"
+    ],
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "subteam_self_added",
+    "description": "You have been added to a User Group",
+    "scopes": [
+      "usergroups:read"
+    ],
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "subteam_self_removed",
+    "description": "You have been removed from a User Group",
+    "scopes": [
+      "usergroups:read"
+    ],
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "subteam_updated",
+    "description": "An existing User Group has been updated or its members changed",
+    "scopes": [
+      "usergroups:read"
+    ],
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "team_access_granted",
+    "description": "Access to a set of teams was granted to your org app",
+    "scopes": [
+
+    ],
+    "APIs": [
+      "Events"
+    ]
+  },
+  {
+    "name": "team_access_revoked",
+    "scopes": [
+
+    ],
+    "description": "Access to a set of teams was revoked from your org app",
+    "APIs": [
+      "Events"
+    ]
+  },
+  {
+    "name": "team_domain_change",
+    "description": "The workspace domain has changed",
+    "scopes": [
+      "team:read"
+    ],
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "team_join",
+    "description": "A new member has joined",
+    "scopes": [
+      "users:read"
+    ],
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "team_migration_started",
+    "description": "The workspace is being migrated between servers",
+    "scopes": [
+
+    ],
+    "APIs": [
+      "RTM"
+    ]
+  },
+  {
+    "name": "team_plan_change",
+    "description": "The account billing plan has changed",
+    "scopes": [
+
+    ],
+    "APIs": [
+      "RTM"
+    ]
+  },
+  {
+    "name": "team_pref_change",
+    "description": "A preference has been updated",
+    "scopes": [
+
+    ],
+    "APIs": [
+      "RTM"
+    ]
+  },
+  {
+    "name": "team_profile_change",
+    "description": "The workspace profile fields have been updated",
+    "scopes": [
+
+    ],
+    "APIs": [
+      "RTM"
+    ]
+  },
+  {
+    "name": "team_profile_delete",
+    "description": "The workspace profile fields have been deleted",
+    "scopes": [
+
+    ],
+    "APIs": [
+      "RTM"
+    ]
+  },
+  {
+    "name": "team_profile_reorder",
+    "description": "The workspace profile fields have been reordered",
+    "scopes": [
+
+    ],
+    "APIs": [
+      "RTM"
+    ]
+  },
+  {
+    "name": "team_rename",
+    "description": "The workspace name has changed",
+    "scopes": [
+      "team:read"
+    ],
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "thread_broadcast",
+    "scopes": [
+      "channels:history",
+      "groups:history",
+      "im:history",
+      "mpim:history"
+    ],
+    "description": "A message thread's reply was broadcast to a channel",
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "tokens_revoked",
+    "description": "API tokens for your app were revoked",
+    "app_event": true,
+    "scopes": [
+
+    ],
+    "APIs": [
+      "Events"
+    ]
+  },
+  {
+    "name": "unpinned_item",
+    "scopes": [
+
+    ],
+    "description": "An item was unpinned from a channel",
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "url_verification",
+    "description": "Verifies ownership of an Events API Request URL",
+    "automatic": true,
+    "app_event": true,
+    "scopes": [
+
+    ],
+    "APIs": [
+      "Events"
+    ]
+  },
+  {
+    "name": "user_change",
+    "description": "A member's data has changed",
+    "scopes": [
+      "users:read"
+    ],
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "user_huddle_changed",
+    "description": "A user's huddle status has changed",
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "user_typing",
+    "description": "A channel member is typing a message",
+    "scopes": [
+
+    ],
+    "APIs": [
+      "RTM"
+    ]
+  },
+  {
+    "name": "workflow_deleted",
+    "description": "A workflow that contains a step supported by your app was deleted",
+    "scopes": [
+
+    ],
+    "APIs": [
+      "Events"
+    ]
+  },
+  {
+    "name": "workflow_published",
+    "description": "A workflow that contains a step supported by your app was published",
+    "scopes": [
+
+    ],
+    "APIs": [
+      "Events"
+    ]
+  },
+  {
+    "name": "workflow_step_deleted",
+    "description": "A workflow step supported by your app was removed from a workflow",
+    "scopes": [
+      "pins:read"
+    ],
+    "APIs": [
+      "Events"
+    ]
+  },
+  {
+    "name": "workflow_step_execute",
+    "description": "A workflow step supported by your app should execute",
+    "scopes": [
+
+    ],
+    "APIs": [
+      "Events"
+    ]
+  },
+  {
+    "name": "workflow_unpublished",
+    "description": "A workflow that contains a step supported by your app was unpublished",
+    "scopes": [
+
+    ],
+    "APIs": [
+      "Events"
+    ]
+  }
+]

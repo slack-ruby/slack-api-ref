@@ -1,0 +1,282 @@
+{
+  "desc": "Lists requests to add external users to channels with ability to filter.",
+  "http_method": "POST",
+  "scope": "post",
+  "scope_by_token_type": {
+    "granular_bot": "conversations.connect:manage"
+  },
+  "rate_limits": "t2",
+  "json_input_supported": true,
+  "args": {
+    "type": "object",
+    "required": [
+      "token"
+    ],
+    "properties": {
+      "token": {
+        "type": "string",
+        "subtype": "auth",
+        "desc": "Authentication token bearing required scopes. Tokens should be passed as an HTTP Authorization header or alternatively, as a POST parameter.",
+        "example": "xxxx-xxxxxxxxx-xxxx"
+      },
+      "user_id": {
+        "desc": "Optional filter to return invitation requests for the inviting user.",
+        "schema": "enterprise_user_id"
+      },
+      "include_expired": {
+        "type": "boolean",
+        "default": false,
+        "desc": "When true expired invitation requests will be returned, otherwise they will be excluded"
+      },
+      "include_approved": {
+        "type": "boolean",
+        "default": false,
+        "desc": "When true approved invitation requests will be returned, otherwise they will be excluded"
+      },
+      "include_denied": {
+        "type": "boolean",
+        "default": false,
+        "desc": "When true denied invitation requests will be returned, otherwise they will be excluded"
+      },
+      "invite_ids": {
+        "type": "array",
+        "desc": "An optional list of invitation ids to look up",
+        "minItems": 1,
+        "maxItems": 1000,
+        "items": {
+          "schema": "invite_id"
+        }
+      },
+      "limit": {
+        "type": "integer",
+        "desc": "The number of items to return. Must be between 1 - 1000 (inclusive).",
+        "default": 200,
+        "minimum": 1,
+        "maximum": 1000
+      },
+      "cursor": {
+        "desc": "Paginate through collections of data by setting the `cursor` parameter to a `next_cursor` attribute returned by a previous request's `response_metadata`. See [pagination](/apis/web-api/pagination) for more detail.",
+        "example": "bG9nX2lkOjc5NjQ1NA==",
+        "type": "string"
+      }
+    }
+  },
+  "output": {
+    "type": "object",
+    "required": [
+      "invite_requests"
+    ],
+    "properties": {
+      "invite_requests": {
+        "type": "array",
+        "items": {
+          "schema": "requested-shared-invite"
+        }
+      },
+      "response_metadata": {
+        "desc": "Contains cursor to next page. Present only when next page exists.",
+        "schema": "response_metadata_new"
+      }
+    }
+  },
+  "errors": {
+    "restricted_action": {
+      "desc": "A team preference prevents the user from listing invitation requests."
+    },
+    "invalid_cursor": {
+      "desc": "The provided cursor is not valid."
+    },
+    "internal_error": {
+      "desc": "Something unexpected went wrong."
+    },
+    "not_implemented": {
+      "desc": "its not implemented!  TODO: remove me"
+    }
+  },
+  "examples": {
+    "success": {
+      "url": "/api/conversations.requestSharedInvite.list?token=YOUR_TOKEN",
+      "description": "Typical success response",
+      "example": {
+        "ok": true,
+        "invite_requests": [
+          {
+            "date_last_updated": 1722372331,
+            "id": "I12345",
+            "date_created": 1722372331,
+            "expires_at": 1723581931,
+            "inviting_team": {
+              "id": "E12345",
+              "name": "Acme corp",
+              "icon": {
+                "image_34": "https://.../avatar/avatars-teams/ava_0011-34.png",
+                "image_44": "https://.../avatar/avatars-teams/ava_0011-44.png",
+                "image_68": "https://.../avatar/avatars-teams/ava_0011-68.png",
+                "image_88": "https://.../avatar/avatars-teams/ava_0011-88.png",
+                "image_102": "https://.../avatar/avatars-teams/ava_0011-102.png",
+                "image_132": "https://.../avatar/avatars-teams/ava_0011-132.png",
+                "image_230": "https://.../avatar/avatars-teams/ava_0011-230.png",
+                "image_default": true
+              },
+              "avatar_base_url": "https://dev.slack.com/avatarsource/",
+              "is_verified": false,
+              "domain": "acme-corp",
+              "date_created": 1637947110,
+              "requires_sponsorship": false
+            },
+            "inviting_user": {
+              "id": "U12345",
+              "team_id": "E12345",
+              "name": "acme-corp-user",
+              "updated": 1721741979,
+              "who_can_share_contact_card": "EVERYONE",
+              "profile": {
+                "real_name": "acme-corp-user",
+                "display_name": "acme-corp-user",
+                "real_name_normalized": "acme-corp-user",
+                "display_name_normalized": "acme-corp-user",
+                "team": "E12345",
+                "avatar_hash": "hash",
+                "email": "acme-corp-user@acme-corp.com",
+                "image_24": "https://secure.gravatar.com/avatar/...0001-24.png",
+                "image_32": "https://secure.gravatar.com/avatar/...0001-32.png",
+                "image_48": "https://secure.gravatar.com/avatar/...0001-48.png",
+                "image_72": "https://secure.gravatar.com/avatar/...0001-72.png",
+                "image_192": "https://secure.gravatar.com/avatar/...0001-192.png",
+                "image_512": "https://secure.gravatar.com/avatar/...0001-512.png"
+              }
+            },
+            "is_external_limited": false,
+            "is_sponsored": true,
+            "recipient_email": "external-user@other-corp.com",
+            "target_user": {
+              "recipient_email": "external-user1@other-corp.com",
+              "recipient_user_id": "U123456"
+            }
+          },
+          {
+            "id": "I12345",
+            "date_created": 1722372331,
+            "expires_at": 1723581931,
+            "date_denied": 1723581901,
+            "inviting_team": {
+              "id": "E12345",
+              "name": "Acme Corp.",
+              "icon": {
+                "image_34": "https://.../avatars-teams/ava_0011-34.png",
+                "image_44": "https://.../avatars-teams/ava_0011-44.png",
+                "image_68": "https://.../avatars-teams/ava_0011-68.png",
+                "image_88": "https://.../avatars-teams/ava_0011-88.png",
+                "image_102": "https://.../avatars-teams/ava_0011-102.png",
+                "image_132": "https://.../avatars-teams/ava_0011-132.png",
+                "image_230": "https://.../avatars-teams/ava_0011-230.png",
+                "image_default": true
+              },
+              "avatar_base_url": "https://dev.slack.com/avatarsource/",
+              "is_verified": false,
+              "domain": "acme-corp",
+              "date_created": 1637947110,
+              "requires_sponsorship": false
+            },
+            "inviting_user": {
+              "id": "U12345",
+              "team_id": "E12345",
+              "name": "acme-corp-user",
+              "updated": 1721741979,
+              "who_can_share_contact_card": "EVERYONE",
+              "profile": {
+                "real_name": "acme-corp-user",
+                "display_name": "acme-corp-user",
+                "real_name_normalized": "acme-corp-user",
+                "display_name_normalized": "acme-corp-user",
+                "team": "E12345",
+                "avatar_hash": "hash",
+                "email": "acme-corp-user@acme-corp.com",
+                "image_24": "https://secure.gravatar.com/avatar/...0001-24.png",
+                "image_32": "https://secure.gravatar.com/avatar/...0001-32.png",
+                "image_48": "https://secure.gravatar.com/avatar/...0001-48.png",
+                "image_72": "https://secure.gravatar.com/avatar/...0001-72.png",
+                "image_192": "https://secure.gravatar.com/avatar/...0001-192.png",
+                "image_512": "https://secure.gravatar.com/avatar/...0001-512.png"
+              }
+            },
+            "is_external_limited": false,
+            "channel": {
+              "id": "C12345",
+              "is_im": false,
+              "is_private": true,
+              "date_created": 1721764754,
+              "name": "channel-name",
+              "connections": [
+                {
+                  "team": {
+                    "id": "E12345",
+                    "name": "Acme Corp.",
+                    "icon": {
+                      "image_34": "https://.../ava_0011-34.png",
+                      "image_44": "https://.../ava_0011-44.png",
+                      "image_68": "https://.../ava_0011-68.png",
+                      "image_88": "https://.../ava_0011-88.png",
+                      "image_102": "https://.../ava_0011-102.png",
+                      "image_132": "https://.../ava_0011-132.png",
+                      "image_230": "https://.../ava_0011-230.png",
+                      "image_default": true
+                    },
+                    "avatar_base_url": "https://dev.slack.com/avatarsource/",
+                    "is_verified": false,
+                    "domain": "acme-corp",
+                    "date_created": 1637947110,
+                    "requires_sponsorship": false
+                  },
+                  "is_private": true
+                }
+              ],
+              "pending_connections": [
+
+              ],
+              "previous_connections": [
+
+              ]
+            },
+            "target_user": {
+              "recipient_email": "external-user@other-corp.com"
+            },
+            "reviewing_user": {
+              "id": "U12345",
+              "team_id": "E12345",
+              "name": "acme-corp-user",
+              "updated": 1721741979,
+              "who_can_share_contact_card": "EVERYONE",
+              "profile": {
+                "real_name": "acme-corp-user",
+                "display_name": "acme-corp-user",
+                "real_name_normalized": "acme-corp-user",
+                "display_name_normalized": "acme-corp-user",
+                "team": "E12345",
+                "avatar_hash": "hash",
+                "email": "acme-corp-user@acme-corp.com",
+                "image_24": "https://secure.gravatar.com/avatar/...0001-24.png",
+                "image_32": "https://secure.gravatar.com/avatar/...0001-32.png",
+                "image_48": "https://secure.gravatar.com/avatar/...0001-48.png",
+                "image_72": "https://secure.gravatar.com/avatar/...0001-72.png",
+                "image_192": "https://secure.gravatar.com/avatar/...0001-192.png",
+                "image_512": "https://secure.gravatar.com/avatar/...0001-512.png"
+              }
+            }
+          }
+        ],
+        "response_metadata": {
+          "next_cursor": "aWQ6STAxNkszN0FBQUU="
+        }
+      }
+    },
+    "error": {
+      "url": "/api/conversations.requestSharedInvite.list?token=INVALID_TOKEN",
+      "description": "Typical error response",
+      "example": {
+        "ok": false,
+        "error": "invalid_cursor"
+      }
+    }
+  }
+}

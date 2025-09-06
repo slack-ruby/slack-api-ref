@@ -1,0 +1,111 @@
+{
+  "desc": "Gets information about a user.",
+  "http_method": "GET",
+  "scope": "users:read",
+  "slack_connect_workspaces_allowed": true,
+  "rate_limits": "t4",
+  "args": {
+    "type": "object",
+    "required": [
+      "token",
+      "user"
+    ],
+    "properties": {
+      "token": {
+        "type": "string",
+        "subtype": "auth",
+        "desc": "Authentication token bearing required scopes. Tokens should be passed as an HTTP Authorization header or alternatively, as a POST parameter.",
+        "example": "xxxx-xxxxxxxxx-xxxx"
+      },
+      "include_locale": {
+        "desc": "Set this to `true` to receive the locale for this user. Defaults to `false`",
+        "type": "boolean"
+      },
+      "user": {
+        "desc": "User to get info on",
+        "type": "string",
+        "subtype": "user"
+      }
+    }
+  },
+  "output": {
+    "type": "object",
+    "properties": {
+      "user": {
+        "schema": "user"
+      },
+      "users": {
+        "items": {
+          "schema": "user"
+        },
+        "type": "array"
+      }
+    }
+  },
+  "errors": {
+    "too_many_users": {
+      "desc": "Too many users."
+    },
+    "user_not_found": {
+      "desc": "Value passed for `user` was invalid."
+    },
+    "user_not_visible": {
+      "desc": "The requested user is not visible to the calling user"
+    }
+  },
+  "examples": {
+    "success": {
+      "url": "/api/users.info?token=YOUR_TOKEN",
+      "description": "Typical success response",
+      "example": {
+        "ok": true,
+        "user": {
+          "id": "W012A3CDE",
+          "team_id": "T012AB3C4",
+          "name": "spengler",
+          "deleted": false,
+          "color": "9f69e7",
+          "real_name": "Egon Spengler",
+          "tz": "America/Los_Angeles",
+          "tz_label": "Pacific Daylight Time",
+          "tz_offset": -25200,
+          "profile": {
+            "avatar_hash": "ge3b51ca72de",
+            "status_text": "Print is dead",
+            "status_emoji": ":books:",
+            "real_name": "Egon Spengler",
+            "display_name": "spengler",
+            "real_name_normalized": "Egon Spengler",
+            "display_name_normalized": "spengler",
+            "email": "spengler@ghostbusters.example.com",
+            "image_original": "https://.../avatar/e3b51ca72dee4ef87916ae2b9240df50.jpg",
+            "image_24": "https://.../avatar/e3b51ca72dee4ef87916ae2b9240df50.jpg",
+            "image_32": "https://.../avatar/e3b51ca72dee4ef87916ae2b9240df50.jpg",
+            "image_48": "https://.../avatar/e3b51ca72dee4ef87916ae2b9240df50.jpg",
+            "image_72": "https://.../avatar/e3b51ca72dee4ef87916ae2b9240df50.jpg",
+            "image_192": "https://.../avatar/e3b51ca72dee4ef87916ae2b9240df50.jpg",
+            "image_512": "https://.../avatar/e3b51ca72dee4ef87916ae2b9240df50.jpg",
+            "team": "T012AB3C4"
+          },
+          "is_admin": true,
+          "is_owner": false,
+          "is_primary_owner": false,
+          "is_restricted": false,
+          "is_ultra_restricted": false,
+          "is_bot": false,
+          "updated": 1502138686,
+          "is_app_user": false,
+          "has_2fa": false
+        }
+      }
+    },
+    "error": {
+      "url": "/api/users.info?token=INVALID_TOKEN",
+      "description": "Typical error response",
+      "example": {
+        "ok": false,
+        "error": "user_not_found"
+      }
+    }
+  }
+}

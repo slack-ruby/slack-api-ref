@@ -1,0 +1,296 @@
+{
+  "desc": "Searches for files matching a query.",
+  "http_method": "GET",
+  "scope": "search:read",
+  "slack_connect_workspaces_allowed": true,
+  "rate_limits": "t2",
+  "args": {
+    "type": "object",
+    "required": [
+      "token",
+      "query"
+    ],
+    "properties": {
+      "token": {
+        "type": "string",
+        "subtype": "auth",
+        "desc": "Authentication token bearing required scopes. Tokens should be passed as an HTTP Authorization header or alternatively, as a POST parameter.",
+        "example": "xxxx-xxxxxxxxx-xxxx"
+      },
+      "count": {
+        "default": 20,
+        "type": "integer",
+        "subtype": "paging"
+      },
+      "highlight": {
+        "desc": "Pass a value of `true` to enable query highlight markers (see below).",
+        "example": "true",
+        "type": "boolean"
+      },
+      "page": {
+        "default": 1,
+        "type": "integer",
+        "subtype": "paging"
+      },
+      "query": {
+        "desc": "Search query.",
+        "example": "pickleface",
+        "type": "string"
+      },
+      "sort": {
+        "default": "score",
+        "desc": "Return matches sorted by either `score` or `timestamp`.",
+        "example": "timestamp",
+        "type": "string"
+      },
+      "sort_dir": {
+        "default": "desc",
+        "desc": "Change sort direction to ascending (`asc`) or descending (`desc`).",
+        "example": "asc",
+        "type": "string",
+        "enum": [
+          "asc",
+          "desc"
+        ]
+      },
+      "team_id": {
+        "type": "string",
+        "subtype": "team",
+        "desc": "encoded team id to search in, required if org token is used"
+      }
+    }
+  },
+  "output": {
+    "type": "object",
+    "properties": {
+      "files": {
+        "type": "object",
+        "properties": {
+          "pagination": {
+            "type": "object",
+            "properties": {
+              "last": {
+                "type": "integer",
+                "example": 2,
+                "desc": "Last result id"
+              },
+              "warnings": {
+                "type": "array",
+                "optional": true,
+                "items": {
+                  "type": "string"
+                }
+              },
+              "total_count": {
+                "type": "integer",
+                "example": 2,
+                "desc": "Total count of results"
+              },
+              "page_count": {
+                "type": "integer",
+                "example": 1,
+                "desc": "Number of pages"
+              },
+              "per_page": {
+                "type": "integer",
+                "example": 20,
+                "desc": "Number of results per page"
+              },
+              "page": {
+                "type": "integer",
+                "example": 1,
+                "desc": "Current page"
+              },
+              "first": {
+                "type": "integer",
+                "example": 1,
+                "desc": "First result id"
+              }
+            }
+          },
+          "matches": {
+            "minItems": 0,
+            "type": "array"
+          },
+          "paging": {
+            "type": "object",
+            "properties": {
+              "count": {
+                "type": "integer",
+                "example": 20,
+                "desc": "Number of results per page"
+              },
+              "pages": {
+                "type": "integer",
+                "example": 1,
+                "desc": "Number of pages"
+              },
+              "total": {
+                "type": "integer",
+                "example": 2,
+                "desc": "Number of results"
+              },
+              "page": {
+                "type": "integer",
+                "example": 1,
+                "desc": "Current page"
+              },
+              "warnings": {
+                "type": "array",
+                "optional": true,
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "all_stop_words": {
+            "optional": true,
+            "type": "boolean"
+          },
+          "total": {
+            "type": "integer",
+            "example": 351,
+            "desc": "Total number of file search results."
+          },
+          "query_too_long": {
+            "optional": true,
+            "type": "boolean"
+          }
+        }
+      },
+      "callstack": {
+        "type": "string",
+        "optional": true
+      },
+      "users": {
+        "type": "object",
+        "optional": true
+      },
+      "teams": {
+        "type": "object",
+        "optional": true
+      },
+      "channels": {
+        "type": "object",
+        "optional": true
+      },
+      "ims": {
+        "type": "object",
+        "optional": true
+      },
+      "groups": {
+        "type": "object",
+        "optional": true
+      },
+      "query": {
+        "optional": false,
+        "type": "string",
+        "example": "pickleface",
+        "desc": "Search query."
+      },
+      "ignored_exclude_bots_pref": {
+        "type": "boolean",
+        "optional": true
+      }
+    }
+  },
+  "examples": {
+    "success": {
+      "url": "/api/search.files?token=YOUR_TOKEN",
+      "description": "Typical success response",
+      "example": {
+        "files": {
+          "matches": [
+            {
+              "channels": [
+
+              ],
+              "comments_count": 1,
+              "created": 1507850315,
+              "deanimate_gif": "https://files.slack.com/files-tmb/T2U81E2BB-F7H0D7ZBB-21624821e6/computer_deanimate_gif.png",
+              "display_as_bot": false,
+              "editable": false,
+              "external_type": "",
+              "filetype": "gif",
+              "groups": [
+
+              ],
+              "id": "F7H0D7ZBB",
+              "image_exif_rotation": 1,
+              "ims": [
+
+              ],
+              "is_external": false,
+              "is_public": true,
+              "mimetype": "image/gif",
+              "mode": "hosted",
+              "name": "computer.gif",
+              "original_h": 313,
+              "original_w": 500,
+              "permalink": "https://eventsdemo.slack.com/files/U2U85N1RZ/F7H0D7ZBB/computer.gif",
+              "permalink_public": "https://slack-files.com/T2U81E2BB-F7H0D7ZBB-85b7f5557e",
+              "pretty_type": "GIF",
+              "preview": null,
+              "public_url_shared": false,
+              "reactions": [
+                {
+                  "count": 1,
+                  "name": "stuck_out_tongue_winking_eye",
+                  "users": [
+                    "U2U85N1RZ"
+                  ]
+                }
+              ],
+              "score": "0.38899223746309",
+              "size": 1639034,
+              "thumb_160": "https://files.slack.com/files-tmb/T2U81E2BB-F7H0D7ZBB-21624821e6/computer_160.png",
+              "thumb_360": "https://files.slack.com/files-tmb/T2U81E2BB-F7H0D7ZBB-21624821e6/computer_360.png",
+              "thumb_360_gif": "https://files.slack.com/files-tmb/T2U81E2BB-F7H0D7ZBB-21624821e6/computer_360.gif",
+              "thumb_360_h": 225,
+              "thumb_360_w": 360,
+              "thumb_480": "https://files.slack.com/files-tmb/T2U81E2BB-F7H0D7ZBB-21624821e6/computer_480.png",
+              "thumb_480_gif": "https://files.slack.com/files-tmb/T2U81E2BB-F7H0D7ZBB-21624821e6/computer_480.gif",
+              "thumb_480_h": 300,
+              "thumb_480_w": 480,
+              "thumb_64": "https://files.slack.com/files-tmb/T2U81E2BB-F7H0D7ZBB-21624821e6/computer_64.png",
+              "thumb_80": "https://files.slack.com/files-tmb/T2U81E2BB-F7H0D7ZBB-21624821e6/computer_80.png",
+              "timestamp": 1507850315,
+              "title": "computer.gif",
+              "top_file": false,
+              "url_private": "https://files.slack.com/files-pri/T2U81E2BB-F7H0D7ZBB/computer.gif",
+              "url_private_download": "https://files.slack.com/files-pri/T2U81E2BB-F7H0D7ZBB/download/computer.gif",
+              "user": "U2U85N1RZ",
+              "username": ""
+            }
+          ],
+          "pagination": {
+            "first": 1,
+            "last": 3,
+            "page": 1,
+            "page_count": 1,
+            "per_page": 20,
+            "total_count": 3
+          },
+          "paging": {
+            "count": 20,
+            "page": 1,
+            "pages": 1,
+            "total": 3
+          },
+          "total": 3
+        },
+        "ok": true,
+        "query": "computer.gif"
+      }
+    },
+    "error": {
+      "url": "/api/search.files?token=YOUR_TOKEN",
+      "description": "Typical error response",
+      "example": {
+        "error": "No query passed",
+        "ok": false
+      }
+    }
+  }
+}

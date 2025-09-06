@@ -1,0 +1,72 @@
+{
+  "desc": "Retrieve a list of a workspace's team preferences.",
+  "http_method": "POST",
+  "scope": "team.preferences:read",
+  "rate_limits": "t3",
+  "args": {
+    "type": "object",
+    "required": [
+      "token"
+    ],
+    "properties": {
+      "token": {
+        "type": "string",
+        "subtype": "auth",
+        "desc": "Authentication token bearing required scopes. Tokens should be passed as an HTTP Authorization header or alternatively, as a POST parameter.",
+        "example": "xxxx-xxxxxxxxx-xxxx"
+      }
+    }
+  },
+  "output": {
+    "type": "object",
+    "required": [
+      "display_real_names",
+      "disable_file_uploads",
+      "msg_edit_window_mins",
+      "who_can_post_general"
+    ],
+    "properties": {
+      "display_real_names": {
+        "type": "boolean"
+      },
+      "disable_file_uploads": {
+        "type": "string"
+      },
+      "msg_edit_window_mins": {
+        "type": "integer"
+      },
+      "who_can_post_general": {
+        "type": "string"
+      }
+    }
+  },
+  "errors": {
+    "invalid_auth": {
+      "desc": "Invalid token provided."
+    },
+    "invalid_team": {
+      "desc": "Cannot find a workspace associated with the presented token."
+    }
+  },
+  "examples": {
+    "success": {
+      "url": "/api/team.preferences.list",
+      "description": "Typical success response",
+      "example": {
+        "ok": true,
+        "display_real_names": false,
+        "disable_file_uploads": "disable_all",
+        "msg_edit_window_mins": 25,
+        "who_can_post_general": "everyone"
+      }
+    },
+    "error": {
+      "url": "/api/team.profile.get?token=INVALID_TOKEN",
+      "description": "Typical error response",
+      "example": {
+        "ok": false,
+        "error": "invalid_auth"
+      }
+    }
+  }
+}

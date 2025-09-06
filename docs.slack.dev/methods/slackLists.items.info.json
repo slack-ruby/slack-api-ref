@@ -1,0 +1,455 @@
+{
+  "desc": "Get a row from a List.",
+  "http_method": "POST",
+  "scope": "lists:read",
+  "familyName": "lists",
+  "rate_limits": "t2",
+  "args": {
+    "type": "object",
+    "required": [
+      "token",
+      "list_id",
+      "id"
+    ],
+    "properties": {
+      "token": {
+        "type": "string",
+        "subtype": "auth"
+      },
+      "list_id": {
+        "desc": "ID of the List.",
+        "example": "F1234567",
+        "type": "string",
+        "subtype": "list",
+        "schema": "file_id"
+      },
+      "id": {
+        "desc": "ID of the row to get.",
+        "example": "Rec014K005UQJ",
+        "type": "string",
+        "schema": "list_record_id"
+      },
+      "include_is_subscribed": {
+        "default": "false",
+        "desc": "Set to `true` to include `is_subscribed` data for the returned List row.",
+        "type": "boolean"
+      }
+    }
+  },
+  "output": {
+    "type": "object",
+    "required": [
+      "list",
+      "record"
+    ],
+    "properties": {
+      "list": {
+        "schema": "file"
+      },
+      "record": {
+        "schema": "list_item"
+      },
+      "parent_task": {
+        "schema": "list_item"
+      },
+      "subtasks": {
+        "type": "array",
+        "items": {
+          "schema": "list_item"
+        }
+      }
+    }
+  },
+  "errors": {
+    "list_not_found": {
+      "desc": "The List was not found."
+    },
+    "record_not_found": {
+      "desc": "The record was not found in the List."
+    },
+    "record_deleted": {
+      "desc": "The record has been deleted."
+    },
+    "team_not_found": {
+      "desc": "The team cannot be found."
+    },
+    "user_not_found": {
+      "desc": "The user cannot be found."
+    }
+  },
+  "examples": {
+    "success": {
+      "url": "/api/slackLists.items.info?token=YOUR_TOKEN",
+      "description": "Typical success response",
+      "example": {
+        "ok": true,
+        "list": {
+          "id": "F0182EML399",
+          "created": 1753896412,
+          "timestamp": 1753896412,
+          "name": "list",
+          "title": "Ultimate list",
+          "mimetype": "application/vnd.slack-list",
+          "filetype": "list",
+          "pretty_type": "List",
+          "user": "U0157R3CXR8",
+          "user_team": "E0158RMBA0K",
+          "editable": true,
+          "size": 0,
+          "mode": "list",
+          "is_external": false,
+          "external_type": "",
+          "is_public": false,
+          "public_url_shared": false,
+          "display_as_bot": false,
+          "username": "",
+          "list_metadata": {
+            "schema": [
+              {
+                "id": "Col0182EML39R",
+                "name": "Name",
+                "key": "name",
+                "type": "text",
+                "is_primary_column": true
+              },
+              {
+                "id": "Col00",
+                "name": "Completed",
+                "key": "todo_completed",
+                "type": "todo_completed",
+                "is_primary_column": false
+              },
+              {
+                "id": "Col01",
+                "name": "Assignee",
+                "key": "todo_assignee",
+                "type": "todo_assignee",
+                "is_primary_column": false,
+                "options": {
+                  "format": "multi_entity",
+                  "default_value": null,
+                  "show_member_name": true
+                }
+              },
+              {
+                "id": "Col02",
+                "name": "Due Date",
+                "key": "todo_due_date",
+                "type": "todo_due_date",
+                "is_primary_column": false
+              }
+            ],
+            "views": [
+              {
+                "id": "View0182EML3A7",
+                "name": "Record",
+                "type": "record",
+                "is_locked": false,
+                "position": "1753896412",
+                "columns": [
+                  {
+                    "visible": true,
+                    "key": "name",
+                    "id": "Col0182EML39R",
+                    "position": "5000000000"
+                  },
+                  {
+                    "visible": true,
+                    "key": "todo_completed",
+                    "id": "Col00",
+                    "position": "5000000001"
+                  },
+                  {
+                    "visible": true,
+                    "key": "todo_assignee",
+                    "id": "Col01",
+                    "position": "5000000002"
+                  },
+                  {
+                    "visible": true,
+                    "key": "todo_due_date",
+                    "id": "Col02",
+                    "position": "5000000003"
+                  }
+                ],
+                "date_created": 1753896412,
+                "created_by": "U0157R3CXR8",
+                "stick_column_left": false
+              },
+              {
+                "id": "View0182EML3AP",
+                "name": "All items",
+                "type": "table",
+                "is_locked": false,
+                "position": "1753896413",
+                "columns": [
+                  {
+                    "visible": true,
+                    "key": "name",
+                    "id": "Col0182EML39R",
+                    "position": "5000000000"
+                  },
+                  {
+                    "visible": true,
+                    "key": "todo_completed",
+                    "id": "Col00",
+                    "position": "5000000001"
+                  },
+                  {
+                    "visible": true,
+                    "key": "todo_assignee",
+                    "id": "Col01",
+                    "position": "5000000002"
+                  },
+                  {
+                    "visible": true,
+                    "key": "todo_due_date",
+                    "id": "Col02",
+                    "position": "5000000003"
+                  }
+                ],
+                "date_created": 1753896413,
+                "created_by": "U0157R3CXR8",
+                "stick_column_left": false,
+                "is_all_items_view": true,
+                "default_view_key": "all_items",
+                "show_completed_items": true
+              },
+              {
+                "id": "View0182EML3B5",
+                "name": "Incomplete items",
+                "type": "table",
+                "is_locked": false,
+                "position": "1753896414",
+                "columns": [
+                  {
+                    "visible": true,
+                    "key": "name",
+                    "id": "Col0182EML39R",
+                    "position": "5000000000"
+                  },
+                  {
+                    "visible": true,
+                    "key": "todo_completed",
+                    "id": "Col00",
+                    "position": "5000000001"
+                  },
+                  {
+                    "visible": true,
+                    "key": "todo_assignee",
+                    "id": "Col01",
+                    "position": "5000000002"
+                  },
+                  {
+                    "visible": true,
+                    "key": "todo_due_date",
+                    "id": "Col02",
+                    "position": "5000000003"
+                  }
+                ],
+                "date_created": 1753896414,
+                "created_by": "U0157R3CXR8",
+                "stick_column_left": false,
+                "default_view_key": "incomplete_items",
+                "show_completed_items": false
+              },
+              {
+                "id": "View0182EML3C3",
+                "name": "Completed items",
+                "type": "table",
+                "is_locked": false,
+                "position": "1753896415",
+                "columns": [
+                  {
+                    "visible": true,
+                    "key": "name",
+                    "id": "Col0182EML39R",
+                    "position": "5000000000"
+                  },
+                  {
+                    "visible": true,
+                    "key": "todo_completed",
+                    "id": "Col00",
+                    "position": "5000000001"
+                  },
+                  {
+                    "visible": true,
+                    "key": "todo_assignee",
+                    "id": "Col01",
+                    "position": "5000000002"
+                  },
+                  {
+                    "visible": true,
+                    "key": "todo_due_date",
+                    "id": "Col02",
+                    "position": "5000000003"
+                  }
+                ],
+                "date_created": 1753896415,
+                "created_by": "U0157R3CXR8",
+                "stick_column_left": false,
+                "default_view_key": "completed_items",
+                "show_completed_items": true
+              }
+            ],
+            "integrations": [
+
+            ],
+            "icon": "",
+            "description": "",
+            "description_blocks": [
+
+            ],
+            "is_trial": false,
+            "subtask_schema": [
+              {
+                "id": "Col0182EML39R",
+                "name": "Name",
+                "key": "name",
+                "type": "text",
+                "is_primary_column": true
+              },
+              {
+                "id": "Col00",
+                "name": "Completed",
+                "key": "todo_completed",
+                "type": "todo_completed",
+                "is_primary_column": false
+              },
+              {
+                "id": "Col01",
+                "name": "Assignee",
+                "key": "todo_assignee",
+                "type": "todo_assignee",
+                "is_primary_column": false,
+                "options": {
+                  "format": "multi_entity",
+                  "default_value": null,
+                  "show_member_name": true
+                }
+              },
+              {
+                "id": "Col02",
+                "name": "Due Date",
+                "key": "todo_due_date",
+                "type": "todo_due_date",
+                "is_primary_column": false
+              }
+            ],
+            "creation_source": {
+              "type": "blank"
+            },
+            "todo_mode": true,
+            "default_view": ""
+          },
+          "list_limits": {
+            "over_row_maximum": false,
+            "row_count_limit": 5000,
+            "row_count": 0,
+            "archived_row_count": 0,
+            "over_column_maximum": false,
+            "column_count": 1,
+            "column_count_limit": 30,
+            "over_view_maximum": false,
+            "view_count": 4,
+            "view_count_limit": 50,
+            "max_attachments_per_cell": 10
+          },
+          "url_private": "https://files.dev.slack.com/files-pri/T0158RMBA0K-F0182EML399/list",
+          "url_private_download": "https://files.dev.slack.com/files-pri/T0158RMBA0K-F0182EML399/download/list",
+          "permalink": "https://chev-sub.enterprise.dev.slack.com/lists/T013UFG3M5G/F0182EML399",
+          "permalink_public": "https://dev.slack-files.com/T0158RMBA0K-F0182EML399-a06892f186",
+          "last_editor": "U0157R3CXR8",
+          "list_csv_download_url": "https://files.dev.slack.com/files-pri/T0158RMBA0K-F0182EML399/csv/list",
+          "updated": 1753896412,
+          "is_starred": false,
+          "shares": {
+            "private": {
+              "D013V9WPZ99": [
+                {
+                  "reply_users": [
+
+                  ],
+                  "reply_users_count": 0,
+                  "reply_count": 0,
+                  "ts": "1753896412.387799",
+                  "share_user_id": "U0157R3CXR8",
+                  "source": "FILE_OWNER",
+                  "is_silent_share": true
+                }
+              ]
+            }
+          },
+          "channels": [
+
+          ],
+          "groups": [
+
+          ],
+          "ims": [
+            "D013V9WPZ99"
+          ],
+          "has_more_shares": false,
+          "access": "owner",
+          "private_channels_with_file_access_count": 0,
+          "dm_mpdm_users_with_file_access": [
+            {
+              "user_id": "U0157R3CXR8",
+              "access": "write"
+            }
+          ],
+          "teams_shared_with": [
+            "E0158RMBA0K"
+          ],
+          "is_restricted_sharing_enabled": false,
+          "has_rich_preview": false,
+          "file_access": "visible",
+          "org_or_workspace_access": "none"
+        },
+        "record": {
+          "id": "Rec0182EVHCAF",
+          "list_id": "F0182EML399",
+          "date_created": 1753896730,
+          "created_by": "U0157R3CXR8",
+          "updated_by": "U0157R3CXR8",
+          "fields": [
+            {
+              "key": "todo_completed",
+              "value": false,
+              "checkbox": false,
+              "column_id": "Col00"
+            }
+          ],
+          "updated_timestamp": "1753896730"
+        },
+        "subtasks": [
+          {
+            "id": "Rec0182EKH8QK",
+            "list_id": "F0182EML399",
+            "date_created": 1753896851,
+            "created_by": "U0157R3CXR8",
+            "updated_by": "U0157R3CXR8",
+            "fields": [
+              {
+                "key": "todo_completed",
+                "value": false,
+                "checkbox": false,
+                "column_id": "Col00"
+              }
+            ],
+            "updated_timestamp": "1753896851",
+            "parent_record_id": "Rec0182EVHCAF"
+          }
+        ]
+      }
+    },
+    "error": {
+      "url": "/api/slackLists.items.info?token=YOUR_TOKEN",
+      "description": "Typical error response",
+      "example": {
+        "ok": false,
+        "error": "record_not_found"
+      }
+    }
+  }
+}

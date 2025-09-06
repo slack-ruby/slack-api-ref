@@ -1,0 +1,150 @@
+{
+  "desc": "Sets the topic for a conversation.",
+  "http_method": "POST",
+  "scope": "conversations:write",
+  "scope_by_token_type": {
+    "oauth": "conversations:write.topic",
+    "granular_bot": "conversations:write.topic",
+    "workflow": "conversations:write.topic"
+  },
+  "json_input_supported": true,
+  "slack_connect_workspaces_allowed": true,
+  "rate_limits": "t2",
+  "args": {
+    "type": "object",
+    "required": [
+      "token",
+      "channel",
+      "topic"
+    ],
+    "properties": {
+      "token": {
+        "type": "string",
+        "subtype": "auth",
+        "desc": "Authentication token bearing required scopes. Tokens should be passed as an HTTP Authorization header or alternatively, as a POST parameter.",
+        "example": "xxxx-xxxxxxxxx-xxxx"
+      },
+      "channel": {
+        "desc": "Conversation to set the topic of",
+        "type": "string",
+        "subtype": "channel"
+      },
+      "topic": {
+        "desc": "The new topic string. Does not support formatting or linkification.",
+        "example": "Apply topically for best effects",
+        "type": "string"
+      }
+    }
+  },
+  "output": {
+    "type": "object",
+    "required": [
+      "channel"
+    ],
+    "properties": {
+      "channel": {
+        "schema": "conversation"
+      }
+    }
+  },
+  "errors": {
+    "channel_not_found": {
+      "desc": "Value passed for `channel` was invalid."
+    },
+    "is_archived": {
+      "desc": "Channel has been archived."
+    },
+    "method_not_supported_for_channel_type": {
+      "desc": "This type of conversation cannot be used with this method."
+    },
+    "missing_scope": {
+      "desc": "The calling token is not granted the necessary scopes to complete this operation."
+    },
+    "not_in_channel": {
+      "desc": "Authenticated user is not in the channel."
+    },
+    "too_long": {
+      "desc": "Topic was longer than 250 characters."
+    },
+    "user_is_restricted": {
+      "desc": "Setting the topic is a restricted action."
+    }
+  },
+  "examples": {
+    "success": {
+      "url": "/api/conversations.setTopic?token=YOUR_TOKEN",
+      "description": "A [conversation object](/reference/objects/conversation-object) is returned:",
+      "example": {
+        "ok": true,
+        "channel": {
+          "id": "C12345678",
+          "name": "tips-and-tricks",
+          "is_channel": true,
+          "is_group": false,
+          "is_im": false,
+          "is_mpim": false,
+          "is_private": false,
+          "created": 1649195947,
+          "is_archived": false,
+          "is_general": false,
+          "unlinked": 0,
+          "name_normalized": "tips-and-tricks",
+          "is_shared": false,
+          "is_frozen": false,
+          "is_org_shared": false,
+          "is_pending_ext_shared": false,
+          "pending_shared": [
+
+          ],
+          "parent_conversation": null,
+          "creator": "U12345678",
+          "is_ext_shared": false,
+          "shared_team_ids": [
+            "T12345678"
+          ],
+          "pending_connected_team_ids": [
+
+          ],
+          "is_member": true,
+          "last_read": "1649869848.627809",
+          "latest": {
+            "type": "message",
+            "subtype": "channel_topic",
+            "ts": "1649952691.429799",
+            "user": "U12345678",
+            "text": "set the channel topic: Apply topically for best effects",
+            "topic": "Apply topically for best effects"
+          },
+          "unread_count": 1,
+          "unread_count_display": 0,
+          "topic": {
+            "value": "Apply topically for best effects",
+            "creator": "U12345678",
+            "last_set": 1649952691
+          },
+          "purpose": {
+            "value": "",
+            "creator": "",
+            "last_set": 0
+          },
+          "previous_names": [
+
+          ]
+        }
+      }
+    },
+    "error": {
+      "url": "/api/conversations.setTopic?token=YOUR_TOKEN",
+      "description": "Typical error response",
+      "example": {
+        "ok": false,
+        "error": "invalid_arguments",
+        "response_metadata": {
+          "messages": [
+            "[ERROR] missing required field: topic"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,177 @@
+{
+  "desc": "Lists all users in a Slack team.",
+  "http_method": "GET",
+  "scope": "users:read",
+  "slack_connect_workspaces_allowed": true,
+  "rate_limits": "t2",
+  "args": {
+    "type": "object",
+    "required": [
+      "token"
+    ],
+    "properties": {
+      "token": {
+        "type": "string",
+        "subtype": "auth",
+        "desc": "Authentication token bearing required scopes. Tokens should be passed as an HTTP Authorization header or alternatively, as a POST parameter.",
+        "example": "xxxx-xxxxxxxxx-xxxx"
+      },
+      "cursor": {
+        "desc": "Paginate through collections of data by setting the `cursor` parameter to a `next_cursor` attribute returned by a previous request's `response_metadata`. Default value fetches the first \"page\" of the collection. See [pagination](/apis/web-api/pagination) for more detail.",
+        "example": "dXNlcjpVMDYxTkZUVDI=",
+        "type": "string"
+      },
+      "include_locale": {
+        "desc": "Set this to `true` to receive the locale for users. Defaults to `false`",
+        "type": "boolean"
+      },
+      "limit": {
+        "default": 0,
+        "desc": "The maximum number of items to return. Fewer than the requested number of items may be returned, even if the end of the users list hasn't been reached. Providing no `limit` value will result in Slack attempting to deliver you the entire result set. If the collection is too large you may experience `limit_required` or HTTP 500 errors.",
+        "example": "20",
+        "type": "number"
+      },
+      "team_id": {
+        "desc": "encoded team id to list users in, required if org token is used",
+        "type": "string",
+        "subtype": "team"
+      }
+    }
+  },
+  "output": {
+    "type": "object",
+    "required": [
+      "members",
+      "cache_ts"
+    ],
+    "properties": {
+      "members": {
+        "type": "array",
+        "minItems": 1,
+        "items": {
+          "schema": "user"
+        }
+      },
+      "cache_ts": {
+        "type": "integer"
+      },
+      "response_metadata": {
+        "schema": "response_metadata"
+      },
+      "offset": {
+        "type": "string"
+      }
+    }
+  },
+  "errors": {
+    "invalid_cursor": {
+      "desc": "Value passed for `cursor` was not valid or is no longer valid."
+    },
+    "limit_required": {
+      "desc": "For large teams a limit is required."
+    },
+    "missing_argument": {
+      "desc": "A required argument is missing."
+    }
+  },
+  "examples": {
+    "success": {
+      "url": "/api/users.list?token=YOUR_TOKEN",
+      "description": "Typical success response",
+      "example": {
+        "ok": true,
+        "members": [
+          {
+            "id": "W012A3CDE",
+            "team_id": "T012AB3C4",
+            "name": "spengler",
+            "deleted": false,
+            "color": "9f69e7",
+            "real_name": "spengler",
+            "tz": "America/Los_Angeles",
+            "tz_label": "Pacific Daylight Time",
+            "tz_offset": -25200,
+            "profile": {
+              "avatar_hash": "ge3b51ca72de",
+              "status_text": "Print is dead",
+              "status_emoji": ":books:",
+              "real_name": "Egon Spengler",
+              "display_name": "spengler",
+              "real_name_normalized": "Egon Spengler",
+              "display_name_normalized": "spengler",
+              "email": "spengler@ghostbusters.example.com",
+              "image_24": "https://.../avatar/e3b51ca72dee4ef87916ae2b9240df50.jpg",
+              "image_32": "https://.../avatar/e3b51ca72dee4ef87916ae2b9240df50.jpg",
+              "image_48": "https://.../avatar/e3b51ca72dee4ef87916ae2b9240df50.jpg",
+              "image_72": "https://.../avatar/e3b51ca72dee4ef87916ae2b9240df50.jpg",
+              "image_192": "https://.../avatar/e3b51ca72dee4ef87916ae2b9240df50.jpg",
+              "image_512": "https://.../avatar/e3b51ca72dee4ef87916ae2b9240df50.jpg",
+              "team": "T012AB3C4"
+            },
+            "is_admin": true,
+            "is_owner": false,
+            "is_primary_owner": false,
+            "is_restricted": false,
+            "is_ultra_restricted": false,
+            "is_bot": false,
+            "updated": 1502138686,
+            "is_app_user": false,
+            "has_2fa": false
+          },
+          {
+            "id": "W07QCRPA4",
+            "team_id": "T0G9PQBBK",
+            "name": "glinda",
+            "deleted": false,
+            "color": "9f69e7",
+            "real_name": "Glinda Southgood",
+            "tz": "America/Los_Angeles",
+            "tz_label": "Pacific Daylight Time",
+            "tz_offset": -25200,
+            "profile": {
+              "avatar_hash": "8fbdd10b41c6",
+              "image_24": "https://a.slack-edge.com...png",
+              "image_32": "https://a.slack-edge.com...png",
+              "image_48": "https://a.slack-edge.com...png",
+              "image_72": "https://a.slack-edge.com...png",
+              "image_192": "https://a.slack-edge.com...png",
+              "image_512": "https://a.slack-edge.com...png",
+              "image_1024": "https://a.slack-edge.com...png",
+              "image_original": "https://a.slack-edge.com...png",
+              "first_name": "Glinda",
+              "last_name": "Southgood",
+              "title": "Glinda the Good",
+              "phone": "",
+              "skype": "",
+              "real_name": "Glinda Southgood",
+              "real_name_normalized": "Glinda Southgood",
+              "display_name": "Glinda the Fairly Good",
+              "display_name_normalized": "Glinda the Fairly Good",
+              "email": "glenda@south.oz.coven"
+            },
+            "is_admin": true,
+            "is_owner": false,
+            "is_primary_owner": false,
+            "is_restricted": false,
+            "is_ultra_restricted": false,
+            "is_bot": false,
+            "updated": 1480527098,
+            "has_2fa": false
+          }
+        ],
+        "cache_ts": 1498777272,
+        "response_metadata": {
+          "next_cursor": "dXNlcjpVMEc5V0ZYTlo="
+        }
+      }
+    },
+    "error": {
+      "url": "/api/users.list?token=INVALID_TOKEN",
+      "description": "Typical error response",
+      "example": {
+        "ok": false,
+        "error": "invalid_cursor"
+      }
+    }
+  }
+}

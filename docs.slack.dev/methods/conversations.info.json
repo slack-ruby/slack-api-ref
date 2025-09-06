@@ -1,0 +1,206 @@
+{
+  "desc": "Retrieve information about a conversation.",
+  "http_method": "GET",
+  "scope": "conversations:read",
+  "scope_by_token_type": {
+    "app": "conversations:read"
+  },
+  "slack_connect_workspaces_allowed": true,
+  "rate_limits": "t3",
+  "args": {
+    "type": "object",
+    "required": [
+      "token",
+      "channel"
+    ],
+    "properties": {
+      "token": {
+        "type": "string",
+        "subtype": "auth",
+        "desc": "Authentication token bearing required scopes. Tokens should be passed as an HTTP Authorization header or alternatively, as a POST parameter.",
+        "example": "xxxx-xxxxxxxxx-xxxx"
+      },
+      "channel": {
+        "desc": "Conversation ID to learn more about",
+        "type": "string",
+        "subtype": "channel"
+      },
+      "include_locale": {
+        "desc": "Set this to `true` to receive the locale for this conversation. Defaults to `false`",
+        "type": "boolean"
+      },
+      "include_num_members": {
+        "default": "false",
+        "desc": "Set to `true` to include the member count for the specified conversation. Defaults to `false`",
+        "example": "true",
+        "type": "boolean"
+      }
+    }
+  },
+  "output": {
+    "type": "object",
+    "required": [
+      "channel"
+    ],
+    "properties": {
+      "app_home": {
+        "schema": "home"
+      },
+      "channel": {
+        "schema": "conversation"
+      },
+      "home_view": {
+        "anyOf": [
+          {
+            "type": "null"
+          },
+          {
+            "schema": "view"
+          }
+        ]
+      }
+    }
+  },
+  "errors": {
+    "channel_not_found": {
+      "desc": "Value passed for `channel` was invalid."
+    },
+    "missing_scope": {
+      "desc": "The calling token is not granted the necessary scopes to complete this operation."
+    }
+  },
+  "examples": {
+    "success": {
+      "url": "/api/conversations.info?token=YOUR_TOKEN",
+      "description": "Typical success response for a public channel. A response from a private channel and a multi-party IM is very similar to this example. Note that if the `properties.tabs` parameter is an empty set, it will not be included in the channel object.",
+      "example": {
+        "ok": true,
+        "channel": {
+          "id": "C012AB3CD",
+          "name": "general",
+          "is_channel": true,
+          "is_group": false,
+          "is_im": false,
+          "is_mpim": false,
+          "is_private": false,
+          "created": 1654868334,
+          "is_archived": false,
+          "is_general": true,
+          "unlinked": 0,
+          "name_normalized": "general",
+          "is_shared": false,
+          "is_frozen": false,
+          "is_org_shared": false,
+          "is_pending_ext_shared": false,
+          "pending_shared": [
+
+          ],
+          "context_team_id": "T123ABC456",
+          "updated": 1723130875818,
+          "parent_conversation": null,
+          "creator": "U123ABC456",
+          "is_ext_shared": false,
+          "shared_team_ids": [
+            "T123ABC456"
+          ],
+          "pending_connected_team_ids": [
+
+          ],
+          "topic": {
+            "value": "For public discussion of generalities",
+            "creator": "W012A3BCD",
+            "last_set": 1449709364
+          },
+          "purpose": {
+            "value": "This part of the workspace is for fun. Make fun here.",
+            "creator": "W012A3BCD",
+            "last_set": 1449709364
+          },
+          "properties": {
+            "tabs": [
+              {
+                "id": "workflows",
+                "label": "",
+                "type": "workflows"
+              },
+              {
+                "id": "files",
+                "label": "",
+                "type": "files"
+              },
+              {
+                "id": "bookmarks",
+                "label": "",
+                "type": "bookmarks"
+              }
+            ]
+          },
+          "previous_names": [
+
+          ]
+        }
+      }
+    },
+    "success_im": {
+      "url": "/api/conversations.info?token=YOUR_TOKEN",
+      "description": "Typical success response for a 1:1 direct message",
+      "example": {
+        "ok": true,
+        "channel": {
+          "id": "C012AB3CD",
+          "created": 1507235627,
+          "is_im": true,
+          "is_org_shared": false,
+          "user": "U27FFLNF4",
+          "last_read": "1513718191.000038",
+          "latest": {
+            "type": "message",
+            "user": "U5R3PALPN",
+            "text": "Psssst!",
+            "ts": "1513718191.000038"
+          },
+          "unread_count": 0,
+          "unread_count_display": 0,
+          "is_open": true,
+          "locale": "en-US",
+          "priority": 0.043016851216706
+        }
+      }
+    },
+    "success_im_num_members": {
+      "url": "/api/conversations.info?token=YOUR_TOKEN",
+      "description": "When using the method with the `include_num_members` parameter, we return a `num_members` field",
+      "example": {
+        "ok": true,
+        "channel": {
+          "id": "C012AB3CD",
+          "created": 1507235627,
+          "is_im": true,
+          "is_org_shared": false,
+          "user": "U27FFLNF4",
+          "last_read": "1513718191.000038",
+          "latest": {
+            "type": "message",
+            "user": "U5R3PALPN",
+            "text": "Psssst!",
+            "ts": "1513718191.000038"
+          },
+          "unread_count": 0,
+          "unread_count_display": 0,
+          "is_open": true,
+          "locale": "en-US",
+          "priority": 0.043016851216706,
+          "num_members": 2
+        }
+      }
+    },
+    "error": {
+      "url": "/api/conversations.info?token=INVALID_TOKEN",
+      "description": "Typical error response when a channel cannot be found",
+      "example": {
+        "ok": false,
+        "error": "channel_not_found"
+      }
+    }
+  }
+}

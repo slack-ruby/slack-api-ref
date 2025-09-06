@@ -1,0 +1,174 @@
+{
+  "desc": "Open a view for a user.",
+  "http_method": "POST",
+  "scope": "none",
+  "json_input_supported": true,
+  "no_scope_required": true,
+  "rate_limits": "t4",
+  "args": {
+    "type": "object",
+    "required": [
+      "token",
+      "view"
+    ],
+    "properties": {
+      "token": {
+        "type": "string",
+        "subtype": "auth",
+        "desc": "Authentication token bearing required scopes. Tokens should be passed as an HTTP Authorization header or alternatively, as a POST parameter.",
+        "example": "xxxx-xxxxxxxxx-xxxx"
+      },
+      "trigger_id": {
+        "subtype": "app_trigger_id",
+        "desc": "Exchange a trigger to post to the user.",
+        "example": "12345.98765.abcd2358fdea",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "interactivity_pointer": {
+        "subtype": "app_trigger_id",
+        "desc": "Exchange an interactivity pointer to post to the user.",
+        "example": "12345.98765.abcd2358fdea",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "view": {
+        "desc": "A [view payload](/reference/views). This must be a JSON-encoded string.",
+        "allOf": [
+          {
+            "type": "object",
+            "coerce": true
+          },
+          {
+            "anyOf": [
+              {
+                "schema": "modal"
+              },
+              {
+                "schema": "workflow-step"
+              },
+              {
+                "schema": "app-notification-subscription-configuration"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "output": {
+    "type": "object",
+    "required": [
+      "view"
+    ],
+    "properties": {
+      "view": {
+        "disableShapeUnification": true,
+        "anyOf": [
+          {
+            "schema": "modal"
+          },
+          {
+            "schema": "workflow-step"
+          },
+          {
+            "schema": "app-notification-subscription-configuration"
+          }
+        ]
+      }
+    }
+  },
+  "errors": {
+    "duplicate_external_id": {
+      "desc": "Error returned when the given `external_id` has already be used."
+    },
+    "exchanged_trigger_id": {
+      "desc": "The trigger_id was already exchanged in a previous call."
+    },
+    "expired_trigger_id": {
+      "desc": "The trigger_id is expired."
+    },
+    "invalid_trigger_id": {
+      "desc": "The trigger_id is invalid. The expected format for the trigger_id argument is \"132456.7890123.abcdef\"."
+    },
+    "view_too_large": {
+      "desc": "Error returned if the provided view is greater than 250kb."
+    }
+  },
+  "examples": {
+    "success": {
+      "url": "/api/views.open?token=YOUR_TOKEN",
+      "description": "Typical success response includes the opened view payload.",
+      "example": {
+        "ok": true,
+        "view": {
+          "id": "VMHU10V25",
+          "team_id": "T8N4K1JN",
+          "type": "modal",
+          "title": {
+            "type": "plain_text",
+            "text": "Quite a plain modal"
+          },
+          "submit": {
+            "type": "plain_text",
+            "text": "Create"
+          },
+          "blocks": [
+            {
+              "type": "input",
+              "block_id": "a_block_id",
+              "label": {
+                "type": "plain_text",
+                "text": "A simple label",
+                "emoji": true
+              },
+              "optional": false,
+              "element": {
+                "type": "plain_text_input",
+                "action_id": "an_action_id"
+              }
+            }
+          ],
+          "private_metadata": "Shh it is a secret",
+          "callback_id": "identify_your_modals",
+          "external_id": "",
+          "state": {
+            "values": {
+            }
+          },
+          "hash": "156772938.1827394",
+          "clear_on_close": false,
+          "notify_on_close": false,
+          "root_view_id": "VMHU10V25",
+          "app_id": "AA4928AQ",
+          "bot_id": "BA13894H"
+        }
+      }
+    },
+    "error": {
+      "url": "/api/dialog.open?token=VALID_TOKEN",
+      "description": "Typical error response, before getting to any possible validation errors.",
+      "example": {
+        "ok": false,
+        "error": "invalid_arguments",
+        "response_metadata": {
+          "messages": [
+            "invalid `trigger_id`"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,170 @@
+{
+  "desc": "Finishes an upload started with files.getUploadURLExternal",
+  "http_method": "POST",
+  "scope": "files:write:user",
+  "scope_by_token_type": {
+    "app": "files:write",
+    "granular_bot": "files:write"
+  },
+  "slack_connect_workspaces_allowed": true,
+  "rate_limits": "t4",
+  "json_input_supported": true,
+  "args": {
+    "type": "object",
+    "required": [
+      "token",
+      "files"
+    ],
+    "properties": {
+      "token": {
+        "type": "string",
+        "subtype": "auth",
+        "desc": "Authentication token bearing required scopes. Tokens should be passed as an HTTP Authorization header or alternatively, as a POST parameter.",
+        "example": "xxxx-xxxxxxxxx-xxxx"
+      },
+      "files": {
+        "type": "array",
+        "desc": "Array of file ids and their corresponding (optional) titles.",
+        "example": "[{\"id\":\"F044GKUHN9Z\", \"title\":\"slack-test\"}]",
+        "items": {
+          "type": "object",
+          "required": [
+            "id"
+          ],
+          "properties": {
+            "id": {
+              "desc": "File ID returned from files.getUploadURL.",
+              "example": "F0R8KA909",
+              "schema": "file_id"
+            },
+            "title": {
+              "desc": "Title of file.",
+              "type": "string"
+            }
+          }
+        }
+      },
+      "channel_id": {
+        "desc": "Channel ID where the file will be shared. If not specified the file will be private.",
+        "example": "C0NF841BK",
+        "default": null,
+        "subtype": "channel",
+        "schema": "channel"
+      },
+      "thread_ts": {
+        "desc": "Provide another message's `ts` value to upload this file as a reply. Never use a reply's `ts` value; use its parent instead. Also make sure to provide only one channel when using 'thread_ts'",
+        "type": "string",
+        "example": "1524523204.000192"
+      },
+      "channels": {
+        "desc": "Comma-separated string of channel IDs where the file will be shared.",
+        "type": "string",
+        "subtype": "channels",
+        "example": "C0NF841BK,C2AW648GH"
+      },
+      "initial_comment": {
+        "desc": "The message text introducing the file in specified channels.",
+        "default": null,
+        "type": "string"
+      },
+      "blocks": {
+        "desc": "A JSON-based array of structured rich text blocks, presented as a URL-encoded string. If the `initial_comment` field is provided, the `blocks` field is ignored",
+        "type": "string",
+        "example": "[{\"type\": \"section\", \"text\": {\"type\": \"plain_text\", \"text\": \"Hello world\"}}]"
+      }
+    }
+  },
+  "output": {
+    "type": "object",
+    "required": [
+      "files"
+    ],
+    "properties": {
+      "files": {
+        "type": "array",
+        "desc": "Array of files uploaded.",
+        "items": {
+          "type": "object",
+          "required": [
+            "id"
+          ],
+          "properties": {
+            "id": {
+              "desc": "File ID returned from files.getUploadURLExternal.",
+              "example": "F0R8KA909",
+              "schema": "file_id"
+            },
+            "title": {
+              "desc": "Title of file.",
+              "type": [
+                "null",
+                "string"
+              ],
+              "default": null
+            },
+            "created": {
+              "desc": "file created timestamp",
+              "type": "integer"
+            },
+            "user": {
+              "desc": "file owner",
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  },
+  "errors": {
+    "access_denied": {
+      "desc": "User is not the owner of the file."
+    },
+    "channel_not_found": {
+      "desc": "Value passed for `channel_id` was invalid."
+    },
+    "file_not_found": {
+      "desc": "Could not find the file from the upload ticket."
+    },
+    "file_update_failed": {
+      "desc": "Failure occurred when attempting to update the file."
+    },
+    "invalid_blocks": {
+      "desc": "Provided blocks are in the incorrect format."
+    },
+    "invalid_channel": {
+      "desc": "Channel could not be found or channel specified is invalid."
+    },
+    "not_in_channel": {
+      "desc": "User/bot membership is required for the specified channel."
+    },
+    "posting_to_channel_denied": {
+      "desc": "User is not authorized to post to channel."
+    },
+    "channels_limit_exceeded": {
+      "desc": "Exceeded the channel limit. A maximum of 100 channels is allowed per request."
+    }
+  },
+  "examples": {
+    "success": {
+      "url": "/api/files.completeUploadExternal?token=YOUR_TOKEN",
+      "description": "Typical success response",
+      "example": {
+        "ok": true,
+        "files": [
+          {
+            "id": "F123ABC456",
+            "title": "slack-test"
+          }
+        ]
+      }
+    },
+    "error": {
+      "url": "/api/files.completeUploadExternal?token=INVALID_TOKEN",
+      "description": "Typical error response for an invalid token",
+      "example": {
+        "ok": false,
+        "error": "invalid_auth"
+      }
+    }
+  }
+}

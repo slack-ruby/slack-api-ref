@@ -1,0 +1,129 @@
+{
+  "desc": "Open a dialog with a user",
+  "http_method": "POST",
+  "scope": "none",
+  "json_input_supported": true,
+  "no_scope_required": true,
+  "rate_limits": "t4",
+  "args": {
+    "type": "object",
+    "required": [
+      "token",
+      "trigger_id",
+      "dialog"
+    ],
+    "properties": {
+      "token": {
+        "type": "string",
+        "subtype": "auth",
+        "desc": "Authentication token bearing required scopes. Tokens should be passed as an HTTP Authorization header or alternatively, as a POST parameter.",
+        "example": "xxxx-xxxxxxxxx-xxxx"
+      },
+      "dialog": {
+        "desc": "The dialog definition. This must be a JSON-encoded string.",
+        "type": "string"
+      },
+      "trigger_id": {
+        "desc": "Exchange a trigger to post to the user.",
+        "example": "12345.98765.abcd2358fdea",
+        "type": "string",
+        "subtype": "app_trigger_id"
+      }
+    }
+  },
+  "output": null,
+  "errors": {
+    "app_missing_action_url": {
+      "desc": "The app associated with the used token doesn't have a Action URL configured in its interactive components settings."
+    },
+    "cannot_create_dialog": {
+      "desc": "Something exceptional occurred and the dialog could not be created."
+    },
+    "failed_sending_dialog": {
+      "desc": "Something exceptional occurred and the dialog could not be sent."
+    },
+    "invalid_trigger": {
+      "desc": "The provided `trigger_id` is invalid or cannot be used by this token."
+    },
+    "missing_dialog": {
+      "desc": "No `dialog` argument was presented."
+    },
+    "missing_trigger": {
+      "desc": "No `trigger_id` argument was presented."
+    },
+    "trigger_exchanged": {
+      "desc": "The provided `trigger_id` has already been exchanged."
+    },
+    "trigger_expired": {
+      "desc": "The provided `trigger_id` was presented after the 3 second limit."
+    },
+    "validation_errors": {
+      "desc": "The provided `dialog` could not be validated."
+    }
+  },
+  "examples": {
+    "success": {
+      "url": "/api/dialog.open?token=YOUR_TOKEN",
+      "description": "Typical success response is quite minimal.",
+      "example": {
+        "ok": true
+      }
+    },
+    "error": {
+      "url": "/api/dialog.open?token=INVALID_TOKEN",
+      "description": "Typical error response, before getting to any possible validation errors.",
+      "example": {
+        "ok": false,
+        "error": "missing_trigger"
+      }
+    },
+    "all_possible_errors": {
+      "description": "The impossibility of all possible errors expressed in a single response:",
+      "example": {
+        "ok": false,
+        "error": "validation_errors",
+        "response_metadata": {
+          "messages": [
+            "The field `title` is required",
+            "The field `callback_id` is required",
+            "The field `elements` is required",
+            "The field `title` cannot be longer than 24 characters",
+            "The field `submit_button` cannot be longer than 24 characters",
+            "The field `submit_button` can only be one word",
+            "The field `callback_id` cannot be longer than 255 characters",
+            "The field `state` cannot be longer than 3000 characters",
+            "The field `elements` must be a list",
+            "The field `elements` has to include at least one element",
+            "The field `elements` cannot include more than ten elements",
+            "Element 0 must be an object",
+            "Element 1 is missing required field `type`",
+            "Element 2 has an invalid `type`",
+            "Element 3 is missing required field `name`",
+            "Element 4 is missing required field `label`",
+            "Element 5 has a repeated name",
+            "Element 6 field `name` cannot be longer than 300 characters",
+            "Element 7 field `hint` cannot be longer than 150 characters",
+            "Element 8 field `label` cannot be longer than 48 characters",
+            "Element 9 has an invalid `subtype`",
+            "Element 10 field `min_length` must be between 0 and 150 (inclusive)",
+            "Element 11 field `max_length` must be between 1 and 150 (inclusive)",
+            "Element 12 field `value` cannot be longer than 150 characters",
+            "Element 13 field `placeholder` cannot be longer than 150 characters",
+            "Element 14 field `min_length` must be between 0 and 500 (inclusive)",
+            "Element 14 field `max_length` must be between 1 and 500 (inclusive)",
+            "Element 15 field `value` cannot be longer than 500 characters",
+            "Element 16 field `placeholder` cannot be longer than 150 characters",
+            "Element 17 field `placeholder` cannot be longer than 150 characters",
+            "Element 18 field `options` must be a list",
+            "Element 19 field `options` must have at least one option",
+            "Element 20 field `options` must have fewer than 100 options",
+            "Element 21 `options` item is missing required field `label`",
+            "Element 22 `options` item is missing required field `value`",
+            "Element 23 `options` item `label` field cannot exceed 75 characters",
+            "Element 24 `options` item `value` field cannot exceed 75 characters"
+          ]
+        }
+      }
+    }
+  }
+}

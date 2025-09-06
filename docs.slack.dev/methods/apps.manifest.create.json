@@ -1,0 +1,115 @@
+{
+  "desc": "Create an app from an app manifest.",
+  "http_method": "POST",
+  "scope": "app_configurations:write",
+  "json_input_supported": true,
+  "rate_limits": "t1",
+  "args": {
+    "type": "object",
+    "required": [
+      "token",
+      "manifest"
+    ],
+    "properties": {
+      "token": {
+        "type": "string",
+        "subtype": "auth",
+        "desc": "An [app configuration access token](/authentication/tokens#config).",
+        "example": "xxxx-xxxxxxxxx-xxxx"
+      },
+      "manifest": {
+        "type": "string",
+        "desc": "A JSON app manifest encoded as a string. This manifest **must** use a valid [app manifest schema - read our guide to creating one](/app-manifests/configuring-apps-with-app-manifests#fields)."
+      }
+    }
+  },
+  "output": {
+    "type": "object",
+    "required": [
+      "app_id",
+      "credentials"
+    ],
+    "properties": {
+      "app_id": {
+        "schema": "app_id"
+      },
+      "credentials": {
+        "type": "object",
+        "properties": {
+          "client_id": {
+            "type": "string"
+          },
+          "client_secret": {
+            "type": "string"
+          },
+          "verification_token": {
+            "type": "string"
+          },
+          "signing_secret": {
+            "type": "string"
+          }
+        }
+      },
+      "oauth_authorize_url": {
+        "type": "string"
+      },
+      "team_id": {
+        "type": "string",
+        "desc": "The team ID where the app was created on"
+      },
+      "team_domain": {
+        "type": "string",
+        "desc": "The team domain where the app was created on"
+      }
+    }
+  },
+  "errors": {
+    "invalid_app": {
+      "desc": "An app created from the provided manifest would not be valid."
+    },
+    "invalid_manifest": {
+      "desc": "The provided manifest file does not validate against schema. Consult the additional errors field to locate specific issues."
+    },
+    "invalid_team_id": {
+      "desc": "The provided team ID is not valid"
+    },
+    "not_in_team": {
+      "desc": "Cannot create an app in a team that user is not a member of"
+    },
+    "failed_adding_collaborator": {
+      "desc": "Failed writing a collaborator record for this new app"
+    },
+    "failed_creating_app": {
+      "desc": "Failed to create the app model"
+    },
+    "failed_datastore_operation": {
+      "desc": "Failed while managing datastore infrastructure"
+    },
+    "ratelimited": {
+      "desc": "Too many calls in succession to create endpoint during a short period of time."
+    },
+    "enterprise_is_restricted": {
+      "desc": "Org-level tokens are not allowed."
+    },
+    "unknown_method": {
+      "desc": "Unknown method"
+    }
+  },
+  "examples": {
+    "success": {
+      "url": "/api/apps.manifest.create",
+      "description": "Typical success response",
+      "example": {
+        "ok": true,
+        "app_id": "A012ABCD0A0",
+        "credentials": {
+          "client_id": "...",
+          "client_secret": "...",
+          "verification_token": "...",
+          "signing_secret": "..."
+        },
+        "oauth_authorize_url": "https://slack.com/oauth/v2/authorize?client_id=...&scope=commands,workflow.steps:execute"
+      }
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "desc": "Leaves a conversation.",
+  "http_method": "POST",
+  "scope": "conversations:write",
+  "json_input_supported": true,
+  "rate_limits": "t3",
+  "slack_connect_workspaces_allowed": true,
+  "args": {
+    "type": "object",
+    "required": [
+      "token",
+      "channel"
+    ],
+    "properties": {
+      "token": {
+        "type": "string",
+        "subtype": "auth",
+        "desc": "Authentication token bearing required scopes. Tokens should be passed as an HTTP Authorization header or alternatively, as a POST parameter.",
+        "example": "xxxx-xxxxxxxxx-xxxx"
+      },
+      "channel": {
+        "desc": "Conversation to leave",
+        "subtype": "channel",
+        "schema": "channel"
+      }
+    }
+  },
+  "output": {
+    "type": "object",
+    "properties": {
+      "not_in_channel": {
+        "type": "boolean"
+      }
+    }
+  },
+  "errors": {
+    "cant_leave_general": {
+      "desc": "Authenticated user cannot leave the general channel"
+    },
+    "channel_not_found": {
+      "desc": "Value passed for `channel` was invalid."
+    },
+    "is_archived": {
+      "desc": "Channel has been archived."
+    },
+    "last_member": {
+      "desc": "The last member party to a channel cannot leave the channel. Someone else must join the channel before this user is permitted to exit."
+    },
+    "method_not_supported_for_channel_type": {
+      "desc": "This type of conversation cannot be used with this method."
+    },
+    "missing_scope": {
+      "desc": "The calling token is not granted the necessary scopes to complete this operation."
+    },
+    "user_is_restricted": {
+      "desc": "Restricted and guest users cannot leave channel"
+    }
+  },
+  "examples": {
+    "success": {
+      "url": "/api/conversations.leave?token=YOUR_TOKEN",
+      "description": "Typical success response",
+      "example": {
+        "ok": true
+      }
+    },
+    "success_with_warning": {
+      "description": "This method will not return an error if the user was not in the conversation before it was called. Instead the response will include a `not_in_channel` property:",
+      "example": {
+        "ok": false,
+        "not_in_channel": true
+      }
+    },
+    "error": {
+      "url": "/api/conversations.leave?token=INVALID_TOKEN",
+      "description": "Typical error response when attempting to leave a workspace's \"general\" channel",
+      "example": {
+        "ok": false,
+        "error": "cant_leave_general"
+      }
+    }
+  }
+}

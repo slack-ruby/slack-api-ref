@@ -1,0 +1,89 @@
+{
+  "desc": "Deletes a message.",
+  "http_method": "POST",
+  "scope": "chat:write",
+  "scope_by_token_type": {
+    "app": "chat:write"
+  },
+  "json_input_supported": true,
+  "slack_connect_workspaces_allowed": true,
+  "rate_limits": "t3",
+  "args": {
+    "type": "object",
+    "required": [
+      "token",
+      "ts",
+      "channel"
+    ],
+    "properties": {
+      "token": {
+        "type": "string",
+        "subtype": "auth",
+        "desc": "Authentication token bearing required scopes. Tokens should be passed as an HTTP Authorization header or alternatively, as a POST parameter.",
+        "example": "xxxx-xxxxxxxxx-xxxx"
+      },
+      "as_user": {
+        "desc": "Pass true to delete the message as the authed user with `chat:write:user` scope. Bot users in this context are considered authed users. If unused or false, the message will be deleted with `chat:write:bot` scope.",
+        "example": "true",
+        "type": "boolean"
+      },
+      "channel": {
+        "desc": "Channel containing the message to be deleted.",
+        "type": "string",
+        "subtype": "channel"
+      },
+      "ts": {
+        "desc": "Timestamp of the message to be deleted.",
+        "example": "\"1405894322.002768\"",
+        "type": "string",
+        "subtype": "timestamp"
+      }
+    }
+  },
+  "output": {
+    "type": "object",
+    "required": [
+      "channel",
+      "ts"
+    ],
+    "properties": {
+      "channel": {
+        "type": "string",
+        "subtype": "channel"
+      },
+      "ts": {
+        "schema": "ts"
+      }
+    }
+  },
+  "errors": {
+    "cant_delete_message": {
+      "desc": "Authenticated user does not have permission to delete this message."
+    },
+    "channel_not_found": {
+      "desc": "Value passed for `channel` was invalid."
+    },
+    "message_not_found": {
+      "desc": "No message exists with the requested timestamp."
+    }
+  },
+  "examples": {
+    "success": {
+      "url": "/api/chat.delete?token=YOUR_TOKEN",
+      "description": "Typical success response",
+      "example": {
+        "ok": true,
+        "channel": "C123ABC456",
+        "ts": "1401383885.000061"
+      }
+    },
+    "error": {
+      "url": "/api/chat.delete?token=INVALID_TOKEN",
+      "description": "Typical error response",
+      "example": {
+        "error": "message_not_found",
+        "ok": false
+      }
+    }
+  }
+}

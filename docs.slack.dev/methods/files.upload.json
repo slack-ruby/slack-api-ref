@@ -1,0 +1,268 @@
+{
+  "desc": "Uploads or creates a file.",
+  "http_method": "POST",
+  "scope": "files:write",
+  "rate_limits": "t2",
+  "args": {
+    "type": "object",
+    "required": [
+      "token"
+    ],
+    "properties": {
+      "token": {
+        "type": "string",
+        "subtype": "auth",
+        "desc": "Authentication token bearing required scopes. Tokens should be passed as an HTTP Authorization header or alternatively, as a POST parameter.",
+        "example": "xxxx-xxxxxxxxx-xxxx"
+      },
+      "channels": {
+        "desc": "Comma-separated list of channel names or IDs where the file will be shared.",
+        "type": "string",
+        "subtype": "channels"
+      },
+      "content": {
+        "desc": "File contents via a POST variable. If omitting this parameter, you must provide a `file`.",
+        "example": "...",
+        "type": "string"
+      },
+      "file": {
+        "desc": "File contents via `multipart/form-data`. If omitting this parameter, you must submit `content`.",
+        "example": "...",
+        "schema": "post_file"
+      },
+      "filename": {
+        "desc": "Filename of file.",
+        "example": "foo.txt",
+        "type": "string"
+      },
+      "filetype": {
+        "desc": "A [file type](/reference/objects/file-object#file_types) identifier.",
+        "example": "php",
+        "type": "string"
+      },
+      "initial_comment": {
+        "desc": "The message text introducing the file in specified `channels`.",
+        "example": "Best!",
+        "type": "string"
+      },
+      "thread_ts": {
+        "desc": "Provide another message's `ts` value to upload this file as a reply. Never use a reply's `ts` value; use its parent instead.",
+        "type": "string",
+        "subtype": "timestamp"
+      },
+      "title": {
+        "desc": "Title of file.",
+        "example": "My File",
+        "type": "string"
+      }
+    }
+  },
+  "output": {
+    "type": "object",
+    "required": [
+      "file"
+    ],
+    "properties": {
+      "file": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "created": {
+            "type": "integer"
+          },
+          "user": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "warnings": {
+    "method_deprecated": {
+      "desc": "`files.upload` is deprecated. Please use modern upload methods. Read https://docs.slack.dev/changelog/2024-04-a-better-way-to-upload-files-is-here-to-stay for more info."
+    }
+  },
+  "errors": {
+    "blocked_file_type": {
+      "desc": "Admin has disabled uploading this type of file"
+    },
+    "channel_not_found": {
+      "desc": "At least one of the values passed for `channels` was invalid."
+    },
+    "invalid_channel": {
+      "desc": "One or more channels supplied are invalid"
+    },
+    "malware_detected": {
+      "desc": "This file may contain a virus or other malware and can't be uploaded to Slack"
+    },
+    "not_in_channel": {
+      "desc": "Authenticated user is not in the channel."
+    },
+    "post_contents_too_large": {
+      "desc": "File content is larger than 130kb."
+    },
+    "posting_to_general_channel_denied": {
+      "desc": "An admin has restricted posting to the #general channel."
+    },
+    "slack_connect_blocked_file_type": {
+      "desc": "File uploads with certain types are blocked in all Slack Connect communications"
+    },
+    "slack_connect_clip_sharing_blocked": {
+      "desc": "Admin has disabled Clip sharing in Slack Connect channels"
+    },
+    "slack_connect_file_upload_sharing_blocked": {
+      "desc": "Admin has disabled File uploads in all Slack Connect communications"
+    },
+    "invalid_thread_ts": {
+      "desc": "Value passed to thread_ts was invalid"
+    },
+    "method_deprecated": {
+      "desc": "This API is deprecated. Please refer to https://docs.slack.dev/changelog/2024-04-a-better-way-to-upload-files-is-here-to-stay"
+    }
+  },
+  "examples": {
+    "success": {
+      "url": "/api/files.upload?token=YOUR_TOKEN",
+      "description": "Success response after uploading a file to a channel with an initial message",
+      "example": {
+        "ok": true,
+        "file": {
+          "id": "F0TD00400",
+          "created": 1532293501,
+          "timestamp": 1532293501,
+          "name": "dramacat.gif",
+          "title": "dramacat",
+          "mimetype": "image/jpeg",
+          "filetype": "gif",
+          "pretty_type": "JPEG",
+          "user": "U0L4B9NSU",
+          "editable": false,
+          "size": 43518,
+          "mode": "hosted",
+          "is_external": false,
+          "external_type": "",
+          "is_public": false,
+          "public_url_shared": false,
+          "display_as_bot": false,
+          "username": "",
+          "url_private": "https://.../dramacat.gif",
+          "url_private_download": "https://.../dramacat.gif",
+          "thumb_64": "https://.../dramacat_64.gif",
+          "thumb_80": "https://.../dramacat_80.gif",
+          "thumb_360": "https://.../dramacat_360.gif",
+          "thumb_360_w": 360,
+          "thumb_360_h": 250,
+          "thumb_480": "https://.../dramacat_480.gif",
+          "thumb_480_w": 480,
+          "thumb_480_h": 334,
+          "thumb_160": "https://.../dramacat_160.gif",
+          "image_exif_rotation": 1,
+          "original_w": 526,
+          "original_h": 366,
+          "permalink": "https://.../dramacat.gif",
+          "permalink_public": "https://.../More-Path-Components",
+          "comments_count": 0,
+          "is_starred": false,
+          "shares": {
+            "private": {
+              "D0L4B9P0Q": [
+                {
+                  "reply_users": [
+
+                  ],
+                  "reply_users_count": 0,
+                  "reply_count": 0,
+                  "ts": "1532293503.000001"
+                }
+              ]
+            }
+          },
+          "channels": [
+
+          ],
+          "groups": [
+
+          ],
+          "ims": [
+            "D0L4B9P0Q"
+          ],
+          "has_rich_preview": false
+        }
+      }
+    },
+    "success_with_content": {
+      "description": "Uploading a file with the `content` parameter creates an editable `text/plain` file by default",
+      "example": {
+        "ok": true,
+        "file": {
+          "id": "F0TD0GUTS",
+          "created": 1532294750,
+          "timestamp": 1532294750,
+          "name": "-.txt",
+          "title": "Untitled",
+          "mimetype": "text/plain",
+          "filetype": "text",
+          "pretty_type": "Plain Text",
+          "user": "U0L4B9NSU",
+          "editable": true,
+          "size": 11,
+          "mode": "snippet",
+          "is_external": false,
+          "external_type": "",
+          "is_public": true,
+          "public_url_shared": false,
+          "display_as_bot": false,
+          "username": "",
+          "url_private": "https://.../.txt",
+          "url_private_download": "https://...download/-.txt",
+          "permalink": "https://.../.txt",
+          "permalink_public": "https://.../.txt",
+          "edit_link": "https://.../.txt/edit",
+          "preview": "launch plan",
+          "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre>launch plan</pre></div>\n</div>\n</div>\n",
+          "lines": 1,
+          "lines_more": 0,
+          "preview_is_truncated": false,
+          "comments_count": 0,
+          "is_starred": false,
+          "shares": {
+            "public": {
+              "C061EG9SL": [
+                {
+                  "reply_users": [
+
+                  ],
+                  "reply_users_count": 0,
+                  "reply_count": 0,
+                  "ts": "1532294750.000001",
+                  "channel_name": "general",
+                  "team_id": "T061EG9R6"
+                }
+              ]
+            }
+          },
+          "channels": [
+            "C061EG9SL"
+          ],
+          "groups": [
+
+          ],
+          "ims": [
+
+          ],
+          "has_rich_preview": false
+        }
+      }
+    },
+    "error": {
+      "url": "/api/files.upload?token=INVALID_TOKEN",
+      "description": "Typical error response",
+      "example": {
+        "ok": false,
+        "error": "invalid_auth"
+      }
+    }
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "desc": "Look up functions by a set of apps",
+  "http_method": "POST",
+  "scope": "read",
+  "scope_by_token_type": {
+    "oauth": "admin.workflows:read"
+  },
+  "json_input_supported": true,
+  "rate_limits": "t2",
+  "args": {
+    "type": "object",
+    "required": [
+      "token",
+      "app_ids"
+    ],
+    "properties": {
+      "token": {
+        "type": "string",
+        "subtype": "auth",
+        "desc": "Authentication token bearing required scopes. Tokens should be passed as an HTTP Authorization header or alternatively, as a POST parameter.",
+        "example": "xxxx-xxxxxxxxx-xxxx"
+      },
+      "team_id": {
+        "desc": "The team context to retrieve functions from",
+        "example": "T00000001",
+        "schema": "workspace_id"
+      },
+      "app_ids": {
+        "type": "array",
+        "desc": "Comma-separated array of app IDs to get functions for; max 50",
+        "example": "A02,A1234",
+        "items": {
+          "schema": "app_id"
+        },
+        "maxItems": 50
+      },
+      "cursor": {
+        "desc": "Set `cursor` to `next_cursor` returned by the previous call to list items in the next page",
+        "example": "dXNlcjpVMDYxTkZUVDI=",
+        "type": "string"
+      },
+      "limit": {
+        "desc": "The number of results that will be returned by the API on each invocation. Must be between 1 and 1000, both inclusive",
+        "example": "20",
+        "type": "integer",
+        "default": 100,
+        "minimum": 1,
+        "maximum": 1000
+      }
+    }
+  },
+  "output": {
+    "type": "object",
+    "required": [
+      "functions"
+    ],
+    "properties": {
+      "functions": {
+        "type": "array",
+        "items": {
+          "schema": "function"
+        }
+      },
+      "response_metadata": {
+        "schema": "response_metadata_new"
+      }
+    }
+  },
+  "errors": {
+    "invalid_cursor": {
+      "desc": "Value passed for `cursor` was not valid or is no longer valid."
+    },
+    "not_allowed": {
+      "desc": "The user is not allowed to access this API method"
+    },
+    "restricted_action": {
+      "desc": "The user is not allowed to access this API method"
+    }
+  },
+  "examples": {
+    "success": {
+      "url": "/api/admin.functions.list?token=YOUR_TOKEN",
+      "description": "Typical success response",
+      "example": {
+        "ok": true,
+        "functions": [
+          {
+            "id": "123ABC456DE",
+            "callback_id": "sample_function",
+            "title": "Sample function",
+            "description": "A sample function",
+            "type": "app",
+            "input_parameters": [
+              {
+                "type": "string",
+                "name": "message",
+                "description": "Message to be posted",
+                "title": "Message",
+                "is_required": true
+              },
+              {
+                "type": "slack#/reference/objects/user-object_id",
+                "name": "user",
+                "description": "The user invoking the workflow",
+                "title": "User",
+                "is_required": false
+              }
+            ],
+            "output_parameters": [
+              {
+                "type": "string",
+                "name": "updatedMsg",
+                "description": "Updated message to be posted",
+                "title": "Updated Msg",
+                "is_required": true
+              }
+            ],
+            "app_id": "789FGH1011IJ",
+            "date_created": 1692283027,
+            "date_updated": 1692725035,
+            "date_deleted": 0
+          }
+        ],
+        "response_metadata": {
+          "next_cursor": "aWQ6MTE3MDk1NTIzNDAxOQ=="
+        }
+      }
+    }
+  }
+}

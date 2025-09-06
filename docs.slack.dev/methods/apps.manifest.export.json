@@ -1,0 +1,139 @@
+{
+  "desc": "Export an app manifest from an existing app",
+  "http_method": "POST",
+  "scope": "app_configurations:read",
+  "json_input_supported": true,
+  "rate_limits": "t3",
+  "args": {
+    "type": "object",
+    "required": [
+      "token",
+      "app_id"
+    ],
+    "properties": {
+      "token": {
+        "type": "string",
+        "subtype": "auth",
+        "desc": "Authentication token bearing required scopes. Tokens should be passed as an HTTP Authorization header or alternatively, as a POST parameter.",
+        "example": "xxxx-xxxxxxxxx-xxxx"
+      },
+      "app_id": {
+        "desc": "The ID of the app whose configuration you want to export as a manifest.",
+        "schema": "app_id"
+      }
+    }
+  },
+  "output": {
+    "type": "object",
+    "required": [
+      "manifest"
+    ],
+    "properties": {
+      "manifest": {
+        "schema": "manifest"
+      }
+    }
+  },
+  "errors": {
+    "app_not_eligible": {
+      "desc": "The specified app is not elgible for this API."
+    },
+    "app_not_found": {
+      "desc": "The specified app was not found."
+    },
+    "failed_export": {
+      "desc": "Failed to export manifest for given app ID"
+    },
+    "internal_error": {
+      "desc": "Internal error."
+    },
+    "invalid_app_id": {
+      "desc": "The app ID passed is invalid."
+    },
+    "no_permission": {
+      "desc": "User does not have proper permissions."
+    },
+    "unknown_method": {
+      "desc": "This method does not exist."
+    }
+  },
+  "examples": {
+    "success": {
+      "url": "/api/apps.manifest.export",
+      "description": "Typical success response",
+      "example": {
+        "ok": true,
+        "manifest": {
+          "_metadata": {
+            "major_version": 1,
+            "minor_version": 1
+          },
+          "display_information": {
+            "name": "Zork",
+            "description": "You are likely to be eaten by a grue.",
+            "background_color": "#0000AA",
+            "long_description": "Play the Infocom classic text adventure and find your way to the end of the maze. ZORK is a game of adventure, danger, and low cunning. In it you will explore some of the most amazing territory ever seen by mortals. No workspace should be without one!"
+          },
+          "features": {
+            "app_home": {
+              "home_tab_enabled": true,
+              "messages_tab_enabled": false,
+              "messages_tab_read_only_enabled": false
+            },
+            "bot_user": {
+              "display_name": "zork",
+              "always_online": true
+            },
+            "slash_commands": [
+              {
+                "command": "/zork",
+                "description": "You are standing in an open field west of a white house, with a boarded front door. There is a small mailbox here.",
+                "usage_hint": "/zork open mailbox",
+                "should_escape": false
+              }
+            ],
+            "workflow_steps": [
+              {
+                "name": "Example step",
+                "callback_id": "tutorial_example_step"
+              }
+            ]
+          },
+          "oauth_config": {
+            "redirect_urls": [
+              "https://example.com/slack/auth"
+            ],
+            "scopes": {
+              "bot": [
+                "commands",
+                "workflow.steps:execute"
+              ]
+            }
+          },
+          "settings": {
+            "event_subscriptions": {
+              "bot_events": [
+                "workflow_step_execute"
+              ]
+            },
+            "interactivity": {
+              "is_enabled": true
+            },
+            "org_deploy_enabled": false,
+            "socket_mode_enabled": true,
+            "is_hosted": false,
+            "token_rotation_enabled": false
+          }
+        }
+      }
+    },
+    "error": {
+      "url": "/api/apps.manifest.export",
+      "description": "Typical error response if invalid app ID used",
+      "example": {
+        "ok": false,
+        "error": "invalid_app_id"
+      }
+    }
+  }
+}

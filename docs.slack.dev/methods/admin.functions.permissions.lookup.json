@@ -1,0 +1,85 @@
+{
+  "desc": "Lookup the visibility of multiple Slack functions and include the users if it is limited to particular named entities.",
+  "http_method": "POST",
+  "scope": "read",
+  "scope_by_token_type": {
+    "oauth": "admin.workflows:read"
+  },
+  "json_input_supported": true,
+  "rate_limits": "t3",
+  "args": {
+    "type": "object",
+    "required": [
+      "token",
+      "function_ids"
+    ],
+    "properties": {
+      "token": {
+        "type": "string",
+        "subtype": "auth",
+        "desc": "Authentication token bearing required scopes. Tokens should be passed as an HTTP Authorization header or alternatively, as a POST parameter.",
+        "example": "xxxx-xxxxxxxxx-xxxx"
+      },
+      "function_ids": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 1000,
+        "desc": "An array of function IDs to get permissions for",
+        "items": {
+          "schema": "function_id"
+        }
+      }
+    }
+  },
+  "output": {
+    "type": "object",
+    "required": [
+      "permissions",
+      "errors",
+      "metadata"
+    ],
+    "properties": {
+      "metadata": {
+        "type": "object",
+        "patternProperties": {
+          "^Fn[A-Z0-9]{8,}$": {
+            "type": "object",
+            "properties": {
+              "workflows_using": {
+                "type": "integer",
+                "desc": "the number of workflows with a step function of this type"
+              }
+            }
+          }
+        }
+      },
+      "errors": {
+        "type": "object",
+        "patternProperties": {
+          "../common/schemas/common_defs_schema.json#/function_id": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "errors": {
+    "access_denied": {
+      "desc": "This actor does not have access to the permissions on this resource."
+    },
+    "restricted_action": {
+      "desc": "User does not have access to this API"
+    }
+  },
+  "examples": {
+    "success": {
+      "url": "/api/admin.functions.permissions.lookup?token=YOUR_TOKEN",
+      "description": "Typical success response",
+      "example": {
+        "ok": true,
+        "errors": {
+        }
+      }
+    }
+  }
+}

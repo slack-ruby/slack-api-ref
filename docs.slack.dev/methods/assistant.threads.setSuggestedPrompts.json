@@ -1,0 +1,72 @@
+{
+  "desc": "Set suggested prompts for the given assistant thread",
+  "http_method": "POST",
+  "scope": "assistant:write",
+  "json_input_supported": true,
+  "rate_limits": "t4",
+  "args": {
+    "type": "object",
+    "required": [
+      "token",
+      "channel_id",
+      "thread_ts",
+      "prompts"
+    ],
+    "properties": {
+      "token": {
+        "desc": "Token with which to authenticate the session",
+        "type": "string",
+        "subtype": "auth",
+        "example": "xxxx-xxxxxxxxx-xxxx"
+      },
+      "channel_id": {
+        "desc": "Channel ID containing the assistant thread.",
+        "subtype": "channel",
+        "schema": "channel"
+      },
+      "thread_ts": {
+        "desc": "Message timestamp of the thread to set suggested prompts for.",
+        "type": "string"
+      },
+      "prompts": {
+        "desc": "Each prompt should be supplied with its `title` and `message` attribute.",
+        "schema": "prompts"
+      },
+      "title": {
+        "desc": "Title for the list of provided prompts. For example: Suggested Prompts, Related Questions.",
+        "type": "string"
+      }
+    }
+  },
+  "output": {
+  },
+  "errors": {
+    "invalid_thread_ts": {
+      "desc": "Thread not found"
+    },
+    "channel_not_found": {
+      "desc": "Error returned when given an invalid channel_id"
+    },
+    "message_not_found": {
+      "desc": "Error returned when given an invalid message"
+    }
+  },
+  "examples": {
+    "success": {
+      "url": "/api/assistant.threads.setSuggestedPrompts?token=YOUR_TOKEN",
+      "description": "Typical success response",
+      "example": {
+        "ok": true
+      }
+    },
+    "error": {
+      "url": "/api/assistant.threads.setSuggestedPrompts?token=YOUR_TOKEN",
+      "description": "Typical error response for invalid thread",
+      "example": {
+        "ok": false,
+        "error": "invalid_thread_ts",
+        "detail": "Thread not found"
+      }
+    }
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "desc": "List emoji for an Enterprise organization.",
+  "http_method": "GET",
+  "scope": "admin.teams:read",
+  "rate_limits": "t2",
+  "args": {
+    "type": "object",
+    "required": [
+      "token"
+    ],
+    "properties": {
+      "token": {
+        "type": "string",
+        "subtype": "auth",
+        "desc": "Authentication token bearing required scopes. Tokens should be passed as an HTTP Authorization header or alternatively, as a POST parameter.",
+        "example": "xxxx-xxxxxxxxx-xxxx"
+      },
+      "cursor": {
+        "type": "string",
+        "desc": "Set `cursor` to `next_cursor` returned by the previous call to list items in the next page",
+        "example": "5c3e53d5"
+      },
+      "limit": {
+        "type": "integer",
+        "desc": "The maximum number of items to return. Must be between 1 - 1000 both inclusive.",
+        "example": "100",
+        "default": 100,
+        "minimum": 1,
+        "maximum": 1000
+      }
+    }
+  },
+  "output": {
+    "type": "object",
+    "required": [
+      "emoji"
+    ],
+    "properties": {
+      "emoji": {
+        "type": "object"
+      },
+      "response_metadata": {
+        "type": "object",
+        "required": [
+          "next_cursor"
+        ],
+        "properties": {
+          "next_cursor": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "errors": {
+    "feature_not_enabled": {
+      "desc": "The Admin APIs feature is not enabled for this team."
+    },
+    "invalid_cursor": {
+      "desc": "Value passed for `cursor` was not valid or is no longer valid."
+    },
+    "not_an_admin": {
+      "desc": "This method is only accessible by org owners and Admins."
+    }
+  },
+  "examples": {
+    "success": {
+      "url": "/api/admin.emoji.list?token=YOUR_TOKEN",
+      "description": "Typical success response",
+      "example": {
+        "ok": true,
+        "emoji": {
+          "workflow": {
+            "url": "https://emoji.slack-edge.com/TM315QLU8/workflow/530de66adccc59c5.png",
+            "date_created": 1591720632,
+            "uploaded_by": "WLWLQDAL9"
+          },
+          "welcome": {
+            "url": "https://emoji.slack-edge.com/TM315QLU8/welcome/763d3659699d2ef7.gif",
+            "date_created": 1593383451,
+            "uploaded_by": "WPU7MCTFH"
+          },
+          "person": {
+            "url": "https://emoji.slack-edge.com/TM315QLU8/person/81295a4f69d8b122.png",
+            "date_created": 1593383817,
+            "uploaded_by": "WPU7MCTFH"
+          },
+          "people": {
+            "url": "https://emoji.slack-edge.com/TM315QLU8/people/0b40796ab677b47f.png",
+            "date_created": 1593383822,
+            "uploaded_by": "WPU7MCTFH"
+          },
+          "slackbot": {
+            "url": "https://emoji.slack-edge.com/TM315QLU8/slackbot/561d6e545263d92b.png",
+            "date_created": 1593383989,
+            "uploaded_by": "WPU7MCTFH"
+          },
+          "plus1": {
+            "url": "https://emoji.slack-edge.com/TM315QLU8/plus1/42b92e57a79eb27e.png",
+            "date_created": 1593724572,
+            "uploaded_by": "WPU7MCTFH"
+          },
+          "bc": {
+            "url": "https://emoji.slack-edge.com/TM315QLU8/bc/fb3dfdea697528b9.png",
+            "date_created": 1594854289,
+            "uploaded_by": "WPU7MCTFH"
+          },
+          "wf": {
+            "url": "https://emoji.slack-edge.com/TM315QLU8/wf/04dad3aa28b57cd3.png",
+            "date_created": 1594854443,
+            "uploaded_by": "WPU7MCTFH"
+          },
+          "kb": {
+            "url": "https://emoji.slack-edge.com/TM315QLU8/kb/bab417c375703f7b.png",
+            "date_created": 1598467537,
+            "uploaded_by": "WPU7MCTFH"
+          },
+          "ignore": {
+            "url": "https://emoji.slack-edge.com/TM315QLU8/ignore/9506cda43addbad8.png",
+            "date_created": 1598467835,
+            "uploaded_by": "WPU7MCTFH"
+          }
+        },
+        "response_metadata": {
+          "next_cursor": ""
+        }
+      }
+    }
+  }
+}

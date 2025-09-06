@@ -1,0 +1,151 @@
+{
+  "desc": "Get all Information Barriers for your organization",
+  "http_method": "GET",
+  "scope": "admin.barriers:read",
+  "rate_limits": "t2",
+  "args": {
+    "type": "object",
+    "required": [
+      "token"
+    ],
+    "properties": {
+      "token": {
+        "type": "string",
+        "subtype": "auth",
+        "desc": "Authentication token bearing required scopes. Tokens should be passed as an HTTP Authorization header or alternatively, as a POST parameter.",
+        "example": "xxxx-xxxxxxxxx-xxxx"
+      },
+      "limit": {
+        "type": "integer",
+        "desc": "The maximum number of items to return. Must be between 1 - 1000 both inclusive",
+        "example": "100",
+        "default": 100,
+        "minimum": 1,
+        "maximum": 1000
+      },
+      "cursor": {
+        "type": "string",
+        "desc": "Set `cursor` to `next_cursor` returned by the previous call to list items in the next page",
+        "example": "5c3e53d5"
+      }
+    }
+  },
+  "output": {
+    "type": "object",
+    "required": [
+      "ok",
+      "barriers"
+    ],
+    "properties": {
+      "ok": {
+        "type": "boolean"
+      },
+      "barriers": {
+        "type": "array",
+        "items": {
+          "schema": "information_barrier"
+        }
+      },
+      "response_metadata": {
+        "type": "object",
+        "required": [
+          "next_cursor"
+        ],
+        "properties": {
+          "next_cursor": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "errors": {
+    "feature_not_enabled": {
+      "desc": "Feature not enabled"
+    },
+    "invalid_cursor": {
+      "desc": "Value passed for `cursor` was not valid or is no longer valid."
+    },
+    "not_an_admin": {
+      "desc": "The token provided is not associated with an org admin"
+    }
+  },
+  "examples": {
+    "success": {
+      "url": "/api/admin.barriers.list?token=YOUR_TOKEN",
+      "description": "The response includes a list of `usergroups`, `restricted subjects`, and the time it was last updated.",
+      "example": {
+        "ok": true,
+        "barriers": [
+          {
+            "id": "Ba03T70KB2H3",
+            "enterprise_id": "E03055H6DAS",
+            "primary_usergroup": {
+              "id": "S03TZK4A9H6",
+              "name": "Company That Pays Contracting Teams"
+            },
+            "barriered_from_usergroups": [
+              {
+                "id": "S03TNHF56UR",
+                "name": "External Contracting Team"
+              },
+              {
+                "id": "S03TNHGAUGZ",
+                "name": "Another External Contracting Team"
+              }
+            ],
+            "restricted_subjects": [
+              "im",
+              "mpim",
+              "call"
+            ],
+            "date_update": 1660224825
+          }
+        ]
+      }
+    },
+    "success_with_mixed_results": {
+      "description": "Example response include a top-level `response_metadata` attribute containing a `next_cursor` value",
+      "example": {
+        "ok": true,
+        "barriers": [
+          {
+            "id": "Ba03T70KB2H3",
+            "enterprise_id": "E03055H6DAS",
+            "primary_usergroup": {
+              "id": "S03TZK4A9H6",
+              "name": "Company That Pays Contracting Teams"
+            },
+            "barriered_from_usergroups": [
+              {
+                "id": "S03TNHF56UR",
+                "name": "External Contracting Team"
+              },
+              {
+                "id": "S03TNHGAUGZ",
+                "name": "Another External Contracting Team"
+              }
+            ],
+            "restricted_subjects": [
+              "im",
+              "mpim",
+              "call"
+            ],
+            "response_metadata": {
+              "next_cursor": "dGVhbTpDMDYxRkE1UEI="
+            },
+            "date_update": 1660224825
+          }
+        ]
+      }
+    },
+    "error": {
+      "url": "/api/admin.barriers.list?token=YOUR_TOKEN",
+      "description": "Typical error response if you do not have information barrier enabled. Reach out to your CSM.",
+      "example": {
+        "ok": false,
+        "error": "feature_not_enabled"
+      }
+    }
+  }
+}

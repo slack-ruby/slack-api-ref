@@ -1,0 +1,284 @@
+{
+  "desc": "Searches for messages matching a query.",
+  "http_method": "GET",
+  "scope": "search:read",
+  "rate_limits": "t2",
+  "args": {
+    "type": "object",
+    "required": [
+      "token",
+      "query"
+    ],
+    "properties": {
+      "token": {
+        "type": "string",
+        "subtype": "auth",
+        "desc": "Authentication token bearing required scopes. Tokens should be passed as an HTTP Authorization header or alternatively, as a POST parameter.",
+        "example": "xxxx-xxxxxxxxx-xxxx"
+      },
+      "count": {
+        "default": 20,
+        "desc": "Pass the number of results you want per \"page\". Maximum of `100`.",
+        "type": "integer",
+        "subtype": "paging"
+      },
+      "highlight": {
+        "desc": "Pass a value of `true` to enable query highlight markers (see below).",
+        "example": "true",
+        "type": "boolean"
+      },
+      "page": {
+        "default": 1,
+        "type": "integer",
+        "subtype": "paging"
+      },
+      "cursor": {
+        "desc": "Use this when getting results with cursormark pagination. For first call send `*` for subsequent calls, send the value of `next_cursor` returned in the previous call's results",
+        "type": "string"
+      },
+      "query": {
+        "desc": "Search query.",
+        "example": "pickleface",
+        "type": "string"
+      },
+      "sort": {
+        "default": "score",
+        "desc": "Return matches sorted by either `score` or `timestamp`.",
+        "example": "timestamp",
+        "type": "string"
+      },
+      "sort_dir": {
+        "default": "desc",
+        "desc": "Change sort direction to ascending (`asc`) or descending (`desc`).",
+        "example": "asc",
+        "type": "string",
+        "enum": [
+          "asc",
+          "desc",
+          ""
+        ]
+      },
+      "team_id": {
+        "type": "string",
+        "subtype": "team",
+        "desc": "encoded team id to search in, required if org token is used"
+      }
+    }
+  },
+  "output": {
+    "type": "object",
+    "properties": {
+      "callstack": {
+        "optional": true,
+        "type": "string"
+      },
+      "users": {
+        "optional": true,
+        "type": "object"
+      },
+      "messages": {
+        "type": "object",
+        "properties": {
+          "matches": {
+            "minItems": 0,
+            "type": "array"
+          },
+          "pagination": {
+            "type": "object",
+            "properties": {
+              "last": {
+                "type": "integer",
+                "example": 2,
+                "desc": "Last result id"
+              },
+              "warnings": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "total_count": {
+                "type": "integer",
+                "example": 2,
+                "desc": "Total count of results"
+              },
+              "page_count": {
+                "type": "integer",
+                "example": 1,
+                "desc": "Number of pages"
+              },
+              "per_page": {
+                "type": "integer",
+                "example": 20,
+                "desc": "Number of results per page"
+              },
+              "page": {
+                "type": "integer",
+                "example": 1,
+                "desc": "Current page"
+              },
+              "first": {
+                "type": "integer",
+                "example": 1,
+                "desc": "First result id"
+              },
+              "next_cursor": {
+                "type": "string",
+                "desc": "value of next cursor to be passed when using cursormark pagination"
+              }
+            }
+          },
+          "total": {
+            "type": "integer",
+            "example": 351,
+            "desc": "Total number of message search results."
+          },
+          "all_stop_words": {
+            "optional": true,
+            "type": "boolean"
+          },
+          "paging": {
+            "type": "object",
+            "properties": {
+              "count": {
+                "type": "integer",
+                "example": 20,
+                "desc": "Number of results per page"
+              },
+              "total": {
+                "type": "integer",
+                "example": 2,
+                "desc": "Number of results"
+              },
+              "pages": {
+                "type": "integer",
+                "example": 1,
+                "desc": "Number of pages"
+              },
+              "page": {
+                "type": "integer",
+                "example": 1,
+                "desc": "Current page"
+              },
+              "warnings": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "next_cursor": {
+                "type": "string",
+                "desc": "next cursor to be passed to the method for next set of results using cursor pagination"
+              }
+            }
+          }
+        }
+      },
+      "show_feedback": {
+        "optional": true,
+        "type": "boolean"
+      },
+      "teams": {
+        "optional": true,
+        "type": "object"
+      },
+      "query": {
+        "optional": false,
+        "type": "string",
+        "example": "pickleface",
+        "desc": "Search query."
+      },
+      "bots": {
+        "optional": true,
+        "type": "object"
+      },
+      "ignored_exclude_bots_pref": {
+        "optional": true,
+        "type": "boolean"
+      }
+    }
+  },
+  "examples": {
+    "success": {
+      "url": "/api/search.messages?token=YOUR_TOKEN",
+      "description": "Typical success response",
+      "example": {
+        "messages": {
+          "matches": [
+            {
+              "channel": {
+                "id": "C12345678",
+                "is_ext_shared": false,
+                "is_mpim": false,
+                "is_org_shared": false,
+                "is_pending_ext_shared": false,
+                "is_private": false,
+                "is_shared": false,
+                "name": "general",
+                "pending_shared": [
+
+                ]
+              },
+              "iid": "cb64bdaa-c1e8-4631-8a91-0f78080113e9",
+              "permalink": "https://hitchhikers.slack.com/archives/C12345678/p1508284197000015",
+              "team": "T12345678",
+              "text": "The meaning of life the universe and everything is 42.",
+              "ts": "1508284197.000015",
+              "type": "message",
+              "user": "U2U85N1RV",
+              "username": "roach"
+            },
+            {
+              "channel": {
+                "id": "C12345678",
+                "is_ext_shared": false,
+                "is_mpim": false,
+                "is_org_shared": false,
+                "is_pending_ext_shared": false,
+                "is_private": false,
+                "is_shared": false,
+                "name": "random",
+                "pending_shared": [
+
+                ]
+              },
+              "iid": "9a00d3c9-bd2d-45b0-988b-6cff99ae2a90",
+              "permalink": "https://hitchhikers.slack.com/archives/C12345678/p1508795665000236",
+              "team": "T12345678",
+              "text": "The meaning of life the universe and everything is 101010",
+              "ts": "1508795665.000236",
+              "type": "message",
+              "user": "",
+              "username": "robot overlord"
+            }
+          ],
+          "pagination": {
+            "first": 1,
+            "last": 2,
+            "page": 1,
+            "page_count": 1,
+            "per_page": 20,
+            "total_count": 2
+          },
+          "paging": {
+            "count": 20,
+            "page": 1,
+            "pages": 1,
+            "total": 2
+          },
+          "total": 2
+        },
+        "ok": true,
+        "query": "The meaning of life the universe and everything"
+      }
+    },
+    "error": {
+      "url": "/api/search.messages?token=YOUR_TOKEN",
+      "description": "Typical error response",
+      "example": {
+        "error": "No query passed",
+        "ok": false
+      }
+    }
+  }
+}
