@@ -13,3 +13,5 @@ load 'tasks/events.rake'
 load 'tasks/methods.rake'
 load 'tasks/validate.rake'
 load 'tasks/update.rake'
+
+task default: 'api:update'
