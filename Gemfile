@@ -6,7 +6,6 @@ gem 'bundler'
 gem 'json'
 gem 'json-schema'
 gem 'rake'
-gem 'spidey'
 
 group :test do
   gem 'rubocop'
