@@ -1,0 +1,44 @@
+{
+  "group": "lists",
+  "name": "slackLists.items.list",
+  "deprecated": false,
+  "desc": "Get records from a List.",
+  "args": {
+    "archived": {
+      "required": false,
+      "example": "true",
+      "desc": "Boolean indicating whether archived items or normal items should be returned.",
+      "type": "boolean"
+    },
+    "cursor": {
+      "required": false,
+      "example": "bGlzdF9pZDoxMjIxNzk3NzMyNDgzO2lkOjEyNzAxMjMxNTEzOTQ7ZGF0ZV9jcmVhdGVkOjE3NTE1NTkyMTU=",
+      "desc": "Next cursor for pagination.",
+      "type": "string"
+    },
+    "limit": {
+      "required": false,
+      "example": "100",
+      "desc": "The maximum number of records to return.",
+      "type": "integer"
+    },
+    "list_id": {
+      "required": true,
+      "example": "F12345678",
+      "desc": "ID of the List.",
+      "type": "string"
+    }
+  },
+  "response": {
+    "examples": [
+      "{\n    \"ok\": true,\n    \"items\": [\n        {\n            \"id\": \"Rec12345678\",\n            \"list_id\": \"F1234ABCD\",\n            \"fields\": [\n                {\n                    \"key\": \"title\",\n                    \"column_id\": \"Col10000000\",\n                    \"value\": \"{\\\"rich_text\\\": [ { \\\"type\\\": \\\"rich_text_section\\\", \\\"elements\\\": [ { \\\"type\\\": \\\"text\\\", \\\"text\\\": \\\"Project Alpha\\\" }]}]}\",\n                    \"text\": \"Project Alpha\",\n                    \"rich_text\": [\n                        {\n                            \"type\": \"rich_text_section\",\n                            \"elements\": [\n                                {\n                                    \"type\": \"text\",\n                                    \"text\": \"Project Alpha\"\n                                }\n                            ]\n                        }\n                    ]\n                },\n                {\n                    \"key\": \"due_date\",\n                    \"column_id\": \"Col10000001\",\n                    \"value\": \"2024-03-20\",\n                    \"date\": [\n                        \"2024-03-20\"\n                    ]\n                },\n                {\n                    \"key\": \"Col80000005\",\n                    \"column_id\": \"Col10000002\",\n                    \"value\": \"Opt123\",\n                    \"select\": [\n                        \"Opt123\"\n                    ]\n                },\n                {\n                    \"key\": \"assignee\",\n                    \"column_id\": \"Col10000003\",\n                    \"value\": \"U1234567\",\n                    \"user\": [\n                        \"U1234567\"\n                    ]\n                },\n                {\n                    \"key\": \"completed\",\n                    \"column_id\": \"Col10000004\",\n                    \"value\": true,\n                    \"checkbox\": true\n                },\n                {\n                    \"key\": \"contact\",\n                    \"column_id\": \"Col10000005\",\n                    \"value\": \"john.doe@example.com\",\n                    \"email\": [\n                        \"john.doe@example.com\"\n                    ]\n                },\n                {\n                    \"key\": \"phone_number\",\n                    \"column_id\": \"Col10000006\",\n                    \"value\": \"+1-555-123-4567\",\n                    \"phone\": [\n                        \"+1-555-123-4567\"\n                    ]\n                },\n                {\n                    \"key\": \"project_channel\",\n                    \"column_id\": \"Col10000007\",\n                    \"value\": \"C1234567|C2345678\",\n                    \"channel\": [\n                        \"C1234567\",\n                        \"C2345678\"\n                    ]\n                },\n                {\n                    \"key\": \"satisfaction\",\n                    \"column_id\": \"Col10000008\",\n                    \"value\": 4,\n                    \"rating\": [\n                        4\n                    ]\n                },\n                {\n                    \"key\": \"last_updated\",\n                    \"column_id\": \"Col10000009\",\n                    \"value\": 1710892800,\n                    \"timestamp\": [\n                        1710892800\n                    ]\n                },\n                {\n                    \"key\": \"documentation\",\n                    \"column_id\": \"Col10000010\",\n                    \"value\": \"https://example.com/docs\",\n                    \"link\": [\n                        {\n                            \"url\": \"https://example.com/docs\",\n                            \"text\": \"Project Documentation\"\n                        }\n                    ]\n                },\n                {\n                    \"key\": \"related_item\",\n                    \"column_id\": \"Col10000011\",\n                    \"value\": \"{\\\"file\\\":{\\\"file_id\\\":\\\"F1234ABCE\\\"}}\",\n                    \"reference\": [\n                        {\n                            \"file\": {\n                                \"file_id\": \"F1234ABCE\"\n                            }\n                        }\n                    ]\n                }\n            ],\n            \"saved\": {\n                \"is_archived\": false,\n                \"state\": \"in_progress\",\n                \"date_due\": 1710892800,\n                \"date_completed\": 0\n            },\n            \"saved_fields\": {\n                \"Col10000000\": {\n                    \"is_archived\": true,\n                    \"state\": \"archived\",\n                    \"date_due\": 1710892800,\n                    \"date_completed\": 1710880000\n                },\n                \"Col10000001\": {\n                    \"is_archived\": false,\n                    \"state\": \"in_progress\",\n                    \"date_due\": 1710895000,\n                    \"date_completed\": 0\n                }\n            }\n        }\n    ],\n    \"next_cursor\": \"dGVhbTpDMDExMzIyMzQ1Njc4\"\n}"
+    ]
+  },
+  "errors": {
+    "list_not_found": "The List was not found.",
+    "team_not_found": "The team cannot be found.",
+    "user_not_found": "The user cannot be found.",
+    "invalid_cursor": "Value passed for `cursor` was not valid or is no longer valid.",
+    "archive_not_supported": "Archiving is not supported."
+  }
+}

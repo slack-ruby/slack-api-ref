@@ -1,0 +1,32 @@
+{
+  "group": "lists",
+  "name": "slackLists.download.get",
+  "deprecated": false,
+  "desc": "Retrieve List download URL from an export job to download List contents.",
+  "args": {
+    "job_id": {
+      "required": true,
+      "example": "Le48SKT566",
+      "desc": "The ID of the recently started job to export the List.",
+      "type": "string"
+    },
+    "list_id": {
+      "required": true,
+      "example": "F1234567",
+      "desc": "ID of the List to export.",
+      "type": "string"
+    }
+  },
+  "response": {
+    "examples": [
+      "{\n    \"ok\": true,\n    \"status\": \"COMPLETED\",\n    \"download_url\": \"https://files.example.com/files-pri/1234567890-F12345678/csv/list?origin_team=T1234567890\"\n}",
+      "{\n    \"ok\": false,\n    \"error\": \"list_not_found\"\n}"
+    ]
+  },
+  "errors": {
+    "list_not_found": "The List was not found.",
+    "permission_denied": "The bot does not have permission to perform this action.",
+    "unknown_method": "Feature not enabled for this team.",
+    "job_not_found": "Could not find an export job matching that ID."
+  }
+}

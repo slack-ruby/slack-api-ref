@@ -1,0 +1,29 @@
+{
+  "group": "lists",
+  "name": "slackLists.download.start",
+  "deprecated": false,
+  "desc": "Initiate a job to export List contents.",
+  "args": {
+    "include_archived": {
+      "required": false,
+      "type": "boolean"
+    },
+    "list_id": {
+      "required": true,
+      "example": "F1234567",
+      "desc": "ID of the List to export.",
+      "type": "string"
+    }
+  },
+  "response": {
+    "examples": [
+      "{\n    \"ok\": true,\n    \"job_id\": \"LeF1234567\"\n}",
+      "{\n    \"ok\": false,\n    \"error\": \"list_not_found\"\n}"
+    ]
+  },
+  "errors": {
+    "list_not_found": "The List was not found.",
+    "permission_denied": "The bot does not have permission to perform this action.",
+    "unknown_method": "Feature not enabled for this team."
+  }
+}

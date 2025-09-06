@@ -1,0 +1,32 @@
+{
+  "group": "lists",
+  "name": "slackLists.items.delete",
+  "deprecated": false,
+  "desc": "Deletes an item from an existing List.",
+  "args": {
+    "id": {
+      "required": true,
+      "example": "Rec1234567",
+      "desc": "ID of item to delete.",
+      "type": "string"
+    },
+    "list_id": {
+      "required": true,
+      "example": "F12345678",
+      "desc": "ID of the List containing the item.",
+      "type": "string"
+    }
+  },
+  "response": {
+    "examples": [
+      "{\n    \"ok\": true\n}",
+      "{\n    \"ok\": false,\n    \"error\": \"invalid_auth\"\n}"
+    ]
+  },
+  "errors": {
+    "list_not_found": "The List was not found.",
+    "record_not_found": "The record was not found in the List.",
+    "team_not_found": "The team cannot be found.",
+    "user_not_found": "The user cannot be found."
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "group": "rtm",
+  "name": "rtm.start",
+  "deprecated": false,
+  "desc": "Deprecated: Starts a Real Time Messaging session. Use rtm.connect instead.",
+  "args": {
+    "batch_presence_aware": {
+      "required": false,
+      "example": "1",
+      "desc": "Batch presence deliveries via subscription. Enabling changes the shape of `presence_change` events. See [batch presence](/apis/web-api/user-presence-and-status#batching).",
+      "type": "boolean"
+    },
+    "include_locale": {
+      "required": false,
+      "desc": "Set this to `true` to receive the locale for users and channels. Defaults to `false`.",
+      "type": "boolean"
+    },
+    "mpim_aware": {
+      "required": false,
+      "desc": "Returns MPIMs to the client in the API response.",
+      "type": "boolean"
+    },
+    "no_latest": {
+      "required": false,
+      "example": "1",
+      "desc": "Exclude latest timestamps for channels, groups, mpims, and ims. Automatically sets `no_unreads` to `1`.",
+      "type": "boolean"
+    },
+    "no_unreads": {
+      "required": false,
+      "desc": "Skip unread counts for each channel (improves performance).",
+      "type": "boolean"
+    },
+    "presence_sub": {
+      "required": false,
+      "example": "true",
+      "desc": "Only deliver presence events when requested by subscription. See [presence subscriptions](/apis/web-api/user-presence-and-status#subscriptions).",
+      "type": "boolean"
+    },
+    "simple_latest": {
+      "required": false,
+      "desc": "Return timestamp only for latest message object of each channel (improves performance).",
+      "type": "boolean"
+    }
+  },
+  "response": {
+    "examples": [
+      "{\n    \"ok\": true\n}",
+      "{\n    \"ok\": false,\n    \"error\": \"invalid_auth\"\n}"
+    ]
+  },
+  "errors": {
+    "method_deprecated": "`rtm.start` is deprecated. Please use `rtm.connect` instead of `rtm.start`. Read https://docs.slack.dev/changelog/2021-10-rtm-start-to-stop for more info.",
+    "migration_in_progress": "Workspace is being migrated between servers. See [the `team_migration_started` event documentation](/reference/events/team_migration_started) for details.",
+    "rtm_connect_required": "`rtm.start` is deprecated. Please use `rtm.connect` instead of `rtm.start`. Read https://docs.slack.dev/changelog/2021-10-rtm-start-to-stop for more info."
+  }
+}

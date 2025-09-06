@@ -1,0 +1,44 @@
+{
+  "group": "lists",
+  "name": "slackLists.access.set",
+  "deprecated": false,
+  "desc": "Set the access level to a List for specified entities.",
+  "args": {
+    "access_level": {
+      "required": true,
+      "desc": "Desired level of access."
+    },
+    "channel_ids": {
+      "required": false,
+      "example": "[\"C1234ABCD\"]",
+      "desc": "List of channels you wish to update access for. Can only be used if `user_ids` is not provided.",
+      "type": "array"
+    },
+    "list_id": {
+      "required": true,
+      "example": "F1234ABCD",
+      "desc": "Encoded ID of the List."
+    },
+    "user_ids": {
+      "required": false,
+      "example": "[\"U1234ABCD\"]",
+      "desc": "List of users you wish to update access for. Can only be used if `channel_ids` is not provided.",
+      "type": "array"
+    }
+  },
+  "response": {
+    "examples": [
+      "{\n    \"ok\": true\n}",
+      "{\n    \"ok\": false,\n    \"error\": \"restricted_action\"\n}"
+    ]
+  },
+  "errors": {
+    "lists_disabled_user_team": "Lists is disabled on user's team.",
+    "list_not_found": "The List you wish to update permissions for is not available.",
+    "channel_not_found": "A channel could not be found.",
+    "failed_to_update_user_ids": "Failed to update the specified user IDs.",
+    "invalid_parameters": "One of `user_ids` or `channel_ids` must be defined, but not both.",
+    "restricted_action": "User does not have permission to perform this action.",
+    "user_not_found": "A user could not be found."
+  }
+}

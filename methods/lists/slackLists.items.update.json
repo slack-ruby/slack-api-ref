@@ -1,0 +1,53 @@
+{
+  "group": "lists",
+  "name": "slackLists.items.update",
+  "deprecated": false,
+  "desc": "Updates cells in a List.",
+  "args": {
+    "cells": {
+      "required": true,
+      "example": "[{\"row_id\":\"Rec014K005UQJ\",\"column_id\":\"Col014K005UQJ\",\"user\":[\"U01284PCR98\", \"U0137181B5H\"]}]",
+      "desc": "Cells to update.",
+      "type": "array"
+    },
+    "list_id": {
+      "required": true,
+      "example": "F03PSRPN4CE",
+      "desc": "ID of the List to add or update cells.",
+      "type": "string"
+    }
+  },
+  "response": {
+    "examples": [
+      "{\n    \"ok\": true\n}",
+      "{\n    \"ok\": false,\n    \"error\": \"invalid_row_id\"\n}"
+    ]
+  },
+  "errors": {
+    "list_not_found": "The List was not found.",
+    "row_not_found": "The row was not found.",
+    "column_not_found": "The column was not found.",
+    "file_not_found": "Invalid file ID for this List.",
+    "invalid_input_type": "Supplied value key or value type is invalid for the given column type.",
+    "invalid_row_id": "Invalid row ID for this List.",
+    "invalid_column_id": "Invalid column ID for this List.",
+    "permission_denied": "The user does not have permission to perform this action.",
+    "team_not_found": "The team cannot be found.",
+    "user_not_found": "The user cannot be found.",
+    "channel_not_found": "The channel cannot be found.",
+    "uneditable_column": "The column cannot be updated.",
+    "invalid_blocks": "Rich text payload supplied is invalid.",
+    "invalid_text_block": "Rich text payload supplied is invalid.",
+    "invalid_email": "Email supplied is invalid.",
+    "invalid_link": "Message archive link supplied is invalid.",
+    "invalid_date": "Date supplied is invalid.",
+    "invalid_option_id": "Option supplied is invalid.",
+    "row_id_not_provided": "The `row_id` or `row_id_to_create` field must be provided.",
+    "column_id_not_provided": "The `column_id` or `column_id_to_create` field must be provided.",
+    "over_cell_fields_limit": "The supplied cell fields are over the cell field maximum.",
+    "invalid_message": "Invalid message provided.",
+    "invalid_attachment": "Invalid attachment provided.",
+    "invalid_phone_number": "Invalid phone number provided.",
+    "invalid_vote_value": "Invalid vote value is supplied."
+  }
+}

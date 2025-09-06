@@ -1,0 +1,46 @@
+{
+  "group": "lists",
+  "name": "slackLists.items.create",
+  "deprecated": false,
+  "desc": "Add a new item to an existing List.",
+  "args": {
+    "duplicated_item_id": {
+      "required": false,
+      "desc": "ID of the record to make a copy of."
+    },
+    "initial_fields": {
+      "required": false,
+      "desc": "Initial item data.",
+      "type": "array"
+    },
+    "list_id": {
+      "required": true,
+      "desc": "ID of the List to add the item to."
+    },
+    "parent_item_id": {
+      "required": false,
+      "desc": "ID of the parent record for this subtask."
+    }
+  },
+  "response": {
+    "examples": [
+      "{\n    \"ok\": true,\n    \"item\": {\n        \"id\": \"Rec12345678\",\n        \"list_id\": \"F1234ABCD\",\n        \"date_created\": 1704067200,\n        \"created_by\": \"U1234567\",\n        \"updated_by\": \"U1234567\",\n        \"updated_timestamp\": \"1704067200\",\n        \"fields\": [\n            {\n                \"key\": \"title\",\n                \"column_id\": \"Col10000000\",\n                \"value\": \"[{\\\"type\\\":\\\"rich_text\\\",\\\"block_id\\\":\\\"abc123\\\",\\\"elements\\\":[{\\\"type\\\":\\\"rich_text_section\\\",\\\"elements\\\":[{\\\"type\\\":\\\"text\\\",\\\"text\\\":\\\"Complete project documentation\\\"}]}]}]\",\n                \"text\": \"Complete project documentation\",\n                \"rich_text\": [\n                    {\n                        \"type\": \"rich_text\",\n                        \"block_id\": \"abc123\",\n                        \"elements\": [\n                            {\n                                \"type\": \"rich_text_section\",\n                                \"elements\": [\n                                    {\n                                        \"type\": \"text\",\n                                        \"text\": \"Complete project documentation\"\n                                    }\n                                ]\n                            }\n                        ]\n                    }\n                ]\n            },\n            {\n                \"key\": \"due_date\",\n                \"column_id\": \"Col10000001\",\n                \"value\": \"2024-03-20\",\n                \"date\": [\n                    \"2024-03-20\"\n                ]\n            }\n        ]\n    }\n}",
+      "{\n    \"ok\": false,\n    \"error\": \"list_not_found\"\n}"
+    ]
+  },
+  "errors": {
+    "list_not_found": "The List was not found.",
+    "over_row_maximum": "Cannot create more items over the maximum.",
+    "team_not_found": "The team cannot be found.",
+    "user_not_found": "The user cannot be found.",
+    "duplicated_item_not_found": "The item to duplicate cannot be found.",
+    "invalid_option_id": "Option ID provided does not match column definition.",
+    "invalid_args": "The provided arguments are invalid.",
+    "uneditable_column": "Initial values provided for an uneditable column.",
+    "invalid_input_type": "The field value type does not match the column type.",
+    "invalid_column_id": "The column ID provided does not exist in the List.",
+    "over_cell_fields_limit": "Too many values provided for a single field.",
+    "file_not_found": "The attachment file could not be found.",
+    "invalid_vote_value": "Invalid value provided for a vote column."
+  }
+}

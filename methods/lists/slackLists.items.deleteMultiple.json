@@ -1,0 +1,30 @@
+{
+  "group": "lists",
+  "name": "slackLists.items.deleteMultiple",
+  "deprecated": false,
+  "desc": "Deletes multiple items from an existing List.",
+  "args": {
+    "ids": {
+      "required": true,
+      "desc": "IDs of items to delete.",
+      "type": "array"
+    },
+    "list_id": {
+      "required": true,
+      "example": "F12345678",
+      "desc": "ID of the List containing the items.",
+      "type": "string"
+    }
+  },
+  "response": {
+    "examples": [
+      "{\n    \"ok\": true\n}",
+      "{\n    \"ok\": false,\n    \"error\": \"invalid_auth\"\n}"
+    ]
+  },
+  "errors": {
+    "list_not_found": "The List was not found.",
+    "team_not_found": "The team cannot be found.",
+    "user_not_found": "The user cannot be found."
+  }
+}

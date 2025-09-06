@@ -4,73 +4,46 @@
   "deprecated": false,
   "desc": "Retrieve analytics data for a given date, presented as a compressed JSON file",
   "args": {
-    "type": {
-      "required": true,
-      "example": "member",
-      "desc": "The type of analytics to retrieve. The options are currently limited to member (for grid member analytics) and public_channel (for public channel analytics).",
-      "type": "string"
-    },
     "date": {
       "required": false,
       "example": "2020-09-01",
-      "desc": "Date to retrieve the analytics data for, expressed as YYYY-MM-DD in UTC. Required unless metadata_only is set to true.",
+      "desc": "Date to retrieve the analytics data for, expressed as `YYYY-MM-DD` in UTC. Required unless `metadata_only` is set to true.",
       "type": "date"
     },
     "metadata_only": {
       "required": false,
-      "example": "false",
-      "desc": "Retrieve metadata for the type of analytics indicated. Can be used only with type set to public_channel analytics. See detail below. Omit the date parameter when using this argument.",
+      "example": "true",
+      "desc": "Retrieve metadata for the `type` of analytics indicated. Can be used only with `type` set to `public_channel` analytics. See [detail below](#metadata_only). Omit the `date` parameter when using this argument.",
       "type": "boolean"
+    },
+    "type": {
+      "required": true,
+      "example": "member",
+      "desc": "The type of analytics to retrieve. The options are currently limited to `member` (for Enterprise org member analytics) and `public_channel` (for public channel analytics).",
+      "type": "string"
     }
   },
   "response": {
     "examples": [
+      "\"\"",
       "{\n    \"ok\": false,\n    \"error\": \"org_level_email_display_disabled\"\n}"
     ]
   },
   "errors": {
-    "data_not_available": "The date was before the API became available.",
+    "data_not_available": "The `date` was before the API became available.",
     "feature_not_available": "The user token does not belong to an Enterprise or Business+ team.",
     "feature_not_enabled": "This feature is not enabled on your workspace.",
-    "file_not_found": "The analytics data for the date specified weren't found.",
-    "file_not_yet_available": "The analytics data for the date isn't available yet.",
-    "invalid_arguments": "The method was either called with invalid arguments or some detail about the arguments passed is invalid, which is more likely when using complex arguments like blocks or attachments.",
-    "invalid_date": "The date argument was invalid.",
-    "invalid_type": "The analytics data for the type specified weren't found.",
+    "file_not_found": "The analytics data for the `date` specified weren't found.",
+    "file_not_yet_available": "The analytics data for the `date` isn't available yet.",
+    "invalid_arguments": "Arguments weren't fully provided. For example, the `date` argument wasn't passed.",
+    "invalid_date": "The `date` argument was invalid.",
+    "invalid_type": "The analytics data for the `type` specified weren't found.",
     "member_analytics_disabled": "Member analytics are disabled for your organization.",
-    "metadata_not_available": "Metadata not available for the analytics type you provided.",
-    "metadata_only_does_not_support_date": "The metadata_only field gets the latest metadata file. The date field is not supported.",
-    "missing_scope": "The token used is not granted the specific scope permissions required to complete this request.",
+    "metadata_not_available": "Metadata not available for the analytics `type` you provided.",
+    "metadata_only_does_not_support_date": "The `metadata_only` field gets the latest metadata file. The `date` field is not supported.",
+    "missing_scope": "This token doesn't have the scope required.",
     "not_an_admin": "The user token does not have admin privileges.",
-    "org_level_email_display_disabled": "This API is unavailable for organizations with a 'Hide email addresses' policy.",
-    "user_cannot_manage_public_channels": "The user must have permissions to manage public channels at the Enterprise level.",
-    "access_denied": "Access to a resource specified in the request is denied.",
-    "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
-    "deprecated_endpoint": "The endpoint has been deprecated.",
-    "ekm_access_denied": "Administrators have suspended the ability to post a message.",
-    "enterprise_is_restricted": "The method cannot be called from an Enterprise.",
-    "invalid_auth": "Some aspect of authentication cannot be validated. Either the provided token is invalid or the request originates from an IP address disallowed from making the request.",
-    "is_bot": "This method cannot be called by a legacy bot.",
-    "method_deprecated": "The method has been deprecated.",
-    "not_allowed_token_type": "The token type used in this request is not allowed.",
-    "not_authed": "No authentication token provided.",
-    "no_permission": "The workspace token used in this request does not have the permissions necessary to complete the request. Make sure your app is a member of the conversation it's attempting to post a message to.",
-    "org_login_required": "The workspace is undergoing an enterprise migration and will not be available until migration is complete.",
-    "token_expired": "Authentication token has expired.",
-    "token_revoked": "Authentication token is for a deleted user or workspace or the app has been removed when using a user token.",
-    "two_factor_setup_required": "Two factor setup is required.",
-    "accesslimited": "Access to this method is limited on the current network.",
-    "fatal_error": "The server could not complete your operation(s) without encountering a catastrophic error. It's possible some aspect of the operation succeeded before the error was raised.",
-    "internal_error": "The server could not complete your operation(s) without encountering an error, likely due to a transient issue on our end. It's possible some aspect of the operation succeeded before the error was raised.",
-    "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
-    "invalid_array_arg": "The method was passed an array as an argument. Please only input valid strings.",
-    "invalid_charset": "The method was called via a POST request, but the charset specified in the Content-Type header was invalid. Valid charset names are: utf-8 iso-8859-1.",
-    "invalid_form_data": "The method was called via a POST request with Content-Type application/x-www-form-urlencoded or multipart/form-data, but the form data was either missing or syntactically invalid.",
-    "invalid_post_type": "The method was called via a POST request, but the specified Content-Type was invalid. Valid types are: application/json application/x-www-form-urlencoded multipart/form-data text/plain.",
-    "missing_post_type": "The method was called via a POST request and included a data payload, but the request did not include a Content-Type header.",
-    "ratelimited": "The request has been ratelimited. Refer to the Retry-After header for when to retry the request.",
-    "request_timeout": "The method was called via a POST request, but the POST data was either missing or truncated.",
-    "service_unavailable": "The service is temporarily unavailable.",
-    "team_added_to_org": "The workspace associated with your request is currently undergoing migration to an Enterprise Organization. Web API and other platform operations will be intermittently unavailable until the transition is complete."
+    "org_level_email_display_disabled": "This API is unavailable for organizations with a _'Hide email addresses'_ policy.",
+    "user_cannot_manage_public_channels": "The user must have permissions to manage public channels at the Enterprise level."
   }
 }

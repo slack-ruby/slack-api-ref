@@ -1,0 +1,63 @@
+{
+  "group": "lists",
+  "name": "slackLists.create",
+  "deprecated": false,
+  "desc": "Create a List.",
+  "args": {
+    "copy_from_list_id": {
+      "required": false,
+      "example": "F1234567",
+      "desc": "ID of the List to copy.",
+      "type": "string"
+    },
+    "description_blocks": {
+      "required": false,
+      "example": "[{\"type\":\"rich_text\",\"elements\":[{\"type\":\"rich_text_section\",\"elements\":[{\"type\":\"text\",\"text\":\"List to keep track of tasks!\"}]}]}]",
+      "desc": "A rich text description of the List.",
+      "type": "array"
+    },
+    "include_copied_list_records": {
+      "required": false,
+      "example": "false",
+      "desc": "Boolean indicating whether to include records when a List is copied.",
+      "type": "boolean"
+    },
+    "name": {
+      "required": true,
+      "example": "My List",
+      "desc": "Name of the List.",
+      "type": "string"
+    },
+    "schema": {
+      "required": false,
+      "example": "[{ \"key\": \"task_name\", \"name\": \"Task Name\", \"type\": \"text\", \"is_primary_column\": true }, { \"key\": \"due_date\", \"name\": \"Due Date\", \"type\": \"date\" }, { \"key\": \"status\", \"name\": \"Status\", \"type\": \"select\", \"options\": { \"choices\": [ { \"value\": \"not_started\", \"label\": \"Not Started\", \"color\": \"red\" }, { \"value\": \"in_progress\", \"label\": \"In Progress\", \"color\": \"yellow\" }, { \"value\": \"completed\", \"label\": \"Completed\", \"color\": \"green\" } ] } }, { \"key\": \"assignee\", \"name\": \"Assignee\", \"type\": \"user\" }]",
+      "desc": "Column definition for the List.",
+      "type": "array"
+    },
+    "todo_mode": {
+      "required": false,
+      "example": "true",
+      "desc": "Boolean indicating whether the List should be used to track todo tasks.",
+      "type": "boolean"
+    }
+  },
+  "response": {
+    "examples": [
+      "{\n    \"ok\": true,\n    \"list_id\": \"F1234ABCD\"\n}",
+      "{\n    \"ok\": false,\n    \"error\": \"invalid_schema\"\n}"
+    ]
+  },
+  "errors": {
+    "permission_denied": "The user does not have permission to perform this action.",
+    "invalid_schema": "The schema was invalid.",
+    "invalid_primary_column": "Missing or more than one primary column.",
+    "team_not_found": "The team cannot be found.",
+    "user_not_found": "The user cannot be found.",
+    "over_list_file_maximum": "Cannot create any more List files.",
+    "over_title_length_maximum": "Title can not exceed defined length.",
+    "invalid_column_type": "Column type not allowed.",
+    "missing_arg_copy_from_list_id": "Missing argument `copy_from_list_id`.",
+    "invalid_copy_and_schema_args": "Cannot provide both `copy_from_list_id` and `schema`.",
+    "over_column_maximum": "Cannot create List with more than allowed column count."
+  }
+}
