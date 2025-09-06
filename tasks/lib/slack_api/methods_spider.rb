@@ -3,28 +3,28 @@
 module SlackApi
   # Scrapes Slack Web API method
   class MethodsSpider < BaseSpider
-    handle 'https://api.slack.com/methods', :process_list
+    handle 'https://docs.slack.dev/reference/methods/', :process_list
+
+    def downloader
+      @downloader ||= SlackApi::Docs::Downloader.new
+    end
 
     def process_list(page, _default_data = {})
-      methods_page = ensure!(page, '.apiMethodPage')
-      list = methods_page.search('.apiMethodPage__methodList')
-      ref = list.search('[data-automount-component=ApiDocsFilterableReferenceList]')
-      data = JSON.parse(ref.attribute('data-automount-props'))
-      raise(ElementNotFound, 'Could not parse methods reference') unless data['items'].any?
+      methods = JSON.load_file(downloader.methods_path)
 
       groups = Set.new
-      data['items'].each do |method|
-        next unless method['isPublic']
-        next if method['isDeprecated']
 
-        groups += method['groups']
+      methods.each do |method|
+        groups += method['family']
         method_name = method['name']
-        method_group = method['groups'].first.split('.').first
+        method_group = method['family'].first.split('.').first
+        downloaded_filename = downloader.method_target_path(method_name)
         file_name = "methods/#{method_group}/#{method_name}.json"
-        method_url = resolve_url(method['link'], page)
+        method_url = resolve_url(downloader.method_url(method_name), page)
         handle method_url,
                :process_method,
                filename: file_name,
+               downloaded_filename: downloaded_filename,
                method_name: method_name,
                method_group: method_group,
                method_url: method_url
@@ -37,14 +37,15 @@ module SlackApi
       end
     end
 
-    def process_method(page, default_data = {})
-      method_page = ensure!(page, '.apiMethodPage', default_data[:method_name])
-      desc = method_page.search('.apiReference__mainDescription').text.gsub('’', "'")
-      return if desc.downcase.start_with? 'deprecated:'
+    def process_method(method_page, default_data = {})
+      method_data = JSON.load_file(default_data[:downloaded_filename])
 
-      args, arg_groups, fields = parse_args(method_page, default_data)
-      errors = parse_errors(method_page, default_data)
-      response = parse_response(method_page, default_data)
+      desc = method_data['desc'].gsub('’', "'")
+      return if desc.downcase.start_with? 'Deprecated:'
+
+      args, arg_groups, fields = parse_args(method_page, method_data)
+      errors = parse_errors(method_page, method_data)
+      response = parse_response(method_page, method_data)
 
       json_hash = {
         'group' => default_data[:method_group],
@@ -62,24 +63,25 @@ module SlackApi
 
     private
 
-    def parse_args(api_page, default_data = {})
-      args_wrapper = ensure!(api_page, '.apiReference__arguments', default_data[:method_name])
-      rows = args_wrapper.search('.apiMethodPage__argumentRow')
+    def parse_args(_api_page, method_data = {})
       args = {}
       fields = {}
-      rows.each do |row|
-        name = row.search('.apiMethodPage__argument code').text
-        type = massage_type(name,
-                            row.search('.apiMethodPage__argumentType').text,
-                            default_data)
-        required = row.search('.apiMethodPage__argumentOptionality--required').any?
+      method_data['args']['properties'].each_pair do |name, arg|
+        arg['anyOf']&.each do |coll|
+          all = []
+          all << coll['type']
+          arg['type'] = all
+        end
+        arg.delete('anyOf')
 
-        desc = row.search('.apiMethodPage__argumentDesc p')
-          .text
-          .tap { |t| t.slice!("\n") }
-          .tap { |t| t << '.' unless t.end_with?('.') }
-          .gsub('’', "'")
-        example = row.search('.apiReference__exampleCode code').first&.text
+        type = massage_type(name, arg, method_data)
+        required = method_data['args']['required']&.include?(name)
+
+        desc = arg['desc']
+          &.tap { |t| t.slice!("\n") }
+          &.tap { |t| t << '.' unless t.end_with?('.') }
+          &.gsub('’', "'")
+        example = arg['example'] || arg['default']
 
         case name
         when 'token'
@@ -98,89 +100,80 @@ module SlackApi
         end
       end
 
-      arg_groups = parse_arg_groups(args_wrapper)
+      arg_groups = parse_arg_groups(_api_page, method_data)
 
-      [args, arg_groups, fields]
+      [args.sort.to_h, arg_groups, fields]
     end
 
-    def parse_arg_groups(args_wrapper)
-      # Look for groups of args that are interdependent
-      groups = args_wrapper.search('.apiMethodPage__argumentGroup')
-      groups = groups.map do |group|
-        # "At least one of" or "One of"
-        requirement = group.search('.apiMethodPage__argument em').text
-        mutually_exclusive = requirement.downcase == 'one of'
+    def parse_arg_groups(_api_page, _method_data = {})
+      groups = {}
 
-        desc = group.search('.apiMethodPage__argumentGroupDesc p')
-          .text
-          .tap { |t| t.slice!("\n") }
-          .tap { |t| t << '.' unless t.end_with?('.') }
-          .gsub('’', "'")
+      # # Look for groups of args that are interdependent
+      # groups = args_wrapper.search('.apiMethodPage__argumentGroup')
+      # groups = groups.map do |group|
+      #   # "At least one of" or "One of"
+      #   requirement = group.search('.apiMethodPage__argument em').text
+      #   mutually_exclusive = requirement.downcase == 'one of'
 
-        rows = group.search('.apiMethodPage__argumentRow')
-        names = rows.map do |row|
-          row.search('.apiMethodPage__argument code').text
-        end
+      #   desc = group.search('.apiMethodPage__argumentGroupDesc p')
+      #     .text
+      #     .tap { |t| t&.slice!("\n") }
+      #     .tap { |t| t << '.' unless t.end_with?('.') }
+      #     .gsub('’', "'")
 
-        {
-          'args' => names,
-          'desc' => desc,
-          'mutually_exclusive' => mutually_exclusive
-        }
-      end
+      #   rows = group.search('.apiMethodPage__argumentRow')
+      #   names = rows.map do |row|
+      #     row.search('.apiMethodPage__argument code').text
+      #   end
+
+      #   {
+      #     'args' => names,
+      #     'desc' => desc,
+      #     'mutually_exclusive' => mutually_exclusive
+      #   }
+      # end
 
       groups unless groups.empty?
     end
 
-    def massage_type(name, detected, default_data = {})
+    def massage_type(name, arg, data = {})
+      return 'enum' if arg.key?('enum')
+
       case name
       when 'date' then 'date'
       when 'latest', 'oldest', 'ts' then 'timestamp'
       when 'file' then 'file'
       when 'bot', 'user' then 'user'
       when 'channel'
-        case default_data[:method_group]
+        case data[:method_group]
         when 'im' then 'im'
         when 'mpim' then 'mpim'
         when 'groups' then 'group'
         else 'channel'
         end
       else
-        case detected
+        case detected = arg['type']
         when '', 'null' then nil
         else detected
         end
       end
     end
 
-    def parse_response(api_page, default_data = {})
-      response_wrapper = ensure!(api_page, '.apiReference__response', default_data[:method_name])
-      responses = response_wrapper.search('.apiReference__example')
+    def parse_response(_api_page, data = {})
       examples = []
-      responses.each do |response|
-        response.search('pre').each do |pre|
-          text = pre.text.strip
-          next unless text =~ /^\{.*}$/m
-
-          examples.push(text)
-        end
+      data['examples']&.each_pair do |_example_type, response|
+        example = JSON.pretty_generate(response['example'], indent: '    ')
+        example.gsub!(/\{\n\s*\}/, '{}')
+        example.gsub!(/\[\n\s*\]/, '[]')
+        examples.push example
       end
       { 'examples' => examples }
     end
 
-    def parse_errors(api_page, default_data = {})
-      errors_wrapper = ensure!(api_page, '.apiReference__errors', default_data[:method_name])
-      rows = errors_wrapper.search('.apiDocsTable tr')
+    def parse_errors(_api_page, data = {})
       errors = {}
-      rows.each do |row|
-        next if row.search('th').any?
-
-        name = row.search('[data-label=Error]').text
-        desc = row.search('[data-label=Description]').text
-          .tap { |t| t.slice!("\n") }
-          .tap { |t| t << '.' unless t.end_with?('.') }
-
-        errors[name] = desc
+      data['errors']&.each_pair do |name, desc|
+        errors[name] = desc['desc']
       end
       errors
     end

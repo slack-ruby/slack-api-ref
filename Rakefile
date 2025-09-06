@@ -9,4 +9,5 @@ require 'fileutils'
 
 Bundler.setup :default, :development
 
+load 'tasks/download.rake'
 load 'tasks/update.rake'

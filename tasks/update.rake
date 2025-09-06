@@ -74,6 +74,7 @@ namespace :api do
 
   desc 'Update scraped Slack events and Web API methods.'
   task :update do
+    Rake::Task['api:ref:download'].invoke
     Rake::Task['api:methods:update'].invoke
     Rake::Task['api:events:update'].invoke
     Rake::Task['api:delete_undocumented'].invoke
