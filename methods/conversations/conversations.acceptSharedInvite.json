@@ -6,7 +6,7 @@
   "args": {
     "channel_id": {
       "required": false,
-      "desc": "ID of the channel that you'd like to accept. Must provide either `invite_id` or `channel_id`."
+      "desc": "ID of the channel that you'd like to accept. Must provide either invite_id or channel_id."
     },
     "channel_name": {
       "required": true,
@@ -21,7 +21,7 @@
     },
     "invite_id": {
       "required": false,
-      "desc": "ID of the invite that you'd like to accept. Must provide either `invite_id` or `channel_id`. See the [`shared_channel_invite_received`](/reference/events/shared_channel_invite_received) event payload for more details on how to retrieve the ID of the invitation."
+      "desc": "ID of the invite that you'd like to accept. Must provide either invite_id or channel_id. See the shared_channel_invite_received event payload for more details on how to retrieve the ID of the invitation."
     },
     "is_private": {
       "required": false,
@@ -31,7 +31,7 @@
     },
     "team_id": {
       "required": false,
-      "desc": "The ID of the workspace to accept the channel in. If an org-level token is used to call this method, the `team_id` argument is required."
+      "desc": "The ID of the workspace to accept the channel in. If an org-level token is used to call this method, the team_id argument is required."
     }
   },
   "response": {

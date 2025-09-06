@@ -7,7 +7,7 @@
     "blocks": {
       "required": false,
       "example": "[{\"type\": \"section\", \"text\": {\"type\": \"plain_text\", \"text\": \"Hello world\"}}]",
-      "desc": "A JSON-based array of structured rich text blocks, presented as a URL-encoded string. If the `initial_comment` field is provided, the `blocks` field is ignored.",
+      "desc": "A JSON-based array of structured rich text blocks, presented as a URL-encoded string. If the initial_comment field is provided, the blocks field is ignored.",
       "type": "string",
       "format": "json"
     },
@@ -36,7 +36,7 @@
     "thread_ts": {
       "required": false,
       "example": "1524523204.000192",
-      "desc": "Provide another message's `ts` value to upload this file as a reply. Never use a reply's `ts` value; use its parent instead. Also make sure to provide only one channel when using 'thread_ts'.",
+      "desc": "Provide another message's ts value to upload this file as a reply. Never use a reply's ts value; use its parent instead. Also make sure to provide only one channel when using 'thread_ts'.",
       "type": "string"
     }
   },

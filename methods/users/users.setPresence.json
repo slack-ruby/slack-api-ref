@@ -7,7 +7,7 @@
     "presence": {
       "required": true,
       "example": "away",
-      "desc": "Either `auto` or `away`.",
+      "desc": "Either auto or away.",
       "type": "enum"
     }
   },

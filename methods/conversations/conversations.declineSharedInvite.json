@@ -6,7 +6,7 @@
   "args": {
     "invite_id": {
       "required": true,
-      "desc": "ID of the Slack Connect invite to decline. Subscribe to the [`shared_channel_invite_accepted`](/reference/events/shared_channel_invite_accepted) event to receive IDs of Slack Connect channel invites that have been accepted and are awaiting approval."
+      "desc": "ID of the Slack Connect invite to decline. Subscribe to the shared_channel_invite_accepted event to receive IDs of Slack Connect channel invites that have been accepted and are awaiting approval."
     },
     "target_team": {
       "required": false,

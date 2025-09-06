@@ -21,7 +21,7 @@
     "message": {
       "required": false,
       "example": "{\"text\": \"hello\", \"is_override\": true}",
-      "desc": "Object describing the text to send along with the invite. If this object is specified, both `text` and `is_override` are required properties. If `is_override` is set to `true`, `text` will override the original invitation message. Otherwise, `text` will be appended to the original invitation message. The total length of the message cannot exceed 560 characters. If `is_override` is set to `false`, the length of `text` and the user specified message on the invite request in total must be less than 560 characters.",
+      "desc": "Object describing the text to send along with the invite. If this object is specified, both text and is_override are required properties. If is_override is set to true, text will override the original invitation message. Otherwise, text will be appended to the original invitation message. The total length of the message cannot exceed 560 characters. If is_override is set to false, the length of text and the user specified message on the invite request in total must be less than 560 characters.",
       "type": "object"
     }
   },

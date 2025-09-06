@@ -6,7 +6,7 @@
   "args": {
     "channel": {
       "required": false,
-      "desc": "Channel to remove star from, or channel where the message to remove star from was posted (used with `timestamp`).",
+      "desc": "Channel to remove star from, or channel where the message to remove star from was posted (used with timestamp).",
       "type": "channel"
     },
     "file": {

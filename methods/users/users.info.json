@@ -6,7 +6,7 @@
   "args": {
     "include_locale": {
       "required": false,
-      "desc": "Set this to `true` to receive the locale for this user. Defaults to `false`.",
+      "desc": "Set this to true to receive the locale for this user. Defaults to false.",
       "type": "boolean"
     },
     "user": {

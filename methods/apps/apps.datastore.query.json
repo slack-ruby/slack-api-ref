@@ -11,7 +11,7 @@
     "cursor": {
       "required": false,
       "example": "5c3e53d5",
-      "desc": "Set `cursor` to `next_cursor` returned by the previous call to list items in the next page.",
+      "desc": "Set cursor to next_cursor returned by the previous call to list items in the next page.",
       "type": "string"
     },
     "datastore": {
@@ -40,7 +40,7 @@
     "limit": {
       "required": false,
       "example": "100",
-      "desc": "The maximum number of items to evaluate for a given request (not necessarily the number of matching items). If the given request dataset size exceeds 1 MB before reaching the limit, the returned item count will likely be less than the limit. In any case where there are more items available beyond an imposed limit, a `next_cursor` value will be provided for use in subsequent requests.",
+      "desc": "The maximum number of items to evaluate for a given request (not necessarily the number of matching items). If the given request dataset size exceeds 1 MB before reaching the limit, the returned item count will likely be less than the limit. In any case where there are more items available beyond an imposed limit, a next_cursor value will be provided for use in subsequent requests.",
       "type": "integer"
     }
   },

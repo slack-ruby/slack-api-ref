@@ -11,7 +11,7 @@
     },
     "message_ts": {
       "required": true,
-      "desc": "A message's `ts` value, uniquely identifying it within a channel.",
+      "desc": "A message's ts value, uniquely identifying it within a channel.",
       "type": "string"
     }
   },

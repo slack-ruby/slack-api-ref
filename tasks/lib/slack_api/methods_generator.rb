@@ -42,7 +42,7 @@ module SlackApi
         group: data['group'],
         name: data['name'],
         deprecated: false,
-        desc: data['desc'],
+        desc: strip_markdown(data['desc']),
         args: args,
         response: response,
         errors: errors
@@ -69,10 +69,11 @@ module SlackApi
         type = massage_type(name, arg, data)
         required = data['args']['required']&.include?(name)
 
-        desc = arg['desc']
+        desc = strip_markdown(arg['desc']
           &.tap { |t| t.slice!("\n") }
           &.tap { |t| t << '.' unless t.end_with?('.') }
-          &.gsub('’', "'")
+          &.gsub('’', "'"))
+
         example = arg['example'] || arg['default']
 
         case name
@@ -85,7 +86,7 @@ module SlackApi
           h = {}
           h['required'] = required
           h['example'] = example if example
-          h['desc'] = desc if desc
+          h['desc'] = desc || ''
           h['type'] = type if type
           h['format'] = 'json' if desc&.include?('JSON')
           args[name] = h
@@ -135,6 +136,20 @@ module SlackApi
         errors[name] = desc['desc']
       end
       errors
+    end
+
+    def strip_markdown(text)
+      return text if text.nil?
+
+      text
+        .gsub(/\*\*(.*?)\*\*/, '\1')  # Bold: **text** -> text
+        .gsub(/\*(.*?)\*/, '\1')      # Italic: *text* -> text
+        .gsub(/`(.*?)`/, '\1')        # Inline code: `text` -> text
+        .gsub(/\[([^\]]+)\]\([^)]+\)/, '\1') # Links: [text](url) -> text
+        .gsub(/^#+\s*/, '')           # Headers: # text -> text
+        .gsub(/^\s*[-*+]\s*/, '')     # List items: - text -> text
+        .gsub(/^\s*\d+\.\s*/, '')     # Numbered lists: 1. text -> text
+        .strip
     end
   end
 end

@@ -5,7 +5,8 @@
   "desc": "List all IDP Groups linked to a channel",
   "args": {
     "channel_id": {
-      "required": true
+      "required": true,
+      "desc": ""
     },
     "team_id": {
       "required": false,

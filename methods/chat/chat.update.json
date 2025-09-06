@@ -29,7 +29,7 @@
     },
     "channel": {
       "required": true,
-      "desc": "Channel containing the message to be updated. For direct messages, ensure that this value is a DM ID (starts with `D`) instead of a User ID (starts with either `U` or `W`).",
+      "desc": "Channel containing the message to be updated. For direct messages, ensure that this value is a DM ID (starts with D) instead of a User ID (starts with either U or W).",
       "type": "channel"
     },
     "file_ids": {
@@ -41,7 +41,7 @@
     "link_names": {
       "required": false,
       "example": "true",
-      "desc": "Find and link channel names and usernames. Defaults to `none`. If you do not specify a value for this field, the original value set for the message will be overwritten with the default, `none`.",
+      "desc": "Find and link channel names and usernames. Defaults to none. If you do not specify a value for this field, the original value set for the message will be overwritten with the default, none.",
       "type": [
         "boolean",
         "string"
@@ -50,20 +50,20 @@
     "markdown_text": {
       "required": false,
       "example": "**This is bold text**",
-      "desc": "Accepts message text formatted in markdown. This argument should not be used in conjunction with `blocks` or `text`. Limit this field to 12,000 characters.",
+      "desc": "Accepts message text formatted in markdown. This argument should not be used in conjunction with blocks or text. Limit this field to 12,000 characters.",
       "type": "string"
     },
     "metadata": {
       "required": false,
       "example": "{\"event_type\": \"task_created\", \"event_payload\": { \"id\": \"11223\", \"title\": \"Redesign Homepage\"}}",
-      "desc": "JSON object with event_type and event_payload fields, presented as a URL-encoded string. If you don't include this field, the message's previous `metadata` will be retained. To remove previous `metadata`, include an empty object for this field. Metadata you post to Slack is accessible to any app or user who is a member of that workspace.",
+      "desc": "JSON object with event_type and event_payload fields, presented as a URL-encoded string. If you don't include this field, the message's previous metadata will be retained. To remove previous metadata, include an empty object for this field. Metadata you post to Slack is accessible to any app or user who is a member of that workspace.",
       "type": "string",
       "format": "json"
     },
     "parse": {
       "required": false,
       "example": "none",
-      "desc": "Change how messages are treated. Defaults to `client`, unlike `chat.postMessage`. Accepts either `none` or `full`. If you do not specify a value for this field, the original value set for the message will be overwritten with the default, `client`.",
+      "desc": "Change how messages are treated. Defaults to client, unlike chat.postMessage. Accepts either none or full. If you do not specify a value for this field, the original value set for the message will be overwritten with the default, client.",
       "type": "string"
     },
     "reply_broadcast": {
@@ -75,7 +75,7 @@
     "text": {
       "required": false,
       "example": "Hello world",
-      "desc": "How this field works and whether it is required depends on other fields you use in your API call. [See below](#text_usage) for more detail.",
+      "desc": "How this field works and whether it is required depends on other fields you use in your API call. See below for more detail.",
       "type": "string"
     },
     "ts": {

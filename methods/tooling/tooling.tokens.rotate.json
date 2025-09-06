@@ -7,7 +7,7 @@
     "refresh_token": {
       "required": true,
       "example": "xoxe-1-abcdefg",
-      "desc": "The `xoxe` refresh token that was issued along with the old app configuration token.",
+      "desc": "The xoxe refresh token that was issued along with the old app configuration token.",
       "type": "string"
     }
   },

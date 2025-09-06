@@ -13,7 +13,7 @@
     "cursor": {
       "required": false,
       "example": "dXNlcjpVMEc5V0ZYTlo=",
-      "desc": "Set `cursor` to `next_cursor` returned by the previous call to list items in the next page.",
+      "desc": "Set cursor to next_cursor returned by the previous call to list items in the next page.",
       "type": "string"
     },
     "limit": {
@@ -31,19 +31,19 @@
     "search_channel_types": {
       "required": false,
       "example": "private,archived",
-      "desc": "The type of channel to include or exclude in the search. For example `private` will search private channels, while `private_exclude` will exclude them. For a full list of types, check the [Types section](#types).",
+      "desc": "The type of channel to include or exclude in the search. For example private will search private channels, while private_exclude will exclude them. For a full list of types, check the Types section.",
       "type": "array"
     },
     "sort": {
       "required": false,
       "example": "name",
-      "desc": "Possible values are `relevant` (search ranking based on what we think is closest), `name` (alphabetical), `member_count` (number of users in the channel), and `created` (date channel was created). You can optionally pair this with the `sort_dir` arg to change how it is sorted .",
+      "desc": "Possible values are relevant (search ranking based on what we think is closest), name (alphabetical), member_count (number of users in the channel), and created (date channel was created). You can optionally pair this with the sort_dir arg to change how it is sorted .",
       "type": "string"
     },
     "sort_dir": {
       "required": false,
       "example": "asc",
-      "desc": "Sort direction. Possible values are `asc` for ascending order like (1, 2, 3) or (a, b, c), and `desc` for descending order like (3, 2, 1) or (c, b, a).",
+      "desc": "Sort direction. Possible values are asc for ascending order like (1, 2, 3) or (a, b, c), and desc for descending order like (3, 2, 1) or (c, b, a).",
       "type": "string"
     },
     "team_ids": {

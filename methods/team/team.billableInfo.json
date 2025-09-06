@@ -7,7 +7,7 @@
     "cursor": {
       "required": false,
       "example": "dXNlcjpVMDYxTkZUVDI=",
-      "desc": "Set `cursor` to `next_cursor` returned by previous call, to indicate from where you want to list next page of users list. Default value fetches the first page.",
+      "desc": "Set cursor to next_cursor returned by previous call, to indicate from where you want to list next page of users list. Default value fetches the first page.",
       "type": "string"
     },
     "limit": {

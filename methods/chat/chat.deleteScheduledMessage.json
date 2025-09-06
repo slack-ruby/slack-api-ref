@@ -7,7 +7,7 @@
     "as_user": {
       "required": false,
       "example": "true",
-      "desc": "Pass true to delete the message as the authed user with `chat:write:user` scope. Bot users in this context are considered authed users. If unused or false, the message will be deleted with `chat:write:bot` scope.",
+      "desc": "Pass true to delete the message as the authed user with chat:write:user scope. Bot users in this context are considered authed users. If unused or false, the message will be deleted with chat:write:bot scope.",
       "type": "boolean"
     },
     "channel": {
@@ -19,7 +19,7 @@
     "scheduled_message_id": {
       "required": true,
       "example": "Q1234ABCD",
-      "desc": "`scheduled_message_id` returned from call to chat.scheduleMessage.",
+      "desc": "scheduled_message_id returned from call to chat.scheduleMessage.",
       "type": "string"
     }
   },

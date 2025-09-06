@@ -6,12 +6,12 @@
   "args": {
     "team_id": {
       "required": false,
-      "desc": "Specify team_id starts with `T` in case of Org Token.",
+      "desc": "Specify team_id starts with T in case of Org Token.",
       "type": "string"
     },
     "to_old": {
       "required": false,
-      "desc": "Specify `true` to convert `W` global user IDs to workspace-specific `U` IDs. Defaults to `false`.",
+      "desc": "Specify true to convert W global user IDs to workspace-specific U IDs. Defaults to false.",
       "type": "boolean"
     },
     "users": {

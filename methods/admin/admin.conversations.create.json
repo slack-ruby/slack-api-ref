@@ -13,7 +13,7 @@
     "is_private": {
       "required": true,
       "example": "true",
-      "desc": "When `true`, creates a private channel instead of a public channel.",
+      "desc": "When true, creates a private channel instead of a public channel.",
       "type": "boolean"
     },
     "name": {
@@ -25,12 +25,12 @@
     "org_wide": {
       "required": false,
       "example": "true",
-      "desc": "When `true`, the channel will be available org-wide. Note: if the channel is not `org_wide=true`, you must specify a `team_id` for this channel.",
+      "desc": "When true, the channel will be available org-wide. Note: if the channel is not org_wide=true, you must specify a team_id for this channel.",
       "type": "boolean"
     },
     "team_id": {
       "required": false,
-      "desc": "The workspace to create the channel in. Note: this argument is required unless you set `org_wide=true`."
+      "desc": "The workspace to create the channel in. Note: this argument is required unless you set org_wide=true."
     }
   },
   "response": {

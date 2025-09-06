@@ -35,7 +35,7 @@
     "types": {
       "required": false,
       "example": "images",
-      "desc": "Filter files by type ([see below](#file_types)). You can pass multiple values in the types argument, like `types=spaces,snippets`.The default value is `all`, which does not filter the list.",
+      "desc": "Filter files by type (see below). You can pass multiple values in the types argument, like types=spaces,snippets.The default value is all, which does not filter the list.",
       "type": "string"
     },
     "user": {

@@ -6,7 +6,7 @@
   "args": {
     "manifest": {
       "required": true,
-      "desc": "A JSON app manifest encoded as a string. This manifest **must** use a valid [app manifest schema - read our guide to creating one](/app-manifests/configuring-apps-with-app-manifests#fields).",
+      "desc": "A JSON app manifest encoded as a string. This manifest must use a valid app manifest schema - read our guide to creating one.",
       "type": "string",
       "format": "json"
     }

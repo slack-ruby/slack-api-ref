@@ -6,7 +6,7 @@
   "args": {
     "discoverability": {
       "required": true,
-      "desc": "This workspace's discovery setting. It must be set to one of `open`, `invite_only`, `closed`, or `unlisted`.",
+      "desc": "This workspace's discovery setting. It must be set to one of open, invite_only, closed, or unlisted.",
       "type": "string"
     },
     "team_id": {

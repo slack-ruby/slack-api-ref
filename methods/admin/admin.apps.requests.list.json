@@ -13,11 +13,12 @@
     "cursor": {
       "required": false,
       "example": "5c3e53d5",
-      "desc": "Set `cursor` to `next_cursor` returned by the previous call to list items in the next page.",
+      "desc": "Set cursor to next_cursor returned by the previous call to list items in the next page.",
       "type": "string"
     },
     "enterprise_id": {
-      "required": false
+      "required": false,
+      "desc": ""
     },
     "limit": {
       "required": false,
@@ -26,7 +27,8 @@
       "type": "integer"
     },
     "team_id": {
-      "required": false
+      "required": false,
+      "desc": ""
     }
   },
   "response": {

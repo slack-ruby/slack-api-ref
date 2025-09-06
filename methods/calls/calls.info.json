@@ -7,7 +7,7 @@
     "id": {
       "required": true,
       "example": "R0E69JAIF",
-      "desc": "`id` of the Call returned by the [`calls.add`](/reference/methods/calls.add) method.",
+      "desc": "id of the Call returned by the calls.add method.",
       "type": "string"
     }
   },

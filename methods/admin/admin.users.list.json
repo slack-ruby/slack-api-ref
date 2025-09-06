@@ -7,12 +7,12 @@
     "cursor": {
       "required": false,
       "example": "5c3e53d5",
-      "desc": "Set `cursor` to `next_cursor` returned by the previous call to list items in the next page.",
+      "desc": "Set cursor to next_cursor returned by the previous call to list items in the next page.",
       "type": "string"
     },
     "include_deactivated_user_workspaces": {
       "required": false,
-      "desc": "Only applies with org token and no team_id. If true, return `workspaces` for a user even if they may be deactivated on them. If false, return `workspaces` for a user only when user is active on them. Default is false.",
+      "desc": "Only applies with org token and no team_id. If true, return workspaces for a user even if they may be deactivated on them. If false, return workspaces for a user only when user is active on them. Default is false.",
       "type": "boolean"
     },
     "is_active": {

@@ -17,7 +17,7 @@
     "cursor": {
       "required": false,
       "example": "dXNlcjpVMDYxTkZUVDI=",
-      "desc": "Set `cursor` to `next_cursor` returned by the previous call to list items in the next page.",
+      "desc": "Set cursor to next_cursor returned by the previous call to list items in the next page.",
       "type": "string"
     },
     "is_sales_elevate": {
@@ -63,7 +63,7 @@
     "sort_dir": {
       "required": false,
       "example": "desc",
-      "desc": "Sort direction. Possible values are `asc` for ascending order like (1, 2, 3) or (a, b, c), and `desc` for descending order like (3, 2, 1) or (c, b, a).",
+      "desc": "Sort direction. Possible values are asc for ascending order like (1, 2, 3) or (a, b, c), and desc for descending order like (3, 2, 1) or (c, b, a).",
       "type": "enum"
     },
     "source": {

@@ -6,12 +6,12 @@
   "args": {
     "channel": {
       "required": true,
-      "desc": "Channel to pin the messsage to. You must also include a `timestamp` when pinning messages.",
+      "desc": "Channel to pin the messsage to. You must also include a timestamp when pinning messages.",
       "type": "channel"
     },
     "timestamp": {
       "required": false,
-      "desc": "Timestamp of the message to pin. You must also include the `channel`.",
+      "desc": "Timestamp of the message to pin. You must also include the channel.",
       "type": "string"
     }
   },

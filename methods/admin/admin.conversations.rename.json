@@ -11,6 +11,7 @@
     },
     "name": {
       "required": true,
+      "desc": "",
       "type": "string"
     }
   },

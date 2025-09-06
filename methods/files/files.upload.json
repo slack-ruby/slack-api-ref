@@ -12,13 +12,13 @@
     "content": {
       "required": false,
       "example": "...",
-      "desc": "File contents via a POST variable. If omitting this parameter, you must provide a `file`.",
+      "desc": "File contents via a POST variable. If omitting this parameter, you must provide a file.",
       "type": "string"
     },
     "file": {
       "required": false,
       "example": "...",
-      "desc": "File contents via `multipart/form-data`. If omitting this parameter, you must submit `content`.",
+      "desc": "File contents via multipart/form-data. If omitting this parameter, you must submit content.",
       "type": "file"
     },
     "filename": {
@@ -30,18 +30,18 @@
     "filetype": {
       "required": false,
       "example": "php",
-      "desc": "A [file type](/reference/objects/file-object#file_types) identifier.",
+      "desc": "A file type identifier.",
       "type": "string"
     },
     "initial_comment": {
       "required": false,
       "example": "Best!",
-      "desc": "The message text introducing the file in specified `channels`.",
+      "desc": "The message text introducing the file in specified channels.",
       "type": "string"
     },
     "thread_ts": {
       "required": false,
-      "desc": "Provide another message's `ts` value to upload this file as a reply. Never use a reply's `ts` value; use its parent instead.",
+      "desc": "Provide another message's ts value to upload this file as a reply. Never use a reply's ts value; use its parent instead.",
       "type": "string"
     },
     "title": {

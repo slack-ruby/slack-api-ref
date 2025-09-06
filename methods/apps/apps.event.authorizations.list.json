@@ -6,14 +6,17 @@
   "args": {
     "cursor": {
       "required": false,
+      "desc": "",
       "type": "string"
     },
     "event_context": {
       "required": true,
+      "desc": "",
       "type": "string"
     },
     "limit": {
       "required": false,
+      "desc": "",
       "type": "integer"
     }
   },

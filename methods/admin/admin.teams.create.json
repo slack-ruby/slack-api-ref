@@ -11,7 +11,7 @@
     },
     "team_discoverability": {
       "required": false,
-      "desc": "Who can join the team. A team's discoverability can be `open`, `closed`, `invite_only`, or `unlisted`.",
+      "desc": "Who can join the team. A team's discoverability can be open, closed, invite_only, or unlisted.",
       "type": "string"
     },
     "team_domain": {

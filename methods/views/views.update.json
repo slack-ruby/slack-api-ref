@@ -7,7 +7,7 @@
     "external_id": {
       "required": false,
       "example": "bmarley_view2",
-      "desc": "A unique identifier of the view set by the developer. Must be unique for all views on a team. Max length of 255 characters. Either `view_id` or `external_id` is required.",
+      "desc": "A unique identifier of the view set by the developer. Must be unique for all views on a team. Max length of 255 characters. Either view_id or external_id is required.",
       "type": "string"
     },
     "hash": {
@@ -18,13 +18,13 @@
     },
     "view": {
       "required": true,
-      "desc": "A [view object](/reference/views). This must be a JSON-encoded string.",
+      "desc": "A view object. This must be a JSON-encoded string.",
       "format": "json"
     },
     "view_id": {
       "required": false,
       "example": "VMM512F2U",
-      "desc": "A unique identifier of the view to be updated. Either `view_id` or `external_id` is required.",
+      "desc": "A unique identifier of the view to be updated. Either view_id or external_id is required.",
       "type": "string"
     }
   },

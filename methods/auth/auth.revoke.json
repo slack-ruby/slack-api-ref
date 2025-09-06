@@ -7,7 +7,7 @@
     "test": {
       "required": false,
       "example": "true",
-      "desc": "Setting this parameter to `1` triggers a _testing mode_ where the specified token will not actually be revoked.",
+      "desc": "Setting this parameter to 1 triggers a _testing mode_ where the specified token will not actually be revoked.",
       "type": "boolean"
     }
   },

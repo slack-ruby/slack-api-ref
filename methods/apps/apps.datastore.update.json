@@ -5,7 +5,8 @@
   "desc": "Edits an existing item's attributes, or adds a new item if it does not already exist.",
   "args": {
     "app_id": {
-      "required": false
+      "required": false,
+      "desc": ""
     },
     "datastore": {
       "required": true,

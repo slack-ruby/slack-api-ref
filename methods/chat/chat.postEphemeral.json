@@ -32,7 +32,7 @@
     "icon_emoji": {
       "required": false,
       "example": ":chart_with_upwards_trend:",
-      "desc": "Emoji to use as the icon for this message. Overrides `icon_url`.",
+      "desc": "Emoji to use as the icon for this message. Overrides icon_url.",
       "type": "string"
     },
     "icon_url": {
@@ -50,30 +50,30 @@
     "markdown_text": {
       "required": false,
       "example": "**This is bold text**",
-      "desc": "Accepts message text formatted in markdown. This argument should not be used in conjunction with `blocks` or `text`. Limit this field to 12,000 characters.",
+      "desc": "Accepts message text formatted in markdown. This argument should not be used in conjunction with blocks or text. Limit this field to 12,000 characters.",
       "type": "string"
     },
     "parse": {
       "required": false,
       "example": "full",
-      "desc": "Change how messages are treated. Defaults to `none`. See [below](#formatting).",
+      "desc": "Change how messages are treated. Defaults to none. See below.",
       "type": "string"
     },
     "text": {
       "required": false,
       "example": "Hello world",
-      "desc": "How this field works and whether it is required depends on other fields you use in your API call. [See below](#text_usage) for more detail.",
+      "desc": "How this field works and whether it is required depends on other fields you use in your API call. See below for more detail.",
       "type": "string"
     },
     "thread_ts": {
       "required": false,
-      "desc": "Provide another message's `ts` value to post this message in a thread. Avoid using a reply's `ts` value; use its parent's value instead. Ephemeral messages in threads are only shown if there is already an active thread.",
+      "desc": "Provide another message's ts value to post this message in a thread. Avoid using a reply's ts value; use its parent's value instead. Ephemeral messages in threads are only shown if there is already an active thread.",
       "type": "string"
     },
     "user": {
       "required": true,
       "example": "U0BPQUNTA",
-      "desc": "`id` of the user who will receive the ephemeral message. The user should be in the channel specified by the `channel` argument.",
+      "desc": "id of the user who will receive the ephemeral message. The user should be in the channel specified by the channel argument.",
       "type": "user"
     },
     "username": {

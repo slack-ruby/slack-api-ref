@@ -6,13 +6,13 @@
   "args": {
     "cursor": {
       "required": false,
-      "desc": "Use this when getting results with cursormark pagination. For first call send `*` for subsequent calls, send the value of `next_cursor` returned in the previous call's results.",
+      "desc": "Use this when getting results with cursormark pagination. For first call send * for subsequent calls, send the value of next_cursor returned in the previous call's results.",
       "type": "string"
     },
     "highlight": {
       "required": false,
       "example": "true",
-      "desc": "Pass a value of `true` to enable query highlight markers (see below).",
+      "desc": "Pass a value of true to enable query highlight markers (see below).",
       "type": "boolean"
     },
     "query": {
@@ -24,13 +24,13 @@
     "sort": {
       "required": false,
       "example": "timestamp",
-      "desc": "Return matches sorted by either `score` or `timestamp`.",
+      "desc": "Return matches sorted by either score or timestamp.",
       "type": "string"
     },
     "sort_dir": {
       "required": false,
       "example": "asc",
-      "desc": "Change sort direction to ascending (`asc`) or descending (`desc`).",
+      "desc": "Change sort direction to ascending (asc) or descending (desc).",
       "type": "enum"
     },
     "team_id": {

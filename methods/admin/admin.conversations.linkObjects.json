@@ -12,13 +12,13 @@
     "record_id": {
       "required": true,
       "example": "0019000000DmehKAAR",
-      "desc": "Salesforce record ID (15 or 18 digit accepted). See [here](https://help.salesforce.com/s/articleView?id=000385008&type=1) for how to look up record ID.",
+      "desc": "Salesforce record ID (15 or 18 digit accepted). See here for how to look up record ID.",
       "type": "string"
     },
     "salesforce_org_id": {
       "required": true,
       "example": "00DGC00000024hsuWY",
-      "desc": "Salesforce org ID (15 or 18 digit accepted). See [here](https://help.salesforce.com/s/articleView?id=000385215&type=1) for how to look up Salesforce org ID.",
+      "desc": "Salesforce org ID (15 or 18 digit accepted). See here for how to look up Salesforce org ID.",
       "type": "string"
     }
   },

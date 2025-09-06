@@ -13,7 +13,7 @@
     "cursor": {
       "required": false,
       "example": "dXNlcjpVMDYxTkZUVDI=",
-      "desc": "Set `cursor` to `next_cursor` returned by the previous call to list items in the next page.",
+      "desc": "Set cursor to next_cursor returned by the previous call to list items in the next page.",
       "type": "string"
     },
     "limit": {

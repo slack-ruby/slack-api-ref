@@ -24,7 +24,7 @@
     "cursor": {
       "required": false,
       "example": "bG9nX2lkOjc5NjQ1NA==",
-      "desc": "Paginate through collections of data by setting the `cursor` parameter to a `next_cursor` attribute returned by a previous request's `response_metadata`. See [pagination](/apis/web-api/pagination) for more detail.",
+      "desc": "Paginate through collections of data by setting the cursor parameter to a next_cursor attribute returned by a previous request's response_metadata. See pagination for more detail.",
       "type": "string"
     },
     "limit": {

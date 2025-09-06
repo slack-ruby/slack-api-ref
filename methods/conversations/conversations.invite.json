@@ -12,7 +12,7 @@
     "force": {
       "required": false,
       "example": "true",
-      "desc": "When set to `true` and multiple user IDs are provided, continue inviting the valid ones while disregarding invalid IDs. Defaults to `false`.",
+      "desc": "When set to true and multiple user IDs are provided, continue inviting the valid ones while disregarding invalid IDs. Defaults to false.",
       "type": "boolean"
     },
     "users": {

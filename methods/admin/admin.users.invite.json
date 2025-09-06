@@ -7,7 +7,7 @@
     "channel_ids": {
       "required": true,
       "example": "C1A2B3C4D,C26Z25Y24",
-      "desc": "A comma-separated list of `channel_id`s for this user to join. At least one channel is required.",
+      "desc": "A comma-separated list of channel_ids for this user to join. At least one channel is required.",
       "type": "string"
     },
     "custom_message": {
@@ -58,7 +58,7 @@
     },
     "team_id": {
       "required": true,
-      "desc": "The ID (`T1234`) of the workspace."
+      "desc": "The ID (T1234) of the workspace."
     }
   },
   "response": {

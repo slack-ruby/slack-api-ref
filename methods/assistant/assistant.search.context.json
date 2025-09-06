@@ -25,13 +25,13 @@
     "channel_types": {
       "required": false,
       "example": "public_channel,private_channel",
-      "desc": "Mix and match channel types by providing a comma-separated list of any combination of `public_channel`, `private_channel`, `mpim`, `im`.",
+      "desc": "Mix and match channel types by providing a comma-separated list of any combination of public_channel, private_channel, mpim, im.",
       "type": "array"
     },
     "content_types": {
       "required": false,
       "example": "messages,files",
-      "desc": "Content types to include, a comma-separated list of any combination of `messages`, `files`, `channels`, `users`.",
+      "desc": "Content types to include, a comma-separated list of any combination of messages, files, channels, users.",
       "type": "array"
     },
     "context_channel_id": {

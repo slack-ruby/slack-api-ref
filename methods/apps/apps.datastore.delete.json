@@ -5,7 +5,8 @@
   "desc": "Delete an item from a datastore",
   "args": {
     "app_id": {
-      "required": false
+      "required": false,
+      "desc": ""
     },
     "datastore": {
       "required": true,

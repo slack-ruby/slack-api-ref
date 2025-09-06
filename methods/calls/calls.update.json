@@ -13,7 +13,7 @@
     "id": {
       "required": true,
       "example": "R0E69JAIF",
-      "desc": "`id` returned by the [`calls.add`](/reference/methods/calls.add) method.",
+      "desc": "id returned by the calls.add method.",
       "type": "string"
     },
     "join_url": {

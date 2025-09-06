@@ -6,7 +6,7 @@
   "args": {
     "channel": {
       "required": false,
-      "desc": "Channel to add star to, or channel where the message to add star to was posted (used with `timestamp`).",
+      "desc": "Channel to add star to, or channel where the message to add star to was posted (used with timestamp).",
       "type": "channel"
     },
     "file": {

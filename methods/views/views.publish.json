@@ -13,12 +13,12 @@
     "user_id": {
       "required": true,
       "example": "U0BPQUNTA",
-      "desc": "`id` of the user you want publish a view to.",
+      "desc": "id of the user you want publish a view to.",
       "type": "string"
     },
     "view": {
       "required": true,
-      "desc": "A [view payload](/reference/views). This must be a JSON-encoded string.",
+      "desc": "A view payload. This must be a JSON-encoded string.",
       "format": "json"
     }
   },

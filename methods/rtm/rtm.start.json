@@ -7,12 +7,12 @@
     "batch_presence_aware": {
       "required": false,
       "example": "1",
-      "desc": "Batch presence deliveries via subscription. Enabling changes the shape of `presence_change` events. See [batch presence](/apis/web-api/user-presence-and-status#batching).",
+      "desc": "Batch presence deliveries via subscription. Enabling changes the shape of presence_change events. See batch presence.",
       "type": "boolean"
     },
     "include_locale": {
       "required": false,
-      "desc": "Set this to `true` to receive the locale for users and channels. Defaults to `false`.",
+      "desc": "Set this to true to receive the locale for users and channels. Defaults to false.",
       "type": "boolean"
     },
     "mpim_aware": {
@@ -23,7 +23,7 @@
     "no_latest": {
       "required": false,
       "example": "1",
-      "desc": "Exclude latest timestamps for channels, groups, mpims, and ims. Automatically sets `no_unreads` to `1`.",
+      "desc": "Exclude latest timestamps for channels, groups, mpims, and ims. Automatically sets no_unreads to 1.",
       "type": "boolean"
     },
     "no_unreads": {
@@ -34,7 +34,7 @@
     "presence_sub": {
       "required": false,
       "example": "true",
-      "desc": "Only deliver presence events when requested by subscription. See [presence subscriptions](/apis/web-api/user-presence-and-status#subscriptions).",
+      "desc": "Only deliver presence events when requested by subscription. See presence subscriptions.",
       "type": "boolean"
     },
     "simple_latest": {

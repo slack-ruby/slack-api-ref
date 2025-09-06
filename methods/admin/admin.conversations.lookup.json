@@ -7,12 +7,12 @@
     "cursor": {
       "required": false,
       "example": "*",
-      "desc": "Set `cursor` to `next_cursor` returned in the previous call, to fetch the next page.",
+      "desc": "Set cursor to next_cursor returned in the previous call, to fetch the next page.",
       "type": "string"
     },
     "last_message_activity_before": {
       "required": true,
-      "desc": "Filter by *public* channels where the most recent message was sent *before* last_message_activity.",
+      "desc": "Filter by public channels where the most recent message was sent before last_message_activity.",
       "type": "integer"
     },
     "limit": {
@@ -24,7 +24,7 @@
     "max_member_count": {
       "required": false,
       "example": 1,
-      "desc": "Filter by *public* channels with member count *equal to or less than* the specified number.",
+      "desc": "Filter by public channels with member count equal to or less than the specified number.",
       "type": "integer"
     },
     "team_ids": {

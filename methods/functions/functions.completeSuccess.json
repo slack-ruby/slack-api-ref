@@ -13,7 +13,7 @@
     "outputs": {
       "required": true,
       "example": "{\"customer_id\": \"U0BPQUNTA\"}",
-      "desc": "A JSON-based object that conforms to the [output parameters](https://docs.slack.dev/deno-slack-sdk/guides/creating-custom-functions#input-output) schema for the custom function defined in the manifest.",
+      "desc": "A JSON-based object that conforms to the output parameters schema for the custom function defined in the manifest.",
       "type": "object",
       "format": "json"
     }

@@ -6,6 +6,7 @@
   "args": {
     "include_archived": {
       "required": false,
+      "desc": "",
       "type": "boolean"
     },
     "list_id": {

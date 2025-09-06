@@ -7,13 +7,13 @@
     "batch_presence_aware": {
       "required": false,
       "example": "1",
-      "desc": "Batch presence deliveries via subscription. Enabling changes the shape of `presence_change` events. See [batch presence](/apis/web-api/user-presence-and-status#batching).",
+      "desc": "Batch presence deliveries via subscription. Enabling changes the shape of presence_change events. See batch presence.",
       "type": "boolean"
     },
     "presence_sub": {
       "required": false,
       "example": true,
-      "desc": "Only deliver presence events when requested by subscription. See [presence subscriptions](/apis/web-api/user-presence-and-status#subscriptions).",
+      "desc": "Only deliver presence events when requested by subscription. See presence subscriptions.",
       "type": "boolean"
     }
   },

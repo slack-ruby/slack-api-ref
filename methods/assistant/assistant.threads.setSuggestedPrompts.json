@@ -10,7 +10,7 @@
     },
     "prompts": {
       "required": true,
-      "desc": "Each prompt should be supplied with its `title` and `message` attribute."
+      "desc": "Each prompt should be supplied with its title and message attribute."
     },
     "thread_ts": {
       "required": true,

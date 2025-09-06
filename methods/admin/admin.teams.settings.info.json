@@ -5,7 +5,8 @@
   "desc": "Fetch information about settings in a workspace",
   "args": {
     "team_id": {
-      "required": true
+      "required": true,
+      "desc": ""
     }
   },
   "response": {

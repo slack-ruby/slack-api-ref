@@ -7,7 +7,7 @@
     "name": {
       "required": false,
       "example": "first_name",
-      "desc": "Name of a single key to set. Usable only if `profile` is not passed.",
+      "desc": "Name of a single key to set. Usable only if profile is not passed.",
       "type": "string"
     },
     "profile": {
@@ -25,7 +25,7 @@
     "value": {
       "required": false,
       "example": "John",
-      "desc": "Value to set a single key to. Usable only if `profile` is not passed.",
+      "desc": "Value to set a single key to. Usable only if profile is not passed.",
       "type": "string"
     }
   },

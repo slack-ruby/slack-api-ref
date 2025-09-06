@@ -18,7 +18,7 @@
     },
     "view": {
       "required": true,
-      "desc": "A [view payload](/reference/views). This must be a JSON-encoded string.",
+      "desc": "A view payload. This must be a JSON-encoded string.",
       "format": "json"
     }
   },

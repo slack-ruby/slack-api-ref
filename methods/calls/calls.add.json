@@ -7,7 +7,7 @@
     "created_by": {
       "required": false,
       "example": "U1H77",
-      "desc": "The valid Slack user ID of the user who created this Call. When this method is called with a user token, the `created_by` field is optional and defaults to the authed user of the token. Otherwise, the field is required.",
+      "desc": "The valid Slack user ID of the user who created this Call. When this method is called with a user token, the created_by field is optional and defaults to the authed user of the token. Otherwise, the field is required.",
       "type": "string"
     },
     "date_start": {
@@ -49,7 +49,7 @@
     "users": {
       "required": false,
       "example": "[{\"slack_id\": \"U1H77\"}, {\"external_id\": \"54321678\", \"display_name\": \"External User\", \"avatar_url\": \"https://example.com/users/avatar1234.jpg\"}]",
-      "desc": "The list of users to register as participants in the Call. [Read more on how to specify users here](/apis/web-api/using-the-calls-api#users).",
+      "desc": "The list of users to register as participants in the Call. Read more on how to specify users here.",
       "type": "array"
     }
   },

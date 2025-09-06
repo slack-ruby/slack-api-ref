@@ -30,7 +30,7 @@
     "preview_image": {
       "required": false,
       "example": "...",
-      "desc": "Preview of the document via `multipart/form-data`."
+      "desc": "Preview of the document via multipart/form-data."
     },
     "title": {
       "required": true,

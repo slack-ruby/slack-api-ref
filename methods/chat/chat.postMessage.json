@@ -7,7 +7,7 @@
     "as_user": {
       "required": false,
       "example": "true",
-      "desc": "(Legacy) Pass true to post the message as the authed user instead of as a bot. Defaults to false. Can only be used by classic apps. See [legacy `as_user` parameter](#legacy_as_user) below.",
+      "desc": "(Legacy) Pass true to post the message as the authed user instead of as a bot. Defaults to false. Can only be used by classic apps. See legacy as_user parameter below.",
       "type": "boolean"
     },
     "attachments": {
@@ -29,13 +29,13 @@
     },
     "channel": {
       "required": true,
-      "desc": "An encoded ID or channel name that represents a channel, private group, or IM channel to send the message to. See [below](#channels) for more details.",
+      "desc": "An encoded ID or channel name that represents a channel, private group, or IM channel to send the message to. See below for more details.",
       "type": "channel"
     },
     "icon_emoji": {
       "required": false,
       "example": ":chart_with_upwards_trend:",
-      "desc": "Emoji to use as the icon for this message. Overrides `icon_url`.",
+      "desc": "Emoji to use as the icon for this message. Overrides icon_url.",
       "type": "string"
     },
     "icon_url": {
@@ -47,13 +47,13 @@
     "link_names": {
       "required": false,
       "example": "true",
-      "desc": "Find and link user groups. No longer supports linking individual users; use syntax shown in [Mentioning Users](/messaging/formatting-message-text#mentioning-users) instead.",
+      "desc": "Find and link user groups. No longer supports linking individual users; use syntax shown in Mentioning Users instead.",
       "type": "boolean"
     },
     "markdown_text": {
       "required": false,
       "example": "**This is bold text**",
-      "desc": "Accepts message text formatted in markdown. This argument should not be used in conjunction with `blocks` or `text`. Limit this field to 12,000 characters.",
+      "desc": "Accepts message text formatted in markdown. This argument should not be used in conjunction with blocks or text. Limit this field to 12,000 characters.",
       "type": "string"
     },
     "metadata": {
@@ -66,30 +66,30 @@
     "mrkdwn": {
       "required": false,
       "example": "false",
-      "desc": "Disable Slack markup parsing by setting to `false`. Enabled by default.",
+      "desc": "Disable Slack markup parsing by setting to false. Enabled by default.",
       "type": "boolean"
     },
     "parse": {
       "required": false,
       "example": "full",
-      "desc": "Change how messages are treated. See [below](#formatting).",
+      "desc": "Change how messages are treated. See below.",
       "type": "string"
     },
     "reply_broadcast": {
       "required": false,
       "example": "true",
-      "desc": "Used in conjunction with `thread_ts` and indicates whether reply should be made visible to everyone in the channel or conversation. Defaults to `false`.",
+      "desc": "Used in conjunction with thread_ts and indicates whether reply should be made visible to everyone in the channel or conversation. Defaults to false.",
       "type": "boolean"
     },
     "text": {
       "required": false,
       "example": "Hello world",
-      "desc": "How this field works and whether it is required depends on other fields you use in your API call. [See below](#text_usage) for more detail.",
+      "desc": "How this field works and whether it is required depends on other fields you use in your API call. See below for more detail.",
       "type": "string"
     },
     "thread_ts": {
       "required": false,
-      "desc": "Provide another message's `ts` value to make this message a reply. Avoid using a reply's `ts` value; use its parent instead.",
+      "desc": "Provide another message's ts value to make this message a reply. Avoid using a reply's ts value; use its parent instead.",
       "type": "string"
     },
     "unfurl_links": {

@@ -7,7 +7,7 @@
     "cursor": {
       "required": false,
       "example": "5cweb43",
-      "desc": "Value of the `next_cursor` field sent as part of the previous API response.",
+      "desc": "Value of the next_cursor field sent as part of the previous API response.",
       "type": "string"
     },
     "limit": {

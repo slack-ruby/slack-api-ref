@@ -13,12 +13,13 @@
     "cursor": {
       "required": false,
       "example": "5c3e53d5",
-      "desc": "Set `cursor` to `next_cursor` returned by the previous call to list items in the next page.",
+      "desc": "Set cursor to next_cursor returned by the previous call to list items in the next page.",
       "type": "string"
     },
     "enterprise_id": {
       "required": false,
-      "example": "E0AS553RN"
+      "example": "E0AS553RN",
+      "desc": ""
     },
     "limit": {
       "required": false,
@@ -28,7 +29,8 @@
     },
     "team_id": {
       "required": false,
-      "example": "T0HFE6EBT"
+      "example": "T0HFE6EBT",
+      "desc": ""
     }
   },
   "response": {

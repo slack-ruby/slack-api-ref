@@ -5,7 +5,8 @@
   "desc": "Get items from a datastore in bulk",
   "args": {
     "app_id": {
-      "required": false
+      "required": false,
+      "desc": ""
     },
     "datastore": {
       "required": true,

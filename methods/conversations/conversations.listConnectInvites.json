@@ -7,7 +7,7 @@
     "cursor": {
       "required": false,
       "example": "5c3e53d5",
-      "desc": "Set to `next_cursor` returned by previous call to list items in subsequent page.",
+      "desc": "Set to next_cursor returned by previous call to list items in subsequent page.",
       "type": "string"
     },
     "team_id": {

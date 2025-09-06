@@ -10,7 +10,7 @@
     },
     "group_id": {
       "required": true,
-      "desc": "The [IDP Group](https://slack.com/help/articles/115001435788-Connect-identity-provider-groups-to-your-Enterprise-organization) ID to be an allowlist for the private channel."
+      "desc": "The IDP Group ID to be an allowlist for the private channel."
     },
     "team_id": {
       "required": false,

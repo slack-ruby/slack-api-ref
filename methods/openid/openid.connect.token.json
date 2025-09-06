@@ -19,13 +19,13 @@
     "code": {
       "required": null,
       "example": "4724469134.4644010092847.232b4e6d82c333b475fc30f5f5a341d294feb1a94392c2fd791f7ab7731a443d1a",
-      "desc": "The `code` param returned via the OAuth callback.",
+      "desc": "The code param returned via the OAuth callback.",
       "type": "string"
     },
     "grant_type": {
       "required": null,
       "example": "authorization_code",
-      "desc": "The `grant_type` param as described in the OAuth spec.",
+      "desc": "The grant_type param as described in the OAuth spec.",
       "type": "enum"
     },
     "redirect_uri": {
@@ -37,7 +37,7 @@
     "refresh_token": {
       "required": null,
       "example": "xoxe-1-abcdefg",
-      "desc": "The `refresh_token` param as described in the OAuth spec.",
+      "desc": "The refresh_token param as described in the OAuth spec.",
       "type": "string"
     }
   },

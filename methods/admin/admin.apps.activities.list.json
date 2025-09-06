@@ -12,19 +12,19 @@
     "component_id": {
       "required": false,
       "example": "Wf013SMGL4V9",
-      "desc": "The component ID of log events to be returned. Will be `FnXXXXXX` for functions, and `WfXXXXXX` for workflows.",
+      "desc": "The component ID of log events to be returned. Will be FnXXXXXX for functions, and WfXXXXXX for workflows.",
       "type": "string"
     },
     "component_type": {
       "required": false,
       "example": "workflows",
-      "desc": "The component type of log events to be returned. Acceptable values are `events_api`, `workflows`, `functions` and `tables`.",
+      "desc": "The component type of log events to be returned. Acceptable values are events_api, workflows, functions and tables.",
       "type": "string"
     },
     "cursor": {
       "required": false,
       "example": "bG9nX2lkOjc5NjQ1NA==",
-      "desc": "Paginate through collections of data by setting the `cursor` parameter to a `next_cursor` attribute returned by a previous request's `response_metadata`. See [pagination](/apis/web-api/pagination) for more detail.",
+      "desc": "Paginate through collections of data by setting the cursor parameter to a next_cursor attribute returned by a previous request's response_metadata. See pagination for more detail.",
       "type": "string"
     },
     "limit": {
@@ -54,7 +54,7 @@
     "min_log_level": {
       "required": false,
       "example": "info",
-      "desc": "The minimum log level of the log events to be returned. Defaults to `info`. Acceptable values (in order of relative importance from smallest to largest) are `trace`, `debug`, `info`, `warn`, `error` and `fatal`.",
+      "desc": "The minimum log level of the log events to be returned. Defaults to info. Acceptable values (in order of relative importance from smallest to largest) are trace, debug, info, warn, error and fatal.",
       "type": "string"
     },
     "sort_direction": {
@@ -66,7 +66,7 @@
     "source": {
       "required": false,
       "example": "slack",
-      "desc": "The source of log events to be returned. Acceptable values are `slack` and `developer`.",
+      "desc": "The source of log events to be returned. Acceptable values are slack and developer.",
       "type": "string"
     },
     "team_id": {

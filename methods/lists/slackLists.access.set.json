@@ -11,7 +11,7 @@
     "channel_ids": {
       "required": false,
       "example": "[\"C1234ABCD\"]",
-      "desc": "List of channels you wish to update access for. Can only be used if `user_ids` is not provided.",
+      "desc": "List of channels you wish to update access for. Can only be used if user_ids is not provided.",
       "type": "array"
     },
     "list_id": {
@@ -22,7 +22,7 @@
     "user_ids": {
       "required": false,
       "example": "[\"U1234ABCD\"]",
-      "desc": "List of users you wish to update access for. Can only be used if `channel_ids` is not provided.",
+      "desc": "List of users you wish to update access for. Can only be used if channel_ids is not provided.",
       "type": "array"
     }
   },

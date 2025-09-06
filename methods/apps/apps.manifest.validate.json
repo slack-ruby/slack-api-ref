@@ -10,7 +10,7 @@
     },
     "manifest": {
       "required": true,
-      "desc": "The manifest to be validated. Will be validated against the [app manifest schema - read our guide](/app-manifests/configuring-apps-with-app-manifests#fields).",
+      "desc": "The manifest to be validated. Will be validated against the app manifest schema - read our guide.",
       "type": "string"
     }
   },

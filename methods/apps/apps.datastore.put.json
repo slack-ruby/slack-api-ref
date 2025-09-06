@@ -5,7 +5,8 @@
   "desc": "Creates a new item, or replaces an old item with a new item.",
   "args": {
     "app_id": {
-      "required": false
+      "required": false,
+      "desc": ""
     },
     "datastore": {
       "required": true,

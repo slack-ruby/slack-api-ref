@@ -6,7 +6,7 @@
   "args": {
     "channel_id": {
       "required": true,
-      "desc": "The encoded `channel_id` to add or remove to workspaces.",
+      "desc": "The encoded channel_id to add or remove to workspaces.",
       "type": "string"
     },
     "org_channel": {
