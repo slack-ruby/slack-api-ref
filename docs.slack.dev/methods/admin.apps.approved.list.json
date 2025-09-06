@@ -1,0 +1,164 @@
+{
+  "desc": "List approved apps for an org or workspace.",
+  "http_method": "GET",
+  "scope": "admin.apps:read",
+  "rate_limits": "t2",
+  "args": {
+    "type": "object",
+    "required": [
+      "token"
+    ],
+    "properties": {
+      "token": {
+        "type": "string",
+        "subtype": "auth",
+        "desc": "Authentication token bearing required scopes. Tokens should be passed as an HTTP Authorization header or alternatively, as a POST parameter.",
+        "example": "xxxx-xxxxxxxxx-xxxx"
+      },
+      "limit": {
+        "type": "integer",
+        "desc": "The maximum number of items to return. Must be between 1 - 1000 both inclusive.",
+        "example": "100",
+        "default": 100,
+        "minimum": 1,
+        "maximum": 1000
+      },
+      "cursor": {
+        "type": "string",
+        "desc": "Set `cursor` to `next_cursor` returned by the previous call to list items in the next page",
+        "example": "5c3e53d5"
+      },
+      "team_id": {
+        "example": "T0HFE6EBT",
+        "schema": "team_id"
+      },
+      "enterprise_id": {
+        "example": "E0AS553RN",
+        "schema": "enterprise_id"
+      },
+      "certified": {
+        "desc": "Limit the results to only include certified apps. When false, no certified apps will appear in the result",
+        "type": "boolean",
+        "default": "false"
+      }
+    }
+  },
+  "output": {
+    "type": "object",
+    "required": [
+      "approved_apps"
+    ],
+    "properties": {
+      "approved_apps": {
+        "type": "array",
+        "items": {
+          "schema": "resolution"
+        }
+      },
+      "response_metadata": {
+        "type": "object",
+        "required": [
+          "next_cursor"
+        ],
+        "properties": {
+          "next_cursor": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "errors": {
+    "app_management_app_not_installed_on_org": {
+      "desc": "The app management app must be installed on the org."
+    },
+    "feature_not_enabled": {
+      "desc": "Returned when the Admin APIs feature is not enabled for this team"
+    },
+    "invalid_actor": {
+      "desc": "The provided actor_id is not a valid user or application"
+    },
+    "invalid_cursor": {
+      "desc": "Value passed for `cursor` was not valid or is no longer valid."
+    },
+    "not_allowed": {
+      "desc": "The user is not allowed to access this API method"
+    },
+    "not_an_admin": {
+      "desc": "This method is only accessible by org/workspace owners and admins"
+    },
+    "team_not_found": {
+      "desc": "Returned when team id is not found."
+    },
+    "too_many_teams_provided": {
+      "desc": "Please provide only `team_id` OR `enterprise_id`."
+    },
+    "restricted_action": {
+      "desc": "User does not have permission to access method"
+    }
+  },
+  "examples": {
+    "success": {
+      "url": "/api/admin.apps.approved.list?token=YOUR_TOKEN&enterprise_id=E0AS538RN",
+      "description": "Typical success response",
+      "example": {
+        "ok": true,
+        "approved_apps": [
+          {
+            "app": {
+              "id": "A0W7UKG8E",
+              "name": "My Test App",
+              "description": "test app",
+              "help_url": "https://www.slack.com",
+              "privacy_policy_url": "https://www.slack.com",
+              "app_homepage_url": "https://www.slack.com",
+              "app_directory_url": "https://myteam.enterprise.slack.com/apps/A0W7UKG8E-my-test-app",
+              "is_app_directory_approved": false,
+              "is_internal": false,
+              "developer_type": "third_party",
+              "socket_mode_enabled": false,
+              "icons": {
+                "image_32": "https://302674312496446w_2bd4ea1ad1f89a23c242_32.png",
+                "image_36": "https://302674312496446w_2bd4ea1ad1f89a23c242_36.png",
+                "image_48": "https://302674312496446w_2bd4ea1ad1f89a23c242_48.png",
+                "image_64": "https://302674312496446w_2bd4ea1ad1f89a23c242_64.png",
+                "image_72": "https://302674312496446w_2bd4ea1ad1f89a23c242_72.png",
+                "image_96": "https://302674312496446w_2bd4ea1ad1f89a23c242_96.png",
+                "image_128": "https://30267341249446w6_2bd4ea1ad1f89a23c242_128.png",
+                "image_192": "https://30267431249446w6_2bd4ea1ad1f89a23c242_192.png",
+                "image_512": "https://30267431249446w6_2bd4ea1ad1f89a23c242_512.png",
+                "image_1024": "https://3026743124446w96_2bd4ea1ad1f89a23c242_1024.png",
+                "image_original": "https://302674446w12496_2bd4ea1ad1f89a23c242_original.png"
+              },
+              "additional_info": ""
+            },
+            "scopes": [
+              {
+                "name": "bot",
+                "description": "Add the ability for people to direct message or mention @my_test_app",
+                "is_sensitive": true,
+                "token_type": "bot"
+              }
+            ],
+            "date_updated": 1574296707,
+            "last_resolved_by": {
+              "actor_id": "W0G82F4FD",
+              "actor_type": "user"
+            }
+          }
+        ],
+        "response_metadata": {
+          "next_cursor": ""
+        }
+      }
+    },
+    "error": {
+      "url": "/api/admin.apps.approved.list?token=INVALID_TOKEN&team_id=T0AS853RN",
+      "description": "Typical error response",
+      "example": {
+        "ok": false,
+        "error": "invalid_auth"
+      }
+    }
+  }
+}

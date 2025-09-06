@@ -1,0 +1,65 @@
+{
+  "desc": "Set an existing guest user, admin user, or owner to be a regular user.",
+  "http_method": "POST",
+  "scope": "admin.users:write",
+  "json_input_supported": true,
+  "rate_limits": "t2",
+  "args": {
+    "type": "object",
+    "required": [
+      "token",
+      "team_id",
+      "user_id"
+    ],
+    "properties": {
+      "token": {
+        "type": "string",
+        "subtype": "auth",
+        "desc": "Authentication token bearing required scopes. Tokens should be passed as an HTTP Authorization header or alternatively, as a POST parameter.",
+        "example": "xxxx-xxxxxxxxx-xxxx"
+      },
+      "team_id": {
+        "desc": "The ID (`T1234`) of the workspace.",
+        "schema": "workspace_id"
+      },
+      "user_id": {
+        "desc": "The ID of the user to designate as a regular user.",
+        "type": "string",
+        "example": "W12345678"
+      }
+    }
+  },
+  "output": null,
+  "errors": {
+    "cannot_set_this_guest_to_regular_at_team_level": {
+      "desc": "This guest cannot be set to regular because they are active on multiple workspaces."
+    },
+    "cannot_modify_primary_owner": {
+      "desc": "The primary owner cannot be modified."
+    },
+    "failed_to_set_user_to_regular": {
+      "desc": "Changing a user to a regular member failed."
+    },
+    "feature_not_enabled": {
+      "desc": "The Admin APIs feature is not enabled for this team."
+    },
+    "not_an_admin": {
+      "desc": "This method can only be accessed by org owners and admins."
+    },
+    "team_not_found": {
+      "desc": "`team_id` was not found."
+    },
+    "user_not_found": {
+      "desc": "The requested user was not found."
+    }
+  },
+  "examples": {
+    "success": {
+      "url": "/api/admin.users.setRegular?token=YOUR_TOKEN",
+      "description": "Typical success response",
+      "example": {
+        "ok": true
+      }
+    }
+  }
+}

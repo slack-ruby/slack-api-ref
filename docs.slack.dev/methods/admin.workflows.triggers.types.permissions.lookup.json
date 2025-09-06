@@ -1,0 +1,81 @@
+{
+  "desc": "list the permissions for using each trigger type",
+  "http_method": "POST",
+  "scope": "client",
+  "json_input_supported": true,
+  "rate_limits": "t2",
+  "args": {
+    "type": "object",
+    "required": [
+      "token",
+      "trigger_type_ids"
+    ],
+    "properties": {
+      "token": {
+        "type": "string",
+        "subtype": "auth",
+        "desc": "Authentication token bearing required scopes. Tokens should be passed as an HTTP Authorization header or alternatively, as a POST parameter.",
+        "example": "xxxx-xxxxxxxxx-xxxx"
+      },
+      "trigger_type_ids": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 1000,
+        "desc": "The trigger types IDs for which to get the permissions",
+        "example": "['FTT01', 'FTT02', 'FTT03']",
+        "items": {
+          "schema": "function_trigger_type_id"
+        }
+      }
+    }
+  },
+  "output": {
+    "type": "object",
+    "required": [
+      "permissions",
+      "metadata"
+    ],
+    "properties": {
+      "metadata": {
+        "type": "object",
+        "patternProperties": {
+          "^Ftt[A-Z0-9]{4,}$": {
+            "type": "object",
+            "required": [
+              "date_released",
+              "workflows_using",
+              "available_in_workflow_builder"
+            ],
+            "properties": {
+              "date_released": {
+                "type": "integer",
+                "desc": "the date this trigger type was released"
+              },
+              "workflows_using": {
+                "type": "integer",
+                "desc": "the number of workflows with a trigger of this type"
+              },
+              "available_in_workflow_builder": {
+                "type": "boolean",
+                "desc": "Is the trigger available for use in workflow builder"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "errors": {
+    "restricted_action": {
+      "desc": "This actor does not have access to view the permissions on this resource"
+    },
+    "trigger_type_id_not_found": {
+      "desc": "The given trigger type ID(s) do not map to valid trigger types"
+    }
+  },
+  "warnings": {
+    "one_or_more_trigger_type_ids_not_found": {
+      "desc": "One or more of the given IDs do not map to a valid trigger type"
+    }
+  }
+}

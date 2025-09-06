@@ -1,0 +1,125 @@
+{
+  "desc": "Checks authentication & identity.",
+  "http_method": "POST",
+  "scope": "none",
+  "json_input_supported": true,
+  "no_scope_required": true,
+  "rate_limits": "t5",
+  "args": {
+    "type": "object",
+    "required": [
+      "token"
+    ],
+    "properties": {
+      "token": {
+        "type": "string",
+        "subtype": "auth",
+        "desc": "Authentication token bearing required scopes. Tokens should be passed as an HTTP Authorization header or alternatively, as a POST parameter.",
+        "example": "xxxx-xxxxxxxxx-xxxx"
+      }
+    }
+  },
+  "output": {
+    "type": "object",
+    "properties": {
+      "user_id": {
+        "schema": "user_id"
+      },
+      "url": {
+        "type": "string"
+      },
+      "team_id": {
+        "schema": "team_id"
+      },
+      "user": {
+        "anyOf": [
+          {
+            "type": "null"
+          },
+          {
+            "type": "string"
+          }
+        ]
+      },
+      "team": {
+        "type": "string"
+      },
+      "app_id": {
+        "schema": "app_id"
+      },
+      "app_name": {
+        "type": "string"
+      },
+      "enterprise_id": {
+        "schema": "enterprise_id"
+      },
+      "bot_id": {
+        "schema": "bot_id"
+      },
+      "is_enterprise_install": {
+        "type": "boolean"
+      },
+      "expires_in": {
+        "anyOf": [
+          {
+            "type": "null"
+          },
+          {
+            "type": "integer"
+          }
+        ]
+      }
+    }
+  },
+  "errors": {
+    "internal_error": {
+      "desc": "An internal error has been found."
+    },
+    "invalid_auth": {
+      "desc": "Method was called with invalid credentials"
+    }
+  },
+  "examples": {
+    "success": {
+      "description": "Standard success response when used with a user token",
+      "url": "/api/auth.test?token=YOUR_TOKEN",
+      "example": {
+        "ok": true,
+        "url": "https://subarachnoid.slack.com/",
+        "team": "Subarachnoid Workspace",
+        "user": "grace",
+        "team_id": "T12345678",
+        "user_id": "W12345678"
+      }
+    },
+    "error": {
+      "description": "Standard failure response when used with an invalid token",
+      "url": "/api/auth.test?token=INVALID_TOKEN",
+      "example": {
+        "ok": false,
+        "error": "invalid_auth"
+      }
+    },
+    "success_with_bot_token": {
+      "url": "/api/auth.test?token=BOT_USER_TOKEN",
+      "description": "Success response when using a bot user token",
+      "example": {
+        "ok": true,
+        "url": "https://subarachnoid.slack.com/",
+        "team": "Subarachnoid Workspace",
+        "user": "bot",
+        "team_id": "T0G9PQBBK",
+        "user_id": "W23456789",
+        "bot_id": "BZYBOTHED"
+      }
+    },
+    "error_with_no_token": {
+      "description": "Error response when omitting a token",
+      "url": "/api/auth.test",
+      "example": {
+        "ok": false,
+        "error": "not_authed"
+      }
+    }
+  }
+}

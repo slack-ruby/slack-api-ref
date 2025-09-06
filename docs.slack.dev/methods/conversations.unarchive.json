@@ -1,0 +1,63 @@
+{
+  "desc": "Reverses conversation archival.",
+  "http_method": "POST",
+  "scope": "conversations:write",
+  "scope_by_token_type": {
+    "app": "conversations:write"
+  },
+  "json_input_supported": true,
+  "slack_connect_workspaces_allowed": true,
+  "rate_limits": "t2",
+  "args": {
+    "type": "object",
+    "required": [
+      "token",
+      "channel"
+    ],
+    "properties": {
+      "token": {
+        "type": "string",
+        "subtype": "auth",
+        "desc": "Authentication token bearing required scopes. Tokens should be passed as an HTTP Authorization header or alternatively, as a POST parameter.",
+        "example": "xxxx-xxxxxxxxx-xxxx"
+      },
+      "channel": {
+        "desc": "ID of conversation to unarchive",
+        "type": "string",
+        "subtype": "channel"
+      }
+    }
+  },
+  "output": null,
+  "errors": {
+    "channel_not_found": {
+      "desc": "Value passed for `channel` was invalid."
+    },
+    "method_not_supported_for_channel_type": {
+      "desc": "This type of conversation cannot be used with this method."
+    },
+    "missing_scope": {
+      "desc": "The calling token is not granted the necessary scopes to complete this operation."
+    },
+    "not_archived": {
+      "desc": "Channel is not archived."
+    }
+  },
+  "examples": {
+    "success": {
+      "url": "/api/conversations.unarchive?token=YOUR_TOKEN",
+      "description": "Typical success response",
+      "example": {
+        "ok": true
+      }
+    },
+    "error": {
+      "url": "/api/conversations.unarchive?token=INVALID_TOKEN",
+      "description": "Typical error response",
+      "example": {
+        "ok": false,
+        "error": "channel_not_found"
+      }
+    }
+  }
+}
