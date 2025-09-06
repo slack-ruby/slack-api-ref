@@ -17,7 +17,7 @@ jobs:
           bundler-cache: true
           ruby-version: '3.4'
       - name: Download
-        run: bundle exec rake api:download
+        run: bundle exec rake api:ref:download
       - name: Update
         run: bundle exec rake api:update
       - name: Validate
