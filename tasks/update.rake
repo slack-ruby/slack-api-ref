@@ -4,6 +4,8 @@ namespace :api do
   namespace :methods do
     desc 'Update methods.'
     task :update do
+      FileUtils.rm_rf 'methods'
+      FileUtils.rm_rf 'groups'
       SlackApi::MethodsGenerator.new.generate!
     end
   end

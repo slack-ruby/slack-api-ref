@@ -21,6 +21,13 @@ module SlackApi
           )
         )
       end
+
+      FileUtils.mkdir_p('groups')
+      groups.each do |group|
+        filename = "groups/#{group}.json"
+        puts filename
+        File.write(filename, JSON.pretty_generate(name: group))
+      end
     end
 
     private
@@ -43,6 +50,7 @@ module SlackApi
 
       filename = "methods/#{data['group']}/#{data['name']}.json"
       FileUtils.mkdir_p("methods/#{data['group']}")
+      puts filename
       File.write(filename, JSON.pretty_generate(result))
     end
 
