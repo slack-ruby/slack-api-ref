@@ -13,8 +13,6 @@ module SlackApi
         events_downloader.download!
       end
 
-      private
-
       def methods_downloader
         @methods_downloader ||= MethodsDownloader.new(target_path)
       end

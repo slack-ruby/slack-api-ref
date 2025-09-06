@@ -1,8 +1,14 @@
-require_relative 'lib/slack_api/spec_validator'
+require_relative 'lib/slack_api/methods_generator'
 
 namespace :api do
-  desc 'Validate scraped methods and events are valid.'
+  namespace :methods do
+    desc 'Update methods.'
+    task :update do
+      SlackApi::MethodsGenerator.new.generate!
+    end
+  end
+
   task :update do
-    puts 'TODO'
+    Rake::Task['api:methods:update'].invoke
   end
 end
