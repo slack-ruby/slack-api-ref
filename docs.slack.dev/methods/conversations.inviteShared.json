@@ -1,10 +1,7 @@
 {
   "desc": "Sends an invitation to a Slack Connect channel",
   "http_method": "GET",
-  "scope": "post",
-  "scope_by_token_type": {
-    "granular_bot": "conversations.connect:write"
-  },
+  "scope": "conversations.connect:write",
   "rate_limits": "t2",
   "json_input_supported": true,
   "args": {

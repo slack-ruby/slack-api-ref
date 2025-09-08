@@ -1,10 +1,7 @@
 {
   "desc": "Get logs for a specified team/org",
   "http_method": "POST",
-  "scope": "read",
-  "scope_by_token_type": {
-    "oauth": "admin.app_activities:read"
-  },
+  "scope": "admin.app_activities:read",
   "json_input_supported": false,
   "slack_connect_workspaces_allowed": true,
   "rate_limits": "t3",

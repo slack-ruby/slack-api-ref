@@ -88,7 +88,7 @@
       "conversations": {
         "type": "array",
         "items": {
-          "refs": "../../common/schemas/common_objects_schema.json#/channel"
+          "schema": "channel"
         }
       },
       "next_cursor": {

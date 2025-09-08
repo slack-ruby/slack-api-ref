@@ -3,9 +3,6 @@
   "http_method": "POST",
   "scope": "openid",
   "user_scope_only": true,
-  "scope_by_token_type": {
-    "oauth": "openid"
-  },
   "rate_limits": "t3",
   "args": {
     "type": "object",

@@ -1,10 +1,7 @@
 {
   "desc": "Disconnect an external organization.",
   "http_method": "POST",
-  "scope": "conversations:write",
-  "scope_by_token_type": {
-    "granular_bot": "conversations.connect:manage"
-  },
+  "scope": "conversations.connect:manage",
   "rate_limits": "t1",
   "args": {
     "type": "object",

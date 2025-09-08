@@ -2,9 +2,6 @@
   "desc": "Renames a conversation.",
   "http_method": "POST",
   "scope": "conversations:write",
-  "scope_by_token_type": {
-    "app": "conversations:write"
-  },
   "slack_connect_workspaces_allowed": true,
   "json_input_supported": true,
   "rate_limits": "t2",

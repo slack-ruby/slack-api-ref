@@ -2,9 +2,6 @@
   "desc": "Lists all channels in a Slack team.",
   "http_method": "GET",
   "scope": "conversations:read",
-  "scope_by_token_type": {
-    "app": "conversations:read"
-  },
   "slack_connect_workspaces_allowed": true,
   "rate_limits": "t2",
   "args": {

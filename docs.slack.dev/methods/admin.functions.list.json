@@ -1,10 +1,7 @@
 {
   "desc": "Look up functions by a set of apps",
   "http_method": "POST",
-  "scope": "read",
-  "scope_by_token_type": {
-    "oauth": "admin.workflows:read"
-  },
+  "scope": "admin.workflows:read",
   "json_input_supported": true,
   "rate_limits": "t2",
   "args": {

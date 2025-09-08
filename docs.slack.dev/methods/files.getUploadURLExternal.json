@@ -1,11 +1,7 @@
 {
   "desc": "Gets a URL for an edge external file upload",
   "http_method": "POST",
-  "scope": "files:write:user",
-  "scope_by_token_type": {
-    "app": "files:write",
-    "granular_bot": "files:write"
-  },
+  "scope": "files:write",
   "rate_limits": "t4",
   "args": {
     "type": "object",

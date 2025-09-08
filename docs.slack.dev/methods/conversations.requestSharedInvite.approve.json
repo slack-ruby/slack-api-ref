@@ -1,10 +1,7 @@
 {
   "desc": "Approves a request to add an external user to a channel and sends them a Slack Connect invite",
   "http_method": "POST",
-  "scope": "post",
-  "scope_by_token_type": {
-    "granular_bot": "conversations.connect:manage"
-  },
+  "scope": "conversations.connect:manage",
   "rate_limits": "t2",
   "json_input_supported": true,
   "args": {

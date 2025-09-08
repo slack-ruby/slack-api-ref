@@ -2,9 +2,6 @@
   "desc": "Retrieve a thread of messages posted to a conversation",
   "http_method": "GET",
   "scope": "conversations:history",
-  "scope_by_token_type": {
-    "app": "conversations:history"
-  },
   "slack_connect_workspaces_allowed": true,
   "rate_limits": "t3",
   "args": {

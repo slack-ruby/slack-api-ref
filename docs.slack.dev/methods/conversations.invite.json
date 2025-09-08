@@ -1,12 +1,7 @@
 {
   "desc": "Invites users to a channel.",
   "http_method": "POST",
-  "scope": "conversations:write",
-  "scope_by_token_type": {
-    "oauth": "conversations:write.invites",
-    "granular_bot": "conversations:write.invites",
-    "workflow": "conversations:write.invites"
-  },
+  "scope": "conversations:write.invites",
   "json_input_supported": true,
   "slack_connect_workspaces_allowed": true,
   "rate_limits": "t3",

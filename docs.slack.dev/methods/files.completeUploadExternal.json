@@ -1,11 +1,7 @@
 {
   "desc": "Finishes an upload started with files.getUploadURLExternal",
   "http_method": "POST",
-  "scope": "files:write:user",
-  "scope_by_token_type": {
-    "app": "files:write",
-    "granular_bot": "files:write"
-  },
+  "scope": "files:write",
   "slack_connect_workspaces_allowed": true,
   "rate_limits": "t4",
   "json_input_supported": true,

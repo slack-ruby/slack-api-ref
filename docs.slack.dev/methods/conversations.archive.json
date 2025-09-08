@@ -2,9 +2,6 @@
   "desc": "Archives a conversation.",
   "http_method": "POST",
   "scope": "conversations:write",
-  "scope_by_token_type": {
-    "app": "conversations:write"
-  },
   "json_input_supported": true,
   "slack_connect_workspaces_allowed": true,
   "rate_limits": "t2",

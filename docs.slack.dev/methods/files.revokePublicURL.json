@@ -1,11 +1,7 @@
 {
   "desc": "Revokes public/external sharing access for a file",
   "http_method": "POST",
-  "scope": "files:write:user",
-  "scope_by_token_type": {
-    "app": "files:write",
-    "granular_bot": "files:write"
-  },
+  "scope": "files:write",
   "json_input_supported": true,
   "rate_limits": "t3",
   "args": {

@@ -2,9 +2,6 @@
   "desc": "Retrieve members of a conversation.",
   "http_method": "GET",
   "scope": "conversations:read",
-  "scope_by_token_type": {
-    "app": "conversations:read"
-  },
   "slack_connect_workspaces_allowed": true,
   "rate_limits": "t4",
   "args": {

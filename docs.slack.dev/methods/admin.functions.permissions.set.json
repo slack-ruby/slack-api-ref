@@ -1,10 +1,7 @@
 {
   "desc": "Set the visibility of a Slack function and define the users or workspaces if it is set to named_entities",
   "http_method": "POST",
-  "scope": "read",
-  "scope_by_token_type": {
-    "oauth": "admin.workflows:write"
-  },
+  "scope": "admin.workflows:read",
   "json_input_supported": true,
   "rate_limits": "t3",
   "args": {
