@@ -20,7 +20,7 @@
         "example": "xxxx-xxxxxxxxx-xxxx"
       },
       "as_user": {
-        "desc": "Pass true to delete the message as the authed user with `chat:write:user` scope. Bot users in this context are considered authed users. If unused or false, the message will be deleted with `chat:write:bot` scope.",
+        "desc": "(Legacy) Pass true to delete the message as the authed user with `chat:write:user` scope. Bot users in this context are considered authed users. See [legacy `as_user` parameter](#legacy_as_user) below.",
         "example": "true",
         "type": "boolean"
       },
