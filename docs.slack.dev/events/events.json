@@ -227,15 +227,6 @@
     ]
   },
   {
-    "name": "channel_join",
-    "scopes": [],
-    "description": "A member joined a channel",
-    "APIs": [
-      "Events",
-      "RTM"
-    ]
-  },
-  {
     "name": "channel_joined",
     "description": "You joined a channel",
     "scopes": [],
