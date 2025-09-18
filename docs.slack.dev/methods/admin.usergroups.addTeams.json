@@ -1,7 +1,11 @@
 {
   "desc": "Associate one or more default workspaces with an organization-wide IDP group.",
   "http_method": "POST",
-  "scope": "admin.teams:write",
+  "scope": {
+    "user": [
+      "admin.teams:write"
+    ]
+  },
   "json_input_supported": true,
   "rate_limits": "t2",
   "args": {

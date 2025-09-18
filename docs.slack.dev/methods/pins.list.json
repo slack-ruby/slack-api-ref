@@ -1,7 +1,14 @@
 {
   "desc": "Lists items pinned to a channel.",
   "http_method": "GET",
-  "scope": "pins:read",
+  "scope": {
+    "bot": [
+      "pins:read"
+    ],
+    "user": [
+      "pins:read"
+    ]
+  },
   "slack_connect_workspaces_allowed": true,
   "rate_limits": "t2",
   "args": {

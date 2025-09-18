@@ -1,7 +1,11 @@
 {
   "desc": "Create an app from an app manifest.",
   "http_method": "POST",
-  "scope": "app_configurations:write",
+  "scope": {
+    "configuration": [
+      "app_configurations:write"
+    ]
+  },
   "json_input_supported": true,
   "rate_limits": "t1",
   "args": {

@@ -1,7 +1,11 @@
 {
   "desc": "Searches for files matching a query.",
   "http_method": "GET",
-  "scope": "search:read",
+  "scope": {
+    "user": [
+      "search:read"
+    ]
+  },
   "slack_connect_workspaces_allowed": true,
   "rate_limits": "t2",
   "args": {

@@ -1,7 +1,11 @@
 {
   "desc": "Move public or private channels in bulk.",
   "http_method": "POST",
-  "scope": "admin.conversations:write",
+  "scope": {
+    "user": [
+      "admin.conversations:write"
+    ]
+  },
   "rate_limits": "t2",
   "args": {
     "type": "object",

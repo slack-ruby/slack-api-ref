@@ -1,7 +1,11 @@
 {
   "desc": "Set the status for an AI assistant thread.",
   "http_method": "POST",
-  "scope": "assistant:write",
+  "scope": {
+    "bot": [
+      "assistant:write"
+    ]
+  },
   "json_input_supported": true,
   "rate_limits": "t5",
   "args": {

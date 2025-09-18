@@ -1,7 +1,7 @@
 {
   "desc": "Push a view onto the stack of a root view.",
   "http_method": "POST",
-  "scope": "none",
+  "scope": {},
   "json_input_supported": true,
   "no_scope_required": true,
   "rate_limits": "t4",

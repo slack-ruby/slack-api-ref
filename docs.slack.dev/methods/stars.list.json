@@ -1,7 +1,11 @@
 {
   "desc": "Listed a user's saved items, formerly known as stars.",
   "http_method": "GET",
-  "scope": "stars:read",
+  "scope": {
+    "user": [
+      "stars:read"
+    ]
+  },
   "rate_limits": "t3",
   "deprecated": true,
   "slack_connect_workspaces_allowed": true,

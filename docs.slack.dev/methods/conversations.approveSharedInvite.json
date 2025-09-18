@@ -1,7 +1,11 @@
 {
   "desc": "Approves an invitation to a Slack Connect channel",
   "http_method": "POST",
-  "scope": "conversations.connect:manage",
+  "scope": {
+    "bot": [
+      "conversations.connect:manage"
+    ]
+  },
   "rate_limits": "t3",
   "json_input_supported": true,
   "args": {

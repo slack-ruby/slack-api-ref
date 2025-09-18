@@ -1,7 +1,20 @@
 {
   "desc": "Opens or resumes a direct message or multi-person direct message.",
   "http_method": "POST",
-  "scope": "conversations:write",
+  "scope": {
+    "bot": [
+      "groups:read",
+      "im:read",
+      "mpim:read",
+      "channels:read"
+    ],
+    "user": [
+      "groups:read",
+      "im:read",
+      "mpim:read",
+      "channels:read"
+    ]
+  },
   "json_input_supported": true,
   "slack_connect_workspaces_allowed": true,
   "rate_limits": "t3",

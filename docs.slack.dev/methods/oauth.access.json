@@ -1,7 +1,7 @@
 {
   "desc": "Exchanges a temporary OAuth verifier code for an access token.",
   "http_method": "POST",
-  "scope": "none",
+  "scope": {},
   "rate_limits": "t4",
   "args": {
     "type": "object",

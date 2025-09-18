@@ -1,7 +1,14 @@
 {
   "desc": "Deletes a message.",
   "http_method": "POST",
-  "scope": "chat:write",
+  "scope": {
+    "bot": [
+      "chat:write"
+    ],
+    "user": [
+      "chat:write"
+    ]
+  },
   "json_input_supported": true,
   "slack_connect_workspaces_allowed": true,
   "rate_limits": "t3",

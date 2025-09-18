@@ -1,7 +1,14 @@
 {
   "desc": "Share a remote file into a channel.",
   "http_method": "GET",
-  "scope": "remote_files:share",
+  "scope": {
+    "bot": [
+      "remote_files:share"
+    ],
+    "user": [
+      "remote_files:share"
+    ]
+  },
   "rate_limits": "t2",
   "args": {
     "type": "object",

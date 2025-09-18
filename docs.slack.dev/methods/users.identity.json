@@ -1,7 +1,11 @@
 {
   "desc": "Get a user's identity.",
   "http_method": "GET",
-  "scope": "identity.read",
+  "scope": {
+    "user": [
+      "identity:read"
+    ]
+  },
   "user_scope_only": true,
   "rate_limits": "t3",
   "args": {

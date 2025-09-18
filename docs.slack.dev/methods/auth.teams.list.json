@@ -1,7 +1,7 @@
 {
   "desc": "Obtain a full list of workspaces your org-wide app has been approved for.",
   "http_method": "POST",
-  "scope": "none",
+  "scope": {},
   "no_scope_required": true,
   "json_input_supported": false,
   "rate_limits": "t2",

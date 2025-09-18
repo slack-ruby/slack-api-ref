@@ -1,7 +1,11 @@
 {
   "desc": "Add up to one hundred default channels to an IDP group.",
   "http_method": "POST",
-  "scope": "admin.usergroups:write",
+  "scope": {
+    "user": [
+      "admin.usergroups:write"
+    ]
+  },
   "json_input_supported": true,
   "rate_limits": "t1",
   "args": {

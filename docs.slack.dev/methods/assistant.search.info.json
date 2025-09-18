@@ -1,10 +1,13 @@
 {
   "desc": "Returns search capabilities on a given team.",
   "http_method": "POST",
-  "scope": "search:read",
-  "scope_by_token_type": {
-    "granular_bot": "search:read.public",
-    "oauth": "search:read.public"
+  "scope": {
+    "user": [
+      "search:read"
+    ],
+    "bot": [
+      "search:read.public"
+    ]
   },
   "json_input_supported": true,
   "rate_limits": "t2",

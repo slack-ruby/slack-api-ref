@@ -1,7 +1,7 @@
 {
   "desc": "Revokes a token.",
   "http_method": "GET",
-  "scope": "none",
+  "scope": {},
   "no_scope_required": true,
   "rate_limits": "t3",
   "args": {

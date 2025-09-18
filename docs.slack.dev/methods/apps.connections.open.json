@@ -1,7 +1,7 @@
 {
   "desc": "Generate a temporary Socket Mode WebSocket URL that your app can connect to in order to receive events and interactive payloads over.",
   "http_method": "POST",
-  "scope": "connections:write",
+  "scope": {},
   "rate_limits": "t3",
   "json_input_supported": true,
   "args": {

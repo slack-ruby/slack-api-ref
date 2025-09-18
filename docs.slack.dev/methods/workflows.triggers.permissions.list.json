@@ -1,7 +1,11 @@
 {
   "desc": "Returns the permission type of a trigger and if applicable, includes the entities that have been granted access",
   "http_method": "POST",
-  "scope": "triggers:read",
+  "scope": {
+    "bot": [
+      "triggers:read"
+    ]
+  },
   "no_scope_required": false,
   "json_input_supported": true,
   "rate_limits": "t3",

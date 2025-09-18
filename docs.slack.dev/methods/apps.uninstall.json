@@ -1,7 +1,7 @@
 {
   "desc": "Uninstalls your app from a workspace.",
   "http_method": "POST",
-  "scope": "none",
+  "scope": {},
   "no_scope_required": true,
   "rate_limits": "t1",
   "args": {

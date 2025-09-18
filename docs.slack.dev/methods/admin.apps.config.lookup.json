@@ -1,7 +1,11 @@
 {
   "desc": "Look up the app config for connectors by their IDs",
   "http_method": "POST",
-  "scope": "admin.apps:read",
+  "scope": {
+    "user": [
+      "admin.apps:read"
+    ]
+  },
   "json_input_supported": true,
   "rate_limits": "t2",
   "args": {

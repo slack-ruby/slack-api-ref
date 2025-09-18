@@ -1,7 +1,7 @@
 {
   "desc": "Checks API calling code.",
   "http_method": "POST",
-  "scope": "none",
+  "scope": {},
   "json_input_supported": true,
   "rate_limits": "t4",
   "args": {

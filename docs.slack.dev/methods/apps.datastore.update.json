@@ -1,7 +1,11 @@
 {
   "desc": "Edits an existing item's attributes, or adds a new item if it does not already exist.",
   "http_method": "POST",
-  "scope": "datastore:write",
+  "scope": {
+    "bot": [
+      "datastore:write"
+    ]
+  },
   "json_input_supported": true,
   "rate_limits": "t4",
   "args": {

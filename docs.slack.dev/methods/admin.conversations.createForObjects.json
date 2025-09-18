@@ -1,7 +1,11 @@
 {
   "desc": "Create a Salesforce channel for the corresponding object provided.",
   "http_method": "POST",
-  "scope": "admin.conversations:manage_objects",
+  "scope": {
+    "user": [
+      "admin.conversations:manage_objects"
+    ]
+  },
   "json_input_supported": true,
   "rate_limits": "t2",
   "args": {

@@ -1,7 +1,11 @@
 {
   "desc": "List all approved workspace invite requests.",
   "http_method": "POST",
-  "scope": "admin.invites:read",
+  "scope": {
+    "user": [
+      "admin.invites:read"
+    ]
+  },
   "json_input_supported": true,
   "rate_limits": "t2",
   "args": {

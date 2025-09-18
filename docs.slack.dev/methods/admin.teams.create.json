@@ -1,7 +1,11 @@
 {
   "desc": "Create an Enterprise team.",
   "http_method": "POST",
-  "scope": "admin.teams:write",
+  "scope": {
+    "user": [
+      "admin.teams:write"
+    ]
+  },
   "json_input_supported": true,
   "rate_limits": "t1",
   "args": {

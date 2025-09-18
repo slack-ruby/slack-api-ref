@@ -1,7 +1,14 @@
 {
   "desc": "Registers a new Call.",
   "http_method": "POST",
-  "scope": "calls:write",
+  "scope": {
+    "bot": [
+      "calls:write"
+    ],
+    "user": [
+      "calls:write"
+    ]
+  },
   "json_input_supported": true,
   "rate_limits": "t3",
   "args": {

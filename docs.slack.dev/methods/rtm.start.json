@@ -1,7 +1,7 @@
 {
   "desc": "Deprecated: Starts a Real Time Messaging session. Use rtm.connect instead.",
   "http_method": "GET",
-  "scope": "rtm:stream",
+  "scope": {},
   "rate_limits": "t1",
   "args": {
     "type": "object",

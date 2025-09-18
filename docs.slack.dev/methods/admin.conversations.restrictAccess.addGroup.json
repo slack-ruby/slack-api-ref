@@ -1,7 +1,11 @@
 {
   "desc": "Add an allowlist of IDP groups for accessing a channel",
   "http_method": "GET",
-  "scope": "admin.conversations:write",
+  "scope": {
+    "user": [
+      "admin.conversations:write"
+    ]
+  },
   "rate_limits": "t2",
   "args": {
     "type": "object",

@@ -1,7 +1,14 @@
 {
   "desc": "Retrieve a user's profile information, including their custom status.",
   "http_method": "GET",
-  "scope": "users.profile:read",
+  "scope": {
+    "bot": [
+      "users.profile:read"
+    ],
+    "user": [
+      "users.profile:read"
+    ]
+  },
   "rate_limits": "t4",
   "args": {
     "type": "object",

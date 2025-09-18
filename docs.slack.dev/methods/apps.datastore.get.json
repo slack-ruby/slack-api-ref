@@ -1,7 +1,11 @@
 {
   "desc": "Get an item from a datastore",
   "http_method": "POST",
-  "scope": "datastore:read",
+  "scope": {
+    "bot": [
+      "datastore:read"
+    ]
+  },
   "json_input_supported": true,
   "rate_limits": "t4",
   "args": {

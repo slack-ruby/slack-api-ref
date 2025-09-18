@@ -1,7 +1,11 @@
 {
   "desc": "Remove one or more default channels from an org-level IDP group (user group).",
   "http_method": "POST",
-  "scope": "admin.usergroups:write",
+  "scope": {
+    "user": [
+      "admin.usergroups:write"
+    ]
+  },
   "json_input_supported": true,
   "rate_limits": "t2",
   "args": {

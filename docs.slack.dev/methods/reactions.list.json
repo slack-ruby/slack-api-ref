@@ -1,7 +1,14 @@
 {
   "desc": "Lists reactions made by a user.",
   "http_method": "GET",
-  "scope": "reactions:read",
+  "scope": {
+    "bot": [
+      "reactions:read"
+    ],
+    "user": [
+      "reactions:read"
+    ]
+  },
   "rate_limits": "t2",
   "slack_connect_workspaces_allowed": true,
   "args": {

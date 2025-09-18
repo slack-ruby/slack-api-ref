@@ -1,7 +1,14 @@
 {
   "desc": "Edit bookmark.",
   "http_method": "POST",
-  "scope": "bookmarks:write",
+  "scope": {
+    "bot": [
+      "bookmarks:write"
+    ],
+    "user": [
+      "bookmarks:write"
+    ]
+  },
   "json_input_supported": true,
   "slack_connect_workspaces_allowed": true,
   "rate_limits": "t2",

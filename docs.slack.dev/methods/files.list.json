@@ -1,7 +1,14 @@
 {
   "desc": "List for a team, in a channel, or from a user with applied filters.",
   "http_method": "GET",
-  "scope": "files:read",
+  "scope": {
+    "bot": [
+      "files:read"
+    ],
+    "user": [
+      "files:read"
+    ]
+  },
   "rate_limits": "t3",
   "args": {
     "type": "object",

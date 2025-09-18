@@ -1,7 +1,22 @@
 {
   "desc": "Leaves a conversation.",
   "http_method": "POST",
-  "scope": "conversations:write",
+  "scope": {
+    "bot": [
+      "groups:write",
+      "im:write",
+      "mpim:write",
+      "channels:write",
+      "channels:manage"
+    ],
+    "user": [
+      "groups:write",
+      "im:write",
+      "mpim:write",
+      "channels:write",
+      "channels:write"
+    ]
+  },
   "json_input_supported": true,
   "rate_limits": "t3",
   "slack_connect_workspaces_allowed": true,

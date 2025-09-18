@@ -1,9 +1,11 @@
 {
   "desc": "Look up an email address to see if someone is discoverable on Slack",
   "http_method": "POST",
-  "scope": "team:read",
-  "scope_by_token_type": {
-    "granular_bot": "conversations.connect:manage"
+  "scope": {
+    "bot": [
+      "conversations.connect:manage",
+      "team:read"
+    ]
   },
   "rate_limits": "t2",
   "json_input_supported": true,

@@ -1,7 +1,11 @@
 {
   "desc": "Set the name of a given workspace.",
   "http_method": "POST",
-  "scope": "admin.teams:write",
+  "scope": {
+    "user": [
+      "admin.teams:write"
+    ]
+  },
   "json_input_supported": true,
   "rate_limits": "t3",
   "args": {

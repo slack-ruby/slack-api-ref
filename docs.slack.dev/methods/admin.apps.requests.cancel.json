@@ -1,7 +1,11 @@
 {
   "desc": "Cancel app request for team",
   "http_method": "POST",
-  "scope": "admin.apps:write",
+  "scope": {
+    "user": [
+      "admin.apps:write"
+    ]
+  },
   "json_input_supported": true,
   "rate_limits": "t2",
   "args": {

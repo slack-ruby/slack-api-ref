@@ -1,7 +1,14 @@
 {
   "desc": "For Enterprise organization workspaces, map local user IDs to global user IDs",
   "http_method": "GET",
-  "scope": "tokens.basic",
+  "scope": {
+    "bot": [
+      "tokens.basic"
+    ],
+    "user": [
+      "tokens.basic"
+    ]
+  },
   "rate_limits": "t2",
   "args": {
     "type": "object",

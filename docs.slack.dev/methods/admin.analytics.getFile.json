@@ -1,7 +1,11 @@
 {
   "desc": "Retrieve analytics data for a given date, presented as a compressed JSON file",
   "http_method": "POST",
-  "scope": "admin.analytics:read",
+  "scope": {
+    "user": [
+      "admin.analytics:read"
+    ]
+  },
   "rate_limits": "t2",
   "args": {
     "type": "object",

@@ -1,7 +1,14 @@
 {
   "desc": "Gets information about a file.",
   "http_method": "GET",
-  "scope": "files:read",
+  "scope": {
+    "bot": [
+      "files:read"
+    ],
+    "user": [
+      "files:read"
+    ]
+  },
   "rate_limits": "t4",
   "args": {
     "type": "object",

@@ -1,7 +1,7 @@
 {
   "desc": "Starts a Real Time Messaging session.",
   "http_method": "GET",
-  "scope": "rtm:stream",
+  "scope": {},
   "rate_limits": "t1",
   "args": {
     "type": "object",

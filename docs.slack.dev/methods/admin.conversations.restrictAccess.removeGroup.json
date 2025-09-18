@@ -1,7 +1,11 @@
 {
   "desc": "Remove a linked IDP group linked from a private channel",
   "http_method": "GET",
-  "scope": "admin.conversations:write",
+  "scope": {
+    "user": [
+      "admin.conversations:write"
+    ]
+  },
   "rate_limits": "t1",
   "args": {
     "type": "object",

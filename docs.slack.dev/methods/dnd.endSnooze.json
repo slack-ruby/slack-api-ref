@@ -1,7 +1,11 @@
 {
   "desc": "Ends the current user's snooze mode immediately.",
   "http_method": "POST",
-  "scope": "dnd:write",
+  "scope": {
+    "user": [
+      "dnd:write"
+    ]
+  },
   "json_input_supported": true,
   "user_scope_only": true,
   "rate_limits": "t2",

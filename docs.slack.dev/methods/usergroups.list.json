@@ -1,7 +1,14 @@
 {
   "desc": "List all User Groups for a team.",
   "http_method": "GET",
-  "scope": "usergroups:read",
+  "scope": {
+    "bot": [
+      "usergroups:read"
+    ],
+    "user": [
+      "usergroups:read"
+    ]
+  },
   "slack_connect_workspaces_allowed": true,
   "rate_limits": "t2",
   "args": {

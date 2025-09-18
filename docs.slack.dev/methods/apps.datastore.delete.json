@@ -1,7 +1,11 @@
 {
   "desc": "Delete an item from a datastore",
   "http_method": "POST",
-  "scope": "datastore:write",
+  "scope": {
+    "bot": [
+      "datastore:write"
+    ]
+  },
   "json_input_supported": true,
   "rate_limits": "t4",
   "args": {

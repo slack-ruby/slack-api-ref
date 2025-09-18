@@ -1,7 +1,11 @@
 {
   "desc": "Upgrade or downgrade Slack Connect channel permissions between 'can post only' and 'can post and invite'.",
   "http_method": "POST",
-  "scope": "conversations.connect:manage",
+  "scope": {
+    "bot": [
+      "conversations.connect:manage"
+    ]
+  },
   "rate_limits": "t2",
   "args": {
     "type": "object",

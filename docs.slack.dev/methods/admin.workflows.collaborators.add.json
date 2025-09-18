@@ -1,7 +1,11 @@
 {
   "desc": "Add collaborators to workflows within the team or enterprise",
   "http_method": "POST",
-  "scope": "admin.workflows:write",
+  "scope": {
+    "user": [
+      "admin.workflows:write"
+    ]
+  },
   "json_input_supported": true,
   "rate_limits": "t2",
   "args": {

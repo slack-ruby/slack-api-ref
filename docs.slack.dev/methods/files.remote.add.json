@@ -1,7 +1,11 @@
 {
   "desc": "Adds a file from a remote service",
   "http_method": "POST",
-  "scope": "remote_files:write",
+  "scope": {
+    "bot": [
+      "remote_files:write"
+    ]
+  },
   "rate_limits": "t2",
   "args": {
     "type": "object",

@@ -1,7 +1,11 @@
 {
   "desc": "list the permissions for using each trigger type",
   "http_method": "POST",
-  "scope": "client",
+  "scope": {
+    "user": [
+      "client"
+    ]
+  },
   "json_input_supported": true,
   "rate_limits": "t2",
   "args": {

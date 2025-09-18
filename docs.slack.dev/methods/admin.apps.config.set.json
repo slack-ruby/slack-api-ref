@@ -1,7 +1,11 @@
 {
   "desc": "Set the app config for a connector",
   "http_method": "POST",
-  "scope": "admin.apps:write",
+  "scope": {
+    "user": [
+      "admin.apps:write"
+    ]
+  },
   "json_input_supported": true,
   "rate_limits": "t3",
   "args": {

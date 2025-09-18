@@ -1,7 +1,11 @@
 {
   "desc": "Disconnect a connected channel from one or more workspaces.",
   "http_method": "POST",
-  "scope": "admin.conversations:write",
+  "scope": {
+    "user": [
+      "admin.conversations:write"
+    ]
+  },
   "json_input_supported": true,
   "rate_limits": "t2",
   "args": {

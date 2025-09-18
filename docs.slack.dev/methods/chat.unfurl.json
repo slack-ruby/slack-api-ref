@@ -1,7 +1,14 @@
 {
   "desc": "Provide custom unfurl behavior for user-posted URLs",
   "http_method": "POST",
-  "scope": "links:write",
+  "scope": {
+    "bot": [
+      "links:write"
+    ],
+    "user": [
+      "links:write"
+    ]
+  },
   "slack_connect_workspaces_allowed": true,
   "json_input_supported": true,
   "rate_limits": "t3",

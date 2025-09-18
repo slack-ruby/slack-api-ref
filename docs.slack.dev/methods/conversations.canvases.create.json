@@ -1,7 +1,14 @@
 {
   "desc": "Create a channel canvas for a channel",
   "http_method": "POST",
-  "scope": "canvases:write",
+  "scope": {
+    "bot": [
+      "canvases:write"
+    ],
+    "user": [
+      "canvases:write"
+    ]
+  },
   "json_input_supported": true,
   "rate_limits": "t2",
   "args": {

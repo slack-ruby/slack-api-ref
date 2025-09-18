@@ -1,7 +1,11 @@
 {
   "desc": "Lists shared channel invites that have been generated or received but have not been approved by all parties",
   "http_method": "POST",
-  "scope": "conversations.connect:manage",
+  "scope": {
+    "bot": [
+      "conversations.connect:manage"
+    ]
+  },
   "json_input_supported": true,
   "slack_connect_workspaces_allowed": true,
   "rate_limits": "t1",

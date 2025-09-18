@@ -1,7 +1,11 @@
 {
   "desc": "Gets information about a reminder.",
   "http_method": "GET",
-  "scope": "reminders:read",
+  "scope": {
+    "user": [
+      "reminders:read"
+    ]
+  },
   "slack_connect_workspaces_allowed": true,
   "user_scope_only": true,
   "rate_limits": "t2",

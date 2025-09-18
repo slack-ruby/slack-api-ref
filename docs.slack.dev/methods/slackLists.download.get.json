@@ -1,7 +1,14 @@
 {
   "desc": "Retrieve List download URL from an export job to download List contents.",
   "http_method": "POST",
-  "scope": "lists:read",
+  "scope": {
+    "bot": [
+      "lists:read"
+    ],
+    "user": [
+      "lists:read"
+    ]
+  },
   "familyName": "lists",
   "rate_limits": "t4",
   "args": {

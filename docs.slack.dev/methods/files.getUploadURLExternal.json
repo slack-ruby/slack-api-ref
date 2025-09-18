@@ -1,7 +1,14 @@
 {
   "desc": "Gets a URL for an edge external file upload",
   "http_method": "POST",
-  "scope": "files:write",
+  "scope": {
+    "bot": [
+      "files:write"
+    ],
+    "user": [
+      "files:write"
+    ]
+  },
   "rate_limits": "t4",
   "args": {
     "type": "object",

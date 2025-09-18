@@ -1,7 +1,11 @@
 {
   "desc": "Disconnect an external organization.",
   "http_method": "POST",
-  "scope": "conversations.connect:manage",
+  "scope": {
+    "bot": [
+      "conversations.connect:manage"
+    ]
+  },
   "rate_limits": "t1",
   "args": {
     "type": "object",

@@ -1,7 +1,14 @@
 {
   "desc": "Updates cells in a List.",
   "http_method": "POST",
-  "scope": "lists:write",
+  "scope": {
+    "bot": [
+      "lists:write"
+    ],
+    "user": [
+      "lists:write"
+    ]
+  },
   "familyName": "lists",
   "rate_limits": "t3",
   "args": {

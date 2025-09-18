@@ -1,7 +1,14 @@
 {
   "desc": "Deletes multiple items from an existing List.",
   "http_method": "POST",
-  "scope": "lists:write",
+  "scope": {
+    "bot": [
+      "lists:write"
+    ],
+    "user": [
+      "lists:write"
+    ]
+  },
   "familyName": "lists",
   "rate_limits": "t2",
   "args": {

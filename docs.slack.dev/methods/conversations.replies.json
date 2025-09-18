@@ -1,7 +1,20 @@
 {
   "desc": "Retrieve a thread of messages posted to a conversation",
   "http_method": "GET",
-  "scope": "conversations:history",
+  "scope": {
+    "bot": [
+      "groups:history",
+      "im:history",
+      "mpim:history",
+      "channels:history"
+    ],
+    "user": [
+      "groups:history",
+      "im:history",
+      "mpim:history",
+      "channels:history"
+    ]
+  },
   "slack_connect_workspaces_allowed": true,
   "rate_limits": "t3",
   "args": {

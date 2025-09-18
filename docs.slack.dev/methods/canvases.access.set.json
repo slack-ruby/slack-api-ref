@@ -1,7 +1,14 @@
 {
   "desc": "Sets the access level to a canvas for specified entities",
   "http_method": "POST",
-  "scope": "canvases:write",
+  "scope": {
+    "bot": [
+      "canvases:write"
+    ],
+    "user": [
+      "canvases:write"
+    ]
+  },
   "slack_connect_workspaces_allowed": true,
   "json_input_supported": true,
   "rate_limits": "t3",

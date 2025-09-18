@@ -1,7 +1,11 @@
 {
   "desc": "Updates an existing remote file.",
   "http_method": "POST",
-  "scope": "remote_files:write",
+  "scope": {
+    "bot": [
+      "remote_files:write"
+    ]
+  },
   "rate_limits": "t2",
   "args": {
     "type": "object",

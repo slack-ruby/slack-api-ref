@@ -1,7 +1,20 @@
 {
   "desc": "Lists all channels in a Slack team.",
   "http_method": "GET",
-  "scope": "conversations:read",
+  "scope": {
+    "bot": [
+      "groups:read",
+      "im:read",
+      "mpim:read",
+      "channels:read"
+    ],
+    "user": [
+      "groups:read",
+      "im:read",
+      "mpim:read",
+      "channels:read"
+    ]
+  },
   "slack_connect_workspaces_allowed": true,
   "rate_limits": "t2",
   "args": {

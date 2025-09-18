@@ -1,7 +1,20 @@
 {
   "desc": "Fetches a conversation's history of messages and events.",
   "http_method": "GET",
-  "scope": "conversations:history",
+  "scope": {
+    "bot": [
+      "groups:history",
+      "im:history",
+      "mpim:history",
+      "channels:history"
+    ],
+    "user": [
+      "groups:history",
+      "im:history",
+      "mpim:history",
+      "channels:history"
+    ]
+  },
   "slack_connect_workspaces_allowed": true,
   "json_input_supported": true,
   "rate_limits": "t3",

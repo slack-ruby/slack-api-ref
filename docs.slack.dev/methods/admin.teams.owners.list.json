@@ -1,7 +1,11 @@
 {
   "desc": "List all of the owners on a given workspace.",
   "http_method": "GET",
-  "scope": "admin.teams:read",
+  "scope": {
+    "user": [
+      "admin.teams:read"
+    ]
+  },
   "rate_limits": "t3",
   "args": {
     "type": "object",

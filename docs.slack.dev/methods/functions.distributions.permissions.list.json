@@ -1,7 +1,11 @@
 {
   "desc": "List the access type of a custom slack function and include the users, team or org ids with access if its permission_type is set to named_entities",
   "http_method": "POST",
-  "scope": "app_configurations:read",
+  "scope": {
+    "configuration": [
+      "app_configurations:read"
+    ]
+  },
   "no_scope_required": false,
   "json_input_supported": true,
   "rate_limits": "t3",

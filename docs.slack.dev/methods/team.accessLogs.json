@@ -1,7 +1,11 @@
 {
   "desc": "Gets the access logs for the current team.",
   "http_method": "GET",
-  "scope": "admin",
+  "scope": {
+    "user": [
+      "admin"
+    ]
+  },
   "slack_connect_workspaces_allowed": true,
   "rate_limits": "t2",
   "args": {

@@ -1,7 +1,11 @@
 {
   "desc": "List approved apps for an org or workspace.",
   "http_method": "GET",
-  "scope": "admin.apps:read",
+  "scope": {
+    "user": [
+      "admin.apps:read"
+    ]
+  },
   "rate_limits": "t2",
   "args": {
     "type": "object",

@@ -1,7 +1,14 @@
 {
   "desc": "Returns information about a Call.",
   "http_method": "POST",
-  "scope": "calls:read",
+  "scope": {
+    "bot": [
+      "calls:read"
+    ],
+    "user": [
+      "calls:read"
+    ]
+  },
   "json_input_supported": true,
   "rate_limits": "t3",
   "args": {

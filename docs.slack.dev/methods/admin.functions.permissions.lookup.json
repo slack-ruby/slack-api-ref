@@ -1,7 +1,11 @@
 {
   "desc": "Lookup the visibility of multiple Slack functions and include the users if it is limited to particular named entities.",
   "http_method": "POST",
-  "scope": "admin.workflows:read",
+  "scope": {
+    "user": [
+      "admin.workflows:read"
+    ]
+  },
   "json_input_supported": true,
   "rate_limits": "t3",
   "args": {

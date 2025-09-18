@@ -1,7 +1,11 @@
 {
   "desc": "Get the identity of a user who has authorized Sign in with Slack.",
   "http_method": "POST",
-  "scope": "openid",
+  "scope": {
+    "user": [
+      "openid"
+    ]
+  },
   "user_scope_only": true,
   "rate_limits": "t3",
   "args": {

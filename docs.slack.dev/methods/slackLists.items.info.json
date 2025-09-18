@@ -1,7 +1,14 @@
 {
   "desc": "Get a row from a List.",
   "http_method": "POST",
-  "scope": "lists:read",
+  "scope": {
+    "bot": [
+      "lists:read"
+    ],
+    "user": [
+      "lists:read"
+    ]
+  },
   "familyName": "lists",
   "rate_limits": "t2",
   "args": {

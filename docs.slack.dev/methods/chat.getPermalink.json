@@ -1,7 +1,7 @@
 {
   "desc": "Retrieve a permalink URL for a specific extant message",
   "http_method": "GET",
-  "scope": "none",
+  "scope": {},
   "no_scope_required": true,
   "rate_limits": "t5",
   "slack_connect_workspaces_allowed": true,

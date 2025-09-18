@@ -1,7 +1,14 @@
 {
   "desc": "Enables a file for public/external sharing.",
   "http_method": "POST",
-  "scope": "files:write",
+  "scope": {
+    "bot": [
+      "files:write"
+    ],
+    "user": [
+      "files:write"
+    ]
+  },
   "json_input_supported": true,
   "rate_limits": "t3",
   "args": {

@@ -1,7 +1,11 @@
 {
   "desc": "Adds members to the specified role with the specified scopes",
   "http_method": "POST",
-  "scope": "admin.roles:write",
+  "scope": {
+    "user": [
+      "admin.roles:write"
+    ]
+  },
   "json_input_supported": true,
   "rate_limits": "t2",
   "args": {

@@ -1,7 +1,11 @@
 {
   "desc": "Link a Salesforce record to a channel",
   "http_method": "POST",
-  "scope": "admin.conversations:manage_objects",
+  "scope": {
+    "user": [
+      "admin.conversations:manage_objects"
+    ]
+  },
   "json_input_supported": true,
   "rate_limits": "t2",
   "args": {

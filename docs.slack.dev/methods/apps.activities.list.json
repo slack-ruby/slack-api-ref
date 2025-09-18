@@ -1,7 +1,11 @@
 {
   "desc": "Get logs for a specified app",
   "http_method": "POST",
-  "scope": "hosting:read",
+  "scope": {
+    "user": [
+      "hosting:read"
+    ]
+  },
   "json_input_supported": false,
   "slack_connect_workspaces_allowed": true,
   "rate_limits": "t3",

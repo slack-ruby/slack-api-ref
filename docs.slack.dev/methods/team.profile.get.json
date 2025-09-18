@@ -1,7 +1,14 @@
 {
   "desc": "Retrieve a team's profile.",
   "http_method": "GET",
-  "scope": "users.profile:read",
+  "scope": {
+    "bot": [
+      "users.profile:read"
+    ],
+    "user": [
+      "users.profile:read"
+    ]
+  },
   "rate_limits": "t3",
   "args": {
     "type": "object",

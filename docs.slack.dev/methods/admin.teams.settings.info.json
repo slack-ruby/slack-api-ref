@@ -1,7 +1,11 @@
 {
   "desc": "Fetch information about settings in a workspace",
   "http_method": "POST",
-  "scope": "admin.teams:read",
+  "scope": {
+    "user": [
+      "admin.teams:read"
+    ]
+  },
   "json_input_supported": true,
   "rate_limits": "t3",
   "args": {

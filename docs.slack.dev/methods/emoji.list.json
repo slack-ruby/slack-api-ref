@@ -1,7 +1,14 @@
 {
   "desc": "Lists custom emoji for a team.",
   "http_method": "GET",
-  "scope": "emoji:read",
+  "scope": {
+    "bot": [
+      "emoji:read"
+    ],
+    "user": [
+      "emoji:read"
+    ]
+  },
   "rate_limits": "t2",
   "args": {
     "type": "object",

@@ -1,7 +1,11 @@
 {
   "desc": "Declines a Slack Connect channel invite.",
   "http_method": "GET",
-  "scope": "conversations.connect:manage",
+  "scope": {
+    "bot": [
+      "conversations.connect:manage"
+    ]
+  },
   "json_input_supported": true,
   "rate_limits": "t3",
   "args": {

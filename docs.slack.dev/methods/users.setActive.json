@@ -1,7 +1,14 @@
 {
   "desc": "Marked a user as active. Deprecated and non-functional.",
   "http_method": "POST",
-  "scope": "users:write",
+  "scope": {
+    "bot": [
+      "users:write"
+    ],
+    "user": [
+      "users:write"
+    ]
+  },
   "json_input_supported": true,
   "rate_limits": "t2",
   "args": {

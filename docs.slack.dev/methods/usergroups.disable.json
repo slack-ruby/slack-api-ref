@@ -1,7 +1,14 @@
 {
   "desc": "Disable an existing User Group.",
   "http_method": "POST",
-  "scope": "usergroups:write",
+  "scope": {
+    "bot": [
+      "usergroups:write"
+    ],
+    "user": [
+      "usergroups:write"
+    ]
+  },
   "json_input_supported": true,
   "rate_limits": "t2",
   "args": {

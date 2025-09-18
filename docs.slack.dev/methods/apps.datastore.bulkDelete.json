@@ -1,7 +1,11 @@
 {
   "desc": "Delete items from a datastore in bulk",
   "http_method": "POST",
-  "scope": "datastore:write",
+  "scope": {
+    "bot": [
+      "datastore:write"
+    ]
+  },
   "json_input_supported": true,
   "rate_limits": "t3",
   "args": {

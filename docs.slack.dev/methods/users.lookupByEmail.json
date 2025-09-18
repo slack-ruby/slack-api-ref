@@ -1,7 +1,14 @@
 {
   "desc": "Find a user with an email address.",
   "http_method": "GET",
-  "scope": "users:read.email",
+  "scope": {
+    "bot": [
+      "users:read.email"
+    ],
+    "user": [
+      "users:read.email"
+    ]
+  },
   "rate_limits": "t3",
   "args": {
     "type": "object",

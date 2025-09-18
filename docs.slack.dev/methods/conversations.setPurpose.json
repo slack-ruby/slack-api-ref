@@ -1,7 +1,7 @@
 {
   "desc": "Sets the channel description.",
   "http_method": "POST",
-  "scope": "conversations:write.topic",
+  "scope": {},
   "json_input_supported": true,
   "slack_connect_workspaces_allowed": true,
   "rate_limits": "t2",

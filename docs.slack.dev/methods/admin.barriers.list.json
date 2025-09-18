@@ -1,7 +1,11 @@
 {
   "desc": "Get all Information Barriers for your organization",
   "http_method": "GET",
-  "scope": "admin.barriers:read",
+  "scope": {
+    "user": [
+      "admin.barriers:read"
+    ]
+  },
   "rate_limits": "t2",
   "args": {
     "type": "object",

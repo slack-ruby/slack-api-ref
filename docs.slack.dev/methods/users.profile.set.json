@@ -1,7 +1,11 @@
 {
   "desc": "Set a user's profile information, including custom status.",
   "http_method": "POST",
-  "scope": "users.profile:write",
+  "scope": {
+    "user": [
+      "users.profile:write"
+    ]
+  },
   "json_input_supported": true,
   "user_scope_only": true,
   "rate_limits": "t3",

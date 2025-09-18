@@ -1,7 +1,14 @@
 {
   "desc": "Deletes a pending scheduled message from the queue.",
   "http_method": "POST",
-  "scope": "chat:write",
+  "scope": {
+    "bot": [
+      "chat:write"
+    ],
+    "user": [
+      "chat:write"
+    ]
+  },
   "slack_connect_workspaces_allowed": true,
   "json_input_supported": true,
   "rate_limits": "t3",

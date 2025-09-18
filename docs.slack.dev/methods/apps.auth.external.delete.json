@@ -1,7 +1,7 @@
 {
   "desc": "Delete external auth tokens only on the Slack side",
   "http_method": "POST",
-  "scope": "none",
+  "scope": {},
   "no_scope_required": true,
   "json_input_supported": true,
   "rate_limits": "t4",

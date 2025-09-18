@@ -1,7 +1,11 @@
 {
   "desc": "Create an Information Barrier",
   "http_method": "POST",
-  "scope": "admin.barriers:write",
+  "scope": {
+    "user": [
+      "admin.barriers:write"
+    ]
+  },
   "rate_limits": "t2",
   "args": {
     "type": "object",

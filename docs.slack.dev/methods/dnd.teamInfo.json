@@ -1,7 +1,14 @@
 {
   "desc": "Retrieves the Do Not Disturb status for up to 50 users on a team.",
   "http_method": "GET",
-  "scope": "dnd:read",
+  "scope": {
+    "bot": [
+      "dnd:read"
+    ],
+    "user": [
+      "dnd:read"
+    ]
+  },
   "slack_connect_workspaces_allowed": true,
   "rate_limits": "t2",
   "args": {

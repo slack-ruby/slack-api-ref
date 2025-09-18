@@ -1,7 +1,7 @@
 {
   "desc": "Exchanges a legacy access token for a new expiring access token and refresh token",
   "http_method": "POST",
-  "scope": "none",
+  "scope": {},
   "rate_limits": "t3",
   "args": {
     "type": "object",

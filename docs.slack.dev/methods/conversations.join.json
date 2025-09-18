@@ -1,9 +1,13 @@
 {
   "desc": "Joins an existing conversation.",
   "http_method": "POST",
-  "scope": "channels:write",
-  "scope_by_token_type": {
-    "granular_bot": "channels:join"
+  "scope": {
+    "user": [
+      "channels:write"
+    ],
+    "bot": [
+      "channels:join"
+    ]
   },
   "json_input_supported": true,
   "slack_connect_workspaces_allowed": true,

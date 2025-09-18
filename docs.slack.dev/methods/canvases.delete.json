@@ -1,7 +1,14 @@
 {
   "desc": "Deletes a canvas",
   "http_method": "POST",
-  "scope": "canvases:write",
+  "scope": {
+    "bot": [
+      "canvases:write"
+    ],
+    "user": [
+      "canvases:write"
+    ]
+  },
   "json_input_supported": true,
   "rate_limits": "t3",
   "args": {

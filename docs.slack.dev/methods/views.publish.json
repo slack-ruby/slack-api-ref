@@ -1,7 +1,7 @@
 {
   "desc": "Publish a static view for a User.",
   "http_method": "POST",
-  "scope": "none",
+  "scope": {},
   "json_input_supported": true,
   "no_scope_required": true,
   "rate_limits": "t4",

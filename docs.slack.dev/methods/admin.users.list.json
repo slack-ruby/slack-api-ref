@@ -1,7 +1,11 @@
 {
   "desc": "List users on a workspace",
   "http_method": "POST",
-  "scope": "admin.users:read",
+  "scope": {
+    "user": [
+      "admin.users:read"
+    ]
+  },
   "json_input_supported": true,
   "rate_limits": "t4",
   "args": {

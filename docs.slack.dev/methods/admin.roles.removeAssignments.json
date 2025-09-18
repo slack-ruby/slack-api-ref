@@ -1,7 +1,11 @@
 {
   "desc": "Removes a set of users from a role for the given scopes and entities",
   "http_method": "POST",
-  "scope": "admin.roles:write",
+  "scope": {
+    "user": [
+      "admin.roles:write"
+    ]
+  },
   "rate_limits": "t2",
   "args": {
     "type": "object",

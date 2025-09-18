@@ -1,7 +1,11 @@
 {
   "desc": "Ask Slackbot to send you an export listing all workspace members using unsupported software, presented as a zipped CSV file.",
   "http_method": "POST",
-  "scope": "admin.users:read",
+  "scope": {
+    "user": [
+      "admin.users:read"
+    ]
+  },
   "rate_limits": "t1",
   "args": {
     "type": "object",

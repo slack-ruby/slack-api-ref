@@ -1,7 +1,11 @@
 {
   "desc": "Remove an emoji across an Enterprise organization",
   "http_method": "GET",
-  "scope": "admin.teams:write",
+  "scope": {
+    "user": [
+      "admin.teams:write"
+    ]
+  },
   "rate_limits": "t2",
   "args": {
     "type": "object",

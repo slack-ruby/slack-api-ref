@@ -1,7 +1,11 @@
 {
   "desc": "Denies a request to invite an external user to a channel",
   "http_method": "POST",
-  "scope": "conversations.connect:manage",
+  "scope": {
+    "bot": [
+      "conversations.connect:manage"
+    ]
+  },
   "rate_limits": "t2",
   "json_input_supported": true,
   "args": {

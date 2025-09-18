@@ -1,7 +1,14 @@
 {
   "desc": "Retrieves a user's current Do Not Disturb status.",
   "http_method": "GET",
-  "scope": "dnd:read",
+  "scope": {
+    "bot": [
+      "dnd:read"
+    ],
+    "user": [
+      "dnd:read"
+    ]
+  },
   "slack_connect_workspaces_allowed": true,
   "rate_limits": "t3",
   "args": {

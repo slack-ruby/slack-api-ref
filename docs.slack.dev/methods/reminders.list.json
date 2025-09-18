@@ -1,7 +1,11 @@
 {
   "desc": "Lists all reminders created by or for a given user.",
   "http_method": "GET",
-  "scope": "reminders:read",
+  "scope": {
+    "user": [
+      "reminders:read"
+    ]
+  },
   "slack_connect_workspaces_allowed": true,
   "user_scope_only": true,
   "rate_limits": "t2",

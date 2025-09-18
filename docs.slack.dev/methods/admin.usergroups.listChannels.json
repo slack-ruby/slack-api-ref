@@ -1,7 +1,11 @@
 {
   "desc": "List the channels linked to an org-level IDP group (user group).",
   "http_method": "POST",
-  "scope": "admin.usergroups:read",
+  "scope": {
+    "user": [
+      "admin.usergroups:read"
+    ]
+  },
   "json_input_supported": true,
   "rate_limits": "t2",
   "args": {

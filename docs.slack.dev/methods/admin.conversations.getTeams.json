@@ -1,7 +1,11 @@
 {
   "desc": "Get all the workspaces a given public or private channel is connected to within this Enterprise org.",
   "http_method": "POST",
-  "scope": "admin.conversations:read",
+  "scope": {
+    "user": [
+      "admin.conversations:read"
+    ]
+  },
   "json_input_supported": true,
   "rate_limits": "t3",
   "args": {

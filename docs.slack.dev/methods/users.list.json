@@ -1,7 +1,14 @@
 {
   "desc": "Lists all users in a Slack team.",
   "http_method": "GET",
-  "scope": "users:read",
+  "scope": {
+    "bot": [
+      "users:read"
+    ],
+    "user": [
+      "users:read"
+    ]
+  },
   "slack_connect_workspaces_allowed": true,
   "rate_limits": "t2",
   "args": {

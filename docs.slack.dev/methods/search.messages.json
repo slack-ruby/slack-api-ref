@@ -1,7 +1,11 @@
 {
   "desc": "Searches for messages matching a query.",
   "http_method": "GET",
-  "scope": "search:read",
+  "scope": {
+    "user": [
+      "search:read"
+    ]
+  },
   "rate_limits": "t2",
   "args": {
     "type": "object",

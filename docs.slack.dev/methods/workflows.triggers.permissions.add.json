@@ -1,7 +1,11 @@
 {
   "desc": "Allows users to run a trigger that has its permission type set to named_entities",
   "http_method": "POST",
-  "scope": "triggers:write",
+  "scope": {
+    "bot": [
+      "triggers:write"
+    ]
+  },
   "no_scope_required": false,
   "json_input_supported": true,
   "rate_limits": "t3",

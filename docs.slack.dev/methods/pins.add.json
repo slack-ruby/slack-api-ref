@@ -1,7 +1,14 @@
 {
   "desc": "Pins an item to a channel.",
   "http_method": "POST",
-  "scope": "pins:write",
+  "scope": {
+    "bot": [
+      "pins:write"
+    ],
+    "user": [
+      "pins:write"
+    ]
+  },
   "json_input_supported": true,
   "slack_connect_workspaces_allowed": true,
   "rate_limits": "t2",

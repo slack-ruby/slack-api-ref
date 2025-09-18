@@ -1,7 +1,11 @@
 {
   "desc": "Delete the user profile photo",
   "http_method": "GET",
-  "scope": "users.profile:write",
+  "scope": {
+    "user": [
+      "users.profile:write"
+    ]
+  },
   "rate_limits": "t2",
   "args": {
     "type": "object",

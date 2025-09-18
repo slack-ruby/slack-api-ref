@@ -1,7 +1,11 @@
 {
   "desc": "Removes a saved item (star) from an item.",
   "http_method": "POST",
-  "scope": "stars:write",
+  "scope": {
+    "user": [
+      "stars:write"
+    ]
+  },
   "json_input_supported": true,
   "rate_limits": "t2",
   "slack_connect_workspaces_allowed": true,

@@ -1,7 +1,14 @@
 {
   "desc": "Retrieve information about a remote file added to Slack",
   "http_method": "GET",
-  "scope": "remote_files:read",
+  "scope": {
+    "bot": [
+      "remote_files:read"
+    ],
+    "user": [
+      "remote_files:read"
+    ]
+  },
   "rate_limits": "t2",
   "args": {
     "type": "object",

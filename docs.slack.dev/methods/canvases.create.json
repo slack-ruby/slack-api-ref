@@ -1,7 +1,14 @@
 {
   "desc": "Create canvas for a user",
   "http_method": "POST",
-  "scope": "canvases:write",
+  "scope": {
+    "bot": [
+      "canvases:write"
+    ],
+    "user": [
+      "canvases:write"
+    ]
+  },
   "json_input_supported": true,
   "rate_limits": "t2",
   "args": {

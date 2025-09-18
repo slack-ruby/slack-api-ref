@@ -1,7 +1,11 @@
 {
   "desc": "Get conversation preferences for a public or private channel.",
   "http_method": "POST",
-  "scope": "admin.conversations:read",
+  "scope": {
+    "user": [
+      "admin.conversations:read"
+    ]
+  },
   "json_input_supported": true,
   "rate_limits": "t2",
   "args": {

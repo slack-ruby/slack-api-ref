@@ -1,7 +1,7 @@
 {
   "desc": "Signal the successful completion of a function",
   "http_method": "POST",
-  "scope": "none",
+  "scope": {},
   "no_scope_required": true,
   "json_input_supported": true,
   "rate_limits": "t3",

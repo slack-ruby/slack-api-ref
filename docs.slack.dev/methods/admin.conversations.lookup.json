@@ -1,7 +1,11 @@
 {
   "desc": "Returns channels on the given team using the filters.",
   "http_method": "POST",
-  "scope": "admin.conversations:read",
+  "scope": {
+    "user": [
+      "admin.conversations:read"
+    ]
+  },
   "rate_limits": "t2",
   "args": {
     "type": "object",

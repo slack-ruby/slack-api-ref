@@ -1,7 +1,11 @@
 {
   "desc": "Add an Enterprise user to a workspace.",
   "http_method": "POST",
-  "scope": "admin.users:write",
+  "scope": {
+    "user": [
+      "admin.users:write"
+    ]
+  },
   "json_input_supported": true,
   "rate_limits": "t2",
   "args": {

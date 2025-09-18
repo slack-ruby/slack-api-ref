@@ -1,7 +1,11 @@
 {
   "desc": "Accepts an invitation to a Slack Connect channel.",
   "http_method": "POST",
-  "scope": "conversations.connect:write",
+  "scope": {
+    "bot": [
+      "conversations.connect:write"
+    ]
+  },
   "json_input_supported": true,
   "rate_limits": "t2",
   "args": {

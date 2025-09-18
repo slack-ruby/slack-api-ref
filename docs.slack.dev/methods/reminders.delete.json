@@ -1,7 +1,11 @@
 {
   "desc": "Deletes a reminder.",
   "http_method": "POST",
-  "scope": "reminders:write",
+  "scope": {
+    "user": [
+      "reminders:write"
+    ]
+  },
   "slack_connect_workspaces_allowed": true,
   "json_input_supported": true,
   "user_scope_only": true,

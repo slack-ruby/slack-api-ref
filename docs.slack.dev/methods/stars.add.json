@@ -1,7 +1,11 @@
 {
   "desc": "Save an item for later. Formerly known as adding a star.",
   "http_method": "POST",
-  "scope": "stars:write",
+  "scope": {
+    "user": [
+      "stars:write"
+    ]
+  },
   "json_input_supported": true,
   "slack_connect_workspaces_allowed": true,
   "rate_limits": "t2",

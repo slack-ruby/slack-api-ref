@@ -1,9 +1,11 @@
 {
   "desc": "Returns a list of all the external teams connected and details about the connection.",
   "http_method": "GET",
-  "scope": "team:read",
-  "scope_by_token_type": {
-    "granular_bot": "conversations.connect:manage"
+  "scope": {
+    "bot": [
+      "conversations.connect:manage",
+      "team:read"
+    ]
   },
   "rate_limits": "t2",
   "args": {
