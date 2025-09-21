@@ -76,7 +76,7 @@ git push origin my-feature-branch -f
 #### Re-generate Docs
 
 ```
-rake api:methods:update
+rake api:update
 ```
 
 #### Be Patient

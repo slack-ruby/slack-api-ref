@@ -12,12 +12,12 @@ namespace :api do
         abort "Invalid file format: #{file}" unless validator.valid?(file)
       end
     end
-  end
 
-  desc 'Update methods and events.'
-  task :update do
-    Rake::Task['api:clean_files'].invoke('methods')
-    Rake::Task['api:clean_files'].invoke('groups')
-    SlackApi::MethodsGenerator.new.generate!
+    desc 'Update methods.'
+    task :update do
+      Rake::Task['api:clean_files'].invoke('methods')
+      Rake::Task['api:clean_files'].invoke('groups')
+      SlackApi::MethodsGenerator.new.generate!
+    end
   end
 end
