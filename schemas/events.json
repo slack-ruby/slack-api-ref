@@ -7,5 +7,5 @@
     "required_scope": {"type": "string"},
     "example": {"type": "object"}
   },
-  "required": ["name", "desc", "long_desc", "required_scope"]
+  "required": ["name", "desc", "required_scope"]
 }
