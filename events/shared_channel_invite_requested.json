@@ -1,0 +1,5 @@
+{
+  "name": "shared_channel_invite_requested",
+  "desc": "A shared channel invited was requested.",
+  "required_scope": "RTM"
+}

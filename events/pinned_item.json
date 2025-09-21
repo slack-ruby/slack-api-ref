@@ -1,0 +1,5 @@
+{
+  "name": "pinned_item",
+  "desc": "An item was pinned in a channel.",
+  "required_scope": "RTM"
+}

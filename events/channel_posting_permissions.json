@@ -1,0 +1,5 @@
+{
+  "name": "channel_posting_permissions",
+  "desc": "The posting permissions for a channel changed.",
+  "required_scope": "RTM"
+}

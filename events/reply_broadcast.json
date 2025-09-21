@@ -1,0 +1,5 @@
+{
+  "name": "reply_broadcast",
+  "desc": "(No longer served) A message thread's reply was broadcast to a channel.",
+  "required_scope": "RTM"
+}

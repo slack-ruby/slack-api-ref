@@ -5,8 +5,7 @@
   "required_scope": "RTM",
   "example": {
     "type": "file_comment_edited",
-    "comment": {
-    },
+    "comment": {},
     "file_id": "F2147483862",
     "file": {
       "id": "F2147483862"

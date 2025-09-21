@@ -1,0 +1,5 @@
+{
+  "name": "unpinned_item",
+  "desc": "An item was unpinned from a channel.",
+  "required_scope": "RTM"
+}

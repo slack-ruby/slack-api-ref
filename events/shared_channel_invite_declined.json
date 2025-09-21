@@ -1,0 +1,5 @@
+{
+  "name": "shared_channel_invite_declined",
+  "desc": "A shared channel invited was declined.",
+  "required_scope": "RTM"
+}

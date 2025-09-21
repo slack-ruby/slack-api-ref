@@ -1,0 +1,5 @@
+{
+  "name": "app_rate_limited",
+  "desc": "Indicates your app's event subscriptions are being rate limited.",
+  "required_scope": "RTM"
+}

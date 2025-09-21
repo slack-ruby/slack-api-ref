@@ -1,0 +1,5 @@
+{
+  "name": "app_installed",
+  "desc": "User has installed an app.",
+  "required_scope": "RTM"
+}

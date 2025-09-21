@@ -1,0 +1,5 @@
+{
+  "name": "message.app_home",
+  "desc": "A user sent a message to your Slack app.",
+  "required_scope": "RTM"
+}

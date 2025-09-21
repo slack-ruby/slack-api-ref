@@ -1,0 +1,5 @@
+{
+  "name": "file_mention",
+  "desc": "A file was mentioned in a channel.",
+  "required_scope": "RTM"
+}

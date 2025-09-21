@@ -1,0 +1,5 @@
+{
+  "name": "channel_id_changed",
+  "desc": "A channel ID changed.",
+  "required_scope": "RTM"
+}

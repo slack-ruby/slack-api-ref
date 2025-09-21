@@ -1,0 +1,5 @@
+{
+  "name": "channel_unshared",
+  "desc": "A channel has been unshared with an external workspace.",
+  "required_scope": "RTM"
+}

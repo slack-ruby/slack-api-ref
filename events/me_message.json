@@ -1,0 +1,5 @@
+{
+  "name": "me_message",
+  "desc": "A /me message was sent.",
+  "required_scope": "RTM"
+}

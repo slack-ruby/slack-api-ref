@@ -1,0 +1,5 @@
+{
+  "name": "thread_broadcast",
+  "desc": "A message thread's reply was broadcast to a channel.",
+  "required_scope": "RTM"
+}

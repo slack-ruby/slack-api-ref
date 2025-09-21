@@ -6,7 +6,6 @@
   "example": {
     "type": "im_created",
     "user": "U024BE7LH",
-    "channel": {
-    }
+    "channel": {}
   }
 }

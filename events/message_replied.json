@@ -1,0 +1,5 @@
+{
+  "name": "message_replied",
+  "desc": "A message thread received a reply.",
+  "required_scope": "RTM"
+}

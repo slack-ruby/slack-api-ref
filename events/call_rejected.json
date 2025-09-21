@@ -1,0 +1,5 @@
+{
+  "name": "call_rejected",
+  "desc": "A call was rejected.",
+  "required_scope": "RTM"
+}

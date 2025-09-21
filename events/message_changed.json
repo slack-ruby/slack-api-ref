@@ -1,0 +1,5 @@
+{
+  "name": "message_changed",
+  "desc": "A message was changed.",
+  "required_scope": "RTM"
+}

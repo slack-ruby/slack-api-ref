@@ -1,0 +1,5 @@
+{
+  "name": "message_metadata_posted",
+  "desc": "Message metadata was posted.",
+  "required_scope": "RTM"
+}

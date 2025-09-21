@@ -1,0 +1,5 @@
+{
+  "name": "message.mpim",
+  "desc": "A message was posted in a multiparty direct message channel.",
+  "required_scope": "RTM"
+}

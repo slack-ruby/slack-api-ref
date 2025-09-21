@@ -1,0 +1,5 @@
+{
+  "name": "app_uninstalled",
+  "desc": "Your Slack app was uninstalled.",
+  "required_scope": "RTM"
+}

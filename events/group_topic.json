@@ -1,0 +1,5 @@
+{
+  "name": "group_topic",
+  "desc": "A group topic was updated.",
+  "required_scope": "RTM"
+}

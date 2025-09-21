@@ -1,6 +1,6 @@
 {
   "name": "shared_channel_invite_received",
-  "desc": "A shared channel invite was sent to a Slack user.",
+  "desc": "A shared channel invited was sent to a Slack user.",
   "long_desc": "This event will fire if you use the conversations.inviteShared API call with the user_ids argument to invite a bot or an app to a Slack Connect channel. This will not fire if you invite a user via email. When an event occurs, we will send an HTTP POST request to your Request URL. The outer payload is uniform across all Events API methods, and contains fields like team_id and event. Learn more",
   "required_scope": "RTM",
   "example": {
@@ -12,8 +12,7 @@
       "inviting_team": {
         "id": "T12345678",
         "name": "Corgis",
-        "icon": {
-        },
+        "icon": {},
         "is_verified": false,
         "domain": "corgis",
         "date_created": 1480946400

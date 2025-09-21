@@ -1,0 +1,5 @@
+{
+  "name": "message.groups",
+  "desc": "A message was posted to a private channel.",
+  "required_scope": "RTM"
+}

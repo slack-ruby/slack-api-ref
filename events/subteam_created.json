@@ -21,12 +21,8 @@
       "updated_by": "U060RNRCZ",
       "deleted_by": null,
       "prefs": {
-        "channels": [
-
-        ],
-        "groups": [
-
-        ]
+        "channels": [],
+        "groups": []
       },
       "user_count": "0"
     }

@@ -5,7 +5,6 @@
   "required_scope": "RTM",
   "example": {
     "type": "channel_joined",
-    "channel": {
-    }
+    "channel": {}
   }
 }

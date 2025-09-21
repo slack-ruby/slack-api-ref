@@ -1,0 +1,5 @@
+{
+  "name": "grid_migration_finished",
+  "desc": "An enterprise org migration has finished on this workspace.",
+  "required_scope": "RTM"
+}

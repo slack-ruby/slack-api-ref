@@ -1,0 +1,5 @@
+{
+  "name": "message_deleted",
+  "desc": "A message was deleted.",
+  "required_scope": "RTM"
+}

@@ -1,0 +1,5 @@
+{
+  "name": "assistant_app_thread",
+  "desc": "The message sent is an app assistant thread..",
+  "required_scope": "RTM"
+}

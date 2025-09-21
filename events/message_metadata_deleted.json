@@ -1,0 +1,5 @@
+{
+  "name": "message_metadata_deleted",
+  "desc": "Message metadata was deleted.",
+  "required_scope": "RTM"
+}

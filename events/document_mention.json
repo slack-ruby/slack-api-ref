@@ -1,0 +1,5 @@
+{
+  "name": "document_mention",
+  "desc": "A bot is mentioned in the body of a canvas.",
+  "required_scope": "RTM"
+}

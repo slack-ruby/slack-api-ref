@@ -1,0 +1,5 @@
+{
+  "name": "workflow_deleted",
+  "desc": "A workflow that contains a step supported by your app was deleted.",
+  "required_scope": "RTM"
+}

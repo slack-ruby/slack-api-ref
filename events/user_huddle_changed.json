@@ -23,13 +23,10 @@
         "real_name_normalized": "Some User",
         "display_name": "",
         "display_name_normalized": "",
-        "fields": {
-        },
+        "fields": {},
         "status_text": "riding a train",
         "status_emoji": ":mountain_railway:",
-        "status_emoji_display_info": [
-
-        ],
+        "status_emoji_display_info": [],
         "status_expiration": 0,
         "avatar_hash": "g12345678910",
         "huddle_state": "in_a_huddle",

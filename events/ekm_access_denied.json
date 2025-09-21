@@ -1,0 +1,5 @@
+{
+  "name": "ekm_access_denied",
+  "desc": "Message content redacted due to Enterprise Key Management (EKM).",
+  "required_scope": "RTM"
+}

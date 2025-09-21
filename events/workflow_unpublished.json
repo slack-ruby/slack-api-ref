@@ -1,0 +1,5 @@
+{
+  "name": "workflow_unpublished",
+  "desc": "A workflow that contains a step supported by your app was unpublished.",
+  "required_scope": "RTM"
+}

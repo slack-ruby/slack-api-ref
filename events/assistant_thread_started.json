@@ -1,0 +1,5 @@
+{
+  "name": "assistant_thread_started",
+  "desc": "An AI assistant thread was started.",
+  "required_scope": "RTM"
+}

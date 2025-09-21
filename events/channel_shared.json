@@ -1,0 +1,5 @@
+{
+  "name": "channel_shared",
+  "desc": "A channel has been shared with an external workspace.",
+  "required_scope": "RTM"
+}

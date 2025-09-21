@@ -1,0 +1,5 @@
+{
+  "name": "group_leave",
+  "desc": "A member left a group.",
+  "required_scope": "RTM"
+}

@@ -1,0 +1,5 @@
+{
+  "name": "assistant_thread_context_changed",
+  "desc": "The context changed while an AI assistant thread was visible.",
+  "required_scope": "RTM"
+}

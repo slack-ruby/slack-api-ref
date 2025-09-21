@@ -1,0 +1,5 @@
+{
+  "name": "app_deleted",
+  "desc": "User has deleted an app.",
+  "required_scope": "RTM"
+}
