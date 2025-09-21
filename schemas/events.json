@@ -4,8 +4,9 @@
     "name": {"type": "string"},
     "desc": {"type": "string"},
     "long_desc": {"type": "string"},
-    "required_scope": {"type": "string"},
+    "scopes": {"type": "array", "items": { "type": "string" }},
+    "APIs": {"type": "array", "items": { "type": "string" }},
     "example": {"type": "object"}
   },
-  "required": ["name", "desc", "required_scope"]
+  "required": ["name", "desc", "APIs"]
 }
