@@ -10,14 +10,14 @@
       "desc": "The id of the app whose tokens you want to delete.",
       "type": "string"
     },
-    "external_token_id": {
-      "required": false,
-      "desc": "The id of the token that you want to delete.",
-      "type": "string"
-    },
     "provider_key": {
       "required": false,
       "desc": "The provider key of the provider whose tokens you want to delete.",
+      "type": "string"
+    },
+    "external_token_id": {
+      "required": false,
+      "desc": "The id of the token that you want to delete.",
       "type": "string"
     }
   },

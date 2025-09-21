@@ -4,16 +4,16 @@
   "deprecated": false,
   "desc": "Retrieve List download URL from an export job to download List contents.",
   "args": {
-    "job_id": {
-      "required": true,
-      "example": "Le48SKT566",
-      "desc": "The ID of the recently started job to export the List.",
-      "type": "string"
-    },
     "list_id": {
       "required": true,
       "example": "F1234567",
       "desc": "ID of the List to export.",
+      "type": "string"
+    },
+    "job_id": {
+      "required": true,
+      "example": "Le48SKT566",
+      "desc": "The ID of the recently started job to export the List.",
       "type": "string"
     }
   },

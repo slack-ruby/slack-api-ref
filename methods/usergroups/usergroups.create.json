@@ -4,26 +4,20 @@
   "deprecated": false,
   "desc": "Create a User Group.",
   "args": {
-    "additional_channels": {
-      "required": false,
-      "desc": "A comma separated string of encoded channel IDs for which the User Group can custom add usergroup members too.",
-      "type": "array"
-    },
     "channels": {
       "required": false,
       "desc": "A comma separated string of encoded channel IDs for which the User Group uses as a default.",
+      "type": "array"
+    },
+    "additional_channels": {
+      "required": false,
+      "desc": "A comma separated string of encoded channel IDs for which the User Group can custom add usergroup members too.",
       "type": "array"
     },
     "description": {
       "required": false,
       "desc": "A short description of the User Group.",
       "type": "string"
-    },
-    "enable_section": {
-      "required": false,
-      "example": "true",
-      "desc": "Configure this user group to show as a sidebar section for all group members. Note: Only relevant if group has 1 or more default channels added.",
-      "type": "boolean"
     },
     "handle": {
       "required": false,
@@ -46,6 +40,12 @@
       "required": false,
       "desc": "Encoded team id where the user group has to be created, required if org token is used.",
       "type": "string"
+    },
+    "enable_section": {
+      "required": false,
+      "example": "true",
+      "desc": "Configure this user group to show as a sidebar section for all group members. Note: Only relevant if group has 1 or more default channels added.",
+      "type": "boolean"
     }
   },
   "response": {

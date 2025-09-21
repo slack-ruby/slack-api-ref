@@ -8,14 +8,14 @@
       "required": true,
       "desc": "Channel ID containing the assistant thread."
     },
-    "status": {
-      "required": true,
-      "desc": "Status of the specified bot user, e.g. 'is thinking...'.",
-      "type": "string"
-    },
     "thread_ts": {
       "required": true,
       "desc": "Message timestamp of the thread of where to set the status.",
+      "type": "string"
+    },
+    "status": {
+      "required": true,
+      "desc": "Status of the specified bot user, e.g. 'is thinking...'.",
       "type": "string"
     }
   },

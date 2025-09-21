@@ -4,15 +4,15 @@
   "deprecated": false,
   "desc": "Update an app from an app manifest",
   "args": {
-    "app_id": {
-      "required": true,
-      "desc": "The ID of the app whose configuration you want to update."
-    },
     "manifest": {
       "required": true,
       "desc": "A JSON app manifest encoded as a string. This manifest must use a valid app manifest schema - read our guide to creating one. As this method entirely _replaces_ any previous configuration, manifest must contain both unmodified and modified fields.",
       "type": "string",
       "format": "json"
+    },
+    "app_id": {
+      "required": true,
+      "desc": "The ID of the app whose configuration you want to update."
     }
   },
   "response": {

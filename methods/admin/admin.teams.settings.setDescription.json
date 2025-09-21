@@ -4,14 +4,14 @@
   "deprecated": false,
   "desc": "Set the description of a given workspace.",
   "args": {
+    "team_id": {
+      "required": true,
+      "desc": "ID for the workspace to set the description for."
+    },
     "description": {
       "required": true,
       "desc": "The new description for the workspace.",
       "type": "string"
-    },
-    "team_id": {
-      "required": true,
-      "desc": "ID for the workspace to set the description for."
     }
   },
   "response": {

@@ -4,9 +4,9 @@
   "deprecated": false,
   "desc": "List the steps of a specific function of a workflow's versions",
   "args": {
-    "function_id": {
-      "required": true,
-      "desc": "The ID of the function to query.",
+    "workflow_id": {
+      "required": false,
+      "desc": "The workflow ID, starts with Wf*.",
       "type": "string"
     },
     "workflow": {
@@ -20,9 +20,9 @@
       "desc": "The app tied to the workflow reference.",
       "type": "string"
     },
-    "workflow_id": {
-      "required": false,
-      "desc": "The workflow ID, starts with Wf*.",
+    "function_id": {
+      "required": true,
+      "desc": "The ID of the function to query.",
       "type": "string"
     }
   },

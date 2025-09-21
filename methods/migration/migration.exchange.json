@@ -4,6 +4,11 @@
   "deprecated": false,
   "desc": "For Enterprise organization workspaces, map local user IDs to global user IDs",
   "args": {
+    "users": {
+      "required": true,
+      "desc": "A comma-separated list of user ids, up to 400 per request.",
+      "type": "array"
+    },
     "team_id": {
       "required": false,
       "desc": "Specify team_id starts with T in case of Org Token.",
@@ -13,11 +18,6 @@
       "required": false,
       "desc": "Specify true to convert W global user IDs to workspace-specific U IDs. Defaults to false.",
       "type": "boolean"
-    },
-    "users": {
-      "required": true,
-      "desc": "A comma-separated list of user ids, up to 400 per request.",
-      "type": "array"
     }
   },
   "response": {

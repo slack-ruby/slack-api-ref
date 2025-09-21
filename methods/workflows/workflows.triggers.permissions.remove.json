@@ -4,24 +4,6 @@
   "deprecated": false,
   "desc": "Revoke an entity's access to a trigger that has its permission type set to named_entities",
   "args": {
-    "channel_ids": {
-      "required": false,
-      "example": "C0000000001,C0000000002",
-      "desc": "List of encoded channel IDs.",
-      "type": "array"
-    },
-    "org_ids": {
-      "required": false,
-      "example": "E00000001,E00000002",
-      "desc": "List of encoded organization IDs.",
-      "type": "array"
-    },
-    "team_ids": {
-      "required": false,
-      "example": "T0000000001,T0000000002",
-      "desc": "List of encoded workspace IDs.",
-      "type": "array"
-    },
     "trigger_id": {
       "required": true,
       "example": "Ft0000000001",
@@ -32,6 +14,24 @@
       "required": false,
       "example": "U0000000001,U0000000002",
       "desc": "List of encoded user IDs.",
+      "type": "array"
+    },
+    "channel_ids": {
+      "required": false,
+      "example": "C0000000001,C0000000002",
+      "desc": "List of encoded channel IDs.",
+      "type": "array"
+    },
+    "team_ids": {
+      "required": false,
+      "example": "T0000000001,T0000000002",
+      "desc": "List of encoded workspace IDs.",
+      "type": "array"
+    },
+    "org_ids": {
+      "required": false,
+      "example": "E00000001,E00000002",
+      "desc": "List of encoded organization IDs.",
       "type": "array"
     }
   },

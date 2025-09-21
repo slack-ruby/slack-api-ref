@@ -4,15 +4,15 @@
   "deprecated": false,
   "desc": "Signal that a function failed to complete",
   "args": {
-    "error": {
-      "required": true,
-      "desc": "A human-readable error message that contains information about why the function failed to complete.",
-      "type": "string"
-    },
     "function_execution_id": {
       "required": true,
       "example": "Fx12345ABCDE",
       "desc": "Context identifier that maps to the executed function.",
+      "type": "string"
+    },
+    "error": {
+      "required": true,
+      "desc": "A human-readable error message that contains information about why the function failed to complete.",
       "type": "string"
     }
   },

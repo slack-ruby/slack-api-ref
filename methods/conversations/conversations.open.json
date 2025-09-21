@@ -9,11 +9,6 @@
       "desc": "Resume a conversation by supplying an im or mpim's ID. Or provide the users field instead.",
       "type": "channel"
     },
-    "prevent_creation": {
-      "required": false,
-      "desc": "Do not create a direct message or multi-person direct message. This is used to see if there is an existing dm or mpdm.",
-      "type": "boolean"
-    },
     "return_im": {
       "required": false,
       "desc": "Boolean, indicates you want the full IM channel definition in the response.",
@@ -23,6 +18,11 @@
       "required": false,
       "desc": "Comma separated lists of users. If only one user is included, this creates a 1:1 DM.  The ordering of the users is preserved whenever a multi-person direct message is returned. Supply a channel when not supplying users.",
       "type": "string"
+    },
+    "prevent_creation": {
+      "required": false,
+      "desc": "Do not create a direct message or multi-person direct message. This is used to see if there is an existing dm or mpdm.",
+      "type": "boolean"
     }
   },
   "response": {

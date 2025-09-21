@@ -4,11 +4,11 @@
   "deprecated": false,
   "desc": "Associate one or more default workspaces with an organization-wide IDP group.",
   "args": {
-    "auto_provision": {
-      "required": false,
-      "example": "true",
-      "desc": "When true, this method automatically creates new workspace accounts for the IDP group members.",
-      "type": "boolean"
+    "usergroup_id": {
+      "required": true,
+      "example": "S12345678",
+      "desc": "An encoded usergroup (IDP Group) ID.",
+      "type": "string"
     },
     "team_ids": {
       "required": true,
@@ -16,11 +16,11 @@
       "desc": "A comma separated list of encoded team (workspace) IDs. Each workspace MUST belong to the organization associated with the token.",
       "type": "array"
     },
-    "usergroup_id": {
-      "required": true,
-      "example": "S12345678",
-      "desc": "An encoded usergroup (IDP Group) ID.",
-      "type": "string"
+    "auto_provision": {
+      "required": false,
+      "example": "true",
+      "desc": "When true, this method automatically creates new workspace accounts for the IDP group members.",
+      "type": "boolean"
     }
   },
   "response": {

@@ -9,16 +9,10 @@
       "example": "A12345",
       "desc": "The ID of the app to get activities from."
     },
-    "component_id": {
+    "team_id": {
       "required": false,
-      "example": "Wf013SMGL4V9",
-      "desc": "The component ID of log events to be returned. Will be FnXXXXXX for functions, and WfXXXXXX for workflows.",
-      "type": "string"
-    },
-    "component_type": {
-      "required": false,
-      "example": "workflows",
-      "desc": "The component type of log events to be returned. Acceptable values are events_api, workflows, functions and tables.",
+      "example": "T12345",
+      "desc": "The team who owns this log.",
       "type": "string"
     },
     "cursor": {
@@ -33,35 +27,17 @@
       "desc": "The maximum number of items to return.",
       "type": "integer"
     },
-    "log_event_type": {
-      "required": false,
-      "example": "test_log_event",
-      "desc": "The event type of log events to be returned.",
-      "type": "string"
-    },
-    "max_date_created": {
-      "required": false,
-      "example": "1646665572336299",
-      "desc": "The latest timestamp of the log to retrieve (epoch microseconds).",
-      "type": "integer"
-    },
-    "min_date_created": {
-      "required": false,
-      "example": "1646665572336251",
-      "desc": "The earliest timestamp of the log to retrieve (epoch microseconds).",
-      "type": "integer"
-    },
     "min_log_level": {
       "required": false,
       "example": "info",
       "desc": "The minimum log level of the log events to be returned. Defaults to info. Acceptable values (in order of relative importance from smallest to largest) are trace, debug, info, warn, error and fatal.",
       "type": "string"
     },
-    "sort_direction": {
+    "log_event_type": {
       "required": false,
-      "example": "asc",
-      "desc": "The direction you want the data sorted by (always by timestamp).",
-      "type": "enum"
+      "example": "test_log_event",
+      "desc": "The event type of log events to be returned.",
+      "type": "string"
     },
     "source": {
       "required": false,
@@ -69,10 +45,16 @@
       "desc": "The source of log events to be returned. Acceptable values are slack and developer.",
       "type": "string"
     },
-    "team_id": {
+    "component_type": {
       "required": false,
-      "example": "T12345",
-      "desc": "The team who owns this log.",
+      "example": "workflows",
+      "desc": "The component type of log events to be returned. Acceptable values are events_api, workflows, functions and tables.",
+      "type": "string"
+    },
+    "component_id": {
+      "required": false,
+      "example": "Wf013SMGL4V9",
+      "desc": "The component ID of log events to be returned. Will be FnXXXXXX for functions, and WfXXXXXX for workflows.",
       "type": "string"
     },
     "trace_id": {
@@ -80,6 +62,24 @@
       "example": "Tr432f2",
       "desc": "The trace ID of log events to be returned.",
       "type": "string"
+    },
+    "min_date_created": {
+      "required": false,
+      "example": "1646665572336251",
+      "desc": "The earliest timestamp of the log to retrieve (epoch microseconds).",
+      "type": "integer"
+    },
+    "max_date_created": {
+      "required": false,
+      "example": "1646665572336299",
+      "desc": "The latest timestamp of the log to retrieve (epoch microseconds).",
+      "type": "integer"
+    },
+    "sort_direction": {
+      "required": false,
+      "example": "asc",
+      "desc": "The direction you want the data sorted by (always by timestamp).",
+      "type": "enum"
     }
   },
   "response": {

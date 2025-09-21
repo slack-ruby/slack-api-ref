@@ -9,16 +9,16 @@
       "desc": "The function ID to set permissions for.",
       "type": "string"
     },
+    "visibility": {
+      "required": true,
+      "desc": "The function visibility.",
+      "type": "enum"
+    },
     "user_ids": {
       "required": false,
       "example": "['U00000001', 'U00000002', 'U00000003']",
       "desc": "List of user IDs to allow for named_entities visibility.",
       "type": "array"
-    },
-    "visibility": {
-      "required": true,
-      "desc": "The function visibility.",
-      "type": "enum"
     }
   },
   "response": {

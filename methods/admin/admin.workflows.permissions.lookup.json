@@ -4,16 +4,16 @@
   "deprecated": false,
   "desc": "Look up the permissions for a set of workflows",
   "args": {
+    "workflow_ids": {
+      "required": true,
+      "desc": "An array of workflow IDs to look up permissions for.",
+      "type": "array"
+    },
     "max_workflow_triggers": {
       "required": false,
       "example": 100,
       "desc": "Maximum number of triggers to fetch for each workflow when determining overall run permissions; max 1000.",
       "type": "integer"
-    },
-    "workflow_ids": {
-      "required": true,
-      "desc": "An array of workflow IDs to look up permissions for.",
-      "type": "array"
     }
   },
   "response": {

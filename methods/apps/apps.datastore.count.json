@@ -4,10 +4,6 @@
   "deprecated": false,
   "desc": "Count the number of items in a datastore that match a query",
   "args": {
-    "app_id": {
-      "required": false,
-      "desc": "Required if calling with user token."
-    },
     "datastore": {
       "required": true,
       "desc": "Name of the datastore.",
@@ -30,6 +26,10 @@
       "example": "{ \":artist_name\": \"Fred Rogers\" }",
       "desc": "A map of values referenced in expression.",
       "type": "object"
+    },
+    "app_id": {
+      "required": false,
+      "desc": "Required if calling with user token."
     }
   },
   "response": {

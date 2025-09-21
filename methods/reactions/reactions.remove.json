@@ -4,10 +4,11 @@
   "deprecated": false,
   "desc": "Removes a reaction from an item.",
   "args": {
-    "channel": {
-      "required": false,
-      "desc": "Channel where the message to remove reaction from was posted.",
-      "type": "channel"
+    "name": {
+      "required": true,
+      "example": "thumbsup",
+      "desc": "Reaction (emoji) name.",
+      "type": "string"
     },
     "file": {
       "required": false,
@@ -19,11 +20,10 @@
       "desc": "File comment to remove reaction from.",
       "type": "string"
     },
-    "name": {
-      "required": true,
-      "example": "thumbsup",
-      "desc": "Reaction (emoji) name.",
-      "type": "string"
+    "channel": {
+      "required": false,
+      "desc": "Channel where the message to remove reaction from was posted.",
+      "type": "channel"
     },
     "timestamp": {
       "required": false,

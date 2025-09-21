@@ -4,14 +4,14 @@
   "deprecated": false,
   "desc": "Remove bookmark from the channel.",
   "args": {
-    "bookmark_id": {
-      "required": true,
-      "desc": "Bookmark to remove.",
-      "type": "string"
-    },
     "channel_id": {
       "required": true,
       "desc": "Channel to remove bookmark.",
+      "type": "string"
+    },
+    "bookmark_id": {
+      "required": true,
+      "desc": "Bookmark to remove.",
       "type": "string"
     },
     "quip_section_id": {

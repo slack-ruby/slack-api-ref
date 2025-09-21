@@ -4,17 +4,17 @@
   "deprecated": false,
   "desc": "Add an allowlist of IDP groups for accessing a channel",
   "args": {
-    "channel_id": {
-      "required": true,
-      "desc": "The channel to link this group to."
+    "team_id": {
+      "required": false,
+      "desc": "The workspace where the channel exists. This argument is required for channels only tied to one workspace, and optional for channels that are shared across an organization."
     },
     "group_id": {
       "required": true,
       "desc": "The IDP Group ID to be an allowlist for the private channel."
     },
-    "team_id": {
-      "required": false,
-      "desc": "The workspace where the channel exists. This argument is required for channels only tied to one workspace, and optional for channels that are shared across an organization."
+    "channel_id": {
+      "required": true,
+      "desc": "The channel to link this group to."
     }
   },
   "response": {

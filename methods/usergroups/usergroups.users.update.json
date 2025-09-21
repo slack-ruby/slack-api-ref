@@ -4,20 +4,10 @@
   "deprecated": false,
   "desc": "Update the list of users for a user group.",
   "args": {
-    "additional_channels": {
-      "required": false,
-      "desc": "A comma separated string of encoded channel IDs for which the User Group can custom add usergroup members too.",
-      "type": "array"
-    },
     "include_count": {
       "required": false,
       "example": "true",
       "desc": "Include the number of users in the user group.",
-      "type": "boolean"
-    },
-    "is_shared": {
-      "required": false,
-      "desc": "Boolean to identify if the API is getting called when a shared section is getting shared.",
       "type": "boolean"
     },
     "team_id": {
@@ -36,6 +26,16 @@
       "example": "U060R4BJ4,U060RNRCZ",
       "desc": "A comma separated string of encoded user IDs that represent the entire list of users for the user group.",
       "type": "array"
+    },
+    "additional_channels": {
+      "required": false,
+      "desc": "A comma separated string of encoded channel IDs for which the User Group can custom add usergroup members too.",
+      "type": "array"
+    },
+    "is_shared": {
+      "required": false,
+      "desc": "Boolean to identify if the API is getting called when a shared section is getting shared.",
+      "type": "boolean"
     }
   },
   "response": {

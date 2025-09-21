@@ -4,15 +4,17 @@
   "deprecated": false,
   "desc": "Accepts an invitation to a Slack Connect channel.",
   "args": {
-    "channel_id": {
-      "required": false,
-      "desc": "ID of the channel that you'd like to accept. Must provide either invite_id or channel_id."
-    },
     "channel_name": {
       "required": true,
       "example": "puppies-r-us",
       "desc": "Name of the channel. If the channel does not exist already in your workspace, this name is the one that the channel will take.",
       "type": "string"
+    },
+    "is_private": {
+      "required": false,
+      "example": "true",
+      "desc": "Whether the channel should be private.",
+      "type": "boolean"
     },
     "free_trial_accepted": {
       "required": false,
@@ -23,11 +25,9 @@
       "required": false,
       "desc": "ID of the invite that you'd like to accept. Must provide either invite_id or channel_id. See the shared_channel_invite_received event payload for more details on how to retrieve the ID of the invitation."
     },
-    "is_private": {
+    "channel_id": {
       "required": false,
-      "example": "true",
-      "desc": "Whether the channel should be private.",
-      "type": "boolean"
+      "desc": "ID of the channel that you'd like to accept. Must provide either invite_id or channel_id."
     },
     "team_id": {
       "required": false,

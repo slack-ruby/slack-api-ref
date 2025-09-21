@@ -8,14 +8,14 @@
       "required": true,
       "desc": "Channel ID containing the assistant thread."
     },
-    "prompts": {
-      "required": true,
-      "desc": "Each prompt should be supplied with its title and message attribute."
-    },
     "thread_ts": {
       "required": true,
       "desc": "Message timestamp of the thread to set suggested prompts for.",
       "type": "string"
+    },
+    "prompts": {
+      "required": true,
+      "desc": "Each prompt should be supplied with its title and message attribute."
     },
     "title": {
       "required": false,

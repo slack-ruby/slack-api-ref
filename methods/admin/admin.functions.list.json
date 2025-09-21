@@ -4,6 +4,11 @@
   "deprecated": false,
   "desc": "Look up functions by a set of apps",
   "args": {
+    "team_id": {
+      "required": false,
+      "example": "T00000001",
+      "desc": "The team context to retrieve functions from."
+    },
     "app_ids": {
       "required": true,
       "example": "A02,A1234",
@@ -21,11 +26,6 @@
       "example": "20",
       "desc": "The number of results that will be returned by the API on each invocation. Must be between 1 and 1000, both inclusive.",
       "type": "integer"
-    },
-    "team_id": {
-      "required": false,
-      "example": "T00000001",
-      "desc": "The team context to retrieve functions from."
     }
   },
   "response": {

@@ -4,16 +4,16 @@
   "deprecated": false,
   "desc": "Open a view for a user.",
   "args": {
-    "interactivity_pointer": {
-      "required": false,
-      "example": "12345.98765.abcd2358fdea",
-      "desc": "Exchange an interactivity pointer to post to the user.",
-      "type": "string"
-    },
     "trigger_id": {
       "required": false,
       "example": "12345.98765.abcd2358fdea",
       "desc": "Exchange a trigger to post to the user.",
+      "type": "string"
+    },
+    "interactivity_pointer": {
+      "required": false,
+      "example": "12345.98765.abcd2358fdea",
+      "desc": "Exchange an interactivity pointer to post to the user.",
       "type": "string"
     },
     "view": {
@@ -34,5 +34,15 @@
     "expired_trigger_id": "The trigger_id is expired.",
     "invalid_trigger_id": "The trigger_id is invalid. The expected format for the trigger_id argument is \"132456.7890123.abcdef\".",
     "view_too_large": "Error returned if the provided view is greater than 250kb."
-  }
+  },
+  "arg_groups": [
+    {
+      "args": [
+        "trigger_id",
+        "interactivity_pointer"
+      ],
+      "desc": "One of these arguments is required to open a view for a user.",
+      "mutually_exclusive": true
+    }
+  ]
 }

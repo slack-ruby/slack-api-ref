@@ -4,14 +4,14 @@
   "deprecated": false,
   "desc": "API to allow Enterprise org admins to write/overwrite the allow list of IP blocks and ASNs from the enterprise configuration.",
   "args": {
-    "trusted_asns": {
-      "required": false,
-      "desc": "allow list of Autonomous System Numbers (ASN) in the Enterprise organization configuration.",
-      "type": "array"
-    },
     "trusted_cidr": {
       "required": false,
       "desc": "allow list of IPv4 addresses using cidr notation in the Enterprise organization configuration.",
+      "type": "array"
+    },
+    "trusted_asns": {
+      "required": false,
+      "desc": "allow list of Autonomous System Numbers (ASN) in the Enterprise organization configuration.",
       "type": "array"
     }
   },

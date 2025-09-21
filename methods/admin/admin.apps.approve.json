@@ -10,11 +10,6 @@
       "desc": "The id of the app to approve.",
       "type": "string"
     },
-    "enterprise_id": {
-      "required": false,
-      "example": "E12345",
-      "desc": "The ID of the enterprise to approve the app on."
-    },
     "request_id": {
       "required": false,
       "example": "Ar12345",
@@ -25,6 +20,11 @@
       "required": false,
       "example": "T12345",
       "desc": "The ID of the workspace to approve the app on."
+    },
+    "enterprise_id": {
+      "required": false,
+      "example": "E12345",
+      "desc": "The ID of the enterprise to approve the app on."
     }
   },
   "response": {

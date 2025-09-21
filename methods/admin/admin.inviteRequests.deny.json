@@ -4,15 +4,15 @@
   "deprecated": false,
   "desc": "Deny a workspace invite request.",
   "args": {
+    "team_id": {
+      "required": false,
+      "desc": "ID for the workspace where the invite request was made.",
+      "type": "string"
+    },
     "invite_request_id": {
       "required": true,
       "example": "Ir1234",
       "desc": "ID of the request to invite.",
-      "type": "string"
-    },
-    "team_id": {
-      "required": false,
-      "desc": "ID for the workspace where the invite request was made.",
       "type": "string"
     }
   },

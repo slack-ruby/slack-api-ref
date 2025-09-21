@@ -4,17 +4,17 @@
   "deprecated": false,
   "desc": "Updates cells in a List.",
   "args": {
-    "cells": {
-      "required": true,
-      "example": "[{\"row_id\":\"Rec014K005UQJ\",\"column_id\":\"Col014K005UQJ\",\"user\":[\"U01284PCR98\", \"U0137181B5H\"]}]",
-      "desc": "Cells to update.",
-      "type": "array"
-    },
     "list_id": {
       "required": true,
       "example": "F03PSRPN4CE",
       "desc": "ID of the List to add or update cells.",
       "type": "string"
+    },
+    "cells": {
+      "required": true,
+      "example": "[{\"row_id\":\"Rec014K005UQJ\",\"column_id\":\"Col014K005UQJ\",\"user\":[\"U01284PCR98\", \"U0137181B5H\"]}]",
+      "desc": "Cells to update.",
+      "type": "array"
     }
   },
   "response": {

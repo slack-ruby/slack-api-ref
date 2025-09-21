@@ -4,18 +4,6 @@
   "deprecated": false,
   "desc": "List active user sessions for an organization",
   "args": {
-    "cursor": {
-      "required": false,
-      "example": "5c3e53d5",
-      "desc": "Set cursor to next_cursor returned by the previous call to list items in the next page.",
-      "type": "string"
-    },
-    "limit": {
-      "required": false,
-      "example": "100",
-      "desc": "The maximum number of items to return. Must be between 1 - 1000 both inclusive.",
-      "type": "integer"
-    },
     "team_id": {
       "required": false,
       "example": "T1234",
@@ -26,6 +14,18 @@
       "required": false,
       "example": "U1234",
       "desc": "The ID of user you'd like active sessions for. If you pass a user_id, you'll need to pass a team_id as well.",
+      "type": "string"
+    },
+    "limit": {
+      "required": false,
+      "example": "100",
+      "desc": "The maximum number of items to return. Must be between 1 - 1000 both inclusive.",
+      "type": "integer"
+    },
+    "cursor": {
+      "required": false,
+      "example": "5c3e53d5",
+      "desc": "Set cursor to next_cursor returned by the previous call to list items in the next page.",
       "type": "string"
     }
   },

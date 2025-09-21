@@ -4,17 +4,17 @@
   "deprecated": false,
   "desc": "Remove a linked IDP group linked from a private channel",
   "args": {
-    "channel_id": {
+    "team_id": {
       "required": true,
-      "desc": "The channel to remove the linked group from."
+      "desc": "The workspace where the channel exists. This argument is required for channels only tied to one workspace, and optional for channels that are shared across an organization."
     },
     "group_id": {
       "required": true,
       "desc": "The IDP Group ID to remove from the private channel."
     },
-    "team_id": {
+    "channel_id": {
       "required": true,
-      "desc": "The workspace where the channel exists. This argument is required for channels only tied to one workspace, and optional for channels that are shared across an organization."
+      "desc": "The channel to remove the linked group from."
     }
   },
   "response": {

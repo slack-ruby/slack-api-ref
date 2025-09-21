@@ -4,14 +4,14 @@
   "deprecated": false,
   "desc": "Set the default channels of a workspace.",
   "args": {
+    "team_id": {
+      "required": true,
+      "desc": "ID for the workspace to set the default channel for."
+    },
     "channel_ids": {
       "required": true,
       "desc": "An array of channel IDs.",
       "type": "array"
-    },
-    "team_id": {
-      "required": true,
-      "desc": "ID for the workspace to set the default channel for."
     }
   },
   "response": {

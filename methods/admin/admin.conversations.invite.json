@@ -4,16 +4,16 @@
   "deprecated": false,
   "desc": "Invite a user to a public or private channel.",
   "args": {
-    "channel_id": {
-      "required": true,
-      "example": "C12345",
-      "desc": "The channel that the users will be invited to."
-    },
     "user_ids": {
       "required": true,
       "example": "U1234,U2345,U3456",
       "desc": "The users to invite.",
       "type": "array"
+    },
+    "channel_id": {
+      "required": true,
+      "example": "C12345",
+      "desc": "The channel that the users will be invited to."
     }
   },
   "response": {

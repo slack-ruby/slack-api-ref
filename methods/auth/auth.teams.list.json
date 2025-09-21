@@ -4,6 +4,12 @@
   "deprecated": false,
   "desc": "Obtain a full list of workspaces your org-wide app has been approved for.",
   "args": {
+    "limit": {
+      "required": false,
+      "example": "50",
+      "desc": "The maximum number of workspaces to return. Must be a positive integer no larger than 1000.",
+      "type": "integer"
+    },
     "cursor": {
       "required": false,
       "example": "5c3e53d5",
@@ -15,12 +21,6 @@
       "example": "false",
       "desc": "Whether to return icon paths for each workspace. An icon path represents a URI pointing to the image signifying the workspace.",
       "type": "boolean"
-    },
-    "limit": {
-      "required": false,
-      "example": "50",
-      "desc": "The maximum number of workspaces to return. Must be a positive integer no larger than 1000.",
-      "type": "integer"
     }
   },
   "response": {

@@ -4,11 +4,14 @@
   "deprecated": false,
   "desc": "Lists requests to add external users to channels with ability to filter.",
   "args": {
-    "cursor": {
+    "user_id": {
       "required": false,
-      "example": "bG9nX2lkOjc5NjQ1NA==",
-      "desc": "Paginate through collections of data by setting the cursor parameter to a next_cursor attribute returned by a previous request's response_metadata. See pagination for more detail.",
-      "type": "string"
+      "desc": "Optional filter to return invitation requests for the inviting user."
+    },
+    "include_expired": {
+      "required": false,
+      "desc": "When true expired invitation requests will be returned, otherwise they will be excluded.",
+      "type": "boolean"
     },
     "include_approved": {
       "required": false,
@@ -18,11 +21,6 @@
     "include_denied": {
       "required": false,
       "desc": "When true denied invitation requests will be returned, otherwise they will be excluded.",
-      "type": "boolean"
-    },
-    "include_expired": {
-      "required": false,
-      "desc": "When true expired invitation requests will be returned, otherwise they will be excluded.",
       "type": "boolean"
     },
     "invite_ids": {
@@ -36,9 +34,11 @@
       "desc": "The number of items to return. Must be between 1 - 1000 (inclusive).",
       "type": "integer"
     },
-    "user_id": {
+    "cursor": {
       "required": false,
-      "desc": "Optional filter to return invitation requests for the inviting user."
+      "example": "bG9nX2lkOjc5NjQ1NA==",
+      "desc": "Paginate through collections of data by setting the cursor parameter to a next_cursor attribute returned by a previous request's response_metadata. See pagination for more detail.",
+      "type": "string"
     }
   },
   "response": {

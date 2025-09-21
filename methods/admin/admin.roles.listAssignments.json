@@ -10,12 +10,6 @@
       "desc": "Set cursor to next_cursor returned by the previous call to list items in the next page.",
       "type": "string"
     },
-    "entity_ids": {
-      "required": false,
-      "example": "['T12345', 'C12345']",
-      "desc": "The entities for which the roles apply.",
-      "type": "array"
-    },
     "limit": {
       "required": false,
       "example": "50",
@@ -26,6 +20,12 @@
       "required": false,
       "example": "['Rl01', 'Rl0A']",
       "desc": "collection of role ids to scope results by.",
+      "type": "array"
+    },
+    "entity_ids": {
+      "required": false,
+      "example": "['T12345', 'C12345']",
+      "desc": "The entities for which the roles apply.",
       "type": "array"
     },
     "sort_dir": {

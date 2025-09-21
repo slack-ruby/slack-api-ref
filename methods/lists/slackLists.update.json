@@ -4,12 +4,6 @@
   "deprecated": false,
   "desc": "Update a List.",
   "args": {
-    "description_blocks": {
-      "required": false,
-      "example": "[{\"type\":\"rich_text\",\"elements\":[{\"type\":\"rich_text_section\",\"elements\":[{\"type\":\"text\",\"text\":\"My list description!\"}]}]}]",
-      "desc": "A rich text description of the List.",
-      "type": "array"
-    },
     "id": {
       "required": true,
       "desc": "The ID of the List to update."
@@ -19,6 +13,12 @@
       "example": "My List",
       "desc": "The updated name of the List.",
       "type": "string"
+    },
+    "description_blocks": {
+      "required": false,
+      "example": "[{\"type\":\"rich_text\",\"elements\":[{\"type\":\"rich_text_section\",\"elements\":[{\"type\":\"text\",\"text\":\"My list description!\"}]}]}]",
+      "desc": "A rich text description of the List.",
+      "type": "array"
     },
     "todo_mode": {
       "required": false,

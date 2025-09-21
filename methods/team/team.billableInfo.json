@@ -16,15 +16,15 @@
       "desc": "The maximum number of items to return.",
       "type": "integer"
     },
-    "team_id": {
-      "required": false,
-      "desc": "encoded team id to get the billable information from, required if org token is used.",
-      "type": "string"
-    },
     "user": {
       "required": false,
       "desc": "A user to retrieve the billable information for. Defaults to all users.",
       "type": "user"
+    },
+    "team_id": {
+      "required": false,
+      "desc": "encoded team id to get the billable information from, required if org token is used.",
+      "type": "string"
     }
   },
   "response": {

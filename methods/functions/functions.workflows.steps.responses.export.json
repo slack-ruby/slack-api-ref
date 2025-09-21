@@ -4,9 +4,9 @@
   "deprecated": false,
   "desc": "Download form responses of a workflow",
   "args": {
-    "step_id": {
-      "required": true,
-      "desc": "The ID of the OpenForm step to export.",
+    "workflow_id": {
+      "required": false,
+      "desc": "The workflow ID, starts with Wf*.",
       "type": "string"
     },
     "workflow": {
@@ -20,9 +20,9 @@
       "desc": "The app tied to the workflow reference.",
       "type": "string"
     },
-    "workflow_id": {
-      "required": false,
-      "desc": "The workflow ID, starts with Wf*.",
+    "step_id": {
+      "required": true,
+      "desc": "The ID of the OpenForm step to export.",
       "type": "string"
     }
   },

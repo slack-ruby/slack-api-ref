@@ -4,11 +4,6 @@
   "deprecated": false,
   "desc": "Approves a request to add an external user to a channel and sends them a Slack Connect invite",
   "args": {
-    "channel_id": {
-      "required": false,
-      "desc": "Optional channel_id to which external user will be invited to. Will override the value on the requested invite.",
-      "type": "string"
-    },
     "invite_id": {
       "required": true,
       "desc": "ID of the requested shared channel invite to approve."
@@ -17,6 +12,11 @@
       "required": false,
       "desc": "Optional boolean on whether the invited team will have post-only permissions in the channel. Will override the value on the requested invite.",
       "type": "boolean"
+    },
+    "channel_id": {
+      "required": false,
+      "desc": "Optional channel_id to which external user will be invited to. Will override the value on the requested invite.",
+      "type": "string"
     },
     "message": {
       "required": false,

@@ -41,13 +41,6 @@
       "desc": "Accepts message text formatted in markdown. This argument should not be used in conjunction with blocks or text. Limit this field to 12,000 characters.",
       "type": "string"
     },
-    "metadata": {
-      "required": false,
-      "example": "{\"event_type\": \"task_created\", \"event_payload\": { \"id\": \"11223\", \"title\": \"Redesign Homepage\"}}",
-      "desc": "JSON object with event_type and event_payload fields, presented as a URL-encoded string. Metadata you post to Slack is accessible to any app or user who is a member of that workspace.",
-      "type": "string",
-      "format": "json"
-    },
     "parse": {
       "required": false,
       "example": "full",
@@ -88,6 +81,13 @@
       "example": "false",
       "desc": "Pass false to disable unfurling of media content.",
       "type": "boolean"
+    },
+    "metadata": {
+      "required": false,
+      "example": "{\"event_type\": \"task_created\", \"event_payload\": { \"id\": \"11223\", \"title\": \"Redesign Homepage\"}}",
+      "desc": "JSON object with event_type and event_payload fields, presented as a URL-encoded string. Metadata you post to Slack is accessible to any app or user who is a member of that workspace.",
+      "type": "string",
+      "format": "json"
     }
   },
   "response": {
@@ -122,5 +122,16 @@
     "time_too_far": "value passed for `post_time` was too far into the future.",
     "too_many_attachments": "Too many attachments were provided with this message. A maximum of 100 attachments are allowed on a message.",
     "invalid_token": "The passed token is invalid or not supported by this method."
-  }
+  },
+  "arg_groups": [
+    {
+      "args": [
+        "attachments",
+        "blocks",
+        "text"
+      ],
+      "desc": "One of these arguments in addition to text is required to describe the content of the message. When attachments or blocks are included, text will be used as fallback text for notifications only.",
+      "mutually_exclusive": false
+    }
+  ]
 }

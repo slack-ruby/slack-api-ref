@@ -4,10 +4,10 @@
   "deprecated": false,
   "desc": "List the access type of a custom slack function and include the users, team or org ids with access if its permission_type is set to named_entities",
   "args": {
-    "function_app_id": {
+    "function_id": {
       "required": false,
-      "example": "A12345",
-      "desc": "The encoded ID of the app.",
+      "example": "Fn12345",
+      "desc": "The encoded ID of the function.",
       "type": "string"
     },
     "function_callback_id": {
@@ -16,10 +16,10 @@
       "desc": "The callback ID defined in the function's definition file.",
       "type": "string"
     },
-    "function_id": {
+    "function_app_id": {
       "required": false,
-      "example": "Fn12345",
-      "desc": "The encoded ID of the function.",
+      "example": "A12345",
+      "desc": "The encoded ID of the app.",
       "type": "string"
     }
   },

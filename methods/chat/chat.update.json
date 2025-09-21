@@ -27,26 +27,6 @@
       "type": "string",
       "format": "json"
     },
-    "channel": {
-      "required": true,
-      "desc": "Channel containing the message to be updated. For direct messages, ensure that this value is a DM ID (starts with D) instead of a User ID (starts with either U or W).",
-      "type": "channel"
-    },
-    "file_ids": {
-      "required": false,
-      "example": "F013GKY52QK,F013GL22D0T or [\"F013GKY52QK\",\"F013GL22D0T\"]",
-      "desc": "Array of new file ids that will be sent with this message.",
-      "type": "array"
-    },
-    "link_names": {
-      "required": false,
-      "example": "true",
-      "desc": "Find and link channel names and usernames. Defaults to none. If you do not specify a value for this field, the original value set for the message will be overwritten with the default, none.",
-      "type": [
-        "boolean",
-        "string"
-      ]
-    },
     "markdown_text": {
       "required": false,
       "example": "**This is bold text**",
@@ -60,17 +40,25 @@
       "type": "string",
       "format": "json"
     },
+    "channel": {
+      "required": true,
+      "desc": "Channel containing the message to be updated. For direct messages, ensure that this value is a DM ID (starts with D) instead of a User ID (starts with either U or W).",
+      "type": "channel"
+    },
+    "link_names": {
+      "required": false,
+      "example": "true",
+      "desc": "Find and link channel names and usernames. Defaults to none. If you do not specify a value for this field, the original value set for the message will be overwritten with the default, none.",
+      "type": [
+        "boolean",
+        "string"
+      ]
+    },
     "parse": {
       "required": false,
       "example": "none",
       "desc": "Change how messages are treated. Defaults to client, unlike chat.postMessage. Accepts either none or full. If you do not specify a value for this field, the original value set for the message will be overwritten with the default, client.",
       "type": "string"
-    },
-    "reply_broadcast": {
-      "required": false,
-      "example": "true",
-      "desc": "Broadcast an existing thread reply to make it visible to everyone in the channel or conversation.",
-      "type": "boolean"
     },
     "text": {
       "required": false,
@@ -83,6 +71,18 @@
       "example": "\"1405894322.002768\"",
       "desc": "Timestamp of the message to be updated.",
       "type": "timestamp"
+    },
+    "reply_broadcast": {
+      "required": false,
+      "example": "true",
+      "desc": "Broadcast an existing thread reply to make it visible to everyone in the channel or conversation.",
+      "type": "boolean"
+    },
+    "file_ids": {
+      "required": false,
+      "example": "F013GKY52QK,F013GL22D0T or [\"F013GKY52QK\",\"F013GL22D0T\"]",
+      "desc": "Array of new file ids that will be sent with this message.",
+      "type": "array"
     }
   },
   "response": {
@@ -117,5 +117,16 @@
     "update_failed": "Internal update failure.",
     "invalid_blocks_format": "The `blocks` array is not a valid JSON object or doesn't match the Block Kit syntax.",
     "streaming_state_conflict": "The message is currently streaming text and cannot be edited."
-  }
+  },
+  "arg_groups": [
+    {
+      "args": [
+        "attachments",
+        "blocks",
+        "text"
+      ],
+      "desc": "One of these arguments in addition to text is required to describe the content of the message. When attachments or blocks are included, text will be used as fallback text for notifications only.",
+      "mutually_exclusive": false
+    }
+  ]
 }

@@ -4,17 +4,17 @@
   "deprecated": false,
   "desc": "Removes a set of users from a role for the given scopes and entities",
   "args": {
-    "entity_ids": {
-      "required": true,
-      "example": "['T00000001', 'E00000002']",
-      "desc": "List of the entity IDs for which roles will be revoked. These can be Org IDs, Team IDs or Channel IDs.",
-      "type": "array"
-    },
     "role_id": {
       "required": true,
       "example": "R0001",
       "desc": "ID of the role to which users will be assigned.",
       "type": "string"
+    },
+    "entity_ids": {
+      "required": true,
+      "example": "['T00000001', 'E00000002']",
+      "desc": "List of the entity IDs for which roles will be revoked. These can be Org IDs, Team IDs or Channel IDs.",
+      "type": "array"
     },
     "user_ids": {
       "required": true,

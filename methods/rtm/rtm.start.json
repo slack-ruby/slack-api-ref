@@ -4,31 +4,19 @@
   "deprecated": false,
   "desc": "Deprecated: Starts a Real Time Messaging session. Use rtm.connect instead.",
   "args": {
-    "batch_presence_aware": {
+    "simple_latest": {
       "required": false,
-      "example": "1",
-      "desc": "Batch presence deliveries via subscription. Enabling changes the shape of presence_change events. See batch presence.",
-      "type": "boolean"
-    },
-    "include_locale": {
-      "required": false,
-      "desc": "Set this to true to receive the locale for users and channels. Defaults to false.",
-      "type": "boolean"
-    },
-    "mpim_aware": {
-      "required": false,
-      "desc": "Returns MPIMs to the client in the API response.",
-      "type": "boolean"
-    },
-    "no_latest": {
-      "required": false,
-      "example": "1",
-      "desc": "Exclude latest timestamps for channels, groups, mpims, and ims. Automatically sets no_unreads to 1.",
+      "desc": "Return timestamp only for latest message object of each channel (improves performance).",
       "type": "boolean"
     },
     "no_unreads": {
       "required": false,
       "desc": "Skip unread counts for each channel (improves performance).",
+      "type": "boolean"
+    },
+    "mpim_aware": {
+      "required": false,
+      "desc": "Returns MPIMs to the client in the API response.",
       "type": "boolean"
     },
     "presence_sub": {
@@ -37,9 +25,21 @@
       "desc": "Only deliver presence events when requested by subscription. See presence subscriptions.",
       "type": "boolean"
     },
-    "simple_latest": {
+    "batch_presence_aware": {
       "required": false,
-      "desc": "Return timestamp only for latest message object of each channel (improves performance).",
+      "example": "1",
+      "desc": "Batch presence deliveries via subscription. Enabling changes the shape of presence_change events. See batch presence.",
+      "type": "boolean"
+    },
+    "no_latest": {
+      "required": false,
+      "example": "1",
+      "desc": "Exclude latest timestamps for channels, groups, mpims, and ims. Automatically sets no_unreads to 1.",
+      "type": "boolean"
+    },
+    "include_locale": {
+      "required": false,
+      "desc": "Set this to true to receive the locale for users and channels. Defaults to false.",
       "type": "boolean"
     }
   },

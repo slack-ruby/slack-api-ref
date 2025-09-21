@@ -4,9 +4,10 @@
   "deprecated": false,
   "desc": "Create canvas for a user",
   "args": {
-    "channel_id": {
+    "title": {
       "required": false,
-      "desc": "Channel ID of the channel the canvas will be tabbed in. This is a required field for free teams.",
+      "example": "Your Brilliant Title",
+      "desc": "Title of the newly created canvas.",
       "type": "string"
     },
     "document_content": {
@@ -14,10 +15,9 @@
       "example": "{\"type\": \"markdown\", \"markdown\": \"> standalone canvas!\"}",
       "desc": "Structure describing the type and value of the content to create."
     },
-    "title": {
+    "channel_id": {
       "required": false,
-      "example": "Your Brilliant Title",
-      "desc": "Title of the newly created canvas.",
+      "desc": "Channel ID of the channel the canvas will be tabbed in. This is a required field for free teams.",
       "type": "string"
     }
   },

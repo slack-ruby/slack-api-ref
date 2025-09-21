@@ -4,12 +4,6 @@
   "deprecated": false,
   "desc": "Revoke a single session for a user. The user will be forced to login to Slack.",
   "args": {
-    "session_id": {
-      "required": true,
-      "example": "12345",
-      "desc": "ID of the session to invalidate.",
-      "type": "integer"
-    },
     "team_id": {
       "required": false,
       "example": "T1234",
@@ -19,6 +13,12 @@
       "required": true,
       "example": "U12345",
       "desc": "ID of the user that the session belongs to."
+    },
+    "session_id": {
+      "required": true,
+      "example": "12345",
+      "desc": "ID of the session to invalidate.",
+      "type": "integer"
     }
   },
   "response": {
@@ -36,5 +36,14 @@
     "session_not_found": "The requested session wasn't found.",
     "unknown_method": "This method is currently not available.",
     "user_not_found": "The requested user wasn't found."
-  }
+  },
+  "arg_groups": [
+    {
+      "args": [
+        "user_id"
+      ],
+      "desc": "Exactly one of these arguments is required to identify the session that is to be invalidated, user_id is preferred and team_id will be deprecated and eventually removed on January 15, 2025.",
+      "mutually_exclusive": true
+    }
+  ]
 }

@@ -4,14 +4,14 @@
   "deprecated": false,
   "desc": "Remove collaborators from workflows within the team or enterprise",
   "args": {
-    "collaborator_ids": {
-      "required": true,
-      "desc": "Array of collaborators (encoded user IDs) to remove; max 50.",
-      "type": "array"
-    },
     "workflow_ids": {
       "required": true,
       "desc": "Array of workflow IDs to edit; max 50.",
+      "type": "array"
+    },
+    "collaborator_ids": {
+      "required": true,
+      "desc": "Array of collaborators (encoded user IDs) to remove; max 50.",
       "type": "array"
     }
   },

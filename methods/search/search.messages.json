@@ -4,16 +4,16 @@
   "deprecated": false,
   "desc": "Searches for messages matching a query.",
   "args": {
-    "cursor": {
-      "required": false,
-      "desc": "Use this when getting results with cursormark pagination. For first call send * for subsequent calls, send the value of next_cursor returned in the previous call's results.",
-      "type": "string"
-    },
     "highlight": {
       "required": false,
       "example": "true",
       "desc": "Pass a value of true to enable query highlight markers (see below).",
       "type": "boolean"
+    },
+    "cursor": {
+      "required": false,
+      "desc": "Use this when getting results with cursormark pagination. For first call send * for subsequent calls, send the value of next_cursor returned in the previous call's results.",
+      "type": "string"
     },
     "query": {
       "required": true,

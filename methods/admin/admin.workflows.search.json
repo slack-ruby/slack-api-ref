@@ -4,26 +4,22 @@
   "deprecated": false,
   "desc": "Search workflows within the team or enterprise",
   "args": {
+    "query": {
+      "required": false,
+      "example": "Time off",
+      "desc": "A search query to filter for workflow name or description.",
+      "type": "string"
+    },
     "app_id": {
       "required": false,
       "example": "A12345",
       "desc": "The parent app ID for which to return workflows."
-    },
-    "collaborator_ids": {
-      "required": false,
-      "desc": "Only include workflows where all of the provided user IDs are a manager/collaborator of that workflow.",
-      "type": "array"
     },
     "cursor": {
       "required": false,
       "example": "dXNlcjpVMDYxTkZUVDI=",
       "desc": "Set cursor to next_cursor returned by the previous call to list items in the next page.",
       "type": "string"
-    },
-    "is_sales_elevate": {
-      "required": false,
-      "desc": "Filter workflows by their Sales Elevate status.",
-      "type": "boolean"
     },
     "limit": {
       "required": false,
@@ -36,23 +32,26 @@
       "desc": "Only include workflows with no collaborators in the result; default is false.",
       "type": "boolean"
     },
+    "collaborator_ids": {
+      "required": false,
+      "desc": "Only include workflows where all of the provided user IDs are a manager/collaborator of that workflow.",
+      "type": "array"
+    },
     "num_trigger_ids": {
       "required": false,
       "example": 10,
       "desc": "Number of trigger IDs to fetch for each workflow; default is 10.",
       "type": "integer"
     },
-    "publish_status": {
+    "is_sales_elevate": {
       "required": false,
-      "example": "published",
-      "desc": "Filter workflows by their published status.",
-      "type": "enum"
+      "desc": "Filter workflows by their Sales Elevate status.",
+      "type": "boolean"
     },
-    "query": {
+    "source": {
       "required": false,
-      "example": "Time off",
-      "desc": "A search query to filter for workflow name or description.",
-      "type": "string"
+      "desc": "Source of workflow creation, either from code or workflow builder.",
+      "type": "enum"
     },
     "sort": {
       "required": false,
@@ -66,20 +65,21 @@
       "desc": "Sort direction. Possible values are asc for ascending order like (1, 2, 3) or (a, b, c), and desc for descending order like (3, 2, 1) or (c, b, a).",
       "type": "enum"
     },
-    "source": {
+    "trigger_type_id": {
       "required": false,
-      "desc": "Source of workflow creation, either from code or workflow builder.",
+      "desc": "Only include workflows with this trigger type.",
+      "type": "string"
+    },
+    "publish_status": {
+      "required": false,
+      "example": "published",
+      "desc": "Filter workflows by their published status.",
       "type": "enum"
     },
     "step_function_ids": {
       "required": false,
       "desc": "Only include workflows that use all of the provided step function ids.",
       "type": "array"
-    },
-    "trigger_type_id": {
-      "required": false,
-      "desc": "Only include workflows with this trigger type.",
-      "type": "string"
     }
   },
   "response": {

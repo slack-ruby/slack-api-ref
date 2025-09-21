@@ -4,16 +4,21 @@
   "deprecated": false,
   "desc": "Lists reactions made by a user.",
   "args": {
-    "cursor": {
+    "user": {
       "required": false,
-      "example": "dXNlcjpVMDYxTkZUVDI=",
-      "desc": "Parameter for pagination. Set cursor equal to the next_cursor attribute returned by the previous request's response_metadata. This parameter is optional, but pagination is mandatory: the default value simply fetches the first \"page\" of the collection. See pagination for more details.",
-      "type": "string"
+      "desc": "Show reactions made by this user. Defaults to the authed user.",
+      "type": "user"
     },
     "full": {
       "required": false,
       "desc": "If true always return the complete reaction list.",
       "type": "boolean"
+    },
+    "cursor": {
+      "required": false,
+      "example": "dXNlcjpVMDYxTkZUVDI=",
+      "desc": "Parameter for pagination. Set cursor equal to the next_cursor attribute returned by the previous request's response_metadata. This parameter is optional, but pagination is mandatory: the default value simply fetches the first \"page\" of the collection. See pagination for more details.",
+      "type": "string"
     },
     "limit": {
       "required": false,
@@ -25,11 +30,6 @@
       "required": false,
       "desc": "encoded team id to list reactions in, required if org token is used.",
       "type": "string"
-    },
-    "user": {
-      "required": false,
-      "desc": "Show reactions made by this user. Defaults to the authed user.",
-      "type": "user"
     }
   },
   "response": {

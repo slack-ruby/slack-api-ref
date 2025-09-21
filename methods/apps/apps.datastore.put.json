@@ -4,10 +4,6 @@
   "deprecated": false,
   "desc": "Creates a new item, or replaces an old item with a new item.",
   "args": {
-    "app_id": {
-      "required": false,
-      "desc": ""
-    },
     "datastore": {
       "required": true,
       "desc": "name of the datastore.",
@@ -17,6 +13,10 @@
       "required": true,
       "desc": "attribute names and values of the item.",
       "type": "object"
+    },
+    "app_id": {
+      "required": false,
+      "desc": ""
     }
   },
   "response": {

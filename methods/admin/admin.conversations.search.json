@@ -4,16 +4,22 @@
   "deprecated": false,
   "desc": "Search for public or private channels in an Enterprise organization.",
   "args": {
+    "team_ids": {
+      "required": false,
+      "example": "T00000000,T00000001",
+      "desc": "Comma separated string of team IDs, signifying the internal workspaces to search through.",
+      "type": "array"
+    },
     "connected_team_ids": {
       "required": false,
       "example": "['T00000000','T00000001']",
       "desc": "Array of encoded team IDs, signifying the external orgs to search through.",
       "type": "array"
     },
-    "cursor": {
+    "query": {
       "required": false,
-      "example": "dXNlcjpVMEc5V0ZYTlo=",
-      "desc": "Set cursor to next_cursor returned by the previous call to list items in the next page.",
+      "example": "announcement",
+      "desc": "Name of the the channel to query by.",
       "type": "string"
     },
     "limit": {
@@ -22,10 +28,10 @@
       "desc": "Maximum number of items to be returned. Must be between 1 - 20 both inclusive. Default is 10.",
       "type": "integer"
     },
-    "query": {
+    "cursor": {
       "required": false,
-      "example": "announcement",
-      "desc": "Name of the the channel to query by.",
+      "example": "dXNlcjpVMEc5V0ZYTlo=",
+      "desc": "Set cursor to next_cursor returned by the previous call to list items in the next page.",
       "type": "string"
     },
     "search_channel_types": {
@@ -45,12 +51,6 @@
       "example": "asc",
       "desc": "Sort direction. Possible values are asc for ascending order like (1, 2, 3) or (a, b, c), and desc for descending order like (3, 2, 1) or (c, b, a).",
       "type": "string"
-    },
-    "team_ids": {
-      "required": false,
-      "example": "T00000000,T00000001",
-      "desc": "Comma separated string of team IDs, signifying the internal workspaces to search through.",
-      "type": "array"
     },
     "total_count_only": {
       "required": false,

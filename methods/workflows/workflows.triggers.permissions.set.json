@@ -4,22 +4,28 @@
   "deprecated": false,
   "desc": "Set the permission type for who can run a trigger",
   "args": {
-    "channel_ids": {
-      "required": false,
-      "example": "C0000000001,C0000000002",
-      "desc": "List of encoded channel IDs.",
-      "type": "array"
-    },
-    "org_ids": {
-      "required": false,
-      "example": "E00000001,E00000002",
-      "desc": "List of encoded organization IDs.",
-      "type": "array"
+    "trigger_id": {
+      "required": true,
+      "example": "Ft0000000001",
+      "desc": "Encoded ID of the trigger.",
+      "type": "string"
     },
     "permission_type": {
       "required": true,
       "desc": "The type of permission that defines who can run a trigger.",
       "type": "enum"
+    },
+    "user_ids": {
+      "required": false,
+      "example": "U0000000001,U0000000002",
+      "desc": "List of encoded user IDs.",
+      "type": "array"
+    },
+    "channel_ids": {
+      "required": false,
+      "example": "C0000000001,C0000000002",
+      "desc": "List of encoded channel IDs.",
+      "type": "array"
     },
     "team_ids": {
       "required": false,
@@ -27,16 +33,10 @@
       "desc": "List of encoded workspace IDs.",
       "type": "array"
     },
-    "trigger_id": {
-      "required": true,
-      "example": "Ft0000000001",
-      "desc": "Encoded ID of the trigger.",
-      "type": "string"
-    },
-    "user_ids": {
+    "org_ids": {
       "required": false,
-      "example": "U0000000001,U0000000002",
-      "desc": "List of encoded user IDs.",
+      "example": "E00000001,E00000002",
+      "desc": "List of encoded organization IDs.",
       "type": "array"
     }
   },

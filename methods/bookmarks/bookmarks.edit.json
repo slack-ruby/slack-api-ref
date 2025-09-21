@@ -4,19 +4,19 @@
   "deprecated": false,
   "desc": "Edit bookmark.",
   "args": {
-    "bookmark_id": {
-      "required": true,
-      "desc": "Bookmark to update.",
-      "type": "string"
-    },
     "channel_id": {
       "required": true,
       "desc": "Channel to update bookmark in.",
       "type": "string"
     },
-    "emoji": {
+    "bookmark_id": {
+      "required": true,
+      "desc": "Bookmark to update.",
+      "type": "string"
+    },
+    "title": {
       "required": false,
-      "desc": "Emoji tag to apply to the link.",
+      "desc": "Title for the bookmark.",
       "type": "string"
     },
     "link": {
@@ -24,9 +24,9 @@
       "desc": "Link to bookmark.",
       "type": "string"
     },
-    "title": {
+    "emoji": {
       "required": false,
-      "desc": "Title for the bookmark.",
+      "desc": "Emoji tag to apply to the link.",
       "type": "string"
     }
   },

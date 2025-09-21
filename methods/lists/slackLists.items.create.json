@@ -4,22 +4,22 @@
   "deprecated": false,
   "desc": "Add a new item to an existing List.",
   "args": {
+    "list_id": {
+      "required": true,
+      "desc": "ID of the List to add the item to."
+    },
     "duplicated_item_id": {
       "required": false,
       "desc": "ID of the record to make a copy of."
+    },
+    "parent_item_id": {
+      "required": false,
+      "desc": "ID of the parent record for this subtask."
     },
     "initial_fields": {
       "required": false,
       "desc": "Initial item data.",
       "type": "array"
-    },
-    "list_id": {
-      "required": true,
-      "desc": "ID of the List to add the item to."
-    },
-    "parent_item_id": {
-      "required": false,
-      "desc": "ID of the parent record for this subtask."
     }
   },
   "response": {

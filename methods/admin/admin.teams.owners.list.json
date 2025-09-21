@@ -4,11 +4,9 @@
   "deprecated": false,
   "desc": "List all of the owners on a given workspace.",
   "args": {
-    "cursor": {
-      "required": false,
-      "example": "5c3e53d5",
-      "desc": "Set cursor to next_cursor returned by the previous call to list items in the next page.",
-      "type": "string"
+    "team_id": {
+      "required": true,
+      "desc": ""
     },
     "limit": {
       "required": false,
@@ -16,9 +14,11 @@
       "desc": "The maximum number of items to return. Must be between 1 - 1000 both inclusive.",
       "type": "integer"
     },
-    "team_id": {
-      "required": true,
-      "desc": ""
+    "cursor": {
+      "required": false,
+      "example": "5c3e53d5",
+      "desc": "Set cursor to next_cursor returned by the previous call to list items in the next page.",
+      "type": "string"
     }
   },
   "response": {

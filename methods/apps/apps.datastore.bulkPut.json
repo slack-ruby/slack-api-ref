@@ -4,10 +4,6 @@
   "deprecated": false,
   "desc": "Creates or replaces existing items in bulk",
   "args": {
-    "app_id": {
-      "required": false,
-      "desc": ""
-    },
     "datastore": {
       "required": true,
       "desc": "name of the datastore.",
@@ -18,6 +14,10 @@
       "example": "[{\"id\": \"7c6dd137\", \"favourite_meal\": \"Shawarma\", \"reason\": \"Who doesn't like Shawarma?\"}]",
       "desc": "attribute names and values of the items; limit of 25.",
       "type": "array"
+    },
+    "app_id": {
+      "required": false,
+      "desc": ""
     }
   },
   "response": {

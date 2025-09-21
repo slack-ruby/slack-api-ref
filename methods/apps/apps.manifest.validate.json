@@ -4,14 +4,14 @@
   "deprecated": false,
   "desc": "Validate an app manifest",
   "args": {
-    "app_id": {
-      "required": false,
-      "desc": "The ID of the app whose configuration you want to validate."
-    },
     "manifest": {
       "required": true,
       "desc": "The manifest to be validated. Will be validated against the app manifest schema - read our guide.",
       "type": "string"
+    },
+    "app_id": {
+      "required": false,
+      "desc": "The ID of the app whose configuration you want to validate."
     }
   },
   "response": {

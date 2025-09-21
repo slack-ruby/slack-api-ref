@@ -4,12 +4,6 @@
   "deprecated": false,
   "desc": "Set an expiration for a guest user",
   "args": {
-    "expiration_ts": {
-      "required": true,
-      "example": "1234567890",
-      "desc": "Epoch timestamp in seconds when guest account should be disabled.",
-      "type": "integer"
-    },
     "team_id": {
       "required": false,
       "desc": "The ID (T1234) of the workspace."
@@ -19,6 +13,12 @@
       "example": "W12345678",
       "desc": "The ID of the user to set an expiration for.",
       "type": "string"
+    },
+    "expiration_ts": {
+      "required": true,
+      "example": "1234567890",
+      "desc": "Epoch timestamp in seconds when guest account should be disabled.",
+      "type": "integer"
     }
   },
   "response": {

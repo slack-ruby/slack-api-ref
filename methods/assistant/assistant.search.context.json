@@ -4,23 +4,17 @@
   "deprecated": false,
   "desc": "Searches messages across your Slack organization—perfect for broad, specific, and real-time data retrieval.",
   "args": {
+    "query": {
+      "required": true,
+      "example": "What is project gizmo?",
+      "desc": "User prompt or search query.",
+      "type": "string"
+    },
     "action_token": {
       "required": false,
       "example": "12345.98765.abcd2358fdea",
       "desc": "Send action_token as received in a message event.",
       "type": "string"
-    },
-    "after": {
-      "required": false,
-      "example": "1754670081",
-      "desc": "UNIX timestamp filter. If present, filters for results after this date.",
-      "type": "integer"
-    },
-    "before": {
-      "required": false,
-      "example": "1754670081",
-      "desc": "UNIX timestamp filter. If present, filters for results before this date.",
-      "type": "integer"
     },
     "channel_types": {
       "required": false,
@@ -34,6 +28,30 @@
       "desc": "Content types to include, a comma-separated list of any combination of messages, files, channels, users.",
       "type": "array"
     },
+    "include_bots": {
+      "required": false,
+      "example": "true",
+      "desc": "If you want the results to include bots.",
+      "type": "boolean"
+    },
+    "before": {
+      "required": false,
+      "example": "1754670081",
+      "desc": "UNIX timestamp filter. If present, filters for results before this date.",
+      "type": "integer"
+    },
+    "after": {
+      "required": false,
+      "example": "1754670081",
+      "desc": "UNIX timestamp filter. If present, filters for results after this date.",
+      "type": "integer"
+    },
+    "include_context_messages": {
+      "required": false,
+      "example": "true",
+      "desc": "Whether to include context messages surrounding the main message result. Defaults to false if unspecified.",
+      "type": "boolean"
+    },
     "context_channel_id": {
       "required": false,
       "desc": "Context channel ID to support scoping the search when applicable."
@@ -44,39 +62,11 @@
       "desc": "The cursor returned by the API. Leave this blank for the first request, and use this to get the next page of results.",
       "type": "string"
     },
-    "highlight": {
-      "required": false,
-      "desc": "Whether to highlight the search query in the results. Defaults to false if unspecified.",
-      "type": "boolean"
-    },
-    "include_bots": {
-      "required": false,
-      "example": "true",
-      "desc": "If you want the results to include bots.",
-      "type": "boolean"
-    },
-    "include_context_messages": {
-      "required": false,
-      "example": "true",
-      "desc": "Whether to include context messages surrounding the main message result. Defaults to false if unspecified.",
-      "type": "boolean"
-    },
-    "include_message_blocks": {
-      "required": false,
-      "desc": "Whether to return the message blocks in the response.",
-      "type": "boolean"
-    },
     "limit": {
       "required": false,
       "example": "20",
       "desc": "Number of results to return, up to a max of 20. Defaults to 20.",
       "type": "integer"
-    },
-    "query": {
-      "required": true,
-      "example": "What is project gizmo?",
-      "desc": "User prompt or search query.",
-      "type": "string"
     },
     "sort": {
       "required": false,
@@ -89,6 +79,16 @@
       "example": "desc",
       "desc": "The direction to sort the results by. Defaults to desc.",
       "type": "enum"
+    },
+    "include_message_blocks": {
+      "required": false,
+      "desc": "Whether to return the message blocks in the response.",
+      "type": "boolean"
+    },
+    "highlight": {
+      "required": false,
+      "desc": "Whether to highlight the search query in the results. Defaults to false if unspecified.",
+      "type": "boolean"
     },
     "term_clauses": {
       "required": false,

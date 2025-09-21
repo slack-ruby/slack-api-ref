@@ -4,12 +4,6 @@
   "deprecated": false,
   "desc": "Upgrade or downgrade Slack Connect channel permissions between 'can post only' and 'can post and invite'.",
   "args": {
-    "action": {
-      "required": true,
-      "example": "upgrade",
-      "desc": "Type of action to be taken: upgrade or downgrade.",
-      "type": "enum"
-    },
     "channel": {
       "required": true,
       "example": "C123456",
@@ -20,6 +14,12 @@
       "required": true,
       "example": "T726G27TT",
       "desc": "The encoded team ID of the target team.  Must be in the specified channel."
+    },
+    "action": {
+      "required": true,
+      "example": "upgrade",
+      "desc": "Type of action to be taken: upgrade or downgrade.",
+      "type": "enum"
     }
   },
   "response": {

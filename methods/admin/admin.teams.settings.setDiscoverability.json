@@ -4,14 +4,14 @@
   "deprecated": false,
   "desc": "An API method that allows admins to set the discoverability of a given workspace",
   "args": {
+    "team_id": {
+      "required": true,
+      "desc": "The ID of the workspace to set discoverability on."
+    },
     "discoverability": {
       "required": true,
       "desc": "This workspace's discovery setting. It must be set to one of open, invite_only, closed, or unlisted.",
       "type": "string"
-    },
-    "team_id": {
-      "required": true,
-      "desc": "The ID of the workspace to set discoverability on."
     }
   },
   "response": {

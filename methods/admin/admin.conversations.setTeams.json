@@ -9,11 +9,9 @@
       "desc": "The encoded channel_id to add or remove to workspaces.",
       "type": "string"
     },
-    "org_channel": {
+    "team_id": {
       "required": false,
-      "example": "true",
-      "desc": "True if channel has to be converted to an org channel.",
-      "type": "boolean"
+      "desc": "The workspace to which the channel belongs if the channel is a local workspace channel. Omit this argument if the channel is a cross-workspace or org-wide shared channel."
     },
     "target_team_ids": {
       "required": false,
@@ -21,9 +19,11 @@
       "desc": "A comma-separated list of workspaces to which the channel should be shared. Not required if the channel is being shared org-wide.",
       "type": "array"
     },
-    "team_id": {
+    "org_channel": {
       "required": false,
-      "desc": "The workspace to which the channel belongs if the channel is a local workspace channel. Omit this argument if the channel is a cross-workspace or org-wide shared channel."
+      "example": "true",
+      "desc": "True if channel has to be converted to an org channel.",
+      "type": "boolean"
     }
   },
   "response": {

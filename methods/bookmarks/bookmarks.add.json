@@ -4,14 +4,24 @@
   "deprecated": false,
   "desc": "Add bookmark to a channel.",
   "args": {
-    "access_level": {
-      "required": false,
-      "desc": "The level that we are setting the file's permission to (read or write).",
-      "type": "enum"
-    },
     "channel_id": {
       "required": true,
       "desc": "Channel to add bookmark in.",
+      "type": "string"
+    },
+    "title": {
+      "required": true,
+      "desc": "Title for the bookmark.",
+      "type": "string"
+    },
+    "link": {
+      "required": false,
+      "desc": "Link to bookmark.",
+      "type": "string"
+    },
+    "type": {
+      "required": true,
+      "desc": "Type of the bookmark i.e link.",
       "type": "string"
     },
     "emoji": {
@@ -24,24 +34,14 @@
       "desc": "ID of the entity being bookmarked. Only applies to message and file types.",
       "type": "string"
     },
-    "link": {
+    "access_level": {
       "required": false,
-      "desc": "Link to bookmark.",
-      "type": "string"
+      "desc": "The level that we are setting the file's permission to (read or write).",
+      "type": "enum"
     },
     "parent_id": {
       "required": false,
       "desc": "Id of this bookmark's parent.",
-      "type": "string"
-    },
-    "title": {
-      "required": true,
-      "desc": "Title for the bookmark.",
-      "type": "string"
-    },
-    "type": {
-      "required": true,
-      "desc": "Type of the bookmark i.e link.",
       "type": "string"
     }
   },

@@ -4,14 +4,14 @@
   "deprecated": false,
   "desc": "Set the name of a given workspace.",
   "args": {
+    "team_id": {
+      "required": true,
+      "desc": "ID for the workspace to set the name for."
+    },
     "name": {
       "required": true,
       "desc": "The new name of the workspace.",
       "type": "string"
-    },
-    "team_id": {
-      "required": true,
-      "desc": "ID for the workspace to set the name for."
     }
   },
   "response": {

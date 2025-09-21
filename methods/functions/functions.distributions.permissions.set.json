@@ -4,10 +4,10 @@
   "deprecated": false,
   "desc": "Set the access type of a custom slack function and define the users, team or org ids to be granted access if permission_type is set to named_entities",
   "args": {
-    "function_app_id": {
+    "function_id": {
       "required": false,
-      "example": "A12345",
-      "desc": "The encoded ID of the app.",
+      "example": "Fn12345",
+      "desc": "The encoded ID of the function.",
       "type": "string"
     },
     "function_callback_id": {
@@ -16,22 +16,22 @@
       "desc": "The callback ID defined in the function's definition file.",
       "type": "string"
     },
-    "function_id": {
+    "function_app_id": {
       "required": false,
-      "example": "Fn12345",
-      "desc": "The encoded ID of the function.",
+      "example": "A12345",
+      "desc": "The encoded ID of the app.",
       "type": "string"
-    },
-    "org_ids": {
-      "required": false,
-      "example": "E00000001,E00000002,E00000003",
-      "desc": "List of org IDs to allow for named_entities permission.",
-      "type": "array"
     },
     "permission_type": {
       "required": false,
       "desc": "The type of permission that defines how the function can be distributed.",
       "type": "enum"
+    },
+    "user_ids": {
+      "required": false,
+      "example": "U1234,U2345,U3456",
+      "desc": "List of encoded user IDs.",
+      "type": "array"
     },
     "team_ids": {
       "required": false,
@@ -39,10 +39,10 @@
       "desc": "List of team IDs to allow for named_entities permission.",
       "type": "array"
     },
-    "user_ids": {
+    "org_ids": {
       "required": false,
-      "example": "U1234,U2345,U3456",
-      "desc": "List of encoded user IDs.",
+      "example": "E00000001,E00000002,E00000003",
+      "desc": "List of org IDs to allow for named_entities permission.",
       "type": "array"
     }
   },
@@ -61,5 +61,14 @@
     "user_not_found": "One or more of the named entities was not found.",
     "app_not_found": "This app does not exist.",
     "permission_type_required": "`permission_type` is a required input."
-  }
+  },
+  "arg_groups": [
+    {
+      "args": [
+        "permission_type"
+      ],
+      "desc": ".",
+      "mutually_exclusive": true
+    }
+  ]
 }

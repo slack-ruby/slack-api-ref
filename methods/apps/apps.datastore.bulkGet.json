@@ -4,10 +4,6 @@
   "deprecated": false,
   "desc": "Get items from a datastore in bulk",
   "args": {
-    "app_id": {
-      "required": false,
-      "desc": ""
-    },
     "datastore": {
       "required": true,
       "desc": "name of the datastore.",
@@ -18,6 +14,10 @@
       "example": "[\"7c6dd137\", \"c7d6d731\"]",
       "desc": "items' ids.",
       "type": "array"
+    },
+    "app_id": {
+      "required": false,
+      "desc": ""
     }
   },
   "response": {

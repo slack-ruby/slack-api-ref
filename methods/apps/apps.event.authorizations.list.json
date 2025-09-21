@@ -4,13 +4,13 @@
   "deprecated": false,
   "desc": "Get a list of authorizations for the given event context. Each authorization represents an app installation that the event is visible to.",
   "args": {
-    "cursor": {
-      "required": false,
+    "event_context": {
+      "required": true,
       "desc": "",
       "type": "string"
     },
-    "event_context": {
-      "required": true,
+    "cursor": {
+      "required": false,
       "desc": "",
       "type": "string"
     },

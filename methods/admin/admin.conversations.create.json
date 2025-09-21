@@ -4,6 +4,12 @@
   "deprecated": false,
   "desc": "Create a public or private channel-based conversation.",
   "args": {
+    "name": {
+      "required": true,
+      "example": "mychannel",
+      "desc": "Name of the public or private channel to create.",
+      "type": "string"
+    },
     "description": {
       "required": false,
       "example": "It's a good channel, Bront.",
@@ -15,12 +21,6 @@
       "example": "true",
       "desc": "When true, creates a private channel instead of a public channel.",
       "type": "boolean"
-    },
-    "name": {
-      "required": true,
-      "example": "mychannel",
-      "desc": "Name of the public or private channel to create.",
-      "type": "string"
     },
     "org_wide": {
       "required": false,

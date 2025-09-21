@@ -4,11 +4,11 @@
   "deprecated": false,
   "desc": "Add up to one hundred default channels to an IDP group.",
   "args": {
-    "channel_ids": {
+    "usergroup_id": {
       "required": true,
-      "example": "C00000000,C00000001",
-      "desc": "Comma separated string of channel IDs.",
-      "type": "array"
+      "example": "S00000000",
+      "desc": "ID of the IDP group to add default channels for.",
+      "type": "string"
     },
     "team_id": {
       "required": false,
@@ -16,11 +16,11 @@
       "desc": "The workspace to add default channels in.",
       "type": "string"
     },
-    "usergroup_id": {
+    "channel_ids": {
       "required": true,
-      "example": "S00000000",
-      "desc": "ID of the IDP group to add default channels for.",
-      "type": "string"
+      "example": "C00000000,C00000001",
+      "desc": "Comma separated string of channel IDs.",
+      "type": "array"
     }
   },
   "response": {

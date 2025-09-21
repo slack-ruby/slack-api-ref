@@ -4,16 +4,10 @@
   "deprecated": false,
   "desc": "Get records from a List.",
   "args": {
-    "archived": {
-      "required": false,
-      "example": "true",
-      "desc": "Boolean indicating whether archived items or normal items should be returned.",
-      "type": "boolean"
-    },
-    "cursor": {
-      "required": false,
-      "example": "bGlzdF9pZDoxMjIxNzk3NzMyNDgzO2lkOjEyNzAxMjMxNTEzOTQ7ZGF0ZV9jcmVhdGVkOjE3NTE1NTkyMTU=",
-      "desc": "Next cursor for pagination.",
+    "list_id": {
+      "required": true,
+      "example": "F12345678",
+      "desc": "ID of the List.",
       "type": "string"
     },
     "limit": {
@@ -22,11 +16,17 @@
       "desc": "The maximum number of records to return.",
       "type": "integer"
     },
-    "list_id": {
-      "required": true,
-      "example": "F12345678",
-      "desc": "ID of the List.",
+    "cursor": {
+      "required": false,
+      "example": "bGlzdF9pZDoxMjIxNzk3NzMyNDgzO2lkOjEyNzAxMjMxNTEzOTQ7ZGF0ZV9jcmVhdGVkOjE3NTE1NTkyMTU=",
+      "desc": "Next cursor for pagination.",
       "type": "string"
+    },
+    "archived": {
+      "required": false,
+      "example": "true",
+      "desc": "Boolean indicating whether archived items or normal items should be returned.",
+      "type": "boolean"
     }
   },
   "response": {

@@ -4,16 +4,16 @@
   "deprecated": false,
   "desc": "Push a view onto the stack of a root view.",
   "args": {
-    "interactivity_pointer": {
-      "required": false,
-      "example": "12345.98765.abcd2358fdea",
-      "desc": "Exchange an interactivity pointer to post to the user.",
-      "type": "string"
-    },
     "trigger_id": {
       "required": false,
       "example": "12345.98765.abcd2358fdea",
       "desc": "Exchange a trigger to post to the user.",
+      "type": "string"
+    },
+    "interactivity_pointer": {
+      "required": false,
+      "example": "12345.98765.abcd2358fdea",
+      "desc": "Exchange an interactivity pointer to post to the user.",
       "type": "string"
     },
     "view": {
@@ -36,5 +36,15 @@
     "not_found": "Error returned when the requested view can't be found.",
     "push_limit_reached": "Error returned when the max push limit has been reached for views. Currently the limit is 3.",
     "view_too_large": "Error returned if the provided view is greater than 250kb."
-  }
+  },
+  "arg_groups": [
+    {
+      "args": [
+        "trigger_id",
+        "interactivity_pointer"
+      ],
+      "desc": "One of these arguments is required to push a view.",
+      "mutually_exclusive": true
+    }
+  ]
 }

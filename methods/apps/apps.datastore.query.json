@@ -4,16 +4,6 @@
   "deprecated": false,
   "desc": "Query a datastore for items",
   "args": {
-    "app_id": {
-      "required": false,
-      "desc": "Required if calling with user token."
-    },
-    "cursor": {
-      "required": false,
-      "example": "5c3e53d5",
-      "desc": "Set cursor to next_cursor returned by the previous call to list items in the next page.",
-      "type": "string"
-    },
     "datastore": {
       "required": true,
       "desc": "Name of the datastore.",
@@ -36,6 +26,16 @@
       "example": "{ \":artist_name\": \"Fred Rogers\" }",
       "desc": "A map of values referenced in expression.",
       "type": "object"
+    },
+    "app_id": {
+      "required": false,
+      "desc": "Required if calling with user token."
+    },
+    "cursor": {
+      "required": false,
+      "example": "5c3e53d5",
+      "desc": "Set cursor to next_cursor returned by the previous call to list items in the next page.",
+      "type": "string"
     },
     "limit": {
       "required": false,

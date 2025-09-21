@@ -4,10 +4,6 @@
   "deprecated": false,
   "desc": "Edits an existing item's attributes, or adds a new item if it does not already exist.",
   "args": {
-    "app_id": {
-      "required": false,
-      "desc": ""
-    },
     "datastore": {
       "required": true,
       "desc": "name of the datastore.",
@@ -17,6 +13,10 @@
       "required": true,
       "desc": "attribute names and values to be updated.",
       "type": "object"
+    },
+    "app_id": {
+      "required": false,
+      "desc": ""
     }
   },
   "response": {

@@ -4,17 +4,6 @@
   "deprecated": false,
   "desc": "Creates a reminder.",
   "args": {
-    "recurrence": {
-      "required": false,
-      "example": "{ \"frequency\": \"weekly\", \"weekdays\": [\"monday\", \"wednesday\", \"friday\"] }",
-      "desc": "Specify the repeating behavior of a reminder. Available options: daily, weekly, monthly, or yearly. If weekly, may further specify the days of the week.",
-      "type": "object"
-    },
-    "team_id": {
-      "required": false,
-      "desc": "Encoded team id, required if org token is used.",
-      "type": "string"
-    },
     "text": {
       "required": true,
       "example": "eat a banana",
@@ -32,6 +21,17 @@
       "example": "U18888888",
       "desc": "No longer supported - reminders cannot be set for other users. Previously, was the user who would receive the reminder.",
       "type": "user"
+    },
+    "team_id": {
+      "required": false,
+      "desc": "Encoded team id, required if org token is used.",
+      "type": "string"
+    },
+    "recurrence": {
+      "required": false,
+      "example": "{ \"frequency\": \"weekly\", \"weekdays\": [\"monday\", \"wednesday\", \"friday\"] }",
+      "desc": "Specify the repeating behavior of a reminder. Available options: daily, weekly, monthly, or yearly. If weekly, may further specify the days of the week.",
+      "type": "object"
     }
   },
   "response": {

@@ -4,6 +4,11 @@
   "deprecated": false,
   "desc": "Set the access level to a List for specified entities.",
   "args": {
+    "list_id": {
+      "required": true,
+      "example": "F1234ABCD",
+      "desc": "Encoded ID of the List."
+    },
     "access_level": {
       "required": true,
       "desc": "Desired level of access."
@@ -13,11 +18,6 @@
       "example": "[\"C1234ABCD\"]",
       "desc": "List of channels you wish to update access for. Can only be used if user_ids is not provided.",
       "type": "array"
-    },
-    "list_id": {
-      "required": true,
-      "example": "F1234ABCD",
-      "desc": "Encoded ID of the List."
     },
     "user_ids": {
       "required": false,

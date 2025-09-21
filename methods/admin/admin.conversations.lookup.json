@@ -4,22 +4,10 @@
   "deprecated": false,
   "desc": "Returns channels on the given team using the filters.",
   "args": {
-    "cursor": {
-      "required": false,
-      "example": "*",
-      "desc": "Set cursor to next_cursor returned in the previous call, to fetch the next page.",
-      "type": "string"
-    },
-    "last_message_activity_before": {
+    "team_ids": {
       "required": true,
-      "desc": "Filter by public channels where the most recent message was sent before last_message_activity.",
-      "type": "integer"
-    },
-    "limit": {
-      "required": false,
-      "example": 1000,
-      "desc": "Maximum number of results.",
-      "type": "integer"
+      "desc": "Array of team IDs to filter by.",
+      "type": "array"
     },
     "max_member_count": {
       "required": false,
@@ -27,10 +15,22 @@
       "desc": "Filter by public channels with member count equal to or less than the specified number.",
       "type": "integer"
     },
-    "team_ids": {
+    "last_message_activity_before": {
       "required": true,
-      "desc": "Array of team IDs to filter by.",
-      "type": "array"
+      "desc": "Filter by public channels where the most recent message was sent before last_message_activity.",
+      "type": "integer"
+    },
+    "cursor": {
+      "required": false,
+      "example": "*",
+      "desc": "Set cursor to next_cursor returned in the previous call, to fetch the next page.",
+      "type": "string"
+    },
+    "limit": {
+      "required": false,
+      "example": 1000,
+      "desc": "Maximum number of results.",
+      "type": "integer"
     }
   },
   "response": {

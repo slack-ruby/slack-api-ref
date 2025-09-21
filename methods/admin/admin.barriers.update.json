@@ -8,14 +8,14 @@
       "required": true,
       "desc": "The ID of the barrier you're trying to modify."
     },
+    "primary_usergroup_id": {
+      "required": true,
+      "desc": "The id of the primary IDP Group."
+    },
     "barriered_from_usergroup_ids": {
       "required": true,
       "desc": "A list of IDP Groups ids that the primary usergroup is to be barriered from.",
       "type": "array"
-    },
-    "primary_usergroup_id": {
-      "required": true,
-      "desc": "The id of the primary IDP Group."
     },
     "restricted_subjects": {
       "required": true,

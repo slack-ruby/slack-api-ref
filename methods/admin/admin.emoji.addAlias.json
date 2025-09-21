@@ -4,14 +4,14 @@
   "deprecated": false,
   "desc": "Add an emoji alias.",
   "args": {
-    "alias_for": {
-      "required": true,
-      "desc": "Name of the emoji for which the alias is being made. Any wrapping whitespace or colons will be automatically trimmed.",
-      "type": "string"
-    },
     "name": {
       "required": true,
       "desc": "The new alias for the specified emoji. Any wrapping whitespace or colons will be automatically trimmed.",
+      "type": "string"
+    },
+    "alias_for": {
+      "required": true,
+      "desc": "Name of the emoji for which the alias is being made. Any wrapping whitespace or colons will be automatically trimmed.",
       "type": "string"
     }
   },

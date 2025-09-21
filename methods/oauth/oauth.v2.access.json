@@ -22,16 +22,16 @@
       "desc": "The code param returned via the OAuth callback.",
       "type": "string"
     },
-    "grant_type": {
-      "required": null,
-      "example": "authorization_code",
-      "desc": "The grant_type param as described in the OAuth spec.",
-      "type": "string"
-    },
     "redirect_uri": {
       "required": null,
       "example": "http://example.com",
       "desc": "This must match the originally submitted URI (if one was sent).",
+      "type": "string"
+    },
+    "grant_type": {
+      "required": null,
+      "example": "authorization_code",
+      "desc": "The grant_type param as described in the OAuth spec.",
       "type": "string"
     },
     "refresh_token": {

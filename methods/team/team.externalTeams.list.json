@@ -4,10 +4,11 @@
   "deprecated": false,
   "desc": "Returns a list of all the external teams connected and details about the connection.",
   "args": {
-    "connection_status_filter": {
+    "limit": {
       "required": false,
-      "desc": "Status of the connected team.",
-      "type": "enum"
+      "example": 20,
+      "desc": "The maximum number of items to return per page.",
+      "type": "integer"
     },
     "cursor": {
       "required": false,
@@ -15,16 +16,11 @@
       "desc": "Paginate through collections of data by setting parameter to the team_id attribute returned by a previous request's response_metadata. If not provided, the first page of the collection is returned. See pagination for more detail.",
       "type": "string"
     },
-    "limit": {
+    "sort_field": {
       "required": false,
-      "example": 20,
-      "desc": "The maximum number of items to return per page.",
-      "type": "integer"
-    },
-    "slack_connect_pref_filter": {
-      "required": false,
-      "desc": "Filters connected orgs by Slack Connect pref override(s). Value can be: approved_orgs_only allow_sc_file_uploads profile_visibility away_team_sc_invite_permissions accept_sc_invites sc_mpdm_to_private require_sc_channel_for_sc_dm external_awareness_context_bar.",
-      "type": "array"
+      "example": "team_name",
+      "desc": "Name of the parameter that we are sorting by.",
+      "type": "enum"
     },
     "sort_direction": {
       "required": false,
@@ -32,16 +28,20 @@
       "desc": "Direction to sort in asc or desc.",
       "type": "enum"
     },
-    "sort_field": {
+    "slack_connect_pref_filter": {
       "required": false,
-      "example": "team_name",
-      "desc": "Name of the parameter that we are sorting by.",
-      "type": "enum"
+      "desc": "Filters connected orgs by Slack Connect pref override(s). Value can be: approved_orgs_only allow_sc_file_uploads profile_visibility away_team_sc_invite_permissions accept_sc_invites sc_mpdm_to_private require_sc_channel_for_sc_dm external_awareness_context_bar.",
+      "type": "array"
     },
     "workspace_filter": {
       "required": false,
       "desc": "Shows connected orgs which are connected on a specified encoded workspace ID.",
       "type": "array"
+    },
+    "connection_status_filter": {
+      "required": false,
+      "desc": "Status of the connected team.",
+      "type": "enum"
     }
   },
   "response": {

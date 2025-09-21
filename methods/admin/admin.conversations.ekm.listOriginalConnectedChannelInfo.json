@@ -9,10 +9,9 @@
       "desc": "A comma-separated list of channels to filter to.",
       "type": "string"
     },
-    "cursor": {
+    "team_ids": {
       "required": false,
-      "example": "5c3e53d5",
-      "desc": "Set cursor to next_cursor returned by the previous call to list items in the next page.",
+      "desc": "A comma-separated list of the workspaces to which the channels you would like returned belong.",
       "type": "string"
     },
     "limit": {
@@ -21,9 +20,10 @@
       "desc": "The maximum number of items to return. Must be between 1 - 1000 both inclusive.",
       "type": "integer"
     },
-    "team_ids": {
+    "cursor": {
       "required": false,
-      "desc": "A comma-separated list of the workspaces to which the channels you would like returned belong.",
+      "example": "5c3e53d5",
+      "desc": "Set cursor to next_cursor returned by the previous call to list items in the next page.",
       "type": "string"
     }
   },

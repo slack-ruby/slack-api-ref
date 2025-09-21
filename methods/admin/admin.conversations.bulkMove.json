@@ -4,15 +4,15 @@
   "deprecated": false,
   "desc": "Move public or private channels in bulk.",
   "args": {
-    "channel_ids": {
-      "required": true,
-      "desc": "An array of channel IDs.",
-      "type": "array"
-    },
     "target_team_id": {
       "required": true,
       "desc": "Target team ID.",
       "type": "string"
+    },
+    "channel_ids": {
+      "required": true,
+      "desc": "An array of channel IDs.",
+      "type": "array"
     }
   },
   "response": {

@@ -4,21 +4,21 @@
   "deprecated": false,
   "desc": "Assign entities to a particular authentication policy.",
   "args": {
-    "entity_ids": {
-      "required": true,
-      "example": "['U12345','U27345']",
-      "desc": "Array of IDs to assign to the policy.",
-      "type": "array"
-    },
-    "entity_type": {
-      "required": true,
-      "desc": "The type of entity to assign to the policy. Currently, USER is supported."
-    },
     "policy_name": {
       "required": true,
       "example": "email_password",
       "desc": "The name of the authentication policy to assign the entities to. Currently, email_password is the only policy that may be used with this method.",
       "type": "string"
+    },
+    "entity_type": {
+      "required": true,
+      "desc": "The type of entity to assign to the policy. Currently, USER is supported."
+    },
+    "entity_ids": {
+      "required": true,
+      "example": "['U12345','U27345']",
+      "desc": "Array of IDs to assign to the policy.",
+      "type": "array"
     }
   },
   "response": {

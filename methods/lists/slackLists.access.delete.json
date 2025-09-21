@@ -4,16 +4,16 @@
   "deprecated": false,
   "desc": "Revoke access to a List for specified entities.",
   "args": {
+    "list_id": {
+      "required": true,
+      "example": "F1234ABCD",
+      "desc": "Encoded ID of the List."
+    },
     "channel_ids": {
       "required": false,
       "example": "[\"C1234ABCD\"]",
       "desc": "List of channels you wish to update access for. Can only be used if user_ids is not provided.",
       "type": "array"
-    },
-    "list_id": {
-      "required": true,
-      "example": "F1234ABCD",
-      "desc": "Encoded ID of the List."
     },
     "user_ids": {
       "required": false,

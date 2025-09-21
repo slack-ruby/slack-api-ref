@@ -4,11 +4,13 @@
   "deprecated": false,
   "desc": "Add an Enterprise user to a workspace.",
   "args": {
-    "channel_ids": {
-      "required": false,
-      "example": "C123,C3456",
-      "desc": "Comma separated values of channel IDs to add user in the new workspace.",
-      "type": "string"
+    "team_id": {
+      "required": true,
+      "desc": "The ID (T1234) of the workspace."
+    },
+    "user_id": {
+      "required": true,
+      "desc": "The ID of the user to add to the workspace."
     },
     "is_restricted": {
       "required": false,
@@ -22,13 +24,11 @@
       "desc": "True if user should be added to the workspace as a single-channel guest.",
       "type": "boolean"
     },
-    "team_id": {
-      "required": true,
-      "desc": "The ID (T1234) of the workspace."
-    },
-    "user_id": {
-      "required": true,
-      "desc": "The ID of the user to add to the workspace."
+    "channel_ids": {
+      "required": false,
+      "example": "C123,C3456",
+      "desc": "Comma separated values of channel IDs to add user in the new workspace.",
+      "type": "string"
     }
   },
   "response": {

@@ -4,16 +4,16 @@
   "deprecated": false,
   "desc": "Deletes an item from an existing List.",
   "args": {
-    "id": {
-      "required": true,
-      "example": "Rec1234567",
-      "desc": "ID of item to delete.",
-      "type": "string"
-    },
     "list_id": {
       "required": true,
       "example": "F12345678",
       "desc": "ID of the List containing the item.",
+      "type": "string"
+    },
+    "id": {
+      "required": true,
+      "example": "Rec1234567",
+      "desc": "ID of item to delete.",
       "type": "string"
     }
   },

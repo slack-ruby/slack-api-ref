@@ -14,15 +14,15 @@
       "desc": "Optional email to receive this invite. Either emails or user_ids must be provided. Only one email or one user ID may be invited at a time.",
       "type": "array"
     },
-    "external_limited": {
-      "required": false,
-      "desc": "Optional boolean on whether invite is to an external limited member. Defaults to true.",
-      "type": "boolean"
-    },
     "user_ids": {
       "required": false,
       "desc": "Optional user_id to receive this invite. Either emails or user_ids must be provided. Only one email or one user ID may be invited at a time.",
       "type": "array"
+    },
+    "external_limited": {
+      "required": false,
+      "desc": "Optional boolean on whether invite is to an external limited member. Defaults to true.",
+      "type": "boolean"
     }
   },
   "response": {

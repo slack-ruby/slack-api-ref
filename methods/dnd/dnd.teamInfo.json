@@ -4,15 +4,15 @@
   "deprecated": false,
   "desc": "Retrieves the Do Not Disturb status for up to 50 users on a team.",
   "args": {
-    "team_id": {
-      "required": false,
-      "desc": "Encoded team id where passed in users belong, required if org token is used.",
-      "type": "string"
-    },
     "users": {
       "required": true,
       "example": "U1234,W4567",
       "desc": "Comma-separated list of users to fetch Do Not Disturb status for.",
+      "type": "string"
+    },
+    "team_id": {
+      "required": false,
+      "desc": "Encoded team id where passed in users belong, required if org token is used.",
       "type": "string"
     }
   },

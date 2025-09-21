@@ -4,16 +4,16 @@
   "deprecated": false,
   "desc": "Initiate a job to export List contents.",
   "args": {
-    "include_archived": {
-      "required": false,
-      "desc": "",
-      "type": "boolean"
-    },
     "list_id": {
       "required": true,
       "example": "F1234567",
       "desc": "ID of the List to export.",
       "type": "string"
+    },
+    "include_archived": {
+      "required": false,
+      "desc": "",
+      "type": "boolean"
     }
   },
   "response": {

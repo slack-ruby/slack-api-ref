@@ -4,15 +4,15 @@
   "deprecated": false,
   "desc": "Sets the access level to a canvas for specified entities",
   "args": {
-    "access_level": {
-      "required": true,
-      "desc": "Desired level of access.",
-      "type": "enum"
-    },
     "canvas_id": {
       "required": true,
       "example": "F1234ABCD",
       "desc": "Encoded ID of the canvas."
+    },
+    "access_level": {
+      "required": true,
+      "desc": "Desired level of access.",
+      "type": "enum"
     },
     "channel_ids": {
       "required": false,

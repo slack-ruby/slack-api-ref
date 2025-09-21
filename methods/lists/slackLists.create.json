@@ -4,10 +4,10 @@
   "deprecated": false,
   "desc": "Create a List.",
   "args": {
-    "copy_from_list_id": {
-      "required": false,
-      "example": "F1234567",
-      "desc": "ID of the List to copy.",
+    "name": {
+      "required": true,
+      "example": "My List",
+      "desc": "Name of the List.",
       "type": "string"
     },
     "description_blocks": {
@@ -16,23 +16,23 @@
       "desc": "A rich text description of the List.",
       "type": "array"
     },
-    "include_copied_list_records": {
-      "required": false,
-      "example": "false",
-      "desc": "Boolean indicating whether to include records when a List is copied.",
-      "type": "boolean"
-    },
-    "name": {
-      "required": true,
-      "example": "My List",
-      "desc": "Name of the List.",
-      "type": "string"
-    },
     "schema": {
       "required": false,
       "example": "[{ \"key\": \"task_name\", \"name\": \"Task Name\", \"type\": \"text\", \"is_primary_column\": true }, { \"key\": \"due_date\", \"name\": \"Due Date\", \"type\": \"date\" }, { \"key\": \"status\", \"name\": \"Status\", \"type\": \"select\", \"options\": { \"choices\": [ { \"value\": \"not_started\", \"label\": \"Not Started\", \"color\": \"red\" }, { \"value\": \"in_progress\", \"label\": \"In Progress\", \"color\": \"yellow\" }, { \"value\": \"completed\", \"label\": \"Completed\", \"color\": \"green\" } ] } }, { \"key\": \"assignee\", \"name\": \"Assignee\", \"type\": \"user\" }]",
       "desc": "Column definition for the List.",
       "type": "array"
+    },
+    "copy_from_list_id": {
+      "required": false,
+      "example": "F1234567",
+      "desc": "ID of the List to copy.",
+      "type": "string"
+    },
+    "include_copied_list_records": {
+      "required": false,
+      "example": "false",
+      "desc": "Boolean indicating whether to include records when a List is copied.",
+      "type": "boolean"
     },
     "todo_mode": {
       "required": false,

@@ -4,11 +4,6 @@
   "deprecated": false,
   "desc": "Cancel app request for team",
   "args": {
-    "enterprise_id": {
-      "required": false,
-      "example": "E12345",
-      "desc": "The ID of the enterprise where this request belongs."
-    },
     "request_id": {
       "required": true,
       "example": "Ar12345",
@@ -19,6 +14,11 @@
       "required": false,
       "example": "T12345",
       "desc": "The ID of the workspace where this request belongs."
+    },
+    "enterprise_id": {
+      "required": false,
+      "example": "E12345",
+      "desc": "The ID of the enterprise where this request belongs."
     }
   },
   "response": {
