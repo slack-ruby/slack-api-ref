@@ -1,0 +1,11 @@
+{
+  "arg_groups": [
+    {
+      "args": [
+        "permission_type"
+      ],
+      "desc": ".",
+      "mutually_exclusive": true
+    }
+  ]
+}

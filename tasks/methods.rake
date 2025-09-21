@@ -6,7 +6,8 @@ namespace :api do
     task :validate do
       schema = File.read('schemas/methods.json')
       validator = SlackApi::SpecValidator.new(schema)
-      Dir.glob('methods/**/*.json').each do |file|
+      Dir.glob('methods/**/*.json').grep_v(%r{/_patches\b}).each do |file|
+        puts file
         abort "Invalid file format: #{file}" unless validator.valid?(file)
       end
     end
