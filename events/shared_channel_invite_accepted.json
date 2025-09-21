@@ -1,5 +1,8 @@
 {
   "name": "shared_channel_invite_accepted",
   "desc": "A shared channel invited was accepted.",
-  "required_scope": "RTM"
+  "scopes": [],
+  "APIs": [
+    "Events"
+  ]
 }

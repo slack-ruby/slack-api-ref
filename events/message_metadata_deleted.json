@@ -1,5 +1,10 @@
 {
   "name": "message_metadata_deleted",
   "desc": "Message metadata was deleted.",
-  "required_scope": "RTM"
+  "scopes": [
+    "metadata.message:read"
+  ],
+  "APIs": [
+    "Events"
+  ]
 }

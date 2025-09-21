@@ -2,12 +2,18 @@
   "name": "file_unshared",
   "desc": "A file was unshared.",
   "long_desc": "The file_unshared event is sent when a file is unshared. It is sent to all connected clients for all users that had permission to see the file. The file property includes the file ID, as well as a top-level file_id. To obtain additional information about the unshared file, use the files.info API method. This event is not raised if the reason for a file's removal is due to a workspace's file retention policy, as opposed to a user unsharing the file. When an event occurs, we will send an HTTP POST request to your Request URL. The outer payload is uniform across all Events API methods, and contains fields like team_id and event. Learn more",
-  "required_scope": "RTM",
   "example": {
     "type": "file_unshared",
     "file_id": "F2147483862",
     "file": {
       "id": "F2147483862"
     }
-  }
+  },
+  "scopes": [
+    "files:read"
+  ],
+  "APIs": [
+    "Events",
+    "RTM"
+  ]
 }

@@ -1,5 +1,8 @@
 {
   "name": "app_home_opened",
   "desc": "User clicked into your App Home.",
-  "required_scope": "RTM"
+  "scopes": [],
+  "APIs": [
+    "Events"
+  ]
 }

@@ -2,10 +2,16 @@
   "name": "channel_unarchive",
   "desc": "A channel was unarchived.",
   "long_desc": "The channel_unarchive event is sent to all connections for a workspace when a public channel is unarchived. Clients can use this to update their local list of channels. When an event occurs, we will send an HTTP POST request to your Request URL. The outer payload is uniform across all Events API methods, and contains fields like team_id and event. Learn more",
-  "required_scope": "RTM",
   "example": {
     "type": "channel_unarchive",
     "channel": "C123ABC456",
     "user": "U123ABC456"
-  }
+  },
+  "scopes": [
+    "channels:read"
+  ],
+  "APIs": [
+    "Events",
+    "RTM"
+  ]
 }

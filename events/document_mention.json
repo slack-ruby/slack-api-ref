@@ -1,5 +1,14 @@
 {
   "name": "document_mention",
   "desc": "A bot is mentioned in the body of a canvas.",
-  "required_scope": "RTM"
+  "scopes": [
+    "channels:history",
+    "groups:history",
+    "im:history",
+    "mpim:history"
+  ],
+  "APIs": [
+    "Events",
+    "RTM"
+  ]
 }

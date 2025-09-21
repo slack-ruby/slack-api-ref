@@ -2,9 +2,12 @@
   "name": "commands_changed",
   "desc": "A slash command has been added or changed.",
   "long_desc": "The commands_changed event is sent to all connections for a workspace when a slash command for that workspace is added, removed or changed. This functionality is only used by our web client. The other APIs required to support slash command metadata are currently unstable. Until they are released other clients should ignore this event. When an event occurs, we will send an HTTP POST request to your Request URL. The outer payload is uniform across all Events API methods, and contains fields like team_id and event. Learn more",
-  "required_scope": "RTM",
   "example": {
     "type": "commands_changed",
     "event_ts": "1361482916.000004"
-  }
+  },
+  "scopes": [],
+  "APIs": [
+    "RTM"
+  ]
 }

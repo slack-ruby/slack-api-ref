@@ -1,5 +1,14 @@
 {
   "name": "message_deleted",
   "desc": "A message was deleted.",
-  "required_scope": "RTM"
+  "scopes": [
+    "channels:history",
+    "groups:history",
+    "im:history",
+    "mpim:history"
+  ],
+  "APIs": [
+    "Events",
+    "RTM"
+  ]
 }

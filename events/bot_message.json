@@ -1,5 +1,9 @@
 {
   "name": "bot_message",
   "desc": "A message was posted by an integration.",
-  "required_scope": "RTM"
+  "scopes": [],
+  "APIs": [
+    "Events",
+    "RTM"
+  ]
 }

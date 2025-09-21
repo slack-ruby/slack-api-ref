@@ -2,8 +2,11 @@
   "name": "reconnect_url",
   "desc": "Experimental.",
   "long_desc": "The reconnect_url event is currently unsupported and experimental. When an event occurs, we will send an HTTP POST request to your Request URL. The outer payload is uniform across all Events API methods, and contains fields like team_id and event. Learn more",
-  "required_scope": "RTM",
   "example": {
     "type": "reconnect_url"
-  }
+  },
+  "scopes": [],
+  "APIs": [
+    "RTM"
+  ]
 }

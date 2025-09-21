@@ -1,5 +1,9 @@
 {
   "name": "group_name",
   "desc": "A group was renamed.",
-  "required_scope": "RTM"
+  "scopes": [],
+  "APIs": [
+    "Events",
+    "RTM"
+  ]
 }

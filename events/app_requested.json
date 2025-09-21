@@ -1,5 +1,8 @@
 {
   "name": "app_requested",
   "desc": "User requested an app.",
-  "required_scope": "RTM"
+  "scopes": [],
+  "APIs": [
+    "Events"
+  ]
 }

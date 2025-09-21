@@ -1,5 +1,8 @@
 {
   "name": "tokens_revoked",
   "desc": "API tokens for your app were revoked.",
-  "required_scope": "RTM"
+  "scopes": [],
+  "APIs": [
+    "Events"
+  ]
 }

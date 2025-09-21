@@ -1,5 +1,10 @@
 {
   "name": "message_metadata_updated",
   "desc": "Message metadata was updated.",
-  "required_scope": "RTM"
+  "scopes": [
+    "metadata.message:read"
+  ],
+  "APIs": [
+    "Events"
+  ]
 }

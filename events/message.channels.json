@@ -1,5 +1,10 @@
 {
   "name": "message.channels",
   "desc": "A message was posted to a channel.",
-  "required_scope": "RTM"
+  "scopes": [
+    "channels:history"
+  ],
+  "APIs": [
+    "Events"
+  ]
 }

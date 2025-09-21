@@ -1,5 +1,9 @@
 {
   "name": "group_join",
   "desc": "A member joined a group.",
-  "required_scope": "RTM"
+  "scopes": [],
+  "APIs": [
+    "Events",
+    "RTM"
+  ]
 }

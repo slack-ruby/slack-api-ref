@@ -1,5 +1,10 @@
 {
   "name": "message.im",
   "desc": "A message was posted in a direct message channel.",
-  "required_scope": "RTM"
+  "scopes": [
+    "im:history"
+  ],
+  "APIs": [
+    "Events"
+  ]
 }

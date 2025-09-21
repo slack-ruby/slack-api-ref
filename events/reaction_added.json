@@ -2,7 +2,6 @@
   "name": "reaction_added",
   "desc": "A member has added an emoji reaction to an item.",
   "long_desc": "When a reaction is added to an item the reaction_added event is sent to all connected clients for users who can see the content that was reacted to. The user field indicates the ID of the user who performed this event. The item_user field represents the ID of the user that created the original item that has been reacted to. Some messages aren't authored by \"users,\" like those created by incoming webhooks. reaction_added events related to these messages will not include an item_user. The item field is a brief reference to what was reacted to. The above example describes a reaction to a message. Embedded item nodes are more lightweight than the structures you'll find in reactions.list. Here are some examples: When an event occurs, we will send an HTTP POST request to your Request URL. The outer payload is uniform across all Events API methods, and contains fields like team_id and event. Learn more",
-  "required_scope": "RTM",
   "example": {
     "type": "reaction_added",
     "user": "U123ABC456",
@@ -14,5 +13,12 @@
       "ts": "1360782400.498405"
     },
     "event_ts": "1360782804.083113"
-  }
+  },
+  "scopes": [
+    "reactions:read"
+  ],
+  "APIs": [
+    "Events",
+    "RTM"
+  ]
 }

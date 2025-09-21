@@ -2,11 +2,17 @@
   "name": "group_history_changed",
   "desc": "Bulk updates were made to a private channel's history.",
   "long_desc": "A group_history_changed event is sent to all clients in a private channel when bulk changes have occurred to that group's history. When clients receive this message they should reload chat history for the private channel if they have any cached messages before latest. When an event occurs, we will send an HTTP POST request to your Request URL. The outer payload is uniform across all Events API methods, and contains fields like team_id and event. Learn more",
-  "required_scope": "RTM",
   "example": {
     "type": "group_history_changed",
     "latest": "1358877455.000010",
     "ts": "1361482916.000003",
     "event_ts": "1361482916.000004"
-  }
+  },
+  "scopes": [
+    "groups:history"
+  ],
+  "APIs": [
+    "Events",
+    "RTM"
+  ]
 }

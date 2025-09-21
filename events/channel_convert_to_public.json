@@ -1,5 +1,9 @@
 {
   "name": "channel_convert_to_public",
   "desc": "This channel was made public; now any member in this workspace can see and join it.",
-  "required_scope": "RTM"
+  "scopes": [],
+  "APIs": [
+    "Events",
+    "RTM"
+  ]
 }

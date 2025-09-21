@@ -2,7 +2,6 @@
   "name": "user_huddle_changed",
   "desc": "A user's huddle status has changed.",
   "long_desc": "The user_huddle_changed event is sent to all connections for a workspace when a users's huddle status is changed. The event is identical to the existing user_change event. Both user_change and user_huddle_changed are dispatched at the exact same time. Use the users.profile.set method to update user profile data. When an event occurs, we will send an HTTP POST request to your Request URL. The outer payload is uniform across all Events API methods, and contains fields like team_id and event. Learn more",
-  "required_scope": "RTM",
   "example": {
     "type": "user_huddle_changed",
     "user": {
@@ -57,5 +56,10 @@
     },
     "cache_ts": 1648596421,
     "event_ts": "1648596712.000001"
-  }
+  },
+  "scopes": [],
+  "APIs": [
+    "Events",
+    "RTM"
+  ]
 }

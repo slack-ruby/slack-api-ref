@@ -1,5 +1,14 @@
 {
   "name": "channel_convert_to_private",
   "desc": "This channel was made private; now it can only be viewed or joined by invitation.",
-  "required_scope": "RTM"
+  "scopes": [
+    "channels:history",
+    "groups:history",
+    "im:history",
+    "mpim:history"
+  ],
+  "APIs": [
+    "Events",
+    "RTM"
+  ]
 }

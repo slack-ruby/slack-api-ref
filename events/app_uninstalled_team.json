@@ -1,5 +1,8 @@
 {
   "name": "app_uninstalled_team",
   "desc": "User has uninstalled an app.",
-  "required_scope": "RTM"
+  "scopes": [],
+  "APIs": [
+    "Events"
+  ]
 }

@@ -2,7 +2,6 @@
   "name": "dnd_updated_user",
   "desc": "Do not Disturb settings changed for a member.",
   "long_desc": "The dnd_updated_user event is sent to all connections for a workspace when a user's Do Not Disturb settings have changed. When an event occurs, we will send an HTTP POST request to your Request URL. The outer payload is uniform across all Events API methods, and contains fields like team_id and event. Learn more",
-  "required_scope": "RTM",
   "example": {
     "type": "dnd_updated_user",
     "user": "U1234",
@@ -11,5 +10,12 @@
       "next_dnd_start_ts": 1450387800,
       "next_dnd_end_ts": 1450423800
     }
-  }
+  },
+  "scopes": [
+    "dnd:read"
+  ],
+  "APIs": [
+    "Events",
+    "RTM"
+  ]
 }

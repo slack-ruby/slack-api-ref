@@ -1,5 +1,8 @@
 {
   "name": "function_executed",
   "desc": "Your app function is executed as a step in a workflow.",
-  "required_scope": "RTM"
+  "scopes": [],
+  "APIs": [
+    "Events"
+  ]
 }

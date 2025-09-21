@@ -2,7 +2,6 @@
   "name": "channel_rename",
   "desc": "A channel was renamed.",
   "long_desc": "The channel_rename event is sent to all connections for a workspace when a channel is renamed. Clients can use this to update their local list of channels. When an event occurs, we will send an HTTP POST request to your Request URL. The outer payload is uniform across all Events API methods, and contains fields like team_id and event. Learn more",
-  "required_scope": "RTM",
   "example": {
     "type": "channel_rename",
     "channel": {
@@ -10,5 +9,12 @@
       "name": "new_name",
       "created": 1360782804
     }
-  }
+  },
+  "scopes": [
+    "channels:read"
+  ],
+  "APIs": [
+    "Events",
+    "RTM"
+  ]
 }

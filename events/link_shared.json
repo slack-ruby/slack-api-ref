@@ -1,5 +1,10 @@
 {
   "name": "link_shared",
   "desc": "A message was posted containing one or more links relevant to your application.",
-  "required_scope": "RTM"
+  "scopes": [
+    "links:read"
+  ],
+  "APIs": [
+    "Events"
+  ]
 }

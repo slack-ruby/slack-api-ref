@@ -2,5 +2,11 @@
   "name": "team_domain_change",
   "desc": "The workspace domain has changed.",
   "long_desc": "The team_domain_change event is sent to all connections for a workspace when the workspace domain changes. Since the existing domain will continue to work (causing a redirect) until it is claimed by another workspace, clients don't need to do anything special with this event. It is sent for the benefit of our web client, which needs to reload when the domain changes. When an event occurs, we will send an HTTP POST request to your Request URL. The outer payload is uniform across all Events API methods, and contains fields like team_id and event. Learn more",
-  "required_scope": "RTM"
+  "scopes": [
+    "team:read"
+  ],
+  "APIs": [
+    "Events",
+    "RTM"
+  ]
 }

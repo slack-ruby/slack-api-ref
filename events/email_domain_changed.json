@@ -2,10 +2,16 @@
   "name": "email_domain_changed",
   "desc": "The workspace email domain has changed.",
   "long_desc": "The email_domain_changed event is sent to all connections for a workspace when the email domain settings for a workspace change. Most clients can ignore this event. When an event occurs, we will send an HTTP POST request to your Request URL. The outer payload is uniform across all Events API methods, and contains fields like team_id and event. Learn more",
-  "required_scope": "RTM",
   "example": {
     "type": "email_domain_changed",
     "email_domain": "example.com",
     "event_ts": "1360782804.083113"
-  }
+  },
+  "scopes": [
+    "team:read"
+  ],
+  "APIs": [
+    "Events",
+    "RTM"
+  ]
 }

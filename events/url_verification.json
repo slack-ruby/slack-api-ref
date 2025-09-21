@@ -1,5 +1,8 @@
 {
   "name": "url_verification",
   "desc": "Verifies ownership of an Events API Request URL.",
-  "required_scope": "RTM"
+  "scopes": [],
+  "APIs": [
+    "Events"
+  ]
 }

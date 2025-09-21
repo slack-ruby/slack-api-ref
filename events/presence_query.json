@@ -2,12 +2,15 @@
   "name": "presence_query",
   "desc": "Determine the current presence status for a list of users.",
   "long_desc": "Write-only event Ask the message server about the current presence status for the specified list of users. Instead of receiving this event type, your app must post it into the websocket. Present an array labeled ids containing all of the user IDs you want presence status for, up to 500. To use this event, you'll need to first connect with rtm.connect or rtm.start. For instance, to query presence status for users U123456 and W123456, present JSON like so: In response, you'll receive singular or batch presence_change events declaring the current presence status of each queried user ID. presence_query is rate limited. See presence for more information. To subscribe to presence_change events, use presence_sub. When an event occurs, we will send an HTTP POST request to your Request URL. The outer payload is uniform across all Events API methods, and contains fields like team_id and event. Learn more",
-  "required_scope": "RTM",
   "example": {
     "type": "presence_query",
     "ids": [
       "U061F7AUR",
       "W123456"
     ]
-  }
+  },
+  "scopes": [],
+  "APIs": [
+    "RTM"
+  ]
 }

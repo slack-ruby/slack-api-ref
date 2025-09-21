@@ -2,7 +2,6 @@
   "name": "bot_changed",
   "desc": "A bot user was changed.",
   "long_desc": "The bot_changed event is sent to all connections for a workspace when an integration \"bot\" is updated. Clients can use this to update their local list of bots. If the bot belongs to a Slack app, the event will also include an app_id pointing to its parent app. When an event occurs, we will send an HTTP POST request to your Request URL. The outer payload is uniform across all Events API methods, and contains fields like team_id and event. Learn more",
-  "required_scope": "RTM",
   "example": {
     "type": "bot_changed",
     "bot": {
@@ -13,5 +12,9 @@
         "image_48": "https://slack.com/path/to/hugbot_48.png"
       }
     }
-  }
+  },
+  "scopes": [],
+  "APIs": [
+    "RTM"
+  ]
 }

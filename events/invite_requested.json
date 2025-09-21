@@ -1,5 +1,10 @@
 {
   "name": "invite_requested",
   "desc": "User requested an invite.",
-  "required_scope": "RTM"
+  "scopes": [
+    "admin.invites:read"
+  ],
+  "APIs": [
+    "Events"
+  ]
 }

@@ -2,7 +2,6 @@
   "name": "external_org_migration_finished",
   "desc": "An enterprise org migration has finished on an external workspace.",
   "long_desc": "The external_org_migration_finished event is sent to all connections when an external workspace completes to migrate to an Enterprise Grid. The team indicates the external workspace that is migrating. The date_started indicates the time the external workspace started to migrate. The date_finished indicates the time the external workspace finished to migrate. When an event occurs, we will send an HTTP POST request to your Request URL. The outer payload is uniform across all Events API methods, and contains fields like team_id and event. Learn more",
-  "required_scope": "RTM",
   "example": {
     "type": "external_org_migration_finished",
     "team": {
@@ -11,5 +10,9 @@
     },
     "date_started": 1551398400,
     "date_finished": 1551409200
-  }
+  },
+  "scopes": [],
+  "APIs": [
+    "RTM"
+  ]
 }

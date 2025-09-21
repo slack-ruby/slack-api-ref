@@ -1,5 +1,9 @@
 {
   "name": "channel_topic",
   "desc": "A channel topic was updated.",
-  "required_scope": "RTM"
+  "scopes": [],
+  "APIs": [
+    "Events",
+    "RTM"
+  ]
 }

@@ -32,7 +32,6 @@ module SlackApi
       puts filename
       existing_event_data = File.exist?(filename) ? JSON.load_file(filename) : {}
       all_data = existing_event_data.merge(data)
-      all_data.delete('required_scope')
       File.write(filename, JSON.pretty_generate(all_data))
     end
   end

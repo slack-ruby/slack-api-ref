@@ -2,10 +2,13 @@
   "name": "group_marked",
   "desc": "A private channel read marker was updated.",
   "long_desc": "The group_marked event is sent to all open connections for a user when that user moves the read cursor in a private channel. When an event occurs, we will send an HTTP POST request to your Request URL. The outer payload is uniform across all Events API methods, and contains fields like team_id and event. Learn more",
-  "required_scope": "RTM",
   "example": {
     "type": "group_marked",
     "channel": "G024BE91L",
     "ts": "1401383885.000061"
-  }
+  },
+  "scopes": [],
+  "APIs": [
+    "RTM"
+  ]
 }

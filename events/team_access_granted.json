@@ -1,5 +1,8 @@
 {
   "name": "team_access_granted",
   "desc": "Access to a set of teams was granted to your org app.",
-  "required_scope": "RTM"
+  "scopes": [],
+  "APIs": [
+    "Events"
+  ]
 }

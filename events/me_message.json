@@ -1,5 +1,14 @@
 {
   "name": "me_message",
   "desc": "A /me message was sent.",
-  "required_scope": "RTM"
+  "scopes": [
+    "channels:history",
+    "groups:history",
+    "im:history",
+    "mpim:history"
+  ],
+  "APIs": [
+    "Events",
+    "RTM"
+  ]
 }

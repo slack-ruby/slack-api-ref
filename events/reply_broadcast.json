@@ -1,5 +1,14 @@
 {
   "name": "reply_broadcast",
   "desc": "(No longer served) A message thread's reply was broadcast to a channel.",
-  "required_scope": "RTM"
+  "scopes": [
+    "channels:history",
+    "groups:history",
+    "im:history",
+    "mpim:history"
+  ],
+  "APIs": [
+    "Events",
+    "RTM"
+  ]
 }

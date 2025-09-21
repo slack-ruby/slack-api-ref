@@ -1,5 +1,9 @@
 {
   "name": "channel_leave",
   "desc": "A member left a channel.",
-  "required_scope": "RTM"
+  "scopes": [],
+  "APIs": [
+    "Events",
+    "RTM"
+  ]
 }

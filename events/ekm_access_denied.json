@@ -1,5 +1,14 @@
 {
   "name": "ekm_access_denied",
   "desc": "Message content redacted due to Enterprise Key Management (EKM).",
-  "required_scope": "RTM"
+  "scopes": [
+    "channels:history",
+    "groups:history",
+    "im:history",
+    "mpim:history"
+  ],
+  "APIs": [
+    "Events",
+    "RTM"
+  ]
 }
