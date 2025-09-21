@@ -14,8 +14,8 @@ This is a maintained, machine-readable version of the Slack API Docs, generated 
 
 [Known undocumented methods and groups](https://github.com/ErikKalkoken/slackApiDoc) have been added manually.
 
-* [methods](methods/undocumented): Undocumented methods.
-* [groups](groups/undocumented): Undocumented groups.
+* [methods](methods/_undocumented): Undocumented methods.
+* [groups](groups/_undocumented): Undocumented groups.
 
 ### It needs an update!
 

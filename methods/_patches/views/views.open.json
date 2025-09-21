@@ -1,0 +1,12 @@
+{
+  "arg_groups": [
+    {
+      "args": [
+        "trigger_id",
+        "interactivity_pointer"
+      ],
+      "desc": "One of these arguments is required to open a view for a user.",
+      "mutually_exclusive": true
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "arg_groups": [
+    {
+      "args": [
+        "attachments",
+        "blocks",
+        "text"
+      ],
+      "desc": "One of these arguments in addition to text is required to describe the content of the message. When attachments or blocks are included, text will be used as fallback text for notifications only.",
+      "mutually_exclusive": false
+    }
+  ]
+}

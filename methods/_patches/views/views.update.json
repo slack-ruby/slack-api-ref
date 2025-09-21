@@ -1,0 +1,12 @@
+{
+  "arg_groups": [
+    {
+      "args": [
+        "external_id",
+        "view_id"
+      ],
+      "desc": "Exactly one of these arguments is required to identify the view that is to be updated.",
+      "mutually_exclusive": true
+    }
+  ]
+}

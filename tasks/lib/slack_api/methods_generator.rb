@@ -48,6 +48,12 @@ module SlackApi
         errors: errors
       }.merge(fields)
 
+      patch_filename = "methods/_patches/#{data['group']}/#{data['name']}.json"
+      if File.exist?(patch_filename)
+        puts "(patch) #{patch_filename}"
+        result.merge!(JSON.load_file(patch_filename))
+      end
+
       filename = "methods/#{data['group']}/#{data['name']}.json"
       FileUtils.mkdir_p("methods/#{data['group']}")
       puts filename
@@ -93,7 +99,7 @@ module SlackApi
         end
       end
 
-      [args.sort.to_h, fields]
+      [args.to_h, fields]
     end
 
     def massage_type(name, arg, data = {})
