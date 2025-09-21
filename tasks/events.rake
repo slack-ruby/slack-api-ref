@@ -1,3 +1,4 @@
+require_relative 'lib/slack_api/events_generator'
 require_relative 'lib/slack_api/spec_validator'
 
 namespace :api do
@@ -10,6 +11,12 @@ namespace :api do
         puts file
         abort "Invalid file format: #{file}" unless validator.valid?(file)
       end
+    end
+
+    desc 'Update events.'
+    task :update do
+      # Rake::Task['api:clean_files'].invoke('events')
+      SlackApi::EventsGenerator.new.generate!
     end
   end
 end

@@ -1,3 +1,4 @@
+require_relative 'lib/slack_api/methods_generator'
 require_relative 'lib/slack_api/spec_validator'
 
 namespace :api do
@@ -11,5 +12,12 @@ namespace :api do
         abort "Invalid file format: #{file}" unless validator.valid?(file)
       end
     end
+  end
+
+  desc 'Update methods and events.'
+  task :update do
+    Rake::Task['api:clean_files'].invoke('methods')
+    Rake::Task['api:clean_files'].invoke('groups')
+    SlackApi::MethodsGenerator.new.generate!
   end
 end
