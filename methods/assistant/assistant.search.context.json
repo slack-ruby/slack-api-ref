@@ -31,7 +31,7 @@
     "include_bots": {
       "required": false,
       "example": "true",
-      "desc": "If you want the results to include bots.",
+      "desc": "Whether the results should include bots.",
       "type": "boolean"
     },
     "before": {
@@ -59,7 +59,7 @@
     "cursor": {
       "required": false,
       "example": "asf91j9jfd",
-      "desc": "The cursor returned by the API. Leave this blank for the first request, and use this to get the next page of results.",
+      "desc": "The cursor returned by the API. Leave this blank for the first request and use this to get the next page of results.",
       "type": "string"
     },
     "limit": {
@@ -92,21 +92,28 @@
     },
     "term_clauses": {
       "required": false,
-      "desc": "A list of term clauses. A term clause is a string with search terms. Search results returned will match every term clause specified (i.e. conjunctive normal form).",
+      "desc": "A list of term clauses. A term clause is a string with search terms. Search results returned will match every term clause specified (i.e., conjunctive normal form).",
       "type": "array"
+    },
+    "modifiers": {
+      "required": false,
+      "example": "has:pin before:yesterday",
+      "desc": "A string containing only modifiers in the format of modifier:value. Search results returned will match the modifier value. For now modifiers only affect term clauses.",
+      "type": "string"
     }
   },
   "response": {
     "examples": []
   },
   "errors": {
-    "internal_error": "internal error",
-    "rate_limited": "rate limited",
-    "missing_query": "missing query",
-    "query_too_long": "query too long",
-    "feature_not_enabled": "The feature is not available on the current workspace",
-    "invalid_action_token": "action_token provided is not valid",
-    "invalid_cursor": "cursormark provided is not valid",
-    "context_channel_not_found": "Specified context_channel_id is invalid, or the user lacks permission to view it"
+    "internal_error": "Internal error.",
+    "rate_limited": "Rate limited.",
+    "missing_query": "Missing query.",
+    "query_too_long": "Query too long.",
+    "feature_not_enabled": "The feature is not available on the current workspace.",
+    "invalid_action_token": "The `action_token` provided is not valid.",
+    "invalid_cursor": "The cursormark provided is not valid.",
+    "context_channel_not_found": "Specified `context_channel_id` is invalid or the user lacks permission to view it.",
+    "assistant_search_context_disabled": "We're having issues returning your search results. Please wait and try again."
   }
 }

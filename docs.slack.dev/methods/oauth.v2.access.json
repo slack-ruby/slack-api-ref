@@ -21,6 +21,11 @@
         "example": "4724469134.4644010092847.232b4e6d82c333b475fc30f5f5a341d294feb1a94392c2fd791f7ab7731a443d1a",
         "type": "string"
       },
+      "code_verifier": {
+        "desc": "The code_verifier param used to generate the code_challenge originally. Used for PKCE.",
+        "example": "secret12345",
+        "type": "string"
+      },
       "redirect_uri": {
         "desc": "This must match the originally submitted URI (if one was sent).",
         "example": "http://example.com",
@@ -79,15 +84,15 @@
       },
       "is_enterprise_install": {
         "type": "boolean",
-        "desc": "Boolean flag indicating whether the generated token is enterprise level token or not"
+        "desc": "Boolean flag indicating whether the generated token is Enterprise-level token or not."
       },
       "expires_in": {
         "type": "integer",
-        "desc": "Time until this credential expires, if it expires at all"
+        "desc": "Time until this credential expires, if it expires at all."
       },
       "refresh_token": {
         "type": "string",
-        "desc": "Refresh token for this credential"
+        "desc": "Refresh token for this credential."
       },
       "team": {
         "anyOf": [
@@ -168,11 +173,11 @@
           },
           "expires_in": {
             "type": "integer",
-            "desc": "Time until this credential expires, if it expires at all"
+            "desc": "Time until this credential expires, if it expires at all."
           },
           "refresh_token": {
             "type": "string",
-            "desc": "Refresh token for this credential"
+            "desc": "Refresh token for this credential."
           }
         }
       },
@@ -188,20 +193,20 @@
         "properties": {
           "channel": {
             "type": "string",
-            "desc": "Name of channel"
+            "desc": "Name of channel."
           },
           "channel_id": {
             "type": "string",
             "subtype": "channel",
-            "desc": "Encoded ID of channel"
+            "desc": "Encoded ID of channel."
           },
           "configuration_url": {
             "type": "string",
-            "desc": "URL for managing the webhook"
+            "desc": "URL for managing the webhook."
           },
           "url": {
             "type": "string",
-            "desc": "Endpoint for triggering the wehbook"
+            "desc": "Endpoint for triggering the wehbook."
           }
         }
       }
@@ -233,19 +238,25 @@
       "desc": "Missing `scope` in the request."
     },
     "oauth_authorization_url_mismatch": {
-      "desc": "The OAuth flow was initiated on an incorrect version of the authorization url. The flow must be initiated via /oauth/v2/authorize ."
+      "desc": "The OAuth flow was initiated on an incorrect version of the authorization url. The flow must be initiated via /oauth/v2/authorize."
     },
     "preview_feature_not_available": {
       "desc": "Returned when the API method is not yet available on the team in context."
     },
     "user_email_unverified": {
-      "desc": "The users email is unverified"
+      "desc": "The users email is unverified."
+    },
+    "pkce_not_allowed": {
+      "desc": "The app is not allowed to use the PKCE flow."
+    },
+    "invalid_code_verifier": {
+      "desc": "The code_verifier is invalid."
     }
   },
   "examples": {
     "success": {
       "url": "/api/oauth.v2.access",
-      "description": "Successful token request with scopes for both a bot user and a user token",
+      "description": "Successful token request with scopes for both a bot user and a user token.",
       "example": {
         "ok": true,
         "access_token": "xoxb-17653672481-19874698323-pdFZKVeTuE8sk7oOcBrzbqgy",
@@ -271,7 +282,7 @@
     },
     "success_with_token_rotation": {
       "url": "/api/oauth.v2.access",
-      "description": "Successful token request with scopes for both a bot user and a user token, and token rotation enabled",
+      "description": "Successful token request with scopes for both a bot user and a user token, and token rotation enabled.",
       "example": {
         "ok": true,
         "access_token": "xoxe.xoxb-1-..",
@@ -301,7 +312,7 @@
     },
     "success_with_sign_in_with_slack": {
       "url": "/api/oauth.v2.access",
-      "description": "Successful Sign in with Slack response",
+      "description": "Successful Sign in with Slack response.",
       "example": {
         "ok": true,
         "app_id": "A0118NQPZZC",

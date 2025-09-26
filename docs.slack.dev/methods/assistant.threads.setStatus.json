@@ -6,8 +6,8 @@
       "assistant:write"
     ]
   },
-  "json_input_supported": true,
   "rate_limits": "t5",
+  "json_input_supported": true,
   "args": {
     "type": "object",
     "required": [
@@ -19,7 +19,7 @@
     "properties": {
       "token": {
         "type": "string",
-        "desc": "Auth token with which to authenticate the session",
+        "desc": "Authentication token bearing required scopes. Tokens should be passed as an HTTP Authorization header or alternatively, as a POST parameter.",
         "subtype": "auth",
         "example": "xxxx-xxxxxxxxx-xxxx"
       },

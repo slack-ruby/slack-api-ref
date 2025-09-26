@@ -20,7 +20,9 @@
     "properties": {
       "token": {
         "type": "string",
-        "subtype": "auth"
+        "subtype": "auth",
+        "desc": "Authentication token bearing required scopes. Tokens should be passed as an HTTP Authorization header or alternatively, as a POST parameter.",
+        "example": "xxxx-xxxxxxxxx-xxxx"
       },
       "name": {
         "desc": "Name of the List.",
@@ -70,9 +72,13 @@
     ],
     "properties": {
       "list_id": {
-        "desc": "The ID of the created List.",
+        "desc": "The ID of the List created.",
         "example": "F12345678",
         "schema": "file_id"
+      },
+      "list_metadata": {
+        "desc": "The metadata of the List created.",
+        "schema": ""
       }
     }
   },

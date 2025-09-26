@@ -379,7 +379,7 @@
   },
   {
     "name": "admin.functions.list",
-    "description": "Look up functions by a set of apps",
+    "description": "Look up functions by a set of apps.",
     "family": [
       "admin"
     ]
@@ -393,7 +393,7 @@
   },
   {
     "name": "admin.functions.permissions.set",
-    "description": "Set the visibility of a Slack function and define the users or workspaces if it is set to named_entities",
+    "description": "Set the visibility of a Slack function and define the users or workspaces if it is set to named_entities.",
     "family": [
       "admin"
     ]

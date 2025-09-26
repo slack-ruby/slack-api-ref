@@ -9,9 +9,9 @@
       "chat:write"
     ]
   },
+  "rate_limits": "t5",
   "json_input_supported": true,
   "slack_connect_workspaces_allowed": true,
-  "rate_limits": "t5",
   "args": {
     "type": "object",
     "required": [
@@ -62,6 +62,11 @@
         "desc": "An encoded ID or channel name that represents a channel, private group, or IM channel to send the message to. See [below](#channels) for more details.",
         "type": "string",
         "subtype": "channel"
+      },
+      "current_draft_last_updated_ts": {
+        "desc": "This field represents the timestamp of the draft's last update at the time this API is called. If the current message is a draft, this field can be provided to ensure synchronization with the server.",
+        "example": "1524523204.000192",
+        "type": "string"
       },
       "icon_emoji": {
         "desc": "Emoji to use as the icon for this message. Overrides `icon_url`.",
@@ -209,6 +214,18 @@
     "channel_not_found": {
       "desc": "Value passed for `channel` was invalid."
     },
+    "draft_already_deleted": {
+      "desc": "The draft has already been deleted."
+    },
+    "draft_already_sent": {
+      "desc": "The draft has already been sent."
+    },
+    "draft_has_conflict": {
+      "desc": "The client draft version is out of sync with the server draft version."
+    },
+    "draft_not_found": {
+      "desc": "The draft was not found."
+    },
     "duplicate_channel_not_found": {
       "desc": "Channel associated with `client_msg_id` was invalid."
     },
@@ -219,16 +236,16 @@
       "desc": "Your message couldn’t be sent because your admins have disabled sending messages to this channel."
     },
     "invalid_blocks": {
-      "desc": "Blocks submitted with this message are not valid"
+      "desc": "Blocks submitted with this message are not valid."
     },
     "invalid_blocks_format": {
       "desc": "The `blocks` is not a valid JSON object or doesn't match the Block Kit syntax."
     },
     "invalid_metadata_format": {
-      "desc": "Invalid metadata format provided"
+      "desc": "Invalid metadata format provided."
     },
     "invalid_metadata_schema": {
-      "desc": "Invalid metadata schema provided"
+      "desc": "Invalid metadata schema provided."
     },
     "is_archived": {
       "desc": "Channel has been archived."
@@ -237,28 +254,28 @@
       "desc": "Markdown text cannot be used in conjunction with `blocks` or `text` argument."
     },
     "message_limit_exceeded": {
-      "desc": "Members on this team are sending too many messages. For more details, see https://slack.com/help/articles/115002422943-Usage-limits-for-free-workspaces"
+      "desc": "Members on this team are sending too many messages. For more details, see https://slack.com/help/articles/115002422943-Usage-limits-for-free-workspaces."
     },
     "messages_tab_disabled": {
       "desc": "Messages tab for the app is disabled."
     },
     "metadata_must_be_sent_from_app": {
-      "desc": "Message metadata can only be posted or updated using an app-level token"
+      "desc": "Message metadata can only be posted or updated using an app-level token."
     },
     "metadata_too_large": {
-      "desc": "Metadata exceeds size limit"
+      "desc": "Metadata exceeds size limit."
     },
     "msg_blocks_too_long": {
       "desc": "Blocks submitted with this message are too long."
     },
     "no_text": {
-      "desc": "No message text provided"
+      "desc": "No message text provided."
     },
     "not_in_channel": {
       "desc": "Cannot post user messages to a channel they are not in."
     },
     "rate_limited": {
-      "desc": "Application has posted too many messages, [read the Rate Limit documentation](/apis/web-api/rate-limits) for more information"
+      "desc": "Application has posted too many messages, [read the Rate Limit documentation](/apis/web-api/rate-limits) for more information."
     },
     "restricted_action": {
       "desc": "A workspace preference prevents the authenticated user from posting."
@@ -276,13 +293,13 @@
       "desc": "Cannot post top-level messages into a thread-only channel."
     },
     "slack_connect_canvas_sharing_blocked": {
-      "desc": "Admin has disabled Canvas File sharing in all Slack Connect communications"
+      "desc": "Admin has disabled Canvas File sharing in all Slack Connect communications."
     },
     "slack_connect_file_link_sharing_blocked": {
-      "desc": "Admin has disabled Slack File sharing in all Slack Connect communications"
+      "desc": "Admin has disabled Slack File sharing in all Slack Connect communications."
     },
     "slack_connect_lists_sharing_blocked": {
-      "desc": "Admin has disabled Lists sharing in all Slack Connect communications"
+      "desc": "Admin has disabled Lists sharing in all Slack Connect communications."
     },
     "team_not_found": {
       "desc": "This error occurs if, when using an org-wide token, the `channel_name` is passed instead of the `channel_id`."
@@ -301,11 +318,6 @@
     },
     "attachment_payload_limit_exceeded": {
       "desc": "Attachment payload size is too long."
-    }
-  },
-  "warnings": {
-    "message_truncated": {
-      "desc": "The `text` field of a message should have no more than 40,000 characters. We [truncate really long messages](/changelog/2018-04-truncating-really-long-messages)."
     }
   },
   "examples": {

@@ -9,9 +9,9 @@
       "chat:write"
     ]
   },
+  "rate_limits": "t3",
   "json_input_supported": true,
   "slack_connect_workspaces_allowed": true,
-  "rate_limits": "t3",
   "args": {
     "type": "object",
     "required": [
@@ -268,11 +268,12 @@
     },
     "streaming_state_conflict": {
       "desc": "The message is currently streaming text and cannot be edited."
-    }
-  },
-  "warnings": {
-    "message_truncated": {
-      "desc": "The `text` field of a message should have no more than 40,000 characters. We [truncate really long messages](/changelog/2018-04-truncating-really-long-messages)."
+    },
+    "file_not_found": {
+      "desc": "One or more of the provided file IDs could not be found."
+    },
+    "posting_to_channel_denied": {
+      "desc": "The user does not have permission to share files in this channel."
     }
   },
   "examples": {

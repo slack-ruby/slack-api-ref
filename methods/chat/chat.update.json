@@ -116,7 +116,9 @@
     "too_many_attachments": "Too many attachments were provided with this message. A maximum of 100 attachments are allowed on a message.",
     "update_failed": "Internal update failure.",
     "invalid_blocks_format": "The `blocks` array is not a valid JSON object or doesn't match the Block Kit syntax.",
-    "streaming_state_conflict": "The message is currently streaming text and cannot be edited."
+    "streaming_state_conflict": "The message is currently streaming text and cannot be edited.",
+    "file_not_found": "One or more of the provided file IDs could not be found.",
+    "posting_to_channel_denied": "The user does not have permission to share files in this channel."
   },
   "arg_groups": [
     {

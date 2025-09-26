@@ -1,13 +1,13 @@
 {
-  "desc": "Look up functions by a set of apps",
+  "desc": "Look up functions by a set of apps.",
   "http_method": "POST",
   "scope": {
     "user": [
       "admin.workflows:read"
     ]
   },
-  "json_input_supported": true,
   "rate_limits": "t2",
+  "json_input_supported": true,
   "args": {
     "type": "object",
     "required": [
@@ -22,26 +22,32 @@
         "example": "xxxx-xxxxxxxxx-xxxx"
       },
       "team_id": {
-        "desc": "The team context to retrieve functions from",
-        "example": "T00000001",
-        "schema": "workspace_id"
+        "schema": "workspace_id",
+        "desc": "The team context to retrieve functions from.",
+        "example": "T00000001"
       },
       "app_ids": {
         "type": "array",
-        "desc": "Comma-separated array of app IDs to get functions for; max 50",
+        "desc": "Comma-separated array of app IDs to get functions for; max 50.",
         "example": "A02,A1234",
         "items": {
           "schema": "app_id"
         },
-        "maxItems": 50
+        "maxItems": 50,
+        "uniqueItems": true
+      },
+      "include_non_distributed_functions": {
+        "type": "boolean",
+        "default": false,
+        "desc": "Whether to also include functions that are not yet distributed to any users in the function count. This is needed for admins that are approving an app request and will only work if the team owns the app."
       },
       "cursor": {
-        "desc": "Set `cursor` to `next_cursor` returned by the previous call to list items in the next page",
+        "desc": "Set `cursor` to `next_cursor` returned by the previous call to list items in the next page.",
         "example": "dXNlcjpVMDYxTkZUVDI=",
         "type": "string"
       },
       "limit": {
-        "desc": "The number of results that will be returned by the API on each invocation. Must be between 1 and 1000, both inclusive",
+        "desc": "The number of results that will be returned by the API on each invocation. Must be between 1 and 1000, both inclusive.",
         "example": "20",
         "type": "integer",
         "default": 100,
@@ -72,10 +78,10 @@
       "desc": "Value passed for `cursor` was not valid or is no longer valid."
     },
     "not_allowed": {
-      "desc": "The user is not allowed to access this API method"
+      "desc": "The user is not allowed to access this API method."
     },
     "restricted_action": {
-      "desc": "The user is not allowed to access this API method"
+      "desc": "The user is not allowed to access this API method."
     }
   },
   "examples": {
@@ -89,20 +95,20 @@
             "id": "123ABC456DE",
             "callback_id": "sample_function",
             "title": "Sample function",
-            "description": "A sample function",
+            "description": "A sample function.",
             "type": "app",
             "input_parameters": [
               {
                 "type": "string",
                 "name": "message",
-                "description": "Message to be posted",
+                "description": "Message to be posted.",
                 "title": "Message",
                 "is_required": true
               },
               {
                 "type": "slack#/reference/objects/user-object_id",
                 "name": "user",
-                "description": "The user invoking the workflow",
+                "description": "The user invoking the workflow.",
                 "title": "User",
                 "is_required": false
               }
@@ -111,7 +117,7 @@
               {
                 "type": "string",
                 "name": "updatedMsg",
-                "description": "Updated message to be posted",
+                "description": "Updated message to be posted.",
                 "title": "Updated Msg",
                 "is_required": true
               }
