@@ -32,6 +32,10 @@ module SlackApi
 
     private
 
+    def common_errors
+      @common_errors ||= JSON.load_file('methods/_errors/common.json')['errors']
+    end
+
     def process_method(data)
       args, fields = parse_args(data)
 
@@ -45,7 +49,7 @@ module SlackApi
         desc: strip_markdown(data['desc']),
         args: args,
         response: response,
-        errors: errors
+        errors: common_errors.merge(errors).sort.to_h
       }.merge(fields)
 
       patch_filename = "methods/_patches/#{data['group']}/#{data['name']}.json"
