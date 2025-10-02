@@ -6,7 +6,8 @@
   "args": {
     "channel_id": {
       "required": true,
-      "desc": "Channel ID containing the assistant thread."
+      "desc": "Channel ID containing the assistant thread.",
+      "type": "string"
     },
     "thread_ts": {
       "required": true,
@@ -17,6 +18,11 @@
       "required": true,
       "desc": "Status of the specified bot user, e.g. 'is thinking...'.",
       "type": "string"
+    },
+    "loading_messages": {
+      "required": false,
+      "desc": "The list of messages to rotate through as a loading indicator.",
+      "type": "array"
     }
   },
   "response": {

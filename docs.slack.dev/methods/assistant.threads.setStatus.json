@@ -25,6 +25,7 @@
       },
       "channel_id": {
         "desc": "Channel ID containing the assistant thread.",
+        "type": "string",
         "subtype": "channel",
         "schema": "channel"
       },
@@ -35,6 +36,17 @@
       "status": {
         "type": "string",
         "desc": "Status of the specified bot user, e.g. 'is thinking...'"
+      },
+      "loading_messages": {
+        "type": "array",
+        "desc": "The list of messages to rotate through as a loading indicator.",
+        "minItems": 1,
+        "maxItems": 10,
+        "items": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 50
+        }
       }
     }
   },
