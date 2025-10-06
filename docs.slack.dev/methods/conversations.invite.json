@@ -1,7 +1,20 @@
 {
   "desc": "Invites users to a channel.",
   "http_method": "POST",
-  "scope": {},
+  "scope": {
+    "bot": [
+      "channels:write.invites",
+      "groups:write.invites",
+      "channels:manage",
+      "groups:write",
+      "im:write",
+      "mpim:write"
+    ],
+    "user": [
+      "channels:write.invites",
+      "groups:write.invites"
+    ]
+  },
   "json_input_supported": true,
   "slack_connect_workspaces_allowed": true,
   "rate_limits": "t3",
