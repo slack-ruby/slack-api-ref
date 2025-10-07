@@ -1036,6 +1036,13 @@
     ]
   },
   {
+    "name": "chat.appendStream",
+    "description": "Appends text to an existing streaming conversation.",
+    "family": [
+      "chat"
+    ]
+  },
+  {
     "name": "chat.delete",
     "description": "Deletes a message.",
     "family": [
@@ -1087,6 +1094,20 @@
   {
     "name": "chat.scheduleMessage",
     "description": "Schedules a message to be sent to a channel.",
+    "family": [
+      "chat"
+    ]
+  },
+  {
+    "name": "chat.startStream",
+    "description": "Starts a new streaming conversation.",
+    "family": [
+      "chat"
+    ]
+  },
+  {
+    "name": "chat.stopStream",
+    "description": "Stops a streaming conversation.",
     "family": [
       "chat"
     ]
