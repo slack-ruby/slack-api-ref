@@ -1,9 +1,9 @@
 {
   "desc": "Lists assignments for all roles across entities. Options to scope results by any combination of roles or entities",
-  "http_method": "POST",
+  "http_method": "GET",
   "scope": {
     "user": [
-      "admin.roles:write"
+      "admin.roles:read"
     ]
   },
   "rate_limits": "t3",

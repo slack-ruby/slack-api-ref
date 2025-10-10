@@ -6,7 +6,7 @@
   "args": {
     "list_id": {
       "required": true,
-      "example": "F03PSRPN4CE",
+      "example": "F01ABCDE2FG",
       "desc": "ID of the List to add or update cells.",
       "type": "string"
     },

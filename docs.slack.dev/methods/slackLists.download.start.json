@@ -62,7 +62,7 @@
   "examples": {
     "success": {
       "url": "/api/slackLists.download.start?token=YOUR_TOKEN",
-      "description": "Typical success response",
+      "description": "Typical success response for all scenarios above",
       "example": {
         "ok": true,
         "job_id": "LeF1234567"

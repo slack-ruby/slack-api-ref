@@ -2,9 +2,6 @@
   "desc": "Enables a file for public/external sharing.",
   "http_method": "POST",
   "scope": {
-    "bot": [
-      "files:write"
-    ],
     "user": [
       "files:write"
     ]

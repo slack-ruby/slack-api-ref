@@ -75,7 +75,7 @@
       "example": {
         "ok": true,
         "status": "COMPLETED",
-        "download_url": "https://files.example.com/files-pri/1234567890-F12345678/csv/list?origin_team=T1234567890"
+        "download_url": "https://files.com/files-pri/1234567890-F12345678/csv/list?origin_team=T1234567890"
       }
     },
     "error": {

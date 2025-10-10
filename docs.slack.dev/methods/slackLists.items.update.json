@@ -25,7 +25,7 @@
       },
       "list_id": {
         "desc": "ID of the List to add or update cells.",
-        "example": "F03PSRPN4CE",
+        "example": "F01ABCDE2FG",
         "type": "string",
         "subtype": "list"
       },
@@ -122,7 +122,7 @@
   "examples": {
     "success": {
       "url": "/api/slackLists.items.update?token=YOUR_TOKEN",
-      "description": "Typical success response",
+      "description": "Typical success response for all scenarios above",
       "example": {
         "ok": true
       }

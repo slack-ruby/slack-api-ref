@@ -100,49 +100,133 @@
   "examples": {
     "success": {
       "url": "/api/slackLists.items.create?token=YOUR_TOKEN",
-      "description": "Create a task item with text and date fields.",
+      "description": "Typical success response: minimal",
       "example": {
         "ok": true,
         "item": {
-          "id": "Rec12345678",
-          "list_id": "F1234ABCD",
-          "date_created": 1704067200,
-          "created_by": "U1234567",
-          "updated_by": "U1234567",
-          "updated_timestamp": "1704067200",
+          "id": "Rec018ALE9718",
+          "list_id": "F1234567",
+          "date_created": 1758744345,
+          "created_by": "W0AB1CDE2",
+          "updated_by": "W0AB1CDE2",
+          "fields": [],
+          "updated_timestamp": "1758744345"
+        }
+      }
+    },
+    "success2": {
+      "url": "/api/slackLists.items.create?token=YOUR_TOKEN",
+      "description": "Typical success response: text column (plain text)",
+      "example": {
+        "ok": true,
+        "item": {
+          "id": "Rec018ALFLNTU",
+          "list_id": "F1234567",
+          "date_created": 1758744345,
+          "created_by": "W0AB1CDE2",
+          "updated_by": "W0AB1CDE2",
           "fields": [
             {
-              "key": "title",
-              "column_id": "Col10000000",
-              "value": "[{\"type\":\"rich_text\",\"block_id\":\"abc123\",\"elements\":[{\"type\":\"rich_text_section\",\"elements\":[{\"type\":\"text\",\"text\":\"Complete project documentation\"}]}]}]",
-              "text": "Complete project documentation",
+              "key": "rich_text_notes",
+              "value": "[{\"type\":\"rich_text\",\"block_id\":\"k0zIi\",\"elements\":[{\"type\":\"rich_text_section\",\"elements\":[{\"type\":\"text\",\"text\":\"Fix bug\"}]}]}]",
+              "text": "Fix bug",
               "rich_text": [
                 {
                   "type": "rich_text",
-                  "block_id": "abc123",
+                  "block_id": "k0zIi",
                   "elements": [
                     {
                       "type": "rich_text_section",
                       "elements": [
                         {
-                          "type": "text",
-                          "text": "Complete project documentation"
+                          "text": "Fix bug",
+                          "type": "text"
                         }
                       ]
                     }
                   ]
                 }
-              ]
+              ],
+              "column_id": "Col018B8C91TM"
+            }
+          ],
+          "updated_timestamp": "1758744345"
+        }
+      }
+    },
+    "success3": {
+      "url": "/api/slackLists.items.create?token=YOUR_TOKEN",
+      "description": "Typical success response: with initial date, select, and user fields",
+      "example": {
+        "ok": true,
+        "item": {
+          "id": "Rec018ALA7RPU",
+          "list_id": "F1234567",
+          "date_created": 1758744346,
+          "created_by": "W0AB1CDE2",
+          "updated_by": "W0AB1CDE2",
+          "fields": [
+            {
+              "key": "status",
+              "value": "completed",
+              "select": [
+                "completed"
+              ],
+              "column_id": "Col018AL7649G"
             },
             {
-              "key": "due_date",
-              "column_id": "Col10000001",
-              "value": "2024-03-20",
+              "key": "date",
+              "value": "2025-09-19",
               "date": [
-                "2024-03-20"
-              ]
+                "2025-09-19"
+              ],
+              "timestamp": [
+                -1
+              ],
+              "column_id": "Col018AL764AE"
+            },
+            {
+              "key": "owner",
+              "value": "U012A34BCDE",
+              "user": [
+                "U012A34BCDE"
+              ],
+              "column_id": "Col018B8C91V1"
             }
-          ]
+          ],
+          "updated_timestamp": "1758744346"
+        }
+      }
+    },
+    "success4": {
+      "url": "/api/slackLists.items.create?token=YOUR_TOKEN",
+      "description": "Typical success response: with initial date, select, and user fields",
+      "example": {
+        "ok": true,
+        "item": {
+          "id": "Rec018ALFLP2N",
+          "list_id": "F1234567",
+          "date_created": 1758744346,
+          "created_by": "W0AB1CDE2",
+          "updated_by": "W0AB1CDE2",
+          "fields": [],
+          "updated_timestamp": "1758744346"
+        }
+      }
+    },
+    "success5": {
+      "url": "/api/slackLists.items.create?token=YOUR_TOKEN",
+      "description": "Typical success response: create a subtask under a parent item",
+      "example": {
+        "ok": true,
+        "item": {
+          "id": "Rec018B8RR603",
+          "list_id": "F1234567",
+          "date_created": 1758744346,
+          "created_by": "W0AB1CDE2",
+          "updated_by": "W0AB1CDE2",
+          "fields": [],
+          "updated_timestamp": "1758744346"
         }
       }
     },

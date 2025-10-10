@@ -100,7 +100,7 @@
   "examples": {
     "success": {
       "url": "/api/slackLists.access.set?token=YOUR_TOKEN",
-      "description": "Typical success response",
+      "description": "Typical success response for all scenarios above",
       "example": {
         "ok": true
       }

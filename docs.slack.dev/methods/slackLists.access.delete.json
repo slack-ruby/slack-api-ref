@@ -95,7 +95,7 @@
   "examples": {
     "success": {
       "url": "/api/slackLists.access.delete?token=YOUR_TOKEN",
-      "description": "Typical success response",
+      "description": "Typical success response for all scenarios above",
       "example": {
         "ok": true
       }

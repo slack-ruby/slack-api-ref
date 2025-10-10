@@ -11,7 +11,9 @@
     "name": "app_mention",
     "description": "Subscribe to only the message events that mention your app or bot",
     "app_event": true,
-    "scopes": [],
+    "scopes": [
+      "app_mentions.read"
+    ],
     "APIs": [
       "Events"
     ]
