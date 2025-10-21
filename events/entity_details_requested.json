@@ -1,0 +1,8 @@
+{
+  "name": "entity_details_requested",
+  "desc": "This event is sent to your app when a user clicks on a Work Object unfurl or refreshes the flexpane.",
+  "scopes": [],
+  "APIs": [
+    "Events"
+  ]
+}

@@ -1372,6 +1372,13 @@
     ]
   },
   {
+    "name": "entity.presentDetails",
+    "description": "Provide custom flexpane behavior for Work Objects. Apps call this endpoint to send per-user flexpane metadata to the client.",
+    "family": [
+      "entity"
+    ]
+  },
+  {
     "name": "files.comments.delete",
     "description": "Deletes an existing comment on a file.",
     "family": [

@@ -15,10 +15,7 @@
   "args": {
     "type": "object",
     "required": [
-      "token",
-      "channel",
-      "ts",
-      "unfurls"
+      "token"
     ],
     "properties": {
       "token": {
@@ -37,7 +34,7 @@
         "type": "string"
       },
       "unfurls": {
-        "desc": "URL-encoded JSON map with keys set to URLs featured in the the message, pointing to their unfurl blocks or message attachments.",
+        "desc": "URL-encoded JSON map with keys set to URLs featured in the the message, pointing to their unfurl blocks or message attachments. Either `unfurls` or `metadata` must be provided.",
         "type": "string"
       },
       "user_auth_message": {
@@ -84,6 +81,17 @@
         "enum": [
           "composer",
           "conversations_history"
+        ]
+      },
+      "metadata": {
+        "desc": "JSON object with `entity_type` and `entity_payload` fields, presented as a URL-encoded string. Either `unfurls` or `metadata` must be provided.",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
         ]
       }
     }
@@ -140,6 +148,9 @@
     },
     "missing_unfurls": {
       "desc": "The request is missing the `unfurls` parameter."
+    },
+    "error_processing_metadata": {
+      "desc": "The metadata parameter was invalid."
     }
   },
   "examples": {

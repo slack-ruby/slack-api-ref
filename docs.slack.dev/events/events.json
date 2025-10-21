@@ -430,6 +430,14 @@
     ]
   },
   {
+    "name": "entity_details_requested",
+    "description": "This event is sent to your app when a user clicks on a Work Object unfurl or refreshes the flexpane",
+    "scopes": [],
+    "APIs": [
+      "Events"
+    ]
+  },
+  {
     "name": "external_org_migration_finished",
     "description": "An enterprise org migration has finished on an external workspace",
     "scopes": [],
