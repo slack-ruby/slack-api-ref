@@ -46,6 +46,7 @@
     "attachment_payload_limit_exceeded": "Attachment payload size is too long.",
     "cannot_reply_to_message": "This message type cannot have thread replies.",
     "channel_not_found": "Value passed for `channel` was invalid.",
+    "channel_type_not_supported": "Channel type not supported.",
     "deprecated_endpoint": "The endpoint has been deprecated.",
     "duplicate_channel_not_found": "Channel associated with `client_msg_id` was invalid.",
     "duplicate_message_not_found": "No duplicate message exists associated with `client_msg_id`.",

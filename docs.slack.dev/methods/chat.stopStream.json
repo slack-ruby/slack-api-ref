@@ -90,6 +90,9 @@
     "channel_not_found": {
       "desc": "Value passed for `channel` was invalid."
     },
+    "channel_type_not_supported": {
+      "desc": "Channel type not supported."
+    },
     "duplicate_channel_not_found": {
       "desc": "Channel associated with `client_msg_id` was invalid."
     },

@@ -72,6 +72,9 @@
     }
   },
   "errors": {
+    "channel_is_limited_access": {
+      "desc": "The user has no access to the channel. Only applicable to Salesforce limited access channels."
+    },
     "channel_not_found": {
       "desc": "Value passed for `channel` was invalid."
     },

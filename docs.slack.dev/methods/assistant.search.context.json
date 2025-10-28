@@ -77,6 +77,13 @@
         "example": "true",
         "type": "boolean"
       },
+      "include_deleted_users": {
+        "default": false,
+        "desc": "Whether to include deleted users in the user search results. Defaults to false.",
+        "example": "false",
+        "logged": true,
+        "type": "boolean"
+      },
       "before": {
         "desc": "UNIX timestamp filter. If present, filters for results before this date.",
         "example": "1754670081",
@@ -155,6 +162,11 @@
         "example": "has:pin before:yesterday",
         "minLength": 1,
         "maxLength": 500
+      },
+      "include_archived_channels": {
+        "type": "boolean",
+        "desc": "Whether to include archived channels in the search results.",
+        "default": false
       }
     }
   },
@@ -331,7 +343,8 @@
                 "date_created",
                 "date_updated",
                 "name",
-                "permalink"
+                "permalink",
+                "is_archived"
               ],
               "properties": {
                 "team_id": {
@@ -370,6 +383,10 @@
                   "desc": "Permanent link to the channel in Slack.",
                   "type": "string",
                   "format": "uri"
+                },
+                "is_archived": {
+                  "type": "boolean",
+                  "desc": "Whether the channel is archived."
                 }
               }
             }

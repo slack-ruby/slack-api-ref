@@ -33,6 +33,7 @@
     "access_denied": "Access to a resource specified in the request is denied.",
     "accesslimited": "Access to this method is limited on the current network.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
+    "channel_is_limited_access": "The user has no access to the channel. Only applicable to Salesforce limited access channels.",
     "channel_not_found": "Value passed for `channel` was invalid.",
     "deprecated_endpoint": "The endpoint has been deprecated.",
     "ekm_access_denied": "Administrators have suspended the ability to post a message.",

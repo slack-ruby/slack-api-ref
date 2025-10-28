@@ -24,7 +24,7 @@
     "channels": {
       "required": false,
       "example": "C0NF841BK,C2AW648GH",
-      "desc": "Comma-separated string of channel IDs where the file will be shared.",
+      "desc": "Comma-separated string of channel IDs or user IDs where the file will be shared.",
       "type": "string"
     },
     "initial_comment": {

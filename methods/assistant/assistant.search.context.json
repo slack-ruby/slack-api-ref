@@ -34,6 +34,12 @@
       "desc": "Whether the results should include bots.",
       "type": "boolean"
     },
+    "include_deleted_users": {
+      "required": false,
+      "example": "false",
+      "desc": "Whether to include deleted users in the user search results. Defaults to false.",
+      "type": "boolean"
+    },
     "before": {
       "required": false,
       "example": "1754670081",
@@ -100,6 +106,11 @@
       "example": "has:pin before:yesterday",
       "desc": "A string containing only modifiers in the format of modifier:value. Search results returned will match the modifier value. For now modifiers only affect term clauses.",
       "type": "string"
+    },
+    "include_archived_channels": {
+      "required": false,
+      "desc": "Whether to include archived channels in the search results.",
+      "type": "boolean"
     }
   },
   "response": {
