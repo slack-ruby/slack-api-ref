@@ -1,9 +1,0 @@
-{
-  "name": "channel_name",
-  "desc": "A channel was renamed.",
-  "scopes": [],
-  "APIs": [
-    "Events",
-    "RTM"
-  ]
-}

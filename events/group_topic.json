@@ -1,9 +1,0 @@
-{
-  "name": "group_topic",
-  "desc": "A group topic was updated.",
-  "scopes": [],
-  "APIs": [
-    "Events",
-    "RTM"
-  ]
-}

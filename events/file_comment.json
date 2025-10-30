@@ -1,9 +1,0 @@
-{
-  "name": "file_comment",
-  "desc": "A comment was added to a file.",
-  "scopes": [],
-  "APIs": [
-    "Events",
-    "RTM"
-  ]
-}

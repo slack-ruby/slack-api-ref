@@ -1,9 +1,0 @@
-{
-  "name": "unpinned_item",
-  "desc": "An item was unpinned from a channel.",
-  "scopes": [],
-  "APIs": [
-    "Events",
-    "RTM"
-  ]
-}

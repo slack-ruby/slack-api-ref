@@ -1,9 +1,0 @@
-{
-  "name": "group_leave",
-  "desc": "A member left a group.",
-  "scopes": [],
-  "APIs": [
-    "Events",
-    "RTM"
-  ]
-}

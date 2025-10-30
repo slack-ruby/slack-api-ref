@@ -84,20 +84,6 @@
     ]
   },
   {
-    "name": "assistant_app_thread",
-    "description": "The message sent is an app assistant thread.",
-    "scopes": [
-      "channels:history",
-      "groups:history",
-      "im:history",
-      "mpim:history"
-    ],
-    "APIs": [
-      "Events",
-      "RTM"
-    ]
-  },
-  {
     "name": "assistant_thread_context_changed",
     "description": "The context changed while an AI assistant thread was visible",
     "app_event": true,
@@ -132,54 +118,11 @@
     ]
   },
   {
-    "name": "bot_message",
-    "scopes": [],
-    "description": "A message was posted by an integration",
-    "APIs": [
-      "Events",
-      "RTM"
-    ]
-  },
-  {
     "name": "call_rejected",
     "description": "A call was rejected",
     "scopes": [],
     "APIs": [
       "Events"
-    ]
-  },
-  {
-    "name": "channel_archive",
-    "description": "A channel was archived",
-    "scopes": [
-      "channels:read"
-    ],
-    "APIs": [
-      "Events",
-      "RTM"
-    ]
-  },
-  {
-    "name": "channel_convert_to_private",
-    "scopes": [
-      "channels:history",
-      "groups:history",
-      "im:history",
-      "mpim:history"
-    ],
-    "description": "This channel was made private; now it can only be viewed or joined by invitation",
-    "APIs": [
-      "Events",
-      "RTM"
-    ]
-  },
-  {
-    "name": "channel_convert_to_public",
-    "scopes": [],
-    "description": "This channel was made public; now any member in this workspace can see and join it",
-    "APIs": [
-      "Events",
-      "RTM"
     ]
   },
   {
@@ -237,15 +180,6 @@
     ]
   },
   {
-    "name": "channel_leave",
-    "scopes": [],
-    "description": "A member left a channel",
-    "APIs": [
-      "Events",
-      "RTM"
-    ]
-  },
-  {
     "name": "channel_left",
     "description": "You left a channel",
     "scopes": [
@@ -265,15 +199,6 @@
     ]
   },
   {
-    "name": "channel_name",
-    "scopes": [],
-    "description": "A channel was renamed",
-    "APIs": [
-      "Events",
-      "RTM"
-    ]
-  },
-  {
     "name": "channel_posting_permissions",
     "scopes": [
       "channels:history",
@@ -282,24 +207,6 @@
       "mpim:history"
     ],
     "description": "The posting permissions for a channel changed",
-    "APIs": [
-      "Events",
-      "RTM"
-    ]
-  },
-  {
-    "name": "channel_purpose",
-    "scopes": [],
-    "description": "A channel purpose was updated",
-    "APIs": [
-      "Events",
-      "RTM"
-    ]
-  },
-  {
-    "name": "channel_topic",
-    "scopes": [],
-    "description": "A channel topic was updated",
     "APIs": [
       "Events",
       "RTM"
@@ -328,17 +235,6 @@
     ]
   },
   {
-    "name": "channel_unarchive",
-    "description": "A channel was unarchived",
-    "scopes": [
-      "channels:read"
-    ],
-    "APIs": [
-      "Events",
-      "RTM"
-    ]
-  },
-  {
     "name": "channel_unshared",
     "description": "A channel has been unshared with an external workspace",
     "scopes": [
@@ -354,20 +250,6 @@
     "description": "A slash command has been added or changed",
     "scopes": [],
     "APIs": [
-      "RTM"
-    ]
-  },
-  {
-    "name": "document_mention",
-    "scopes": [
-      "channels:history",
-      "groups:history",
-      "im:history",
-      "mpim:history"
-    ],
-    "description": "A bot is mentioned in the body of a canvas",
-    "APIs": [
-      "Events",
       "RTM"
     ]
   },
@@ -388,20 +270,6 @@
     "scopes": [
       "dnd:read"
     ],
-    "APIs": [
-      "Events",
-      "RTM"
-    ]
-  },
-  {
-    "name": "ekm_access_denied",
-    "scopes": [
-      "channels:history",
-      "groups:history",
-      "im:history",
-      "mpim:history"
-    ],
-    "description": "Message content redacted due to Enterprise Key Management (EKM)",
     "APIs": [
       "Events",
       "RTM"
@@ -465,15 +333,6 @@
     ]
   },
   {
-    "name": "file_comment",
-    "scopes": [],
-    "description": "A comment was added to a file",
-    "APIs": [
-      "Events",
-      "RTM"
-    ]
-  },
-  {
     "name": "file_comment_added",
     "description": "A file comment was added",
     "scopes": [
@@ -529,29 +388,11 @@
     ]
   },
   {
-    "name": "file_mention",
-    "scopes": [],
-    "description": "A file was mentioned in a channel",
-    "APIs": [
-      "Events",
-      "RTM"
-    ]
-  },
-  {
     "name": "file_public",
     "description": "A file was made public",
     "scopes": [
       "files:read"
     ],
-    "APIs": [
-      "Events",
-      "RTM"
-    ]
-  },
-  {
-    "name": "file_share",
-    "scopes": [],
-    "description": "A file was shared into a channel",
     "APIs": [
       "Events",
       "RTM"
@@ -614,17 +455,6 @@
     ]
   },
   {
-    "name": "group_archive",
-    "description": "A private channel was archived",
-    "scopes": [
-      "groups:read"
-    ],
-    "APIs": [
-      "Events",
-      "RTM"
-    ]
-  },
-  {
     "name": "group_close",
     "description": "You closed a private channel",
     "scopes": [
@@ -658,28 +488,10 @@
     ]
   },
   {
-    "name": "group_join",
-    "scopes": [],
-    "description": "A member joined a group",
-    "APIs": [
-      "Events",
-      "RTM"
-    ]
-  },
-  {
     "name": "group_joined",
     "description": "You joined a private channel",
     "scopes": [],
     "APIs": [
-      "RTM"
-    ]
-  },
-  {
-    "name": "group_leave",
-    "scopes": [],
-    "description": "A member left a group",
-    "APIs": [
-      "Events",
       "RTM"
     ]
   },
@@ -703,15 +515,6 @@
     ]
   },
   {
-    "name": "group_name",
-    "scopes": [],
-    "description": "A group was renamed",
-    "APIs": [
-      "Events",
-      "RTM"
-    ]
-  },
-  {
     "name": "group_open",
     "description": "You created a group DM",
     "scopes": [
@@ -723,37 +526,8 @@
     ]
   },
   {
-    "name": "group_purpose",
-    "scopes": [],
-    "description": "A group purpose was updated",
-    "APIs": [
-      "Events",
-      "RTM"
-    ]
-  },
-  {
     "name": "group_rename",
     "description": "A private channel was renamed",
-    "scopes": [
-      "groups:read"
-    ],
-    "APIs": [
-      "Events",
-      "RTM"
-    ]
-  },
-  {
-    "name": "group_topic",
-    "scopes": [],
-    "description": "A group topic was updated",
-    "APIs": [
-      "Events",
-      "RTM"
-    ]
-  },
-  {
-    "name": "group_unarchive",
-    "description": "A private channel was unarchived",
     "scopes": [
       "groups:read"
     ],
@@ -854,20 +628,6 @@
     ]
   },
   {
-    "name": "me_message",
-    "scopes": [
-      "channels:history",
-      "groups:history",
-      "im:history",
-      "mpim:history"
-    ],
-    "description": "A /me message was sent",
-    "APIs": [
-      "Events",
-      "RTM"
-    ]
-  },
-  {
     "name": "member_joined_channel",
     "description": "A user joined a public channel, private channel or MPDM",
     "scopes": [
@@ -895,8 +655,9 @@
   {
     "name": "message",
     "description": "A message was sent to a channel",
-    "subtypes": {
-      "assistant_app_thread": {
+    "subtypes": [
+      {
+        "name": "assistant_app_thread",
         "scopes": [
           "channels:history",
           "groups:history",
@@ -909,7 +670,8 @@
           "RTM"
         ]
       },
-      "bot_message": {
+      {
+        "name": "bot_message",
         "scopes": [],
         "description": "A message was posted by an integration",
         "APIs": [
@@ -917,14 +679,16 @@
           "RTM"
         ]
       },
-      "channel_archive": {
+      {
+        "name": "channel_archive",
         "scopes": [],
         "description": "A channel was archived.",
         "APIs": [
           "Events"
         ]
       },
-      "channel_convert_to_private": {
+      {
+        "name": "channel_convert_to_private",
         "scopes": [
           "channels:history",
           "groups:history",
@@ -937,7 +701,8 @@
           "RTM"
         ]
       },
-      "channel_convert_to_public": {
+      {
+        "name": "channel_convert_to_public",
         "scopes": [],
         "description": "This channel was made public. Any member in this workspace can see and join it",
         "APIs": [
@@ -945,7 +710,8 @@
           "RTM"
         ]
       },
-      "channel_join": {
+      {
+        "name": "channel_join",
         "scopes": [],
         "description": "A member joined a channel",
         "APIs": [
@@ -953,7 +719,8 @@
           "RTM"
         ]
       },
-      "channel_leave": {
+      {
+        "name": "channel_leave",
         "scopes": [],
         "description": "A member left a channel",
         "APIs": [
@@ -961,7 +728,8 @@
           "RTM"
         ]
       },
-      "channel_name": {
+      {
+        "name": "channel_name",
         "scopes": [],
         "description": "A channel was renamed",
         "APIs": [
@@ -969,7 +737,8 @@
           "RTM"
         ]
       },
-      "channel_posting_permission": {
+      {
+        "name": "channel_posting_permission",
         "scopes": [
           "channels:history",
           "groups:history",
@@ -982,7 +751,8 @@
           "RTM"
         ]
       },
-      "channel_purpose": {
+      {
+        "name": "channel_purpose",
         "scopes": [],
         "description": "A channel purpose was updated",
         "APIs": [
@@ -990,7 +760,8 @@
           "RTM"
         ]
       },
-      "channel_topic": {
+      {
+        "name": "channel_topic",
         "scopes": [],
         "description": "A channel topic was updated",
         "APIs": [
@@ -998,14 +769,16 @@
           "RTM"
         ]
       },
-      "channel_unarchive": {
+      {
+        "name": "channel_unarchive",
         "scopes": [],
         "description": "A channel was unarchived",
         "APIs": [
           "RTM"
         ]
       },
-      "document_mention": {
+      {
+        "name": "document_mention",
         "scopes": [
           "channels:history",
           "groups:history",
@@ -1018,7 +791,8 @@
           "RTM"
         ]
       },
-      "ekm_access_denied": {
+      {
+        "name": "ekm_access_denied",
         "scopes": [
           "channels:history",
           "groups:history",
@@ -1031,7 +805,8 @@
           "RTM"
         ]
       },
-      "file_comment": {
+      {
+        "name": "file_comment",
         "scopes": [],
         "description": "A comment was added to a file",
         "APIs": [
@@ -1039,7 +814,8 @@
           "RTM"
         ]
       },
-      "file_mention": {
+      {
+        "name": "file_mention",
         "scopes": [],
         "description": "A file was mentioned in a channel",
         "APIs": [
@@ -1047,7 +823,8 @@
           "RTM"
         ]
       },
-      "file_share": {
+      {
+        "name": "file_share",
         "scopes": [],
         "description": "A file was shared into a channel",
         "APIs": [
@@ -1055,14 +832,16 @@
           "RTM"
         ]
       },
-      "group_archive": {
+      {
+        "name": "group_archive",
         "scopes": [],
         "description": "A group was archived",
         "APIs": [
           "RTM"
         ]
       },
-      "group_join": {
+      {
+        "name": "group_join",
         "scopes": [],
         "description": "A member joined a group",
         "APIs": [
@@ -1070,7 +849,8 @@
           "RTM"
         ]
       },
-      "group_leave": {
+      {
+        "name": "group_leave",
         "scopes": [],
         "description": "A member left a group",
         "APIs": [
@@ -1078,7 +858,8 @@
           "RTM"
         ]
       },
-      "group_name": {
+      {
+        "name": "group_name",
         "scopes": [],
         "description": "A group was renamed",
         "APIs": [
@@ -1086,7 +867,8 @@
           "RTM"
         ]
       },
-      "group_purpose": {
+      {
+        "name": "group_purpose",
         "scopes": [],
         "description": "A group purpose was updated",
         "APIs": [
@@ -1094,7 +876,8 @@
           "RTM"
         ]
       },
-      "group_topic": {
+      {
+        "name": "group_topic",
         "scopes": [],
         "description": "A group topic was updated",
         "APIs": [
@@ -1102,14 +885,16 @@
           "RTM"
         ]
       },
-      "group_unarchive": {
+      {
+        "name": "group_unarchive",
         "scopes": [],
         "description": "A group was unarchived",
         "APIs": [
           "RTM"
         ]
       },
-      "me_message": {
+      {
+        "name": "me_message",
         "scopes": [
           "channels:history",
           "groups:history",
@@ -1122,7 +907,8 @@
           "RTM"
         ]
       },
-      "message_changed": {
+      {
+        "name": "message_changed",
         "scopes": [
           "channels:history",
           "groups:history",
@@ -1135,7 +921,8 @@
           "RTM"
         ]
       },
-      "message_deleted": {
+      {
+        "name": "message_deleted",
         "scopes": [
           "channels:history",
           "groups:history",
@@ -1148,7 +935,8 @@
           "RTM"
         ]
       },
-      "message_locked": {
+      {
+        "name": "message_locked",
         "scopes": [
           "channels:history",
           "groups:history",
@@ -1161,7 +949,8 @@
           "RTM"
         ]
       },
-      "message_replied": {
+      {
+        "name": "message_replied",
         "scopes": [
           "channels:history",
           "groups:history",
@@ -1174,7 +963,8 @@
           "RTM"
         ]
       },
-      "pinned_item": {
+      {
+        "name": "pinned_item",
         "scopes": [],
         "description": "An item was pinned in a channel",
         "APIs": [
@@ -1182,7 +972,8 @@
           "RTM"
         ]
       },
-      "reminder_add": {
+      {
+        "name": "reminder_add",
         "scopes": [
           "channels:history",
           "groups:history",
@@ -1195,7 +986,8 @@
           "RTM"
         ]
       },
-      "reply_broadcast": {
+      {
+        "name": "reply_broadcast",
         "scopes": [
           "channels:history",
           "groups:history",
@@ -1209,7 +1001,8 @@
           "RTM"
         ]
       },
-      "thread_broadcast": {
+      {
+        "name": "thread_broadcast",
         "scopes": [
           "channels:history",
           "groups:history",
@@ -1222,7 +1015,8 @@
           "RTM"
         ]
       },
-      "unpinned_item": {
+      {
+        "name": "unpinned_item",
         "scopes": [],
         "description": "An item was unpinned from a channel",
         "APIs": [
@@ -1230,7 +1024,7 @@
           "RTM"
         ]
       }
-    },
+    ],
     "scopes": [
       "channels:history",
       "groups:history",
@@ -1252,20 +1046,6 @@
     ]
   },
   {
-    "name": "message_changed",
-    "scopes": [
-      "channels:history",
-      "groups:history",
-      "im:history",
-      "mpim:history"
-    ],
-    "description": "A message was changed",
-    "APIs": [
-      "Events",
-      "RTM"
-    ]
-  },
-  {
     "name": "message.channels",
     "description": "A message was posted to a channel",
     "scopes": [
@@ -1273,20 +1053,6 @@
     ],
     "APIs": [
       "Events"
-    ]
-  },
-  {
-    "name": "message_deleted",
-    "scopes": [
-      "channels:history",
-      "groups:history",
-      "im:history",
-      "mpim:history"
-    ],
-    "description": "A message was deleted",
-    "APIs": [
-      "Events",
-      "RTM"
     ]
   },
   {
@@ -1350,20 +1116,6 @@
     ]
   },
   {
-    "name": "message_replied",
-    "scopes": [
-      "channels:history",
-      "groups:history",
-      "im:history",
-      "mpim:history"
-    ],
-    "description": "A message thread received a reply",
-    "APIs": [
-      "Events",
-      "RTM"
-    ]
-  },
-  {
     "name": "pin_added",
     "description": "A pin was added to a channel",
     "scopes": [
@@ -1380,15 +1132,6 @@
     "scopes": [
       "pins:read"
     ],
-    "APIs": [
-      "Events",
-      "RTM"
-    ]
-  },
-  {
-    "name": "pinned_item",
-    "scopes": [],
-    "description": "An item was pinned in a channel",
     "APIs": [
       "Events",
       "RTM"
@@ -1453,35 +1196,6 @@
     "description": "Experimental",
     "scopes": [],
     "APIs": [
-      "RTM"
-    ]
-  },
-  {
-    "name": "reminder_add",
-    "scopes": [
-      "channels:history",
-      "groups:history",
-      "im:history",
-      "mpim:history"
-    ],
-    "description": "A reminder was added to the channel",
-    "APIs": [
-      "Events",
-      "RTM"
-    ]
-  },
-  {
-    "name": "reply_broadcast",
-    "scopes": [
-      "channels:history",
-      "groups:history",
-      "im:history",
-      "mpim:history"
-    ],
-    "deprecated": true,
-    "description": "(No longer served) A message thread's reply was broadcast to a channel",
-    "APIs": [
-      "Events",
       "RTM"
     ]
   },
@@ -1701,35 +1415,12 @@
     ]
   },
   {
-    "name": "thread_broadcast",
-    "scopes": [
-      "channels:history",
-      "groups:history",
-      "im:history",
-      "mpim:history"
-    ],
-    "description": "A message thread's reply was broadcast to a channel",
-    "APIs": [
-      "Events",
-      "RTM"
-    ]
-  },
-  {
     "name": "tokens_revoked",
     "description": "API tokens for your app were revoked",
     "app_event": true,
     "scopes": [],
     "APIs": [
       "Events"
-    ]
-  },
-  {
-    "name": "unpinned_item",
-    "scopes": [],
-    "description": "An item was unpinned from a channel",
-    "APIs": [
-      "Events",
-      "RTM"
     ]
   },
   {

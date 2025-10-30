@@ -1,9 +1,0 @@
-{
-  "name": "bot_message",
-  "desc": "A message was posted by an integration.",
-  "scopes": [],
-  "APIs": [
-    "Events",
-    "RTM"
-  ]
-}

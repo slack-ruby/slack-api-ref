@@ -1,9 +1,0 @@
-{
-  "name": "file_share",
-  "desc": "A file was shared into a channel.",
-  "scopes": [],
-  "APIs": [
-    "Events",
-    "RTM"
-  ]
-}

@@ -3,16 +3,16 @@
   "http_method": "POST",
   "scope": {
     "bot": [
-      "groups:read",
-      "im:read",
-      "mpim:read",
-      "channels:read"
+      "channels:manage",
+      "groups:write",
+      "im:write",
+      "mpim:write"
     ],
     "user": [
-      "groups:read",
-      "im:read",
-      "mpim:read",
-      "channels:read"
+      "channels:write",
+      "groups:write",
+      "im:write",
+      "mpim:write"
     ]
   },
   "json_input_supported": true,

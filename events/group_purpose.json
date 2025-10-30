@@ -1,9 +1,0 @@
-{
-  "name": "group_purpose",
-  "desc": "A group purpose was updated.",
-  "scopes": [],
-  "APIs": [
-    "Events",
-    "RTM"
-  ]
-}
