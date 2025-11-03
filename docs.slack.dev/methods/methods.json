@@ -560,6 +560,13 @@
     ]
   },
   {
+    "name": "admin.users.getExpiration",
+    "description": "Fetches the expiration timestamp for a guest",
+    "family": [
+      "admin"
+    ]
+  },
+  {
     "name": "admin.users.invite",
     "description": "Invite a user to a workspace.",
     "family": [
