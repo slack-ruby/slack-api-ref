@@ -1,7 +1,11 @@
 {
   "desc": "Fetches the expiration timestamp for a guest",
   "http_method": "GET",
-  "scope": {},
+  "scope": {
+    "user": [
+      "admin.users:read"
+    ]
+  },
   "rate_limits": "t4",
   "args": {
     "type": "object",
