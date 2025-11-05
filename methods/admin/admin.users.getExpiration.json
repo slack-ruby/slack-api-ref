@@ -4,11 +4,10 @@
   "deprecated": false,
   "desc": "Fetches the expiration timestamp for a guest",
   "args": {
-    "user": {
-      "required": true,
+    "user_id": {
+      "required": false,
       "example": "U123ABC456",
-      "desc": "The ID of the guest user to get the expiration for.",
-      "type": "user"
+      "desc": "The ID of the guest user to get the expiration for."
     },
     "target_team": {
       "required": false,

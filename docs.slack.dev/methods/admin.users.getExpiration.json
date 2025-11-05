@@ -19,7 +19,7 @@
         "subtype": "auth",
         "example": "xxxx-xxxxxxxxx-xxxx"
       },
-      "user": {
+      "user_id": {
         "schema": "user_id",
         "desc": "The ID of the guest user to get the expiration for.",
         "example": "U123ABC456"
