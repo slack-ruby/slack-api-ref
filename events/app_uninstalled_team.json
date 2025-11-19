@@ -1,7 +1,9 @@
 {
   "name": "app_uninstalled_team",
   "desc": "User has uninstalled an app.",
-  "scopes": [],
+  "scopes": [
+    "admin.apps:read"
+  ],
   "APIs": [
     "Events"
   ]

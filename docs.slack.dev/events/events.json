@@ -22,7 +22,9 @@
     "name": "app_deleted",
     "description": "User has deleted an app",
     "app_event": true,
-    "scopes": [],
+    "scopes": [
+      "admin.apps:read"
+    ],
     "APIs": [
       "Events"
     ]
@@ -78,7 +80,9 @@
     "name": "app_uninstalled_team",
     "description": "User has uninstalled an app",
     "app_event": true,
-    "scopes": [],
+    "scopes": [
+      "admin.apps:read"
+    ],
     "APIs": [
       "Events"
     ]

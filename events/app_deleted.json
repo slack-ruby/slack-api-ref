@@ -1,7 +1,9 @@
 {
   "name": "app_deleted",
   "desc": "User has deleted an app.",
-  "scopes": [],
+  "scopes": [
+    "admin.apps:read"
+  ],
   "APIs": [
     "Events"
   ]
