@@ -27,7 +27,7 @@
         "example": "xxxx-xxxxxxxxx-xxxx"
       },
       "channel": {
-        "desc": "An encoded ID that represents a channel, private group, or DM",
+        "desc": "An encoded ID that represents a channel thread or DM.",
         "type": "string",
         "subtype": "channel"
       },

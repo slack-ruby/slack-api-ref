@@ -45,7 +45,7 @@
       "real_name": {
         "desc": "Full name of the user.",
         "type": "string",
-        "example": "{\"full_name\":\"Joe Smith\"}"
+        "example": "{\"Joe Smith\"}"
       },
       "resend": {
         "desc": "Allow this invite to be resent in the future if a user has not signed up yet. Resending can only be done via the UI and has no expiration. (default: false)",

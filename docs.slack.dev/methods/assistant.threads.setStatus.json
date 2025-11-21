@@ -35,11 +35,11 @@
       },
       "status": {
         "type": "string",
-        "desc": "Status of the specified bot user, e.g. 'is thinking...'"
+        "desc": "Status of the specified bot user, e.g., 'is thinking...'. A two minute timeout applies, which will cause the status to be removed if no message has been sent."
       },
       "loading_messages": {
         "type": "array",
-        "desc": "The list of messages to rotate through as a loading indicator.",
+        "desc": "The list of messages to rotate through as a loading indicator. Maximum of 10 messages.",
         "minItems": 1,
         "maxItems": 10,
         "items": {

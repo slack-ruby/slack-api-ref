@@ -24,7 +24,7 @@
       },
       "team_id": {
         "desc": "The ID (`T1234`) of the workspace.",
-        "schema": "workspace_id"
+        "schema": "team_id"
       },
       "user_id": {
         "desc": "Id of the user to promote to owner.",

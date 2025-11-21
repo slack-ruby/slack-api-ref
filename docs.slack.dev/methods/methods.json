@@ -701,7 +701,7 @@
   },
   {
     "name": "admin.workflows.triggers.types.permissions.lookup",
-    "description": "list the permissions for using each trigger type",
+    "description": "List the permissions for using each trigger type.",
     "family": [
       "admin"
     ]

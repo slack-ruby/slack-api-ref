@@ -197,6 +197,9 @@
     "as_user_not_supported": {
       "desc": "The `as_user` parameter does not function with workspace apps."
     },
+    "blocked_file_type": {
+      "desc": "Admin has disabled uploading this type of file."
+    },
     "block_mismatch": {
       "desc": "Rich-text blocks cannot be replaced with non-rich-text blocks"
     },
@@ -215,11 +218,26 @@
     "external_channel_migrating": {
       "desc": "The channel is in the process of migrating and so the message cannot be updated at this time."
     },
+    "file_deleted": {
+      "desc": "File to share deleted."
+    },
+    "file_is_deleted": {
+      "desc": "The file is deleted."
+    },
+    "file_not_found": {
+      "desc": "One or more of the provided file IDs could not be found."
+    },
+    "file_share_limit_reached": {
+      "desc": "The file has reached the share limit."
+    },
     "invalid_attachments": {
       "desc": "The attachments were invalid."
     },
     "invalid_blocks": {
       "desc": "The blocks were invalid for the requesting user."
+    },
+    "invalid_blocks_format": {
+      "desc": "The `blocks` array is not a valid JSON object or doesn't match the Block Kit syntax."
     },
     "invalid_metadata_format": {
       "desc": "Invalid metadata format provided"
@@ -232,6 +250,12 @@
     },
     "markdown_text_conflict": {
       "desc": "Markdown text cannot be used in conjunction with `blocks` or `text` argument."
+    },
+    "max_file_sharing_exceeded": {
+      "desc": "Exceeded max allowed files shared."
+    },
+    "message_limit_exceeded": {
+      "desc": "Members on this team are sending too many messages. For more details, see https://slack.com/help/articles/115002422943-Usage-limits-for-free-workspaces."
     },
     "message_not_found": {
       "desc": "No message exists with the requested timestamp."
@@ -251,8 +275,26 @@
     "no_text": {
       "desc": "No message text provided"
     },
+    "posting_to_channel_denied": {
+      "desc": "The user does not have permission to share files in this channel."
+    },
+    "slack_connect_blocked_file_type": {
+      "desc": "Files with certain extensions are blocked from being uploaded in all Slack Connect messages."
+    },
+    "slack_connect_canvas_sharing_blocked": {
+      "desc": "Admin has disabled sharing of canvas links in all Slack Connect messages."
+    },
+    "slack_connect_clip_sharing_blocked": {
+      "desc": "Admin has disabled Clip uploads in Slack Connect channels."
+    },
     "slack_connect_file_link_sharing_blocked": {
-      "desc": "Admin has disabled Slack File sharing in all Slack Connect communications"
+      "desc": "Admin has disabled Slack file sharing in all Slack Connect messages."
+    },
+    "slack_connect_file_upload_sharing_blocked": {
+      "desc": "Admin has disabled file uploads in all Slack Connect messages."
+    },
+    "streaming_state_conflict": {
+      "desc": "The message is currently streaming text and cannot be edited."
     },
     "team_not_found": {
       "desc": "Team associated with the message and channel could not be found."
@@ -260,20 +302,11 @@
     "too_many_attachments": {
       "desc": "Too many attachments were provided with this message. A maximum of 100 attachments are allowed on a message."
     },
+    "unable_to_share_files": {
+      "desc": "Sharing the files failed."
+    },
     "update_failed": {
       "desc": "Internal update failure."
-    },
-    "invalid_blocks_format": {
-      "desc": "The `blocks` array is not a valid JSON object or doesn't match the Block Kit syntax."
-    },
-    "streaming_state_conflict": {
-      "desc": "The message is currently streaming text and cannot be edited."
-    },
-    "file_not_found": {
-      "desc": "One or more of the provided file IDs could not be found."
-    },
-    "posting_to_channel_denied": {
-      "desc": "The user does not have permission to share files in this channel."
     }
   },
   "examples": {

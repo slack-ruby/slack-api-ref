@@ -10,7 +10,7 @@
       "desc": "The trigger type ID for which to set the permissions."
     },
     "visibility": {
-      "required": true,
+      "required": false,
       "desc": "The function visibility.",
       "type": "enum"
     },
@@ -19,6 +19,11 @@
       "example": "['U00000001', 'U00000002', 'U00000003']",
       "desc": "List of user IDs to allow for named_entities visibility.",
       "type": "array"
+    },
+    "permissions": {
+      "required": false,
+      "desc": "",
+      "type": "object"
     }
   },
   "response": {
@@ -37,6 +42,8 @@
     "invalid_charset": "The method was called via a POST request, but the charset specified in the Content-Type header was invalid. Valid charset names are: utf-8 iso-8859-1.",
     "invalid_form_data": "The method was called via a POST request with Content-Type application/x-www-form-urlencoded or multipart/form-data, but the form data was either missing or syntactically invalid.",
     "invalid_named_entities": "Named entities visibility requires a valid set of named entities to be specified",
+    "invalid_permission_set": "This permission set is invalid.",
+    "invalid_permission_type": "This permission type is invalid.",
     "invalid_post_type": "The method was called via a POST request, but the specified Content-Type was invalid. Valid types are: application/json application/x-www-form-urlencoded multipart/form-data text/plain.",
     "is_bot": "This method cannot be called by a legacy bot.",
     "method_deprecated": "The method has been deprecated.",
@@ -48,6 +55,7 @@
     "org_login_required": "The workspace is undergoing an enterprise migration and will not be available until migration is complete.",
     "ratelimited": "The request has been ratelimited. Refer to the Retry-After header for when to retry the request.",
     "request_timeout": "The method was called via a POST request, but the POST data was either missing or truncated.",
+    "required_visibility": "Visibility is required on this resource.",
     "restricted_action": "This actor does not have access to the permissions on this resource.",
     "service_unavailable": "The service is temporarily unavailable.",
     "team_added_to_org": "The workspace associated with your request is currently undergoing migration to an Enterprise Organization. Web API and other platform operations will be intermittently unavailable until the transition is complete.",
@@ -56,6 +64,6 @@
     "trigger_type_id_not_found": "The referenced trigger type ID does not exist.",
     "two_factor_setup_required": "Two factor setup is required.",
     "unknown_method": "This method is currently not available.",
-    "visibility_is_not_named_entities": "The visibility should be named enitites when the user_ids, team_ids, or org_ids args are set"
+    "visibility_is_not_named_entities": "The visibility should be named entities when the user_ids, team_ids, or org_ids args are set"
   }
 }
