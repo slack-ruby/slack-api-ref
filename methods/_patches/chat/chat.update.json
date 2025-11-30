@@ -4,10 +4,19 @@
       "args": [
         "attachments",
         "blocks",
-        "text"
+        "text",
+        "markdown_text"
       ],
-      "desc": "One of these arguments in addition to text is required to describe the content of the message. When attachments or blocks are included, text will be used as fallback text for notifications only.",
+      "desc": "One of these arguments in addition to text  (unless markdown_text is provided) is required to describe the content of the message. When attachments or blocks are included, text will be used as fallback text for notifications only.",
       "mutually_exclusive": false
+    },
+    {
+      "args": [
+        "text",
+        "markdown_text"
+      ],
+      "desc": "Use either text or markdown_text, but not both.",
+      "mutually_exclusive": true
     }
   ]
 }
