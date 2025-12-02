@@ -323,7 +323,7 @@
   "examples": {
     "success": {
       "url": "/api/chat.postMessage?token=YOUR_TOKEN",
-      "description": "The response includes the \"timestamp ID\" (`ts`) and the channel-like thing where the message was posted. It also includes the complete message object, as parsed by our servers. This may differ from the provided arguments as our servers sanitize links, attachments, and other properties. Your message may mutate.",
+      "description": "Response including the \"timestamp ID\" (`ts`) and the channel-like thing where the message was posted. It also includes the complete message object, as parsed by our servers. This may differ from the provided arguments as our servers sanitize links, attachments, and other properties. Your message may mutate.",
       "example": {
         "ok": true,
         "channel": "C123ABC456",
