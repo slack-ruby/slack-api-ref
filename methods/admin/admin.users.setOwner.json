@@ -2,15 +2,17 @@
   "group": "admin",
   "name": "admin.users.setOwner",
   "deprecated": false,
-  "desc": "Set an existing regular user or admin to be a workspace owner.",
+  "desc": "Set an existing regular user or admin to be a workspace or org owner.",
   "args": {
     "team_id": {
       "required": true,
-      "desc": "The ID (T1234) of the workspace."
+      "example": "T12345678",
+      "desc": "The ID of the workspace or organization."
     },
     "user_id": {
       "required": true,
-      "desc": "Id of the user to promote to owner."
+      "example": "W12345678",
+      "desc": "ID of the user to promote to owner."
     }
   },
   "response": {

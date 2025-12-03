@@ -638,7 +638,7 @@
   },
   {
     "name": "admin.users.setAdmin",
-    "description": "Set an existing regular user or owner to be a workspace admin.",
+    "description": "Set an existing regular user or owner to be a workspace or org admin.",
     "family": [
       "admin"
     ]
@@ -652,7 +652,7 @@
   },
   {
     "name": "admin.users.setOwner",
-    "description": "Set an existing regular user or admin to be a workspace owner.",
+    "description": "Set an existing regular user or admin to be a workspace or org owner.",
     "family": [
       "admin"
     ]

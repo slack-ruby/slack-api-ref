@@ -1,8 +1,0 @@
-{
-  "name": "workflow_published",
-  "desc": "A workflow that contains a step supported by your app was published.",
-  "scopes": [],
-  "APIs": [
-    "Events"
-  ]
-}

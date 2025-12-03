@@ -23,8 +23,9 @@
         "example": "xxxx-xxxxxxxxx-xxxx"
       },
       "team_id": {
-        "desc": "The ID (`T1234`) of the workspace.",
-        "schema": "team_id"
+        "desc": "The ID of the workspace or organization.",
+        "example": "T12345678",
+        "schema": "workspace_id"
       },
       "user_id": {
         "desc": "The ID of the user to designate as a regular user.",

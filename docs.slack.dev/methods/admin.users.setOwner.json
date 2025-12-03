@@ -1,5 +1,5 @@
 {
-  "desc": "Set an existing regular user or admin to be a workspace owner.",
+  "desc": "Set an existing regular user or admin to be a workspace or org owner.",
   "http_method": "POST",
   "scope": {
     "user": [
@@ -23,11 +23,13 @@
         "example": "xxxx-xxxxxxxxx-xxxx"
       },
       "team_id": {
-        "desc": "The ID (`T1234`) of the workspace.",
-        "schema": "team_id"
+        "desc": "The ID of the workspace or organization.",
+        "example": "T12345678",
+        "schema": "workspace_id"
       },
       "user_id": {
-        "desc": "Id of the user to promote to owner.",
+        "desc": "ID of the user to promote to owner.",
+        "example": "W12345678",
         "schema": "user_id"
       }
     }

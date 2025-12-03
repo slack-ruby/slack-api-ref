@@ -1,8 +1,0 @@
-{
-  "name": "workflow_step_execute",
-  "desc": "A workflow step supported by your app should execute.",
-  "scopes": [],
-  "APIs": [
-    "Events"
-  ]
-}

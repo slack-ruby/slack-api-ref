@@ -1463,47 +1463,5 @@
     "APIs": [
       "RTM"
     ]
-  },
-  {
-    "name": "workflow_deleted",
-    "description": "A workflow that contains a step supported by your app was deleted",
-    "scopes": [],
-    "APIs": [
-      "Events"
-    ]
-  },
-  {
-    "name": "workflow_published",
-    "description": "A workflow that contains a step supported by your app was published",
-    "scopes": [],
-    "APIs": [
-      "Events"
-    ]
-  },
-  {
-    "name": "workflow_step_deleted",
-    "description": "A workflow step supported by your app was removed from a workflow",
-    "scopes": [
-      "pins:read"
-    ],
-    "APIs": [
-      "Events"
-    ]
-  },
-  {
-    "name": "workflow_step_execute",
-    "description": "A workflow step supported by your app should execute",
-    "scopes": [],
-    "APIs": [
-      "Events"
-    ]
-  },
-  {
-    "name": "workflow_unpublished",
-    "description": "A workflow that contains a step supported by your app was unpublished",
-    "scopes": [],
-    "APIs": [
-      "Events"
-    ]
   }
 ]
