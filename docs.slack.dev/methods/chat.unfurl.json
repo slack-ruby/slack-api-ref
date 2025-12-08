@@ -84,7 +84,7 @@
         ]
       },
       "metadata": {
-        "desc": "JSON object with `entity_type` and `entity_payload` fields, presented as a URL-encoded string. Either `unfurls` or `metadata` must be provided.",
+        "desc": "JSON object with an entities field providing an array of Work Object entities. Either unfurls or metadata must be provided.",
         "anyOf": [
           {
             "type": "string"
