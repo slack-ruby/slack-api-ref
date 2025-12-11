@@ -122,7 +122,7 @@
       "desc": "Cannot post user messages to a channel they are not in."
     },
     "rate_limited": {
-      "desc": "Application has posted too many messages, [read the Rate Limit documentation](/docs/rate-limits) for more information"
+      "desc": "Application has posted too many messages, [read the Rate Limit documentation](/apis/web-api/rate-limits) for more information"
     },
     "restricted_action": {
       "desc": "A workspace preference prevents the authenticated user from posting."
