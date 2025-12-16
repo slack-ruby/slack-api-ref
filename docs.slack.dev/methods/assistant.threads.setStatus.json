@@ -57,6 +57,9 @@
     },
     "invalid_thread_ts": {
       "desc": "Error returned when given an invalid thread_ts"
+    },
+    "reserved_username": {
+      "desc": "Reserved usernames are not allowed to be used."
     }
   },
   "examples": {

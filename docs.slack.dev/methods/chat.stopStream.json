@@ -114,8 +114,8 @@
     "message_limit_exceeded": {
       "desc": "Members on this team are sending too many messages. For more details, see https://slack.com/help/articles/115002422943-Usage-limits-for-free-workspaces"
     },
-    "message_not_owned_by_bot": {
-      "desc": "The message is not owned by the bot."
+    "message_not_owned_by_app": {
+      "desc": "The message is not owned by the app."
     },
     "messages_tab_disabled": {
       "desc": "Messages tab for the app is disabled."

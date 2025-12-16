@@ -52,7 +52,7 @@
             "desc": "Dict of permissions keyed by permission type ID.",
             "type": "object",
             "patternProperties": {
-              "trigger_type|private_channel_access|private_channel_message_access": {
+              "trigger_type|private_channel_access|private_channel_message": {
                 "type": "object",
                 "required": [
                   "visibility"

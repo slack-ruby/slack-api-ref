@@ -309,6 +309,14 @@
       "desc": "Internal update failure."
     }
   },
+  "warnings": {
+    "message_truncated": {
+      "desc": "The `text` field of a message should have no more than 40,000 characters. We [truncate really long messages](/changelog/2018-04-truncating-really-long-messages)."
+    },
+    "some_files_not_deleted": {
+      "desc": "Some files could not be deleted because the user does not have permission. These files remain attached to the message."
+    }
+  },
   "examples": {
     "success": {
       "url": "/api/chat.update?token=YOUR_TOKEN",

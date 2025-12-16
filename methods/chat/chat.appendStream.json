@@ -52,6 +52,7 @@
     "message_limit_exceeded": "Members on this team are sending too many messages. For more details, see https://slack.com/help/articles/115002422943-Usage-limits-for-free-workspaces",
     "message_not_found": "Message not found",
     "message_not_in_streaming_state": "The message is not in the streaming state.",
+    "message_not_owned_by_app": "The message is not owned by the app.",
     "messages_tab_disabled": "Messages tab for the app is disabled.",
     "messaging_processing_failed": "Failed to process the message.",
     "metadata_must_be_sent_from_app": "Message metadata can only be posted or updated using an app-level token",
