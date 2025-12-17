@@ -13,7 +13,6 @@
       "groups:write",
       "im:write",
       "mpim:write",
-      "channels:write",
       "channels:write"
     ]
   },
