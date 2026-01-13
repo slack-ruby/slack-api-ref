@@ -1933,7 +1933,7 @@
   },
   {
     "name": "users.conversations",
-    "description": "List conversations the calling user may access.",
+    "description": "List conversations the calling user is a member of.",
     "family": [
       "users"
     ]

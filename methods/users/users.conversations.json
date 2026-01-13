@@ -2,7 +2,7 @@
   "group": "users",
   "name": "users.conversations",
   "deprecated": false,
-  "desc": "List conversations the calling user may access.",
+  "desc": "List conversations the calling user is a member of.",
   "args": {
     "cursor": {
       "required": false,

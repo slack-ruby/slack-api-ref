@@ -1,5 +1,5 @@
 {
-  "desc": "List conversations the calling user may access.",
+  "desc": "List conversations the calling user is a member of.",
   "http_method": "GET",
   "scope": {
     "bot": [
