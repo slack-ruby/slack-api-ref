@@ -175,6 +175,13 @@
     ]
   },
   {
+    "name": "admin.conversations.bulkSetExcludeFromSlackAi",
+    "description": "Exclude channels from Slack AI in bulk",
+    "family": [
+      "admin"
+    ]
+  },
+  {
     "name": "admin.conversations.convertToPrivate",
     "description": "Convert a public channel to a private channel.",
     "family": [
