@@ -875,6 +875,13 @@
     ]
   },
   {
+    "name": "apps.user.connection.update",
+    "description": "Updates the connection status between a user and an app.",
+    "family": [
+      "apps"
+    ]
+  },
+  {
     "name": "assistant.search.context",
     "description": "Searches messages across your Slack organization—perfect for broad, specific, and real-time data retrieval.",
     "family": [

@@ -1,0 +1,11 @@
+{
+  "name": "user_connection",
+  "desc": "A member's user connection status change requested.",
+  "scopes": [
+    "users:write"
+  ],
+  "APIs": [
+    "Events",
+    "RTM"
+  ]
+}

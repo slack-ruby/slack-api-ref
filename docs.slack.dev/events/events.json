@@ -1449,6 +1449,17 @@
     ]
   },
   {
+    "name": "user_connection",
+    "description": "A member's user connection status change requested",
+    "scopes": [
+      "users:write"
+    ],
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
     "name": "user_huddle_changed",
     "description": "A user's huddle status has changed",
     "APIs": [
