@@ -54,6 +54,19 @@
           }
         ]
       },
+      "unfurled_attachments": {
+        "desc": "A JSON-based array of structured attachments, presented as a URL-encoded string.",
+        "example": "[{\"pretext\": \"pre-hello\", \"text\": \"text-world\"}]",
+        "anyOf": [
+          {
+            "type": "string",
+            "subtype": "attachments"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
       "blocks": {
         "desc": "A JSON-based array of structured blocks, presented as a URL-encoded string.",
         "example": "[{\"type\": \"section\", \"text\": {\"type\": \"plain_text\", \"text\": \"Hello world\"}}]",

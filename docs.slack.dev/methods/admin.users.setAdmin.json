@@ -43,6 +43,9 @@
     "failed_to_set_user_to_admin": {
       "desc": "Designating this user as an admin failed."
     },
+    "failed_to_set_admin_on_workspaces": {
+      "desc": "Failed to set the user as an admin on all workspaces."
+    },
     "feature_not_enabled": {
       "desc": "The Admin APIs feature is not enabled for this team."
     },

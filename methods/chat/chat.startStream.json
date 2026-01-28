@@ -17,7 +17,7 @@
     },
     "thread_ts": {
       "required": true,
-      "example": "1721609600",
+      "example": "1721609600.123456",
       "desc": "Provide another message's ts value to reply to. Streamed messages should always be replies to a user request.",
       "type": "string"
     },

@@ -139,7 +139,7 @@
     "method_deprecated": "The method has been deprecated.",
     "missing_post_type": "The method was called via a POST request and included a data payload, but the request did not include a Content-Type header.",
     "missing_query": "Missing query.",
-    "missing_scope": "The token used is not granted the specific scope permissions required to complete this request.",
+    "missing_scope": "The requested channel types are not allowed by the provided scopes.",
     "no_permission": "The workspace token used in this request does not have the permissions necessary to complete the request. Make sure your app is a member of the conversation it's attempting to post a message to.",
     "not_allowed_token_type": "The token type used in this request is not allowed.",
     "not_authed": "No authentication token provided.",

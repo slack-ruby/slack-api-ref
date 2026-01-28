@@ -26,6 +26,7 @@
     "accesslimited": "Access to this method is limited on the current network.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
     "cannot_modify_primary_owner": "The primary owner cannot be modified.",
+    "cannot_set_org_admin_to_regular_at_workspace_level": "Org admins cannot be set to regular at the workspace level. Change their user type at the org level instead.",
     "cannot_set_this_guest_to_regular_at_team_level": "This guest cannot be set to regular because they are active on multiple workspaces.",
     "deprecated_endpoint": "The endpoint has been deprecated.",
     "ekm_access_denied": "Administrators have suspended the ability to post a message.",

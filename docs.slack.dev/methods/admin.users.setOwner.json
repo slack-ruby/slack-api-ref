@@ -42,6 +42,9 @@
     "failed_to_set_user_to_owner": {
       "desc": "The change to the user's role failed."
     },
+    "failed_to_set_owner_on_workspaces": {
+      "desc": "Failed to set the user as an owner on all workspaces."
+    },
     "feature_not_enabled": {
       "desc": "The Admin APIs feature is not enabled for this team."
     },

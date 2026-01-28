@@ -40,7 +40,7 @@
       "thread_ts": {
         "desc": "Provide another message's `ts` value to reply to. Streamed messages should always be replies to a user request.",
         "type": "string",
-        "example": "1721609600"
+        "example": "1721609600.123456"
       },
       "recipient_user_id": {
         "desc": "The encoded ID of the user to receive the streaming text. Required when streaming to channels.",

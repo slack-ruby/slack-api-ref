@@ -20,6 +20,13 @@
       "type": "string",
       "format": "json"
     },
+    "unfurled_attachments": {
+      "required": false,
+      "example": "[{\"pretext\": \"pre-hello\", \"text\": \"text-world\"}]",
+      "desc": "A JSON-based array of structured attachments, presented as a URL-encoded string.",
+      "type": "string",
+      "format": "json"
+    },
     "blocks": {
       "required": false,
       "example": "[{\"type\": \"section\", \"text\": {\"type\": \"plain_text\", \"text\": \"Hello world\"}}]",

@@ -29,6 +29,7 @@
     "deprecated_endpoint": "The endpoint has been deprecated.",
     "ekm_access_denied": "Administrators have suspended the ability to post a message.",
     "enterprise_is_restricted": "The method cannot be called from an Enterprise.",
+    "failed_to_set_admin_on_workspaces": "Failed to set the user as an admin on all workspaces.",
     "failed_to_set_user_to_admin": "Designating this user as an admin failed.",
     "fatal_error": "The server could not complete your operation(s) without encountering a catastrophic error. It's possible some aspect of the operation succeeded before the error was raised.",
     "feature_not_enabled": "The Admin APIs feature is not enabled for this team.",

@@ -36,6 +36,9 @@
   },
   "output": null,
   "errors": {
+    "cannot_set_org_admin_to_regular_at_workspace_level": {
+      "desc": "Org admins cannot be set to regular at the workspace level. Change their user type at the org level instead."
+    },
     "cannot_set_this_guest_to_regular_at_team_level": {
       "desc": "This guest cannot be set to regular because they are active on multiple workspaces."
     },

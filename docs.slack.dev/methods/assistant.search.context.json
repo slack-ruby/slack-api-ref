@@ -484,6 +484,9 @@
     "context_channel_not_found": {
       "desc": "Specified `context_channel_id` is invalid or the user lacks permission to view it."
     },
+    "missing_scope": {
+      "desc": "The requested channel types are not allowed by the provided scopes."
+    },
     "assistant_search_context_disabled": {
       "desc": "We're having issues returning your search results. Please wait and try again."
     }

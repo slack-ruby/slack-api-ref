@@ -10,7 +10,7 @@
       "type": "string"
     },
     "visibility": {
-      "required": true,
+      "required": false,
       "desc": "The function visibility.",
       "type": "enum"
     },
@@ -18,6 +18,11 @@
       "required": false,
       "example": "['U00000001', 'U00000002', 'U00000003']",
       "desc": "List of user IDs to allow for named_entities visibility.",
+      "type": "array"
+    },
+    "permissions": {
+      "required": false,
+      "desc": "Array of permissions for the function.",
       "type": "array"
     }
   },
@@ -37,8 +42,10 @@
     "invalid_array_arg": "The method was passed an array as an argument. Please only input valid strings.",
     "invalid_charset": "The method was called via a POST request, but the charset specified in the Content-Type header was invalid. Valid charset names are: utf-8 iso-8859-1.",
     "invalid_form_data": "The method was called via a POST request with Content-Type application/x-www-form-urlencoded or multipart/form-data, but the form data was either missing or syntactically invalid.",
+    "invalid_permission": "Invalid value for permission",
+    "invalid_permission_type": "Invalid value for permission type.",
     "invalid_post_type": "The method was called via a POST request, but the specified Content-Type was invalid. Valid types are: application/json application/x-www-form-urlencoded multipart/form-data text/plain.",
-    "invalid_setting": "The app_collaborators setting is not allowed for apps not owned by your team/org.",
+    "invalid_setting": "The `app_collaborators` setting is not allowed for apps not owned by your team/org.",
     "invalid_visibility": "Invalid value for visibility.",
     "is_bot": "This method cannot be called by a legacy bot.",
     "method_deprecated": "The method has been deprecated.",

@@ -38,7 +38,7 @@
     "org_login_required": "The workspace is undergoing an enterprise migration and will not be available until migration is complete.",
     "ratelimited": "The request has been ratelimited. Refer to the Retry-After header for when to retry the request.",
     "request_timeout": "The method was called via a POST request, but the POST data was either missing or truncated.",
-    "restricted_action": "User does not have access to this API",
+    "restricted_action": "User does not have access to this API.",
     "service_unavailable": "The service is temporarily unavailable.",
     "team_added_to_org": "The workspace associated with your request is currently undergoing migration to an Enterprise Organization. Web API and other platform operations will be intermittently unavailable until the transition is complete.",
     "token_expired": "Authentication token has expired.",
