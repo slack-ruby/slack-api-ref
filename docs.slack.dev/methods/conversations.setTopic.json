@@ -1,7 +1,28 @@
 {
   "desc": "Sets the topic for a conversation.",
   "http_method": "POST",
-  "scope": {},
+  "scope": {
+    "bot": [
+      "channels:write.topic",
+      "groups:write.topic",
+      "mpim:write.topic",
+      "im:write.topic",
+      "channels:manage",
+      "groups:write",
+      "im:write",
+      "mpim:write"
+    ],
+    "user": [
+      "channels:write.topic",
+      "groups:write.topic",
+      "mpim:write.topic",
+      "im:write.topic",
+      "channels:write",
+      "groups:write",
+      "im:write",
+      "mpim:write"
+    ]
+  },
   "json_input_supported": true,
   "slack_connect_workspaces_allowed": true,
   "rate_limits": "t2",

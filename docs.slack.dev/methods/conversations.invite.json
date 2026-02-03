@@ -12,7 +12,11 @@
     ],
     "user": [
       "channels:write.invites",
-      "groups:write.invites"
+      "groups:write.invites",
+      "channels:write",
+      "groups:write",
+      "im:write",
+      "mpim:write"
     ]
   },
   "json_input_supported": true,
