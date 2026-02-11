@@ -3,7 +3,7 @@
   "http_method": "POST",
   "scope": {
     "user": [
-      "admin.conversations:write"
+      "admin.conversations:manage_objects"
     ]
   },
   "json_input_supported": true,

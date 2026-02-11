@@ -9,6 +9,11 @@
       "desc": "An encoded ID that represents a channel, private group, or DM.",
       "type": "channel"
     },
+    "chunks": {
+      "required": false,
+      "desc": "An array of streaming chunks. Chunks can be markdown text chunks, task update chunks, and plan update chunks.",
+      "type": "array"
+    },
     "ts": {
       "required": true,
       "desc": "The timestamp of the streaming message.",

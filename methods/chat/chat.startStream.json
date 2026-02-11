@@ -9,6 +9,11 @@
       "desc": "An encoded ID that represents a channel thread or DM.",
       "type": "channel"
     },
+    "chunks": {
+      "required": false,
+      "desc": "An array of streaming chunks. Chunks can be markdown text chunks, task update chunks, and plan update chunks.",
+      "type": "array"
+    },
     "markdown_text": {
       "required": false,
       "example": "**This is bold text**",
@@ -30,6 +35,12 @@
       "example": "T0123456789",
       "desc": "The encoded ID of the team the user receiving the streaming text belongs to. Required when streaming to channels.",
       "type": "string"
+    },
+    "task_display_mode": {
+      "required": false,
+      "example": "plan",
+      "desc": "Specifies how tasks are displayed in the message. A timeline displays individual tasks with text in sequential order, and plan displays all tasks together, with the first tasks's placement determining the placement of the rest of the tasks.",
+      "type": "enum"
     }
   },
   "response": {

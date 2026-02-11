@@ -31,6 +31,10 @@
         "type": "string",
         "subtype": "channel"
       },
+      "chunks": {
+        "desc": "An array of streaming chunks. Chunks can be markdown text chunks, task update chunks, and plan update chunks.",
+        "type": "array"
+      },
       "ts": {
         "desc": "The timestamp of the streaming message.",
         "schema": "ts"
