@@ -1673,6 +1673,13 @@
     ]
   },
   {
+    "name": "oauth.v2.user.access",
+    "description": "Exchanges a temporary OAuth verifier code for a user access token.",
+    "family": [
+      "oauth"
+    ]
+  },
+  {
     "name": "openid.connect.token",
     "description": "Exchanges a temporary OAuth verifier code for an access token for Sign in with Slack.",
     "family": [

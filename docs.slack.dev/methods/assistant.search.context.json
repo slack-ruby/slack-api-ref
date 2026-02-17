@@ -3,10 +3,17 @@
   "http_method": "POST",
   "scope": {
     "user": [
-      "search:read"
+      "search:read.public",
+      "search:read.private",
+      "search:read.im",
+      "search:read.mpim",
+      "search:read.files",
+      "search:read.users"
     ],
     "bot": [
-      "search:read.public"
+      "search:read.public",
+      "search:read.files",
+      "search:read.users"
     ]
   },
   "rate_limits": "t5",
