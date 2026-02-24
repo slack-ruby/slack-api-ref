@@ -1436,7 +1436,7 @@
   },
   {
     "name": "files.list",
-    "description": "List for a team, in a channel, or from a user with applied filters.",
+    "description": "List files for a team, in a channel, or from a user with applied filters.",
     "family": [
       "files"
     ]

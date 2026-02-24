@@ -57,6 +57,9 @@
     "no_team_ids_given": {
       "desc": "The `team_ids` parameter was empty."
     },
+    "restricted_action": {
+      "desc": "The calling user cannot update the specified usergroup."
+    },
     "team_limit_exceeded": {
       "desc": "The number of teams associated with the org group would exceed the limit."
     },

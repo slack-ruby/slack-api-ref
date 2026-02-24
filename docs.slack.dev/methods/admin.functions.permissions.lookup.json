@@ -90,7 +90,8 @@
                     "enum": [
                       "everyone",
                       "named_entities",
-                      "no_one"
+                      "no_one",
+                      "unset"
                     ]
                   },
                   "user_ids": {

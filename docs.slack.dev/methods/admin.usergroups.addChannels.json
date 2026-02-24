@@ -72,7 +72,7 @@
       "desc": "The number of channel IDs passed in is larger than 100."
     },
     "not_an_admin": {
-      "desc": "The token provided is not associated with an Org Admin or Owner."
+      "desc": "The calling user cannot update the specified usergroup."
     },
     "not_an_enterprise": {
       "desc": "The token passed in does not belong to an Enterprise organization."

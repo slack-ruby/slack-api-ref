@@ -71,6 +71,7 @@
       },
       "unfurl_id": {
         "type": "string",
+        "subtype": "unfurl_id",
         "desc": "The ID of the link to unfurl. Both `unfurl_id` and `source` must be provided together, *or* `channel` and `ts` must be provided together.",
         "example": "Uxxxxxxx-909b5454-75f8-4ac4-b325-1b40e230bbd8"
       },

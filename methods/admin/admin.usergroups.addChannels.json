@@ -52,7 +52,7 @@
     "missing_scope": "The token used is not granted the specific scope permissions required to complete this request.",
     "no_permission": "The workspace token used in this request does not have the permissions necessary to complete the request. Make sure your app is a member of the conversation it's attempting to post a message to.",
     "not_allowed_token_type": "The token type used in this request is not allowed.",
-    "not_an_admin": "The token provided is not associated with an Org Admin or Owner.",
+    "not_an_admin": "The calling user cannot update the specified usergroup.",
     "not_an_enterprise": "The token passed in does not belong to an Enterprise organization.",
     "not_authed": "No authentication token provided.",
     "org_login_required": "The workspace is undergoing an enterprise migration and will not be available until migration is complete.",

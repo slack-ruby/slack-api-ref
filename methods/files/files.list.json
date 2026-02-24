@@ -2,7 +2,7 @@
   "group": "files",
   "name": "files.list",
   "deprecated": false,
-  "desc": "List for a team, in a channel, or from a user with applied filters.",
+  "desc": "List files for a team, in a channel, or from a user with applied filters.",
   "args": {
     "channel": {
       "required": false,

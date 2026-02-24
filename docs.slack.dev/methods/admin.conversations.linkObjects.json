@@ -42,26 +42,23 @@
   },
   "output": null,
   "errors": {
-    "channel_not_found": {
-      "desc": "Value passed for `channel` is invalid."
+    "channel_already_exists": {
+      "desc": "Object is linked to a different channel."
     },
-    "restricted_action": {
-      "desc": "User does not have access to perform this action."
-    },
-    "record_not_found": {
-      "desc": "Value passed for `record_id` is invalid."
+    "channel_conversion_incomplete": {
+      "desc": "An active channel conversion is preventing linking."
     },
     "channel_is_archived": {
       "desc": "Channel is archived."
+    },
+    "channel_not_found": {
+      "desc": "Value passed for `channel` is invalid."
     },
     "channel_not_org_wide_shared": {
       "desc": "Channel is not Org-wide shared."
     },
     "channel_shared_with_nonapproved_team": {
       "desc": "Channel is shared with a non-approved external team."
-    },
-    "record_channel_already_exists": {
-      "desc": "Record is linked to a different channel."
     },
     "invalid_channel_type": {
       "desc": "Channel type cannot be linked."
@@ -72,8 +69,14 @@
     "not_allowed_for_grid_workspace": {
       "desc": "Channel type is not allowed for this Enterprise org workspace."
     },
-    "channel_conversion_incomplete": {
-      "desc": "An active channel conversion is preventing linking."
+    "restricted_action": {
+      "desc": "User does not have access to perform this action."
+    },
+    "record_channel_already_exists": {
+      "desc": "Record is linked to a different channel."
+    },
+    "record_not_found": {
+      "desc": "Value passed for `record_id` is invalid."
     }
   }
 }

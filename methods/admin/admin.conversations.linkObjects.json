@@ -29,6 +29,7 @@
     "access_denied": "Access to a resource specified in the request is denied.",
     "accesslimited": "Access to this method is limited on the current network.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
+    "channel_already_exists": "Object is linked to a different channel.",
     "channel_conversion_incomplete": "An active channel conversion is preventing linking.",
     "channel_is_archived": "Channel is archived.",
     "channel_not_found": "Value passed for `channel` is invalid.",

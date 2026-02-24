@@ -1,5 +1,5 @@
 {
-  "desc": "List for a team, in a channel, or from a user with applied filters.",
+  "desc": "List files for a team, in a channel, or from a user with applied filters.",
   "http_method": "GET",
   "scope": {
     "bot": [
