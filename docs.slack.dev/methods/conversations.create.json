@@ -100,7 +100,7 @@
       "desc": "Value passed for `name` was empty."
     },
     "restricted_action": {
-      "desc": "A team preference prevents the authenticated user from creating channels."
+      "desc": "A team (workspace) preference prevents the authenticated user from creating channels."
     },
     "canvas_disabled_user_team": {
       "desc": "Canvas is disabled on user's team"

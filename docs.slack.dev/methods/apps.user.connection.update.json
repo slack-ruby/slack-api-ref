@@ -19,6 +19,10 @@
       "token": {
         "type": "string",
         "subtype": "auth",
+        "allow": [
+          "granular_bot",
+          "oauth"
+        ],
         "desc": "Authentication token bearing required scopes. Tokens should be passed as an HTTP Authorization header or alternatively, as a POST parameter.",
         "example": "xxxx-xxxxxxxxx-xxxx"
       },
