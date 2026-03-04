@@ -7,6 +7,20 @@
     ]
   },
   {
+    "name": "admin.analytics.messages.activity",
+    "description": "Retrieves activity metrics for messages from a given channel.",
+    "family": [
+      "admin"
+    ]
+  },
+  {
+    "name": "admin.analytics.messages.metadata",
+    "description": "Retrieves metadata for a list of messages from a given channel.",
+    "family": [
+      "admin"
+    ]
+  },
+  {
     "name": "admin.apps.activities.list",
     "description": "Get logs for a specified team/org",
     "family": [
