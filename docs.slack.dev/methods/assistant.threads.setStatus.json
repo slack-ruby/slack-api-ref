@@ -3,7 +3,7 @@
   "http_method": "POST",
   "scope": {
     "bot": [
-      "assistant:write"
+      "chat:write"
     ]
   },
   "rate_limits": "t5",
