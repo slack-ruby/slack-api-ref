@@ -897,7 +897,7 @@
   },
   {
     "name": "assistant.search.context",
-    "description": "Searches messages across your Slack organization—perfect for broad, specific, and real-time data retrieval.",
+    "description": "Searches messages, files, channels and users across your Slack organization.",
     "family": [
       "assistant"
     ]
