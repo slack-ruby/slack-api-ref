@@ -1,6 +1,6 @@
 {
   "desc": "Retrieves metadata for a list of messages from a given channel.",
-  "http_method": "POST",
+  "http_method": "GET",
   "scope": {
     "user": [
       "admin.analytics:read"
