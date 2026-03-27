@@ -64,12 +64,18 @@
       "team_domain": {
         "type": "string",
         "desc": "The team domain where the app was created on"
+      },
+      "app_token": {
+        "type": "string"
       }
     }
   },
   "errors": {
     "invalid_app": {
       "desc": "An app created from the provided manifest would not be valid."
+    },
+    "invalid_arguments": {
+      "desc": "Invalid API arguments provided."
     },
     "invalid_manifest": {
       "desc": "The provided manifest file does not validate against schema. Consult the additional errors field to locate specific issues."
@@ -89,8 +95,17 @@
     "failed_datastore_operation": {
       "desc": "Failed while managing datastore infrastructure"
     },
+    "failed_generating_app_token": {
+      "desc": "App level token failed to generate."
+    },
+    "managed_app_limit_reached": {
+      "desc": "The manager app has reached the maximum number of managed apps it can create."
+    },
     "ratelimited": {
       "desc": "Too many calls in succession to create endpoint during a short period of time."
+    },
+    "socket_mode_not_enabled": {
+      "desc": "Socket mode is not enabled in manifest."
     },
     "enterprise_is_restricted": {
       "desc": "Org-level tokens are not allowed."

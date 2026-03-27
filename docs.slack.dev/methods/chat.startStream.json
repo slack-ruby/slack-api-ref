@@ -32,7 +32,7 @@
         "subtype": "channel"
       },
       "chunks": {
-        "desc": "An array of streaming chunks. Chunks can be markdown text chunks, task update chunks, and plan update chunks.",
+        "desc": "Array of streaming chunks that can contain either markdown text or task updates.",
         "type": "array"
       },
       "markdown_text": {

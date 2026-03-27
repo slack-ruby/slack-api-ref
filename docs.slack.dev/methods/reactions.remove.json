@@ -78,6 +78,9 @@
     "no_item_specified": {
       "desc": "`file`, `file_comment`, or combination of `channel` and `timestamp` was not specified."
     },
+    "no_access": {
+      "desc": "The requestor does not have permission to perform this action on the specified item."
+    },
     "no_reaction": {
       "desc": "The specified reaction does not exist, or the requestor is not the original reaction author."
     },

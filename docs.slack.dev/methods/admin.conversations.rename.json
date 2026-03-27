@@ -59,6 +59,9 @@
     "feature_not_enabled": {
       "desc": "The token provided doesn't have access to this method."
     },
+    "invalid_name_maxlength": {
+      "desc": "The channel name exceeds the maximum allowed length."
+    },
     "name_taken": {
       "desc": "The channel's name is already being used elsewhere."
     },

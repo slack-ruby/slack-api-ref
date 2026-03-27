@@ -70,6 +70,9 @@
               },
               "snooze_remaining": {
                 "type": "integer"
+              },
+              "dnd_profile_status": {
+                "schema": "dnd_profile_status"
               }
             }
           }

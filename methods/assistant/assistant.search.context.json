@@ -111,6 +111,11 @@
       "required": false,
       "desc": "Whether to include archived channels in the search results.",
       "type": "boolean"
+    },
+    "disable_semantic_search": {
+      "required": false,
+      "desc": "Whether to disable semantic search. When true, only keyword-based search is used. Defaults to false.",
+      "type": "boolean"
     }
   },
   "response": {

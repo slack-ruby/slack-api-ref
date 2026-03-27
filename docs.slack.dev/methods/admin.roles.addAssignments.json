@@ -57,6 +57,9 @@
     }
   },
   "errors": {
+    "cannot_modify_role_admin": {
+      "desc": "The user does not have permission to modify the admin role."
+    },
     "failed_for_some_entities": {
       "desc": "At least one role scope ID was invalid"
     },

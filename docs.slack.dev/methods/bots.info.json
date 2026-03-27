@@ -167,6 +167,9 @@
     },
     "missing_argument": {
       "desc": "A required argument is missing."
+    },
+    "team_not_found": {
+      "desc": "Value passed for `team_id` was invalid."
     }
   },
   "examples": {

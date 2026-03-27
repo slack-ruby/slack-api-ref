@@ -71,7 +71,8 @@
         "enum": [
           "code",
           "workflow_builder",
-          "sales_home"
+          "sales_home",
+          "agent"
         ]
       },
       "sort": {

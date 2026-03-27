@@ -69,7 +69,6 @@
         "type": "boolean"
       },
       "channel": {
-        "disableShapeUnification": true,
         "oneOf": [
           {
             "schema": "conversation"
