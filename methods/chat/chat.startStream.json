@@ -41,6 +41,24 @@
       "example": "plan",
       "desc": "Specifies how tasks are displayed in the message. A timeline displays individual tasks with text in sequential order, and plan displays all tasks together, with the first tasks's placement determining the placement of the rest of the tasks.",
       "type": "enum"
+    },
+    "icon_emoji": {
+      "required": false,
+      "example": ":chart_with_upwards_trend:",
+      "desc": "Emoji to use as the icon for this message. Overrides icon_url.",
+      "type": "string"
+    },
+    "icon_url": {
+      "required": false,
+      "example": "http://lorempixel.com/48/48",
+      "desc": "Image URL to use as the icon for this message.",
+      "type": "string"
+    },
+    "username": {
+      "required": false,
+      "example": "My Bot",
+      "desc": "The bot's username to display.",
+      "type": "string"
     }
   },
   "response": {

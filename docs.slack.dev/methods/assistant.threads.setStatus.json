@@ -47,6 +47,21 @@
           "minLength": 1,
           "maxLength": 50
         }
+      },
+      "icon_emoji": {
+        "type": "string",
+        "desc": "Emoji to use as the icon for this message. Overrides `icon_url`.",
+        "example": ":chart_with_upwards_trend:"
+      },
+      "icon_url": {
+        "type": "string",
+        "desc": "Image URL to use as the icon for this message.",
+        "example": "http://lorempixel.com/48/48"
+      },
+      "username": {
+        "type": "string",
+        "desc": "The bot's username to display.",
+        "example": "My Bot"
       }
     }
   },

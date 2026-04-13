@@ -23,6 +23,24 @@
       "required": false,
       "desc": "The list of messages to rotate through as a loading indicator. Maximum of 10 messages.",
       "type": "array"
+    },
+    "icon_emoji": {
+      "required": false,
+      "example": ":chart_with_upwards_trend:",
+      "desc": "Emoji to use as the icon for this message. Overrides icon_url.",
+      "type": "string"
+    },
+    "icon_url": {
+      "required": false,
+      "example": "http://lorempixel.com/48/48",
+      "desc": "Image URL to use as the icon for this message.",
+      "type": "string"
+    },
+    "username": {
+      "required": false,
+      "example": "My Bot",
+      "desc": "The bot's username to display.",
+      "type": "string"
     }
   },
   "response": {
