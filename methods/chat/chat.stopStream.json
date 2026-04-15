@@ -11,7 +11,7 @@
     },
     "chunks": {
       "required": false,
-      "desc": "Array of streaming chunks that can contain either markdown text or task updates.",
+      "desc": "Array of streaming chunks.",
       "type": "array"
     },
     "ts": {
@@ -60,7 +60,9 @@
     "fatal_error": "The server could not complete your operation(s) without encountering a catastrophic error. It's possible some aspect of the operation succeeded before the error was raised.",
     "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
     "invalid_array_arg": "The method was passed an array as an argument. Please only input valid strings.",
+    "invalid_blocks": "Blocks submitted with this message are not valid.",
     "invalid_charset": "The method was called via a POST request, but the charset specified in the Content-Type header was invalid. Valid charset names are: utf-8 iso-8859-1.",
+    "invalid_chunks": "Chunks submitted with this message are not valid.",
     "invalid_form_data": "The method was called via a POST request with Content-Type application/x-www-form-urlencoded or multipart/form-data, but the form data was either missing or syntactically invalid.",
     "invalid_metadata_format": "Invalid metadata format provided",
     "invalid_metadata_schema": "Invalid metadata schema provided",
@@ -78,6 +80,8 @@
     "missing_file_data": "Attempted to share a file but some required data was missing.",
     "missing_post_type": "The method was called via a POST request and included a data payload, but the request did not include a Content-Type header.",
     "missing_scope": "The token used is not granted the specific scope permissions required to complete this request.",
+    "msg_blocks_too_long": "Blocks submitted with this message are too long.",
+    "msg_blocks_too_many": "Max blocks exceeded, blocks are limited to 50 per message.",
     "no_permission": "The workspace token used in this request does not have the permissions necessary to complete the request. Make sure your app is a member of the conversation it's attempting to post a message to.",
     "no_text": "No message text provided",
     "not_allowed_token_type": "The token type used in this request is not allowed.",

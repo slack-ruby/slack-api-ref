@@ -32,7 +32,7 @@
         "subtype": "channel"
       },
       "chunks": {
-        "desc": "Array of streaming chunks that can contain either markdown text or task updates.",
+        "desc": "Array of streaming chunks.",
         "type": "array"
       },
       "ts": {
@@ -106,6 +106,12 @@
     "ekm_access_denied": {
       "desc": "Your message couldn’t be sent because your admins have disabled sending messages to this channel."
     },
+    "invalid_blocks": {
+      "desc": "Blocks submitted with this message are not valid."
+    },
+    "invalid_chunks": {
+      "desc": "Chunks submitted with this message are not valid."
+    },
     "invalid_metadata_format": {
       "desc": "Invalid metadata format provided"
     },
@@ -129,6 +135,12 @@
     },
     "metadata_too_large": {
       "desc": "Metadata exceeds size limit"
+    },
+    "msg_blocks_too_long": {
+      "desc": "Blocks submitted with this message are too long."
+    },
+    "msg_blocks_too_many": {
+      "desc": "Max blocks exceeded, blocks are limited to 50 per message."
     },
     "no_text": {
       "desc": "No message text provided"

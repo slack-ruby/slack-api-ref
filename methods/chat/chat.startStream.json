@@ -11,7 +11,7 @@
     },
     "chunks": {
       "required": false,
-      "desc": "Array of streaming chunks that can contain either markdown text or task updates.",
+      "desc": "Array of streaming chunks.",
       "type": "array"
     },
     "markdown_text": {
@@ -84,6 +84,7 @@
     "invalid_blocks": "Blocks submitted with this message are not valid",
     "invalid_blocks_format": "The `blocks` is not a valid JSON object or doesn't match the Block Kit syntax.",
     "invalid_charset": "The method was called via a POST request, but the charset specified in the Content-Type header was invalid. Valid charset names are: utf-8 iso-8859-1.",
+    "invalid_chunks": "Chunks submitted with this message are not valid.",
     "invalid_form_data": "The method was called via a POST request with Content-Type application/x-www-form-urlencoded or multipart/form-data, but the form data was either missing or syntactically invalid.",
     "invalid_metadata_format": "Invalid metadata format provided",
     "invalid_metadata_schema": "Invalid metadata schema provided",
@@ -101,6 +102,7 @@
     "missing_recipient_user_id": "Missing recipient user ID.",
     "missing_scope": "The token used is not granted the specific scope permissions required to complete this request.",
     "msg_blocks_too_long": "Blocks submitted with this message are too long.",
+    "msg_blocks_too_many": "Max blocks exceeded, blocks are limited to 50 per message.",
     "no_permission": "The workspace token used in this request does not have the permissions necessary to complete the request. Make sure your app is a member of the conversation it's attempting to post a message to.",
     "no_text": "No message text provided",
     "not_allowed_token_type": "The token type used in this request is not allowed.",

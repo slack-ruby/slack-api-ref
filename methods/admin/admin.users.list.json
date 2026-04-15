@@ -29,6 +29,16 @@
       "desc": "If true, returns only guests and their expiration dates that belong to the team_id.",
       "type": "boolean"
     },
+    "include_admins": {
+      "required": false,
+      "desc": "If true, only admin users will be returned (excludes owners). Returns all admins and owners when combined with include_owners. Cannot be used together with only_guests.",
+      "type": "boolean"
+    },
+    "include_owners": {
+      "required": false,
+      "desc": "If true, only owner users will be returned. Cannot be used together with only_guests.",
+      "type": "boolean"
+    },
     "limit": {
       "required": false,
       "example": "50",
