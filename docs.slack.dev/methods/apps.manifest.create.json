@@ -24,6 +24,11 @@
       "manifest": {
         "type": "string",
         "desc": "A JSON app manifest encoded as a string. This manifest **must** use a valid [app manifest schema - read our guide to creating one](/app-manifests/configuring-apps-with-app-manifests#fields)."
+      },
+      "team_id": {
+        "schema": "workspace_id",
+        "type": "string",
+        "desc": "When called with an org token, which specific team to create app on"
       }
     }
   },
