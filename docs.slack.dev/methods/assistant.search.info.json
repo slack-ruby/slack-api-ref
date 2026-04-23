@@ -3,7 +3,7 @@
   "http_method": "POST",
   "scope": {
     "user": [
-      "search:read"
+      "search:read.public"
     ],
     "bot": [
       "search:read.public"
