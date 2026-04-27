@@ -25,6 +25,18 @@
       "required": false,
       "example": "E12345",
       "desc": "The ID of the enterprise to approve the app on."
+    },
+    "user_scopes": {
+      "required": false,
+      "example": "emoji:read,pins:read",
+      "desc": "User scopes to approve for the app.",
+      "type": "string"
+    },
+    "bot_scopes": {
+      "required": false,
+      "example": "emoji:read,pins:read",
+      "desc": "Bot scopes to approve for the app.",
+      "type": "string"
     }
   },
   "response": {

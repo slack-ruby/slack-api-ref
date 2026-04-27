@@ -161,7 +161,9 @@
                 "name": "incoming-webhook",
                 "description": "Post messages to specific channels in Slack",
                 "is_sensitive": false,
-                "token_type": "user"
+                "token_type": "user",
+                "is_optional": true,
+                "is_approved": false
               }
             ],
             "message": "Could you please install this app for me, it does everything I need.",

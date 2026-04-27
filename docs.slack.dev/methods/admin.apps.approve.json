@@ -39,6 +39,16 @@
         "desc": "The ID of the enterprise to approve the app on",
         "example": "E12345",
         "schema": "enterprise_id"
+      },
+      "user_scopes": {
+        "desc": "User scopes to approve for the app",
+        "example": "emoji:read,pins:read",
+        "type": "string"
+      },
+      "bot_scopes": {
+        "desc": "Bot scopes to approve for the app",
+        "example": "emoji:read,pins:read",
+        "type": "string"
       }
     }
   },
