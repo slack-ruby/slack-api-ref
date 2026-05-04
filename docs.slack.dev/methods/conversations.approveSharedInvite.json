@@ -26,7 +26,7 @@
         "schema": "invite_id"
       },
       "target_team": {
-        "desc": "The team or enterprise id of the other party involved in the invitation you are approving",
+        "desc": "The team or enterprise ID of the receiving party involved in the invitation you are approving",
         "schema": "team_id"
       }
     }
