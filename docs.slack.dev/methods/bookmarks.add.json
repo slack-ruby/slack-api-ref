@@ -17,8 +17,7 @@
     "required": [
       "token",
       "title",
-      "type",
-      "channel_id"
+      "type"
     ],
     "properties": {
       "token": {
@@ -28,9 +27,10 @@
         "example": "xxxx-xxxxxxxxx-xxxx"
       },
       "channel_id": {
-        "desc": "Channel to add bookmark in.",
+        "desc": "Channel to add bookmark in. Required for public channels.",
         "type": "string",
-        "subtype": "channel"
+        "subtype": "channel",
+        "required_for_public": true
       },
       "title": {
         "desc": "Title for the bookmark.",
@@ -149,6 +149,9 @@
     },
     "too_many_tabs": {
       "desc": "tab limit reached for channel."
+    },
+    "too_many_requests": {
+      "desc": "Too many concurrent requests. Please retry."
     }
   },
   "warnings": {

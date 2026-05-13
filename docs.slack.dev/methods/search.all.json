@@ -232,6 +232,11 @@
       }
     }
   },
+  "errors": {
+    "no_query": {
+      "desc": "No query was provided."
+    }
+  },
   "examples": {
     "success": {
       "url": "/api/search.all?token=YOUR_TOKEN",

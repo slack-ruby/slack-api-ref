@@ -15,9 +15,7 @@
   "args": {
     "type": "object",
     "required": [
-      "token",
-      "channel_id",
-      "bookmark_id"
+      "token"
     ],
     "properties": {
       "token": {
@@ -27,13 +25,15 @@
         "example": "xxxx-xxxxxxxxx-xxxx"
       },
       "channel_id": {
-        "desc": "Channel to update bookmark in.",
+        "desc": "Channel to update bookmark in. Required for public channels.",
         "type": "string",
-        "subtype": "channel"
+        "subtype": "channel",
+        "required_for_public": true
       },
       "bookmark_id": {
-        "desc": "Bookmark to update.",
-        "type": "string"
+        "desc": "Bookmark to update. Required for public channels.",
+        "type": "string",
+        "required_for_public": true
       },
       "title": {
         "desc": "Title for the bookmark.",

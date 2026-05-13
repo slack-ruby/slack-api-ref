@@ -117,6 +117,27 @@
     },
     "unknown_method": {
       "desc": "Unknown method"
+    },
+    "dynamic_client_registration_invalid_redirect_uri": {
+      "desc": "The remote server rejected Slack's redirect URI during Dynamic Client Registration. The server must allowlist https://oauth2.slack.com/external/auth/callback as a valid redirect URI."
+    },
+    "dynamic_client_registration_failed": {
+      "desc": "Dynamic client registration failed for an MCP server that requires OAuth authentication."
+    },
+    "oauth_metadata_not_found": {
+      "desc": "Could not discover OAuth metadata for the MCP server. Ensure the server exposes a .well-known/oauth-authorization-server or .well-known/openid-configuration endpoint."
+    },
+    "dynamic_client_registration_not_supported": {
+      "desc": "The MCP server's OAuth metadata does not include a registration endpoint. The server may not support Dynamic Client Registration."
+    },
+    "dynamic_client_registration_missing_oauth_endpoints": {
+      "desc": "The MCP server's OAuth metadata is missing a required authorization or token endpoint."
+    },
+    "dynamic_client_registration_rejected": {
+      "desc": "The MCP server rejected the Dynamic Client Registration request."
+    },
+    "dynamic_client_registration_invalid_response": {
+      "desc": "The MCP server returned an invalid response during Dynamic Client Registration."
     }
   },
   "examples": {

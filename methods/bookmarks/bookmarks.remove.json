@@ -5,13 +5,13 @@
   "desc": "Remove bookmark from the channel.",
   "args": {
     "channel_id": {
-      "required": true,
-      "desc": "Channel to remove bookmark.",
+      "required": false,
+      "desc": "Channel to remove bookmark. Required for public channels.",
       "type": "string"
     },
     "bookmark_id": {
-      "required": true,
-      "desc": "Bookmark to remove.",
+      "required": false,
+      "desc": "Bookmark to remove. Required for public channels.",
       "type": "string"
     },
     "quip_section_id": {

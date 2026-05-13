@@ -46,6 +46,9 @@
     },
     "published_app_only": {
       "desc": "This action is only permitted for published app IDs."
+    },
+    "app_not_owned_by_manager_app": {
+      "desc": "The app is not owned by the manager app."
     }
   },
   "examples": {

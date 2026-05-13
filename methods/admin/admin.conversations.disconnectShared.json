@@ -27,6 +27,7 @@
     "cannot_kick_home_team": "The originating workspace cannot be kicked from the channel.",
     "cannot_kick_team": "Only the originating workspace for a connected channel may remove other workspaces from the channel.",
     "channel_not_found": "The value passed for `channel_id` was invalid.",
+    "channel_type_not_supported": "The value passed for `channel_id` was an MPDM, DM, or the 'general' channel.",
     "deprecated_endpoint": "The endpoint has been deprecated.",
     "ekm_access_denied": "Administrators have suspended the ability to post a message.",
     "enterprise_is_restricted": "The method cannot be called from an Enterprise.",

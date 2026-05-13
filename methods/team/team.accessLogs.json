@@ -52,6 +52,7 @@
     "invalid_form_data": "The method was called via a POST request with Content-Type application/x-www-form-urlencoded or multipart/form-data, but the form data was either missing or syntactically invalid.",
     "invalid_limit": "The value passed for `limit` was not valid.",
     "invalid_post_type": "The method was called via a POST request, but the specified Content-Type was invalid. Valid types are: application/json application/x-www-form-urlencoded multipart/form-data text/plain.",
+    "invalid_team_id": "The value passed for `team_id` is not valid given the token context.",
     "is_bot": "This method cannot be called by a legacy bot.",
     "method_deprecated": "The method has been deprecated.",
     "missing_argument": "A required argument is missing.",

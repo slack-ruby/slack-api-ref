@@ -262,7 +262,8 @@
       "desc": "The message cannot be edited within a frozen, archived or deleted channel."
     },
     "markdown_text_conflict": {
-      "desc": "Markdown text cannot be used in conjunction with `blocks` or `text` argument."
+      "desc": "Markdown text cannot be used in conjunction with `blocks` or `text` argument.",
+      "hidden": true
     },
     "max_file_sharing_exceeded": {
       "desc": "Exceeded max allowed files shared."

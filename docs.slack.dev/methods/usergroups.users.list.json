@@ -20,7 +20,8 @@
     "properties": {
       "token": {
         "type": "string",
-        "subtype": "auth"
+        "subtype": "auth",
+        "example": "xxxx-xxxxxxxxx-xxxx"
       },
       "include_disabled": {
         "desc": "Include results for disabled User Groups.",

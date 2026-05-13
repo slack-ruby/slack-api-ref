@@ -15,8 +15,7 @@
   "args": {
     "type": "object",
     "required": [
-      "token",
-      "channel_id"
+      "token"
     ],
     "properties": {
       "token": {
@@ -26,9 +25,10 @@
         "example": "xxxx-xxxxxxxxx-xxxx"
       },
       "channel_id": {
-        "desc": "Channel to list bookmarks in.",
+        "desc": "Channel to list bookmarks in. Required for public channels.",
         "type": "string",
-        "subtype": "channel"
+        "subtype": "channel",
+        "required_for_public": true
       }
     }
   },

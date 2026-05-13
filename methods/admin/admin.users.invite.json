@@ -28,7 +28,7 @@
     },
     "real_name": {
       "required": false,
-      "example": "{\"Joe Smith\"}",
+      "example": "{\"full_name\":\"Joe Smith\"}",
       "desc": "Full name of the user.",
       "type": "string"
     },

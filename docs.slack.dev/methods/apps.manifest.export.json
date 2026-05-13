@@ -59,6 +59,9 @@
     },
     "unknown_method": {
       "desc": "This method does not exist."
+    },
+    "app_not_owned_by_manager_app": {
+      "desc": "The app is not owned by the manager app."
     }
   },
   "examples": {

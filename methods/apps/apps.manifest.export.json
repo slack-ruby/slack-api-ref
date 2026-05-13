@@ -21,6 +21,7 @@
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
     "app_not_eligible": "The specified app is not elgible for this API.",
     "app_not_found": "The specified app was not found.",
+    "app_not_owned_by_manager_app": "The app is not owned by the manager app.",
     "deprecated_endpoint": "The endpoint has been deprecated.",
     "ekm_access_denied": "Administrators have suspended the ability to post a message.",
     "enterprise_is_restricted": "The method cannot be called from an Enterprise.",

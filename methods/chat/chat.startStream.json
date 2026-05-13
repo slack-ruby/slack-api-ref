@@ -39,7 +39,7 @@
     "task_display_mode": {
       "required": false,
       "example": "plan",
-      "desc": "Specifies how tasks are displayed in the message. A timeline displays individual tasks with text in sequential order, and plan displays all tasks together, with the first tasks's placement determining the placement of the rest of the tasks.",
+      "desc": "Specifies how tasks are displayed in the message. A timeline displays individual tasks with text in sequential order, plan displays all tasks together, with the first tasks's placement determining the placement of the rest of the tasks, and dense collapses consecutive tool calls into a single summarized task card.",
       "type": "enum"
     },
     "icon_emoji": {

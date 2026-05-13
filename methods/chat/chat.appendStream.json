@@ -87,6 +87,7 @@
     "slack_connect_canvas_sharing_blocked": "Admin has disabled Canvas File sharing in all Slack Connect communications",
     "slack_connect_file_link_sharing_blocked": "Admin has disabled Slack File sharing in all Slack Connect communications",
     "slack_connect_lists_sharing_blocked": "Admin has disabled Lists sharing in all Slack Connect communications",
+    "stopped_by_user": "The streaming message was stopped by the user and no further appends are accepted.",
     "team_added_to_org": "The workspace associated with your request is currently undergoing migration to an Enterprise Organization. Web API and other platform operations will be intermittently unavailable until the transition is complete.",
     "team_not_found": "This error occurs if, when using an org-wide token, the `channel_name` is passed instead of the `channel_id`.",
     "token_expired": "Authentication token has expired.",

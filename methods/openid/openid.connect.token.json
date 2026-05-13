@@ -39,6 +39,12 @@
       "example": "xoxe-1-abcdefg",
       "desc": "The refresh_token param as described in the OAuth spec.",
       "type": "string"
+    },
+    "code_verifier": {
+      "required": null,
+      "example": "dBjftJeZ4CVP-mB92K27uhbUJU1p1r_wW1gFWFOEjXk",
+      "desc": "PKCE code verifier (RFC 7636). Required when the authorization request included a code_challenge.",
+      "type": "string"
     }
   },
   "response": {
@@ -60,12 +66,15 @@
     "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
     "invalid_array_arg": "The method was passed an array as an argument. Please only input valid strings.",
     "invalid_charset": "The method was called via a POST request, but the charset specified in the Content-Type header was invalid. Valid charset names are: utf-8 iso-8859-1.",
+    "invalid_client": "Client authentication failed (unknown `client_id` or bad `client_secret`).",
     "invalid_client_id": "The value passed for `client_id` was invalid.",
     "invalid_code": "The value passed for `code` was invalid.",
     "invalid_form_data": "The method was called via a POST request with Content-Type application/x-www-form-urlencoded or multipart/form-data, but the form data was either missing or syntactically invalid.",
+    "invalid_grant": "The authorization code is invalid, expired, revoked, or the PKCE `code_verifier` does not match.",
     "invalid_grant_type": "The value passed for `grant_type` was invalid.",
     "invalid_post_type": "The method was called via a POST request, but the specified Content-Type was invalid. Valid types are: application/json application/x-www-form-urlencoded multipart/form-data text/plain.",
     "invalid_refresh_token": "The given refresh token is invalid.",
+    "invalid_request": "The request is missing a required parameter or includes an invalid parameter value.",
     "is_bot": "This method cannot be called by a legacy bot.",
     "method_deprecated": "The method has been deprecated.",
     "missing_post_type": "The method was called via a POST request and included a data payload, but the request did not include a Content-Type header.",
@@ -83,6 +92,7 @@
     "token_expired": "Authentication token has expired.",
     "token_revoked": "Authentication token is for a deleted user or workspace or the app has been removed when using a user token.",
     "two_factor_setup_required": "Two factor setup is required.",
-    "unknown_method": "This method is currently not available."
+    "unknown_method": "This method is currently not available.",
+    "unsupported_grant_type": "The `grant_type` is not supported by this endpoint."
   }
 }

@@ -5,8 +5,8 @@
   "desc": "Add bookmark to a channel.",
   "args": {
     "channel_id": {
-      "required": true,
-      "desc": "Channel to add bookmark in.",
+      "required": false,
+      "desc": "Channel to add bookmark in. Required for public channels.",
       "type": "string"
     },
     "title": {
@@ -99,6 +99,7 @@
     "token_expired": "Authentication token has expired.",
     "token_revoked": "Authentication token is for a deleted user or workspace or the app has been removed when using a user token.",
     "too_many_bookmarks": "Bookmark limit reached for channel.",
+    "too_many_requests": "Too many concurrent requests. Please retry.",
     "too_many_tabs": "tab limit reached for channel.",
     "two_factor_setup_required": "Two factor setup is required.",
     "unknown_method": "This method is currently not available."

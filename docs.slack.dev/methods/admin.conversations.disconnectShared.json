@@ -56,6 +56,9 @@
     "channel_not_found": {
       "desc": "The value passed for `channel_id` was invalid."
     },
+    "channel_type_not_supported": {
+      "desc": "The value passed for `channel_id` was an MPDM, DM, or the 'general' channel."
+    },
     "feature_not_enabled": {
       "desc": "The token provided does not have access to this method."
     },

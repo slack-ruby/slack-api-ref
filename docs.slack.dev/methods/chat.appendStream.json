@@ -165,6 +165,9 @@
     "channel_type_not_supported": {
       "desc": "Channel type not supported"
     },
+    "stopped_by_user": {
+      "desc": "The streaming message was stopped by the user and no further appends are accepted."
+    },
     "message_not_owned_by_app": {
       "desc": "The message is not owned by the app."
     }

@@ -6,6 +6,7 @@
       "admin"
     ]
   },
+  "team_type": "all",
   "slack_connect_workspaces_allowed": true,
   "rate_limits": "t2",
   "args": {
@@ -202,6 +203,9 @@
     },
     "invalid_limit": {
       "desc": "The value passed for `limit` was not valid."
+    },
+    "invalid_team_id": {
+      "desc": "The value passed for `team_id` is not valid given the token context."
     }
   },
   "examples": {

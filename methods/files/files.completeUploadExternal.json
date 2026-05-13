@@ -6,7 +6,7 @@
   "args": {
     "files": {
       "required": true,
-      "example": "[{\"id\":\"F044GKUHN9Z\", \"title\":\"slack-test\"}]",
+      "example": "[{\"id\":\"F044GKUHN9Z\", \"title\":\"slack-test\", \"highlight_type\":\"png\"}]",
       "desc": "Array of file ids and their corresponding (optional) titles.",
       "type": "array"
     },
@@ -57,7 +57,9 @@
     "enterprise_is_restricted": "The method cannot be called from an Enterprise.",
     "fatal_error": "The server could not complete your operation(s) without encountering a catastrophic error. It's possible some aspect of the operation succeeded before the error was raised.",
     "file_not_found": "Could not find the file from the upload ticket.",
+    "file_type_not_allowed": "The file type is not permitted based on the team's allowed_file_upload_types preference.",
     "file_update_failed": "Failure occurred when attempting to update the file.",
+    "file_uploads_except_images_disabled": "Only image file uploads are permitted for this team.",
     "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
     "invalid_array_arg": "The method was passed an array as an argument. Please only input valid strings.",
     "invalid_blocks": "Provided blocks are in the incorrect format.",

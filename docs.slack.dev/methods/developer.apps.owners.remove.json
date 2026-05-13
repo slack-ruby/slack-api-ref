@@ -1,0 +1,86 @@
+{
+  "desc": "Remove a user as an app collaborator",
+  "http_method": "POST",
+  "scope": {
+    "bot": [
+      "apps"
+    ],
+    "user": [
+      "apps"
+    ]
+  },
+  "rate_limits": "t1",
+  "args": {
+    "type": "object",
+    "required": [
+      "token",
+      "app_id"
+    ],
+    "properties": {
+      "token": {
+        "type": "string",
+        "subtype": "auth",
+        "example": "xxxx-xxxxxxxxx-xxxx"
+      },
+      "app_id": {
+        "type": "string",
+        "desc": "The ID of the app the user is a collaborator on."
+      },
+      "user_id": {
+        "type": "string",
+        "desc": "The ID of the user to remove as a collaborator."
+      },
+      "user_email": {
+        "type": "string",
+        "desc": "The email of the user to remove as a collaborator.  This email has to be associated with a slack user in the workspace."
+      }
+    }
+  },
+  "output": {
+    "type": "object",
+    "properties": {
+      "warnings": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": [
+            "message",
+            "code"
+          ],
+          "properties": {
+            "code": {
+              "type": "string"
+            },
+            "message": {
+              "type": "string"
+            }
+          }
+        },
+        "desc": "Non-blocking warnings from app manifest validation."
+      }
+    }
+  },
+  "errors": {
+    "app_not_found": {
+      "desc": "The given app cannot be found."
+    },
+    "app_not_owned_by_manager_app": {
+      "desc": "The specified app is not managed by the calling manager app."
+    },
+    "user_not_found": {
+      "desc": "The given user cannot be found."
+    },
+    "cannot_remove_owner": {
+      "desc": "Unable to remove the given user."
+    },
+    "cannot_abandon_app": {
+      "desc": "The last collaborator cannot be removed"
+    },
+    "cannot_remove_collaborators": {
+      "desc": "User is unable to remove collaborators"
+    },
+    "enterprise_is_restricted": {
+      "desc": "Org-level tokens are not allowed."
+    }
+  }
+}

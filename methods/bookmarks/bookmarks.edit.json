@@ -5,13 +5,13 @@
   "desc": "Edit bookmark.",
   "args": {
     "channel_id": {
-      "required": true,
-      "desc": "Channel to update bookmark in.",
+      "required": false,
+      "desc": "Channel to update bookmark in. Required for public channels.",
       "type": "string"
     },
     "bookmark_id": {
-      "required": true,
-      "desc": "Bookmark to update.",
+      "required": false,
+      "desc": "Bookmark to update. Required for public channels.",
       "type": "string"
     },
     "title": {

@@ -162,7 +162,8 @@
       "desc": "Channel has been archived."
     },
     "markdown_text_conflict": {
-      "desc": "Markdown text cannot be used in conjunction with `blocks` or `text` argument."
+      "desc": "Markdown text cannot be used in conjunction with `blocks` or `text` argument.",
+      "hidden": true
     },
     "message_limit_exceeded": {
       "desc": "Members on this team are sending too many messages. For more details, see https://slack.com/help/articles/115002422943-Usage-limits-for-free-workspaces"

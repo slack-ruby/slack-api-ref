@@ -15,9 +15,7 @@
   "args": {
     "type": "object",
     "required": [
-      "token",
-      "channel_id",
-      "bookmark_id"
+      "token"
     ],
     "properties": {
       "token": {
@@ -27,13 +25,15 @@
         "example": "xxxx-xxxxxxxxx-xxxx"
       },
       "channel_id": {
-        "desc": "Channel to remove bookmark.",
+        "desc": "Channel to remove bookmark. Required for public channels.",
         "type": "string",
-        "subtype": "channel"
+        "subtype": "channel",
+        "required_for_public": true
       },
       "bookmark_id": {
-        "desc": "Bookmark to remove.",
-        "type": "string"
+        "desc": "Bookmark to remove. Required for public channels.",
+        "type": "string",
+        "required_for_public": true
       },
       "quip_section_id": {
         "desc": "Quip section ID to unbookmark",

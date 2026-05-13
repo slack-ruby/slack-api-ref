@@ -56,11 +56,12 @@
         "example": "T0123456789"
       },
       "task_display_mode": {
-        "desc": "Specifies how tasks are displayed in the message. A `timeline` displays individual tasks with text in sequential order, and `plan` displays all tasks together, with the first tasks's placement determining the placement of the rest of the tasks.",
+        "desc": "Specifies how tasks are displayed in the message. A `timeline` displays individual tasks with text in sequential order, `plan` displays all tasks together, with the first tasks's placement determining the placement of the rest of the tasks, and `dense` collapses consecutive tool calls into a single summarized task card.",
         "type": "string",
         "enum": [
           "timeline",
-          "plan"
+          "plan",
+          "dense"
         ],
         "default": "timeline",
         "example": "plan"

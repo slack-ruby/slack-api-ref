@@ -28,7 +28,7 @@
       "files": {
         "type": "array",
         "desc": "Array of file ids and their corresponding (optional) titles.",
-        "example": "[{\"id\":\"F044GKUHN9Z\", \"title\":\"slack-test\"}]",
+        "example": "[{\"id\":\"F044GKUHN9Z\", \"title\":\"slack-test\", \"highlight_type\":\"png\"}]",
         "items": {
           "type": "object",
           "required": [
@@ -37,12 +37,17 @@
           "properties": {
             "id": {
               "desc": "File ID returned from files.getUploadURL.",
-              "example": "F0R8KA909",
+              "example": "F123ABC456",
               "schema": "file_id"
             },
             "title": {
               "desc": "Title of file.",
               "type": "string"
+            },
+            "highlight_type": {
+              "desc": "Optional highlight type hint for the file. The upload processing job may overwrite this value.",
+              "type": "string",
+              "maxLength": 10
             }
           }
         }
@@ -145,6 +150,12 @@
     },
     "channels_limit_exceeded": {
       "desc": "Exceeded the channel limit. A maximum of 100 channels is allowed per request."
+    },
+    "file_type_not_allowed": {
+      "desc": "The file type is not permitted based on the team's allowed_file_upload_types preference."
+    },
+    "file_uploads_except_images_disabled": {
+      "desc": "Only image file uploads are permitted for this team."
     }
   },
   "examples": {

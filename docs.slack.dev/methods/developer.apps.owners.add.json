@@ -1,0 +1,74 @@
+{
+  "desc": "Add a user as an app collaborator",
+  "http_method": "POST",
+  "scope": {
+    "bot": [
+      "apps"
+    ],
+    "user": [
+      "apps"
+    ]
+  },
+  "rate_limits": "t1",
+  "args": {
+    "type": "object",
+    "required": [
+      "token",
+      "app_id"
+    ],
+    "properties": {
+      "token": {
+        "type": "string",
+        "subtype": "auth",
+        "example": "xxxx-xxxxxxxxx-xxxx"
+      },
+      "app_id": {
+        "type": "string",
+        "desc": "The ID of the app to attach the collaborator to."
+      },
+      "user_id": {
+        "type": "string",
+        "desc": "The ID of the user to add as a collaborator."
+      },
+      "user_email": {
+        "type": "string",
+        "desc": "The email of the user to add as a collaborator.  This email has to be associated with a slack user in the workspace."
+      },
+      "permission_type": {
+        "type": "string",
+        "desc": "Defines what level of access this collaborator should have to the app.",
+        "enum": [
+          "owner",
+          "reader"
+        ]
+      }
+    }
+  },
+  "output": null,
+  "errors": {
+    "app_not_found": {
+      "desc": "The given app cannot be found."
+    },
+    "app_not_owned_by_manager_app": {
+      "desc": "The specified app is not managed by the calling manager app."
+    },
+    "user_not_found": {
+      "desc": "The given user cannot be found."
+    },
+    "cannot_list_collaborators": {
+      "desc": "Calling user is unable to list collaborators."
+    },
+    "cannot_add_collaborator": {
+      "desc": "Calling user is unable to add collaborators"
+    },
+    "user_already_owner": {
+      "desc": "The user is already a collaborator for this app"
+    },
+    "enterprise_is_restricted": {
+      "desc": "Org-level tokens are not allowed."
+    },
+    "invalid_permission_type": {
+      "desc": "The given permission type is not a valid value"
+    }
+  }
+}

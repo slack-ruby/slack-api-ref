@@ -19,7 +19,8 @@
     "properties": {
       "token": {
         "type": "string",
-        "subtype": "auth"
+        "subtype": "auth",
+        "example": "xxxx-xxxxxxxxx-xxxx"
       },
       "include_count": {
         "desc": "Include the number of users in each User Group.",
@@ -39,12 +40,9 @@
       "team_id": {
         "desc": "The user group's encoded team ID. Required if org token is used.",
         "subtype": "team",
-        "anyOf": [
-          {
-            "type": "string",
-            "maxLength": 0
-          }
-        ]
+        "type": "string",
+        "maxLength": 0,
+        "schema": "workspace_id"
       }
     }
   },
@@ -55,7 +53,10 @@
     "type": "object",
     "properties": {
       "usergroups": {
-        "type": "array"
+        "type": "array",
+        "items": {
+          "schema": "subteam"
+        }
       }
     }
   },

@@ -37,7 +37,7 @@
     "ekm_access_denied": "Administrators have suspended the ability to post a message.",
     "enterprise_is_restricted": "The method cannot be called from an Enterprise.",
     "fatal_error": "The server could not complete your operation(s) without encountering a catastrophic error. It's possible some aspect of the operation succeeded before the error was raised.",
-    "free_teams_cannot_create_standalone_canvases": "Free teams cannot create standalone canvases",
+    "free_teams_cannot_create_non_tabbed_canvases": "Free teams cannot create non-tabbed standalone canvases",
     "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
     "invalid_array_arg": "The method was passed an array as an argument. Please only input valid strings.",
     "invalid_charset": "The method was called via a POST request, but the charset specified in the Content-Type header was invalid. Valid charset names are: utf-8 iso-8859-1.",

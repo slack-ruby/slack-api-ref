@@ -39,6 +39,13 @@
         "desc": "The `refresh_token` param as described in the OAuth spec.",
         "example": "xoxe-1-abcdefg",
         "type": "string"
+      },
+      "code_verifier": {
+        "desc": "PKCE code verifier (RFC 7636). Required when the authorization request included a `code_challenge`.",
+        "example": "dBjftJeZ4CVP-mB92K27uhbUJU1p1r_wW1gFWFOEjXk",
+        "type": "string",
+        "minLength": 43,
+        "maxLength": 128
       }
     }
   },
@@ -89,8 +96,8 @@
     "cannot_install_an_org_installed_app": {
       "desc": "An org-installed app cannot be installed on a workspace."
     },
-    "invalid_grant_type": {
-      "desc": "The value passed for `grant_type` was invalid."
+    "invalid_client": {
+      "desc": "Client authentication failed (unknown `client_id` or bad `client_secret`)."
     },
     "invalid_client_id": {
       "desc": "The value passed for `client_id` was invalid."
@@ -98,14 +105,26 @@
     "invalid_code": {
       "desc": "The value passed for `code` was invalid."
     },
+    "invalid_grant": {
+      "desc": "The authorization code is invalid, expired, revoked, or the PKCE `code_verifier` does not match."
+    },
+    "invalid_grant_type": {
+      "desc": "The value passed for `grant_type` was invalid."
+    },
     "invalid_refresh_token": {
       "desc": "The given refresh token is invalid."
+    },
+    "invalid_request": {
+      "desc": "The request is missing a required parameter or includes an invalid parameter value."
     },
     "oauth_authorization_url_mismatch": {
       "desc": "The OAuth flow was initiated on an incorrect version of the authorization URL. The flow must be initiated via /openid/connect/authorize ."
     },
     "preview_feature_not_available": {
       "desc": "The API method is not yet available on the team."
+    },
+    "unsupported_grant_type": {
+      "desc": "The `grant_type` is not supported by this endpoint."
     }
   },
   "examples": {

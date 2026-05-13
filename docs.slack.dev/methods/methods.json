@@ -1365,6 +1365,27 @@
     ]
   },
   {
+    "name": "developer.apps.owners.add",
+    "description": "Add a user as an app collaborator",
+    "family": [
+      "developer"
+    ]
+  },
+  {
+    "name": "developer.apps.owners.list",
+    "description": "List app collaborators",
+    "family": [
+      "developer"
+    ]
+  },
+  {
+    "name": "developer.apps.owners.remove",
+    "description": "Remove a user as an app collaborator",
+    "family": [
+      "developer"
+    ]
+  },
+  {
     "name": "dialog.open",
     "description": "Open a dialog with a user",
     "family": [

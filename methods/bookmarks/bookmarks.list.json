@@ -5,8 +5,8 @@
   "desc": "List bookmark for the channel.",
   "args": {
     "channel_id": {
-      "required": true,
-      "desc": "Channel to list bookmarks in.",
+      "required": false,
+      "desc": "Channel to list bookmarks in. Required for public channels.",
       "type": "string"
     }
   },

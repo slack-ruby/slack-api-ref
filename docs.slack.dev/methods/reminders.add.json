@@ -46,7 +46,7 @@
         "type": "object",
         "desc": "Specify the repeating behavior of a reminder. Available options: `daily`, `weekly`, `monthly`, or `yearly`. If `weekly`, may further specify the days of the week.",
         "example": "{ \"frequency\": \"weekly\", \"weekdays\": [\"monday\", \"wednesday\", \"friday\"] }",
-        "schema": "recurrence"
+        "schema": ""
       }
     },
     "required": [

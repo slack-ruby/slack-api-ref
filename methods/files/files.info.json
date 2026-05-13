@@ -36,7 +36,6 @@
     "canvas_disabled_file_team": "Canvas is disabled on file's team",
     "canvas_disabled_user_team": "Canvas is disabled on user's team for connected Channels",
     "canvas_globally_disabled": "Canvas is disabled for this team",
-    "channel_canvas_deleted": "The requested file is a channel canvas that has been deleted",
     "deprecated_endpoint": "The endpoint has been deprecated.",
     "ekm_access_denied": "Administrators have suspended the ability to post a message.",
     "enterprise_is_restricted": "The method cannot be called from an Enterprise.",

@@ -199,6 +199,11 @@
       }
     }
   },
+  "errors": {
+    "no_query": {
+      "desc": "No query was provided."
+    }
+  },
   "examples": {
     "success": {
       "url": "/api/search.files?token=YOUR_TOKEN",

@@ -135,9 +135,6 @@
     "file_deleted": {
       "desc": "The requested file has been deleted"
     },
-    "channel_canvas_deleted": {
-      "desc": "The requested file is a channel canvas that has been deleted"
-    },
     "file_not_found": {
       "desc": "Value passed for `file` was invalid"
     },

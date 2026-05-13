@@ -57,14 +57,14 @@
     "canvas_disabled_user_team": {
       "desc": "Canvas is disabled on user's team"
     },
-    "free_teams_cannot_create_standalone_canvases": {
-      "desc": "Free teams cannot create standalone canvases"
-    },
     "restricted_action": {
       "desc": "User does not have permission to perform this action."
     },
     "canvas_creation_failed": {
       "desc": "Canvas was unable to be created."
+    },
+    "free_teams_cannot_create_non_tabbed_canvases": {
+      "desc": "Free teams cannot create non-tabbed standalone canvases"
     }
   },
   "examples": {
