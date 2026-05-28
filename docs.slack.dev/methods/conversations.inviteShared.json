@@ -1,6 +1,6 @@
 {
   "desc": "Sends an invitation to a Slack Connect channel",
-  "http_method": "GET",
+  "http_method": "POST",
   "scope": {
     "bot": [
       "conversations.connect:write"
