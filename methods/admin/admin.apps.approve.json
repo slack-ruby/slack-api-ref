@@ -4,6 +4,12 @@
   "deprecated": false,
   "desc": "Approve an app for installation on a workspace.",
   "args": {
+    "allow_child_auto_install": {
+      "required": false,
+      "example": "true",
+      "desc": "Auto-create an Admin-Approved App automation rule that pre-approves future child app installs from this manager app.",
+      "type": "boolean"
+    },
     "app_id": {
       "required": false,
       "example": "A12345",

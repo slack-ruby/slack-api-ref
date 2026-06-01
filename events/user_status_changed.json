@@ -1,0 +1,11 @@
+{
+  "name": "user_status_changed",
+  "desc": "A user's status has changed.",
+  "scopes": [
+    "users:read"
+  ],
+  "APIs": [
+    "Events",
+    "RTM"
+  ]
+}

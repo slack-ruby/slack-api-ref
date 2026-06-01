@@ -1468,6 +1468,28 @@
     ]
   },
   {
+    "name": "user_profile_changed",
+    "description": "A user's profile has changed",
+    "scopes": [
+      "users:read"
+    ],
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
+    "name": "user_status_changed",
+    "description": "A user's status has changed",
+    "scopes": [
+      "users:read"
+    ],
+    "APIs": [
+      "Events",
+      "RTM"
+    ]
+  },
+  {
     "name": "user_typing",
     "description": "A channel member is typing a message",
     "scopes": [],

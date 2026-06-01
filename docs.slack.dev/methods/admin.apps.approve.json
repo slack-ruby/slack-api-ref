@@ -20,6 +20,12 @@
         "desc": "Authentication token bearing required scopes. Tokens should be passed as an HTTP Authorization header or alternatively, as a POST parameter.",
         "example": "xxxx-xxxxxxxxx-xxxx"
       },
+      "allow_child_auto_install": {
+        "type": "boolean",
+        "desc": "Auto-create an Admin-Approved App automation rule that pre-approves future child app installs from this manager app.",
+        "example": "true",
+        "default": "false"
+      },
       "app_id": {
         "desc": "The id of the app to approve.",
         "example": "A12345",

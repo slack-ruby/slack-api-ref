@@ -1,0 +1,11 @@
+{
+  "name": "user_profile_changed",
+  "desc": "A user's profile has changed.",
+  "scopes": [
+    "users:read"
+  ],
+  "APIs": [
+    "Events",
+    "RTM"
+  ]
+}
