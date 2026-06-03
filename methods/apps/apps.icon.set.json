@@ -34,6 +34,7 @@
     "enterprise_is_restricted": "The method cannot be called from an Enterprise.",
     "error_bad_format": "Icon must be a valid image file.",
     "fatal_error": "The server could not complete your operation(s) without encountering a catastrophic error. It's possible some aspect of the operation succeeded before the error was raised.",
+    "icon_not_accessible": "The icon URL is not accessible or returned an error (e.g. 404 Not Found). Please verify the URL is publicly reachable and returns a valid image.",
     "invalid_app": "App does not exist.",
     "invalid_app_id": "App ID is not valid.",
     "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",

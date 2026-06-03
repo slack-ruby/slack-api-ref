@@ -42,6 +42,9 @@
     "error_bad_format": {
       "desc": "Icon must be a valid image file."
     },
+    "icon_not_accessible": {
+      "desc": "The icon URL is not accessible or returned an error (e.g. 404 Not Found). Please verify the URL is publicly reachable and returns a valid image."
+    },
     "invalid_app": {
       "desc": "App does not exist."
     },
