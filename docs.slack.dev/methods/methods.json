@@ -959,6 +959,13 @@
     ]
   },
   {
+    "name": "blocks.validate",
+    "description": "Validates blocks, messages, and views Block Kit JSON payloads.",
+    "family": [
+      "blocks"
+    ]
+  },
+  {
     "name": "bookmarks.add",
     "description": "Add bookmark to a channel.",
     "family": [
