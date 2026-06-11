@@ -4,15 +4,10 @@
   "scope": {
     "bot": [
       "groups:write",
-      "im:write",
-      "mpim:write",
-      "channels:write",
       "channels:manage"
     ],
     "user": [
       "groups:write",
-      "im:write",
-      "mpim:write",
       "channels:write"
     ]
   },

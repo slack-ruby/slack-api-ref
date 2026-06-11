@@ -211,6 +211,11 @@
                   "desc": "Full name of the user who authored the message.",
                   "type": "string"
                 },
+                "author_email": {
+                  "desc": "Email address of the user who authored the message, if visible to the searching user.",
+                  "type": "string",
+                  "example": "marshall@goliathnationalbank.com"
+                },
                 "author_user_id": {
                   "schema": "user_id",
                   "desc": "ID of the user who authored the message."
@@ -294,6 +299,11 @@
                 "author_name": {
                   "desc": "Full name of the user who uploaded or created the file.",
                   "type": "string"
+                },
+                "author_email": {
+                  "desc": "Email address of the user who uploaded or created the file, if visible to the searching user",
+                  "type": "string",
+                  "example": "marshall@goliathnationalbank.com"
                 },
                 "author_user_id": {
                   "schema": "user_id",
