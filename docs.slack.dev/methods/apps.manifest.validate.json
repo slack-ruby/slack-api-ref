@@ -93,7 +93,7 @@
       "desc": "User described by the used token does not have proper permissions to take this action."
     },
     "app_not_owned_by_manager_app": {
-      "desc": "The app is not owned by the manager app."
+      "desc": "The specified app is not managed by the calling manager app. A manager app can only validate apps that it originally created via apps.manifest.create."
     }
   },
   "examples": {

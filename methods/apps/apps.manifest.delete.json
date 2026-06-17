@@ -2,7 +2,7 @@
   "group": "apps",
   "name": "apps.manifest.delete",
   "deprecated": false,
-  "desc": "Permanently deletes an app created through app manifests",
+  "desc": "Permanently deletes an app created through app manifests. When called with a manager app token, this method can only delete apps that were created by that manager app.",
   "args": {
     "app_id": {
       "required": true,
@@ -21,7 +21,7 @@
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
     "app_not_eligible": "The specified app is not elgible for this API.",
     "app_not_found": "The specified app was not found.",
-    "app_not_owned_by_manager_app": "The app is not owned by the manager app.",
+    "app_not_owned_by_manager_app": "The specified app is not managed by the calling manager app. A manager app can only delete apps that it originally created via apps.manifest.create.",
     "deprecated_endpoint": "The endpoint has been deprecated.",
     "ekm_access_denied": "Administrators have suspended the ability to post a message.",
     "enterprise_is_restricted": "The method cannot be called from an Enterprise.",

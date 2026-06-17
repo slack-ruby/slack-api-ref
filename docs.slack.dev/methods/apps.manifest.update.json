@@ -1,5 +1,5 @@
 {
-  "desc": "Update an app from an app manifest",
+  "desc": "Update an app from an app manifest. When called with a manager app token, this method can only update apps that were created by that manager app.",
   "http_method": "POST",
   "scope": {
     "configuration": [
@@ -81,7 +81,7 @@
       "desc": "The remote server rejected Slack's redirect URI during Dynamic Client Registration. The server must allowlist https://oauth2.slack.com/external/auth/callback as a valid redirect URI."
     },
     "app_not_owned_by_manager_app": {
-      "desc": "The specified app is not managed by the calling manager app."
+      "desc": "The specified app is not managed by the calling manager app. A manager app can only update apps that it originally created via apps.manifest.create. It cannot modify apps created by other manager apps or apps created manually, even if the same user owns both."
     },
     "ratelimited": {
       "desc": "Too many calls in succession to update endpoint during a short period of time."

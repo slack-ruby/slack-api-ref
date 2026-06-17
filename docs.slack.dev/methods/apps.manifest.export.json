@@ -1,5 +1,5 @@
 {
-  "desc": "Export an app manifest from an existing app",
+  "desc": "Export an app manifest from an existing app. When called with a manager app token, this method can only export apps that were created by that manager app.",
   "http_method": "POST",
   "scope": {
     "configuration": [
@@ -61,7 +61,7 @@
       "desc": "This method does not exist."
     },
     "app_not_owned_by_manager_app": {
-      "desc": "The app is not owned by the manager app."
+      "desc": "The specified app is not managed by the calling manager app. A manager app can only access apps that it originally created via apps.manifest.create."
     }
   },
   "examples": {

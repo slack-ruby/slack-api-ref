@@ -2,7 +2,7 @@
   "group": "apps",
   "name": "apps.manifest.update",
   "deprecated": false,
-  "desc": "Update an app from an app manifest",
+  "desc": "Update an app from an app manifest. When called with a manager app token, this method can only update apps that were created by that manager app.",
   "args": {
     "manifest": {
       "required": true,
@@ -25,7 +25,7 @@
     "accesslimited": "Access to this method is limited on the current network.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
     "app_not_eligible": "The specified app is not eligible for this API.",
-    "app_not_owned_by_manager_app": "The specified app is not managed by the calling manager app.",
+    "app_not_owned_by_manager_app": "The specified app is not managed by the calling manager app. A manager app can only update apps that it originally created via apps.manifest.create. It cannot modify apps created by other manager apps or apps created manually, even if the same user owns both.",
     "deprecated_endpoint": "The endpoint has been deprecated.",
     "dynamic_client_registration_failed": "Dynamic client registration failed for an MCP server that requires OAuth authentication.",
     "dynamic_client_registration_invalid_redirect_uri": "The remote server rejected Slack's redirect URI during Dynamic Client Registration. The server must allowlist https://oauth2.slack.com/external/auth/callback as a valid redirect URI.",
