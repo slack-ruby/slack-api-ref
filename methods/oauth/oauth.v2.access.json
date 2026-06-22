@@ -45,6 +45,12 @@
       "example": "xoxe-1-abcdefg",
       "desc": "The refresh_token param as described in the OAuth spec.",
       "type": "string"
+    },
+    "assertion": {
+      "required": null,
+      "example": "eyJhbGciOiJSUzI1NiIsInR…",
+      "desc": "Identity assertion JWT authorization grant.",
+      "type": "string"
     }
   },
   "response": {

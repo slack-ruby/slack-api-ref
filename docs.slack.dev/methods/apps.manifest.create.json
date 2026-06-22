@@ -82,6 +82,9 @@
     "invalid_arguments": {
       "desc": "Invalid API arguments provided."
     },
+    "invalid_manager_app": {
+      "desc": "The calling app is not enrolled as a manager app. Ensure the app has `app_configurations:write` in its configured scopes and its home team has manager app support enabled."
+    },
     "invalid_manifest": {
       "desc": "The provided manifest file does not validate against schema. Consult the additional errors field to locate specific issues."
     },
@@ -102,6 +105,9 @@
     },
     "failed_generating_app_token": {
       "desc": "App level token failed to generate."
+    },
+    "feature_not_enabled": {
+      "desc": "The required feature is not enabled for this workspace."
     },
     "managed_app_limit_reached": {
       "desc": "The manager app has reached the maximum number of managed apps it can create."

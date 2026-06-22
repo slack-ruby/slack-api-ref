@@ -108,6 +108,7 @@
     "not_allowed_token_type": "The token type used in this request is not allowed.",
     "not_authed": "No authentication token provided.",
     "not_in_channel": "Cannot post user messages to a channel they are not in.",
+    "not_subscribed_to_message_stream_stopped": "The app must be subscribed to the `message_stream_stopped` event to use `is_stoppable`.",
     "org_login_required": "The workspace is undergoing an enterprise migration and will not be available until migration is complete.",
     "rate_limited": "Application has posted too many messages, [read the Rate Limit documentation](/apis/web-api/rate-limits) for more information",
     "ratelimited": "The request has been ratelimited. Refer to the Retry-After header for when to retry the request.",

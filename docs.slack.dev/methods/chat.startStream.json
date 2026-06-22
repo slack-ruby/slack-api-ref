@@ -198,6 +198,9 @@
     },
     "missing_recipient_user_id": {
       "desc": "Missing recipient user ID."
+    },
+    "not_subscribed_to_message_stream_stopped": {
+      "desc": "The app must be subscribed to the `message_stream_stopped` event to use `is_stoppable`."
     }
   },
   "examples": {

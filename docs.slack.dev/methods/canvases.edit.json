@@ -59,6 +59,12 @@
     },
     "canvas_editing_failed": {
       "desc": "The changes to the canvas failed to be applied."
+    },
+    "canvas_editing_locked": {
+      "desc": "Another edit to this canvas is currently in progress. Please retry after a short delay."
+    },
+    "canvas_too_large": {
+      "desc": "The canvas is too large to apply the requested changes. Reduce the size of the canvas or the edit and try again."
     }
   },
   "examples": {

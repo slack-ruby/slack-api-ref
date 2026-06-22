@@ -63,14 +63,20 @@
     "app_management_app_not_installed_on_org": {
       "desc": "The app management app must be installed on the org."
     },
+    "app_not_eligible_for_auto_install": {
+      "desc": "The app does not have the required scope to be eligible for auto-install rule creation."
+    },
     "app_restricted_org_wide": {
       "desc": "The app is already restricted org wide."
+    },
+    "auto_install_rule_creation_failed": {
+      "desc": "The app was approved successfully, but the auto-install AAA rule could not be created. Please create the rule manually."
     },
     "custom_integration_not_allowed_at_enterprise": {
       "desc": "Returned when the install request is for custom integration app."
     },
     "feature_not_enabled": {
-      "desc": "Returned when the Admin APIs feature is not enabled for this team"
+      "desc": "Returned when the Admin APIs feature is not enabled for this team."
     },
     "invalid_request_id": {
       "desc": "The `request_id` passed is invalid."
@@ -82,28 +88,31 @@
       "desc": "The `team_id` is in an Enterprise org while `app_id` is certified."
     },
     "invalid_scopes": {
-      "desc": "Some of the provided scopes do not exist"
+      "desc": "Some of the provided scopes do not exist."
+    },
+    "not_allowed_to_create_automation_rule": {
+      "desc": "The actor does not have permission to create AAA automation rules. The app was approved but the auto-install rule was not created."
     },
     "not_an_admin": {
-      "desc": "This method is only accessible by org owners and admins"
+      "desc": "This method is only accessible by org owners and admins."
     },
     "request_already_resolved": {
-      "desc": "The app request has already been resolved"
+      "desc": "The app request has already been resolved."
     },
     "request_id_or_app_id_is_required": {
-      "desc": "Must include a `request_id` or `app_id`"
+      "desc": "Must include a `request_id` or `app_id`."
     },
     "request_id_required_for_custom_integrations": {
-      "desc": "A `request_id` is required for custom integrations"
+      "desc": "A `request_id` is required for custom integrations."
     },
     "team_not_found": {
       "desc": "Returned when team id is not found."
     },
     "too_many_ids_provided": {
-      "desc": "Please provide only `app_id` OR `request_id`"
+      "desc": "Please provide only `app_id` OR `request_id`."
     },
     "too_many_teams_provided": {
-      "desc": "Please provide only `team_id` OR `enterprise_id`"
+      "desc": "Please provide only `team_id` OR `enterprise_id`."
     }
   }
 }

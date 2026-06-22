@@ -60,6 +60,9 @@
     "channel_shared_with_nonapproved_team": {
       "desc": "Channel is shared with a non-approved external team."
     },
+    "config_not_found": {
+      "desc": "Missing record configuration."
+    },
     "invalid_channel_type": {
       "desc": "Channel type cannot be linked."
     },
@@ -74,6 +77,9 @@
     },
     "record_channel_already_exists": {
       "desc": "Record is linked to a different channel."
+    },
+    "record_channel_cannot_be_externally_shared": {
+      "desc": "Channel cannot be linked because it is externally shared."
     },
     "record_not_found": {
       "desc": "Value passed for `record_id` is invalid."

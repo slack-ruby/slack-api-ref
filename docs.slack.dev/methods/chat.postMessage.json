@@ -208,6 +208,9 @@
     "type": "object"
   },
   "errors": {
+    "app_access_restricted": {
+      "desc": "The user does not have permission to use this app."
+    },
     "as_user_not_supported": {
       "desc": "The `as_user` parameter does not function with workspace apps."
     },

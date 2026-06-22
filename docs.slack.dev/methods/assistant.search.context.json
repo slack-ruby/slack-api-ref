@@ -345,6 +345,10 @@
                 "content": {
                   "desc": "Content from the retrieved file.",
                   "type": "string"
+                },
+                "size": {
+                  "desc": "Size of the file in bytes.",
+                  "type": "integer"
                 }
               }
             }

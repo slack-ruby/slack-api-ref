@@ -55,6 +55,13 @@
           "properties": {
             "id": {
               "type": "string"
+            },
+            "child_section_ids": {
+              "desc": "IDs of child sections within a layout container (blockquote, callout, flexbox, or table).",
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             }
           }
         }
