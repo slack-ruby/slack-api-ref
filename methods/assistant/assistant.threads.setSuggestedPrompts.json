@@ -9,7 +9,7 @@
       "desc": "Channel ID containing the assistant thread."
     },
     "thread_ts": {
-      "required": true,
+      "required": false,
       "desc": "Message timestamp of the thread to set suggested prompts for.",
       "type": "string"
     },
