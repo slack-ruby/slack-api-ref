@@ -8,6 +8,16 @@
     ]
   },
   {
+    "name": "app_context_changed",
+    "description": "The context changed while an app was visible",
+    "scopes": [
+      "assistant:write"
+    ],
+    "APIs": [
+      "Events"
+    ]
+  },
+  {
     "name": "app_mention",
     "description": "Subscribe to only the message events that mention your app or bot",
     "app_event": true,

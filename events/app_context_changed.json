@@ -1,0 +1,10 @@
+{
+  "name": "app_context_changed",
+  "desc": "The context changed while an app was visible.",
+  "scopes": [
+    "assistant:write"
+  ],
+  "APIs": [
+    "Events"
+  ]
+}
