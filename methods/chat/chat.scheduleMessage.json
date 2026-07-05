@@ -168,7 +168,6 @@
         "markdown_text"
       ],
       "desc": "Use either text or markdown_text, but not both.",
-      "required": false,
       "mutually_exclusive": true
     }
   ]
