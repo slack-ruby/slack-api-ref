@@ -1,0 +1,8 @@
+{
+  "name": "entity_comments_requested",
+  "desc": "This event is sent to your app when a user opens the comments tab of a Work Object flexpane, refreshes the comments, or requests the next page of comments.",
+  "scopes": [],
+  "APIs": [
+    "Events"
+  ]
+}

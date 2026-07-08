@@ -1421,6 +1421,20 @@
     ]
   },
   {
+    "name": "entity.acknowledgeCommentAction",
+    "description": "Acknowledge a comment mutation (edit, delete, or post) on a work object entity. Apps call this endpoint to confirm they have processed a comment action, and the backend emits a dedicated RTM event to the user.",
+    "family": [
+      "entity"
+    ]
+  },
+  {
+    "name": "entity.presentComments",
+    "description": "Provide comments for work objects. Apps call this endpoint to send per-user flexpane comment data to the client.",
+    "family": [
+      "entity"
+    ]
+  },
+  {
     "name": "entity.presentDetails",
     "description": "Provide custom flexpane behavior for Work Objects. Apps call this endpoint to send per-user flexpane metadata to the client.",
     "family": [
