@@ -65,6 +65,12 @@
     },
     "free_teams_cannot_create_non_tabbed_canvases": {
       "desc": "Free teams cannot create non-tabbed standalone canvases"
+    },
+    "free_team_canvas_tab_already_exists": {
+      "desc": "Free teams are limited to one canvas tab per channel"
+    },
+    "free_teams_cannot_create_standalone_canvases": {
+      "desc": "Free teams cannot create standalone canvases"
     }
   },
   "examples": {
