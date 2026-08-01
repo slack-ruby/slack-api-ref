@@ -14,6 +14,21 @@
       "required": false,
       "desc": "",
       "type": "boolean"
+    },
+    "format": {
+      "required": false,
+      "example": "csv",
+      "desc": "Format of the export. Defaults to csv for backward compatibility. Use json for a complete, hierarchical export."
+    },
+    "include_threads": {
+      "required": false,
+      "desc": "Include each item's conversation thread in the export. Only applies when format is json.",
+      "type": "boolean"
+    },
+    "include_attachments": {
+      "required": false,
+      "desc": "Include file attachment metadata and access paths in the export. Only applies when format is json.",
+      "type": "boolean"
     }
   },
   "response": {

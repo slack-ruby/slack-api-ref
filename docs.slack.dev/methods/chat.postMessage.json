@@ -295,6 +295,9 @@
     "restricted_action_thread_only_channel": {
       "desc": "Cannot post top-level messages into a thread-only channel."
     },
+    "send_on_behalf_not_allowed": {
+      "desc": "Cannot send on behalf of the provided user."
+    },
     "slack_connect_canvas_sharing_blocked": {
       "desc": "Admin has disabled Canvas File sharing in all Slack Connect communications."
     },

@@ -177,6 +177,7 @@
     "restricted_action_read_only_channel": "Cannot post any message into a read-only channel.",
     "restricted_action_thread_locked": "Cannot post replies to a thread that has been locked by admins.",
     "restricted_action_thread_only_channel": "Cannot post top-level messages into a thread-only channel.",
+    "send_on_behalf_not_allowed": "Cannot send on behalf of the provided user.",
     "service_unavailable": "The service is temporarily unavailable.",
     "slack_connect_canvas_sharing_blocked": "Admin has disabled Canvas File sharing in all Slack Connect communications.",
     "slack_connect_file_link_sharing_blocked": "Admin has disabled Slack File sharing in all Slack Connect communications.",

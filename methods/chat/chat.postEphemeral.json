@@ -53,6 +53,13 @@
       "desc": "Accepts message text formatted in markdown. This argument should not be used in conjunction with blocks or text. Limit this field to 12,000 characters.",
       "type": "string"
     },
+    "metadata": {
+      "required": false,
+      "example": "{\"entities\": []}",
+      "desc": "JSON object with an entities array of work object entity metadata, presented as a URL-encoded string. Only entity metadata is supported: ephemeral messages are not persisted and never dispatch message_metadata_* events, so event_type/event_payload message metadata is ignored here. Each entity requires entity_type, entity_payload, external_ref, and url.",
+      "type": "string",
+      "format": "json"
+    },
     "parse": {
       "required": false,
       "example": "full",

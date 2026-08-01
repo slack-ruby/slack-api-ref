@@ -50,6 +50,9 @@
     "app_not_eligible": {
       "desc": "The specified app is not eligible for this API."
     },
+    "app_not_found": {
+      "desc": "The specified app was not found or has been deleted."
+    },
     "failed_adding_collaborator": {
       "desc": "Failed writing a collaborator record for this new app"
     },

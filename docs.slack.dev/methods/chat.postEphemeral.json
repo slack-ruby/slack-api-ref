@@ -81,6 +81,18 @@
         "type": "string",
         "example": "**This is bold text**"
       },
+      "metadata": {
+        "desc": "JSON object with an `entities` array of work object entity metadata, presented as a URL-encoded string. Only entity metadata is supported: ephemeral messages are not persisted and never dispatch `message_metadata_*` events, so `event_type`/`event_payload` message metadata is ignored here. Each entity requires `entity_type`, `entity_payload`, `external_ref`, and `url`.",
+        "example": "{\"entities\": []}",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
       "parse": {
         "desc": "Change how messages are treated. Defaults to `none`. See [below](#formatting).",
         "example": "full",

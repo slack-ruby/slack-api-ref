@@ -30,7 +30,7 @@
   "output": null,
   "errors": {
     "app_not_eligible": {
-      "desc": "The specified app is not elgible for this API."
+      "desc": "The specified app is not eligible for this API."
     },
     "app_not_found": {
       "desc": "The specified app was not found."

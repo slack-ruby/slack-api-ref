@@ -51,6 +51,9 @@
     "feature_not_enabled": {
       "desc": "The Admin APIs feature is not enabled for this team."
     },
+    "invalid_role_for_user": {
+      "desc": "The user's current role does not allow this change."
+    },
     "not_an_admin": {
       "desc": "This method can only be accessed by org owners and admins."
     },

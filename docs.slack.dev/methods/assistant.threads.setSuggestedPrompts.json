@@ -51,6 +51,9 @@
     },
     "message_not_found": {
       "desc": "Error returned when given an invalid message"
+    },
+    "not_agent_app": {
+      "desc": "This method requires the app to be configured as an agent. Enable the Agent feature in your app configuration at https://api.slack.com/apps."
     }
   },
   "examples": {

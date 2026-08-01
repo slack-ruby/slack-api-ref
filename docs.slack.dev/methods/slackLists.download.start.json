@@ -32,6 +32,21 @@
       "include_archived": {
         "type": "boolean",
         "default": false
+      },
+      "format": {
+        "desc": "Format of the export. Defaults to `csv` for backward compatibility. Use `json` for a complete, hierarchical export.",
+        "schema": "list_export_format",
+        "default": "csv"
+      },
+      "include_threads": {
+        "desc": "Include each item's conversation thread in the export. Only applies when `format` is `json`.",
+        "type": "boolean",
+        "default": false
+      },
+      "include_attachments": {
+        "desc": "Include file attachment metadata and access paths in the export. Only applies when `format` is `json`.",
+        "type": "boolean",
+        "default": false
       }
     }
   },

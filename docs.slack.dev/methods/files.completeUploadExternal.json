@@ -83,7 +83,15 @@
       "username": {
         "desc": "Set your bot's user name for the file share message. Requires the [`chat:write.customize`](/reference/scopes/chat.write.customize) scope.",
         "example": "My Bot",
-        "type": "string"
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "is_customization_arg": true
       },
       "icon_url": {
         "desc": "URL to an image to use as the icon for the file share message. Requires the [`chat:write.customize`](/reference/scopes/chat.write.customize) scope.",

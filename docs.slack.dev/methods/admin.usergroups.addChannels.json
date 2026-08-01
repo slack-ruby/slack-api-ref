@@ -55,6 +55,13 @@
           "type": "string"
         },
         "desc": "List of channel IDs that are not valid for this action"
+      },
+      "channel_limit_user_ids": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "desc": "List of user IDs who would exceed their channel limit"
       }
     }
   },
@@ -79,6 +86,9 @@
     },
     "team_not_found": {
       "desc": "The workspace provided was not found."
+    },
+    "user_channel_limit_exceeded": {
+      "desc": "Adding these channels would cause one or more members to exceed their channel limit."
     },
     "usergroup_not_found": {
       "desc": "The IDP group provided was not found."

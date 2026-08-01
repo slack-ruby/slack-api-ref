@@ -54,7 +54,7 @@
               "type": "string"
             },
             "icon": {
-              "type": "array"
+              "schema": "common_objects_schema"
             },
             "enterprise_id": {
               "type": "string"

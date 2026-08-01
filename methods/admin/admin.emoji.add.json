@@ -10,7 +10,7 @@
       "type": "string"
     },
     "url": {
-      "required": true,
+      "required": false,
       "desc": "The URL of a file to use as an image for the emoji. Square images under 128KB and with transparent backgrounds work best.",
       "type": "string"
     }

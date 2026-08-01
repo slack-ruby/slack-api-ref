@@ -11,8 +11,7 @@
     "type": "object",
     "required": [
       "token",
-      "name",
-      "url"
+      "name"
     ],
     "properties": {
       "token": {
@@ -27,7 +26,8 @@
       },
       "url": {
         "type": "string",
-        "desc": "The URL of a file to use as an image for the emoji. Square images under 128KB and with transparent backgrounds work best."
+        "desc": "The URL of a file to use as an image for the emoji. Square images under 128KB and with transparent backgrounds work best.",
+        "required_for_public": true
       }
     }
   },

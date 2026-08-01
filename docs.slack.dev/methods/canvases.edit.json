@@ -7,6 +7,9 @@
     ],
     "user": [
       "canvases:write"
+    ],
+    "seamless_user": [
+      "seamless.user"
     ]
   },
   "json_input_supported": true,

@@ -34,6 +34,21 @@
         "type": "string",
         "example": "Le48SKT566",
         "desc": "The ID of the recently started job to export the List."
+      },
+      "format": {
+        "desc": "Format the export was started with. Must match the `format` passed to `slackLists.download.start`. Defaults to `csv`.",
+        "schema": "list_export_format",
+        "default": "csv"
+      },
+      "include_threads": {
+        "desc": "Must match the `include_threads` passed to `slackLists.download.start`. The returned `download_url` carries this through so the served export matches what was generated. Only applies when `format` is `json`.",
+        "type": "boolean",
+        "default": false
+      },
+      "include_attachments": {
+        "desc": "Must match the `include_attachments` passed to `slackLists.download.start`. The returned `download_url` carries this through so the served export matches what was generated. Only applies when `format` is `json`.",
+        "type": "boolean",
+        "default": false
       }
     }
   },

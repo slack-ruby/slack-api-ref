@@ -72,6 +72,9 @@
     "already_in_channel": {
       "desc": "Invited user is already in the channel."
     },
+    "app_cannot_join_channel": {
+      "desc": "This app cannot be invited to this channel."
+    },
     "cant_invite": {
       "desc": "User cannot be invited to this channel."
     },
