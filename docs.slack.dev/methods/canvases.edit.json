@@ -35,7 +35,7 @@
         "schema": "file_id"
       },
       "changes": {
-        "desc": "List of changes to apply on the specified canvas",
+        "desc": "List of changes to apply on the specified canvas. The markdown content of each change is limited to 1 MiB (1,048,576 characters).",
         "type": "array",
         "minItems": 1,
         "maxItems": 1,
