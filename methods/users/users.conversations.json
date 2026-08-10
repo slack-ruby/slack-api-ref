@@ -16,6 +16,12 @@
       "desc": "Set to true to exclude archived channels from the list.",
       "type": "boolean"
     },
+    "exclude_muted": {
+      "required": false,
+      "example": "true",
+      "desc": "Set to true to exclude muted channels from the list.",
+      "type": "boolean"
+    },
     "limit": {
       "required": false,
       "example": "20",

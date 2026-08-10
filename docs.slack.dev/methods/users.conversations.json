@@ -40,6 +40,12 @@
         "example": "true",
         "type": "boolean"
       },
+      "exclude_muted": {
+        "default": "false",
+        "desc": "Set to `true` to exclude muted channels from the list",
+        "example": "true",
+        "type": "boolean"
+      },
       "limit": {
         "default": 100,
         "desc": "The maximum number of items to return. Fewer than the requested number of items may be returned, even if the end of the list hasn't been reached. Must be an integer with a max value of 999.",
