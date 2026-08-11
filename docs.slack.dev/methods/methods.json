@@ -63,6 +63,55 @@
     ]
   },
   {
+    "name": "admin.apps.mcp.servers.list",
+    "description": "List third-party app MCP servers approved for an organization, derived from the org's MCP server allowlist. Entries reflect allowlist state, not install/scope liveness: servers of apps that are uninstalled (but not deleted) are still listed.",
+    "family": [
+      "admin"
+    ]
+  },
+  {
+    "name": "admin.apps.mcp.servers.permissions.list",
+    "description": "List MCP servers for an app with their access control permissions",
+    "family": [
+      "admin"
+    ]
+  },
+  {
+    "name": "admin.apps.mcp.servers.permissions.set",
+    "description": "Set the access control permission for who can use an MCP server",
+    "family": [
+      "admin"
+    ]
+  },
+  {
+    "name": "admin.apps.permissions.add",
+    "description": "Grant permission for entities to access an app that has its permission type set to named_entities",
+    "family": [
+      "admin"
+    ]
+  },
+  {
+    "name": "admin.apps.permissions.list",
+    "description": "Returns the permission type of an app and if applicable, includes the entities that have been granted access",
+    "family": [
+      "admin"
+    ]
+  },
+  {
+    "name": "admin.apps.permissions.remove",
+    "description": "Revoke an entity's access to an app that has its permission type set to named_entities",
+    "family": [
+      "admin"
+    ]
+  },
+  {
+    "name": "admin.apps.permissions.set",
+    "description": "Set the permission type for who can access an app",
+    "family": [
+      "admin"
+    ]
+  },
+  {
     "name": "admin.apps.requests.cancel",
     "description": "Cancel app request for team",
     "family": [
