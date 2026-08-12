@@ -3,13 +3,15 @@ messages:
     content: |-
       You write concise git commit messages describing automated updates to a Slack Web
       API reference JSON repository (methods, groups and events scraped from Slack's docs).
-      Given a diffstat and a diff, respond with:
+      Given a diffstat and a diff, respond with ONLY a single JSON object (no markdown code
+      fences, no other text) with exactly these two keys:
+      {"title": "...", "summary": "..."}
       - title: a single line, imperative mood, at most 72 characters, no trailing period,
         describing the most significant change (e.g. "Add chat.appendStream and
         chat.stopStream methods").
       - summary: 1-5 short bullet points (each starting with "- "), each describing one
         notable change: new/removed/renamed methods or events, added/removed arguments,
-        changed error codes, etc.
+        changed error codes, etc. Use "" if nothing notable.
       If the diff is routine or has no notable API surface changes, keep the title generic
       (e.g. "Minor documentation updates") and the summary brief or empty.
   - role: user
@@ -19,25 +21,3 @@ messages:
 
       Diff (may be truncated):
       {{diff}}
-model: openai/gpt-4o-mini
-responseFormat: json_schema
-jsonSchema: |-
-  {
-    "name": "commit_message",
-    "strict": true,
-    "schema": {
-      "type": "object",
-      "properties": {
-        "title": {
-          "type": "string",
-          "description": "Single-line, imperative-mood commit title, max 72 characters, no trailing period"
-        },
-        "summary": {
-          "type": "string",
-          "description": "1-5 short bullet points, each starting with '- ', or empty string if nothing notable"
-        }
-      },
-      "additionalProperties": false,
-      "required": ["title", "summary"]
-    }
-  }
