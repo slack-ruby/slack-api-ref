@@ -5,6 +5,10 @@ on:
   schedule:
     - cron: "15 22 * * *"
 
+permissions:
+  contents: write
+  models: read
+
 jobs:
   update:
     runs-on: ubuntu-latest
@@ -24,9 +28,51 @@ jobs:
         run: bundle exec rake api:validate
       - name: Get current date
         run: echo "CURRENT_DATE=$(date +%Y/%m/%d)" >> $GITHUB_ENV
+      - name: Check for changes
+        id: changes
+        run: |
+          if git diff --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Prepare diff for AI summary
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          git diff --stat > /tmp/diff_stat.txt
+          git diff | head -c 20000 > /tmp/diff.txt
+      - name: Generate commit message with AI
+        if: steps.changes.outputs.changed == 'true'
+        id: ai
+        uses: actions/ai-inference@v1
+        with:
+          prompt-file: ./.github/prompts/commit-message.prompt.yml
+          file_input: |
+            diff_stat: /tmp/diff_stat.txt
+            diff: /tmp/diff.txt
+      - name: Build commit message
+        id: message
+        run: |
+          title=""
+          summary=""
+          if [ "${{ steps.changes.outputs.changed }}" = "true" ]; then
+            title="$(jq -r '.title // empty' "${{ steps.ai.outputs.response-file }}" 2>/dev/null)"
+            summary="$(jq -r '.summary // empty' "${{ steps.ai.outputs.response-file }}" 2>/dev/null)"
+          fi
+          if [ -z "$title" ]; then
+            title="Updated from Slack docs, ${CURRENT_DATE}"
+            summary=""
+          fi
+          {
+            echo 'message<<COMMIT_MESSAGE_EOF'
+            echo "$title"
+            echo ""
+            echo "$summary"
+            echo 'COMMIT_MESSAGE_EOF'
+          } >> "$GITHUB_OUTPUT"
       - name: Commit changes
         uses: EndBug/add-and-commit@v9
         with:
           author_name: Slack API Ref Buildbot
           author_email: buildbot@slack-api-ref.com
-          message: "Updated from Slack docs, ${{ env.CURRENT_DATE }}"
+          message: ${{ steps.message.outputs.message }}
