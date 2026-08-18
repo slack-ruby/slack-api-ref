@@ -245,6 +245,13 @@
     ]
   },
   {
+    "name": "admin.conversations.bulkSetProperties",
+    "description": "Set properties on channels in bulk.",
+    "family": [
+      "admin"
+    ]
+  },
+  {
     "name": "admin.conversations.convertToPrivate",
     "description": "Convert a public channel to a private channel.",
     "family": [
@@ -623,6 +630,13 @@
     ]
   },
   {
+    "name": "admin.usergroups.removeTeams",
+    "description": "Remove one or more default workspaces from an organization-wide IDP Group or Admin Group.",
+    "family": [
+      "admin"
+    ]
+  },
+  {
     "name": "admin.users.assign",
     "description": "Add an Enterprise user to a workspace.",
     "family": [
@@ -898,6 +912,13 @@
   {
     "name": "apps.icon.set",
     "description": "Sets the app icon",
+    "family": [
+      "apps"
+    ]
+  },
+  {
+    "name": "apps.managed.permissions.set",
+    "description": "Set who can interact with a managed app. Lets the builder who created a managed app on a partner platform configure the app's permissions as themselves, using a user token from the manager app. Permissions can only be set before the app is installed: if the app is already installed, this method makes no change and returns the app's current permissions.",
     "family": [
       "apps"
     ]
