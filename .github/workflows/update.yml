@@ -10,6 +10,7 @@ permissions:
 
 jobs:
   update:
+    if: github.repository == 'slack-ruby/slack-api-ref'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
