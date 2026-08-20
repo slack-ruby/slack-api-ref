@@ -21,7 +21,7 @@
       "type": "string"
     },
     "thread_ts": {
-      "required": true,
+      "required": false,
       "example": "1721609600.123456",
       "desc": "Provide another message's ts value to reply to. Streamed messages should always be replies to a user request.",
       "type": "string"
@@ -39,7 +39,7 @@
     "task_display_mode": {
       "required": false,
       "example": "plan",
-      "desc": "Specifies how tasks are displayed in the message. A timeline displays individual tasks with text in sequential order, plan displays all tasks together, with the first tasks's placement determining the placement of the rest of the tasks, and dense collapses consecutive tool calls into a single summarized task card.",
+      "desc": "Specifies how tasks are displayed in the message. timeline task updates render as individual task cards interleaved with streamed text. plan task updates render together in a plan block.",
       "type": "enum"
     },
     "icon_emoji": {

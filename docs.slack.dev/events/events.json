@@ -1,5 +1,25 @@
 [
   {
+    "name": "agent_session_stopped",
+    "description": "A user clicked the stop button on an agent session",
+    "scopes": [
+      "chat:write"
+    ],
+    "APIs": [
+      "Events"
+    ]
+  },
+  {
+    "name": "agent_session_title_changed",
+    "description": "A user changed the title of an agent session",
+    "scopes": [
+      "chat:write"
+    ],
+    "APIs": [
+      "Events"
+    ]
+  },
+  {
     "name": "accounts_changed",
     "description": "The list of accounts a user is signed into has changed",
     "scopes": [],

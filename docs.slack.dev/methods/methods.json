@@ -805,6 +805,20 @@
     ]
   },
   {
+    "name": "agents.sessions.rename",
+    "description": "Rename an agent session.",
+    "family": [
+      "agents"
+    ]
+  },
+  {
+    "name": "agents.sessions.setStatus",
+    "description": "Set an agent session's lifecycle status, creating the session if needed.",
+    "family": [
+      "agents"
+    ]
+  },
+  {
     "name": "api.test",
     "description": "Checks API calling code.",
     "family": [

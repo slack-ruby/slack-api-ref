@@ -1,0 +1,114 @@
+{
+  "desc": "Set an agent session's lifecycle status, creating the session if needed.",
+  "http_method": "POST",
+  "scope": {
+    "bot": [
+      "chat:write"
+    ]
+  },
+  "json_input_supported": true,
+  "rate_limits": "t3",
+  "args": {
+    "type": "object",
+    "required": [
+      "token",
+      "channel_id",
+      "status"
+    ],
+    "properties": {
+      "token": {
+        "desc": "Authentication token bearing the `chat:write` scope. Must be a granular bot token.",
+        "type": "string",
+        "subtype": "auth",
+        "example": "xxxx-xxxxxxxxx-xxxx"
+      },
+      "channel_id": {
+        "desc": "ID of the channel containing the agent session.",
+        "type": "string",
+        "subtype": "channel",
+        "schema": "channel"
+      },
+      "status": {
+        "desc": "The lifecycle status to set.",
+        "type": "string",
+        "enum": [
+          "active",
+          "processing",
+          "suspended",
+          "closed"
+        ]
+      },
+      "thread_ts": {
+        "desc": "Timestamp of the thread root message the session is scoped to. Required for thread-based sessions in regular channels and DMs. Must be omitted for session channels.",
+        "type": "string"
+      },
+      "title": {
+        "desc": "Title for the agent session (max 200 characters). Only used when creating a new session; ignored if the session already exists. To rename an existing session, use `agents.sessions.rename`.",
+        "type": "string"
+      },
+      "initiator_user_id": {
+        "desc": "The user who initiated the session. Only used when creating a new session; ignored if the session already exists. Must be a member of the channel.",
+        "type": "string"
+      },
+      "icon_emoji": {
+        "desc": "Emoji to use as the agent's icon. Takes priority over `icon_url`. Remains in effect until you clear it (pass `null`) or set a new value. Requires the `chat:write.customize` scope.",
+        "type": "string"
+      },
+      "icon_url": {
+        "desc": "URL to an image to use as the agent's icon. Remains in effect until you clear it (pass `null`) or set a new value. Requires the `chat:write.customize` scope.",
+        "type": "string"
+      },
+      "username": {
+        "desc": "Display name override for the agent (max 200 characters). Remains in effect until you clear it (pass `null`) or set a new value. Requires the `chat:write.customize` scope.",
+        "type": "string"
+      }
+    }
+  },
+  "output": {},
+  "errors": {
+    "feature_disabled": {
+      "desc": "The agent tasks feature is not enabled for this workspace."
+    },
+    "channel_not_found": {
+      "desc": "The specified channel does not exist or is not accessible."
+    },
+    "user_not_found": {
+      "desc": "The specified `initiator_user_id` does not exist or is not accessible."
+    },
+    "not_authorized": {
+      "desc": "The caller is not a member of the specified channel."
+    },
+    "invalid_status": {
+      "desc": "The `status` value is not a valid agent session status. Must be one of: `active`, `processing`, `suspended`, `closed`."
+    },
+    "thread_ts_required": {
+      "desc": "`thread_ts` is required for thread-based sessions in regular channels and DMs."
+    },
+    "thread_ts_not_allowed": {
+      "desc": "`thread_ts` must not be provided for session channels. The channel-level session is updated automatically."
+    },
+    "internal_error": {
+      "desc": "An internal error occurred while updating the session."
+    }
+  },
+  "examples": {
+    "success": {
+      "url": "/api/agents.sessions.setStatus?token=YOUR_TOKEN",
+      "description": "Typical success response",
+      "example": {
+        "ok": true,
+        "status": "processing",
+        "agent_status": "processing",
+        "title": "Scuba diving research"
+      }
+    },
+    "error": {
+      "url": "/api/agents.sessions.setStatus?token=YOUR_TOKEN",
+      "description": "Typical error response",
+      "example": {
+        "ok": false,
+        "error": "thread_ts_required"
+      }
+    }
+  }
+}

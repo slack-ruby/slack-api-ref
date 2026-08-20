@@ -1,0 +1,10 @@
+{
+  "name": "agent_session_stopped",
+  "desc": "A user clicked the stop button on an agent session.",
+  "scopes": [
+    "chat:write"
+  ],
+  "APIs": [
+    "Events"
+  ]
+}

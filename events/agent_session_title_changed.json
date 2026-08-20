@@ -1,0 +1,10 @@
+{
+  "name": "agent_session_title_changed",
+  "desc": "A user changed the title of an agent session.",
+  "scopes": [
+    "chat:write"
+  ],
+  "APIs": [
+    "Events"
+  ]
+}

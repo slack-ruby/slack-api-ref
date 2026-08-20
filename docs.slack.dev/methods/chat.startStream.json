@@ -13,8 +13,7 @@
     "type": "object",
     "required": [
       "token",
-      "channel",
-      "thread_ts"
+      "channel"
     ],
     "properties": {
       "token": {
@@ -56,12 +55,11 @@
         "example": "T0123456789"
       },
       "task_display_mode": {
-        "desc": "Specifies how tasks are displayed in the message. A `timeline` displays individual tasks with text in sequential order, `plan` displays all tasks together, with the first tasks's placement determining the placement of the rest of the tasks, and `dense` collapses consecutive tool calls into a single summarized task card.",
+        "desc": "Specifies how tasks are displayed in the message. `timeline` task updates render as individual task cards interleaved with streamed text. `plan` task updates render together in a plan block.",
         "type": "string",
         "enum": [
           "timeline",
-          "plan",
-          "dense"
+          "plan"
         ],
         "default": "timeline",
         "example": "plan"
