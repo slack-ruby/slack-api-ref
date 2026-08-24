@@ -28,7 +28,7 @@
         "schema": "channel"
       },
       "thread_ts": {
-        "desc": "Message timestamp of the thread to set suggested prompts for.",
+        "desc": "Message timestamp of the thread to set suggested prompts for. If not provided, the prompts will be set for the latest message in the channel.",
         "type": "string"
       },
       "prompts": {
@@ -45,6 +45,9 @@
   "errors": {
     "invalid_thread_ts": {
       "desc": "Thread not found"
+    },
+    "missing_thread_ts": {
+      "desc": "Missing thread_ts"
     },
     "channel_not_found": {
       "desc": "Error returned when given an invalid channel_id"

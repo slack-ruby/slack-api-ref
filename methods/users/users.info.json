@@ -10,7 +10,7 @@
       "type": "boolean"
     },
     "user": {
-      "required": true,
+      "required": false,
       "desc": "User to get info on.",
       "type": "user"
     }

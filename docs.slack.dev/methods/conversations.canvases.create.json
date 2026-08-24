@@ -97,5 +97,10 @@
         "error": "channel_canvas_already_exists"
       }
     }
+  },
+  "warnings": {
+    "failed_adding_canvas_to_tab": {
+      "desc": "The canvas was created but not added as a channel tab. The reason is in response_metadata.messages."
+    }
   }
 }

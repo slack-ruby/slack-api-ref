@@ -5,8 +5,8 @@
   "desc": "Rename an agent session.",
   "args": {
     "channel_id": {
-      "required": true,
-      "desc": "ID of the channel containing the agent session.",
+      "required": false,
+      "desc": "ID of the channel containing the agent session. Required for public channels.",
       "type": "string"
     },
     "title": {
@@ -16,6 +16,7 @@
     },
     "thread_ts": {
       "required": false,
+      "example": "1234567890.123456",
       "desc": "Timestamp of the thread root message the session is scoped to. Required for thread-based sessions in regular channels and DMs. Must be omitted for session channels.",
       "type": "string"
     }

@@ -115,6 +115,12 @@
       "example": "My Bot",
       "desc": "Set your bot's user name.",
       "type": "string"
+    },
+    "unfurl_app_links": {
+      "required": false,
+      "example": "true",
+      "desc": "Pass true to unfurl links from installed apps, or false to prevent app links from unfurling. When omitted, app links follow the unfurl_links setting.",
+      "type": "boolean"
     }
   },
   "response": {

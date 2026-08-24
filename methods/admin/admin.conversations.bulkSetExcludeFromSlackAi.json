@@ -28,6 +28,7 @@
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
     "action_already_in_progress": "Another bulk action request is currently in progress",
     "deprecated_endpoint": "The endpoint has been deprecated.",
+    "disallowed_action": "This property cannot be set on DMs or MPDMs.",
     "ekm_access_denied": "Administrators have suspended the ability to post a message.",
     "enterprise_is_restricted": "The method cannot be called from an Enterprise.",
     "fatal_error": "The server could not complete your operation(s) without encountering a catastrophic error. It's possible some aspect of the operation succeeded before the error was raised.",

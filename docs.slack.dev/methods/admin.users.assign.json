@@ -81,6 +81,9 @@
     },
     "user_not_found": {
       "desc": "`user_id` was not found."
+    },
+    "user_cannot_be_added_to_workspace": {
+      "desc": "The user can't be added to this workspace because of their account type or the workspace's configuration."
     }
   },
   "examples": {

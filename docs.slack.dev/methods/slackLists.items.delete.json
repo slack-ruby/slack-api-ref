@@ -22,7 +22,8 @@
       "token": {
         "desc": "Token with which to authenticate the session.",
         "type": "string",
-        "subtype": "auth"
+        "subtype": "auth",
+        "example": "xxxx-xxxxxxxxx-xxxx"
       },
       "list_id": {
         "desc": "ID of the List containing the item.",
@@ -81,5 +82,6 @@
         "error": "invalid_auth"
       }
     }
-  }
+  },
+  "json_input_supported": true
 }

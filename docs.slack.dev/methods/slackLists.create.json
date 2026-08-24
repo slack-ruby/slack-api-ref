@@ -998,5 +998,6 @@
         "error": "invalid_schema"
       }
     }
-  }
+  },
+  "json_input_supported": true
 }

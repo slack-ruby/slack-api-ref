@@ -21,7 +21,8 @@
     "properties": {
       "token": {
         "type": "string",
-        "subtype": "auth"
+        "subtype": "auth",
+        "example": "xxxx-xxxxxxxxx-xxxx"
       },
       "list_id": {
         "desc": "ID of the List to export.",
@@ -101,5 +102,6 @@
         "error": "list_not_found"
       }
     }
-  }
+  },
+  "json_input_supported": true
 }

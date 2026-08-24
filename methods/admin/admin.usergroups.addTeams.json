@@ -33,6 +33,7 @@
     "accesslimited": "Access to this method is limited on the current network.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
     "auto_provision_failure": "A failure occurred while assigning IDP group members to a specific workspace; see `errors` element for a list of failed team IDs.",
+    "auto_provision_required": "The IDP group requires a mandatory workspace link, so `auto_provision` must be `true`.",
     "deprecated_endpoint": "The endpoint has been deprecated.",
     "ekm_access_denied": "Administrators have suspended the ability to post a message.",
     "enterprise_is_restricted": "The method cannot be called from an Enterprise.",
@@ -64,6 +65,7 @@
     "token_revoked": "Authentication token is for a deleted user or workspace or the app has been removed when using a user token.",
     "two_factor_setup_required": "Two factor setup is required.",
     "unknown_method": "This method is currently not available.",
-    "usergroup_not_found": "`usergroup_id` wasn't found."
+    "usergroup_not_found": "`usergroup_id` wasn't found.",
+    "workspace_not_eligible": "The workspace is not eligible to be linked to this IDP group; it is not on the org's allow-list of eligible workspaces."
   }
 }

@@ -20,7 +20,7 @@
       "type": "timestamp"
     },
     "markdown_text": {
-      "required": true,
+      "required": false,
       "example": "**This is bold text**",
       "desc": "Accepts message text formatted in markdown. Limit this field to 12,000 characters. This text is what will be appended to the message received so far.",
       "type": "string"
@@ -37,6 +37,7 @@
     "accesslimited": "Access to this method is limited on the current network.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
     "as_user_not_supported": "The `as_user` parameter does not function with workspace apps.",
+    "cannot_provide_both_markdown_text_and_chunks": "Cannot provide both `markdown_text` and `chunks` in the same request.",
     "channel_not_found": "Value passed for `channel` was invalid.",
     "channel_type_not_supported": "Channel type not supported",
     "deprecated_endpoint": "The endpoint has been deprecated.",
@@ -56,6 +57,8 @@
     "invalid_post_type": "The method was called via a POST request, but the specified Content-Type was invalid. Valid types are: application/json application/x-www-form-urlencoded multipart/form-data text/plain.",
     "is_archived": "Channel has been archived.",
     "is_bot": "This method cannot be called by a legacy bot.",
+    "markdown_text_or_chunks_required": "One of 'markdown_text' or 'chunks' is required",
+    "markdown_text_required": "Missing required field: 'markdown_text'",
     "message_limit_exceeded": "Members on this team are sending too many messages. For more details, see https://slack.com/help/articles/115002422943-Usage-limits-for-free-workspaces",
     "message_not_found": "Message not found",
     "message_not_in_streaming_state": "The message is not in the streaming state.",
@@ -88,6 +91,7 @@
     "slack_connect_file_link_sharing_blocked": "Admin has disabled Slack File sharing in all Slack Connect communications",
     "slack_connect_lists_sharing_blocked": "Admin has disabled Lists sharing in all Slack Connect communications",
     "stopped_by_user": "The streaming message was stopped by the user and no further appends are accepted.",
+    "streaming_mode_mismatch": "The streaming mode must be the same as the streaming mode used to start the stream. If you started the stream with `markdown_text`, you must append with `markdown_text`. If you started the stream with `chunks`, you must append with `chunks`.",
     "team_added_to_org": "The workspace associated with your request is currently undergoing migration to an Enterprise Organization. Web API and other platform operations will be intermittently unavailable until the transition is complete.",
     "team_not_found": "This error occurs if, when using an org-wide token, the `channel_name` is passed instead of the `channel_id`.",
     "token_expired": "Authentication token has expired.",

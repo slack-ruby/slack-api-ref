@@ -181,6 +181,11 @@
             "type": "null"
           }
         ]
+      },
+      "unfurl_app_links": {
+        "desc": "Pass true to unfurl links from installed apps, or false to prevent app links from unfurling. When omitted, app links follow the `unfurl_links` setting.",
+        "example": "true",
+        "type": "boolean"
       }
     }
   },
@@ -358,6 +363,11 @@
         "ok": false,
         "error": "too_many_attachments"
       }
+    }
+  },
+  "warnings": {
+    "message_truncated": {
+      "desc": "The `text` field of a message should have no more than 40,000 characters. We [truncate really long messages](/changelog/2018-04-truncating-really-long-messages)."
     }
   }
 }

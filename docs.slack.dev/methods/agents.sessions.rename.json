@@ -12,7 +12,6 @@
     "type": "object",
     "required": [
       "token",
-      "channel_id",
       "title"
     ],
     "properties": {
@@ -23,10 +22,11 @@
         "example": "xxxx-xxxxxxxxx-xxxx"
       },
       "channel_id": {
-        "desc": "ID of the channel containing the agent session.",
+        "desc": "ID of the channel containing the agent session. Required for public channels.",
         "type": "string",
         "subtype": "channel",
-        "schema": "channel"
+        "schema": "channel",
+        "required_for_public": true
       },
       "title": {
         "desc": "New title for the agent session (1-200 characters). For a session channel, this also renames the channel.",
@@ -34,11 +34,23 @@
       },
       "thread_ts": {
         "desc": "Timestamp of the thread root message the session is scoped to. Required for thread-based sessions in regular channels and DMs. Must be omitted for session channels.",
+        "type": "string",
+        "example": "1234567890.123456"
+      }
+    }
+  },
+  "output": {
+    "properties": {
+      "title": {
+        "desc": "The updated title of the agent session.",
+        "type": "string"
+      },
+      "channel_id": {
+        "desc": "The encoded ID of the channel, returned when an agent channel was renamed.",
         "type": "string"
       }
     }
   },
-  "output": {},
   "errors": {
     "feature_disabled": {
       "desc": "The agent tasks feature is not enabled for this workspace."

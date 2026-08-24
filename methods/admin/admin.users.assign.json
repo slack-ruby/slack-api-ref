@@ -73,6 +73,7 @@
     "two_factor_setup_required": "Two factor setup is required.",
     "unknown_method": "This method is currently not available.",
     "user_already_team_member": "The given user is already active on the given team.",
+    "user_cannot_be_added_to_workspace": "The user can't be added to this workspace because of their account type or the workspace's configuration.",
     "user_is_bot": "The given user is a bot from an app. This api only works with humans.",
     "user_not_found": "`user_id` was not found."
   }

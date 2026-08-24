@@ -12,7 +12,6 @@
     "type": "object",
     "required": [
       "token",
-      "channel_id",
       "status"
     ],
     "properties": {
@@ -23,10 +22,11 @@
         "example": "xxxx-xxxxxxxxx-xxxx"
       },
       "channel_id": {
-        "desc": "ID of the channel containing the agent session.",
+        "desc": "ID of the channel containing the agent session. Required for public channels.",
         "type": "string",
         "subtype": "channel",
-        "schema": "channel"
+        "schema": "channel",
+        "required_for_public": true
       },
       "status": {
         "desc": "The lifecycle status to set.",
@@ -40,7 +40,8 @@
       },
       "thread_ts": {
         "desc": "Timestamp of the thread root message the session is scoped to. Required for thread-based sessions in regular channels and DMs. Must be omitted for session channels.",
-        "type": "string"
+        "type": "string",
+        "example": "1234567890.123456"
       },
       "title": {
         "desc": "Title for the agent session (max 200 characters). Only used when creating a new session; ignored if the session already exists. To rename an existing session, use `agents.sessions.rename`.",
@@ -64,7 +65,22 @@
       }
     }
   },
-  "output": {},
+  "output": {
+    "properties": {
+      "status": {
+        "desc": "The current lifecycle status of the agent session, derived from the statuses of all agents in the session.",
+        "schema": "agent_session_status"
+      },
+      "agent_status": {
+        "desc": "The lifecycle status of the calling agent within this session. May differ from the session-level status when other agents are present.",
+        "schema": "agent_session_status"
+      },
+      "title": {
+        "desc": "The current title of the agent session, if set.",
+        "type": "string"
+      }
+    }
+  },
   "errors": {
     "feature_disabled": {
       "desc": "The agent tasks feature is not enabled for this workspace."
@@ -109,6 +125,11 @@
         "ok": false,
         "error": "thread_ts_required"
       }
+    }
+  },
+  "warnings": {
+    "missing_agent_session_stopped_event_subscription": {
+      "desc": "The app is not subscribed to the `agent_session_stopped` event. Subscribe to this event so Slack can send stop requests for this agent session."
     }
   }
 }

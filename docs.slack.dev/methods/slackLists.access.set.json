@@ -21,7 +21,8 @@
     "properties": {
       "token": {
         "type": "string",
-        "subtype": "auth"
+        "subtype": "auth",
+        "example": "xxxx-xxxxxxxxx-xxxx"
       },
       "list_id": {
         "desc": "Encoded ID of the List.",
@@ -31,7 +32,8 @@
       },
       "access_level": {
         "desc": "Desired level of access.",
-        "schema": "file_access_level"
+        "schema": "file_access_level",
+        "example": "read"
       },
       "channel_ids": {
         "desc": "List of channels you wish to update access for. Can only be used if `user_ids` is not provided.",
@@ -113,5 +115,6 @@
         "error": "restricted_action"
       }
     }
-  }
+  },
+  "json_input_supported": true
 }

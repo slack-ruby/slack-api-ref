@@ -21,7 +21,8 @@
     "properties": {
       "token": {
         "type": "string",
-        "subtype": "auth"
+        "subtype": "auth",
+        "example": "xxxx-xxxxxxxxx-xxxx"
       },
       "list_id": {
         "desc": "ID of the List to add or update cells.",
@@ -135,5 +136,6 @@
         "error": "invalid_row_id"
       }
     }
-  }
+  },
+  "json_input_supported": true
 }
