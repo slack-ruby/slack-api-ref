@@ -1792,6 +1792,20 @@
     ]
   },
   {
+    "name": "oauth.v2.beginShortTokenRotation",
+    "description": "Call this to rotate the secret on an old API token with a short secret. Must be paired with a call to oauth.v2.completeShortTokenRotation to confirm the change.",
+    "family": [
+      "oauth"
+    ]
+  },
+  {
+    "name": "oauth.v2.completeShortTokenRotation",
+    "description": "Call this to finish rotating the secret on an old API token with a short secret. Must be paired with a call to oauth.v2.beginShortTokenRotation to start the process.",
+    "family": [
+      "oauth"
+    ]
+  },
+  {
     "name": "oauth.v2.exchange",
     "description": "Exchanges a legacy access token for a new expiring access token and refresh token",
     "family": [
