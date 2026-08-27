@@ -67,17 +67,41 @@
       "icon_emoji": {
         "type": "string",
         "desc": "Emoji to use as the icon for this message. Overrides `icon_url`.",
-        "example": ":chart_with_upwards_trend:"
+        "example": ":chart_with_upwards_trend:",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ]
       },
       "icon_url": {
         "type": "string",
         "desc": "Image URL to use as the icon for this message.",
-        "example": "http://lorempixel.com/48/48"
+        "example": "http://lorempixel.com/48/48",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ]
       },
       "username": {
         "type": "string",
         "desc": "The bot's username to display.",
-        "example": "My Bot"
+        "example": "My Bot",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ]
       }
     }
   },

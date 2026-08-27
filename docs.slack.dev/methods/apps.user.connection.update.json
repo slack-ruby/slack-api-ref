@@ -60,6 +60,9 @@
     },
     "missing_scope": {
       "desc": "The token provided doesn't have the required scopes."
+    },
+    "internal_error": {
+      "desc": "The connection status could not be written. Retry the call."
     }
   },
   "json_input_supported": true

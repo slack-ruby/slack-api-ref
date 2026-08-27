@@ -27,6 +27,12 @@
       "example": "true",
       "desc": "Boolean indicating whether archived items or normal items should be returned.",
       "type": "boolean"
+    },
+    "include_list": {
+      "required": false,
+      "example": "true",
+      "desc": "Set to true to also return the parent list object, including its title, column schema, and total row count. Defaults to false to keep the response small.",
+      "type": "boolean"
     }
   },
   "response": {

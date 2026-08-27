@@ -223,6 +223,9 @@
     },
     "no_assertion": {
       "desc": "Missing `assertion` in the request."
+    },
+    "user_not_authenticated": {
+      "desc": "The user has never authenticated via single sign-on."
     }
   },
   "examples": {

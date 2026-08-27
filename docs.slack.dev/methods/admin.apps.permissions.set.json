@@ -98,6 +98,9 @@
     },
     "channel_not_found": {
       "desc": "One or more channel IDs are not valid."
+    },
+    "restricted_action": {
+      "desc": "User does not have permission to perform this action."
     }
   },
   "examples": {}

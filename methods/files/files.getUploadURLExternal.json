@@ -73,6 +73,7 @@
     "two_factor_setup_required": "Two factor setup is required.",
     "unknown_method": "This method is currently not available.",
     "unknown_snippet_type": "The provided `snippet_type` is not a supported type.",
-    "unknown_subtype": "The provided `subtype` is not a supported type."
+    "unknown_subtype": "The provided `subtype` is not a supported type.",
+    "user_is_external_guest": "External guests cannot upload or share files."
   }
 }

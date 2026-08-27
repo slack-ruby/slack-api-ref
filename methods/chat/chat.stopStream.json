@@ -35,6 +35,12 @@
       "desc": "JSON object with event_type and event_payload fields, presented as a URL-encoded string. Metadata you post to Slack is accessible to any app or user who is a member of that workspace.",
       "type": "string",
       "format": "json"
+    },
+    "session_status": {
+      "required": false,
+      "example": "processing",
+      "desc": "The session status to set after stopping the stream.",
+      "type": "enum"
     }
   },
   "response": {

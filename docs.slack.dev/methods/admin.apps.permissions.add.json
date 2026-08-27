@@ -91,6 +91,9 @@
     },
     "failed_to_update_channels": {
       "desc": "An error occurred while updating the channel restriction list."
+    },
+    "restricted_action": {
+      "desc": "User does not have permission to perform this action."
     }
   },
   "examples": {}

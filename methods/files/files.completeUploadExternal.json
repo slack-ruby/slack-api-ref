@@ -102,6 +102,7 @@
     "token_expired": "Authentication token has expired.",
     "token_revoked": "Authentication token is for a deleted user or workspace or the app has been removed when using a user token.",
     "two_factor_setup_required": "Two factor setup is required.",
-    "unknown_method": "This method is currently not available."
+    "unknown_method": "This method is currently not available.",
+    "user_is_external_guest": "External guests cannot upload or share files."
   }
 }

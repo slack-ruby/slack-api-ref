@@ -33,7 +33,8 @@
       },
       "chunks": {
         "desc": "Array of streaming chunks.",
-        "type": "array"
+        "type": "array",
+        "schema": ""
       },
       "ts": {
         "desc": "The timestamp of the streaming message.",
@@ -58,6 +59,18 @@
           {
             "type": "null"
           }
+        ]
+      },
+      "session_status": {
+        "desc": "The session status to set after stopping the stream.",
+        "default": "active",
+        "type": "string",
+        "example": "processing",
+        "enum": [
+          "active",
+          "processing",
+          "suspended",
+          "closed"
         ]
       }
     }
