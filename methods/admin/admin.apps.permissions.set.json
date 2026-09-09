@@ -26,10 +26,23 @@
       "example": "S00000001,S00000002",
       "desc": "List of encoded usergroup IDs.",
       "type": "array"
+    },
+    "channel_restriction_mode": {
+      "required": false,
+      "desc": "The mode that defines where the app can be used in channels.",
+      "type": "enum"
+    },
+    "channel_ids": {
+      "required": false,
+      "example": "C00000001,C00000002",
+      "desc": "List of encoded channel IDs for channel restrictions. Semantics depend on channel_restriction_mode: allowlist for specific_channels, exclusion list for all_channels_except.",
+      "type": "array"
     }
   },
   "response": {
-    "examples": []
+    "examples": [
+      "{\n    \"ok\": true,\n    \"permission_type\": \"everyone\",\n    \"channel_restriction_mode\": \"specific_channels\",\n    \"channel_ids\": [\n        \"C00000001\",\n        \"C00000002\"\n    ]\n}"
+    ]
   },
   "errors": {
     "access_denied": "This actor does not have access to the permissions on this resource.",
@@ -38,6 +51,8 @@
     "app_not_found": "This app does not exist.",
     "channel_ids_required": "channel_ids is required when channel_restriction_mode is specific_channels or all_channels_except.",
     "channel_not_found": "One or more channel IDs are not valid.",
+    "channel_restriction_requires_app_access": "Channel access cannot be configured while the app is set to no_one, since the app can't be used in any channel.",
+    "channel_restrictions_not_available": "Channel restrictions are not available for this workspace.",
     "deprecated_endpoint": "The endpoint has been deprecated.",
     "ekm_access_denied": "Administrators have suspended the ability to post a message.",
     "enterprise_is_restricted": "The method cannot be called from an Enterprise.",

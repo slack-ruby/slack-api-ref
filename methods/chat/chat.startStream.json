@@ -11,7 +11,7 @@
     },
     "chunks": {
       "required": false,
-      "desc": "Array of streaming chunks.",
+      "desc": "Array of streaming chunks. Can include markdown text chunk objects, task update chunk objects, plan update chunks, or blocks chunks.",
       "type": "array"
     },
     "markdown_text": {

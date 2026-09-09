@@ -21,6 +21,12 @@
       "example": "S00000001,S00000002",
       "desc": "List of encoded usergroup IDs.",
       "type": "array"
+    },
+    "channel_ids": {
+      "required": false,
+      "example": "C00000001,C00000002",
+      "desc": "List of encoded channel IDs to add to the channel restriction list. Interpretation depends on the app's channel_restriction_mode, which is configured via the admin.apps.permissions.set method.",
+      "type": "array"
     }
   },
   "response": {

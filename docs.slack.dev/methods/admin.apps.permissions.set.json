@@ -53,6 +53,24 @@
         "items": {
           "schema": "subteam_id"
         }
+      },
+      "channel_restriction_mode": {
+        "desc": "The mode that defines where the app can be used in channels",
+        "type": "string",
+        "enum": [
+          "all_channels",
+          "specific_channels",
+          "all_channels_except"
+        ]
+      },
+      "channel_ids": {
+        "type": "array",
+        "desc": "List of encoded channel IDs for channel restrictions. Semantics depend on channel_restriction_mode: allowlist for specific_channels, exclusion list for all_channels_except",
+        "example": "C00000001,C00000002",
+        "items": {
+          "schema": "channel_id"
+        },
+        "maxItems": 200
       }
     }
   },
@@ -101,7 +119,27 @@
     },
     "restricted_action": {
       "desc": "User does not have permission to perform this action."
+    },
+    "channel_restrictions_not_available": {
+      "desc": "Channel restrictions are not available for this workspace."
+    },
+    "channel_restriction_requires_app_access": {
+      "desc": "Channel access cannot be configured while the app is set to no_one, since the app can't be used in any channel."
     }
   },
-  "examples": {}
+  "examples": {
+    "channel_restrictions": {
+      "url": "/api/admin.apps.permissions.set",
+      "description": "When channel restrictions are configured, the response also includes `channel_restriction_mode` and, for `specific_channels` or `all_channels_except`, the `channel_ids` it applies to. When `permission_type` is `no_one`, the response returns `channel_restriction_mode` as `no_one`, since the app can't be used in any channel.",
+      "example": {
+        "ok": true,
+        "permission_type": "everyone",
+        "channel_restriction_mode": "specific_channels",
+        "channel_ids": [
+          "C00000001",
+          "C00000002"
+        ]
+      }
+    }
+  }
 }

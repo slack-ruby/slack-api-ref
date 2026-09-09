@@ -31,7 +31,7 @@
         "subtype": "channel"
       },
       "chunks": {
-        "desc": "Array of streaming chunks.",
+        "desc": "Array of streaming chunks. Can include [markdown text chunk](#markdown_text-chunks) objects, [task update chunk](#task_update-chunks) objects, [plan update chunks](#plan_update-chunks), or [blocks chunks](#blocks-chunks).",
         "type": "array"
       },
       "markdown_text": {

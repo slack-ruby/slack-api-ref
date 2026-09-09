@@ -43,6 +43,15 @@
         "items": {
           "schema": "subteam_id"
         }
+      },
+      "channel_ids": {
+        "type": "array",
+        "desc": "List of encoded channel IDs to remove from the channel restriction list. Interpretation depends on the app's `channel_restriction_mode`, which is configured via the `admin.apps.permissions.set` method.",
+        "example": "C00000001,C00000002",
+        "items": {
+          "schema": "channel_id"
+        },
+        "maxItems": 200
       }
     }
   },
@@ -93,5 +102,18 @@
       "desc": "User does not have permission to perform this action."
     }
   },
-  "examples": {}
+  "examples": {
+    "channel_restrictions": {
+      "url": "/api/admin.apps.permissions.remove",
+      "description": "When the app has channel restrictions configured, the response reflects the updated channel list",
+      "example": {
+        "ok": true,
+        "permission_type": "everyone",
+        "channel_restriction_mode": "specific_channels",
+        "channel_ids": [
+          "C00000001"
+        ]
+      }
+    }
+  }
 }
