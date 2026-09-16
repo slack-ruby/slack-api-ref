@@ -1498,6 +1498,16 @@
     ]
   },
   {
+    "name": "user_guest_status_changed",
+    "description": "A user's guest status changed.",
+    "scopes": [
+      "users:read"
+    ],
+    "APIs": [
+      "Events"
+    ]
+  },
+  {
     "name": "user_huddle_changed",
     "description": "A user's huddle status has changed",
     "APIs": [

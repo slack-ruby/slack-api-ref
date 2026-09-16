@@ -1,0 +1,10 @@
+{
+  "name": "user_guest_status_changed",
+  "desc": "A user's guest status changed..",
+  "scopes": [
+    "users:read"
+  ],
+  "APIs": [
+    "Events"
+  ]
+}
