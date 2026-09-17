@@ -67,6 +67,7 @@
     "permission_denied": "No permission to perform this operation.",
     "ratelimited": "The request has been ratelimited. Refer to the Retry-After header for when to retry the request.",
     "request_timeout": "The method was called via a POST request, but the POST data was either missing or truncated.",
+    "restricted_action": "Members from an external organization cannot edit workflow bookmarks in this channel.",
     "service_unavailable": "The service is temporarily unavailable.",
     "slack_connect_blocked_file_type": "Files with certain extensions are blocked from being uploaded in all Slack Connect communications",
     "slack_connect_clip_sharing_blocked": "Admin has disabled Clip sharing in Slack Connect channels",

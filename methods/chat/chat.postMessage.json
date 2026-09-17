@@ -133,6 +133,7 @@
     "access_denied": "Access to a resource specified in the request is denied.",
     "accesslimited": "Access to this method is limited on the current network.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
+    "agent_prompt_display_not_allowed": "`client_context.agent_prompt_display` may only be set by the Slack client when posting to the user's Slackbot DM.",
     "app_access_restricted": "The user does not have permission to use this app.",
     "as_user_not_supported": "The `as_user` parameter does not function with workspace apps.",
     "attachment_payload_limit_exceeded": "Attachment payload size is too long.",

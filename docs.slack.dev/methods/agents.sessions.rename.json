@@ -30,12 +30,15 @@
       },
       "title": {
         "desc": "New title for the agent session (1-200 characters). For a session channel, this also renames the channel.",
-        "type": "string"
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 200
       },
       "thread_ts": {
         "desc": "Timestamp of the thread root message the session is scoped to. Required for thread-based sessions in regular channels and DMs. Must be omitted for session channels.",
         "type": "string",
-        "example": "1234567890.123456"
+        "example": "1234567890.123456",
+        "maxLength": 32
       }
     }
   },
