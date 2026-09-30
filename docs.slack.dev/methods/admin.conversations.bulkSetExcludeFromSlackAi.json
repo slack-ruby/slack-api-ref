@@ -1,5 +1,5 @@
 {
-  "desc": "Exclude channels from Slack AI in bulk",
+  "desc": "Exclude channels from Slack AI in bulk.",
   "http_method": "GET",
   "scope": {
     "user": [

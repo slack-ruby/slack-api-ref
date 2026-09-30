@@ -239,7 +239,7 @@
   },
   {
     "name": "admin.conversations.bulkSetExcludeFromSlackAi",
-    "description": "Exclude channels from Slack AI in bulk",
+    "description": "Exclude channels from Slack AI in bulk.",
     "family": [
       "admin"
     ]
@@ -616,6 +616,27 @@
     ]
   },
   {
+    "name": "admin.usergroups.addUsers",
+    "description": "Add members to an existing organizational usergroup. This method is only available to Enterprise Grid organizations.",
+    "family": [
+      "admin"
+    ]
+  },
+  {
+    "name": "admin.usergroups.create",
+    "description": "Create a new organizational usergroup. This method is only available to Enterprise Grid organizations.",
+    "family": [
+      "admin"
+    ]
+  },
+  {
+    "name": "admin.usergroups.fetch",
+    "description": "Fetch an organizational usergroup.",
+    "family": [
+      "admin"
+    ]
+  },
+  {
     "name": "admin.usergroups.listChannels",
     "description": "List the channels linked to an org-level IDP group (user group).",
     "family": [
@@ -632,6 +653,27 @@
   {
     "name": "admin.usergroups.removeTeams",
     "description": "Remove one or more default workspaces from an organization-wide IDP Group or Admin Group.",
+    "family": [
+      "admin"
+    ]
+  },
+  {
+    "name": "admin.usergroups.removeUsers",
+    "description": "Remove members from an existing organizational usergroup. This method is only available to Enterprise Grid organizations.",
+    "family": [
+      "admin"
+    ]
+  },
+  {
+    "name": "admin.usergroups.update",
+    "description": "Update one or more properties of an existing organizational usergroup.",
+    "family": [
+      "admin"
+    ]
+  },
+  {
+    "name": "admin.usergroups.uploadUsers",
+    "description": "Add members to an existing organizational usergroup in bulk via CSV upload. This method is only available to Enterprise Grid organizations.",
     "family": [
       "admin"
     ]

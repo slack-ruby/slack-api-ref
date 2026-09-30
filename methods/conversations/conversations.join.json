@@ -20,6 +20,7 @@
     "access_denied": "Access to a resource specified in the request is denied.",
     "accesslimited": "Access to this method is limited on the current network.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
+    "app_cannot_join_channel": "This app cannot join this channel.",
     "channel_is_limited_access": "The user has no access to the channel. This is only applicable to private Salesforce record channels.",
     "channel_not_found": "Value passed for `channel` was invalid.",
     "deprecated_endpoint": "The endpoint has been deprecated.",

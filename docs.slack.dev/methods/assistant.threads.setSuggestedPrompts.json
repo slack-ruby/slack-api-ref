@@ -57,6 +57,9 @@
     },
     "not_agent_app": {
       "desc": "This method requires the app to be configured as an agent. Enable the Agent feature in your app configuration at https://api.slack.com/apps."
+    },
+    "static_prompts_configured": {
+      "desc": "Suggested prompts can't be set dynamically without thread_ts because the app already has static suggested prompts configured. Remove the static prompts in your app configuration to set them via this method without thread_ts."
     }
   },
   "examples": {

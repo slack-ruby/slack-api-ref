@@ -139,6 +139,9 @@
     },
     "users_list_not_supplied": {
       "desc": "Missing `users` in request"
+    },
+    "app_cannot_join_channel": {
+      "desc": "This app cannot be added to this conversation."
     }
   },
   "examples": {

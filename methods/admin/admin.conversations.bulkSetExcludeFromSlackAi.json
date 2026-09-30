@@ -2,7 +2,7 @@
   "group": "admin",
   "name": "admin.conversations.bulkSetExcludeFromSlackAi",
   "deprecated": false,
-  "desc": "Exclude channels from Slack AI in bulk",
+  "desc": "Exclude channels from Slack AI in bulk.",
   "args": {
     "channel_ids": {
       "required": true,

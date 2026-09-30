@@ -38,6 +38,7 @@
     "examples": []
   },
   "errors": {
+    "accepter_email_not_verified": "The accepting user has not verified the email address on their account. They must verify it before accepting.",
     "access_denied": "Access to a resource specified in the request is denied.",
     "accesslimited": "Access to this method is limited on the current network.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",

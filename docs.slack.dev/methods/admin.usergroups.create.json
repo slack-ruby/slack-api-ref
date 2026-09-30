@@ -1,0 +1,120 @@
+{
+  "desc": "Create a new organizational usergroup. This method is only available to Enterprise Grid organizations.",
+  "http_method": "POST",
+  "scope": {
+    "user": [
+      "admin.usergroups:write"
+    ]
+  },
+  "json_input_supported": true,
+  "rate_limits": "t1",
+  "args": {
+    "type": "object",
+    "required": [
+      "token",
+      "name"
+    ],
+    "properties": {
+      "token": {
+        "type": "string",
+        "subtype": "auth",
+        "desc": "Authentication token bearing required scopes. Tokens should be passed as an HTTP Authorization header or alternatively, as a POST parameter.",
+        "example": "xxxx-xxxxxxxxx-xxxx"
+      },
+      "name": {
+        "desc": "Unique name for the usergroup",
+        "type": "string"
+      },
+      "handle": {
+        "desc": "Optional handle used to mention the usergroup in channel, must be unique",
+        "type": "string"
+      },
+      "purpose": {
+        "desc": "Optional purpose that describes what the usergroup is about",
+        "type": "string"
+      },
+      "is_visible": {
+        "desc": "Configure whether or not this usergroup should be visible in the client",
+        "example": "true",
+        "type": "boolean"
+      }
+    }
+  },
+  "output": {
+    "type": "object",
+    "properties": {
+      "error": {
+        "type": "string",
+        "desc": "A string representation of the error type"
+      },
+      "subteam": {
+        "schema": "subteam"
+      }
+    }
+  },
+  "errors": {
+    "feature_not_enabled": {
+      "desc": "The Admin APIs feature is not enabled for this workspace."
+    },
+    "invalid_auth": {
+      "desc": "The workspace specified is not part of this organization."
+    },
+    "restricted_action": {
+      "desc": "The calling user is not allowed to create usergroups."
+    },
+    "not_an_enterprise": {
+      "desc": "The token passed in does not belong to an Enterprise organization."
+    },
+    "name_already_exists": {
+      "desc": "The name specified is used by another usergroup and cannot be created."
+    },
+    "handle_already_exists": {
+      "desc": "The handle specified is used by another usergroup or entity and cannot be created."
+    }
+  },
+  "examples": {
+    "success": {
+      "url": "/api/admin.usergroups.create?token=YOUR_TOKEN&name=Marketing%20Team&handle=marketing-team&is_visible=true",
+      "description": "Typical success response",
+      "example": {
+        "ok": true,
+        "subteam": {
+          "id": "S0604QSJC",
+          "team_id": "E060RNRCZ",
+          "enterprise_id": "E060RNRCZ",
+          "is_subteam": true,
+          "is_usergroup": true,
+          "name": "Marketing Team",
+          "description": "",
+          "handle": "marketing-team",
+          "is_external": false,
+          "date_create": 1446746793,
+          "date_update": 1446746793,
+          "date_delete": 0,
+          "auto_type": null,
+          "auto_provision": false,
+          "enterprise_subteam_id": "",
+          "created_by": "U060R4BJ4",
+          "updated_by": "U060R4BJ4",
+          "deleted_by": null,
+          "is_section": false,
+          "is_editing_restricted": true,
+          "is_membership_locked": true,
+          "is_idp_group": false,
+          "is_visible": true,
+          "is_org_level": true,
+          "user_count": 0,
+          "channel_count": 0
+        }
+      }
+    },
+    "error": {
+      "url": "/api/admin.usergroups.create?token=YOUR_TOKEN&name=Marketing%20Team",
+      "description": "Typical error response if a usergroup with the given name already exists",
+      "example": {
+        "ok": false,
+        "error": "name_already_exists"
+      }
+    }
+  }
+}
