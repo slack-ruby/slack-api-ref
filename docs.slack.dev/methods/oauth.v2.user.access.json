@@ -176,6 +176,9 @@
     "invalid_refresh_token": {
       "desc": "The given refresh token is invalid."
     },
+    "invalid_resource": {
+      "desc": "The `resource` in the assertion is malformed, or is not a resource tokens can be issued for."
+    },
     "no_scopes": {
       "desc": "Missing `scope` in the request."
     },

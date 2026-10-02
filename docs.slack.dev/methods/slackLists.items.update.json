@@ -26,7 +26,7 @@
       },
       "list_id": {
         "desc": "ID of the List to add or update cells.",
-        "example": "F01ABCDE2FG",
+        "example": "F0123ABC456",
         "type": "string",
         "subtype": "list"
       },

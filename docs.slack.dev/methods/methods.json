@@ -1204,6 +1204,13 @@
     ]
   },
   {
+    "name": "canvases.getContent",
+    "description": "Get the content of a canvas as markdown (default) or HTML.",
+    "family": [
+      "canvases"
+    ]
+  },
+  {
     "name": "canvases.sections.lookup",
     "description": "Find sections matching the provided criteria",
     "family": [
