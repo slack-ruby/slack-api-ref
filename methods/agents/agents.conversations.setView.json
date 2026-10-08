@@ -1,0 +1,125 @@
+{
+  "group": "agents",
+  "name": "agents.conversations.setView",
+  "deprecated": false,
+  "desc": "Create or update a view in a code channel.",
+  "args": {
+    "channel_id": {
+      "required": true,
+      "desc": "ID of the code channel to render the view in.",
+      "type": "string"
+    },
+    "type": {
+      "required": false,
+      "example": "html",
+      "desc": "The kind of view to create or update. Defaults to html. Determines which other arguments are required: html and diff require content, block_kit requires blocks, canvas requires canvas_id, pull_request requires pr_url."
+    },
+    "view_key": {
+      "required": false,
+      "desc": "Agent-assigned stable identity for the view (e.g. the source file path on the agent's machine). Used as the upsert key: calls with the same view_key update the same view. Required for html, block_kit, and canvas views; ignored for diff (a diff view is a per-channel singleton).",
+      "type": "string"
+    },
+    "content": {
+      "required": false,
+      "desc": "View content. For html, a full self-contained HTML document; for diff, raw unified diff text. Capped at 1,000,000 bytes — larger content returns content_too_large. The cap is enforced by the handler (not schema maxLength) so the documented error code actually surfaces instead of a generic argument-validation failure. Required when type is html or diff.",
+      "type": "string"
+    },
+    "blocks": {
+      "required": false,
+      "desc": "Block Kit blocks to render in the view tab. Required when type is block_kit; ignored otherwise."
+    },
+    "canvas_id": {
+      "required": false,
+      "desc": "Encoded ID of the canvas to attach as the view. Required when type is canvas; ignored otherwise."
+    },
+    "access_level": {
+      "required": false,
+      "desc": "For canvas views: access level granted to the channel for the canvas tab. Defaults to write. Use 'comment' to grant channel members comment access (read and comment, no editing) so the agent remains the sole author of the canvas text.",
+      "type": "enum"
+    },
+    "agent_content_hash": {
+      "required": false,
+      "desc": "For canvas views: hash of the canvas-derived markdown the agent last wrote, recorded so the agent can later detect human edits to the canvas. Opaque to the server.",
+      "type": "string"
+    },
+    "pr_url": {
+      "required": false,
+      "desc": "For pull_request views: the pull request's URL. Required when type is pull_request; ignored otherwise.",
+      "type": "string"
+    },
+    "base_branch": {
+      "required": false,
+      "desc": "For diff views: base branch name for display purposes.",
+      "type": "string"
+    },
+    "head_branch": {
+      "required": false,
+      "desc": "For diff views: head branch name for display purposes.",
+      "type": "string"
+    },
+    "name": {
+      "required": false,
+      "desc": "Display label for the view tab. Preferred over the legacy 'label' argument (name wins if both are supplied). Defaults to the last path segment of view_key, stripped of any .html/.htm extension.",
+      "type": "string"
+    },
+    "label": {
+      "required": false,
+      "desc": "Deprecated alias for 'name'. Display label for the view tab. Defaults to the last path segment of view_key, stripped of any .html/.htm extension.",
+      "type": "string"
+    },
+    "csp": {
+      "required": false,
+      "desc": "Content-Security-Policy domain declarations for the view. Domains are validated server-side (https-only, no private/internal hosts) and persisted. Only resource_domains is honored at render time today; connect_domains is accepted and stored for forward-compatibility but NOT honored yet.",
+      "type": "object"
+    }
+  },
+  "response": {
+    "examples": [
+      "{\n    \"ok\": true,\n    \"channel_id\": \"C9876543210\",\n    \"view_id\": \"Ct1234567890\",\n    \"file_id\": \"F1234567890\",\n    \"canvas_id\": \"F1234567890\",\n    \"content_version\": 1,\n    \"type\": \"canvas\"\n}",
+      "{\n    \"ok\": false,\n    \"error\": \"too_many_views\"\n}"
+    ]
+  },
+  "errors": {
+    "access_denied": "Access to a resource specified in the request is denied.",
+    "accesslimited": "Access to this method is limited on the current network.",
+    "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
+    "canvas_not_found": "The specified canvas_id does not correspond to a canvas you can access.",
+    "channel_not_found": "The specified channel does not correspond to a valid channel.",
+    "content_too_large": "The view content exceeds the maximum allowed size (1 MB).",
+    "deprecated_endpoint": "The endpoint has been deprecated.",
+    "ekm_access_denied": "Administrators have suspended the ability to post a message.",
+    "enterprise_is_restricted": "The method cannot be called from an Enterprise.",
+    "fatal_error": "The server could not complete your operation(s) without encountering a catastrophic error. It's possible some aspect of the operation succeeded before the error was raised.",
+    "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
+    "invalid_array_arg": "The method was passed an array as an argument. Please only input valid strings.",
+    "invalid_blocks": "The supplied blocks failed Block Kit validation.",
+    "invalid_charset": "The method was called via a POST request, but the charset specified in the Content-Type header was invalid. Valid charset names are: utf-8 iso-8859-1.",
+    "invalid_csp_domain": "One or more declared CSP domains failed validation (must be https:// origins, no private/reserved/internal hosts).",
+    "invalid_form_data": "The method was called via a POST request with Content-Type application/x-www-form-urlencoded or multipart/form-data, but the form data was either missing or syntactically invalid.",
+    "invalid_post_type": "The method was called via a POST request, but the specified Content-Type was invalid. Valid types are: application/json application/x-www-form-urlencoded multipart/form-data text/plain.",
+    "invalid_pr_url": "The supplied pr_url is not a valid https pull request URL.",
+    "invalid_view_type": "The supplied type is not a recognized view type.",
+    "is_bot": "This method cannot be called by a legacy bot.",
+    "method_deprecated": "The method has been deprecated.",
+    "missing_post_type": "The method was called via a POST request and included a data payload, but the request did not include a Content-Type header.",
+    "missing_required_arg": "A required argument for the supplied view type is missing (content for html/diff, blocks for block_kit, canvas_id for canvas, pr_url for pull_request).",
+    "missing_scope": "The token used is not granted the specific scope permissions required to complete this request.",
+    "no_permission": "The workspace token used in this request does not have the permissions necessary to complete the request. Make sure your app is a member of the conversation it's attempting to post a message to.",
+    "not_agent_channel": "The specified channel is not a code channel.",
+    "not_allowed_token_type": "The token type used in this request is not allowed.",
+    "not_authed": "No authentication token provided.",
+    "not_authorized": "The caller is not an authorized agent bot or member for this channel.",
+    "not_view_owner": "The view already exists and was created by a different agent bot; only its owner may update it.",
+    "org_login_required": "The workspace is undergoing an enterprise migration and will not be available until migration is complete.",
+    "ratelimited": "The request has been ratelimited. Refer to the Retry-After header for when to retry the request.",
+    "request_timeout": "The method was called via a POST request, but the POST data was either missing or truncated.",
+    "service_unavailable": "The service is temporarily unavailable.",
+    "team_added_to_org": "The workspace associated with your request is currently undergoing migration to an Enterprise Organization. Web API and other platform operations will be intermittently unavailable until the transition is complete.",
+    "token_expired": "Authentication token has expired.",
+    "token_revoked": "Authentication token is for a deleted user or workspace or the app has been removed when using a user token.",
+    "too_many_views": "The channel already has the maximum number of views (5), or already has a diff view (at most 1 is allowed).",
+    "two_factor_setup_required": "Two factor setup is required.",
+    "unknown_method": "This method is currently not available.",
+    "view_creation_failed": "The view could not be created as a channel tab."
+  }
+}

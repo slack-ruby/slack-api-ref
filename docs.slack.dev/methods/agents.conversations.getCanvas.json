@@ -1,0 +1,216 @@
+{
+  "desc": "Fetch a canvas attached to a code channel.",
+  "scope": {
+    "bot": [
+      "code_channels:manage"
+    ]
+  },
+  "json_input_supported": true,
+  "rate_limits": {
+    "apps_tier": "t3"
+  },
+  "args": {
+    "type": "object",
+    "required": [
+      "token",
+      "channel",
+      "canvas_id"
+    ],
+    "properties": {
+      "token": {
+        "desc": "Authentication token bearing the `code_channels:manage` scope. Must be a granular bot token.",
+        "type": "string",
+        "subtype": "auth",
+        "example": "xxxx-xxxxxxxxx-xxxx"
+      },
+      "channel": {
+        "desc": "ID of the agent session channel the canvas belongs to.",
+        "type": "string",
+        "subtype": "channel"
+      },
+      "canvas_id": {
+        "schema": "file_id",
+        "subtype": "canvas",
+        "desc": "Encoded ID of the canvas to fetch."
+      },
+      "content_format": {
+        "desc": "Format to render the canvas content in. Defaults to markdown.",
+        "type": "string",
+        "enum": [
+          "markdown"
+        ],
+        "default": "markdown"
+      },
+      "include_resolved": {
+        "desc": "Whether to include resolved comment threads in the response. Defaults to false.",
+        "type": "boolean",
+        "default": false
+      }
+    }
+  },
+  "output": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "canvas_id",
+      "title",
+      "content",
+      "comments",
+      "has_more_comments"
+    ],
+    "properties": {
+      "canvas_id": {
+        "type": "string",
+        "desc": "The encoded ID of the canvas."
+      },
+      "title": {
+        "type": "string",
+        "desc": "The title of the canvas."
+      },
+      "content": {
+        "type": "string",
+        "desc": "The full canvas content rendered in the requested content_format."
+      },
+      "comments": {
+        "type": "array",
+        "maxItems": 100,
+        "desc": "Comment threads on the canvas, ordered oldest first. Resolved threads are excluded unless include_resolved is true.",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "id",
+            "ts",
+            "user_id",
+            "text",
+            "quoted_text",
+            "is_resolved",
+            "replies",
+            "has_more_replies"
+          ],
+          "properties": {
+            "id": {
+              "type": "string",
+              "desc": "Stable ID of the comment thread (the canvas annotation the comment is anchored to)."
+            },
+            "ts": {
+              "type": "string",
+              "desc": "Message timestamp of the comment."
+            },
+            "user_id": {
+              "type": "string",
+              "desc": "Encoded ID of the user who wrote the comment."
+            },
+            "text": {
+              "type": "string",
+              "desc": "Text of the comment."
+            },
+            "quoted_text": {
+              "type": "string",
+              "desc": "The highlighted canvas text the comment is anchored to, rendered as mrkdwn. Empty if the anchored text has since been deleted from the canvas."
+            },
+            "is_resolved": {
+              "type": "boolean",
+              "desc": "Whether the comment thread has been resolved."
+            },
+            "replies": {
+              "type": "array",
+              "maxItems": 100,
+              "desc": "Threaded replies to the comment, ordered oldest first. Capped to the most recent 100 replies; older replies are dropped first.",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "ts",
+                  "user_id",
+                  "text"
+                ],
+                "properties": {
+                  "ts": {
+                    "type": "string",
+                    "desc": "Message timestamp of the reply."
+                  },
+                  "user_id": {
+                    "type": "string",
+                    "desc": "Encoded ID of the user who wrote the reply."
+                  },
+                  "text": {
+                    "type": "string",
+                    "desc": "Text of the reply."
+                  }
+                }
+              }
+            },
+            "has_more_replies": {
+              "type": "boolean",
+              "desc": "True if the thread had more replies than the cap and older replies were dropped from the response."
+            }
+          }
+        }
+      },
+      "has_more_comments": {
+        "type": "boolean",
+        "desc": "True if the canvas had more comment threads than the cap and older threads were dropped from the response."
+      }
+    }
+  },
+  "errors": {
+    "channel_not_found": {
+      "desc": "The specified channel does not correspond to a valid channel."
+    },
+    "not_agent_channel": {
+      "desc": "The specified channel is not an agent session channel."
+    },
+    "not_authorized": {
+      "desc": "The caller is not an authorized agent bot for this channel."
+    },
+    "canvas_not_found": {
+      "desc": "The specified `canvas_id` does not correspond to a canvas you can access."
+    },
+    "canvas_content_fetch_failed": {
+      "desc": "The canvas content could not be fetched or rendered."
+    },
+    "comments_fetch_failed": {
+      "desc": "The canvas comment threads could not be fetched."
+    }
+  },
+  "examples": {
+    "success": {
+      "url": "/api/agents.conversations.getCanvas?token=YOUR_TOKEN",
+      "description": "Typical success response",
+      "example": {
+        "ok": true,
+        "canvas_id": "F1234567890",
+        "title": "Migration plan",
+        "content": "# Migration plan\n\n1. Inventory cron jobs…",
+        "comments": [
+          {
+            "id": "An12345",
+            "ts": "1717180000.000100",
+            "user_id": "U2345678901",
+            "text": "Can we do the billing jobs last?",
+            "quoted_text": "1. Inventory cron jobs",
+            "is_resolved": false,
+            "replies": [
+              {
+                "ts": "1717180100.000200",
+                "user_id": "U3456789012",
+                "text": "+1, those are the riskiest"
+              }
+            ],
+            "has_more_replies": false
+          }
+        ],
+        "has_more_comments": false
+      }
+    },
+    "error": {
+      "url": "/api/agents.conversations.getCanvas?token=YOUR_TOKEN",
+      "description": "Typical error response",
+      "example": {
+        "ok": false,
+        "error": "canvas_not_found"
+      }
+    }
+  }
+}

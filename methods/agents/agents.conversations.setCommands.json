@@ -1,0 +1,65 @@
+{
+  "group": "agents",
+  "name": "agents.conversations.setCommands",
+  "deprecated": false,
+  "desc": "Register the set of agent-defined slash commands for the calling agent in a code channel.",
+  "args": {
+    "channel_id": {
+      "required": true,
+      "desc": "ID of the code channel to register commands for.",
+      "type": "string"
+    },
+    "commands": {
+      "required": true,
+      "desc": "Full set of commands to register for the calling agent in this channel, replacing that agent's previously registered set. Pass an empty array to clear the agent's commands. At most 10 commands may exist across all agents in the channel; names must be unique within the set and must not collide with builtin Slack commands.",
+      "type": "array"
+    }
+  },
+  "response": {
+    "examples": [
+      "{\n    \"ok\": true,\n    \"channel_id\": \"C9876543210\",\n    \"command_count\": 3\n}",
+      "{\n    \"ok\": false,\n    \"error\": \"colliding_with_builtin\"\n}"
+    ]
+  },
+  "errors": {
+    "access_denied": "Access to a resource specified in the request is denied.",
+    "accesslimited": "Access to this method is limited on the current network.",
+    "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
+    "agent_required": "The caller is not a bot, so no agent could be determined for the command set.",
+    "channel_not_found": "The specified channel does not exist or is not accessible.",
+    "colliding_with_builtin": "One or more command names collide with a builtin Slack slash command.",
+    "deprecated_endpoint": "The endpoint has been deprecated.",
+    "duplicate_command": "Two or more commands in the set share the same name.",
+    "ekm_access_denied": "Administrators have suspended the ability to post a message.",
+    "enterprise_is_restricted": "The method cannot be called from an Enterprise.",
+    "fatal_error": "The server could not complete your operation(s) without encountering a catastrophic error. It's possible some aspect of the operation succeeded before the error was raised.",
+    "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
+    "invalid_array_arg": "The method was passed an array as an argument. Please only input valid strings.",
+    "invalid_charset": "The method was called via a POST request, but the charset specified in the Content-Type header was invalid. Valid charset names are: utf-8 iso-8859-1.",
+    "invalid_commands": "One or more commands are malformed (invalid name, missing description, or a field exceeds its length limit).",
+    "invalid_form_data": "The method was called via a POST request with Content-Type application/x-www-form-urlencoded or multipart/form-data, but the form data was either missing or syntactically invalid.",
+    "invalid_post_type": "The method was called via a POST request, but the specified Content-Type was invalid. Valid types are: application/json application/x-www-form-urlencoded multipart/form-data text/plain.",
+    "is_bot": "This method cannot be called by a legacy bot.",
+    "method_deprecated": "The method has been deprecated.",
+    "missing_post_type": "The method was called via a POST request and included a data payload, but the request did not include a Content-Type header.",
+    "missing_scope": "The token used is not granted the specific scope permissions required to complete this request.",
+    "no_actions_url": "The calling agent app has no configured request URL (slash command or interactivity), so it could not receive command invocations.",
+    "no_permission": "The workspace token used in this request does not have the permissions necessary to complete the request. Make sure your app is a member of the conversation it's attempting to post a message to.",
+    "not_agent_channel": "The specified channel is not a code channel.",
+    "not_allowed_token_type": "The token type used in this request is not allowed.",
+    "not_authed": "No authentication token provided.",
+    "not_authorized": "The caller is not the channel's agent bot.",
+    "org_login_required": "The workspace is undergoing an enterprise migration and will not be available until migration is complete.",
+    "properties_update_failed": "The command set could not be persisted to the channel properties.",
+    "ratelimited": "The request has been ratelimited. Refer to the Retry-After header for when to retry the request.",
+    "request_timeout": "The method was called via a POST request, but the POST data was either missing or truncated.",
+    "service_unavailable": "The service is temporarily unavailable.",
+    "team_added_to_org": "The workspace associated with your request is currently undergoing migration to an Enterprise Organization. Web API and other platform operations will be intermittently unavailable until the transition is complete.",
+    "token_expired": "Authentication token has expired.",
+    "token_revoked": "Authentication token is for a deleted user or workspace or the app has been removed when using a user token.",
+    "too_many_agents": "Registering a new agent would exceed the maximum number of agents with commands in this channel.",
+    "too_many_commands": "Registering this set would exceed the maximum of 10 commands across all agents in the channel.",
+    "two_factor_setup_required": "Two factor setup is required.",
+    "unknown_method": "This method is currently not available."
+  }
+}

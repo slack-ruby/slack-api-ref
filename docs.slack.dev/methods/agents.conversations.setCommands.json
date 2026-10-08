@@ -1,0 +1,120 @@
+{
+  "desc": "Register the set of agent-defined slash commands for the calling agent in a code channel.",
+  "scope": {
+    "bot": [
+      "code_channels:manage"
+    ]
+  },
+  "json_input_supported": true,
+  "rate_limits": {
+    "apps_tier": "t1"
+  },
+  "args": {
+    "type": "object",
+    "required": [
+      "token",
+      "channel_id",
+      "commands"
+    ],
+    "properties": {
+      "token": {
+        "desc": "Authentication token bearing the `code_channels:manage` scope. Must be a granular bot token.",
+        "type": "string",
+        "subtype": "auth",
+        "example": "xxxx-xxxxxxxxx-xxxx"
+      },
+      "channel_id": {
+        "desc": "ID of the code channel to register commands for.",
+        "type": "string",
+        "subtype": "channel",
+        "required_for_public": true,
+        "resource": {
+          "permissions": {
+            "policy": "\\Channels\\ActorIsAgentChannelBot"
+          }
+        }
+      },
+      "commands": {
+        "desc": "Full set of commands to register for the calling agent in this channel, replacing that agent's previously registered set. Pass an empty array to clear the agent's commands. At most 10 commands may exist across all agents in the channel; names must be unique within the set and must not collide with builtin Slack commands.",
+        "logged": false,
+        "type": "array",
+        "maxItems": 10,
+        "items": {
+          "$schema": "agent_command"
+        }
+      }
+    }
+  },
+  "output": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "channel_id",
+      "command_count"
+    ],
+    "properties": {
+      "channel_id": {
+        "type": "string",
+        "desc": "The encoded ID of the code channel."
+      },
+      "command_count": {
+        "type": "integer",
+        "desc": "The number of commands now registered for the calling agent in this channel."
+      }
+    }
+  },
+  "errors": {
+    "channel_not_found": {
+      "desc": "The specified channel does not exist or is not accessible."
+    },
+    "not_agent_channel": {
+      "desc": "The specified channel is not a code channel."
+    },
+    "not_authorized": {
+      "desc": "The caller is not the channel's agent bot."
+    },
+    "agent_required": {
+      "desc": "The caller is not a bot, so no agent could be determined for the command set."
+    },
+    "no_actions_url": {
+      "desc": "The calling agent app has no configured request URL (slash command or interactivity), so it could not receive command invocations."
+    },
+    "too_many_agents": {
+      "desc": "Registering a new agent would exceed the maximum number of agents with commands in this channel."
+    },
+    "invalid_commands": {
+      "desc": "One or more commands are malformed (invalid name, missing description, or a field exceeds its length limit)."
+    },
+    "too_many_commands": {
+      "desc": "Registering this set would exceed the maximum of 10 commands across all agents in the channel."
+    },
+    "duplicate_command": {
+      "desc": "Two or more commands in the set share the same name."
+    },
+    "colliding_with_builtin": {
+      "desc": "One or more command names collide with a builtin Slack slash command."
+    },
+    "properties_update_failed": {
+      "desc": "The command set could not be persisted to the channel properties."
+    }
+  },
+  "examples": {
+    "success": {
+      "url": "/api/agents.conversations.setCommands?token=YOUR_TOKEN",
+      "description": "Typical success response",
+      "example": {
+        "ok": true,
+        "channel_id": "C9876543210",
+        "command_count": 3
+      }
+    },
+    "error": {
+      "url": "/api/agents.conversations.setCommands?token=YOUR_TOKEN",
+      "description": "Typical error response",
+      "example": {
+        "ok": false,
+        "error": "colliding_with_builtin"
+      }
+    }
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "desc": "Remove a view from a code channel.",
+  "scope": {
+    "bot": [
+      "code_channels:manage"
+    ]
+  },
+  "json_input_supported": true,
+  "rate_limits": {
+    "apps_tier": "t3"
+  },
+  "args": {
+    "type": "object",
+    "required": [
+      "token",
+      "channel_id"
+    ],
+    "properties": {
+      "token": {
+        "desc": "Authentication token bearing the `code_channels:manage` scope. Must be a granular bot token.",
+        "type": "string",
+        "subtype": "auth",
+        "example": "xxxx-xxxxxxxxx-xxxx"
+      },
+      "channel_id": {
+        "desc": "ID of the code channel to remove the view from.",
+        "type": "string",
+        "subtype": "channel",
+        "required_for_public": true
+      },
+      "view_key": {
+        "desc": "Agent-assigned key of the view to remove. Provide exactly one of view_key or view_id.",
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 256
+      },
+      "view_id": {
+        "desc": "Encoded channel tab ID of the view to remove. Provide exactly one of view_key or view_id.",
+        "type": "string"
+      }
+    }
+  },
+  "output": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "channel_id",
+      "view_id"
+    ],
+    "properties": {
+      "channel_id": {
+        "type": "string",
+        "desc": "The encoded ID of the code channel the view was removed from."
+      },
+      "view_id": {
+        "type": "string",
+        "desc": "The encoded channel tab ID of the removed view."
+      }
+    }
+  },
+  "errors": {
+    "channel_not_found": {
+      "desc": "The specified channel does not correspond to a valid channel."
+    },
+    "not_agent_channel": {
+      "desc": "The specified channel is not a code channel."
+    },
+    "not_authorized": {
+      "desc": "The caller is not an authorized agent bot or member for this channel."
+    },
+    "view_not_found": {
+      "desc": "No agent view matches the supplied view_key or view_id in this channel."
+    },
+    "not_view_owner": {
+      "desc": "The view was created by a different agent bot; only its owner may remove it."
+    },
+    "invalid_arguments": {
+      "desc": "Exactly one of view_key or view_id must be provided."
+    },
+    "view_remove_failed": {
+      "desc": "The view's tab or channel properties could not be updated. Safe to retry."
+    }
+  },
+  "examples": {
+    "success": {
+      "url": "/api/agents.conversations.removeView?token=YOUR_TOKEN",
+      "description": "Typical success response",
+      "example": {
+        "ok": true,
+        "channel_id": "C9876543210",
+        "view_id": "T1234567890"
+      }
+    },
+    "error": {
+      "url": "/api/agents.conversations.removeView?token=YOUR_TOKEN",
+      "description": "Typical error response",
+      "example": {
+        "ok": false,
+        "error": "view_not_found"
+      }
+    }
+  }
+}

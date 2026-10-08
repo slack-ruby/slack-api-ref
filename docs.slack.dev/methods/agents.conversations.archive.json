@@ -1,0 +1,86 @@
+{
+  "desc": "Archive a code channel.",
+  "scope": {
+    "bot": [
+      "code_channels:manage"
+    ]
+  },
+  "json_input_supported": true,
+  "rate_limits": {
+    "apps_tier": "t2"
+  },
+  "args": {
+    "type": "object",
+    "required": [
+      "token",
+      "channel_id"
+    ],
+    "properties": {
+      "token": {
+        "desc": "Authentication token bearing the `code_channels:manage` scope. Must be a granular bot token.",
+        "type": "string",
+        "subtype": "auth",
+        "example": "xxxx-xxxxxxxxx-xxxx"
+      },
+      "channel_id": {
+        "desc": "ID of the code channel to archive.",
+        "type": "string",
+        "subtype": "channel",
+        "required_for_public": true
+      },
+      "summary_message_ts": {
+        "desc": "Timestamp of a message in the code channel to share back as a thread reply on the origin message. Requires the channel to have an `origin_link` set.",
+        "type": "string",
+        "example": "1234567890.123456",
+        "maxLength": 32
+      }
+    }
+  },
+  "output": null,
+  "errors": {
+    "channel_not_found": {
+      "desc": "The specified channel_id does not correspond to a valid channel."
+    },
+    "not_agent_channel": {
+      "desc": "The specified channel is not a code channel."
+    },
+    "not_authorized": {
+      "desc": "The caller is not an authorized agent bot for this channel."
+    },
+    "already_archived": {
+      "desc": "The channel has already been archived."
+    },
+    "restricted_action": {
+      "desc": "The workspace does not allow the bot to archive channels."
+    },
+    "summary_message_not_found": {
+      "desc": "The specified summary_message_ts does not correspond to a message in the code channel."
+    },
+    "no_origin_link": {
+      "desc": "summary_message_ts was provided but the code channel has no origin_link set."
+    },
+    "origin_channel_not_found": {
+      "desc": "The origin channel referenced by the code channel is no longer accessible."
+    },
+    "origin_message_not_found": {
+      "desc": "The origin message referenced by the code channel's origin_link could not be found."
+    }
+  },
+  "examples": {
+    "success": {
+      "url": "/api/agents.conversations.archive?token=YOUR_TOKEN",
+      "description": "Typical success response",
+      "example": {
+        "ok": true
+      }
+    },
+    "error": {
+      "url": "/api/agents.conversations.archive?token=YOUR_TOKEN",
+      "description": "Typical error response",
+      "example": {
+        "ok": false,
+        "error": "already_archived"
+      }
+    }
+  }
+}

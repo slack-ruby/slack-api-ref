@@ -847,6 +847,69 @@
     ]
   },
   {
+    "name": "agents.conversations.archive",
+    "description": "Archive a code channel.",
+    "family": [
+      "agents"
+    ]
+  },
+  {
+    "name": "agents.conversations.create",
+    "description": "Create a dedicated code channel for an agent session.",
+    "family": [
+      "agents"
+    ]
+  },
+  {
+    "name": "agents.conversations.getCanvas",
+    "description": "Fetch a canvas attached to a code channel.",
+    "family": [
+      "agents"
+    ]
+  },
+  {
+    "name": "agents.conversations.listViews",
+    "description": "List the views currently attached to a code channel.",
+    "family": [
+      "agents"
+    ]
+  },
+  {
+    "name": "agents.conversations.removeView",
+    "description": "Remove a view from a code channel.",
+    "family": [
+      "agents"
+    ]
+  },
+  {
+    "name": "agents.conversations.setCanvasContent",
+    "description": "Replace the full markdown content of a plan canvas attached to a code channel.",
+    "family": [
+      "agents"
+    ]
+  },
+  {
+    "name": "agents.conversations.setCommands",
+    "description": "Register the set of agent-defined slash commands for the calling agent in a code channel.",
+    "family": [
+      "agents"
+    ]
+  },
+  {
+    "name": "agents.conversations.setProperties",
+    "description": "Set properties on a code channel.",
+    "family": [
+      "agents"
+    ]
+  },
+  {
+    "name": "agents.conversations.setView",
+    "description": "Create or update a view in a code channel.",
+    "family": [
+      "agents"
+    ]
+  },
+  {
     "name": "agents.sessions.rename",
     "description": "Rename an agent session.",
     "family": [

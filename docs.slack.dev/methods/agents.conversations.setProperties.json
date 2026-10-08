@@ -1,0 +1,246 @@
+{
+  "desc": "Set properties on a code channel.",
+  "scope": {
+    "bot": [
+      "code_channels:manage"
+    ]
+  },
+  "json_input_supported": true,
+  "rate_limits": {
+    "apps_tier": "t3"
+  },
+  "args": {
+    "type": "object",
+    "required": [
+      "token",
+      "channel_id"
+    ],
+    "properties": {
+      "token": {
+        "desc": "Authentication token bearing the `code_channels:manage` scope. Must be a granular bot token.",
+        "type": "string",
+        "subtype": "auth",
+        "example": "xxxx-xxxxxxxxx-xxxx"
+      },
+      "channel_id": {
+        "desc": "ID of the code channel to update.",
+        "type": "string",
+        "subtype": "channel",
+        "required_for_public": true
+      },
+      "title": {
+        "desc": "New display title for the agent session.",
+        "type": "string",
+        "maxLength": 200
+      },
+      "status": {
+        "desc": "New status for the agent session.",
+        "type": "string",
+        "enum": [
+          "active",
+          "processing",
+          "suspended",
+          "closed"
+        ]
+      },
+      "code_channel": {
+        "desc": "Code channel properties to set. Only provided fields are updated.",
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "host": {
+            "desc": "Git hosting provider (e.g. github.com).",
+            "type": "string",
+            "maxLength": 255
+          },
+          "repo": {
+            "desc": "Repository name (e.g., org/repo).",
+            "type": "string",
+            "maxLength": 255
+          },
+          "branch": {
+            "desc": "Working branch name.",
+            "type": "string",
+            "maxLength": 255
+          },
+          "base_branch": {
+            "desc": "Base branch the working branch was created from.",
+            "type": "string",
+            "maxLength": 255
+          },
+          "commit_sha": {
+            "desc": "Current commit SHA.",
+            "type": "string",
+            "maxLength": 64
+          },
+          "pr_number": {
+            "desc": "Pull request number.",
+            "type": "integer"
+          },
+          "pr_url": {
+            "desc": "URL of the pull request.",
+            "type": "string",
+            "maxLength": 2048
+          },
+          "pr_title": {
+            "desc": "Title of the pull request.",
+            "type": "string",
+            "maxLength": 255
+          },
+          "pr_status": {
+            "desc": "Status of the pull request (e.g. open, merged, closed).",
+            "type": "string",
+            "maxLength": 32
+          },
+          "ci_url": {
+            "desc": "URL to the CI pipeline run.",
+            "type": "string",
+            "maxLength": 2048
+          },
+          "ci_state": {
+            "desc": "State of the CI pipeline (e.g. pending, success, failure).",
+            "type": "string",
+            "maxLength": 32
+          },
+          "file_paths": {
+            "desc": "List of file paths relevant to this session.",
+            "type": "array",
+            "items": {
+              "type": "string",
+              "maxLength": 512
+            },
+            "maxItems": 100
+          },
+          "language": {
+            "desc": "Primary programming language.",
+            "type": "string",
+            "maxLength": 64
+          },
+          "upstream_url": {
+            "desc": "Upstream repository URL.",
+            "type": "string",
+            "maxLength": 2048
+          },
+          "branch_url": {
+            "desc": "URL of the working branch.",
+            "type": "string",
+            "maxLength": 2048
+          },
+          "context_bar_items": {
+            "desc": "Configurable items to display in the channel context bar. A maximum of 5 items will be applied; any beyond that will be silently truncated and a warning returned.",
+            "type": "array",
+            "items": {
+              "schema": "context_bar_item"
+            }
+          },
+          "summary_message": {
+            "desc": "Points to the current summary message for this code channel. Must reference a message within this channel. When the channel is archived with a summary_message_ts, this property is also set to record where the summary lives so clients can fetch it.",
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "message_ts": {
+                "desc": "Timestamp of the summary message in the code channel.",
+                "type": "string",
+                "maxLength": 32
+              },
+              "thread_ts": {
+                "desc": "Thread timestamp if the summary message is a thread reply. Clients need this to fetch the message via conversations.replies.",
+                "type": "string",
+                "maxLength": 32
+              }
+            },
+            "required": [
+              "message_ts"
+            ]
+          }
+        }
+      },
+      "agent_resource": {
+        "desc": "Agent resource properties to set. Only provided fields are updated.",
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "url": {
+            "desc": "URL of the external resource.",
+            "type": "string",
+            "maxLength": 2048
+          },
+          "resource_type": {
+            "desc": "Type of the external resource.",
+            "type": "string",
+            "maxLength": 64
+          },
+          "title": {
+            "desc": "Display title of the external resource.",
+            "type": "string",
+            "maxLength": 255
+          },
+          "provider": {
+            "desc": "Provider of the external resource.",
+            "type": "string",
+            "maxLength": 64
+          }
+        }
+      }
+    }
+  },
+  "output": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "channel_id"
+    ],
+    "properties": {
+      "channel_id": {
+        "type": "string",
+        "desc": "The encoded ID of the updated code channel."
+      }
+    }
+  },
+  "warnings": {
+    "too_many_context_bar_items": {
+      "desc": "More than 5 context bar items were provided. Only the first 5 were applied."
+    },
+    "summary_message_not_found": {
+      "desc": "The message_ts provided in summary_message does not correspond to a message in this channel. The summary_message field was ignored."
+    }
+  },
+  "errors": {
+    "channel_not_found": {
+      "desc": "The specified channel_id does not correspond to a valid channel."
+    },
+    "not_agent_channel": {
+      "desc": "The specified channel is not a code channel."
+    },
+    "not_authorized": {
+      "desc": "The caller is not an authorized agent bot for this channel."
+    },
+    "invalid_status": {
+      "desc": "Value passed for `status` was not a valid agent session status."
+    },
+    "invalid_title": {
+      "desc": "Value passed for `title` was invalid."
+    },
+    "no_properties_provided": {
+      "desc": "At least one property field must be provided."
+    }
+  },
+  "examples": {
+    "success": {
+      "url": "/api/agents.conversations.setProperties?token=YOUR_TOKEN",
+      "description": "Typical success response",
+      "example": {
+        "ok": true,
+        "channel_id": "C9876543210"
+      }
+    },
+    "error": {
+      "url": "/api/agents.conversations.setProperties?token=YOUR_TOKEN",
+      "description": "Typical error response",
+      "example": {
+        "ok": false,
+        "error": "no_properties_provided"
+      }
+    }
+  }
+}

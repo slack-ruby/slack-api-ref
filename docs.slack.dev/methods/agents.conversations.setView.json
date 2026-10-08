@@ -1,0 +1,222 @@
+{
+  "desc": "Create or update a view in a code channel.",
+  "scope": {
+    "bot": [
+      "code_channels:manage"
+    ]
+  },
+  "json_input_supported": true,
+  "rate_limits": {
+    "apps_tier": "t3"
+  },
+  "args": {
+    "type": "object",
+    "required": [
+      "token",
+      "channel_id"
+    ],
+    "properties": {
+      "token": {
+        "desc": "Authentication token bearing the `code_channels:manage` scope. Must be a granular bot token.",
+        "type": "string",
+        "subtype": "auth",
+        "example": "xxxx-xxxxxxxxx-xxxx"
+      },
+      "channel_id": {
+        "desc": "ID of the code channel to render the view in.",
+        "type": "string",
+        "subtype": "channel",
+        "required_for_public": true
+      },
+      "type": {
+        "schema": "view_type",
+        "desc": "The kind of view to create or update. Defaults to html. Determines which other arguments are required: html and diff require content, block_kit requires blocks, canvas requires canvas_id, pull_request requires pr_url.",
+        "default": "html"
+      },
+      "view_key": {
+        "desc": "Agent-assigned stable identity for the view (e.g. the source file path on the agent's machine). Used as the upsert key: calls with the same view_key update the same view. Required for html, block_kit, and canvas views; ignored for diff (a diff view is a per-channel singleton).",
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 256
+      },
+      "content": {
+        "desc": "View content. For html, a full self-contained HTML document; for diff, raw unified diff text. Capped at 1,000,000 bytes — larger content returns content_too_large. The cap is enforced by the handler (not schema maxLength) so the documented error code actually surfaces instead of a generic argument-validation failure. Required when type is html or diff.",
+        "type": "string",
+        "minLength": 1
+      },
+      "blocks": {
+        "schema": "blocks",
+        "desc": "Block Kit blocks to render in the view tab. Required when type is block_kit; ignored otherwise."
+      },
+      "canvas_id": {
+        "schema": "file_id",
+        "subtype": "canvas",
+        "desc": "Encoded ID of the canvas to attach as the view. Required when type is canvas; ignored otherwise."
+      },
+      "access_level": {
+        "desc": "For canvas views: access level granted to the channel for the canvas tab. Defaults to write. Use 'comment' to grant channel members comment access (read and comment, no editing) so the agent remains the sole author of the canvas text.",
+        "type": "string",
+        "enum": [
+          "read",
+          "write",
+          "comment"
+        ]
+      },
+      "agent_content_hash": {
+        "desc": "For canvas views: hash of the canvas-derived markdown the agent last wrote, recorded so the agent can later detect human edits to the canvas. Opaque to the server.",
+        "type": "string",
+        "maxLength": 128
+      },
+      "pr_url": {
+        "desc": "For pull_request views: the pull request's URL. Required when type is pull_request; ignored otherwise.",
+        "type": "string",
+        "maxLength": 2048
+      },
+      "base_branch": {
+        "desc": "For diff views: base branch name for display purposes.",
+        "type": "string",
+        "maxLength": 255
+      },
+      "head_branch": {
+        "desc": "For diff views: head branch name for display purposes.",
+        "type": "string",
+        "maxLength": 255
+      },
+      "name": {
+        "desc": "Display label for the view tab. Preferred over the legacy 'label' argument (name wins if both are supplied). Defaults to the last path segment of view_key, stripped of any .html/.htm extension.",
+        "type": "string",
+        "maxLength": 256
+      },
+      "label": {
+        "desc": "Deprecated alias for 'name'. Display label for the view tab. Defaults to the last path segment of view_key, stripped of any .html/.htm extension.",
+        "type": "string",
+        "maxLength": 256
+      },
+      "csp": {
+        "desc": "Content-Security-Policy domain declarations for the view. Domains are validated server-side (https-only, no private/internal hosts) and persisted. Only resource_domains is honored at render time today; connect_domains is accepted and stored for forward-compatibility but NOT honored yet.",
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "connect_domains": {
+            "desc": "Origins the view may fetch()/XHR/WebSocket to. Accepted and stored, but not honored at render time yet.",
+            "type": "array",
+            "maxItems": 20,
+            "items": {
+              "type": "string",
+              "maxLength": 2048
+            }
+          },
+          "resource_domains": {
+            "desc": "Origins the view may load scripts/styles/fonts/images/media from, merged into the curated CDN allowlist at render time.",
+            "type": "array",
+            "maxItems": 20,
+            "items": {
+              "type": "string",
+              "maxLength": 2048
+            }
+          }
+        }
+      }
+    }
+  },
+  "output": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "channel_id",
+      "view_id",
+      "file_id",
+      "content_version"
+    ],
+    "properties": {
+      "channel_id": {
+        "type": "string",
+        "desc": "The encoded ID of the code channel the view belongs to."
+      },
+      "view_id": {
+        "type": "string",
+        "desc": "The encoded channel tab ID of the view."
+      },
+      "file_id": {
+        "type": "string",
+        "desc": "The encoded ID of the backing file for the view. For html and block_kit views this is the agent-owned content file; for diff views it is the diff snippet file; for canvas views it is the canvas's file ID (same value as canvas_id). Empty for pull_request views, which have no backing file."
+      },
+      "content_version": {
+        "type": "integer",
+        "desc": "Server-assigned content version, monotonically increasing per view."
+      },
+      "type": {
+        "$ref": "../../schemas/code-channels/view_type.json#",
+        "desc": "The type of the view that was created or updated."
+      },
+      "canvas_id": {
+        "type": "string",
+        "desc": "For canvas views, the encoded ID of the attached canvas. Absent for other view types."
+      }
+    }
+  },
+  "errors": {
+    "channel_not_found": {
+      "desc": "The specified channel does not correspond to a valid channel."
+    },
+    "not_agent_channel": {
+      "desc": "The specified channel is not a code channel."
+    },
+    "not_authorized": {
+      "desc": "The caller is not an authorized agent bot or member for this channel."
+    },
+    "content_too_large": {
+      "desc": "The view content exceeds the maximum allowed size (1 MB)."
+    },
+    "too_many_views": {
+      "desc": "The channel already has the maximum number of views (5), or already has a diff view (at most 1 is allowed)."
+    },
+    "invalid_csp_domain": {
+      "desc": "One or more declared CSP domains failed validation (must be https:// origins, no private/reserved/internal hosts)."
+    },
+    "invalid_view_type": {
+      "desc": "The supplied type is not a recognized view type."
+    },
+    "missing_required_arg": {
+      "desc": "A required argument for the supplied view type is missing (content for html/diff, blocks for block_kit, canvas_id for canvas, pr_url for pull_request)."
+    },
+    "invalid_pr_url": {
+      "desc": "The supplied pr_url is not a valid https pull request URL."
+    },
+    "invalid_blocks": {
+      "desc": "The supplied blocks failed Block Kit validation."
+    },
+    "canvas_not_found": {
+      "desc": "The specified canvas_id does not correspond to a canvas you can access."
+    },
+    "not_view_owner": {
+      "desc": "The view already exists and was created by a different agent bot; only its owner may update it."
+    },
+    "view_creation_failed": {
+      "desc": "The view could not be created as a channel tab."
+    }
+  },
+  "examples": {
+    "success": {
+      "url": "/api/agents.conversations.setView?token=YOUR_TOKEN",
+      "description": "Typical success response",
+      "example": {
+        "ok": true,
+        "channel_id": "C9876543210",
+        "view_id": "Ct1234567890",
+        "file_id": "F1234567890",
+        "canvas_id": "F1234567890",
+        "content_version": 1,
+        "type": "canvas"
+      }
+    },
+    "error": {
+      "url": "/api/agents.conversations.setView?token=YOUR_TOKEN",
+      "description": "Typical error response",
+      "example": {
+        "ok": false,
+        "error": "too_many_views"
+      }
+    }
+  }
+}

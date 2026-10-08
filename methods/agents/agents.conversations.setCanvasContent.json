@@ -1,0 +1,67 @@
+{
+  "group": "agents",
+  "name": "agents.conversations.setCanvasContent",
+  "deprecated": false,
+  "desc": "Replace the full markdown content of a plan canvas attached to a code channel.",
+  "args": {
+    "channel": {
+      "required": true,
+      "desc": "ID of the agent session channel the canvas is attached to.",
+      "type": "channel"
+    },
+    "canvas_id": {
+      "required": true,
+      "desc": "Encoded ID of the canvas whose content to replace."
+    },
+    "content": {
+      "required": true,
+      "desc": "The full new canvas content as markdown. The server diffs this against the current content and applies only the changed sections.",
+      "type": "string"
+    }
+  },
+  "response": {
+    "examples": [
+      "{\n    \"ok\": true,\n    \"canvas_id\": \"F1234567890\",\n    \"sections_changed_count\": 2\n}",
+      "{\n    \"ok\": false,\n    \"error\": \"canvas_not_found\"\n}"
+    ]
+  },
+  "errors": {
+    "access_denied": "Access to a resource specified in the request is denied.",
+    "accesslimited": "Access to this method is limited on the current network.",
+    "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
+    "canvas_content_fetch_failed": "The canvas's current content could not be read to compute the diff.",
+    "canvas_content_update_failed": "The canvas content could not be updated.",
+    "canvas_not_found": "The specified canvas_id does not correspond to a canvas you can access.",
+    "channel_not_found": "The specified channel does not correspond to a valid channel.",
+    "content_too_large": "The provided content exceeds the maximum canvas size.",
+    "deprecated_endpoint": "The endpoint has been deprecated.",
+    "ekm_access_denied": "Administrators have suspended the ability to post a message.",
+    "enterprise_is_restricted": "The method cannot be called from an Enterprise.",
+    "fatal_error": "The server could not complete your operation(s) without encountering a catastrophic error. It's possible some aspect of the operation succeeded before the error was raised.",
+    "feature_not_enabled": "The set-canvas-content feature is not enabled for this user.",
+    "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
+    "invalid_array_arg": "The method was passed an array as an argument. Please only input valid strings.",
+    "invalid_charset": "The method was called via a POST request, but the charset specified in the Content-Type header was invalid. Valid charset names are: utf-8 iso-8859-1.",
+    "invalid_form_data": "The method was called via a POST request with Content-Type application/x-www-form-urlencoded or multipart/form-data, but the form data was either missing or syntactically invalid.",
+    "invalid_post_type": "The method was called via a POST request, but the specified Content-Type was invalid. Valid types are: application/json application/x-www-form-urlencoded multipart/form-data text/plain.",
+    "is_bot": "This method cannot be called by a legacy bot.",
+    "method_deprecated": "The method has been deprecated.",
+    "missing_post_type": "The method was called via a POST request and included a data payload, but the request did not include a Content-Type header.",
+    "missing_scope": "The token used is not granted the specific scope permissions required to complete this request.",
+    "no_permission": "The workspace token used in this request does not have the permissions necessary to complete the request. Make sure your app is a member of the conversation it's attempting to post a message to.",
+    "not_agent_channel": "The specified channel is not an agent session channel.",
+    "not_allowed_token_type": "The token type used in this request is not allowed.",
+    "not_authed": "No authentication token provided.",
+    "not_authorized": "The caller is not an authorized agent bot for this channel.",
+    "org_login_required": "The workspace is undergoing an enterprise migration and will not be available until migration is complete.",
+    "ratelimited": "The request has been ratelimited. Refer to the Retry-After header for when to retry the request.",
+    "request_timeout": "The method was called via a POST request, but the POST data was either missing or truncated.",
+    "service_unavailable": "The service is temporarily unavailable.",
+    "team_added_to_org": "The workspace associated with your request is currently undergoing migration to an Enterprise Organization. Web API and other platform operations will be intermittently unavailable until the transition is complete.",
+    "token_expired": "Authentication token has expired.",
+    "token_revoked": "Authentication token is for a deleted user or workspace or the app has been removed when using a user token.",
+    "too_many_sections": "The provided content or the existing canvas has too many sections to diff. Reduce the number of distinct blocks (paragraphs, headings, code fences) in the document.",
+    "two_factor_setup_required": "Two factor setup is required.",
+    "unknown_method": "This method is currently not available."
+  }
+}

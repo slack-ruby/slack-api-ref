@@ -1,0 +1,111 @@
+{
+  "desc": "Replace the full markdown content of a plan canvas attached to a code channel.",
+  "scope": {
+    "bot": [
+      "code_channels:manage"
+    ]
+  },
+  "json_input_supported": true,
+  "rate_limits": {
+    "apps_tier": "t3"
+  },
+  "args": {
+    "type": "object",
+    "required": [
+      "token",
+      "channel",
+      "canvas_id",
+      "content"
+    ],
+    "properties": {
+      "token": {
+        "desc": "Authentication token bearing the `code_channels:manage` scope. Must be a granular bot token.",
+        "type": "string",
+        "subtype": "auth",
+        "example": "xxxx-xxxxxxxxx-xxxx"
+      },
+      "channel": {
+        "desc": "ID of the agent session channel the canvas is attached to.",
+        "type": "string",
+        "subtype": "channel"
+      },
+      "canvas_id": {
+        "schema": "file_id",
+        "subtype": "canvas",
+        "desc": "Encoded ID of the canvas whose content to replace."
+      },
+      "content": {
+        "desc": "The full new canvas content as markdown. The server diffs this against the current content and applies only the changed sections.",
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 1048576
+      }
+    }
+  },
+  "output": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "canvas_id",
+      "sections_changed_count"
+    ],
+    "properties": {
+      "canvas_id": {
+        "type": "string",
+        "desc": "The encoded ID of the updated canvas."
+      },
+      "sections_changed_count": {
+        "type": "integer",
+        "desc": "Number of section-level edit operations applied (replaced + inserted + deleted). Zero when the new content was identical to the current content."
+      }
+    }
+  },
+  "errors": {
+    "channel_not_found": {
+      "desc": "The specified channel does not correspond to a valid channel."
+    },
+    "not_agent_channel": {
+      "desc": "The specified channel is not an agent session channel."
+    },
+    "feature_not_enabled": {
+      "desc": "The set-canvas-content feature is not enabled for this user."
+    },
+    "not_authorized": {
+      "desc": "The caller is not an authorized agent bot for this channel."
+    },
+    "canvas_not_found": {
+      "desc": "The specified canvas_id does not correspond to a canvas you can access."
+    },
+    "content_too_large": {
+      "desc": "The provided content exceeds the maximum canvas size."
+    },
+    "too_many_sections": {
+      "desc": "The provided content or the existing canvas has too many sections to diff. Reduce the number of distinct blocks (paragraphs, headings, code fences) in the document."
+    },
+    "canvas_content_fetch_failed": {
+      "desc": "The canvas's current content could not be read to compute the diff."
+    },
+    "canvas_content_update_failed": {
+      "desc": "The canvas content could not be updated."
+    }
+  },
+  "examples": {
+    "success": {
+      "url": "/api/agents.conversations.setCanvasContent?token=YOUR_TOKEN",
+      "description": "Typical success response",
+      "example": {
+        "ok": true,
+        "canvas_id": "F1234567890",
+        "sections_changed_count": 2
+      }
+    },
+    "error": {
+      "url": "/api/agents.conversations.setCanvasContent?token=YOUR_TOKEN",
+      "description": "Typical error response",
+      "example": {
+        "ok": false,
+        "error": "canvas_not_found"
+      }
+    }
+  }
+}
