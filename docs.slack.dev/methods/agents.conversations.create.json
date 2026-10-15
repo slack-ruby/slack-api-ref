@@ -42,7 +42,7 @@
         "maxLength": 200
       },
       "is_private": {
-        "desc": "Create a private channel instead of a public one.",
+        "desc": "Whether the code channel is private. When omitted, the channel matches the privacy of `origin_channel_id`, or is public if no origin is given. An explicit value is always honored, even if it differs from the origin channel's privacy: passing `false` creates a public channel from a private origin.",
         "type": "boolean",
         "example": "true"
       },
