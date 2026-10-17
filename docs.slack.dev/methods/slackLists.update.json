@@ -76,6 +76,9 @@
     },
     "missing_arguments": {
       "desc": "No arguments were provided to update the List."
+    },
+    "permission_denied": {
+      "desc": "The user does not have permission to perform this action."
     }
   },
   "examples": {

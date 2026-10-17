@@ -11,7 +11,7 @@
     },
     "chunks": {
       "required": false,
-      "desc": "Array of streaming chunks.",
+      "desc": "Array of streaming chunks that can contain either markdown text or task updates.",
       "type": "array"
     },
     "ts": {

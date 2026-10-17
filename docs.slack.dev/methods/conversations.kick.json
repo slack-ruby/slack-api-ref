@@ -39,7 +39,14 @@
       }
     }
   },
-  "output": null,
+  "output": {
+    "type": "object",
+    "properties": {
+      "errors": {
+        "type": "object"
+      }
+    }
+  },
   "errors": {
     "cant_kick_from_general": {
       "desc": "User cannot be removed from #general."

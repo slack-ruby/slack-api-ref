@@ -37,34 +37,31 @@
         "type": "boolean"
       },
       "team": {
-        "type": "array",
-        "items": {
-          "type": "object",
-          "properties": {
-            "id": {
-              "type": "string"
-            },
-            "name": {
-              "type": "string"
-            },
-            "domain": {
-              "type": "string"
-            },
-            "email_domain": {
-              "type": "string"
-            },
-            "icon": {
-              "schema": "common_objects_schema"
-            },
-            "enterprise_id": {
-              "type": "string"
-            },
-            "enterprise_name": {
-              "type": "string"
-            },
-            "default_channels": {
-              "type": "array"
-            }
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "domain": {
+            "type": "string"
+          },
+          "email_domain": {
+            "type": "string"
+          },
+          "icon": {
+            "schema": "common_objects_schema"
+          },
+          "enterprise_id": {
+            "type": "string"
+          },
+          "enterprise_name": {
+            "type": "string"
+          },
+          "default_channels": {
+            "type": "array"
           }
         }
       }

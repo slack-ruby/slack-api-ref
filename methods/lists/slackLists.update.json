@@ -60,6 +60,7 @@
     "not_authed": "No authentication token provided.",
     "org_login_required": "The workspace is undergoing an enterprise migration and will not be available until migration is complete.",
     "over_title_length_maximum": "Title can not exceed defined length.",
+    "permission_denied": "The user does not have permission to perform this action.",
     "ratelimited": "The request has been ratelimited. Refer to the Retry-After header for when to retry the request.",
     "request_timeout": "The method was called via a POST request, but the POST data was either missing or truncated.",
     "service_unavailable": "The service is temporarily unavailable.",

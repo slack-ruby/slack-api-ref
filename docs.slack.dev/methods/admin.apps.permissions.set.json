@@ -33,6 +33,7 @@
         "enum": [
           "everyone",
           "named_entities",
+          "named_entities_exclude",
           "no_one"
         ]
       },
@@ -48,7 +49,7 @@
       },
       "usergroup_ids": {
         "type": "array",
-        "desc": "List of encoded usergroup IDs",
+        "desc": "List of encoded usergroup IDs the permission applies to. With named_entities the listed groups may access the app; with named_entities_exclude they may not",
         "example": "S00000001,S00000002",
         "items": {
           "schema": "subteam_id"

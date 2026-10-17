@@ -119,7 +119,10 @@
     }
   },
   "response": {
-    "examples": []
+    "examples": [
+      "{\n    \"ok\": true,\n    \"results\": {\n        \"messages\": [\n            {\n                \"author_user_id\": \"U0123456\",\n                \"team_id\": \"T0123456\",\n                \"channel_id\": \"C0123456\",\n                \"message_ts\": \"123456.7890\",\n                \"content\": \"Hey team, we'll be kicking off our mobile UX revamp for the Gizmo App...\",\n                \"is_author_bot\": false,\n                \"permalink\": \"https://mycompany.slack.com/archives/C012345ABC/p123456789\"\n            }\n        ]\n    },\n    \"response_metadata\": {\n        \"next_cursor\": \"Q1VSUkVOVF9QQUdFOjI=\"\n    }\n}",
+      "{\n    \"ok\": false,\n    \"error\": \"invalid_auth\"\n}"
+    ]
   },
   "errors": {
     "access_denied": "Access to a resource specified in the request is denied.",

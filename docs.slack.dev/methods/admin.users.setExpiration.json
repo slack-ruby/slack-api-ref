@@ -51,6 +51,9 @@
     }
   },
   "errors": {
+    "cannot_modify_external_guest": {
+      "desc": "The user is an external huddle guest, whose expiration can't be changed."
+    },
     "failed_looking_up_user": {
       "desc": "We couldn't find the requested user."
     },

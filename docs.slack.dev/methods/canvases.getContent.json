@@ -59,6 +59,9 @@
     },
     "canvas_not_found": {
       "desc": "The canvas does not exist, or is not visible to the calling user."
+    },
+    "internal_error": {
+      "desc": "The server could not complete your operation(s) without encountering an error, likely due to a transient issue on our end. It's possible some aspect of the operation succeeded before the error was raised."
     }
   },
   "examples": {

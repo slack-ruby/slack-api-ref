@@ -43,6 +43,10 @@
     }
   },
   "output": {
+    "type": "object",
+    "required": [
+      "title"
+    ],
     "properties": {
       "title": {
         "desc": "The updated title of the agent session.",

@@ -238,6 +238,374 @@
         "ok": false,
         "error": "list_not_found"
       }
+    },
+    "create_subtask": {
+      "url": "/api/slackLists.items.create",
+      "description": "Create a subtask by specifying a parent_item_id",
+      "example": {
+        "ok": true,
+        "item": {
+          "id": "Rec11111111",
+          "list_id": "F1234ABCD",
+          "date_created": 1704067200,
+          "created_by": "U1234567",
+          "updated_by": "U1234567",
+          "updated_timestamp": "1704067200",
+          "parent_record_id": "Rec12345678",
+          "fields": [
+            {
+              "key": "priority",
+              "column_id": "Col10000000",
+              "value": "OptHIGH123",
+              "select": [
+                "OptHIGH123"
+              ]
+            },
+            {
+              "key": "completed",
+              "column_id": "Col10000001",
+              "value": false,
+              "checkbox": false
+            },
+            {
+              "key": "created_time",
+              "column_id": "Col10000002",
+              "value": 1704067200,
+              "timestamp": [
+                1704067200
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "comprehensive_example": {
+      "url": "/api/slackLists.items.create",
+      "description": "Create an item with all supported field types",
+      "example": {
+        "ok": true,
+        "item": {
+          "id": "Rec87654321",
+          "list_id": "F1234ABCD",
+          "date_created": 1704067200,
+          "created_by": "U1234567",
+          "updated_by": "U1234567",
+          "updated_timestamp": "1704067200",
+          "fields": [
+            {
+              "key": "assignee1",
+              "column_id": "Col01",
+              "value": "U1234567",
+              "user": [
+                "U1234567"
+              ]
+            },
+            {
+              "key": "due_date",
+              "column_id": "Col02",
+              "value": "2024-12-31",
+              "date": [
+                "2024-12-31"
+              ]
+            },
+            {
+              "key": "phone_number",
+              "column_id": "Col03",
+              "value": "+1-555-123-4567",
+              "phone": [
+                "+1-555-123-4567"
+              ]
+            },
+            {
+              "key": "attachment1",
+              "column_id": "Col04",
+              "value": "F1234567890",
+              "attachment": [
+                "F1234567890"
+              ]
+            },
+            {
+              "key": "description",
+              "column_id": "Col05",
+              "value": "[{\"type\":\"rich_text\",\"block_id\":\"def456\",\"elements\":[{\"type\":\"rich_text_section\",\"elements\":[{\"type\":\"text\",\"text\":\"Project description\"}]}]}]",
+              "text": "Project description",
+              "rich_text": [
+                {
+                  "type": "rich_text",
+                  "block_id": "def456",
+                  "elements": [
+                    {
+                      "type": "rich_text_section",
+                      "elements": [
+                        {
+                          "type": "text",
+                          "text": "Project description"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "key": "rating",
+              "column_id": "Col06",
+              "value": 4,
+              "rating": [
+                4
+              ]
+            },
+            {
+              "key": "assignee2",
+              "column_id": "Col07",
+              "value": "U2345678",
+              "user": [
+                "U2345678"
+              ]
+            },
+            {
+              "key": "attachment2",
+              "column_id": "Col08",
+              "value": "F2345678901",
+              "attachment": [
+                "F2345678901"
+              ]
+            },
+            {
+              "key": "notes",
+              "column_id": "Col09",
+              "value": "[{\"type\":\"rich_text\",\"block_id\":\"ghi789\",\"elements\":[{\"type\":\"rich_text_section\",\"elements\":[{\"type\":\"text\",\"text\":\"Additional notes\"}]}]}]",
+              "text": "Additional notes",
+              "rich_text": [
+                {
+                  "type": "rich_text",
+                  "block_id": "ghi789",
+                  "elements": [
+                    {
+                      "type": "rich_text_section",
+                      "elements": [
+                        {
+                          "type": "text",
+                          "text": "Additional notes"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "key": "reviewer",
+              "column_id": "Col10",
+              "value": "U3456789",
+              "user": [
+                "U3456789"
+              ]
+            },
+            {
+              "key": "reference_link",
+              "column_id": "Col11",
+              "value": "{\"originalUrl\":\"https:\\/\\/example.com\",\"attachment\":{\"https:\\/\\/example.com\":{\"fallback\":\"Example Website\",\"from_url\":\"https:\\/\\/example.com\\/\",\"service_name\":\"example.com\",\"service_icon\":\"https:\\/\\/example.com\\/favicon.ico\",\"title\":\"Example Website\",\"title_link\":\"https:\\/\\/example.com\\/\",\"text\":\"This is an example website for demonstration purposes.\",\"id\":1,\"original_url\":\"https:\\/\\/example.com\"}},\"displayAsUrl\":false,\"displayName\":\"Example Website\"}",
+              "link": [
+                {
+                  "originalUrl": "https://example.com",
+                  "attachment": {
+                    "https://example.com": {
+                      "fallback": "Example Website",
+                      "from_url": "https://example.com/",
+                      "service_name": "example.com",
+                      "service_icon": "https://example.com/favicon.ico",
+                      "title": "Example Website",
+                      "title_link": "https://example.com/",
+                      "text": "This is an example website for demonstration purposes.",
+                      "id": 1,
+                      "original_url": "https://example.com"
+                    }
+                  },
+                  "displayAsUrl": false,
+                  "displayName": "Example Website"
+                }
+              ]
+            },
+            {
+              "key": "contact_email",
+              "column_id": "Col12",
+              "value": "contact@example.com",
+              "email": [
+                "contact@example.com"
+              ]
+            },
+            {
+              "key": "related_message",
+              "column_id": "Col13",
+              "value": "https://yourteam.slack.com/archives/C1234567890/p1234567890123456",
+              "message": [
+                {
+                  "value": "https://yourteam.slack.com/archives/C1234567890/p1234567890123456",
+                  "channel_id": "C1234567890",
+                  "ts": "1234567890.123456"
+                }
+              ]
+            },
+            {
+              "key": "completed",
+              "column_id": "Col14",
+              "value": true,
+              "checkbox": true
+            },
+            {
+              "key": "budget",
+              "column_id": "Col15",
+              "value": 5000,
+              "number": [
+                5000
+              ]
+            },
+            {
+              "key": "priority",
+              "column_id": "Col16",
+              "value": "OptHIGH123",
+              "select": [
+                "OptHIGH123"
+              ]
+            },
+            {
+              "key": "approved",
+              "column_id": "Col17",
+              "value": false,
+              "checkbox": false
+            },
+            {
+              "key": "created_time",
+              "column_id": "Col18",
+              "value": 1704067200,
+              "timestamp": [
+                1704067200
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "duplicate_item": {
+      "url": "/api/slackLists.items.create",
+      "description": "Create an item by duplicating an existing item",
+      "example": {
+        "ok": true,
+        "item": {
+          "id": "Rec99999999",
+          "list_id": "F1234ABCD",
+          "date_created": 1704067200,
+          "created_by": "U1234567",
+          "updated_by": "U1234567",
+          "updated_timestamp": "1704067200",
+          "fields": [
+            {
+              "key": "title",
+              "column_id": "Col10000000",
+              "value": "[{\"type\":\"rich_text\",\"block_id\":\"xyz789\",\"elements\":[{\"type\":\"rich_text_section\",\"elements\":[{\"type\":\"text\",\"text\":\"Copy of original task\"}]}]}]",
+              "text": "Copy of original task",
+              "rich_text": [
+                {
+                  "type": "rich_text",
+                  "block_id": "xyz789",
+                  "elements": [
+                    {
+                      "type": "rich_text_section",
+                      "elements": [
+                        {
+                          "type": "text",
+                          "text": "Copy of original task"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "key": "assignee",
+              "column_id": "Col10000001",
+              "value": "U1234567",
+              "user": [
+                "U1234567"
+              ]
+            },
+            {
+              "key": "priority",
+              "column_id": "Col10000002",
+              "value": "Opt456",
+              "select": [
+                "Opt456"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "error_list_not_found": {
+      "url": "/api/slackLists.items.create",
+      "description": "Error when the specified list doesn't exist",
+      "example": {
+        "ok": false,
+        "error": "list_not_found"
+      }
+    },
+    "error_duplicated_item_not_found": {
+      "url": "/api/slackLists.items.create",
+      "description": "Error when the item to duplicate doesn't exist",
+      "example": {
+        "ok": false,
+        "error": "duplicated_item_not_found"
+      }
+    },
+    "error_over_row_maximum": {
+      "url": "/api/slackLists.items.create",
+      "description": "Error when the list has reached its maximum number of items",
+      "example": {
+        "ok": false,
+        "error": "over_row_maximum"
+      }
+    },
+    "error_invalid_input_type": {
+      "url": "/api/slackLists.items.create",
+      "description": "Error when field value type doesn't match column type",
+      "example": {
+        "ok": false,
+        "error": "invalid_input_type"
+      }
+    },
+    "error_invalid_column_id": {
+      "url": "/api/slackLists.items.create",
+      "description": "Error when column_id doesn't exist in the list",
+      "example": {
+        "ok": false,
+        "error": "invalid_column_id"
+      }
+    },
+    "error_over_cell_fields_limit": {
+      "url": "/api/slackLists.items.create",
+      "description": "Error when too many values provided for a single field",
+      "example": {
+        "ok": false,
+        "error": "over_cell_fields_limit"
+      }
+    },
+    "error_file_not_found": {
+      "url": "/api/slackLists.items.create",
+      "description": "Error when attachment file cannot be found",
+      "example": {
+        "ok": false,
+        "error": "file_not_found"
+      }
+    },
+    "error_invalid_vote_value": {
+      "url": "/api/slackLists.items.create",
+      "description": "Error when invalid value provided for vote column",
+      "example": {
+        "ok": false,
+        "error": "invalid_vote_value"
+      }
     }
   },
   "json_input_supported": true

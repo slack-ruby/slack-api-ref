@@ -1,5 +1,5 @@
 {
-  "desc": "Retrieves activity metrics for messages from a given channel.",
+  "desc": "Retrieves activity metrics for messages from a given channel, created between oldest_ts and latest_ts",
   "http_method": "GET",
   "scope": {
     "user": [

@@ -95,6 +95,7 @@
     "ekm_access_denied": "Administrators have suspended the ability to post a message.",
     "enterprise_is_restricted": "The method cannot be called from an Enterprise.",
     "fatal_error": "The server could not complete your operation(s) without encountering a catastrophic error. It's possible some aspect of the operation succeeded before the error was raised.",
+    "feature_disabled_for_lite_sandbox": "Lite sandboxes cannot use Slack-hosted infrastructure",
     "free_team_not_allowed": "Feature is only available on a paid team.",
     "internal_error": "Something went wrong on our end, please try again.",
     "invalid_app": "App ID provided is not valid for team and user.",

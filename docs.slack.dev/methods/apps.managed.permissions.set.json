@@ -48,10 +48,10 @@
       "desc": "The token was not issued to a manager app that is eligible to configure managed apps."
     },
     "manager_app_not_eligible": {
-      "desc": "The manager app the token was issued to is not eligible to configure app permissions."
+      "desc": "The manager app the token was issued to is not eligible to configure app permissions, for example because it no longer has `app_configurations:write` in its configuration."
     },
     "feature_not_enabled": {
-      "desc": "This method is not enabled for the manager app's organization."
+      "desc": "This method is not enabled for the manager app's organization, or bot tokens are not enabled for it."
     },
     "app_not_found": {
       "desc": "This app does not exist."

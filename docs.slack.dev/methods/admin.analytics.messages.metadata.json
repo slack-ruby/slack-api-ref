@@ -6,7 +6,7 @@
       "admin.analytics:read"
     ]
   },
-  "rate_limits": "1200 requests per minute with a burst allowance of 2000.",
+  "rate_limits": "t5",
   "args": {
     "type": "object",
     "required": [

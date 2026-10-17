@@ -113,6 +113,9 @@
     },
     "too_many_teams_provided": {
       "desc": "Please provide only `team_id` OR `enterprise_id`."
+    },
+    "invalid_approved_acl": {
+      "desc": "The `approved_acl` passed is invalid, or can't be applied to this request. The app was not approved."
     }
   }
 }

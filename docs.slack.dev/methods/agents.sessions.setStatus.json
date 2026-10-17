@@ -71,6 +71,11 @@
     }
   },
   "output": {
+    "type": "object",
+    "required": [
+      "status",
+      "agent_status"
+    ],
     "properties": {
       "status": {
         "desc": "The current lifecycle status of the agent session, derived from the statuses of all agents in the session.",

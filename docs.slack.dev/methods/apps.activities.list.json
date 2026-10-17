@@ -139,6 +139,9 @@
     },
     "restricted_plan_level": {
       "desc": "Feature is not available on this team"
+    },
+    "feature_disabled_for_lite_sandbox": {
+      "desc": "Lite sandboxes cannot use Slack-hosted infrastructure"
     }
   },
   "examples": {

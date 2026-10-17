@@ -24,7 +24,7 @@
     "usergroup_ids": {
       "required": false,
       "example": "S00000001,S00000002",
-      "desc": "List of encoded usergroup IDs.",
+      "desc": "List of encoded usergroup IDs the permission applies to. With named_entities the listed groups may access the app; with named_entities_exclude they may not.",
       "type": "array"
     },
     "channel_restriction_mode": {

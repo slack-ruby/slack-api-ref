@@ -73,6 +73,16 @@
             },
             "domain_restrictions": {
               "schema": "admin_app_domain_list"
+            },
+            "rich_link_preview_type": {
+              "type": "string",
+              "enum": [
+                "all_details",
+                "limited_details",
+                "no_preview",
+                "default_to_global_setting"
+              ],
+              "optional": true
             }
           }
         }

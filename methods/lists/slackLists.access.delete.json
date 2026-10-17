@@ -25,7 +25,9 @@
   "response": {
     "examples": [
       "{\n    \"ok\": true\n}",
-      "{\n    \"ok\": false,\n    \"error\": \"restricted_action\"\n}"
+      "{\n    \"ok\": false,\n    \"error\": \"restricted_action\"\n}",
+      "{\n    \"ok\": true,\n    \"failed_to_update_channel_ids\": [\n        \"C12345678\"\n    ]\n}",
+      "{\n    \"ok\": true,\n    \"failed_to_update_user_ids\": [\n        \"U12345678\"\n    ]\n}"
     ]
   },
   "errors": {

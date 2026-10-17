@@ -104,6 +104,26 @@
         "ok": false,
         "error": "restricted_action"
       }
+    },
+    "failed_to_update_channel_ids": {
+      "url": "/api/slackLists.access.delete?token=YOUR_TOKEN",
+      "description": "Error response when some channels access could not be revoked",
+      "example": {
+        "ok": true,
+        "failed_to_update_channel_ids": [
+          "C12345678"
+        ]
+      }
+    },
+    "failed_to_update_user_ids": {
+      "url": "/api/slackLists.access.delete?token=YOUR_TOKEN",
+      "description": "Error response when some users access could not be revoked",
+      "example": {
+        "ok": true,
+        "failed_to_update_user_ids": [
+          "U12345678"
+        ]
+      }
     }
   },
   "json_input_supported": true

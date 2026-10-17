@@ -55,6 +55,7 @@
     "invalid_post_type": "The method was called via a POST request, but the specified Content-Type was invalid. Valid types are: application/json application/x-www-form-urlencoded multipart/form-data text/plain.",
     "invite_lookup_error": "An error occurred while attempting to look for existing invites.",
     "invite_not_found": "An error occurred while inviting users.",
+    "inviter_email_not_verified": "The inviting user has not verified the email address on their own account. They must verify it before they can send Slack Connect invites, since the invite presents that address as theirs.",
     "is_bot": "This method cannot be called by a legacy bot.",
     "legacy_connection_limit_exceeded": "You cannot share a legacy ESC channel with a third team",
     "member_limit_exceeded": "This channel that has hit the limit of members",

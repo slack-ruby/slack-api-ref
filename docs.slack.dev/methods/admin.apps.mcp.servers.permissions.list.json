@@ -56,9 +56,6 @@
     "not_an_enterprise": {
       "desc": "This feature is only available on Enterprise Grid plans."
     },
-    "feature_not_enabled": {
-      "desc": "The MCP server ACL feature is not enabled for this team."
-    },
     "internal_error": {
       "desc": "An internal error occurred while resolving the app's approved domains or ACLs. Retry the request."
     }

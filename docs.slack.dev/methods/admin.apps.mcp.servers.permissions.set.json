@@ -84,9 +84,6 @@
     "not_an_enterprise": {
       "desc": "This feature is only available on Enterprise Grid plans."
     },
-    "feature_not_enabled": {
-      "desc": "The MCP server ACL feature is not enabled for this team."
-    },
     "invalid_permission_type": {
       "desc": "The permission_type value is not valid."
     },
@@ -95,9 +92,6 @@
     },
     "no_valid_named_entities": {
       "desc": "None of the provided named entities were valid."
-    },
-    "too_many_named_entities": {
-      "desc": "Too many named entities provided."
     },
     "user_not_found": {
       "desc": "One or more user IDs are not valid."
@@ -110,6 +104,9 @@
     },
     "server_acl_entities_not_in_scope": {
       "desc": "One or more entities in the server ACL are not in scope of the app-level ACL."
+    },
+    "entities_not_supported": {
+      "desc": "user_ids or usergroup_ids were provided, but the permission_type does not accept named entities. Only named_entities and named_entities_exclude do."
     }
   },
   "examples": {}

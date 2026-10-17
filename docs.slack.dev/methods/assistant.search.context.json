@@ -370,7 +370,8 @@
                 "date_updated",
                 "name",
                 "permalink",
-                "is_archived"
+                "is_archived",
+                "channel_type"
               ],
               "properties": {
                 "team_id": {
@@ -413,6 +414,16 @@
                 "is_archived": {
                   "type": "boolean",
                   "desc": "Whether the channel is archived."
+                },
+                "channel_type": {
+                  "type": "string",
+                  "desc": "Type of the channel",
+                  "enum": [
+                    "public_channel",
+                    "private_channel",
+                    "mpim",
+                    "im"
+                  ]
                 }
               }
             }
@@ -515,6 +526,39 @@
     },
     "assistant_search_context_disabled": {
       "desc": "We're having issues returning your search results. Please wait and try again."
+    }
+  },
+  "examples": {
+    "success": {
+      "url": "/api/assistant.search.context?token=YOUR_TOKEN",
+      "description": "Typical success response",
+      "example": {
+        "ok": true,
+        "results": {
+          "messages": [
+            {
+              "author_user_id": "U0123456",
+              "team_id": "T0123456",
+              "channel_id": "C0123456",
+              "message_ts": "123456.7890",
+              "content": "Hey team, we'll be kicking off our mobile UX revamp for the Gizmo App...",
+              "is_author_bot": false,
+              "permalink": "https://mycompany.slack.com/archives/C012345ABC/p123456789"
+            }
+          ]
+        },
+        "response_metadata": {
+          "next_cursor": "Q1VSUkVOVF9QQUdFOjI="
+        }
+      }
+    },
+    "error": {
+      "url": "/api/assistant.search.context?token=YOUR_TOKEN",
+      "description": "Typical error response for invalid token",
+      "example": {
+        "ok": false,
+        "error": "invalid_auth"
+      }
     }
   }
 }

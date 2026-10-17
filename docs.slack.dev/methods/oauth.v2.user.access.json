@@ -229,6 +229,9 @@
     },
     "user_not_authenticated": {
       "desc": "The user has never authenticated via single sign-on."
+    },
+    "no_idp_config_for_entity_id": {
+      "desc": "No Enterprise-Managed Authorization (cross-app access) configuration is bound to the identity provider's SAML EntityID carried in the assertion's `sub_id`. An org admin must configure External Identity / cross-app access for that identity provider before requesting a token with the `urn:ietf:params:oauth:grant-type:jwt-bearer` grant."
     }
   },
   "examples": {

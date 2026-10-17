@@ -33,37 +33,40 @@
   },
   "output": {
     "type": "object",
-    "user": {
-      "required": [
-        "id",
-        "email",
-        "is_restricted",
-        "is_ultra_restricted"
-      ],
-      "properties": {
-        "id": {
-          "type": "string",
-          "desc": "Encoded user ID"
-        },
-        "username": {
-          "type": "string",
-          "desc": "Username of user"
-        },
-        "email": {
-          "type": "string",
-          "desc": "Email address of user"
-        },
-        "is_restricted": {
-          "type": "boolean",
-          "desc": "Whether the user is a multi-channel guest."
-        },
-        "is_ultra_restricted": {
-          "type": "boolean",
-          "desc": "Whether the user is a single-channel guest."
-        },
-        "expiration_ts": {
-          "type": "number",
-          "desc": "Expiration timestamp for the guest user."
+    "properties": {
+      "user": {
+        "type": "object",
+        "required": [
+          "id",
+          "email",
+          "is_restricted",
+          "is_ultra_restricted"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "desc": "Encoded user ID"
+          },
+          "username": {
+            "type": "string",
+            "desc": "Username of user"
+          },
+          "email": {
+            "type": "string",
+            "desc": "Email address of user"
+          },
+          "is_restricted": {
+            "type": "boolean",
+            "desc": "Whether the user is a multi-channel guest."
+          },
+          "is_ultra_restricted": {
+            "type": "boolean",
+            "desc": "Whether the user is a single-channel guest."
+          },
+          "expiration_ts": {
+            "type": "number",
+            "desc": "Expiration timestamp for the guest user."
+          }
         }
       }
     }

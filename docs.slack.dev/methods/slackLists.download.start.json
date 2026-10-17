@@ -58,8 +58,8 @@
     ],
     "properties": {
       "job_id": {
-        "type": "integer",
-        "example": "1205208491474",
+        "type": "string",
+        "example": "LeF1234567",
         "desc": "The ID of the recently started job to export the List."
       }
     }

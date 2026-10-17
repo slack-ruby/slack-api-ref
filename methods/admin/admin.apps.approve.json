@@ -63,6 +63,7 @@
     "fatal_error": "The server could not complete your operation(s) without encountering a catastrophic error. It's possible some aspect of the operation succeeded before the error was raised.",
     "feature_not_enabled": "Returned when the Admin APIs feature is not enabled for this team.",
     "invalid_app_id": "The `app_id` passed is invalid.",
+    "invalid_approved_acl": "The `approved_acl` passed is invalid, or can't be applied to this request. The app was not approved.",
     "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
     "invalid_array_arg": "The method was passed an array as an argument. Please only input valid strings.",
     "invalid_charset": "The method was called via a POST request, but the charset specified in the Content-Type header was invalid. Valid charset names are: utf-8 iso-8859-1.",

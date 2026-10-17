@@ -51,6 +51,7 @@
     "type": "object",
     "properties": {
       "url": {
+        "desc": "Signed accept link for the invite. Omitted for invites addressed to `emails` or `user_ids` (the link is delivered to the recipient directly) and for `external_limited` invites.",
         "type": "string",
         "format": "uri"
       },
@@ -58,6 +59,7 @@
         "schema": "invite_id"
       },
       "conf_code": {
+        "desc": "Confirmation code for the invite. Omitted for invites addressed to `emails` or `user_ids` (it is delivered to the recipient directly) and for `external_limited` invites.",
         "type": "string"
       },
       "is_legacy_shared_channel": {
@@ -143,6 +145,9 @@
     },
     "no_external_invite_permission": {
       "desc": "User does not have permission to invite an external user."
+    },
+    "inviter_email_not_verified": {
+      "desc": "The inviting user has not verified the email address on their own account. They must verify it before they can send Slack Connect invites, since the invite presents that address as theirs."
     }
   },
   "examples": {

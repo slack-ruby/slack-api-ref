@@ -114,6 +114,9 @@
     },
     "invalid_starts_with_at": {
       "desc": "Name cannot start with @."
+    },
+    "frontline_member_username_change_not_allowed": {
+      "desc": "Frontline members cannot change their own username. Only an admin can change it."
     }
   },
   "examples": {

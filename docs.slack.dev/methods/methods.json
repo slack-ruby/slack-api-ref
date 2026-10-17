@@ -8,7 +8,7 @@
   },
   {
     "name": "admin.analytics.messages.activity",
-    "description": "Retrieves activity metrics for messages from a given channel.",
+    "description": "Retrieves activity metrics for messages from a given channel, created between oldest_ts and latest_ts",
     "family": [
       "admin"
     ]

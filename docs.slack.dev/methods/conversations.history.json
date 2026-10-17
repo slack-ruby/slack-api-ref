@@ -177,11 +177,6 @@
         "type": "array",
         "items": {
           "schema": "ts"
-        },
-        "date_joined": {
-          "type": "integer",
-          "desc": "Unix timestamp of when the user joined the channel",
-          "example": "1562002086"
         }
       },
       "date_joined": {
