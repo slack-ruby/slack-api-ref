@@ -47,6 +47,9 @@
     },
     "file_not_found": {
       "desc": "The file does not exist, or is not visible to the calling user."
+    },
+    "use_skills_api": {
+      "desc": "This file is a Slackbot skill. Use slackbot.skills.delete with skill_id and a user OAuth token carrying skills:write."
     }
   },
   "examples": {

@@ -53,6 +53,7 @@
     "invalid_role_for_user": "The requested status is incompatible with the user's role on another workspace.",
     "invited_user_not_created": "The invited user could not be created.",
     "invited_user_not_reactivated": "The invited user could not be reactivated.",
+    "inviter_email_not_verified": "The user is still invited, and the user whose token is calling this method has not verified the email address on their own account. They must verify it before adding an invited user to a workspace.",
     "invitor_cannot_see_channel": "The invitor is not part of one or many channels that the user was requested to be added to",
     "is_bot": "This method cannot be called by a legacy bot.",
     "method_deprecated": "The method has been deprecated.",

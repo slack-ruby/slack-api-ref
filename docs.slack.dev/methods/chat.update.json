@@ -289,7 +289,7 @@
       "desc": "No message text provided"
     },
     "posting_to_channel_denied": {
-      "desc": "The user does not have permission to share files in this channel."
+      "desc": "Files and images, including attachments with `image_url` or `thumb_url` and `image` blocks (such as GIFs), can't be added to messages in this channel. Remove them and try again."
     },
     "slack_connect_blocked_file_type": {
       "desc": "Files with certain extensions are blocked from being uploaded in all Slack Connect messages."

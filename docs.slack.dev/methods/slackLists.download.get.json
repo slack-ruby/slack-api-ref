@@ -50,6 +50,11 @@
         "desc": "Must match the `include_attachments` passed to `slackLists.download.start`. The returned `download_url` carries this through so the served export matches what was generated. Only applies when `format` is `json`.",
         "type": "boolean",
         "default": false
+      },
+      "include_archived": {
+        "desc": "Must match the `include_archived` passed to `slackLists.download.start`. The returned `download_url` carries this through so the served export includes archived items when they were requested.",
+        "type": "boolean",
+        "default": false
       }
     }
   },

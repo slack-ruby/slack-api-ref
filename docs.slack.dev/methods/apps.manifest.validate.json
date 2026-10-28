@@ -18,7 +18,7 @@
       "token": {
         "type": "string",
         "subtype": "auth",
-        "desc": "An [app configuration access token](/authentication/tokens#config).",
+        "desc": "An [app configuration access token](/authentication/tokens#config). When called with a manager app token and an app_id, this method can only validate against apps that were created by that manager app.",
         "example": "xxxx-xxxxxxxxx-xxxx"
       },
       "manifest": {

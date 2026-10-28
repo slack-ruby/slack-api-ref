@@ -52,7 +52,7 @@
             "desc": "Dict of permissions keyed by permission type ID.",
             "type": "object",
             "patternProperties": {
-              "trigger_type|private_channel_access|private_channel_message": {
+              "trigger_type|private_channel_access|private_channel_message|agent_task": {
                 "type": "object",
                 "required": [
                   "visibility"
@@ -61,10 +61,12 @@
                 "properties": {
                   "visibility": {
                     "type": "string",
+                    "desc": "unset is only accepted for agent_task, and makes Tasks follow the trigger_type setting",
                     "enum": [
                       "everyone",
                       "named_entities",
-                      "no_one"
+                      "no_one",
+                      "unset"
                     ]
                   },
                   "user_ids": {
@@ -112,6 +114,9 @@
     },
     "visibility_is_not_named_entities": {
       "desc": "The visibility should be named entities when the user_ids, team_ids, or org_ids args are set"
+    },
+    "user_not_found": {
+      "desc": "A value passed in `user_ids` was invalid."
     }
   }
 }

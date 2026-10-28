@@ -115,6 +115,12 @@
     },
     "over_column_maximum": {
       "desc": "Cannot create List with more than allowed column count."
+    },
+    "list_not_found": {
+      "desc": "The List was not found."
+    },
+    "invalid_view_metadata": {
+      "desc": "A view on the List to copy has settings that cannot be read, so the List cannot be copied."
     }
   },
   "examples": {

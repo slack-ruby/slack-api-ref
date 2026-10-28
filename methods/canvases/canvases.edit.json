@@ -57,6 +57,7 @@
     "token_expired": "Authentication token has expired.",
     "token_revoked": "Authentication token is for a deleted user or workspace or the app has been removed when using a user token.",
     "two_factor_setup_required": "Two factor setup is required.",
-    "unknown_method": "This method is currently not available."
+    "unknown_method": "This method is currently not available.",
+    "use_skills_api": "When the Skills API is enabled for the caller, skill canvases must be updated with slackbot.skills.update using a user OAuth token with skills:write. Pass the canvas ID as skill_id. The instructions input replaces the whole document; section edits are not supported. The response contains a skill object. No changes were made."
   }
 }

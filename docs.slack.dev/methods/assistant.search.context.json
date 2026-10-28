@@ -491,8 +491,34 @@
             "type": "string",
             "desc": "The cursor you can use to fetch the next set of results. When there are no more results, `next_cursor` will be an empty string.",
             "example": "asf91j9jfd112"
+          },
+          "warnings": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "desc": "Machine-readable warning codes for this response, matching the top-level `warning`.",
+            "example": [
+              "content_type_search_failed"
+            ]
           }
         }
+      },
+      "failed_content_types": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "enum": [
+            "messages",
+            "files",
+            "channels",
+            "users"
+          ]
+        },
+        "desc": "Requested content types whose search failed. Their lists in `results` are empty because they could not be searched, not because nothing matched. Present only when at least one failed; see the `content_type_search_failed` warning.",
+        "example": [
+          "files"
+        ]
       }
     }
   },
@@ -559,6 +585,11 @@
         "ok": false,
         "error": "invalid_auth"
       }
+    }
+  },
+  "warnings": {
+    "content_type_search_failed": {
+      "desc": "One or more requested content types could not be searched, so their results are missing rather than empty. `failed_content_types` names them."
     }
   }
 }

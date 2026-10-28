@@ -64,7 +64,7 @@
     "rate_limited": "Too many requests in a short amount of time.",
     "ratelimited": "The request has been ratelimited. Refer to the Retry-After header for when to retry the request.",
     "request_timeout": "The method was called via a POST request, but the POST data was either missing or truncated.",
-    "restricted_action": "The token does not have permission to access this resource.",
+    "restricted_action": "The token does not have permission to access this resource, or the channel is not public and the organization has disabled private channel analytics.",
     "restricted_plan_level": "The enterprise plan level does not have access to this feature.",
     "service_unavailable": "The service is temporarily unavailable.",
     "team_added_to_org": "The workspace associated with your request is currently undergoing migration to an Enterprise Organization. Web API and other platform operations will be intermittently unavailable until the transition is complete.",

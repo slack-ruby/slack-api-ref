@@ -126,6 +126,9 @@
     },
     "user_disabled": {
       "desc": "The user is disabled."
+    },
+    "inviter_email_not_verified": {
+      "desc": "The user whose token is calling this method has not verified the email address on their own account. They must verify it before they can send invites, since the invite email presents that address as theirs."
     }
   },
   "examples": {

@@ -67,7 +67,8 @@
                 "insert_failed",
                 "channel_limit_exceeded",
                 "multi_workspace_idp_group",
-                "usergroup_limit_exceeded"
+                "usergroup_limit_exceeded",
+                "non_frontline_user"
               ]
             }
           }
@@ -102,6 +103,9 @@
     },
     "cannot_modify_role_admin": {
       "desc": "The user does not have permission to modify the roles admin role."
+    },
+    "subteam_limit_exceeded": {
+      "desc": "A csv upload can only contain at most 15k users."
     }
   },
   "examples": {

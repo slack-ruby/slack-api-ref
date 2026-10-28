@@ -98,6 +98,7 @@
     "ratelimited": "The request has been ratelimited. Refer to the Retry-After header for when to retry the request.",
     "request_timeout": "The method was called via a POST request, but the POST data was either missing or truncated.",
     "service_unavailable": "The service is temporarily unavailable.",
+    "target_team_not_on_org": "The specified target_team is not part of the organization.",
     "team_added_to_org": "The workspace associated with your request is currently undergoing migration to an Enterprise Organization. Web API and other platform operations will be intermittently unavailable until the transition is complete.",
     "team_not_found": "One of the workspaces provided in the list wasn't found.",
     "token_expired": "Authentication token has expired.",

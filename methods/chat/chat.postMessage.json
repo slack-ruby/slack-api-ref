@@ -176,6 +176,7 @@
     "not_authed": "No authentication token provided.",
     "not_in_channel": "Cannot post user messages to a channel they are not in.",
     "org_login_required": "The workspace is undergoing an enterprise migration and will not be available until migration is complete.",
+    "posting_to_channel_denied": "Files and images, including attachments with `image_url` or `thumb_url` and `image` blocks (such as GIFs), can't be posted to this channel. Remove them and try again.",
     "rate_limited": "Application has posted too many messages, [read the Rate Limit documentation](/apis/web-api/rate-limits) for more information.",
     "ratelimited": "The request has been ratelimited. Refer to the Retry-After header for when to retry the request.",
     "request_timeout": "The method was called via a POST request, but the POST data was either missing or truncated.",

@@ -123,9 +123,6 @@
     "invalid_parent_type": {
       "desc": "Parent type is not valid."
     },
-    "not_implemented": {
-      "desc": "bookmarking not available for the user."
-    },
     "parent_bookmark_disabled": {
       "desc": "Parent bookmark feature flag is off."
     },

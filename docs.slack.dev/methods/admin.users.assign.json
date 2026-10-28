@@ -87,6 +87,9 @@
     },
     "user_cannot_be_added_to_workspace": {
       "desc": "The user can't be added to this workspace because of their account type or the workspace's configuration."
+    },
+    "inviter_email_not_verified": {
+      "desc": "The user is still invited, and the user whose token is calling this method has not verified the email address on their own account. They must verify it before adding an invited user to a workspace."
     }
   },
   "examples": {

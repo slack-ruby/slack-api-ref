@@ -58,9 +58,6 @@
     "not_found": {
       "desc": "Bookmark cannot be found."
     },
-    "not_implemented": {
-      "desc": "bookmarking not available for the user."
-    },
     "permission_denied": {
       "desc": "No permission to perform this operation."
     },

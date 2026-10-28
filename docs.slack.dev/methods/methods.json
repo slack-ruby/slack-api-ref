@@ -679,8 +679,29 @@
     ]
   },
   {
+    "name": "admin.users.access.pause",
+    "description": "Pause access across the organization for up to 1,000 frontline members. Success means the request was queued, not that all updates have completed.",
+    "family": [
+      "admin"
+    ]
+  },
+  {
+    "name": "admin.users.access.resume",
+    "description": "Resume access across the organization for up to 1,000 frontline members. Success means the request was queued, not that all updates have completed.",
+    "family": [
+      "admin"
+    ]
+  },
+  {
     "name": "admin.users.assign",
     "description": "Add an Enterprise user to a workspace.",
+    "family": [
+      "admin"
+    ]
+  },
+  {
+    "name": "admin.users.deactivate",
+    "description": "Deactivate a user from an enterprise organization and all its workspaces.",
     "family": [
       "admin"
     ]
@@ -1037,7 +1058,7 @@
   },
   {
     "name": "apps.managed.permissions.set",
-    "description": "Set who can interact with a managed app. Lets the builder who created a managed app on a partner platform configure the app's permissions as themselves, using a user token from the manager app. Permissions can only be set before the app is installed: if the app is already installed, this method makes no change and returns the app's current permissions.",
+    "description": "Set who can interact with a managed app. Lets the builder who created a managed app on a partner platform configure the app's permissions, using a user token or bot token from the manager app. Permissions can only be set before the app is installed: if the app is already installed, this method makes no change and returns the app's current permissions.",
     "family": [
       "apps"
     ]

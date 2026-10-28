@@ -68,6 +68,9 @@
     },
     "canvas_too_large": {
       "desc": "The canvas is too large to apply the requested changes. Reduce the size of the canvas or the edit and try again."
+    },
+    "use_skills_api": {
+      "desc": "When the Skills API is enabled for the caller, skill canvases must be updated with slackbot.skills.update using a user OAuth token with skills:write. Pass the canvas ID as skill_id. The instructions input replaces the whole document; section edits are not supported. The response contains a skill object. No changes were made."
     }
   },
   "examples": {

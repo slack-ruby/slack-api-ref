@@ -24,14 +24,14 @@
       },
       "id": {
         "desc": "ID of the usergroup to add users to",
-        "example": "S0604QSJC",
+        "example": "S0123ABC456",
         "type": "string",
         "subtype": "user_group",
         "schema": "subteam_id"
       },
       "users": {
         "desc": "The encoded user IDs to add to the usergroup, provided as a JSON array or a comma-separated string.",
-        "example": "U060R4BJ4,U060RNRCZ",
+        "example": "U1111AAA111,U222BBB222",
         "type": "array",
         "maxItems": 15000,
         "items": {
@@ -107,20 +107,20 @@
   },
   "examples": {
     "success": {
-      "url": "/api/admin.usergroups.addUsers?token=YOUR_TOKEN&id=S0604QSJC&users=U060R4BJ4,U060RNRCZ",
+      "url": "/api/admin.usergroups.addUsers?token=YOUR_TOKEN&id=S0123ABC456&users=U1111AAA111,U222BBB222",
       "description": "Success response. Any users that could not be added are listed in invalid_users, which is omitted when every user is added successfully.",
       "example": {
         "ok": true,
         "invalid_users": [
           {
-            "user_id": "U060RNRCZ",
+            "user_id": "U222BBB222",
             "reason": "guest_user"
           }
         ]
       }
     },
     "error": {
-      "url": "/api/admin.usergroups.addUsers?token=YOUR_TOKEN&id=S0604QSJC&users=U060R4BJ4,U060RNRCZ",
+      "url": "/api/admin.usergroups.addUsers?token=YOUR_TOKEN&id=S0123ABC456&users=U1111AAA111,U222BBB222",
       "description": "Typical error response if the calling user cannot modify the specified usergroup",
       "example": {
         "ok": false,

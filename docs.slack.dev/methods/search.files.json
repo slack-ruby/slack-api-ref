@@ -109,6 +109,11 @@
                 "type": "integer",
                 "example": 1,
                 "desc": "First result id"
+              },
+              "next_cursor": {
+                "type": "string",
+                "optional": true,
+                "desc": "Cursor for the next page of results, when cursor pagination is used"
               }
             }
           },
@@ -145,6 +150,11 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "next_cursor": {
+                "type": "string",
+                "optional": true,
+                "desc": "Cursor for the next page of results, when cursor pagination is used"
               }
             }
           },

@@ -62,6 +62,9 @@
     },
     "user_not_found": {
       "desc": "The requested user was not found."
+    },
+    "inviter_email_not_verified": {
+      "desc": "The target is an invited user, and the user whose token is calling this method has not verified the email address on their own account. They must verify it before changing an invited user's account type."
     }
   },
   "examples": {

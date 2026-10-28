@@ -80,7 +80,7 @@
       "desc": "Required arguments either were not provided or contain invalid values."
     },
     "restricted_action": {
-      "desc": "The token does not have permission to access this resource."
+      "desc": "The token does not have permission to access this resource, or the channel is not public and the organization has disabled private channel analytics."
     },
     "not_an_enterprise": {
       "desc": "The user token does not belong to an enterprise."

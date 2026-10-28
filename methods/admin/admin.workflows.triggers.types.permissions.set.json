@@ -64,6 +64,7 @@
     "trigger_type_id_not_found": "The referenced trigger type ID does not exist.",
     "two_factor_setup_required": "Two factor setup is required.",
     "unknown_method": "This method is currently not available.",
+    "user_not_found": "A value passed in `user_ids` was invalid.",
     "visibility_is_not_named_entities": "The visibility should be named entities when the user_ids, team_ids, or org_ids args are set"
   }
 }

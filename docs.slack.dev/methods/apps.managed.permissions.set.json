@@ -1,5 +1,5 @@
 {
-  "desc": "Set who can interact with a managed app. Lets the builder who created a managed app on a partner platform configure the app's permissions as themselves, using a user token from the manager app. Permissions can only be set before the app is installed: if the app is already installed, this method makes no change and returns the app's current permissions.",
+  "desc": "Set who can interact with a managed app. Lets the builder who created a managed app on a partner platform configure the app's permissions, using a user token or bot token from the manager app. Permissions can only be set before the app is installed: if the app is already installed, this method makes no change and returns the app's current permissions.",
   "http_method": "POST",
   "scope": {
     "configuration": [
@@ -18,7 +18,7 @@
     "properties": {
       "token": {
         "type": "string",
-        "desc": "An [app configuration access token](/authentication/tokens#config).",
+        "desc": "A user token or bot token issued to the manager app. Either way, this method can only set permissions for apps that were created by that manager app.",
         "subtype": "auth",
         "example": "xxxx-xxxxxxxxx-xxxx"
       },

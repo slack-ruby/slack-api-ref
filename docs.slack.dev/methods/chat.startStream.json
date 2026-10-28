@@ -223,6 +223,9 @@
     },
     "cannot_provide_both_markdown_text_and_chunks": {
       "desc": "Cannot provide both `markdown_text` and `chunks` in the same request."
+    },
+    "cannot_reply_to_message": {
+      "desc": "This message type cannot have thread replies."
     }
   },
   "examples": {

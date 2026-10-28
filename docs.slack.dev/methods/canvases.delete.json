@@ -42,6 +42,9 @@
     },
     "restricted_action": {
       "desc": "User does not have permission to perform this action."
+    },
+    "use_skills_api": {
+      "desc": "When the Skills API is enabled for the caller, skill canvases must be deleted with slackbot.skills.delete using a user OAuth token with skills:write. Pass the canvas ID as skill_id. The success response remains ok: true. The skill and its canvas have not been deleted."
     }
   },
   "examples": {

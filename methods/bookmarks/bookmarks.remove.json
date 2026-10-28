@@ -49,7 +49,6 @@
     "not_allowed_token_type": "The token type used in this request is not allowed.",
     "not_authed": "No authentication token provided.",
     "not_found": "Bookmark cannot be found.",
-    "not_implemented": "bookmarking not available for the user.",
     "org_login_required": "The workspace is undergoing an enterprise migration and will not be available until migration is complete.",
     "permission_denied": "No permission to perform this operation.",
     "ratelimited": "The request has been ratelimited. Refer to the Retry-After header for when to retry the request.",

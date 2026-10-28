@@ -1,0 +1,59 @@
+{
+  "desc": "Deactivate a user from an enterprise organization and all its workspaces.",
+  "http_method": "POST",
+  "scope": {
+    "user": [
+      "admin.users:write"
+    ]
+  },
+  "json_input_supported": true,
+  "rate_limits": "t2",
+  "args": {
+    "type": "object",
+    "required": [
+      "token",
+      "user_id"
+    ],
+    "properties": {
+      "token": {
+        "type": "string",
+        "subtype": "auth",
+        "desc": "Authentication token bearing required scopes. Tokens should be passed as an HTTP Authorization header or alternatively, as a POST parameter.",
+        "example": "xxxx-xxxxxxxxx-xxxx"
+      },
+      "user_id": {
+        "desc": "The ID of the user to deactivate.",
+        "type": "string",
+        "example": "W12345678",
+        "schema": "user_id"
+      }
+    }
+  },
+  "output": null,
+  "errors": {
+    "restricted_action": {
+      "desc": "The caller does not have permission to perform this action. Must be an org admin or owner."
+    },
+    "user_not_found": {
+      "desc": "The user was not found or does not belong to this enterprise."
+    },
+    "invalid_user": {
+      "desc": "The user was not found or is not a valid target for deactivation."
+    },
+    "deactivation_failed": {
+      "desc": "The deactivation operation failed."
+    },
+    "user_is_team_primary_owner": {
+      "desc": "The user is a primary owner of one or more workspaces and cannot be deactivated."
+    }
+  },
+  "examples": {
+    "success": {
+      "url": "/api/admin.users.deactivate?token=YOUR_TOKEN&user_id=W12345678",
+      "description": "Typical success response",
+      "example": {
+        "ok": true
+      }
+    }
+  }
+}

@@ -332,6 +332,9 @@
     },
     "attachment_payload_limit_exceeded": {
       "desc": "Attachment payload size is too long."
+    },
+    "posting_to_channel_denied": {
+      "desc": "Files and images, including attachments with `image_url` or `thumb_url` and `image` blocks (such as GIFs), can't be posted to this channel. Remove them and try again."
     }
   },
   "examples": {

@@ -207,6 +207,9 @@
     },
     "invalid_token": {
       "desc": "The passed token is invalid or not supported by this method."
+    },
+    "posting_to_channel_denied": {
+      "desc": "Files and images, including attachments with `image_url` or `thumb_url` and `image` blocks (such as GIFs), can't be posted to this channel. Remove them and try again."
     }
   },
   "warnings": {

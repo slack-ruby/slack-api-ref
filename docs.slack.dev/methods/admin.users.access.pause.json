@@ -1,0 +1,112 @@
+{
+  "desc": "Pause access across the organization for up to 1,000 frontline members. Success means the request was queued, not that all updates have completed.",
+  "http_method": "POST",
+  "scope": {
+    "user": [
+      "admin.users:write"
+    ]
+  },
+  "json_input_supported": true,
+  "rate_limits": "t2",
+  "args": {
+    "type": "object",
+    "required": [
+      "token",
+      "user_ids"
+    ],
+    "properties": {
+      "token": {
+        "type": "string",
+        "subtype": "auth",
+        "desc": "Authentication token bearing required scopes. Tokens should be passed as an HTTP Authorization header or alternatively, as a POST parameter.",
+        "example": "xxxx-xxxxxxxxx-xxxx"
+      },
+      "user_ids": {
+        "desc": "IDs of frontline members in the authenticated organization. Valid users are queued; rejected IDs are returned in invalid_users.",
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 1000,
+        "items": {
+          "schema": "user_id"
+        }
+      },
+      "reason": {
+        "type": "string",
+        "maxLength": 300,
+        "desc": "Optional explanation for the access change."
+      }
+    }
+  },
+  "output": {
+    "type": "object",
+    "properties": {
+      "invalid_users": {
+        "type": "array",
+        "desc": "Rejected users. An empty array on success; populated in failed_for_all_users and failed_for_some_users error responses.",
+        "items": {
+          "type": "object",
+          "required": [
+            "user_id",
+            "reason"
+          ],
+          "properties": {
+            "user_id": {
+              "schema": "user_id"
+            },
+            "reason": {
+              "type": "string",
+              "enum": [
+                "user_not_found",
+                "user_not_frontline_member"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "required": [
+      "invalid_users"
+    ]
+  },
+  "errors": {
+    "restricted_action": {
+      "desc": "Only organization admins and owners can perform this action."
+    },
+    "feature_not_enabled": {
+      "desc": "Frontline access management is not enabled for this organization."
+    },
+    "failed_job_enqueue": {
+      "desc": "The access change could not be queued. Retry the request."
+    },
+    "failed_for_all_users": {
+      "desc": "No valid users were found. Nothing was queued. invalid_users lists the rejected IDs and reasons."
+    },
+    "failed_for_some_users": {
+      "desc": "Valid users were queued, but some users were rejected. invalid_users lists the rejected IDs and reasons. Correct and retry only those IDs."
+    }
+  },
+  "examples": {
+    "success": {
+      "url": "/api/admin.users.access.pause?token=YOUR_TOKEN&user_ids=U111AAA111,U222BBB222",
+      "description": "All users were queued. Updates have not necessarily completed.",
+      "example": {
+        "ok": true,
+        "invalid_users": []
+      }
+    },
+    "error": {
+      "url": "/api/admin.users.access.pause?token=YOUR_TOKEN&user_ids=U111AAA111,U222BBB222",
+      "description": "The valid user was queued, but another user was rejected. Correct and retry only the rejected ID.",
+      "example": {
+        "ok": false,
+        "error": "failed_for_some_users",
+        "invalid_users": [
+          {
+            "user_id": "U222BBB222",
+            "reason": "user_not_frontline_member"
+          }
+        ]
+      }
+    }
+  }
+}
