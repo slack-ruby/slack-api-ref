@@ -1,0 +1,73 @@
+{
+  "desc": "Deletes a Slackbot skill and its canvas, and removes it from every library, skill set, and the org catalog.",
+  "http_method": "POST",
+  "scope": {
+    "user": [
+      "skills:write"
+    ]
+  },
+  "rate_limits": "t2",
+  "json_input_supported": true,
+  "args": {
+    "type": "object",
+    "required": [
+      "token",
+      "skill_id"
+    ],
+    "properties": {
+      "token": {
+        "desc": "Authentication token bearing required scopes. Tokens should be passed as an HTTP Authorization header or alternatively, as a POST parameter.",
+        "type": "string",
+        "subtype": "auth",
+        "example": "xxxx-xxxxxxxxx-xxxx"
+      },
+      "skill_id": {
+        "desc": "Skill to delete.",
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 255
+      }
+    }
+  },
+  "output": {
+    "type": "object",
+    "properties": {}
+  },
+  "errors": {
+    "skill_not_found": {
+      "desc": "The skill doesn't exist or the caller can't see it."
+    },
+    "method_not_supported_for_skill_type": {
+      "desc": "Only canvas skills can be deleted."
+    },
+    "restricted_action": {
+      "desc": "The caller isn't allowed to delete this skill."
+    },
+    "feature_not_enabled": {
+      "desc": "The Skills API isn't enabled for this organization."
+    },
+    "canvas_deleting_disabled": {
+      "desc": "Deleting canvases is disabled for the caller's team."
+    },
+    "internal_error": {
+      "desc": "The skill couldn't be deleted. Retry the request."
+    }
+  },
+  "examples": {
+    "success": {
+      "url": "/api/slackbot.skills.delete?token=YOUR_TOKEN",
+      "description": "Typical success response",
+      "example": {
+        "ok": true
+      }
+    },
+    "error": {
+      "url": "/api/slackbot.skills.delete?token=YOUR_TOKEN",
+      "description": "Typical error response",
+      "example": {
+        "ok": false,
+        "error": "skill_not_found"
+      }
+    }
+  }
+}

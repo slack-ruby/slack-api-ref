@@ -1,0 +1,326 @@
+{
+  "desc": "Lists metadata for skills owned by the organization, including invite-only skills.",
+  "http_method": "POST",
+  "scope": {
+    "user": [
+      "admin.skills:read"
+    ]
+  },
+  "rate_limits": "t2",
+  "json_input_supported": true,
+  "args": {
+    "type": "object",
+    "required": [
+      "token"
+    ],
+    "properties": {
+      "token": {
+        "desc": "Authentication token bearing required scopes. Tokens should be passed as an HTTP Authorization header or alternatively, as a POST parameter.",
+        "type": "string",
+        "subtype": "auth",
+        "example": "xxxx-xxxxxxxxx-xxxx"
+      },
+      "category": {
+        "type": "string",
+        "enum": [
+          "communication",
+          "customer_support",
+          "data_and_analytics",
+          "engineering",
+          "product_management",
+          "productivity",
+          "professional_development",
+          "project_management",
+          "sales",
+          "system",
+          "team_management",
+          "other"
+        ],
+        "desc": "Only return skills in this category."
+      },
+      "cursor": {
+        "desc": "Continuation from the previous page. Keep all filters and sorting unchanged. Pages can be empty while a continuation remains; continue until next_cursor is empty. Changes during traversal may move results; pagination is not a snapshot.",
+        "type": "string",
+        "maxLength": 4096
+      },
+      "limit": {
+        "desc": "The maximum number of skills to return. Fewer may be returned even when more remain.",
+        "type": "integer",
+        "default": 100,
+        "minimum": 1,
+        "maximum": 200
+      },
+      "creator_ids": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "pattern": "^[UW][A-Z0-9]+$"
+        },
+        "maxItems": 100,
+        "desc": "Only return skills created by these users. Accepts U or W user IDs."
+      },
+      "publish_status": {
+        "type": "string",
+        "enum": [
+          "all",
+          "published",
+          "unpublished"
+        ],
+        "default": "all",
+        "desc": "Filter by publication to the org catalog."
+      },
+      "auto_enabled_status": {
+        "type": "string",
+        "enum": [
+          "all",
+          "enabled",
+          "disabled"
+        ],
+        "default": "all",
+        "desc": "Filter by org deployment, independently of publication."
+      },
+      "sort": {
+        "type": "string",
+        "enum": [
+          "name",
+          "usage_count",
+          "date_updated"
+        ],
+        "default": "name",
+        "desc": "Sort across the inventory. Name uses case-insensitive ordering. Unedited skills use their creation date for date_updated sorting."
+      },
+      "sort_dir": {
+        "type": "string",
+        "enum": [
+          "asc",
+          "desc"
+        ],
+        "default": "asc",
+        "desc": "Sort direction; file ID breaks ties."
+      }
+    }
+  },
+  "output": {
+    "type": "object",
+    "required": [
+      "skills"
+    ],
+    "properties": {
+      "skills": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": [
+            "id",
+            "display_name",
+            "description",
+            "category",
+            "creator_id",
+            "date_created",
+            "date_updated",
+            "visibility",
+            "is_official",
+            "usage_count",
+            "library_count",
+            "auto_enabled"
+          ],
+          "properties": {
+            "id": {
+              "type": "string",
+              "desc": "Canvas skill file ID."
+            },
+            "display_name": {
+              "type": "string",
+              "desc": "Human-readable label. Not unique."
+            },
+            "description": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "desc": "When Slackbot should use the skill."
+            },
+            "category": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "communication",
+                    "customer_support",
+                    "data_and_analytics",
+                    "engineering",
+                    "product_management",
+                    "productivity",
+                    "professional_development",
+                    "project_management",
+                    "sales",
+                    "system",
+                    "team_management",
+                    "other"
+                  ],
+                  "desc": "Enumerates the categories available for organizing AI skills."
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "desc": "Skill category."
+            },
+            "creator_id": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "desc": "User ID of the skill's creator."
+            },
+            "date_created": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "desc": "Unix timestamp when the skill was created."
+            },
+            "date_updated": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "desc": "Unix timestamp when the skill was last updated. Null if it was never edited."
+            },
+            "visibility": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "invite_only",
+                    "anyone_can_view",
+                    "anyone_can_edit"
+                  ],
+                  "desc": "Who in the workspace can view and share this skill. Derived from the highest ORG/WORKSPACE-level access grant on the underlying skill canvas: `invite_only` when no such grant exists (only the creator and explicitly invited members), `anyone_can_view` when a read or comment grant exists, `anyone_can_edit` when a write grant exists."
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "desc": "Org-wide visibility. Null if visibility could not be determined."
+            },
+            "is_official": {
+              "type": "boolean",
+              "desc": "Whether the skill is published to the organization's catalog."
+            },
+            "usage_count": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "desc": "Approximate number of runs."
+            },
+            "library_count": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "desc": "Approximate number of people who have the skill enabled."
+            },
+            "auto_enabled": {
+              "type": "object",
+              "required": [
+                "permission_type",
+                "usergroup_ids"
+              ],
+              "properties": {
+                "permission_type": {
+                  "type": "string",
+                  "enum": [
+                    "everyone",
+                    "named_entities",
+                    "no_one"
+                  ],
+                  "desc": "Who receives a skill automatically. This setting does not grant access to its instructions."
+                },
+                "usergroup_ids": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "desc": "Deployment audience within this organization. Empty for everyone or no_one."
+                }
+              }
+            }
+          },
+          "desc": "Explicit metadata-only inventory projection, including invite-only skills. No access level or skill content is implied."
+        }
+      },
+      "response_metadata": {
+        "type": "object",
+        "properties": {
+          "next_cursor": {
+            "type": "string",
+            "desc": "Cursor for the next page. Empty on the last page."
+          }
+        }
+      }
+    }
+  },
+  "errors": {
+    "invalid_cursor": {
+      "desc": "The cursor is malformed or belongs to different filters, sorting, user, or organization."
+    },
+    "invalid_category": {
+      "desc": "The category isn't one of the supported skill categories."
+    },
+    "feature_not_enabled": {
+      "desc": "The Skills API isn't enabled for this organization."
+    },
+    "restricted_action": {
+      "desc": "The caller must be an org admin or owner with permission to manage skills."
+    },
+    "internal_error": {
+      "desc": "A lookup failed, so the page couldn't be built completely. Retry the request with the same cursor."
+    },
+    "not_an_enterprise": {
+      "desc": "This method requires an Enterprise Grid organization."
+    }
+  },
+  "examples": {
+    "success": {
+      "url": "/api/admin.slackbot.skills.list?token=YOUR_TOKEN",
+      "description": "Typical success response",
+      "example": {
+        "ok": true,
+        "skills": [
+          {
+            "id": "F0123ABCD",
+            "display_name": "Daily priorities",
+            "description": "Reviews information from Slack and your calendar to suggest priorities for the day.",
+            "category": "productivity",
+            "creator_id": "U0123ABCD",
+            "date_created": 1790000000,
+            "date_updated": 1790100000,
+            "visibility": "invite_only",
+            "is_official": false,
+            "usage_count": 1840,
+            "library_count": 312,
+            "auto_enabled": {
+              "permission_type": "named_entities",
+              "usergroup_ids": [
+                "S0123ABCD"
+              ]
+            }
+          }
+        ],
+        "response_metadata": {
+          "next_cursor": ""
+        }
+      }
+    },
+    "error": {
+      "url": "/api/admin.slackbot.skills.list?token=YOUR_TOKEN",
+      "description": "Typical error response",
+      "example": {
+        "ok": false,
+        "error": "not_an_enterprise"
+      }
+    }
+  }
+}

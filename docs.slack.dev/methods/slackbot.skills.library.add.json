@@ -1,0 +1,64 @@
+{
+  "desc": "Turns a skill on in the caller's personal library.",
+  "http_method": "POST",
+  "scope": {
+    "user": [
+      "skills:write"
+    ]
+  },
+  "rate_limits": "t3",
+  "json_input_supported": true,
+  "args": {
+    "type": "object",
+    "required": [
+      "token",
+      "skill_id"
+    ],
+    "properties": {
+      "token": {
+        "desc": "Authentication token bearing required scopes. Tokens should be passed as an HTTP Authorization header or alternatively, as a POST parameter.",
+        "type": "string",
+        "subtype": "auth",
+        "example": "xxxx-xxxxxxxxx-xxxx"
+      },
+      "skill_id": {
+        "desc": "Skill to turn on for the caller.",
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 255
+      }
+    }
+  },
+  "output": null,
+  "errors": {
+    "skill_not_found": {
+      "desc": "The skill doesn't exist or the caller can't see it."
+    },
+    "feature_not_enabled": {
+      "desc": "The Skills API isn't enabled for this organization."
+    },
+    "restricted_action": {
+      "desc": "The caller cannot use skills or cannot use this skill in their library."
+    },
+    "internal_error": {
+      "desc": "The library could not be updated. Retry the request."
+    }
+  },
+  "examples": {
+    "success": {
+      "url": "/api/slackbot.skills.library.add?token=YOUR_TOKEN",
+      "description": "Typical success response",
+      "example": {
+        "ok": true
+      }
+    },
+    "error": {
+      "url": "/api/slackbot.skills.library.add?token=YOUR_TOKEN",
+      "description": "Typical error response",
+      "example": {
+        "ok": false,
+        "error": "skill_not_found"
+      }
+    }
+  }
+}

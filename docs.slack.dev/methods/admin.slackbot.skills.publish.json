@@ -1,0 +1,81 @@
+{
+  "desc": "Publishes Slackbot skills to an organization's catalog.",
+  "http_method": "POST",
+  "scope": {
+    "user": [
+      "admin.skills:write"
+    ]
+  },
+  "rate_limits": "t2",
+  "json_input_supported": true,
+  "args": {
+    "type": "object",
+    "required": [
+      "token",
+      "skill_ids"
+    ],
+    "properties": {
+      "token": {
+        "desc": "Authentication token bearing required scopes. Tokens should be passed as an HTTP Authorization header or alternatively, as a POST parameter.",
+        "type": "string",
+        "subtype": "auth",
+        "example": "xxxx-xxxxxxxxx-xxxx"
+      },
+      "skill_ids": {
+        "desc": "One to 50 skill IDs. Successful items are not rolled back if other items fail.",
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 50,
+        "items": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 255
+        }
+      }
+    }
+  },
+  "output": {
+    "type": "object",
+    "properties": {}
+  },
+  "errors": {
+    "feature_not_enabled": {
+      "desc": "The Skills API is not enabled for this organization."
+    },
+    "not_an_enterprise": {
+      "desc": "This method requires an Enterprise Grid organization."
+    },
+    "restricted_action": {
+      "desc": "The caller must be an org admin or owner with permission to manage skills, and must be able to edit and share any canvas that needs org-wide access."
+    },
+    "internal_error": {
+      "desc": "The operation could not be completed. Retry the request."
+    },
+    "failed_for_some_skills": {
+      "desc": "Some skills failed. `failed_skills` lists each distinct failed skill ID and its error: `skill_not_found`, `method_not_supported_for_skill_type`, `restricted_action`, or `internal_error`. Missing, deleted, non-skill, and other organizations' files all return `skill_not_found`."
+    }
+  },
+  "examples": {
+    "success": {
+      "url": "/api/admin.slackbot.skills.publish?token=YOUR_TOKEN",
+      "description": "Typical success response",
+      "example": {
+        "ok": true
+      }
+    },
+    "error": {
+      "url": "/api/admin.slackbot.skills.publish?token=YOUR_TOKEN",
+      "description": "Typical error response",
+      "example": {
+        "ok": false,
+        "error": "failed_for_some_skills",
+        "failed_skills": [
+          {
+            "skill_id": "F0456EFGH",
+            "error": "skill_not_found"
+          }
+        ]
+      }
+    }
+  }
+}

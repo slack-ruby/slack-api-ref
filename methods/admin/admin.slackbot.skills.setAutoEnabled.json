@@ -1,0 +1,72 @@
+{
+  "group": "admin",
+  "name": "admin.slackbot.skills.setAutoEnabled",
+  "deprecated": false,
+  "desc": "Sets who a Slackbot skill is automatically turned on for.",
+  "args": {
+    "skill_id": {
+      "required": true,
+      "desc": "Canvas skill to deploy.",
+      "type": "string"
+    },
+    "permission_type": {
+      "required": true,
+      "desc": "Deployment audience.",
+      "type": "enum"
+    },
+    "usergroup_ids": {
+      "required": false,
+      "desc": "One to 100 user groups for named_entities. Duplicates count toward the input limit and are stored once. Omit for other permission types.",
+      "type": "array"
+    }
+  },
+  "response": {
+    "examples": [
+      "{\n    \"ok\": true,\n    \"skill_id\": \"F0123ABCD\",\n    \"permission_type\": \"named_entities\",\n    \"usergroup_ids\": [\n        \"S0123ABCD\"\n    ]\n}",
+      "{\n    \"ok\": false,\n    \"error\": \"skill_not_visible_to_audience\",\n    \"usergroup_ids\": [\n        \"S0456EFGH\"\n    ]\n}"
+    ]
+  },
+  "errors": {
+    "access_denied": "Access to a resource specified in the request is denied.",
+    "accesslimited": "Access to this method is limited on the current network.",
+    "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
+    "audience_too_large": "Validating this audience requires more than 1,000 member checks across the requested groups. Overlapping members count once per group. Select a smaller audience, or share the canvas org-wide if that access is intended, before retrying.",
+    "deprecated_endpoint": "The endpoint has been deprecated.",
+    "ekm_access_denied": "Administrators have suspended the ability to post a message.",
+    "enterprise_is_restricted": "The method cannot be called from an Enterprise.",
+    "fatal_error": "The server could not complete your operation(s) without encountering a catastrophic error. It's possible some aspect of the operation succeeded before the error was raised.",
+    "feature_not_enabled": "The Skills API is not enabled for this organization.",
+    "internal_error": "The operation could not be completed. Retry the request.",
+    "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
+    "invalid_array_arg": "The method was passed an array as an argument. Please only input valid strings.",
+    "invalid_charset": "The method was called via a POST request, but the charset specified in the Content-Type header was invalid. Valid charset names are: utf-8 iso-8859-1.",
+    "invalid_form_data": "The method was called via a POST request with Content-Type application/x-www-form-urlencoded or multipart/form-data, but the form data was either missing or syntactically invalid.",
+    "invalid_permission_type": "Use everyone, named_entities or no_one.",
+    "invalid_post_type": "The method was called via a POST request, but the specified Content-Type was invalid. Valid types are: application/json application/x-www-form-urlencoded multipart/form-data text/plain.",
+    "is_bot": "This method cannot be called by a legacy bot.",
+    "method_deprecated": "The method has been deprecated.",
+    "method_not_supported_for_skill_type": "Only canvas skills can be deployed.",
+    "missing_post_type": "The method was called via a POST request and included a data payload, but the request did not include a Content-Type header.",
+    "missing_scope": "The token used is not granted the specific scope permissions required to complete this request.",
+    "named_entities_cannot_be_empty": "Provide at least one user group for named_entities.",
+    "no_permission": "The workspace token used in this request does not have the permissions necessary to complete the request. Make sure your app is a member of the conversation it's attempting to post a message to.",
+    "not_allowed_token_type": "The token type used in this request is not allowed.",
+    "not_an_enterprise": "This method requires an Enterprise Grid organization.",
+    "not_authed": "No authentication token provided.",
+    "org_login_required": "The workspace is undergoing an enterprise migration and will not be available until migration is complete.",
+    "ratelimited": "The request has been ratelimited. Refer to the Retry-After header for when to retry the request.",
+    "request_timeout": "The method was called via a POST request, but the POST data was either missing or truncated.",
+    "restricted_action": "The caller must be an org admin or owner with permission to manage skills.",
+    "service_unavailable": "The service is temporarily unavailable.",
+    "skill_not_found": "The skill is missing, deleted, no longer a skill, or outside this organization.",
+    "skill_not_visible_to_audience": "Share the skill first. usergroup_ids lists the groups that cannot view it.",
+    "team_added_to_org": "The workspace associated with your request is currently undergoing migration to an Enterprise Organization. Web API and other platform operations will be intermittently unavailable until the transition is complete.",
+    "token_expired": "Authentication token has expired.",
+    "token_revoked": "Authentication token is for a deleted user or workspace or the app has been removed when using a user token.",
+    "too_many_named_entities": "Provide at most 100 user groups.",
+    "two_factor_setup_required": "Two factor setup is required.",
+    "unknown_method": "This method is currently not available.",
+    "usergroup_ids_not_allowed": "Only named_entities accepts usergroup_ids.",
+    "usergroup_not_found": "invalid_usergroup_ids lists missing, deleted or foreign user groups."
+  }
+}

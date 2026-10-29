@@ -1,0 +1,144 @@
+{
+  "desc": "Sets who a Slackbot skill is automatically turned on for.",
+  "http_method": "POST",
+  "scope": {
+    "user": [
+      "admin.skills:write"
+    ]
+  },
+  "rate_limits": "t2",
+  "json_input_supported": true,
+  "args": {
+    "type": "object",
+    "required": [
+      "token",
+      "skill_id",
+      "permission_type"
+    ],
+    "properties": {
+      "token": {
+        "desc": "Authentication token bearing required scopes. Tokens should be passed as an HTTP Authorization header or alternatively, as a POST parameter.",
+        "type": "string",
+        "subtype": "auth",
+        "example": "xxxx-xxxxxxxxx-xxxx"
+      },
+      "skill_id": {
+        "desc": "Canvas skill to deploy.",
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 255
+      },
+      "permission_type": {
+        "type": "string",
+        "enum": [
+          "everyone",
+          "named_entities",
+          "no_one"
+        ],
+        "desc": "Deployment audience."
+      },
+      "usergroup_ids": {
+        "desc": "One to 100 user groups for named_entities. Duplicates count toward the input limit and are stored once. Omit for other permission types.",
+        "type": "array",
+        "items": {
+          "type": "string",
+          "maxLength": 32
+        }
+      }
+    }
+  },
+  "output": {
+    "type": "object",
+    "required": [
+      "skill_id",
+      "permission_type",
+      "usergroup_ids"
+    ],
+    "properties": {
+      "skill_id": {
+        "type": "string"
+      },
+      "permission_type": {
+        "type": "string",
+        "enum": [
+          "everyone",
+          "named_entities",
+          "no_one"
+        ],
+        "desc": "Who receives a skill automatically. This setting does not grant access to its instructions."
+      },
+      "usergroup_ids": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "errors": {
+    "feature_not_enabled": {
+      "desc": "The Skills API is not enabled for this organization."
+    },
+    "not_an_enterprise": {
+      "desc": "This method requires an Enterprise Grid organization."
+    },
+    "restricted_action": {
+      "desc": "The caller must be an org admin or owner with permission to manage skills."
+    },
+    "internal_error": {
+      "desc": "The operation could not be completed. Retry the request."
+    },
+    "skill_not_found": {
+      "desc": "The skill is missing, deleted, no longer a skill, or outside this organization."
+    },
+    "method_not_supported_for_skill_type": {
+      "desc": "Only canvas skills can be deployed."
+    },
+    "skill_not_visible_to_audience": {
+      "desc": "Share the skill first. usergroup_ids lists the groups that cannot view it."
+    },
+    "audience_too_large": {
+      "desc": "Validating this audience requires more than 1,000 member checks across the requested groups. Overlapping members count once per group. Select a smaller audience, or share the canvas org-wide if that access is intended, before retrying."
+    },
+    "named_entities_cannot_be_empty": {
+      "desc": "Provide at least one user group for named_entities."
+    },
+    "usergroup_not_found": {
+      "desc": "invalid_usergroup_ids lists missing, deleted or foreign user groups."
+    },
+    "too_many_named_entities": {
+      "desc": "Provide at most 100 user groups."
+    },
+    "invalid_permission_type": {
+      "desc": "Use everyone, named_entities or no_one."
+    },
+    "usergroup_ids_not_allowed": {
+      "desc": "Only named_entities accepts usergroup_ids."
+    }
+  },
+  "examples": {
+    "success": {
+      "url": "/api/admin.slackbot.skills.setAutoEnabled?token=YOUR_TOKEN",
+      "description": "Typical success response",
+      "example": {
+        "ok": true,
+        "skill_id": "F0123ABCD",
+        "permission_type": "named_entities",
+        "usergroup_ids": [
+          "S0123ABCD"
+        ]
+      }
+    },
+    "error": {
+      "url": "/api/admin.slackbot.skills.setAutoEnabled?token=YOUR_TOKEN",
+      "description": "Typical error response",
+      "example": {
+        "ok": false,
+        "error": "skill_not_visible_to_audience",
+        "usergroup_ids": [
+          "S0456EFGH"
+        ]
+      }
+    }
+  }
+}

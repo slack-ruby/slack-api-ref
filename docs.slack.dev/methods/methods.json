@@ -532,6 +532,34 @@
     ]
   },
   {
+    "name": "admin.slackbot.skills.list",
+    "description": "Lists metadata for skills owned by the organization, including invite-only skills.",
+    "family": [
+      "admin"
+    ]
+  },
+  {
+    "name": "admin.slackbot.skills.publish",
+    "description": "Publishes Slackbot skills to an organization's catalog.",
+    "family": [
+      "admin"
+    ]
+  },
+  {
+    "name": "admin.slackbot.skills.setAutoEnabled",
+    "description": "Sets who a Slackbot skill is automatically turned on for.",
+    "family": [
+      "admin"
+    ]
+  },
+  {
+    "name": "admin.slackbot.skills.unpublish",
+    "description": "Removes Slackbot skills from the org catalog, preserving access, libraries, and deployments.",
+    "family": [
+      "admin"
+    ]
+  },
+  {
     "name": "admin.teams.admins.list",
     "description": "List all of the admins on a given workspace.",
     "family": [
@@ -2083,6 +2111,55 @@
     "description": "Searches for messages matching a query.",
     "family": [
       "search"
+    ]
+  },
+  {
+    "name": "slackbot.skills.create",
+    "description": "Creates a skill from markdown instructions, or turns an existing canvas the caller owns into a skill.",
+    "family": [
+      "slackbot"
+    ]
+  },
+  {
+    "name": "slackbot.skills.delete",
+    "description": "Deletes a Slackbot skill and its canvas, and removes it from every library, skill set, and the org catalog.",
+    "family": [
+      "slackbot"
+    ]
+  },
+  {
+    "name": "slackbot.skills.info",
+    "description": "Returns one Slackbot skill, including its instructions.",
+    "family": [
+      "slackbot"
+    ]
+  },
+  {
+    "name": "slackbot.skills.library.add",
+    "description": "Turns a skill on in the caller's personal library.",
+    "family": [
+      "slackbot"
+    ]
+  },
+  {
+    "name": "slackbot.skills.library.remove",
+    "description": "Turns a skill off in the caller's personal library.",
+    "family": [
+      "slackbot"
+    ]
+  },
+  {
+    "name": "slackbot.skills.list",
+    "description": "Lists Slackbot skills from the caller's point of view. Instructions are not included.",
+    "family": [
+      "slackbot"
+    ]
+  },
+  {
+    "name": "slackbot.skills.update",
+    "description": "Changes a Slackbot skill's instructions or metadata.",
+    "family": [
+      "slackbot"
     ]
   },
   {

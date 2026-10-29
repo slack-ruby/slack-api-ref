@@ -1,0 +1,350 @@
+{
+  "desc": "Lists Slackbot skills from the caller's point of view. Instructions are not included.",
+  "http_method": "POST",
+  "scope": {
+    "user": [
+      "skills:read"
+    ]
+  },
+  "rate_limits": "t3",
+  "json_input_supported": true,
+  "args": {
+    "type": "object",
+    "required": [
+      "token"
+    ],
+    "properties": {
+      "token": {
+        "desc": "Authentication token bearing required scopes. Tokens should be passed as an HTTP Authorization header or alternatively, as a POST parameter.",
+        "type": "string",
+        "subtype": "auth",
+        "example": "xxxx-xxxxxxxxx-xxxx"
+      },
+      "filter": {
+        "desc": "`library`: skills enabled for the caller, including auto-enabled skills and skills from skill sets. `owned`: skills the caller created. `catalog`: the organization's official skills.",
+        "type": "string",
+        "enum": [
+          "library",
+          "owned",
+          "catalog"
+        ],
+        "default": "library"
+      },
+      "category": {
+        "desc": "Only return skills in this category.",
+        "type": "string",
+        "maxLength": 64
+      },
+      "cursor": {
+        "desc": "Paginate through collections of data by setting the `cursor` parameter to a `next_cursor` attribute returned by a previous request's `response_metadata`. Must be used with the same `filter` and `category`.",
+        "type": "string",
+        "maxLength": 255
+      },
+      "limit": {
+        "desc": "The maximum number of skills to return. Fewer may be returned even when more remain.",
+        "type": "integer",
+        "default": 100,
+        "minimum": 1,
+        "maximum": 200
+      }
+    }
+  },
+  "output": {
+    "type": "object",
+    "required": [
+      "skills"
+    ],
+    "properties": {
+      "skills": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": [
+            "id",
+            "type",
+            "display_name",
+            "name",
+            "description",
+            "category",
+            "example_prompt",
+            "instructions",
+            "visibility",
+            "is_official",
+            "access",
+            "mcp_servers",
+            "usage_count",
+            "library_count",
+            "creator_id",
+            "date_created",
+            "date_updated",
+            "permalink"
+          ],
+          "properties": {
+            "id": {
+              "type": "string",
+              "desc": "Skill ID: a canvas file ID for canvas skills, or a `builtin:` reference for built-in skills."
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "canvas",
+                "builtin"
+              ],
+              "desc": "Where the skill is defined."
+            },
+            "display_name": {
+              "type": "string",
+              "desc": "Human-readable label. Not unique."
+            },
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "desc": "Reserved for a future machine-readable skill name. Always null."
+            },
+            "description": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "desc": "When Slackbot should use the skill."
+            },
+            "category": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "communication",
+                    "customer_support",
+                    "data_and_analytics",
+                    "engineering",
+                    "product_management",
+                    "productivity",
+                    "professional_development",
+                    "project_management",
+                    "sales",
+                    "system",
+                    "team_management",
+                    "other"
+                  ],
+                  "desc": "Enumerates the categories available for organizing AI skills."
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "desc": "Skill category."
+            },
+            "example_prompt": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "desc": "Example prompt. `{skill}` stands for the skill mention."
+            },
+            "instructions": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "desc": "Markdown instructions. Only returned by slackbot.skills.info; null elsewhere."
+            },
+            "visibility": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "invite_only",
+                    "anyone_can_view",
+                    "anyone_can_edit"
+                  ],
+                  "desc": "Who in the workspace can view and share this skill. Derived from the highest ORG/WORKSPACE-level access grant on the underlying skill canvas: `invite_only` when no such grant exists (only the creator and explicitly invited members), `anyone_can_view` when a read or comment grant exists, `anyone_can_edit` when a write grant exists."
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "desc": "Who in the organization can view the skill. Null for built-in skills."
+            },
+            "is_official": {
+              "type": "boolean",
+              "desc": "Whether the skill is published to the organization's catalog."
+            },
+            "access": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "enum": [
+                "read",
+                "comment",
+                "write",
+                "owner"
+              ],
+              "desc": "The caller's effective access to the skill. For canvas skills, the caller's access to the canvas, as in files.info. Built-in skills are always read."
+            },
+            "mcp_servers": {
+              "type": "array",
+              "desc": "Apps and MCP servers the skill needs.",
+              "items": {
+                "type": "object",
+                "required": [
+                  "service_type",
+                  "display_name",
+                  "is_available"
+                ],
+                "properties": {
+                  "service_type": {
+                    "type": "string",
+                    "desc": "The server's service type: \"app\" for an app's MCP server, \"salesforce\", or a built-in service type."
+                  },
+                  "app_id": {
+                    "type": "string",
+                    "desc": "App ID. Present for app servers."
+                  },
+                  "server_id": {
+                    "type": "string",
+                    "desc": "ID of the app's MCP server. Present for app servers."
+                  },
+                  "permission_namespace": {
+                    "type": "string",
+                    "desc": "Permission namespace. Present for Salesforce servers."
+                  },
+                  "display_name": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "desc": "The server's current name as the caller sees it, or null when the server isn't available to the caller."
+                  },
+                  "is_available": {
+                    "type": "boolean",
+                    "desc": "Whether the caller can use this server."
+                  }
+                },
+                "desc": "An app or MCP server a skill declares it needs. Listing a server does not grant access to it; normal OAuth and server permissions still apply when the skill runs."
+              }
+            },
+            "usage_count": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "desc": "Approximate number of runs."
+            },
+            "library_count": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "desc": "Approximate number of people who have the skill enabled."
+            },
+            "creator_id": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "desc": "User ID of the skill's creator. Null for built-in skills."
+            },
+            "date_created": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "desc": "Unix timestamp when the skill was created."
+            },
+            "date_updated": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "desc": "Unix timestamp when the skill was last updated."
+            },
+            "permalink": {
+              "type": "string",
+              "desc": "Link to the skill."
+            }
+          },
+          "desc": "A Slackbot skill as returned by the slackbot.skills.* Web API methods. Fields with no value are null."
+        }
+      },
+      "response_metadata": {
+        "type": "object",
+        "properties": {
+          "next_cursor": {
+            "type": "string",
+            "desc": "Cursor for the next page. Empty on the last page."
+          }
+        }
+      }
+    }
+  },
+  "errors": {
+    "invalid_cursor": {
+      "desc": "The cursor is malformed, expired, or was issued for a different filter or category."
+    },
+    "invalid_category": {
+      "desc": "The category isn't one of the supported skill categories."
+    },
+    "feature_not_enabled": {
+      "desc": "The Skills API isn't enabled for this organization."
+    },
+    "restricted_action": {
+      "desc": "The caller isn't allowed to use skills."
+    },
+    "internal_error": {
+      "desc": "A lookup failed, so the page couldn't be built completely. Retry the request with the same cursor."
+    }
+  },
+  "examples": {
+    "success": {
+      "url": "/api/slackbot.skills.list?token=YOUR_TOKEN",
+      "description": "Typical success response",
+      "example": {
+        "ok": true,
+        "skills": [
+          {
+            "id": "F0123ABCD",
+            "type": "canvas",
+            "display_name": "Daily priorities",
+            "name": null,
+            "description": "Reviews information from Slack and your calendar to suggest priorities for the day.",
+            "category": "productivity",
+            "example_prompt": "Run {skill} for today",
+            "instructions": null,
+            "visibility": "anyone_can_view",
+            "is_official": true,
+            "access": "write",
+            "mcp_servers": [
+              {
+                "service_type": "app",
+                "app_id": "A0123ABCD",
+                "server_id": "Amcp0456EFGH",
+                "display_name": "Google Calendar",
+                "is_available": true
+              }
+            ],
+            "usage_count": 1840,
+            "library_count": 312,
+            "creator_id": "U0123ABCD",
+            "date_created": 1790000000,
+            "date_updated": 1790100000,
+            "permalink": "https://example.slack.com/docs/T0123ABCD/F0123ABCD"
+          }
+        ],
+        "response_metadata": {
+          "next_cursor": "dGVhbTpDMDYxRkE1UEI="
+        }
+      }
+    },
+    "error": {
+      "url": "/api/slackbot.skills.list?token=YOUR_TOKEN",
+      "description": "Typical error response",
+      "example": {
+        "ok": false,
+        "error": "invalid_cursor"
+      }
+    }
+  }
+}
