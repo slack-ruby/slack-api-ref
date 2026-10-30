@@ -32,6 +32,11 @@
         "desc": "Team to get info about; if omitted, will return information about the current team.",
         "type": "string",
         "subtype": "team"
+      },
+      "include_slackbot_availability": {
+        "default": "false",
+        "desc": "Include advisory Slackbot availability for the returned workspace or organization. Only applies to a single team in the caller's own workspace or organization; omitted for external teams. Does not guarantee individual eligibility, remaining usage, or access to a particular app.",
+        "type": "boolean"
       }
     }
   },
@@ -50,7 +55,26 @@
                 "schema": "team-summary"
               },
               {
-                "schema": "team"
+                "allOf": [
+                  {
+                    "schema": "team"
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "slackbot_availability": {
+                        "type": "string",
+                        "desc": "Advisory Slackbot availability for your own workspace or organization. Included only when include_slackbot_availability is true. Does not guarantee individual eligibility, remaining usage, or access to a particular app.",
+                        "enum": [
+                          "available",
+                          "restricted",
+                          "unavailable",
+                          "unknown"
+                        ]
+                      }
+                    }
+                  }
+                ]
               }
             ]
           }
@@ -124,6 +148,19 @@
           },
           "enterprise_id": "E1234A12AB",
           "enterprise_name": "Umbrella Corporation"
+        }
+      }
+    },
+    "slackbot_availability": {
+      "url": "/api/team.info?include_slackbot_availability=true",
+      "description": "Success response when requesting advisory Slackbot availability for your own workspace.",
+      "example": {
+        "ok": true,
+        "team": {
+          "id": "T123ABC456",
+          "name": "Example workspace",
+          "domain": "example",
+          "slackbot_availability": "available"
         }
       }
     },

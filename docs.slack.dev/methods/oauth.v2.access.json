@@ -342,5 +342,10 @@
         "error": "invalid_client_id"
       }
     }
+  },
+  "warnings": {
+    "slackbot_mcp_unavailable": {
+      "desc": "The authorization-code exchange granted mcp:connect, but Slackbot is unavailable in the selected workspace or organization. Installation succeeded and the issued tokens remain valid. This advisory warning does not check individual eligibility or app-specific access; its absence does not guarantee that a user can use the app in Slackbot."
+    }
   }
 }

@@ -2,6 +2,9 @@
   "desc": "Lists Slackbot skills from the caller's point of view. Instructions are not included.",
   "http_method": "POST",
   "scope": {
+    "bot": [
+      "skills:read"
+    ],
     "user": [
       "skills:read"
     ]

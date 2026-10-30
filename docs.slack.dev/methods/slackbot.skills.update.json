@@ -2,6 +2,9 @@
   "desc": "Changes a Slackbot skill's instructions or metadata.",
   "http_method": "POST",
   "scope": {
+    "bot": [
+      "skills:write"
+    ],
     "user": [
       "skills:write"
     ]

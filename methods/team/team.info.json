@@ -13,11 +13,18 @@
       "required": false,
       "desc": "Team to get info about; if omitted, will return information about the current team.",
       "type": "string"
+    },
+    "include_slackbot_availability": {
+      "required": false,
+      "example": "false",
+      "desc": "Include advisory Slackbot availability for the returned workspace or organization. Only applies to a single team in the caller's own workspace or organization; omitted for external teams. Does not guarantee individual eligibility, remaining usage, or access to a particular app.",
+      "type": "boolean"
     }
   },
   "response": {
     "examples": [
       "{\n    \"ok\": true,\n    \"team\": {\n        \"id\": \"T12345\",\n        \"name\": \"My Team\",\n        \"domain\": \"example\",\n        \"email_domain\": \"example.com\",\n        \"icon\": {\n            \"image_34\": \"https://...\",\n            \"image_44\": \"https://...\",\n            \"image_68\": \"https://...\",\n            \"image_88\": \"https://...\",\n            \"image_102\": \"https://...\",\n            \"image_132\": \"https://...\",\n            \"image_default\": true\n        },\n        \"enterprise_id\": \"E1234A12AB\",\n        \"enterprise_name\": \"Umbrella Corporation\"\n    }\n}",
+      "{\n    \"ok\": true,\n    \"team\": {\n        \"id\": \"T123ABC456\",\n        \"name\": \"Example workspace\",\n        \"domain\": \"example\",\n        \"slackbot_availability\": \"available\"\n    }\n}",
       "{\n    \"ok\": false,\n    \"error\": \"invalid_auth\"\n}"
     ]
   },

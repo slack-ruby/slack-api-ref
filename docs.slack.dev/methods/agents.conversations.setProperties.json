@@ -88,7 +88,7 @@
             "maxLength": 255
           },
           "pr_status": {
-            "desc": "Status of the pull request (e.g. open, merged, closed).",
+            "desc": "The pull request status displayed for the channel as a whole. One of: an empty string while the pull request is a draft (no status is displayed); open, when it is ready for review; blocked, when a reviewer requested changes, checks are failing, or it has merge conflicts; merged, once it is merged; or closed, when it is closed without being merged. Each pull_request view displays its own pull request's state.",
             "type": "string",
             "maxLength": 32
           },

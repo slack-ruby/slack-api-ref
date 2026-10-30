@@ -2,6 +2,9 @@
   "desc": "Deletes a Slackbot skill and its canvas, and removes it from every library, skill set, and the org catalog.",
   "http_method": "POST",
   "scope": {
+    "bot": [
+      "skills:write"
+    ],
     "user": [
       "skills:write"
     ]

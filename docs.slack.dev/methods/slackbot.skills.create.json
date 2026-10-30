@@ -2,6 +2,9 @@
   "desc": "Creates a skill from markdown instructions, or turns an existing canvas the caller owns into a skill.",
   "http_method": "POST",
   "scope": {
+    "bot": [
+      "skills:write"
+    ],
     "user": [
       "skills:write"
     ]

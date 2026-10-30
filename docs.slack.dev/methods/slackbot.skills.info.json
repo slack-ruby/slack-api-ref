@@ -2,6 +2,9 @@
   "desc": "Returns one Slackbot skill, including its instructions.",
   "http_method": "POST",
   "scope": {
+    "bot": [
+      "skills:read"
+    ],
     "user": [
       "skills:read"
     ]

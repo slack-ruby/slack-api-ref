@@ -2,6 +2,9 @@
   "desc": "Turns a skill off in the caller's personal library.",
   "http_method": "POST",
   "scope": {
+    "bot": [
+      "skills:write"
+    ],
     "user": [
       "skills:write"
     ]
