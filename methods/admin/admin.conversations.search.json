@@ -19,7 +19,7 @@
     "query": {
       "required": false,
       "example": "announcement",
-      "desc": "Name of the the channel to query by.",
+      "desc": "Name of the channel to query by.",
       "type": "string"
     },
     "limit": {
@@ -67,7 +67,7 @@
     "access_denied": "Access to a resource specified in the request is denied.",
     "accesslimited": "Access to this method is limited on the current network.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
-    "connected_team_passed_in_is_not_top_level_team": "One of the orgs provided in the external connected teams filter is not a top level team.",
+    "connected_team_passed_in_is_not_top_level_team": "One of the orgs provided in the external connected teams filter is not a top level team. Pass the connected org’s top-level ID.",
     "deprecated_endpoint": "The endpoint has been deprecated.",
     "ekm_access_denied": "Administrators have suspended the ability to post a message.",
     "enterprise_is_restricted": "The method cannot be called from an Enterprise.",

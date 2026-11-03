@@ -37,7 +37,7 @@
         "example": "['T00000000','T00000001']"
       },
       "query": {
-        "desc": "Name of the the channel to query by.",
+        "desc": "Name of the channel to query by.",
         "type": "string",
         "example": "announcement"
       },
@@ -111,7 +111,7 @@
   },
   "errors": {
     "connected_team_passed_in_is_not_top_level_team": {
-      "desc": "One of the orgs provided in the external connected teams filter is not a top level team."
+      "desc": "One of the orgs provided in the external connected teams filter is not a top level team. Pass the connected org’s top-level ID."
     },
     "external_team_not_connected_to_this_org": {
       "desc": "One of the teams provided in the external connected teams filter is not connected to the org."
