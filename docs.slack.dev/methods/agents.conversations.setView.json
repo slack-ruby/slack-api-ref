@@ -30,7 +30,7 @@
       },
       "type": {
         "schema": "view_type",
-        "desc": "The kind of view to create or update. Defaults to `html`. Determines which other arguments are required: `html` and `diff` require `content`, `block_kit` requires `blocks`, `canvas` requires `canvas_id`, `pull_request` requires `pr_url`.",
+        "desc": "The kind of view to create or update. Defaults to `html`. Determines which other arguments are required: `html` and `diff` require `content`, `block_kit` requires `blocks`, and `canvas` requires `canvas_id`.",
         "default": "html"
       },
       "view_key": {
@@ -67,11 +67,6 @@
         "type": "string",
         "maxLength": 128
       },
-      "pr_url": {
-        "desc": "For `pull_request` views: the pull request's URL. Required when `type` is `pull_request`; ignored otherwise.",
-        "type": "string",
-        "maxLength": 2048
-      },
       "base_branch": {
         "desc": "For `diff` views: base branch name for display purposes.",
         "type": "string",
@@ -93,19 +88,10 @@
         "maxLength": 256
       },
       "csp": {
-        "desc": "Content-Security-Policy domain declarations for the view. Domains are validated server-side (`https://` only, no private or internal hosts) and persisted. Only `resource_domains` is honored at render time today; `connect_domains` is accepted and stored for forward-compatibility but NOT honored yet.",
+        "desc": "Content-Security-Policy domain declarations for the view. Domains are validated server-side (`https://` only, no private or internal hosts) and persisted.",
         "type": "object",
         "additionalProperties": false,
         "properties": {
-          "connect_domains": {
-            "desc": "Origins the view may `fetch()`, XHR, or WebSocket to. Accepted and stored, but not honored at render time yet.",
-            "type": "array",
-            "maxItems": 20,
-            "items": {
-              "type": "string",
-              "maxLength": 2048
-            }
-          },
           "resource_domains": {
             "desc": "Origins the view may load scripts, styles, fonts, images, and media from, merged into the curated CDN allowlist at render time.",
             "type": "array",
@@ -139,7 +125,7 @@
       },
       "file_id": {
         "type": "string",
-        "desc": "The encoded ID of the backing file for the view. For `html` and `block_kit` views this is the agent-owned content file; for `diff` views it is the diff snippet file; for `canvas` views it is the canvas's file ID (same value as `canvas_id`). Empty for `pull_request` views, which have no backing file."
+        "desc": "The encoded ID of the backing file for the view. For `html` and `block_kit` views this is the agent-owned content file; for `diff` views it is the diff snippet file; for `canvas` views it is the canvas's file ID (same value as `canvas_id`)."
       },
       "content_version": {
         "type": "integer",
@@ -178,10 +164,7 @@
       "desc": "The supplied `type` is not a recognized view type."
     },
     "missing_required_arg": {
-      "desc": "A required argument for the supplied view type is missing (`content` for `html` or `diff`, `blocks` for `block_kit`, `canvas_id` for `canvas`, `pr_url` for `pull_request`)."
-    },
-    "invalid_pr_url": {
-      "desc": "The supplied `pr_url` is not a valid https pull request URL."
+      "desc": "A required argument for the supplied view type is missing (`content` for `html` or `diff`, `blocks` for `block_kit`, `canvas_id` for `canvas`)."
     },
     "invalid_blocks": {
       "desc": "The supplied `blocks` failed Block Kit validation."
