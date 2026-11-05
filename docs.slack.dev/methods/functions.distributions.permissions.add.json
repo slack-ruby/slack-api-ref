@@ -100,6 +100,9 @@
     },
     "app_not_found": {
       "desc": "This app does not exist."
+    },
+    "app_edit_disabled": {
+      "desc": "The app is managed in Salesforce, so access to its functions can't be changed here."
     }
   },
   "examples": {

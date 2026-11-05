@@ -28,12 +28,14 @@
       },
       "team_ids": {
         "type": "string",
-        "desc": "IDs of the teams to uninstall from (max 100). With an org-level token, this or `enterprise_id` is required."
+        "desc": "IDs of the teams to uninstall from (max 100). With an org-level token, this or `enterprise_id` is required.",
+        "is_resource": false
       },
       "enterprise_id": {
         "desc": "The enterprise to completely uninstall the application from (across all workspaces). With an org-level token, this or `team_ids` is required.",
         "example": "E12345",
-        "type": "string"
+        "type": "string",
+        "is_resource": false
       }
     }
   },

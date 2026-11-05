@@ -36,7 +36,8 @@
           "processing",
           "suspended",
           "closed"
-        ]
+        ],
+        "schema": "agent_session_status"
       },
       "thread_ts": {
         "desc": "Timestamp of the thread root message the session is scoped to. Required for thread-based sessions in regular channels and DMs. Must be omitted for session channels.",

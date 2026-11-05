@@ -71,6 +71,9 @@
     },
     "unable_to_open_file": {
       "desc": "Error with file upload."
+    },
+    "app_edit_disabled": {
+      "desc": "The app cannot be edited."
     }
   },
   "examples": {

@@ -39,6 +39,7 @@
     "access_denied": "This actor does not have access to the permissions on this resource.",
     "accesslimited": "Access to this method is limited on the current network.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
+    "app_edit_disabled": "The app is managed in Salesforce, so access to its functions can't be changed here.",
     "app_not_found": "This app does not exist.",
     "deprecated_endpoint": "The endpoint has been deprecated.",
     "ekm_access_denied": "Administrators have suspended the ability to post a message.",

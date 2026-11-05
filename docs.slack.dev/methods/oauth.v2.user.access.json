@@ -165,7 +165,7 @@
       "desc": "Returned when the the org-installed app cannot be installed on a workspace."
     },
     "invalid_client_id": {
-      "desc": "Value passed for `client_id` was invalid."
+      "desc": "Value passed for `client_id` was invalid, or the `client_id` in the assertion is not a string."
     },
     "invalid_code": {
       "desc": "Value passed for `code` was invalid."
@@ -232,6 +232,36 @@
     },
     "no_idp_config_for_entity_id": {
       "desc": "No Enterprise-Managed Authorization (cross-app access) configuration is bound to the identity provider's SAML EntityID carried in the assertion's `sub_id`. An org admin must configure External Identity / cross-app access for that identity provider before requesting a token with the `urn:ietf:params:oauth:grant-type:jwt-bearer` grant."
+    },
+    "ema_tenant_mismatch": {
+      "desc": "The `aud_tenant` in an assertion without a `sub_id` is missing, or is not the ID of the organization or workspace whose identity provider issued it."
+    },
+    "invalid_aud_tenant": {
+      "desc": "The `aud_tenant` in the assertion is not a string. It must be the ID of the organization or workspace whose identity provider issued the assertion."
+    },
+    "invalid_email": {
+      "desc": "The `email` in the assertion is not a string."
+    },
+    "invalid_issuer": {
+      "desc": "The `iss` in the assertion is not a string. It must be the issuer URL of the identity provider that issued the assertion."
+    },
+    "invalid_jti": {
+      "desc": "The `jti` in the assertion is not a string. It must be a unique identifier for the assertion."
+    },
+    "invalid_scope": {
+      "desc": "The `scope` in the assertion is not a string. It must be a space-delimited list of scopes."
+    },
+    "invalid_sub": {
+      "desc": "The `sub` in the assertion is not a string."
+    },
+    "invalid_sub_id_format": {
+      "desc": "The `format` of the `sub_id` in the assertion is not a string. The only supported format is `saml-nameid`."
+    },
+    "missing_audience": {
+      "desc": "Missing `aud` in the assertion. It must name this token endpoint as an audience."
+    },
+    "missing_client_id": {
+      "desc": "Missing `client_id` in the assertion. It must match the `client_id` of the app requesting the token."
     }
   },
   "examples": {

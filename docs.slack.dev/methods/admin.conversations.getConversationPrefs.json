@@ -124,7 +124,7 @@
   },
   "errors": {
     "channel_not_found": {
-      "desc": "The value passed for `channel_id` was invalid."
+      "desc": "The value passed for `channel_id` was invalid, or the channel belongs to a workspace other than the token's workspace and isn't shared with it."
     },
     "channel_type_not_supported": {
       "desc": "The provided `channel_id` was a DM, MPDM, or the 'general' channel."
@@ -146,6 +146,9 @@
     },
     "restricted_action": {
       "desc": "A workspace preference prevents the authenticated user from listing preferences."
+    },
+    "target_team_not_on_org": {
+      "desc": "The specified target_team is not part of the organization."
     }
   },
   "examples": {

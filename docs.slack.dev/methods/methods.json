@@ -329,6 +329,13 @@
     ]
   },
   {
+    "name": "admin.conversations.kick",
+    "description": "Remove multiple users from a conversation. Admin version of conversations.kick with support for bulk user removal.",
+    "family": [
+      "admin"
+    ]
+  },
+  {
     "name": "admin.conversations.linkObjects",
     "description": "Link a Salesforce record to a channel",
     "family": [
@@ -2157,7 +2164,7 @@
   },
   {
     "name": "slackbot.skills.update",
-    "description": "Changes a Slackbot skill's instructions or metadata.",
+    "description": "Changes a Slackbot skill's instructions or metadata. Only the inputs you send are changed; a call that changes nothing succeeds without writing.",
     "family": [
       "slackbot"
     ]

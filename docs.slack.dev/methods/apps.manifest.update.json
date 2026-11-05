@@ -106,6 +106,9 @@
     },
     "dynamic_client_registration_invalid_response": {
       "desc": "The MCP server returned an invalid response during Dynamic Client Registration."
+    },
+    "app_edit_disabled": {
+      "desc": "The app cannot be edited."
     }
   },
   "examples": {

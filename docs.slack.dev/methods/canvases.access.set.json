@@ -48,7 +48,7 @@
         "minItems": 1,
         "maxItems": 20,
         "items": {
-          "schema": "channel_id"
+          "schema": "channel_or_group_id"
         }
       },
       "user_ids": {

@@ -49,5 +49,13 @@
     "too_many_ids": {
       "desc": "The request specified both an external_id and a file, only one may be specified"
     }
+  },
+  "examples": {
+    "success": {
+      "description": "Typical success response",
+      "example": {
+        "ok": true
+      }
+    }
   }
 }

@@ -73,5 +73,48 @@
     "too_many_ids": {
       "desc": "The request specified both an external_id and a file, only one may be specified"
     }
+  },
+  "examples": {
+    "success": {
+      "description": "Typical success response",
+      "example": {
+        "ok": true,
+        "file": {
+          "id": "F0123ABC456",
+          "created": 1740062388,
+          "timestamp": 1740062388,
+          "name": "Test",
+          "title": "Test",
+          "mimetype": "application/vnd.slack-remote",
+          "filetype": "remote",
+          "pretty_type": "Remote",
+          "user": "U123A4BCDE5",
+          "user_team": "T123A4BC5DE",
+          "editable": false,
+          "size": 0,
+          "mode": "external",
+          "is_external": true,
+          "external_type": "app",
+          "is_public": false,
+          "public_url_shared": false,
+          "display_as_bot": false,
+          "username": "",
+          "url_private": "https://docs.google.com/document/d/123/edit?tab=t.0",
+          "media_display_type": "unknown",
+          "permalink": "https://thetestenv.slack.com/files/U123A4BCDE5/F0123ABC456/test",
+          "comments_count": 0,
+          "is_starred": false,
+          "shares": {},
+          "channels": [],
+          "groups": [],
+          "ims": [],
+          "has_more_shares": false,
+          "external_id": "1234",
+          "external_url": "https://docs.google.com/document/d/123/edit?tab=t.0",
+          "has_rich_preview": false,
+          "file_access": "visible"
+        }
+      }
+    }
   }
 }

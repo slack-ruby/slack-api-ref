@@ -132,6 +132,7 @@
     "ratelimited": "The request has been ratelimited. Refer to the Retry-After header for when to retry the request.",
     "request_timeout": "The method was called via a POST request, but the POST data was either missing or truncated.",
     "restricted_action": "A workspace preference prevents the authenticated user from posting.",
+    "restricted_action_read_only_channel": "Cannot post any message into a read-only channel.",
     "service_unavailable": "The service is temporarily unavailable.",
     "team_added_to_org": "The workspace associated with your request is currently undergoing migration to an Enterprise Organization. Web API and other platform operations will be intermittently unavailable until the transition is complete.",
     "token_expired": "Authentication token has expired.",

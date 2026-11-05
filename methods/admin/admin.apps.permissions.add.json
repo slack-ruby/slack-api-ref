@@ -38,7 +38,7 @@
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
     "app_acl_not_found": "This app does not have an ACL.",
     "app_not_found": "This app does not exist.",
-    "channel_not_found": "One or more channel IDs are not valid.",
+    "channel_not_found": "One or more channel IDs are not valid, are not in this organization, or name a private channel the caller is neither a member of nor permitted to manage.",
     "deprecated_endpoint": "The endpoint has been deprecated.",
     "ekm_access_denied": "Administrators have suspended the ability to post a message.",
     "enterprise_is_restricted": "The method cannot be called from an Enterprise.",

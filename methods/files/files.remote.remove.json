@@ -18,7 +18,9 @@
     }
   },
   "response": {
-    "examples": []
+    "examples": [
+      "{\n    \"ok\": true\n}"
+    ]
   },
   "errors": {
     "access_denied": "Access to a resource specified in the request is denied.",

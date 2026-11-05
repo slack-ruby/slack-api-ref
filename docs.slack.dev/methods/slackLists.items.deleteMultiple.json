@@ -63,6 +63,9 @@
     },
     "user_not_found": {
       "desc": "The user cannot be found."
+    },
+    "permission_denied": {
+      "desc": "The user does not have permission to perform this action (for example, frontline members cannot delete List items)."
     }
   },
   "examples": {

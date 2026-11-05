@@ -91,6 +91,15 @@
     },
     "unsupported_team_type": {
       "desc": "This endpoint can only called by Enterprise organizations."
+    },
+    "target_team_not_on_org": {
+      "desc": "The specified target_team is not part of the organization."
+    },
+    "not_supported": {
+      "desc": "This type of channel isn't supported by this method."
+    },
+    "default_org_wide_channel": {
+      "desc": "The channel is a default org-wide channel, which isn't supported by this method."
     }
   },
   "examples": {

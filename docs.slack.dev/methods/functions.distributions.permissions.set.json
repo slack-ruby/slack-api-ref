@@ -150,6 +150,9 @@
     },
     "permission_type_required": {
       "desc": "`permission_type` is a required input."
+    },
+    "app_edit_disabled": {
+      "desc": "The app is managed in Salesforce, so access to its functions can't be changed here."
     }
   },
   "examples": {

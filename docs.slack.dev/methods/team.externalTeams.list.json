@@ -63,7 +63,6 @@
             "away_team_sc_invite_permissions",
             "accept_sc_invites",
             "sc_mpdm_to_private",
-            "require_sc_channel_for_sc_dm",
             "external_awareness_context_bar",
             "interact_with_externally_owned_workflows",
             "external_teams_interact_with_locally_owned_workflows"

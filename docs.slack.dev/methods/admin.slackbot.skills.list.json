@@ -270,16 +270,13 @@
       "desc": "The category isn't one of the supported skill categories."
     },
     "feature_not_enabled": {
-      "desc": "The Skills API isn't enabled for this organization."
+      "desc": "The Skills API isn't enabled for this organization or workspace."
     },
     "restricted_action": {
       "desc": "The caller must be an org admin or owner with permission to manage skills."
     },
     "internal_error": {
       "desc": "A lookup failed, so the page couldn't be built completely. Retry the request with the same cursor."
-    },
-    "not_an_enterprise": {
-      "desc": "This method requires an Enterprise Grid organization."
     }
   },
   "examples": {
@@ -319,7 +316,7 @@
       "description": "Typical error response",
       "example": {
         "ok": false,
-        "error": "not_an_enterprise"
+        "error": "feature_not_enabled"
       }
     }
   }

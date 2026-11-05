@@ -539,7 +539,7 @@
       "desc": "The feature is not available on the current workspace."
     },
     "invalid_action_token": {
-      "desc": "The `action_token` provided is not valid."
+      "desc": "The `action_token` provided is not valid, has expired, or was not issued to the app whose token accompanies it."
     },
     "invalid_cursor": {
       "desc": "The cursormark provided is not valid."
@@ -552,6 +552,9 @@
     },
     "assistant_search_context_disabled": {
       "desc": "We're having issues returning your search results. Please wait and try again."
+    },
+    "restricted_action": {
+      "desc": "The calling user is a guest, or is not an active member of the workspace."
     }
   },
   "examples": {

@@ -1,5 +1,5 @@
 {
-  "desc": "Changes a Slackbot skill's instructions or metadata.",
+  "desc": "Changes a Slackbot skill's instructions or metadata. Only the inputs you send are changed; a call that changes nothing succeeds without writing.",
   "http_method": "POST",
   "scope": {
     "bot": [

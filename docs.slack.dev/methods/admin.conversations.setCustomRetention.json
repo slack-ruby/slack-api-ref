@@ -63,6 +63,12 @@
     },
     "retention_override_not_allowed": {
       "desc": "The current retention policy disallows modifying the retention policy of this channel."
+    },
+    "not_supported": {
+      "desc": "This type of channel isn't supported by this method."
+    },
+    "external_channel_migrating": {
+      "desc": "The channel is an externally shared channel that is currently being migrated."
     }
   },
   "examples": {

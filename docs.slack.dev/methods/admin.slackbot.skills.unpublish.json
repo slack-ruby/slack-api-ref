@@ -40,10 +40,7 @@
   },
   "errors": {
     "feature_not_enabled": {
-      "desc": "The Skills API is not enabled for this organization."
-    },
-    "not_an_enterprise": {
-      "desc": "This method requires an Enterprise Grid organization."
+      "desc": "The Skills API is not enabled for this organization or workspace."
     },
     "restricted_action": {
       "desc": "The caller must be an org admin or owner with permission to manage skills."

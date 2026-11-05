@@ -53,7 +53,7 @@
   "response": {
     "examples": [
       "{\n    \"ok\": true,\n    \"skills\": [\n        {\n            \"id\": \"F0123ABCD\",\n            \"display_name\": \"Daily priorities\",\n            \"description\": \"Reviews information from Slack and your calendar to suggest priorities for the day.\",\n            \"category\": \"productivity\",\n            \"creator_id\": \"U0123ABCD\",\n            \"date_created\": 1790000000,\n            \"date_updated\": 1790100000,\n            \"visibility\": \"invite_only\",\n            \"is_official\": false,\n            \"usage_count\": 1840,\n            \"library_count\": 312,\n            \"auto_enabled\": {\n                \"permission_type\": \"named_entities\",\n                \"usergroup_ids\": [\n                    \"S0123ABCD\"\n                ]\n            }\n        }\n    ],\n    \"response_metadata\": {\n        \"next_cursor\": \"\"\n    }\n}",
-      "{\n    \"ok\": false,\n    \"error\": \"not_an_enterprise\"\n}"
+      "{\n    \"ok\": false,\n    \"error\": \"feature_not_enabled\"\n}"
     ]
   },
   "errors": {
@@ -64,7 +64,7 @@
     "ekm_access_denied": "Administrators have suspended the ability to post a message.",
     "enterprise_is_restricted": "The method cannot be called from an Enterprise.",
     "fatal_error": "The server could not complete your operation(s) without encountering a catastrophic error. It's possible some aspect of the operation succeeded before the error was raised.",
-    "feature_not_enabled": "The Skills API isn't enabled for this organization.",
+    "feature_not_enabled": "The Skills API isn't enabled for this organization or workspace.",
     "internal_error": "A lookup failed, so the page couldn't be built completely. Retry the request with the same cursor.",
     "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
     "invalid_array_arg": "The method was passed an array as an argument. Please only input valid strings.",
@@ -79,7 +79,6 @@
     "missing_scope": "The token used is not granted the specific scope permissions required to complete this request.",
     "no_permission": "The workspace token used in this request does not have the permissions necessary to complete the request. Make sure your app is a member of the conversation it's attempting to post a message to.",
     "not_allowed_token_type": "The token type used in this request is not allowed.",
-    "not_an_enterprise": "This method requires an Enterprise Grid organization.",
     "not_authed": "No authentication token provided.",
     "org_login_required": "The workspace is undergoing an enterprise migration and will not be available until migration is complete.",
     "ratelimited": "The request has been ratelimited. Refer to the Retry-After header for when to retry the request.",

@@ -174,8 +174,7 @@
       "desc": "Channel has been archived."
     },
     "markdown_text_conflict": {
-      "desc": "Markdown text cannot be used in conjunction with `blocks` or `text` argument.",
-      "hidden": true
+      "desc": "Markdown text cannot be used in conjunction with `blocks` or `text` argument."
     },
     "message_limit_exceeded": {
       "desc": "Members on this team are sending too many messages. For more details, see https://slack.com/help/articles/115002422943-Usage-limits-for-free-workspaces"
@@ -206,6 +205,9 @@
     },
     "cannot_reply_to_message": {
       "desc": "This message type cannot have thread replies."
+    },
+    "restricted_action_read_only_channel": {
+      "desc": "Cannot post any message into a read-only channel."
     }
   },
   "examples": {

@@ -96,6 +96,39 @@
     },
     "invalid_vote_value": {
       "desc": "Invalid value provided for a vote column."
+    },
+    "invalid_date": {
+      "desc": "Date supplied is invalid."
+    },
+    "invalid_email": {
+      "desc": "Email supplied is invalid."
+    },
+    "invalid_phone_number": {
+      "desc": "Invalid phone number provided."
+    },
+    "invalid_message": {
+      "desc": "Invalid message provided."
+    },
+    "invalid_attachment": {
+      "desc": "Invalid attachment provided."
+    },
+    "invalid_text_block": {
+      "desc": "Rich text payload supplied is invalid."
+    },
+    "invalid_timestamp": {
+      "desc": "Timestamp supplied is invalid."
+    },
+    "invalid_reference": {
+      "desc": "Invalid reference provided; a reference cell holds one record or message."
+    },
+    "channel_not_found": {
+      "desc": "The channel cannot be found."
+    },
+    "restricted_action": {
+      "desc": "A team preference prevents this action."
+    },
+    "permission_denied": {
+      "desc": "The user does not have permission to perform this action (for example, frontline members cannot create List items)."
     }
   },
   "examples": {

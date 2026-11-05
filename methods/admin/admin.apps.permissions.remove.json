@@ -39,6 +39,7 @@
     "accesslimited": "Access to this method is limited on the current network.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
     "app_acl_not_found": "This app does not have an ACL.",
+    "app_acl_write_failed": "A transient database error (e.g. a deadlock) prevented the permission change from being saved. No change was applied; retry the request.",
     "app_not_found": "This app does not exist.",
     "channel_not_found": "One or more channel IDs are not valid.",
     "deprecated_endpoint": "The endpoint has been deprecated.",

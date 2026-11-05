@@ -32,10 +32,11 @@
       },
       "limit": {
         "type": "integer",
-        "desc": "The maximum number of records to return.",
+        "desc": "The maximum number of records to return, up to the list row limit of 5000.",
         "minimum": 1,
-        "maximum": 1000,
-        "example": "100"
+        "maximum": 5000,
+        "example": "100",
+        "default": 5000
       },
       "cursor": {
         "type": "string",

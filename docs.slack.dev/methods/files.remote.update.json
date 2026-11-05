@@ -95,5 +95,78 @@
     "too_large": {
       "desc": "The uploaded image had excessive dimensions"
     }
+  },
+  "examples": {
+    "success": {
+      "description": "Typical success response",
+      "example": {
+        "ok": true,
+        "file": {
+          "id": "F0123ABC456",
+          "created": 1740066121,
+          "timestamp": 1740066121,
+          "name": "Test",
+          "title": "Test",
+          "mimetype": "application/msword",
+          "filetype": "doc",
+          "pretty_type": "Word Document",
+          "user": "U123A4BCDE5",
+          "user_team": "T123A4BC5DE",
+          "editable": false,
+          "size": 0,
+          "mode": "external",
+          "is_external": true,
+          "external_type": "app",
+          "is_public": true,
+          "public_url_shared": false,
+          "display_as_bot": false,
+          "username": "",
+          "url_private": "https://docs.google.com/document/d/123/edit?tab=t.0",
+          "media_display_type": "unknown",
+          "permalink": "https://thetestenv.slack.com/files/U123A4BCDE5/F0123ABC456/test",
+          "comments_count": 0,
+          "is_starred": false,
+          "shares": {
+            "public": {
+              "C03QJUTKS4C": [
+                {
+                  "reply_users": [],
+                  "reply_users_count": 0,
+                  "reply_count": 0,
+                  "ts": "1740066131.886799",
+                  "channel_name": "the-test-channel",
+                  "team_id": "T123A4BC5DE",
+                  "share_user_id": "U123A4BCDE5",
+                  "source": "UNKNOWN"
+                }
+              ],
+              "C04567YFDK6": [
+                {
+                  "reply_users": [],
+                  "reply_users_count": 0,
+                  "reply_count": 0,
+                  "ts": "1740066131.650279",
+                  "channel_name": "dev-test",
+                  "team_id": "T123A4BC5DE",
+                  "share_user_id": "U123A4BCDE5",
+                  "source": "UNKNOWN"
+                }
+              ]
+            }
+          },
+          "channels": [
+            "C12ABCDEF3G",
+            "C12345ABCD6"
+          ],
+          "groups": [],
+          "ims": [],
+          "has_more_shares": false,
+          "external_id": "1234",
+          "external_url": "https://docs.google.com/document/d/123/edit?tab=t.0",
+          "has_rich_preview": false,
+          "file_access": "visible"
+        }
+      }
+    }
   }
 }

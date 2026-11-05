@@ -2,7 +2,7 @@
   "group": "slackbot",
   "name": "slackbot.skills.update",
   "deprecated": false,
-  "desc": "Changes a Slackbot skill's instructions or metadata.",
+  "desc": "Changes a Slackbot skill's instructions or metadata. Only the inputs you send are changed; a call that changes nothing succeeds without writing.",
   "args": {
     "skill_id": {
       "required": true,

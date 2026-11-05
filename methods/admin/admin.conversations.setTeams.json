@@ -47,6 +47,7 @@
     "enterprise_is_restricted": "The method cannot be called from an Enterprise.",
     "externally_shared_or_disconnected_channel": "The channel is or was externally shared.",
     "fatal_error": "The server could not complete your operation(s) without encountering a catastrophic error. It's possible some aspect of the operation succeeded before the error was raised.",
+    "insufficient_permissions_to_share_channel": "The authenticated user isn't an org admin or owner and tried to add or remove an unlisted workspace that isn't visible to them. Ask an org admin or owner with permission to manage the channel to make this change.",
     "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of accepted or expected values. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
     "invalid_array_arg": "The method was passed an array as an argument. Please only input valid strings.",
     "invalid_channel_id": "`channel_id` was invalid.",

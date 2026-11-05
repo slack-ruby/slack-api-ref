@@ -87,5 +87,17 @@
     "no_bot_user_for_app": {
       "desc": "Cannot call the Remote Files endpoints unless app has associated bot user"
     }
+  },
+  "examples": {
+    "success": {
+      "description": "Typical success response",
+      "example": {
+        "ok": true,
+        "files": [],
+        "response_metadata": {
+          "next_cursor": ""
+        }
+      }
+    }
   }
 }

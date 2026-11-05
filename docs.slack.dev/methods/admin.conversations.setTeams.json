@@ -107,6 +107,9 @@
     },
     "unsupported_arguments": {
       "desc": "The provided method arguments are not supported."
+    },
+    "insufficient_permissions_to_share_channel": {
+      "desc": "The authenticated user isn't an org admin or owner and tried to add or remove an unlisted workspace that isn't visible to them. Ask an org admin or owner with permission to manage the channel to make this change."
     }
   },
   "examples": {

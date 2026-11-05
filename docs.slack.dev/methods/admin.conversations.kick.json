@@ -1,0 +1,159 @@
+{
+  "desc": "Remove multiple users from a conversation. Admin version of conversations.kick with support for bulk user removal.",
+  "http_method": "POST",
+  "scope": {
+    "user": [
+      "admin.conversations:write"
+    ]
+  },
+  "rate_limits": "t2",
+  "json_input_supported": true,
+  "args": {
+    "type": "object",
+    "required": [
+      "token",
+      "channel_id",
+      "user_ids"
+    ],
+    "properties": {
+      "token": {
+        "type": "string",
+        "subtype": "auth",
+        "desc": "Authentication token bearing required scopes. Tokens should be passed as an HTTP Authorization header or alternatively, as a POST parameter.",
+        "example": "xxxx-xxxxxxxxx-xxxx"
+      },
+      "channel_id": {
+        "desc": "ID of conversation to remove users from.",
+        "schema": "channel",
+        "subtype": "channel"
+      },
+      "user_ids": {
+        "desc": "The users to remove from the channel.",
+        "type": "array",
+        "items": {
+          "schema": "user_id"
+        },
+        "minItems": 1,
+        "maxItems": 100,
+        "subtype": "users"
+      }
+    }
+  },
+  "output": {
+    "type": "object",
+    "required": [
+      "removed_user_ids",
+      "failed_user_ids"
+    ],
+    "properties": {
+      "removed_user_ids": {
+        "desc": "User IDs that were successfully removed.",
+        "type": "array",
+        "items": {
+          "schema": "user_id"
+        }
+      },
+      "failed_user_ids": {
+        "desc": "User IDs that could not be removed, with error details.",
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": [
+            "user_id",
+            "error"
+          ],
+          "properties": {
+            "user_id": {
+              "schema": "user_id"
+            },
+            "error": {
+              "type": "string",
+              "desc": "The error code explaining why the removal failed."
+            }
+          }
+        }
+      }
+    }
+  },
+  "errors": {
+    "channel_not_found": {
+      "desc": "The value passed for `channel_id` was invalid."
+    },
+    "channel_type_not_supported": {
+      "desc": "The provided `channel_id` is a DM, MPDM, or cannot be used with this method."
+    },
+    "external_channel_migrating": {
+      "desc": "The channel is an externally shared channel that is currently being migrated and members can't be removed."
+    },
+    "failed_for_all_users": {
+      "desc": "All users could not be removed from the channel. Check `failed_user_ids` for details."
+    },
+    "not_supported": {
+      "desc": "This type of channel doesn't support removing members through this method."
+    },
+    "restricted_action": {
+      "desc": "The authenticated user lacks channel management permissions for this channel type, or a team preference prevents them from removing members."
+    },
+    "too_many_users": {
+      "desc": "Too many user IDs provided (maximum 100)."
+    },
+    "permission_denied": {
+      "desc": "The user does not have permission to remove members from the channel."
+    }
+  },
+  "examples": {
+    "success": {
+      "url": "/api/admin.conversations.kick?token=YOUR_TOKEN&channel_id=C12345&user_ids=U12345,U67890",
+      "description": "Typical success response when all users are removed",
+      "example": {
+        "ok": true,
+        "removed_user_ids": [
+          "U12345",
+          "U67890"
+        ],
+        "failed_user_ids": []
+      }
+    },
+    "success_with_mixed_results": {
+      "url": "/api/admin.conversations.kick?token=YOUR_TOKEN&channel_id=C12345&user_ids=U12345,U67890",
+      "description": "Success response when some users could not be removed, for example because they are not in the channel",
+      "example": {
+        "ok": true,
+        "removed_user_ids": [
+          "U12345"
+        ],
+        "failed_user_ids": [
+          {
+            "user_id": "U67890",
+            "error": "not_in_channel"
+          }
+        ],
+        "warning": "failed_for_some_users",
+        "response_metadata": {
+          "warnings": [
+            "failed_for_some_users"
+          ]
+        }
+      }
+    },
+    "error": {
+      "url": "/api/admin.conversations.kick?token=YOUR_TOKEN&channel_id=C12345&user_ids=U67890",
+      "description": "Typical error response when none of the users could be removed",
+      "example": {
+        "ok": false,
+        "error": "failed_for_all_users",
+        "failed_user_ids": [
+          {
+            "user_id": "U67890",
+            "error": "not_in_channel"
+          }
+        ]
+      }
+    }
+  },
+  "warnings": {
+    "failed_for_some_users": {
+      "desc": "Some users could not be removed from the channel. Check `failed_user_ids` for details."
+    }
+  }
+}

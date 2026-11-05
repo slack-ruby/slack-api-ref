@@ -24,6 +24,7 @@
     "access_denied": "Access to a resource specified in the request is denied.",
     "accesslimited": "Access to this method is limited on the current network.",
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
+    "app_edit_disabled": "The app cannot be edited.",
     "app_not_eligible": "The specified app is not eligible for this API.",
     "app_not_found": "The specified app was not found or has been deleted.",
     "app_not_owned_by_manager_app": "The specified app is not managed by the calling manager app. A manager app can only update apps that it originally created via apps.manifest.create. It cannot modify apps created by other manager apps or apps created manually, even if the same user owns both.",

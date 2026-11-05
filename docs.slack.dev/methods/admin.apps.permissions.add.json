@@ -49,7 +49,9 @@
         "desc": "List of encoded channel IDs to add to the channel restriction list. Interpretation depends on the app's `channel_restriction_mode`, which is configured via the `admin.apps.permissions.set` method.",
         "example": "C00000001,C00000002",
         "items": {
-          "schema": "channel_id"
+          "title": "Channel ID",
+          "type": "string",
+          "pattern": "^[CG][A-Z0-9]{2,}$"
         },
         "maxItems": 200
       }
@@ -96,7 +98,7 @@
       "desc": "Cannot add channels when channel_restriction_mode is all_channels. Use set to configure a restriction mode first."
     },
     "channel_not_found": {
-      "desc": "One or more channel IDs are not valid."
+      "desc": "One or more channel IDs are not valid, are not in this organization, or name a private channel the caller is neither a member of nor permitted to manage."
     },
     "failed_to_update_channels": {
       "desc": "An error occurred while updating the channel restriction list."

@@ -62,14 +62,17 @@
           "all_channels",
           "specific_channels",
           "all_channels_except"
-        ]
+        ],
+        "is_resource": false
       },
       "channel_ids": {
         "type": "array",
         "desc": "List of encoded channel IDs for channel restrictions. Semantics depend on channel_restriction_mode: allowlist for specific_channels, exclusion list for all_channels_except",
         "example": "C00000001,C00000002",
         "items": {
-          "schema": "channel_id"
+          "title": "Channel ID",
+          "type": "string",
+          "pattern": "^[CG][A-Z0-9]{2,}$"
         },
         "maxItems": 200
       }
@@ -116,7 +119,7 @@
       "desc": "channel_ids is required when channel_restriction_mode is specific_channels or all_channels_except."
     },
     "channel_not_found": {
-      "desc": "One or more channel IDs are not valid."
+      "desc": "One or more channel IDs are not valid, are not in this organization, or name a private channel that is not already set on the app and that the caller is neither a member of nor permitted to manage."
     },
     "restricted_action": {
       "desc": "User does not have permission to perform this action."
@@ -126,6 +129,9 @@
     },
     "channel_restriction_requires_app_access": {
       "desc": "Channel access cannot be configured while the app is set to no_one, since the app can't be used in any channel."
+    },
+    "app_acl_write_failed": {
+      "desc": "A transient database error (e.g. a deadlock) prevented the permission change from being saved. No change was applied; retry the request."
     }
   },
   "examples": {

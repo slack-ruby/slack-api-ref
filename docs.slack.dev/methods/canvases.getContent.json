@@ -37,7 +37,8 @@
           "html",
           "markdown"
         ],
-        "default": "markdown"
+        "default": "markdown",
+        "example": "markdown"
       }
     }
   },

@@ -88,6 +88,12 @@
     },
     "team_not_found": {
       "desc": "At least one of the supplied `leaving_team_ids` are invalid."
+    },
+    "external_channel_migrating": {
+      "desc": "The channel is an externally shared channel that is currently being migrated."
+    },
+    "default_org_wide_channel": {
+      "desc": "The channel is a default org-wide channel, which isn't supported by this method."
     }
   },
   "examples": {

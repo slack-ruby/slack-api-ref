@@ -36,6 +36,7 @@
     "canvas_tab_creation_failed": "Canvas tab was unable to be created.",
     "channel_canvas_already_exists": "Channel canvas for the specified channel already exists.",
     "channel_canvas_creation_failed": "Channel canvas was unable to be created.",
+    "channel_not_found": "Value passed for `channel_id` was invalid.",
     "deprecated_endpoint": "The endpoint has been deprecated.",
     "ekm_access_denied": "Administrators have suspended the ability to post a message.",
     "enterprise_is_restricted": "The method cannot be called from an Enterprise.",
