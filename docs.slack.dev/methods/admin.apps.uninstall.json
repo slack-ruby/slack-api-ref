@@ -57,7 +57,7 @@
       "desc": "Organization-deployed apps cannot be uninstalled from specific workspaces using this API."
     },
     "permission_denied": {
-      "desc": "You do not have permission to uninstall applications from the reqeusted org or workspaces."
+      "desc": "You do not have permission to uninstall applications from the requested org or workspaces."
     },
     "specify_enterprise_or_teams": {
       "desc": "Provide exactly one of `enterprise_id` or `team_ids`."

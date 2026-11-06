@@ -69,7 +69,7 @@
       "desc": "The target team provided is not valid for the channel."
     },
     "invalid_action": {
-      "desc": "The user did not provid a valid action. Valid actions are 'upgrade' or 'downgrade'."
+      "desc": "The user did not provide a valid action. Valid actions are 'upgrade' or 'downgrade'."
     }
   },
   "examples": {

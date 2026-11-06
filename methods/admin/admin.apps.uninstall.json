@@ -51,7 +51,7 @@
     "not_allowed_token_type": "The token type used in this request is not allowed.",
     "not_authed": "No authentication token provided.",
     "org_login_required": "The workspace is undergoing an enterprise migration and will not be available until migration is complete.",
-    "permission_denied": "You do not have permission to uninstall applications from the reqeusted org or workspaces.",
+    "permission_denied": "You do not have permission to uninstall applications from the requested org or workspaces.",
     "ratelimited": "The request has been ratelimited. Refer to the Retry-After header for when to retry the request.",
     "request_timeout": "The method was called via a POST request, but the POST data was either missing or truncated.",
     "restricted_action": "the user is not authorized to perform this action",
