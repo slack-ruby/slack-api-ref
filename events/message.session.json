@@ -1,0 +1,11 @@
+{
+  "name": "message.session",
+  "desc": "A message was posted to a code channel.",
+  "scopes": [
+    "channels:history",
+    "groups:history"
+  ],
+  "APIs": [
+    "Events"
+  ]
+}
