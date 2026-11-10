@@ -21,6 +21,20 @@
     ]
   },
   {
+    "name": "admin.analytics.slackbot.skills",
+    "description": "Retrieve per-user Slackbot skill usage for an Enterprise organization on a single date, returned as paginated JSON.",
+    "family": [
+      "admin"
+    ]
+  },
+  {
+    "name": "admin.analytics.slackbot.tools",
+    "description": "Retrieve per-user Slackbot tool usage for an Enterprise organization on a single date, returned as paginated JSON.",
+    "family": [
+      "admin"
+    ]
+  },
+  {
     "name": "admin.apps.activities.list",
     "description": "Get logs for a specified team/org",
     "family": [

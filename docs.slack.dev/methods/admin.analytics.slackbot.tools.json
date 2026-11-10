@@ -1,0 +1,221 @@
+{
+  "desc": "Retrieve per-user Slackbot tool usage for an Enterprise organization on a single date, returned as paginated JSON.",
+  "http_method": "GET",
+  "scope": {
+    "user": [
+      "admin.analytics:read"
+    ]
+  },
+  "rate_limits": "t3",
+  "args": {
+    "type": "object",
+    "required": [
+      "token"
+    ],
+    "properties": {
+      "token": {
+        "type": "string",
+        "subtype": "auth",
+        "example": "xxxx-xxxxxxxxx-xxxx",
+        "desc": "Authentication token bearing required scopes. Tokens should be passed as an HTTP Authorization header or alternatively, as a POST parameter."
+      },
+      "date": {
+        "desc": "The date to retrieve the analytics data for, expressed as `YYYY-MM-DD` in UTC. If not provided, defaults to the latest date with available data. The response's `available_date_range` gives the earliest and latest dates you can request.",
+        "schema": "date",
+        "example": "2026-09-13"
+      },
+      "cursor": {
+        "desc": "Paginate through collections of data by setting the `cursor` parameter to a `next_cursor` attribute returned by a previous request's `response_metadata`. Default value fetches the first \"page\" of the collection.",
+        "type": "string",
+        "example": "rINXW545qlMoCHsOvVoSbLyn"
+      },
+      "limit": {
+        "desc": "Maximum number of tool entries to return per page, counted across all rows. Defaults to 500. Max allowed is 1000.",
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 1000,
+        "default": 500
+      }
+    }
+  },
+  "output": {
+    "type": "object",
+    "required": [
+      "tool_usage"
+    ],
+    "properties": {
+      "date": {
+        "desc": "The date the rows cover, as `YYYY-MM-DD` in UTC: the `date` argument, the date the `cursor` was issued for, or the latest date with available data when both were omitted. Omitted when no Slackbot analytics data is available yet.",
+        "schema": "date",
+        "example": "2026-09-13"
+      },
+      "available_date_range": {
+        "type": "object",
+        "required": [
+          "start_date",
+          "end_date"
+        ],
+        "desc": "The dates this method has data for. `start_date` is the earliest `date` it accepts and `end_date` the latest, which is also the default. Omitted when no Slackbot analytics data is available yet.",
+        "properties": {
+          "start_date": {
+            "desc": "The earliest date with data, as `YYYY-MM-DD` in UTC (inclusive).",
+            "schema": "date",
+            "example": "2025-09-14"
+          },
+          "end_date": {
+            "desc": "The latest date with data, as `YYYY-MM-DD` in UTC (inclusive).",
+            "schema": "date",
+            "example": "2026-09-13"
+          }
+        }
+      },
+      "tool_usage": {
+        "desc": "One row per user for whom Slackbot used at least one user-facing tool on the date. When a page ends partway through a user's tools, the rest continue in a row with the same `user_id` at the start of the next page, so merge rows that share it.",
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": [
+            "date",
+            "enterprise_id",
+            "user_id",
+            "tools"
+          ],
+          "properties": {
+            "date": {
+              "desc": "The date this row of data is representative of, expressed as `YYYY-MM-DD` in UTC.",
+              "schema": "date"
+            },
+            "enterprise_id": {
+              "desc": "Unique ID of the involved Enterprise organization",
+              "schema": "enterprise_id"
+            },
+            "user_id": {
+              "desc": "The canonical, organization-wide user ID this row concerns",
+              "schema": "user_id"
+            },
+            "email_address": {
+              "desc": "The email address of record for the same user. Omitted when the organization hides email addresses, and for guests when the organization hides guest email addresses.",
+              "type": "string"
+            },
+            "tools": {
+              "desc": "User-facing tools Slackbot used on the user's behalf on this date",
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "name",
+                  "use_count"
+                ],
+                "properties": {
+                  "name": {
+                    "desc": "The display name of the tool",
+                    "type": "string"
+                  },
+                  "use_count": {
+                    "desc": "Number of times Slackbot used the tool for the user on this date",
+                    "type": "integer"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "response_metadata": {
+        "type": "object",
+        "required": [
+          "next_cursor"
+        ],
+        "properties": {
+          "next_cursor": {
+            "desc": "Pass as `cursor` to fetch the next page. Empty when there are no more results.",
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "errors": {
+    "feature_not_available": {
+      "desc": "Slackbot analytics is not available for this organization."
+    },
+    "invalid_arguments": {
+      "desc": "Required arguments either were not provided or contain invalid values, including a `date` that is not a real calendar day."
+    },
+    "invalid_cursor": {
+      "desc": "Value passed for `cursor` was not valid, or was issued for a different `date`."
+    },
+    "date_before_created_date": {
+      "desc": "`date` is before the organization was created."
+    },
+    "data_not_available_for_date": {
+      "desc": "Analytics are not available for `date`. Call the method without `date` and use `available_date_range` from the response to find the supported dates."
+    },
+    "not_an_enterprise": {
+      "desc": "The token does not belong to an Enterprise organization."
+    },
+    "restricted_plan_level": {
+      "desc": "The enterprise plan level does not have access to this feature."
+    },
+    "restricted_action": {
+      "desc": "The token does not have permission to access Slackbot analytics."
+    },
+    "internal_error": {
+      "desc": "Something went wrong on our end, please try again."
+    }
+  },
+  "examples": {
+    "success": {
+      "url": "/api/admin.analytics.slackbot.tools?token=YOUR_TOKEN&date=2026-09-13&limit=3",
+      "description": "Successful response with one page of per-user tool usage. The second row omits `email_address` because the organization hides guest email addresses.",
+      "example": {
+        "ok": true,
+        "date": "2026-09-13",
+        "available_date_range": {
+          "start_date": "2025-09-14",
+          "end_date": "2026-09-13"
+        },
+        "tool_usage": [
+          {
+            "date": "2026-09-13",
+            "enterprise_id": "E123ABC456",
+            "user_id": "W111AAA111",
+            "email_address": "person@acme.com",
+            "tools": [
+              {
+                "name": "Web Search",
+                "use_count": 5
+              },
+              {
+                "name": "Update Slack Canvas",
+                "use_count": 3
+              }
+            ]
+          },
+          {
+            "date": "2026-09-13",
+            "enterprise_id": "E123ABC456",
+            "user_id": "W222BBB222",
+            "tools": [
+              {
+                "name": "Web Search",
+                "use_count": 1
+              }
+            ]
+          }
+        ],
+        "response_metadata": {
+          "next_cursor": "rINXW545qlMoCHsOvVoSbLyn"
+        }
+      }
+    },
+    "error": {
+      "url": "/api/admin.analytics.slackbot.tools?token=YOUR_TOKEN&date=2026-02-30",
+      "description": "Error response when `date` is not a real date",
+      "example": {
+        "ok": false,
+        "error": "invalid_arguments"
+      }
+    }
+  }
+}
