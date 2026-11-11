@@ -52,7 +52,7 @@
         "default": "asc"
       },
       "slack_connect_pref_filter": {
-        "desc": "Filters connected orgs by Slack Connect pref override(s). Value can be: `approved_orgs_only` `allow_sc_file_uploads` `profile_visibility` `away_team_sc_invite_permissions` `accept_sc_invites` `sc_mpdm_to_private` `require_sc_channel_for_sc_dm` `external_awareness_context_bar`",
+        "desc": "Filters connected orgs by Slack Connect pref override(s). Value can be: `approved_orgs_only` `allow_sc_file_uploads` `profile_visibility` `away_team_sc_invite_permissions` `accept_sc_invites` `sc_mpdm_to_private` `external_awareness_context_bar`",
         "type": "array",
         "items": {
           "type": "string",
