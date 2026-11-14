@@ -4,6 +4,7 @@ Changelog
 Some notable infrastructure contributions below. See [commits](commits/master) for Slack API updates.
 
 * Your contribution here.
+* [#90](https://github.com/slack-ruby/slack-api-ref/pull/90): Add `cursor` argument to `files.list`, enabling cursor-based pagination - [@rangerscience](https://github.com/rangerscience), [@dblock](https://github.com/dblock).
 * [#89](https://github.com/slack-ruby/slack-api-ref/pull/89): Migrate AI commit message generation to Copilot CLI after GitHub Models retirement - [@dblock](https://github.com/dblock).
 * [#87](https://github.com/slack-ruby/slack-api-ref/pull/87): Generate AI commit summaries for automated API updates - [@dblock](https://github.com/dblock).
 * [#64](https://github.com/slack-ruby/slack-api-ref/pull/64): Add `arg_groups` for groups of arguments whose requirement is interdependent - [@jmanian](https://github.com/jmanian).
