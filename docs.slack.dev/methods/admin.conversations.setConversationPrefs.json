@@ -75,6 +75,9 @@
     },
     "restricted_action": {
       "desc": "A workspace preference prevents the authenticated user from archiving."
+    },
+    "target_team_not_on_org": {
+      "desc": "The specified target_team is not part of the organization."
     }
   },
   "examples": {

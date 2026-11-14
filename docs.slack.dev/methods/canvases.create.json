@@ -63,6 +63,9 @@
     "restricted_action": {
       "desc": "User does not have permission to perform this action."
     },
+    "channel_not_found": {
+      "desc": "Value passed for `channel_id` was invalid, or the caller doesn't have access to that channel."
+    },
     "canvas_creation_failed": {
       "desc": "Canvas was unable to be created."
     },

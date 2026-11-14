@@ -51,11 +51,17 @@
     "invalid_role_for_user": {
       "desc": "The user cannot be made into an owner."
     },
+    "not_an_enterprise": {
+      "desc": "The workspace is not an Enterprise organization, or an Enterprise+ workspace with Admin API access."
+    },
     "not_an_admin": {
       "desc": "This method can only be accessed by org owners and admins."
     },
     "not_supported": {
       "desc": "This is not a supported action."
+    },
+    "restricted_action": {
+      "desc": "`team_id` is not in the authed organization or workspace, or `user_id` is not in it."
     },
     "team_not_found": {
       "desc": "`team_id` was not found."

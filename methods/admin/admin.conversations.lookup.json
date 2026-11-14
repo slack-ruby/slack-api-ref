@@ -59,15 +59,18 @@
     "no_permission": "The workspace token used in this request does not have the permissions necessary to complete the request. Make sure your app is a member of the conversation it's attempting to post a message to.",
     "no_valid_teams": "The team_ids argument doesn't contain any valid teams",
     "not_allowed_token_type": "The token type used in this request is not allowed.",
+    "not_an_admin": "This method is only accessible by org owners and Admins.",
+    "not_an_enterprise": "The workspace is not an Enterprise organization, or an Enterprise+ workspace with Admin API access.",
     "not_authed": "No authentication token provided.",
     "org_login_required": "The workspace is undergoing an enterprise migration and will not be available until migration is complete.",
     "ratelimited": "The request has been ratelimited. Refer to the Retry-After header for when to retry the request.",
     "request_timeout": "The method was called via a POST request, but the POST data was either missing or truncated.",
+    "restricted_action": "The caller isn't an admin or owner of the workspace or organization.",
     "service_unavailable": "The service is temporarily unavailable.",
     "team_added_to_org": "The workspace associated with your request is currently undergoing migration to an Enterprise Organization. Web API and other platform operations will be intermittently unavailable until the transition is complete.",
     "token_expired": "Authentication token has expired.",
     "token_revoked": "Authentication token is for a deleted user or workspace or the app has been removed when using a user token.",
-    "two_factor_setup_required": "Two factor setup is required.",
+    "two_factor_setup_required": "Two factor authentication needs to be set up.",
     "unknown_method": "This method is currently not available."
   }
 }

@@ -90,6 +90,9 @@
     },
     "team_not_found": {
       "desc": "No workspace was found for the `team_id` provided."
+    },
+    "target_team_not_on_org": {
+      "desc": "The specified target_team is not part of the organization."
     }
   },
   "examples": {

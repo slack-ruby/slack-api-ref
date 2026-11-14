@@ -109,11 +109,17 @@
     "not_an_enterprise": {
       "desc": "This feature is only available on Enterprise Grid plans."
     },
+    "not_an_admin": {
+      "desc": "This method is only accessible by org owners and Admins."
+    },
+    "two_factor_setup_required": {
+      "desc": "Two factor authentication needs to be set up."
+    },
     "internal_error": {
       "desc": "Internal error"
     },
     "feature_not_enabled": {
-      "desc": "The MCP server admin API feature is not enabled for this team."
+      "desc": "The MCP server admin API feature is not enabled for this team, or this workspace's plan doesn't include the Admin APIs."
     }
   },
   "examples": {}

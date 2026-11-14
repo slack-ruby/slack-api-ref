@@ -33,6 +33,7 @@
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
     "canvas_creation_failed": "Canvas was unable to be created.",
     "canvas_disabled_user_team": "Canvas is disabled on user's team",
+    "channel_not_found": "Value passed for `channel_id` was invalid, or the caller doesn't have access to that channel.",
     "deprecated_endpoint": "The endpoint has been deprecated.",
     "ekm_access_denied": "Administrators have suspended the ability to post a message.",
     "enterprise_is_restricted": "The method cannot be called from an Enterprise.",

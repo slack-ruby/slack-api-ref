@@ -340,6 +340,9 @@
     "canvas_editing_failed": {
       "desc": "The skill's instructions or display name couldn't be saved."
     },
+    "category_inactive": {
+      "desc": "`category` is a built-in category the org's admins turned off. Pick an active category, resend the skill's current one, or omit `category`."
+    },
     "invalid_category": {
       "desc": "`category` isn't one of the skill categories."
     },

@@ -42,7 +42,227 @@
     ],
     "properties": {
       "profile": {
-        "schema": "user_profile"
+        "desc": "The user's profile. When a guest looks up a user they can't see in full, this is the stranger's formatted user instead, with a limited profile under `profile`.",
+        "anyOf": [
+          {
+            "schema": "user_profile"
+          },
+          {
+            "type": "object",
+            "desc": "A stranger: a user a guest can't see in full.",
+            "required": [
+              "id",
+              "team_id",
+              "name",
+              "color",
+              "is_bot",
+              "is_app_user",
+              "profile",
+              "is_stranger",
+              "updated",
+              "who_can_share_contact_card"
+            ],
+            "properties": {
+              "id": {
+                "schema": "user_id"
+              },
+              "team_id": {
+                "schema": "team_id"
+              },
+              "name": {
+                "type": "string"
+              },
+              "color": {
+                "type": "string"
+              },
+              "is_bot": {
+                "type": "boolean"
+              },
+              "is_app_user": {
+                "type": "boolean"
+              },
+              "deleted": {
+                "type": "boolean",
+                "desc": "Set when the user is deactivated or disconnected."
+              },
+              "tz": {
+                "type": "string",
+                "desc": "Set only when the stranger's organization shares extended profiles with the viewer's."
+              },
+              "tz_label": {
+                "type": "string",
+                "desc": "Set only when the stranger's organization shares extended profiles with the viewer's."
+              },
+              "tz_offset": {
+                "type": "integer",
+                "desc": "Set only when the stranger's organization shares extended profiles with the viewer's."
+              },
+              "profile": {
+                "type": "object",
+                "desc": "The status fields, title and pronouns are set only when the stranger's organization shares extended profiles with the viewer's.",
+                "required": [
+                  "avatar_hash",
+                  "real_name",
+                  "display_name",
+                  "real_name_normalized",
+                  "display_name_normalized"
+                ],
+                "properties": {
+                  "avatar_hash": {
+                    "type": "string"
+                  },
+                  "image_original": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "image_24": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "image_32": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "image_48": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "image_72": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "image_192": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "image_512": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "image_1024": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "first_name": {
+                    "type": "string"
+                  },
+                  "last_name": {
+                    "type": "string"
+                  },
+                  "email": {
+                    "type": "string",
+                    "format": "email",
+                    "desc": "Set only when the stranger's workspace allows displaying email addresses to external users."
+                  },
+                  "real_name": {
+                    "type": "string"
+                  },
+                  "display_name": {
+                    "type": "string"
+                  },
+                  "real_name_normalized": {
+                    "type": "string"
+                  },
+                  "display_name_normalized": {
+                    "type": "string"
+                  },
+                  "team": {
+                    "schema": "team_id"
+                  },
+                  "bot_id": {
+                    "schema": "bot_id"
+                  },
+                  "api_app_id": {
+                    "schema": "app_id"
+                  },
+                  "status_text": {
+                    "type": "string"
+                  },
+                  "status_text_canonical": {
+                    "type": [
+                      "null",
+                      "string"
+                    ]
+                  },
+                  "status_emoji": {
+                    "type": "string"
+                  },
+                  "status_emoji_display_info": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": [
+                        "emoji_name"
+                      ],
+                      "properties": {
+                        "emoji_name": {
+                          "type": "string"
+                        },
+                        "display_alias": {
+                          "type": "string"
+                        },
+                        "display_url": {
+                          "type": "string"
+                        },
+                        "unicode": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  },
+                  "status_expiration": {
+                    "type": "integer"
+                  },
+                  "status_clear_on_focus_end": {
+                    "type": "boolean"
+                  },
+                  "title": {
+                    "type": "string"
+                  },
+                  "pronouns": {
+                    "type": "string"
+                  }
+                }
+              },
+              "is_stranger": {
+                "type": "boolean"
+              },
+              "updated": {
+                "type": "integer"
+              },
+              "is_workflow_bot": {
+                "type": "boolean"
+              },
+              "is_connector_bot": {
+                "type": "boolean"
+              },
+              "is_agentforce_bot": {
+                "type": "boolean"
+              },
+              "is_sidekick_bot": {
+                "type": "boolean"
+              },
+              "agent_status": {
+                "schema": "user_agent_status"
+              },
+              "app_acl_type": {
+                "schema": "user_app_acl_type"
+              },
+              "is_ai_app": {
+                "type": "boolean"
+              },
+              "is_migrated_dummy_quip_user": {
+                "type": "boolean"
+              },
+              "who_can_share_contact_card": {
+                "type": "string"
+              },
+              "is_profile_only_user": {
+                "type": "boolean"
+              }
+            }
+          }
+        ]
       }
     }
   },

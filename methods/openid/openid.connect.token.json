@@ -93,6 +93,7 @@
     "token_revoked": "Authentication token is for a deleted user or workspace or the app has been removed when using a user token.",
     "two_factor_setup_required": "Two factor setup is required.",
     "unknown_method": "This method is currently not available.",
-    "unsupported_grant_type": "The `grant_type` is not supported by this endpoint."
+    "unsupported_grant_type": "The `grant_type` is not supported by this endpoint.",
+    "workspace_denied_app": "Returned when the org-installed app is denied for a workspace the install would add it to, by that workspace or by the org, so it can't be added there."
   }
 }

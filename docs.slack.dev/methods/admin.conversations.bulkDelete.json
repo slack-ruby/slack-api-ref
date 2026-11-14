@@ -78,6 +78,15 @@
     "no_valid_channels": {
       "desc": "All input channels are invalid"
     },
+    "not_an_admin": {
+      "desc": "This method is only accessible by org owners and Admins."
+    },
+    "not_an_enterprise": {
+      "desc": "The workspace is not an Enterprise organization, or an Enterprise+ workspace with Admin API access."
+    },
+    "two_factor_setup_required": {
+      "desc": "Two factor authentication needs to be set up."
+    },
     "restricted_action": {
       "desc": "User does not have permission to perform this action"
     }

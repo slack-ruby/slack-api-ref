@@ -90,9 +90,6 @@
     "connected_user_denied": {
       "desc": "The workspace admin does not allow connected users to be named_entities."
     },
-    "external_workspace_denied": {
-      "desc": "The channel selected is not on the workflow team."
-    },
     "invalid_permission_type": {
       "desc": "This function requires permission_type to be set as named_entities before adding users."
     },

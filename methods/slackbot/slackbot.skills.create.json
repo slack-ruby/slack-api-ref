@@ -54,6 +54,7 @@
     "canvas_disabled_user_team": "Canvases are disabled for the caller's team.",
     "canvas_editing_locked": "Another edit to the canvas is in progress. Retry the request.",
     "canvas_not_found": "The canvas doesn't exist or the caller can't see it.",
+    "category_inactive": "`category` is a built-in category the org's admins turned off. Pick an active category or omit `category`.",
     "deprecated_endpoint": "The endpoint has been deprecated.",
     "description_too_long": "`description` is longer than 400 characters.",
     "display_name_too_long": "`display_name` is longer than 255 characters.",

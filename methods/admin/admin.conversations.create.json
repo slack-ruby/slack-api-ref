@@ -69,6 +69,7 @@
     "request_timeout": "The method was called via a POST request, but the POST data was either missing or truncated.",
     "restricted_action": "A workspace preference prevents the authenticated user from creating channels.",
     "service_unavailable": "The service is temporarily unavailable.",
+    "target_team_not_on_org": "The specified target_team is not part of the organization.",
     "team_added_to_org": "The workspace associated with your request is currently undergoing migration to an Enterprise Organization. Web API and other platform operations will be intermittently unavailable until the transition is complete.",
     "team_id_or_org_required": "You must provide a `team_id` or set `org_wide` to `true`.",
     "team_not_found": "No workspace was found for the `team_id` provided.",

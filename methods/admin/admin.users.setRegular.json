@@ -31,6 +31,7 @@
     "deprecated_endpoint": "The endpoint has been deprecated.",
     "ekm_access_denied": "Administrators have suspended the ability to post a message.",
     "enterprise_is_restricted": "The method cannot be called from an Enterprise.",
+    "failed_to_set_regular_on_workspaces": "The user was set to a regular member of the org, but removing their Workspace Owner role failed on one or more workspaces. Call the method again to retry.",
     "failed_to_set_user_to_regular": "Changing a user to a regular member failed.",
     "fatal_error": "The server could not complete your operation(s) without encountering a catastrophic error. It's possible some aspect of the operation succeeded before the error was raised.",
     "feature_not_enabled": "The Admin APIs feature is not enabled for this team.",

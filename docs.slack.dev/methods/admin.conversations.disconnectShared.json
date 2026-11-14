@@ -54,7 +54,7 @@
       "desc": "Only the originating workspace for a connected channel may remove other workspaces from the channel."
     },
     "channel_not_found": {
-      "desc": "The value passed for `channel_id` was invalid."
+      "desc": "The value passed for `channel_id` was invalid. It is also returned when the channel belongs to a workspace other than the token's workspace and isn't shared with it."
     },
     "channel_type_not_supported": {
       "desc": "The value passed for `channel_id` was an MPDM, DM, or the 'general' channel."
@@ -94,6 +94,9 @@
     },
     "default_org_wide_channel": {
       "desc": "The channel is a default org-wide channel, which isn't supported by this method."
+    },
+    "target_team_not_on_org": {
+      "desc": "The specified target_team is not part of the organization."
     }
   },
   "examples": {

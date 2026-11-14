@@ -335,6 +335,9 @@
     "already_a_skill": {
       "desc": "The canvas is already a skill. Use `slackbot.skills.update` to change it."
     },
+    "category_inactive": {
+      "desc": "`category` is a built-in category the org's admins turned off. Pick an active category or omit `category`."
+    },
     "invalid_category": {
       "desc": "`category` isn't one of the skill categories."
     },

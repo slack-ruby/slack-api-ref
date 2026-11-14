@@ -48,6 +48,9 @@
     "failed_to_set_user_to_regular": {
       "desc": "Changing a user to a regular member failed."
     },
+    "failed_to_set_regular_on_workspaces": {
+      "desc": "The user was set to a regular member of the org, but removing their Workspace Owner role failed on one or more workspaces. Call the method again to retry."
+    },
     "feature_not_enabled": {
       "desc": "The Admin APIs feature is not enabled for this team."
     },

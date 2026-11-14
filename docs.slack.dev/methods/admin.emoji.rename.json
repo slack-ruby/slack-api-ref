@@ -60,6 +60,9 @@
     "feature_not_enabled": {
       "desc": "The Admin APIs feature is not enabled for this team."
     },
+    "not_an_enterprise": {
+      "desc": "The workspace is not an Enterprise organization, or an Enterprise+ workspace with Admin API access."
+    },
     "not_an_admin": {
       "desc": "This method is only accessible by org owners and Admins."
     }

@@ -70,6 +70,30 @@
     },
     "handle_already_exists": {
       "desc": "The handle specified is used by another usergroup or entity and cannot be created."
+    },
+    "missing_subteam_name": {
+      "desc": "The name specified is empty."
+    },
+    "empty_name": {
+      "desc": "The name specified is empty once invalid characters are removed."
+    },
+    "name_too_long": {
+      "desc": "The name specified is longer than 100 characters."
+    },
+    "forbidden_name": {
+      "desc": "The name specified is not allowed (reserved names such as `team admins` or `team owners` cannot be used)."
+    },
+    "handle_too_long": {
+      "desc": "The handle specified is longer than 100 characters."
+    },
+    "forbidden_handle": {
+      "desc": "The handle specified is not allowed (reserved handles such as `admins` or `owners` cannot be used)."
+    },
+    "bad_handle": {
+      "desc": "The handle specified is not valid. Handles must be lowercase, may only contain letters, numbers, periods, hyphens and underscores (no spaces, accented letters or other punctuation), and must start with a letter, number or hyphen."
+    },
+    "description_too_long": {
+      "desc": "The purpose specified is longer than 140 characters."
     }
   },
   "examples": {

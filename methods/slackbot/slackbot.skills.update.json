@@ -52,6 +52,7 @@
     "account_inactive": "Authentication token is for a deleted user or workspace when using a bot token.",
     "canvas_editing_failed": "The skill's instructions or display name couldn't be saved.",
     "canvas_editing_locked": "Another edit to the skill is in progress. Retry the request.",
+    "category_inactive": "`category` is a built-in category the org's admins turned off. Pick an active category, resend the skill's current one, or omit `category`.",
     "deprecated_endpoint": "The endpoint has been deprecated.",
     "description_too_long": "`description` is longer than 400 characters.",
     "display_name_too_long": "`display_name` is longer than 255 characters.",

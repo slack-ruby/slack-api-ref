@@ -7,7 +7,7 @@
     ]
   },
   "json_input_supported": true,
-  "rate_limits": "t1",
+  "rate_limits": "t2",
   "args": {
     "type": "object",
     "required": [

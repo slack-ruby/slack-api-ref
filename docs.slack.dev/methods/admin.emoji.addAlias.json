@@ -60,6 +60,9 @@
     "no_alias_selected": {
       "desc": "Value passed for `alias_for` was invalid."
     },
+    "not_an_enterprise": {
+      "desc": "The workspace is not an Enterprise organization, or an Enterprise+ workspace with Admin API access."
+    },
     "not_an_admin": {
       "desc": "This method is only accessible by org owners and Admins."
     }
